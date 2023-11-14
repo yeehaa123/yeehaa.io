@@ -4,7 +4,13 @@ const { title, inspirational } = Astro.props;
 ---
 
 <Layout {title} {inspirational}>
-  <article class="container overflow-hidden px-10 lg:px-0 lg:max-w-5xl mx-auto">
+  <article class="container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto
+    prose prose-lg md:prose-xl
+    dark:prose-invert
+    prose-h1:text-5xl prose-h1:font-serif md:prose-h1:text-6xl
+    prose-h2:font-serif
+    prose-a:no-underline prose-a:text-red-500
+    ">
     <slot/>
 </Layout>
 
