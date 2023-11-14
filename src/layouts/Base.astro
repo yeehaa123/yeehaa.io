@@ -1,0 +1,86 @@
+---
+import NavBar from "../components/NavBar.astro"
+import Logo from "../components/Logo.astro"
+import Wave from "../components/Wave.astro"
+import Bubble from "../components/Bubble.astro"
+const { title, inspirational = ["nothing left...", "...to say"], ...rest } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-300 font-sans md:text-lg">
+    <header class="z-10 sticky top-0">
+      <NavBar/>
+    </header>
+    <main class="pt-20 md:pt-24">
+      <Wave {inspirational}/>
+      <div class="bg-white py-20">
+        <slot/>
+      </div>
+      <Bubble/>
+    </main>
+    <footer class="container overflow-hidden py-8 lg:max-w-3xl mx-auto">
+      <Logo/>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+@font-face {
+  font-family: 'GT Ultra Median';
+  src: url('/fonts/GT-Ultra-Median-Ultra-Trial.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra Median';
+  src: url('/fonts/GT-Ultra-Median-Bold-Trial.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra Median';
+  src: url('/fonts/GT-Ultra-Median-Regular-Trial.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra Standard';
+  src: url('/fonts/GT-Ultra-Standard-Ultra-Trial.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra Standard';
+  src: url('/fonts/GT-Ultra-Standard-Bold-Trial.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra Standard';
+  src: url('/fonts/GT-Ultra-Standard-Regular-Trial.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  text-wrap: balance;
+}
+</style>

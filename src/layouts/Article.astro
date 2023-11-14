@@ -1,0 +1,14 @@
+---
+import Layout from "./Base.astro"
+const title = "YEEHAA";
+const inspirational = [
+  "Innovation does not begin with radical, structural transformation",
+  "It starts with barely perceptible shifts"
+]
+---
+
+<Layout {title} {inspirational}>
+  <article class="container overflow-hidden px-10 lg:px-0 lg:max-w-5xl mx-auto">
+    <slot/>
+</Layout>
+

@@ -1,0 +1,76 @@
+---
+import Flow from "./Flow.astro";
+const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
+---
+
+<div class="inspirational absolute left-0 right-0 mx-auto text-center">
+  <quote slot="inspirational">
+    {inspirational.map(l => <p>{l}</p>)}
+  </quote>
+</div>
+<Flow anchor="bottom" viewBox="0 0 1728 440">
+  <g clip-path="url(#clip0_130_65)">
+    <path
+      d="M-1 440H1728C1728 440 1581.64 396.56 1319.47 218.322C1210.49 144.224 1108.41 0 839.742 0C544.523 0 427.109 178.019 329.818 251.91C232.528 325.801 -1 440 -1 440Z"
+    ></path>
+  </g>
+</Flow>
+
+<style>
+.inspirational {
+  animation: fade 10s linear forwards;
+}
+
+svg {
+  animation: wave 10s linear infinite;
+  transform-origin: bottom left;
+}
+
+
+@keyframes fade {
+
+0%{
+  opacity: 0;
+}
+
+20%{
+  opacity: 0;
+}
+
+
+70%{
+  opacity: 0.4;
+}
+
+80% {
+  opacity: 0;
+}
+
+100% {
+  opacity: 0;
+}
+}
+
+@keyframes wave {
+
+0%{
+  transform: scale(1, 0);
+}
+
+20%{
+  transform: scale(1, 0.7);
+}
+
+40%{
+  transform: scale(1, 0.3);
+}
+
+70%{
+  transform: scale(1, 1);
+}
+
+100% {
+  transform: scale(1, 0);
+}
+}
+</style>
