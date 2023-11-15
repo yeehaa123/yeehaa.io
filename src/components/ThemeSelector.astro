@@ -1,5 +1,4 @@
-<button
-class="text-1xl text-center font-bold text-secondary dark:text-primary"
+<div
 x-data="{'darkMode': false}"
 x-init="
 darkMode = JSON.parse(localStorage.getItem('darkMode'));
@@ -8,5 +7,5 @@ darkMode ? document.documentElement.classList.add('dark') :
 document.documentElement.classList.remove('dark');
 localStorage.setItem('darkMode', JSON.stringify(value))
 })"
-x-text="darkMode ? 'Light' : 'Dark'"
+x-text="darkMode ? 'LIGHT' : 'DARK'"
 @click="darkMode = !darkMode" />
