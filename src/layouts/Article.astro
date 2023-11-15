@@ -9,7 +9,11 @@ const { title, inspirational } = Astro.props;
     dark:prose-invert
     prose-h1:text-5xl prose-h1:font-serif hover:prose-h1:font-sans md:prose-h1:text-6xl
     prose-h2:font-serif
+    prose-strong:font-serif
+    prose-blockquote:font-serif prose-blockquote:font-bold prose-blockquote:not-italic
+    prose-blockquote:border-primary dark:prose-blockquote:border-secondary
     prose-a:no-underline prose-a:text-secondary dark:prose-a:text-primary
+    hover:prose-a:font-serif
     ">
     <slot/>
 </Layout>
