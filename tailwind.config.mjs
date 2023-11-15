@@ -73,8 +73,8 @@ export default {
 				'secondary-light': violet['400'],
 				'secondary-dark': violet['800'],
 				tertiary: ice['500'],
-				white: sun['50'],
-				offwhite: sun['100'],
+				white: ice['50'],
+				offwhite: ice['100'],
 			},
 			fontFamily: {
 				mono: ['Nitti', ...defaultTheme.fontFamily.sans],
