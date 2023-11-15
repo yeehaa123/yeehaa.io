@@ -1,4 +1,5 @@
 <button
+class="text-1xl font-bold text-secondary dark:text-primary"
 x-data="{'darkMode': false}"
 x-init="
 darkMode = JSON.parse(localStorage.getItem('darkMode'));
@@ -7,5 +8,5 @@ darkMode ? document.documentElement.classList.add('dark') :
 document.documentElement.classList.remove('dark');
 localStorage.setItem('darkMode', JSON.stringify(value))
 })"
-x-text="darkMode ? '🌙' : '🌞'"
+x-text="darkMode ? 'Light' : 'Dark'"
 @click="darkMode = !darkMode" />
