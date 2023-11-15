@@ -1,9 +1,9 @@
 ---
 import Layout from "./Base.astro"
-const { title, inspirational } = Astro.props;
+const { title, inspirational, logoLink } = Astro.props;
 ---
 
-<Layout {title} {inspirational}>
+<Layout {title} {inspirational} {logoLink}>
   <article class="container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto
     prose prose-lg md:prose-xl
     dark:prose-invert

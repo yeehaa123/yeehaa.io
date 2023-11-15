@@ -1,12 +1,11 @@
 ---
-import Logo from "./Logo.astro"
 import ThemeSelector from "./ThemeSelector.astro"
 ---
 
 <nav class="bg-offwhite/70 dark:bg-offblack/50 dark:text-white flex items-center justify-between p-4 md:p-6 transition-all">
-  <Logo class="text-1xl md:text-2xl"/>
+  <slot name="logo"/>
   <div class="flex gap-6 font-black text-right text-base md:text-1xl text-secondary-dark dark:text-primary-dark">
-    <ThemeSelector class="text-black dark:text-white hover:text-secondary-dark  dark:hover:text-primary-light"/>
+    <ThemeSelector class="text-black dark:text-white hover:text-secondary-dark dark:hover:text-primary-light"/>
     <!-- <div class="hover:text-secondary-light dark:hover:text-primary-light">CONTACT</div> -->
   </div>
 </nav>
