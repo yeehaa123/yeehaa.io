@@ -18,3 +18,17 @@ const { title, inspirational } = Astro.props;
     <slot/>
 </Layout>
 
+<style is:global>
+.footnotes h2{
+  display: none;
+}
+.footnotes ol {
+  padding-left: 1em;
+  font-size: 0.8em;
+}
+.footnotes li  {
+  text-indent: 0;
+  word-wrap: break-word;
+
+}
+</style>
