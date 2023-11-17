@@ -5,9 +5,10 @@ const { title, inspirational, logoLink } = Astro.props;
 
 <Layout {title} {inspirational} {logoLink}>
   <article class="container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto
-    prose prose-lg md:prose-xl
+    prose prose-base md:prose-lg lg:prose-xl
     dark:prose-invert
-    prose-h1:text-5xl prose-h1:font-serif hover:prose-h1:font-sans md:prose-h1:text-6xl
+    prose-h1:font-serif hover:prose-h1:font-sans
+    md:prose-h1:text-6xl prose-h1:text-5xl
     prose-h2:font-serif
     prose-strong:font-serif
     prose-blockquote:font-serif prose-blockquote:font-bold prose-blockquote:not-italic
