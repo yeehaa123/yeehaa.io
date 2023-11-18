@@ -4,7 +4,7 @@ const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 ---
 
 <div class="inspirational absolute left-0 right-0 mx-auto text-center">
-  <quote class="text-secondary dark:text-primary" slot="inspirational">
+  <quote class="text-black" slot="inspirational">
     {inspirational.map(l => <p>{l}</p>)}
   </quote>
 </div>
@@ -25,7 +25,7 @@ const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 
 <style>
 .inspirational {
-  animation: fade 10s linear forwards;
+  /* animation: fade 10s linear forwards; */
 }
 
 @keyframes fade {
@@ -40,7 +40,7 @@ const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 
 
 70% {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 100% {
