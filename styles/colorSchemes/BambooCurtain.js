@@ -52,7 +52,20 @@ const amber = {
 	800: '#96500a',
 	900: '#7b420c',
 	950: '#472201',
+};
 
+const mint = {
+	50: '#f1f8f4',
+	100: '#dcefe2',
+	200: '#bbdfc8',
+	300: '#85c2a0',
+	400: '#5ea982',
+	500: '#3d8c65',
+	600: '#2c6f4f',
+	700: '#235941',
+	800: '#1e4735',
+	900: '#193b2d',
+	950: '#0d2119',
 };
 
 const colors = {
@@ -64,6 +77,9 @@ const colors = {
 	secondary: velvet['600'],
 	'secondary-light': velvet['500'],
 	'secondary-dark': velvet['700'],
+	tertiary: mint['300'],
+	'tertiary-light': mint['200'],
+	'tertiary-dark': mint['400'],
 	offwhite: mist['100'],
 	white: mist['50'],
 };
