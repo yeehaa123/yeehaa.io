@@ -64,7 +64,6 @@ const colors = {
 	secondary: violet['700'],
 	'secondary-light': violet['400'],
 	'secondary-dark': violet['800'],
-	tertiary: ice['500'],
 	white: ice['50'],
 	offwhite: ice['100'],
 };

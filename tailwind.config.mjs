@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('./styles/colorSchemes/TaipeiBuilding');
+const colors = require('./styles/colorSchemes/BambooCurtain');
 
 export default {
 	darkMode: 'class',
