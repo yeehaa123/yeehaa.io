@@ -1,8 +1,8 @@
 ---
-const {  anchor = "top", viewBox } = Astro.props;
+const {  anchor = "top", viewBox, class:className} = Astro.props;
 ---
 
-<svg class:list={["fill-white", "dark:fill-black", anchor]} {viewBox}>
+<svg class:list={["fill-white", "dark:fill-black", anchor, className]} {viewBox}>
 <slot/>
 <svg>
 

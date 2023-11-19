@@ -3,6 +3,7 @@ import Flow from "./Flow.astro";
 const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 ---
 
+<>
 <div class="inspirational absolute left-0 right-0 mx-auto text-center">
   <quote class="text-secondary dark:text-primary" slot="inspirational">
     {inspirational.map(l => <p>{l}</p>)}
@@ -15,13 +16,7 @@ const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
     ></path>
   </g>
 </Flow>
-<!-- <Flow  anchor="bottom"viewBox="0 0 1728 440"> -->
-<!--   <g clip-path="url(#clip0_130_65)"> -->
-<!--     <path -->
-<!--       d="M-0 440H1728C1728 440 1581.64 396.56 1319.47 218.322C1210.49 144.224 1108.41 0 839.742 0C544.523 0 427.109 178.019 329.818 251.91C232.528 325.801 0 440 0 440Z" -->
-<!--     ></path> -->
-<!--   </g> -->
-<!-- </Flow> -->
+<>
 
 <style>
 .inspirational {
