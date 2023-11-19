@@ -4,7 +4,7 @@ const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 ---
 
 <div class="inspirational absolute left-0 right-0 mx-auto text-center">
-  <quote class="text-secondary" slot="inspirational">
+  <quote class="text-secondary dark:text-primary" slot="inspirational">
     {inspirational.map(l => <p>{l}</p>)}
   </quote>
 </div>
