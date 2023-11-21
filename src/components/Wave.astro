@@ -3,8 +3,8 @@ import Flow from "./Flow.astro";
 const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 ---
 
-<div class="relative pt-10 md:pt-24">
-  <div class="inspirational absolute top-0 left-0 right-0 mx-auto text-center">
+<div class="pt-10 md:pt-24">
+  <div class="inspirational relative top-0 left-0 right-0 mx-auto text-center">
     <quote class="text-secondary dark:text-primary" slot="inspirational">
       {inspirational.map(l => <p>{l}</p>)}
     </quote>
@@ -17,7 +17,7 @@ const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 
 <style>
 .inspirational {
-  /* animation: fade 10s linear forwards; */
+  animation: fade 10s linear forwards;
 }
 
 @keyframes fade {
