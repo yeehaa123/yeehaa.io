@@ -18,7 +18,7 @@ const { title, inspirational = ["nothing left...", "...to say"], logoLink } = As
     <header class="z-10 sticky top-0">
       <NavBar><Logo class="text-1xl md:text-2xl" href={logoLink} slot="logo" /></NavBar>
     </header>
-    <main class="pt-10 md:pt-24">
+    <main>
       <Wave {inspirational}/>
       <div class="bg-white text-black dark:bg-black dark:text-white py-20 md:py-36">
         <slot/>
