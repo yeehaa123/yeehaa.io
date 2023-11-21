@@ -3,7 +3,7 @@ import Flow from "./Flow.astro";
 const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
 ---
 
-<div class="border-8  border-black border-bottom">
+<div class="border-b-8  border-black border-bottom">
   <div class="inspirational absolute left-0 right-0 mx-auto text-center">
     <quote class="text-secondary dark:text-primary" slot="inspirational">
       {inspirational.map(l => <p>{l}</p>)}
