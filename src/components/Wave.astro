@@ -1,9 +1,9 @@
 ---
 import Flow from "./Flow.astro";
-const { inspirational = ["nothing left...", "...to say"] } = Astro.props;
+const { inspirational = ["nothing left...", "...to say"], class:className} = Astro.props;
 ---
 
-<div class="pt-10 md:pt-24">
+<div class:list={["pt-10", "md:pt-24", "print:hidden", className]}>
   <div class="inspirational relative top-0 left-0 right-0 mx-auto text-center">
     <quote class="text-secondary dark:text-primary" slot="inspirational">
       {inspirational.map(l => <p>{l}</p>)}
