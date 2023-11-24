@@ -12,6 +12,7 @@ const { title, inspirational = ["nothing left...", "...to say"], logoLink } = As
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <base href="https://yeehaa.io" target="_blank">
     <title>{title}</title>
   </head>
   <body class="bg-primary dark:bg-secondary print:bg-pure-white font-sans md:text-lg">
@@ -21,7 +22,7 @@ const { title, inspirational = ["nothing left...", "...to say"], logoLink } = As
     <main>
       <Wave {inspirational}/>
       <div class="bg-white text-black dark:bg-black dark:text-white
-        print:bg-pure-white print:text-pitch-black py-20 md:py-36">
+        print:bg-pure-white print:text-pitch-black py-20 md:py-36 print:py-24">
         <slot/>
       </div>
       <Bubble/>
@@ -101,6 +102,18 @@ const { title, inspirational = ["nothing left...", "...to say"], logoLink } = As
 @page {
   size: A4;
   margin: 3cm 2cm;
+}
+
+@page {
+  @bottom-left {
+    content: counter(pageNumber);
+  }
+  @top-middle {
+    content: "Introduction";
+  }
+}
+h1,h2,h3,h4,h5, h6, blockquote {
+  page-break-after: avoid;
 }
 
 p {
