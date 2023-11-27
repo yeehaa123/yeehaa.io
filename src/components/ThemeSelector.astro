@@ -1,8 +1,9 @@
 ---
 const { class:className } = Astro.props;
 ---
+
 <div
-class={className}
+class:list={[className]}
 x-data="{'darkMode': false}"
 x-init="
 darkMode = JSON.parse(localStorage.getItem('darkMode'));
