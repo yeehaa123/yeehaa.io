@@ -67,10 +67,12 @@ const mint = {
 	900: '#193b2d',
 	950: '#0d2119',
 };
+const gray = smoke;
 
 const colors = {
-	black: smoke['950'],
-	offblack: smoke['900'],
+	gray,
+	black: gray['950'],
+	offblack: gray['900'],
 	primary: amber['500'],
 	'primary-light': amber['400'],
 	'primary-dark': amber['600'],
@@ -80,8 +82,8 @@ const colors = {
 	tertiary: mint['300'],
 	'tertiary-light': mint['200'],
 	'tertiary-dark': mint['400'],
-	offwhite: mist['100'],
-	white: mist['50'],
+	offwhite: gray['100'],
+	white: gray['50'],
 };
 
 export default colors;
