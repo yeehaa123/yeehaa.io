@@ -1,36 +1,70 @@
 ---
 import NavBar from "../components/NavBar.astro"
 import Logo from "../components/Logo.astro"
-import Wave from "../components/Wave.astro"
-import Bubble from "../components/Bubble.astro"
+import { ViewTransitions } from 'astro:transitions';
 const { title, inspirational = ["nothing left...", "...to say"], logoLink = '#'} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="bg-offwhite dark:bg-offblack print:bg-pure-white font-sans md:text-lg">
     <header class="z-10 sticky top-0">
       <NavBar><Logo class="text-1xl md:text-2xl" href={logoLink} slot="logo" /></NavBar>
     </header>
-    <main>
-      <Wave {inspirational}/>
+    <main transition:animate="fade">
+      <div class:list={["pt-10", "md:pt-24", "print:hidden"]}>
+        <div class="inspirational relative top-0 left-0 right-0 mx-auto text-center">
+          <quote class="text-gray-200 dark:text-gray-700" slot="inspirational">
+            {inspirational.map(l => <p>{l}</p>)}
+          </quote>
+        </div>
+        <slot name="top-animation"/>
+      </div>
       <div class="bg-white text-black dark:bg-black dark:text-white
-        print:bg-pure-white print:text-pitch-black py-20 md:py-36 print:py-24">
+        print:bg-pure-white print:text-pitch-black py-20 md:py-36 print:py-24" >
         <slot/>
       </div>
-      <Bubble/>
+      <slot name="bottom-animation"/>
     </main>
     <footer class="container overflow-hidden dark:text-white py-8 md:py-12 px-12 lg:px-0 lg:max-w-3xl mx-auto print:hidden">
       <Logo/>
     </footer>
   </body>
 </html>
+
+<style>
+.inspirational {
+  animation: fade 10s linear forwards;
+}
+
+@keyframes fade {
+
+0%{
+  opacity: 0;
+}
+
+20%{
+  opacity: 0;
+}
+
+
+70% {
+  opacity: 1;
+}
+
+100% {
+  opacity: 0;
+}
+}
+</style>
+
 
 <style is:global>
 @font-face {

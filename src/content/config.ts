@@ -29,6 +29,7 @@ const postsCollection = defineCollection({
     title: z.string(),
     published_on: z.date(),
     excerpt: z.string(),
+    inspirational: z.array(z.string()),
     tags: z.array(z.enum(["blog"])),
     draft: z.nullable(z.boolean()),
   }),

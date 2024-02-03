@@ -1,16 +1,13 @@
 ---
 import Layout from "../layouts/Article.astro"
 const title = "YEEHAA";
-const inspirational = [
-  "Innovation does not begin with radical, structural transformation",
-  "It starts with barely perceptible shifts"
-]
 
 import { getEntry } from 'astro:content';
 
 
 const entry = await getEntry('Work', 'aligning-the-misaligned');
 const { Content } = await entry.render();
+const inspirational = entry.data.inspirational;
 ---
 
 <Layout {title} {inspirational} >

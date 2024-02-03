@@ -1,9 +1,12 @@
 ---
 import Layout from "./Base.astro"
-const { title, inspirational, logoLink } = Astro.props;
+import Wave from "../components/Wave.astro"
+import Bubble from "../components/Bubble.astro"
+const { title, inspirational, logoLink = "/"} = Astro.props;
 ---
 
 <Layout {title} {inspirational} {logoLink}>
+  <Wave slot="top-animation" class="fill-white dark:fill-black"/>
   <article class="prose container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto
     prose-base md:prose-lg lg:prose-xl
     prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
@@ -19,21 +22,8 @@ const { title, inspirational, logoLink } = Astro.props;
     prose-blockquote:font-serif prose-blockquote:font-normal prose-blockquote:not-italic
     prose-blockquote:border-secondary
     prose-a:no-underline prose-a:text-secondary-dark hover:prose-a:text-secondary-light
-    ">
+    " transition:name="content" transition:animate="slide">
     <slot/>
+  </article>
+  <Bubble slot="bottom-animation" class="fill-white dark:fill-black"/>
 </Layout>
-
-<style is:global>
-.footnotes h2{
-  display: none;
-}
-.footnotes ol {
-  padding-left: 1em;
-  font-size: 0.8em;
-}
-.footnotes li  {
-  text-indent: 0;
-  word-wrap: break-word;
-
-}
-</style>
