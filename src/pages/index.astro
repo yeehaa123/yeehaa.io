@@ -6,10 +6,10 @@ import { getEntry } from 'astro:content';
 
 
 const entry = await getEntry('Work', 'aligning-the-misaligned');
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 const inspirational = entry.data.inspirational;
 ---
 
-<Layout {title} {inspirational} >
+<Layout {title} {headings} {inspirational} >
   <Content/ >
 </Layout>

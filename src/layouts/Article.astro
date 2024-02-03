@@ -2,10 +2,10 @@
 import Layout from "./Base.astro"
 import Wave from "../components/Wave.astro"
 import Bubble from "../components/Bubble.astro"
-const { title, inspirational, logoLink = "/"} = Astro.props;
+const { title, headings, inspirational, logoLink = "/"} = Astro.props;
 ---
 
-<Layout {title} {inspirational} {logoLink}>
+<Layout {title} {headings} {inspirational} {logoLink}>
   <Wave slot="top-animation" class="fill-white dark:fill-black"/>
   <article class="prose container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto
     prose-base md:prose-lg lg:prose-xl

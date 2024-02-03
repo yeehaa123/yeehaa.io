@@ -2,7 +2,7 @@
 import NavBar from "../components/NavBar.astro"
 import Logo from "../components/Logo.astro"
 import { ViewTransitions } from 'astro:transitions';
-const { title, inspirational = ["nothing left...", "...to say"], logoLink = '#'} = Astro.props;
+const { title, headings = [], inspirational = ["nothing left...", "...to say"], logoLink = '#'} = Astro.props;
 ---
 
 <html lang="en" transition:animate="none">
@@ -18,6 +18,7 @@ const { title, inspirational = ["nothing left...", "...to say"], logoLink = '#'}
     <header class="z-10 sticky top-0">
       <NavBar><Logo class="text-1xl md:text-2xl" href={logoLink} slot="logo" /></NavBar>
     </header>
+    <pre>{JSON.stringify(headings, null, 2)}</pre>
     <main transition:animate="fade">
       <div class:list={["pt-10", "md:pt-24", "print:hidden"]}>
         <div class="inspirational relative top-0 left-0 right-0 mx-auto text-center">

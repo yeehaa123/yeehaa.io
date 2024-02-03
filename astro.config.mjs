@@ -8,13 +8,18 @@ import remarkGfm from 'remark-gfm';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import alpinejs from '@astrojs/alpinejs';
+import toc from '@jsdevtools/rehype-toc';
 
 // https://astro.build/config
 export default defineConfig({
 	experimental: {},
 	markdown: {
 		remarkPlugins: [unwrapImages, remarkGfm],
-		rehypePlugins: [[classNames, {'h1 + p': 'lead'}], slug, section],
+		rehypePlugins: [
+			[classNames, {'h1 + p': 'lead'}],
+			slug,
+			section,
+		],
 	},
 	integrations: [tailwind(), mdx(), alpinejs()],
 });

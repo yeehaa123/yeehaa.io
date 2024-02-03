@@ -23,6 +23,7 @@
   "devDependencies": {
     "@hbsnow/rehype-sectionize": "^1.0.7",
     "@tailwindcss/typography": "^0.5.10",
+    "@jsdevtools/rehype-toc": "^3.0.2",
     "rehype-class-names": "^1.0.14",
     "rehype-slug": "^6.0.0",
     "remark-unwrap-images": "^3.0.1",
