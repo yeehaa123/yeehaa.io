@@ -1,15 +1,12 @@
 ---
-import ThemeSelector from "./ThemeSelector.astro"
+import Switch from "./Switch.astro"
+import MenuButton from "./MenuButton.astro"
 ---
 
 <nav class="backdrop-blur-none dark:text-white flex items-center justify-between p-4 md:p-6 transition-all print:hidden">
   <slot name="logo"/>
   <div class="flex gap-6 font-black text-right items-center md:text-1xl text-secondary select-none">
-    <ThemeSelector class="print:hidden"/>
-    <div class="p-3 space-y-1 bg-secondary rounded shadow">
-      <span class="block w-5 h-0.5 bg-white animate-pulse"></span>
-      <span class="block w-5 h-0.5 bg-white animate-pulse"></span>
-      <span class="block w-3 h-0.5 bg-white animate-pulse"></span>
-    </div>
+    <Switch class="print:hidden" keyName="darkMode" activeClass="dark" labels={["LIGHT", "DARK"]}/>
+    <MenuButton />
   </div>
 </nav>

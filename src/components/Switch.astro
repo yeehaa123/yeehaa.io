@@ -1,0 +1,18 @@
+---
+const { class:className, labels = ["ON", "OFF"], keyName, activeClass } = Astro.props;
+---
+
+<div
+class:list={[className]}
+x-data=`{'${keyName}': false}`
+x-init=`
+${keyName} = JSON.parse(localStorage.getItem('${keyName}'));
+${keyName} ? document.documentElement.classList.add('${activeClass}') :
+document.documentElement.classList.remove('${activeClass}');
+$watch('${keyName}', value => {
+${keyName} ? document.documentElement.classList.add('${activeClass}') :
+document.documentElement.classList.remove('${activeClass}');
+localStorage.setItem('${keyName}', JSON.stringify(value))
+})`
+x-text=`${keyName} ? '${labels[0]}' : '${labels[1]}'`
+@click=`${keyName} = !${keyName}` />

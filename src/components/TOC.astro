@@ -1,0 +1,7 @@
+---
+const { headings = [] } = Astro.props;
+const menu = headings.filter(({depth}) => depth === 1 || depth === 2)
+---
+<ul class="flex flex-col gap-y-4">
+  { menu.map(({slug, text, depth})  => <li class={depth === 1 && "font-bold pb-6 text-2xl"}><a href=`#${slug}`>{text}</a></li>)}
+</ul>

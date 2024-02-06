@@ -1,0 +1,14 @@
+---
+---
+<script>
+const menuButton = document.querySelector('[data-menu-button]');
+
+const sidebar = document.querySelector('[data-sidebar]');
+menuButton.addEventListener('click', () => sidebar.classList.toggle('hidden'));
+</script>
+
+<div data-menu-button class="p-3 space-y-1 bg-secondary rounded shadow">
+  <span class="block w-5 h-0.5 bg-white animate-pulse"></span>
+  <span class="block w-5 h-0.5 bg-white animate-pulse"></span>
+  <span class="block w-3 h-0.5 bg-white animate-pulse"></span>
+</div>
