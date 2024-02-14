@@ -2,10 +2,13 @@
 ---
 <script>
 const sidebar = document.querySelector('[data-sidebar]');
-sidebar.addEventListener('click', () => sidebar.classList.toggle('hidden'));
+sidebar.addEventListener('click', () => {
+  sidebar.classList.remove('translate-x-0')
+  sidebar.classList.add('translate-x-full')
+});
 </script>
 
-<nav data-sidebar class=`flex-col w-64 md:w-1/3 xl:w-1/4 bg-offblack dark:bg-offwhite fixed
-  top-0 right-0 h-screen z-20 p-8 dark:text-black text-white`>
+<nav data-sidebar class=`flex-col w-md:w-1/3 xl:w-1/4 bg-offblack dark:bg-offwhite fixed
+  top-0 right-0 h-screen z-20 p-8 ease-in-out duration-300 dark:text-black text-white`>
   <slot />
 </nav>

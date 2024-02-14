@@ -4,8 +4,10 @@
 const menuButton = document.querySelector('[data-menu-button]');
 
 const sidebar = document.querySelector('[data-sidebar]');
-menuButton.addEventListener('click', () => sidebar.classList.toggle('hidden'));
-</script>
+menuButton.addEventListener('click', () => {
+  sidebar.classList.remove('translate-x-full')
+  sidebar.classList.add('translate-x-0')
+})</script>
 
 <div data-menu-button class="p-3 space-y-1 bg-secondary rounded shadow">
   <span class="block w-5 h-0.5 bg-white animate-pulse"></span>
