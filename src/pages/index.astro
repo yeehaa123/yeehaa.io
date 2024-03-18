@@ -19,7 +19,7 @@ const posts = (await getCollection('Posts')).sort(
 <Layout {title} {inspirational} >
   { posts.map(p => {
   return <div>
-  <a href={`/posts/${p.slug}`}><h1>{p.data.title}</h1></a>
+  <a href={`/posts/${p.slug}`}><h1><span class="text-secondary">{p.order}</span> {p.data.title}</h1></a>
   <p>{p.data.excerpt}<p>
   </div>
   })}
