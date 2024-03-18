@@ -2,14 +2,25 @@
 import Layout from "../layouts/Article.astro"
 const title = "YEEHAA";
 
-import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 
-const entry = await getEntry('Work', 'aligning-the-misaligned');
-const { Content } = await entry.render();
-const inspirational = entry.data.inspirational;
+const inspirational = ["Something", "Wicked"];
+
+const posts = (await getCollection('Posts')).sort(
+  (a,b) => {
+    return a.data.order - b.data.order;
+  }
+).map(({data, ...a}) => { return { data, order: ('00' + data.order).slice(-3), ...a}})
+;
+
 ---
 
 <Layout {title} {inspirational} >
-  <Content/ >
+  { posts.map(p => {
+  return <div>
+  <a href={`/posts/${p.slug}`}><h1>{p.order} >> {p.data.title}</h1></a>
+  <p>{p.data.excerpt}<p>
+  </div>
+  })}
 </Layout>

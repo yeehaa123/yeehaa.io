@@ -27,6 +27,7 @@ const postsCollection = defineCollection({
   type: "content", // v2.5.0 and later
   schema: z.object({
     title: z.string(),
+    order: z.number(),
     published_on: z.date(),
     excerpt: z.string(),
     inspirational: z.array(z.string()),
@@ -39,5 +40,5 @@ const postsCollection = defineCollection({
 export const collections = {
   About: aboutCollection,
   Home: homeCollection,
-  Work: postsCollection,
+  Posts: postsCollection,
 };
