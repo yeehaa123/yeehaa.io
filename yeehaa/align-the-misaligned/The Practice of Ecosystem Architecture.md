@@ -1,7 +1,3 @@
----
-series: Aligning the Misaligned
----
-
 # The Practice of Ecosystem Architecture
 
 More than ever before, people enjoy the privilege to replace random communities with intentional ones. It is no longer necessary to base our choice of cohabitation based upon spatiotemporal contingency alone. Instead, we can choose to be members of ecosystems that are driven by shared values. Ecosystem architecture is the practice of designing such virtual spaces.

@@ -1,7 +1,11 @@
 ---
-series: Aligning the Misaligned
+title: The Practice of Ecosystem Architecture
+series: Align The Misaligned
+author: Yeehaa
+draft: false
+createdAt: 2024-06-07T15:57:02.021Z
+publishedAt: 2024-06-07T15:58:47.534Z
 ---
-
 # The Practice of Ecosystem Architecture
 
 More than ever before, people enjoy the privilege to replace random communities with intentional ones. It is no longer necessary to base our choice of cohabitation based upon spatiotemporal contingency alone. Instead, we can choose to be members of ecosystems that are driven by shared values. Ecosystem architecture is the practice of designing such virtual spaces.
@@ -73,3 +77,4 @@ The goal of this phase is to make our efforts entirely redundant. All functional
 While the previous phases all share a lot with startup theory, this last phase is actually its complete opposite. In this last phase, there is only one action involved. Better yet, it is a non-action: letting go. The ecosystem — that is now hopefully thriving — is not going to be lead by us, part of our empire, or controlled by our holding company. We can still be a part of it, of course, but as one member amongst many. 
 
 This is not a selfless act, mind you. If the earlier phases were performed correctly, the collective gains should now also benefit us. We just have no control over it any longer. In the end ecosystem architecture is more akin to farming than to business model generation. We plant our seeds, nurture them, and then reap what we sow.
+

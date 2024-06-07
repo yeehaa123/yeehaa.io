@@ -1,3 +1,10 @@
+---
+title: Foam Party
+series: Align The Misaligned
+author: Yeehaa
+draft: true
+createdAt: 2024-06-07T15:57:02.016Z
+---
 # Foam Party
 
 Everyday language is overloaded with conceptual metaphors that either celebrate the whole or lament its absence: broken heart, phantom pain, paradise lost, etcetera. The fact that these sentiments are so deeply ingrained into our means of communication also explains why it is so difficult to let universality go. This is already true *de facto*, let alone *de jure*. Even if we are willing to submit ourselves to the existential fact of living without absolute truth, it is still probable that we conceive its absence as a loss. Reframing fragmentation as something positive is next to impossible.
@@ -26,3 +33,4 @@ Popping filter bubbles would thus mean throwing out the baby with the bathwater.
 **Solipsism**: This is the condition where you genuinely believe that your bubble is the one and only. If you are too enamored by your community's values, you are bound to overlook its limitations and problems. Every ecosystem is defined by boundaries. A bubble that is good for you can be stifling, or even harmful, to someone else.
 
 From now onward, the challenge lies in solving these problems without reentering the arena of universal values and norms. As soon as we start bursting bubbles again — either that of someone else or our own — foam reveals its most important characteristic: it has no outside. There is no bird's eye point of view. The outside of a bubble is another bubble. As soon as we truly accept this existential fact, we stop bursting bubbles and begin to foster ecosystems.
+
