@@ -8,7 +8,8 @@ import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 
 const OUTPUT_BASE = './output';
 const INPUT_BASE = './yeehaa';
-const TABLE_PATH = path.join('./contentTable.json');
+const OUTPUT_DIR = path.join(OUTPUT_BASE, INPUT_BASE);
+const TABLE_PATH = path.join(OUTPUT_BASE, './contentTable.json');
 
 type Frontmatter = {
   author: string,
@@ -124,16 +125,15 @@ ${content}
 async function writeTree(tree: FileTree) {
   for (const [title, entry] of tree) {
     const fileName = `${voca.slugify(title)}.md`;
-    const filePath = path.join(OUTPUT_BASE, fileName);
+    const filePath = path.join(OUTPUT_DIR, fileName);
     const file = template(entry);
     writeFile(filePath, file, 'utf8');
   }
 }
 
 async function writeTable(tree: FileTree) {
-  const table = Array.from(tree).map(([key, { frontmatter }]) => {
-    const { draft, createdAt, publishedAt } = frontmatter;
-    return [key, { draft, createdAt, publishedAt }]
+  const table = Array.from(tree).map(([title, { frontmatter }]) => {
+    return { title, ...frontmatter }
   })
   await writeFile(TABLE_PATH, JSON.stringify(table, null, 2), 'utf8');
 }
@@ -154,8 +154,8 @@ async function initTable(path: string) {
 
 async function checkTable(tree: FileTree) {
   const tableJSON = await readFile(TABLE_PATH, 'utf8');
-  const tableData = JSON.parse(tableJSON) as [key: string, Frontmatter][]
-  for (const [title, { draft, createdAt, publishedAt }] of tableData) {
+  const tableData = JSON.parse(tableJSON) as (Frontmatter & { title: string })[]
+  for (const { title, draft, createdAt, publishedAt } of tableData) {
     const { frontmatter, ...rest } = tree.get(title);
     tree.set(title, {
       ...rest,
@@ -172,7 +172,7 @@ async function checkTable(tree: FileTree) {
 
 
 async function main() {
-  await initDir(OUTPUT_BASE);
+  await initDir(OUTPUT_DIR);
   await initTable(TABLE_PATH);
 
   const tree = await createTree();

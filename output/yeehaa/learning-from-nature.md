@@ -3,7 +3,7 @@ title: Learning from Nature
 series: Align The Misaligned
 author: Yeehaa
 draft: true
-createdAt: 2024-06-07T15:57:02.017Z
+createdAt: 2024-06-07T16:44:55.582Z
 ---
 # Learning from Nature
 

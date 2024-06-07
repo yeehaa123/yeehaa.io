@@ -3,7 +3,7 @@ title: Shenzhen Goes HAM
 series: Align The Misaligned
 author: Yeehaa
 draft: true
-createdAt: 2024-06-07T15:57:02.018Z
+createdAt: 2024-06-07T16:44:55.583Z
 ---
 # Shenzhen Goes HAM
 

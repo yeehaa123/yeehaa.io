@@ -2,9 +2,8 @@
 title: The Practice of Ecosystem Architecture
 series: Align The Misaligned
 author: Yeehaa
-draft: false
-createdAt: 2024-06-07T15:57:02.021Z
-publishedAt: 2024-06-07T15:58:47.534Z
+draft: true
+createdAt: 2024-06-07T16:44:55.586Z
 ---
 # The Practice of Ecosystem Architecture
 

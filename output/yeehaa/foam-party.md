@@ -3,7 +3,7 @@ title: Foam Party
 series: Align The Misaligned
 author: Yeehaa
 draft: true
-createdAt: 2024-06-07T15:57:02.016Z
+createdAt: 2024-06-07T16:44:55.579Z
 ---
 # Foam Party
 
