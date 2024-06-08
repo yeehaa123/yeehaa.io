@@ -1,9 +1,12 @@
 ---
-title: Global Village People
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.648Z
+frontmatter:
+  title: Global Village People
+  series: Align The Misaligned
+  checksum: e8a7c7d905a234f18941d3fd4b6d0b69
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.703Z
+  updatedAt: 2024-06-08T08:26:51.703Z
 ---
 # Global Village People
 

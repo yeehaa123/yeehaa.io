@@ -1,9 +1,12 @@
 ---
-title: Economy of Garbage
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.646Z
+frontmatter:
+  title: Economy of Garbage
+  series: Align The Misaligned
+  checksum: f754984a19c1497805d6bdf9c9345782
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.701Z
+  updatedAt: 2024-06-08T08:26:51.701Z
 ---
 ---
 aliases: null

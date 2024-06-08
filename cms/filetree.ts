@@ -1,8 +1,6 @@
 import type { Article } from "./article";
 import type { TableRow } from "./table";
-import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import voca from "voca";
-import Markdoc from '@markdoc/markdoc';
 import * as path from 'path';
 import { readdir, lstat, readFile, writeFile } from 'fs/promises'
 import * as article from "./article";
@@ -11,31 +9,10 @@ import { deslugify } from "./helpers";
 
 export type FileTree = Map<string, Article>
 
-function isTag(node: RenderableTreeNode): node is Tag {
-  return (node as Tag).name !== undefined;
-}
-
-function collectTitle(node: RenderableTreeNode, sections = []): string {
-  if (node && isTag(node)) {
-    if (node.name.match(/h1/)) {
-      const title = node.children[0];
-      return title as string;
-    }
-    if (node.children) {
-      for (const child of node.children) {
-        return collectTitle(child, sections);
-      }
-    }
-  }
-}
-
 async function processFile(filePath: string, series?: string) {
   try {
     const item = await readFile(filePath, 'utf8');
-    const ast = Markdoc.parse(item);
-    const content = Markdoc.transform(ast);
-    const title = collectTitle(content);
-    return article.init({ title, series, content: item })
+    return article.init({ series, content: item })
   } catch (e) {
     console.log(e, filePath);
   }
@@ -49,9 +26,9 @@ async function processDir(tree: FileTree, dirPath: string) {
   for (const ext of dir) {
     const filePath = path.join(dirPath, ext);
     const processedFile = await processFile(filePath, seriesName);
-    tree.set(processedFile.title, processedFile);
+    const { title } = processedFile.frontmatter;
+    tree.set(title, processedFile);
   }
-  return tree
 }
 
 export async function create(basePath: string): Promise<FileTree> {
@@ -65,13 +42,14 @@ export async function create(basePath: string): Promise<FileTree> {
       await processDir(tree, newPath);
     } else {
       const processedFile = await processFile(newPath);
-      tree.set(processedFile.title, processedFile);
+      const { title } = processedFile.frontmatter;
+      tree.set(title, processedFile);
     }
   }
   return tree;
 }
 
-export async function update(tree: FileTree, tableData: TableRow[]) {
+export function update(tree: FileTree, tableData: TableRow[]) {
   for (const tableRow of tableData) {
     const { title } = tableRow;
     const oldEntry = tree.get(title);
@@ -91,6 +69,6 @@ export async function write(basePath: string, tree: FileTree) {
     const fileName = `${voca.slugify(title)}.md`;
     const filePath = path.join(basePath, fileName);
     const file = article.render(entry);
-    writeFile(filePath, file, 'utf8');
+    await writeFile(filePath, file, 'utf8');
   }
 }

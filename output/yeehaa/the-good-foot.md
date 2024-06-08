@@ -1,9 +1,12 @@
 ---
-title: The Good Foot
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.652Z
+frontmatter:
+  title: The Good Foot
+  series: Align The Misaligned
+  checksum: 5cb6b8505bd54135be5b32db43f60ef8
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.707Z
+  updatedAt: 2024-06-08T08:26:51.707Z
 ---
 # The Good Foot
 
@@ -13,7 +16,6 @@ In nature, organisms move or migrate in response to environmental conditions. Th
 
 Voting with your feet underscores the dynamic nature of ecosystems, where the distribution and abundance of species are constantly shifting in response to changing environmental factors. It also unveils the relativity of boundaries. Where does one habitat end and another begin? Is there a whole, and if so, does it really matter? Turns out that nature and foam have a lot in common. Which, after this lengthy detour, brings me back to the human ecosystems and the internet.
 
- > 
  > People vote with their feet.
 
 — Milton Friedman
@@ -22,7 +24,6 @@ The desire for the freedom to switch habitats is a decisive argument against the
 
 The privilege to hop from bubble to bubble is not to be taken lightly. It is an necessary condition for creativity and innovation. Imagination demands the possibility of another habitat. Accessing other realms, even if it is just in the mind, is a necessary condition to dream, design, develop, and maintain new, better, or simply different ecosystems. This phenomenon is of all ages. As Walter Benjamin showed throughout his work, the history of utopianism and that of architecture are one and the same. Buildings, cities, and parks are yesterday's projection of how tomorrow's ecosystems should look like. And in the age of the internet, architecture far exceeds mere physical bricks and mortar.
 
- > 
  > Not architecture alone but all technology is, at certain stages, evidence of a collective dream.
 
 — Walter Benjamin

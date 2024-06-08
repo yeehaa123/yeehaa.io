@@ -13,9 +13,10 @@ async function main() {
   await initTable(TABLE_PATH);
 
   const tree = await filetree.create(INPUT_BASE);
-  const tableData = await table.read(TABLE_PATH, tree);
+  const tableData = await table.read(TABLE_PATH);
 
-  await filetree.update(tree, tableData);
+
+  filetree.update(tree, tableData);
 
   await filetree.write(OUTPUT_DIR, tree);
   await table.write(TABLE_PATH, tree);

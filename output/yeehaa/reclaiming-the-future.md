@@ -1,9 +1,12 @@
 ---
-title: Reclaiming the Future
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.649Z
+frontmatter:
+  title: Reclaiming the Future
+  series: Align The Misaligned
+  checksum: 0af417ab21870acd8b23293440ad316a
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.704Z
+  updatedAt: 2024-06-08T08:26:51.704Z
 ---
 # Reclaiming the Future
 

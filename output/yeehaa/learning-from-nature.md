@@ -1,9 +1,12 @@
 ---
-title: Learning from Nature
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.649Z
+frontmatter:
+  title: Learning from Nature
+  series: Align The Misaligned
+  checksum: b00ab9b260061c09b956c2e922ebcbad
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.703Z
+  updatedAt: 2024-06-08T08:26:51.703Z
 ---
 # Learning from Nature
 

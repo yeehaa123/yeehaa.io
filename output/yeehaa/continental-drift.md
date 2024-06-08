@@ -1,9 +1,13 @@
 ---
-title: Continental Drift
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.645Z
+frontmatter:
+  title: Continental Drift
+  series: Align The Misaligned
+  checksum: 4365fe807ef4a8a9345cefa7c15f3ac2
+  author: Yeehaa
+  draft: false
+  createdAt: 2024-06-08T08:26:51.700Z
+  updatedAt: 2024-06-08T08:28:05.891Z
+  publishedAt: 2024-06-08T08:27:30.363Z
 ---
 # Continental Drift
 
@@ -15,7 +19,7 @@ Internet fragmentation goes as far back as least the browser wars of the mid 199
 
 **Governmental Fragmentation**: Government policies and actions that constrain or prevent certain uses of the Internet to create, distribute, or access information resources.
 
-**Commercial Fragmentation**: Business practices that constrain or prevent certain uses of the Internet to create, distribute, or access information resources
+**Commercial Fragmentation**: Business practices that constrain or prevent certain uses of the Internet to create, distribute, or access information resources.
 
 On all three of these fronts, the Internet Society (ISOC) has put tremendous effort in making these concerns actionable and putting them on the political agenda. Its aim is to 'connect the unconnected' by fostering a more connected and interoperable online environment. Through initiatives aimed at promoting open standards, ISOC has played a pivotal role in ensuring that diverse systems can seamlessly communicate and exchange data packets. By advocating for a cohesive and globally accessible internet, the organization has contributed to overcome technical barriers that could impede the internet's functioning across different endpoints. Most importantly, the Internet Society has been instrumental in facilitating collaborative efforts among stakeholders, encouraging the development and adoption of protocols that enhance compatibility.
 

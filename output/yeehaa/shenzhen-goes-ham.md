@@ -1,9 +1,12 @@
 ---
-title: Shenzhen Goes HAM
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.650Z
+frontmatter:
+  title: Shenzhen Goes HAM
+  series: Align The Misaligned
+  checksum: 7c7c83da8c82ad789aff5d7f7f171543
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.705Z
+  updatedAt: 2024-06-08T08:26:51.705Z
 ---
 # Shenzhen Goes HAM
 

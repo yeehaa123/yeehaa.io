@@ -1,9 +1,12 @@
 ---
-title: The Case for Ecosystem Architecture
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.651Z
+frontmatter:
+  title: The Case for Ecosystem Architecture
+  series: Align The Misaligned
+  checksum: 6dbc316c647b5c07b4e50f274fc86cac
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.706Z
+  updatedAt: 2024-06-08T08:26:51.706Z
 ---
 # The Case for Ecosystem Architecture
 

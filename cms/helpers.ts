@@ -1,4 +1,5 @@
 import { existsSync } from "fs"
+import crypto from "crypto"
 import voca from "voca";
 import { mkdir, rm, writeFile } from 'fs/promises'
 
@@ -38,3 +39,9 @@ export function deslugify(slug: string) {
     .value();
 }
 
+export function generateChecksum(str: string) {
+  return crypto
+    .createHash('md5')
+    .update(str, 'utf8')
+    .digest('hex');
+}

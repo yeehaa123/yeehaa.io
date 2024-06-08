@@ -1,9 +1,12 @@
 ---
-title: Foam Party
-series: Align The Misaligned
-author: Yeehaa
-draft: true
-createdAt: 2024-06-08T06:19:58.647Z
+frontmatter:
+  title: Foam Party
+  series: Align The Misaligned
+  checksum: c7a92ea345908cf217b1389ba2d0e918
+  author: Yeehaa
+  draft: true
+  createdAt: 2024-06-08T08:26:51.702Z
+  updatedAt: 2024-06-08T08:26:51.702Z
 ---
 # Foam Party
 

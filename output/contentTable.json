@@ -2,72 +2,92 @@
   {
     "title": "Continental Drift",
     "series": "Align The Misaligned",
+    "checksum": "4365fe807ef4a8a9345cefa7c15f3ac2",
     "author": "Yeehaa",
-    "draft": true,
-    "createdAt": "2024-06-08T06:19:58.645Z"
+    "draft": false,
+    "createdAt": "2024-06-08T08:26:51.700Z",
+    "updatedAt": "2024-06-08T08:28:05.891Z",
+    "publishedAt": "2024-06-08T08:27:30.363Z"
   },
   {
     "title": "Economy of Garbage",
     "series": "Align The Misaligned",
+    "checksum": "f754984a19c1497805d6bdf9c9345782",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.646Z"
+    "createdAt": "2024-06-08T08:26:51.701Z",
+    "updatedAt": "2024-06-08T08:26:51.701Z"
   },
   {
     "title": "Foam Party",
     "series": "Align The Misaligned",
+    "checksum": "c7a92ea345908cf217b1389ba2d0e918",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.647Z"
+    "createdAt": "2024-06-08T08:26:51.702Z",
+    "updatedAt": "2024-06-08T08:26:51.702Z"
   },
   {
     "title": "Global Village People",
     "series": "Align The Misaligned",
+    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.648Z"
+    "createdAt": "2024-06-08T08:26:51.703Z",
+    "updatedAt": "2024-06-08T08:26:51.703Z"
   },
   {
     "title": "Learning from Nature",
     "series": "Align The Misaligned",
+    "checksum": "b00ab9b260061c09b956c2e922ebcbad",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.649Z"
+    "createdAt": "2024-06-08T08:26:51.703Z",
+    "updatedAt": "2024-06-08T08:26:51.703Z"
   },
   {
     "title": "Reclaiming the Future",
     "series": "Align The Misaligned",
+    "checksum": "0af417ab21870acd8b23293440ad316a",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.649Z"
+    "createdAt": "2024-06-08T08:26:51.704Z",
+    "updatedAt": "2024-06-08T08:26:51.704Z"
   },
   {
     "title": "Shenzhen Goes HAM",
     "series": "Align The Misaligned",
+    "checksum": "7c7c83da8c82ad789aff5d7f7f171543",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.650Z"
+    "createdAt": "2024-06-08T08:26:51.705Z",
+    "updatedAt": "2024-06-08T08:26:51.705Z"
   },
   {
     "title": "The Case for Ecosystem Architecture",
     "series": "Align The Misaligned",
+    "checksum": "6dbc316c647b5c07b4e50f274fc86cac",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.651Z"
+    "createdAt": "2024-06-08T08:26:51.706Z",
+    "updatedAt": "2024-06-08T08:26:51.706Z"
   },
   {
     "title": "The Good Foot",
     "series": "Align The Misaligned",
+    "checksum": "5cb6b8505bd54135be5b32db43f60ef8",
     "author": "Yeehaa",
     "draft": true,
-    "createdAt": "2024-06-08T06:19:58.652Z"
+    "createdAt": "2024-06-08T08:26:51.707Z",
+    "updatedAt": "2024-06-08T08:26:51.707Z"
   },
   {
     "title": "The Practice of Ecosystem Architecture",
     "series": "Align The Misaligned",
+    "checksum": "5d6f6f6ee484eca97181c32719f8eb4f",
     "author": "Yeehaa",
-    "draft": false,
-    "createdAt": "2024-06-08T06:19:58.653Z",
-    "publishedAt": "2024-06-08T06:20:19.642Z"
+    "draft": true,
+    "createdAt": "2024-06-08T08:26:51.708Z",
+    "updatedAt": "2024-06-08T08:26:51.708Z"
   }
 ]

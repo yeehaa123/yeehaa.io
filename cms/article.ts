@@ -1,20 +1,45 @@
 import type { Frontmatter } from "./frontmatter";
+import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
+
+import Markdoc from '@markdoc/markdoc';
+
 import { stringify } from "yaml";
 import * as frontmatter from "./frontmatter";
+import { generateChecksum } from "./helpers";
 
 export type Article = {
-  title: string
   frontmatter: Frontmatter
   content: string,
 }
 
-export function init(
-  { title, series, content }:
-    { title: string, series?: string, content: string }) {
-  const fm = frontmatter.init({ series });
+function isTag(node: RenderableTreeNode): node is Tag {
+  return (node as Tag).name !== undefined;
+}
+
+function collectTitle(node: RenderableTreeNode, sections = []): string {
+  if (node && isTag(node)) {
+    if (node.name.match(/h1/)) {
+      return node.children[0] as string;
+    }
+    if (node.children) {
+      for (const child of node.children) {
+        return collectTitle(child, sections);
+      }
+    }
+  }
+}
+
+export function init({ content, series }: { series?: string, content: string }) {
+  const checksum = generateChecksum(content);
+  const ast = Markdoc.parse(content);
+  const contentTree = Markdoc.transform(ast);
+  const title = collectTitle(contentTree);
   return {
-    title,
-    frontmatter: fm,
+    frontmatter: frontmatter.init({
+      title,
+      series,
+      checksum
+    }),
     content
   };
 }
@@ -26,9 +51,9 @@ export function update(entry: Article, frontmatter: Frontmatter) {
   };
 }
 
-export function render({ content, title, frontmatter }: Article) {
+export function render({ content, frontmatter }: Article) {
   return `---
-${stringify({ title, ...frontmatter }).trim()}
+${stringify({ frontmatter }).trim()}
 ---
 ${content}
 `
