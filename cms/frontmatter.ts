@@ -1,8 +1,10 @@
 import type { TableRow } from "./table";
 
-export type Frontmatter = {
+export interface Frontmatter {
   title: string,
   author: string,
+  summary: string,
+  tags: string[],
   series?: string,
   draft: boolean,
   checksum: string,
@@ -11,12 +13,17 @@ export type Frontmatter = {
   publishedAt: Date | undefined
 }
 
-export function init({ title, series, checksum }: { title: string, series?: string, checksum: string }) {
+type FrontmatterInit = Omit<Frontmatter, 'draft' | 'createdAt' | 'updatedAt' | 'publishedAt'>
+
+export function init(
+  { title, author, series, checksum, summary, tags }: FrontmatterInit) {
   return {
     title,
+    author,
+    summary,
+    tags,
     series,
     checksum,
-    author: "Yeehaa",
     draft: true,
     createdAt: new Date,
     updatedAt: new Date,
@@ -24,13 +31,13 @@ export function init({ title, series, checksum }: { title: string, series?: stri
   };
 }
 
+
 export function update(frontmatter: Frontmatter, tableRow: TableRow) {
-  const { draft, checksum, createdAt, updatedAt, publishedAt } = tableRow;
-  const isUpdated = frontmatter.checksum !== checksum;
+  const { draft, checksum, createdAt, publishedAt } = tableRow;
   return {
     ...frontmatter,
     checksum,
-    updatedAt: isUpdated ? new Date : updatedAt,
+    updatedAt: new Date,
     createdAt,
     draft,
     publishedAt: draft ? undefined : publishedAt ? publishedAt : new Date

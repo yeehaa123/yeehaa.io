@@ -1,12 +1,19 @@
 ---
-frontmatter:
-  title: Foam Party
-  series: Align The Misaligned
-  checksum: c7a92ea345908cf217b1389ba2d0e918
-  author: Yeehaa
-  draft: true
-  createdAt: 2024-06-08T08:26:51.702Z
-  updatedAt: 2024-06-08T08:26:51.702Z
+title: Foam Party
+author: Yeehaa
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+tags:
+  - One
+  - Two
+  - Three
+series: Align The Misaligned
+createdAt: 2024-06-08T09:42:31.504Z
+updatedAt: 2024-06-08T09:42:31.504Z
 ---
 # Foam Party
 

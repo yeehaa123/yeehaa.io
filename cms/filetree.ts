@@ -1,11 +1,11 @@
 import type { Article } from "./article";
-import type { TableRow } from "./table";
 import voca from "voca";
 import * as path from 'path';
 import { readdir, lstat, readFile, writeFile } from 'fs/promises'
 import * as article from "./article";
 import * as frontmatter from "./frontmatter";
 import { deslugify } from "./helpers";
+import type { TableRow } from "./table";
 
 export type FileTree = Map<string, Article>
 
@@ -52,15 +52,8 @@ export async function create(basePath: string): Promise<FileTree> {
 export function update(tree: FileTree, tableData: TableRow[]) {
   for (const tableRow of tableData) {
     const { title } = tableRow;
-    const oldEntry = tree.get(title);
-    const entry = article.update(
-      oldEntry,
-      frontmatter.update(oldEntry.frontmatter, tableRow)
-    )
-    tree.set(
-      title,
-      entry
-    )
+    const entry = tree.get(title);
+    tree.set(title, article.update(entry, tableRow))
   }
 }
 

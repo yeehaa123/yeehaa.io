@@ -1,12 +1,19 @@
 ---
-frontmatter:
-  title: The Case for Ecosystem Architecture
-  series: Align The Misaligned
-  checksum: 6dbc316c647b5c07b4e50f274fc86cac
-  author: Yeehaa
-  draft: true
-  createdAt: 2024-06-08T08:26:51.706Z
-  updatedAt: 2024-06-08T08:26:51.706Z
+title: The Case for Ecosystem Architecture
+author: Yeehaa
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+tags:
+  - One
+  - Two
+  - Three
+series: Align The Misaligned
+createdAt: 2024-06-08T09:42:31.508Z
+updatedAt: 2024-06-08T09:42:31.508Z
 ---
 # The Case for Ecosystem Architecture
 

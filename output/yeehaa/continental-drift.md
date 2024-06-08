@@ -1,13 +1,20 @@
 ---
-frontmatter:
-  title: Continental Drift
-  series: Align The Misaligned
-  checksum: 4365fe807ef4a8a9345cefa7c15f3ac2
-  author: Yeehaa
-  draft: false
-  createdAt: 2024-06-08T08:26:51.700Z
-  updatedAt: 2024-06-08T08:28:05.891Z
-  publishedAt: 2024-06-08T08:27:30.363Z
+title: Continental Drift
+author: Yeehaa
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+tags:
+  - One
+  - Two
+  - Three
+series: Align The Misaligned
+createdAt: 2024-06-08T08:26:51.700Z
+updatedAt: 2024-06-08T09:42:31.511Z
+publishedAt: 2024-06-08T09:37:37.385Z
 ---
 # Continental Drift
 

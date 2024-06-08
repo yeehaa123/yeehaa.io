@@ -1,12 +1,19 @@
 ---
-frontmatter:
-  title: Reclaiming the Future
-  series: Align The Misaligned
-  checksum: 0af417ab21870acd8b23293440ad316a
-  author: Yeehaa
-  draft: true
-  createdAt: 2024-06-08T08:26:51.704Z
-  updatedAt: 2024-06-08T08:26:51.704Z
+title: Reclaiming the Future
+author: Yeehaa
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+tags:
+  - One
+  - Two
+  - Three
+series: Align The Misaligned
+createdAt: 2024-06-08T09:42:31.507Z
+updatedAt: 2024-06-08T09:42:31.507Z
 ---
 # Reclaiming the Future
 

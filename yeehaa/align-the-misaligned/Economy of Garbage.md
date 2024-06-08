@@ -1,19 +1,3 @@
----
-aliases: null
-tags:
-- blog
-draft: false
-excerpt: In 'Economy of Garbage,' the discussion pivots to challenging the traditional views on decentralization, waste, and excess in our modern society. Drawing from the lessons of the rise and fall of cryptocurrency and historical shifts in economic ideologies, the piece explores how modern capitalism's drive for incessant growth fuels a cycle of extraction and waste. Yet, through the philosophical lenses of Walter Benjamin and Georges Bataille, it presents a nuanced argument that celebrates the potential of excess and waste not as societal failings but as sources of innovation and regeneration. Bataille's notion of the 'economy of excess,' where waste is embraced rather than shunned, is juxtaposed against the backdrop of our digital and material cultures, urging a reevaluation of our values towards consumption and production. This narrative is further enriched by Shraddha Borawake's artistic practice, which visually interrogates the intersections between nature, culture, and trash, challenging the purity of these categories and proposing a more integrated, circular understanding of our environment and resources. 'Economy of Garbage' invites readers to reconsider the role of waste in our lives, advocating for a future where excess is harnessed creatively to foster a more sustainable and inclusive world
-published_on: 2023-12-23
-title: Economy of Garbage
-inspirational:
-- Wabi-sabi and Kintsugi
-- rather than perfection and wholeness
-- are key to a better future
-order: 5
-series: Aligning the Misaligned
----
-
 # Economy of Garbage
 
 Decentralization is not fragmentation. When applied correctly, its cultural techniques can actually smoothen and alleviate the painful effects of foaming. The problem with its most emblematic, contemporary manifestation is that its community got mesmerized by an excess mindset. The original hype around the endless possibilities of blockchain's immutable and incorruptible ledger was entirely replaced by crypto's everyone can get rich instantly pyramid scheme.
@@ -22,7 +6,6 @@ The rise and fall of crypto marked a short resurgence of a mirage that had kept 
 
 But while capitalism definitely did little to nothing to question it, the excess mindset cannot be entirely reduced to it either. As Walter Benjamin most poignantly pointed out in *The Work of Art in the Age of Mechanical Reproduction* (1935), the technical affordances of an era define its ideological affordances just as much as vice versa. If modern capitalism relies on extraction and waste production, it is only because it relies on means of production that facilitate it.
 
- > 
  > The field of attention shifts to the person who provides the apparatus. The public is an examiner, but an absent-minded one.
 
 — Walter Benjamin
@@ -33,7 +16,6 @@ The holy grail of capitalism is the discovery of a truly inexhaustible resource.
 
 Like the venture capitalist of today, Bataille encourages activities that may seem wasteful or irrational within traditional economic frameworks. History teaches that it demands significant risks to reap innovative and potentially disruptive ideas. However, where the venture capitalist only focuses on the outliers and disposes the rest, Bataille does the exact opposite and chooses to embrace *The Accursed Share* (1949).
 
- > 
  > Expenditure is the magnificence of life; waste, dishonor, and the prodigal son are the disgrace of history.
 
 — Georges Bataille
@@ -44,7 +26,6 @@ Affirming the fact of abundance is the starting point of Bataille's economy of e
 
 In her visionary practice, *Garb-Age*, Shraddha Borawake follows in Bataille's footsteps by shifting the gaze towards the waste that life produces. She constantly blurs the lines between nature, culture, and trash. Tourist memorabilia are framed as if they were high art, throwaway lenses are depicted as it they were precious jewels, and all the garbage together shapes a landscape as breath-taking as those painted by the romantics.
 
- > 
  > The menacing pile audaciously boasts a landscape of the truth of use and disuse. Metallic composites stand assembled in a landslide of labels, packaging, logos, words, colors, signifiers and barcodes. Oil, butter, preservatives deodorants and other such containers stand witness to the consumption of a small urban sector. Within this miniscule demographic, it exposes a microscopic slice of a number of the sum total of the global lives and livelihoods; that have resulted in this conglomerate of irreducible substance.
 
 — Shraddha Borawake
