@@ -1,12 +1,22 @@
 import * as cache from './cache';
 
-async function analyze(_content: string) {
-  const summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  const tags = ["One", "Two", "Three"];
-  return {
-    summary,
-    tags
-  }
+import { createOpenAI } from '@ai-sdk/openai';
+import { generateObject } from 'ai';
+import { z } from 'zod';
+import 'dotenv/config'
+
+const openai = createOpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+async function analyze(content: string) {
+  const { object } = await generateObject({
+    model: openai('gpt-4o'),
+    schema: z.object({
+      summary: z.string(),
+      tags: z.array(z.string())
+    }),
+    prompt: `Please summarize the following article for me: ${content}`
+  });
+  return object;
 }
 
 export async function augment({ checksum, content }: { checksum: string, content: string }) {
@@ -14,7 +24,10 @@ export async function augment({ checksum, content }: { checksum: string, content
   if (cachedItem) {
     return cachedItem;
   }
-  const item = await analyze(content);
-  await cache.set(checksum, item);
-  return item;
+  const { summary, tags } = await analyze(content);
+  if (summary && tags) {
+    await cache.set(checksum, { summary, tags });
+    return { summary, tags }
+  }
+  throw ("PROBLEM WITH OPENAI");
 }

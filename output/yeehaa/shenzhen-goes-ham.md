@@ -2,18 +2,33 @@
 title: Shenzhen Goes HAM
 author: Yeehaa
 series: Align The Misaligned
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+summary: The article "Shenzhen Goes HAM" explores the evolution of decentralized
+  models and highlights how Shenzhen's shanzhai manufacturers exemplify a
+  superior form of decentralization akin to ham radio operators. While
+  traditional ham radio symbolizes peer-to-peer communication and community
+  resilience without reliance on centralized infrastructures, the shanzhai in
+  Shenzhen extend these principles to electronics manufacturing. Known for their
+  daring innovations and rapid pace, the shanzhai adapt quickly to technological
+  trends and market demands. Andrew 'bunnie' Huang's analysis in "The Hardware
+  Hacker" reveals the true innovation of the shanzhai lies not in their products
+  but in their production model and collaborative ecosystem. Their approach,
+  which includes peer-to-peer collaboration, iterative innovation, market
+  resilience, civil resilience, and ecosystem-sourced development, contrasts
+  with Western notions of intellectual property. However, this rapid innovation
+  comes at an environmental cost, emphasizing the need to balance technological
+  advancement with ecological considerations.
 tags:
-  - One
-  - Two
-  - Three
-createdAt: 2024-06-08T13:03:31.904Z
-updatedAt: 2024-06-08T13:03:31.904Z
+  - Shanzhai
+  - Decentralization
+  - Ham Radio
+  - Innovation
+  - Technology
+  - Andrew 'bunnie' Huang
+  - Shenzhen
+  - Intellectual Property
+  - Environmental Impact
+createdAt: 2024-06-08T13:42:19.870Z
+updatedAt: 2024-06-08T13:42:19.870Z
 ---
 
 # Shenzhen Goes HAM

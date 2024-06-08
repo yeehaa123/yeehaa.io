@@ -48,11 +48,11 @@ export async function create(basePath: string): Promise<FileTree> {
   return tree;
 }
 
-export function update(tree: FileTree, tableData: TableRow[]) {
+export async function update(tree: FileTree, tableData: TableRow[]) {
   for (const tableRow of tableData) {
     const { title } = tableRow;
     const entry = tree.get(title);
-    tree.set(title, article.update(entry, tableRow))
+    tree.set(title, await article.update(entry, tableRow))
   }
 }
 

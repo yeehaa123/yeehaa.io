@@ -2,18 +2,26 @@
 title: Global Village People
 author: Yeehaa
 series: Align The Misaligned
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+summary: Marshall McLuhan predicted that technology would turn the world into a
+  global village, erasing distinctions between local and global cultures but
+  also heightening clashes between different tribes. The internet, embodying
+  McLuhan's vision, is a battleground where cultural, political, and religious
+  factions vie for control over communication mediums, not just content.
+  Friedrich Kittler contextualized media warfare as a struggle for control over
+  transmission channels. Incidents like Cambridge Analytica and the rise of deep
+  fakes exemplify this battle. The global village is marked by complex
+  relationships and the futility of old dichotomies. Value pluralism is
+  suggested as the pragmatic way forward.
 tags:
-  - One
-  - Two
-  - Three
-createdAt: 2024-06-08T13:03:31.901Z
-updatedAt: 2024-06-08T13:03:31.901Z
+  - Global Village
+  - Marshall McLuhan
+  - Technology
+  - Media Warfare
+  - Cultural Clashes
+  - Internet
+  - Value Pluralism
+createdAt: 2024-06-08T13:42:09.416Z
+updatedAt: 2024-06-08T13:42:09.416Z
 ---
 
 # Global Village People

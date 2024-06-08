@@ -24,7 +24,6 @@ As mentioned earlier, letting go of that dream of globally shared values should 
 
 Balaji Srinivan's *The Network State* (2022) may be this new era paradigm first philosophical masterpiece. Its claim is deceivingly simple: the era of the nation state is nearing its end. In Srinivan's view, states no longer need to be defined by their claim on contiguous physical space. The internet has removed the necessity for that requirement:
 
- > 
  > What underpins the new dynamic of network states is the intrinsic lack of scarcity of digital territory, the return of unclaimed land and terra nullius, the reopened frontier.
 
 — Balaji Srinivasan
@@ -37,7 +36,6 @@ Of these three stages, the first one is most interesting for the current purpose
 
 In the case of a startup society, however, the proposition that needs to be developed is not commercial but ethical in nature. This is the most exciting difference between a nation and a network state. Rather than starting from temporal contingency and physical proximity, startup societies shape around shared values.
 
- > 
  > Every new startup society needs to have a moral premise at its core, one that its founding nation subscribes to, one that is supported by a digital history that a more powerful state can’t delete, one that justifies its existence as a righteous yet peaceful protest against the powers that be.
 
 — Balaji Srinivasan

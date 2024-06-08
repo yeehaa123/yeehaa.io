@@ -2,19 +2,28 @@
 title: Continental Drift
 author: Yeehaa
 series: Align The Misaligned
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+summary: The article discusses the idea that the traditional experience of the
+  internet ('OG internet') is not universal and has been fragmented due to
+  various forces. Asian countries use superapps instead of browsers, Africa
+  utilizes mesh and P2P networks, and our own app ecosystems diverge from the
+  open web. Internet fragmentation has historical roots, and today it's
+  categorized into technical, governmental, and commercial fragmentation. The
+  Internet Society works to combat these issues for a more connected internet.
+  However, media narratives often romanticize the OG internet, ignoring its
+  failures and the need for a more evolved web. The article argues that the
+  original ideal of the internet didn't deliver universal harmony but exposed
+  and even exacerbated societal divisions.
 tags:
-  - One
-  - Two
-  - Three
+  - Internet fragmentation
+  - Internet Society
+  - OG Internet
+  - Superapps
+  - Mesh Networks
+  - Technical fragmentation
+  - Governmental fragmentation
+  - Commercial fragmentation
 createdAt: 2024-06-08T08:26:51.700Z
-updatedAt: 2024-06-08T13:03:31.908Z
-publishedAt: 2024-06-08T09:37:37.385Z
+updatedAt: 2024-06-08T13:42:29.292Z
 ---
 
 # Continental Drift

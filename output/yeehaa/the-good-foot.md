@@ -2,18 +2,28 @@
 title: The Good Foot
 author: Yeehaa
 series: Align The Misaligned
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+summary: The article "The Good Foot" discusses the concept of ecosystems as
+  regenerative practices of decentralized alignment and emphasizes the principle
+  of the freedom to leave one habitat for another, mirroring natural ecosystems
+  where organisms move in response to environmental conditions. This ability to
+  "vote with your feet" is crucial for dynamic and healthy ecosystems. The
+  concept extends to the internet and human ecosystems, suggesting that the
+  privilege to move between different communities is essential for creativity
+  and innovation. Balaji Srinivasan's "The Network State" is introduced,
+  positing that digital communities can potentially evolve into new forms of
+  states not defined by physical space but by shared values and digital
+  identities. Future ecosystems should prioritize the right of individuals to
+  move freely between communities, as this is key to fostering innovation and
+  maintaining healthy, evolving societies.
 tags:
-  - One
-  - Two
-  - Three
-createdAt: 2024-06-08T13:03:31.906Z
-updatedAt: 2024-06-08T13:03:31.906Z
+  - ecosystems
+  - freedom
+  - internet
+  - innovation
+  - Balaji Srinivasan
+  - digital communities
+createdAt: 2024-06-08T13:24:26.725Z
+updatedAt: 2024-06-08T13:42:36.050Z
 ---
 
 # The Good Foot
@@ -42,7 +52,6 @@ As mentioned earlier, letting go of that dream of globally shared values should 
 
 Balaji Srinivan's *The Network State* (2022) may be this new era paradigm first philosophical masterpiece. Its claim is deceivingly simple: the era of the nation state is nearing its end. In Srinivan's view, states no longer need to be defined by their claim on contiguous physical space. The internet has removed the necessity for that requirement:
 
- > 
  > What underpins the new dynamic of network states is the intrinsic lack of scarcity of digital territory, the return of unclaimed land and terra nullius, the reopened frontier.
 
 — Balaji Srinivasan
@@ -55,7 +64,6 @@ Of these three stages, the first one is most interesting for the current purpose
 
 In the case of a startup society, however, the proposition that needs to be developed is not commercial but ethical in nature. This is the most exciting difference between a nation and a network state. Rather than starting from temporal contingency and physical proximity, startup societies shape around shared values.
 
- > 
  > Every new startup society needs to have a moral premise at its core, one that its founding nation subscribes to, one that is supported by a digital history that a more powerful state can’t delete, one that justifies its existence as a righteous yet peaceful protest against the powers that be.
 
 — Balaji Srinivasan

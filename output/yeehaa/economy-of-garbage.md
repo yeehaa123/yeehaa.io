@@ -2,18 +2,30 @@
 title: Economy of Garbage
 author: Yeehaa
 series: Align The Misaligned
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+summary: "The article delves into the concept of decentralization, contrasting
+  it with fragmentation, and explores the cultural and economic implications of
+  an 'excess' mindset, particularly in the context of modern capitalism and
+  blockchain technology. It reflects on the rise and fall of crypto as a modern
+  iteration of 1990s beliefs in boundless capitalism and liberalism. The
+  discussion transitions to Walter Benjamin's and Georges Bataille's ideas:
+  Benjamin highlights how modernity eliminates scarcity, while Bataille
+  advocates for embracing excess and waste. Shraddha Borawake's artistic
+  practice, 'Garb-Age,' exemplifies this idea by blurring the lines between
+  nature, culture, and trash, suggesting that waste is central to both."
 tags:
-  - One
-  - Two
-  - Three
+  - decentralization
+  - economy
+  - excess mindset
+  - crypto
+  - blockchain
+  - Walter Benjamin
+  - Georges Bataille
+  - Shraddha Borawake
+  - Garb-Age
+  - modern capitalism
 createdAt: 2024-06-08T09:37:37.376Z
-updatedAt: 2024-06-08T13:03:31.908Z
+updatedAt: 2024-06-08T13:42:31.850Z
+publishedAt: 2024-06-08T13:24:24.974Z
 ---
 
 # Economy of Garbage

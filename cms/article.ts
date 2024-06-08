@@ -56,16 +56,19 @@ export async function init({ content, series }: { series?: string, content: stri
   };
 }
 
-export function update(entry: Article, tableRow: TableRow) {
+export async function update(entry: Article, tableRow: TableRow) {
   const { checksum, draft } = tableRow;
   const checksumChanged = entry.frontmatter.checksum !== checksum;
   const statusChanged = entry.frontmatter.draft !== draft;
   const isUpdated = checksumChanged || statusChanged;
   if (!isUpdated) { return entry }
   const frontmatter = fm.update(entry.frontmatter, tableRow)
+  const { summary, tags } = await ai.augment({ checksum, content: entry.content })
   return {
     ...entry,
-    frontmatter
+    frontmatter,
+    summary,
+    tags
   };
 }
 
