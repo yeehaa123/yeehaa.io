@@ -58,16 +58,16 @@ export async function update(tree: FileTree, tableData: TableRow[]) {
   }
 }
 
-export async function order(tree: FileTree) {
-  const seriesIndex = new Map<string, number>;
-  for (const [title, entry] of tree) {
-    const { series } = entry.frontmatter;
-    if (series) {
-      const seriesCount = seriesIndex.get(series) || 0;
-      tree.set(title, await article.addOrder(entry, seriesCount))
-      seriesIndex.set(series, seriesCount + 1);
-    }
-  }
+export function order(tree: FileTree) {
+  const publishedInSeries = Array.from(tree).filter(([_, { frontmatter }]) => {
+    return frontmatter.series && frontmatter.publishedAt
+  }).sort(([_a, a], [_b, b]) => {
+    return a.frontmatter.publishedAt.getTime() - b.frontmatter.publishedAt.getTime();
+  });
+
+  publishedInSeries.forEach(([title, entry], index) => {
+    tree.set(title, article.addOrder(entry, index));
+  })
 }
 
 

@@ -16,16 +16,6 @@ export type TableRow = Pick<Frontmatter,
 >
 
 export async function write(basePath: string, tree: FileTree) {
-  const publishedInSeries = Array.from(tree).filter(([_, { frontmatter }]) => {
-    return frontmatter.series && frontmatter.publishedAt
-  }).sort(([_a, a], [_b, b]) => {
-    return a.frontmatter.publishedAt.getTime() - b.frontmatter.publishedAt.getTime();
-  });
-
-  publishedInSeries.forEach(([title, entry], index) => {
-    tree.set(title, article.addOrder(entry, index));
-  })
-
   const table = Array.from(tree).map(([_, { frontmatter }]) => {
     const {
       title,

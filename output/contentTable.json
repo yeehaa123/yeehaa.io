@@ -6,20 +6,18 @@
     "author": "Yeehaa",
     "draft": false,
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
-    "createdAt": "2024-06-08T17:29:52.615Z",
-    "updatedAt": "2024-06-08T17:34:38.210Z",
-    "publishedAt": "2024-06-08T17:30:06.589Z"
+    "createdAt": "2024-06-08T17:37:07.320Z",
+    "updatedAt": "2024-06-08T17:39:33.152Z",
+    "publishedAt": "2024-06-08T17:37:32.873Z"
   },
   {
     "title": "Continental Drift",
-    "order": 1,
     "series": "Ecosystem Architecture",
     "author": "Yeehaa",
-    "draft": false,
+    "draft": true,
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "createdAt": "2024-06-08T17:29:52.617Z",
-    "updatedAt": "2024-06-08T17:34:38.211Z",
-    "publishedAt": "2024-06-08T17:30:06.589Z"
+    "createdAt": "2024-06-08T17:39:33.141Z",
+    "updatedAt": "2024-06-08T17:39:33.141Z"
   },
   {
     "title": "Economy of Garbage",
@@ -27,8 +25,8 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "2fa6a7e7bf592d41022eb9cd67f240db",
-    "createdAt": "2024-06-08T17:34:38.197Z",
-    "updatedAt": "2024-06-08T17:34:38.197Z"
+    "createdAt": "2024-06-08T17:39:33.142Z",
+    "updatedAt": "2024-06-08T17:39:33.142Z"
   },
   {
     "title": "Foam Party",
@@ -36,19 +34,17 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "9f89665831b49e0f9151d06d7495fe0a",
-    "createdAt": "2024-06-08T17:34:38.199Z",
-    "updatedAt": "2024-06-08T17:34:38.199Z"
+    "createdAt": "2024-06-08T17:39:33.143Z",
+    "updatedAt": "2024-06-08T17:39:33.143Z"
   },
   {
     "title": "Global Village People",
-    "order": 2,
     "series": "Ecosystem Architecture",
     "author": "Yeehaa",
-    "draft": false,
+    "draft": true,
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "createdAt": "2024-06-08T17:30:06.584Z",
-    "updatedAt": "2024-06-08T17:34:38.211Z",
-    "publishedAt": "2024-06-08T17:30:17.889Z"
+    "createdAt": "2024-06-08T17:39:33.144Z",
+    "updatedAt": "2024-06-08T17:39:33.144Z"
   },
   {
     "title": "Learning from Nature",
@@ -56,8 +52,8 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "b00ab9b260061c09b956c2e922ebcbad",
-    "createdAt": "2024-06-08T17:34:38.202Z",
-    "updatedAt": "2024-06-08T17:34:38.202Z"
+    "createdAt": "2024-06-08T17:39:33.145Z",
+    "updatedAt": "2024-06-08T17:39:33.145Z"
   },
   {
     "title": "Reclaiming the Future",
@@ -65,8 +61,8 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "0af417ab21870acd8b23293440ad316a",
-    "createdAt": "2024-06-08T17:34:38.203Z",
-    "updatedAt": "2024-06-08T17:34:38.203Z"
+    "createdAt": "2024-06-08T17:39:33.145Z",
+    "updatedAt": "2024-06-08T17:39:33.145Z"
   },
   {
     "title": "Shenzhen Goes HAM",
@@ -74,8 +70,8 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "7c7c83da8c82ad789aff5d7f7f171543",
-    "createdAt": "2024-06-08T17:34:38.205Z",
-    "updatedAt": "2024-06-08T17:34:38.205Z"
+    "createdAt": "2024-06-08T17:39:33.146Z",
+    "updatedAt": "2024-06-08T17:39:33.146Z"
   },
   {
     "title": "The Good Foot",
@@ -83,8 +79,8 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "f0f31bb5617196b56b80e9fd43b1ce5f",
-    "createdAt": "2024-06-08T17:34:38.207Z",
-    "updatedAt": "2024-06-08T17:34:38.207Z"
+    "createdAt": "2024-06-08T17:39:33.148Z",
+    "updatedAt": "2024-06-08T17:39:33.148Z"
   },
   {
     "title": "The Practice of Ecosystem Architecture",
@@ -92,7 +88,7 @@
     "author": "Yeehaa",
     "draft": true,
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f",
-    "createdAt": "2024-06-08T17:34:38.210Z",
-    "updatedAt": "2024-06-08T17:34:38.210Z"
+    "createdAt": "2024-06-08T17:39:33.151Z",
+    "updatedAt": "2024-06-08T17:39:33.151Z"
   }
 ]

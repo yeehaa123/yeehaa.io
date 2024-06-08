@@ -18,11 +18,9 @@ tags:
   - access
 series: Ecosystem Architecture
 checksum: 6da78a490110bdc70b906c065f1b99ea
-draft: false
-createdAt: 2024-06-08T17:29:52.617Z
-updatedAt: 2024-06-08T17:32:38.654Z
-publishedAt: 2024-06-08T17:30:06.589Z
-order: 1
+draft: true
+createdAt: 2024-06-08T17:39:33.141Z
+updatedAt: 2024-06-08T17:39:33.141Z
 ---
 
 # Continental Drift
