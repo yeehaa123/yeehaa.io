@@ -19,7 +19,7 @@ const posts = (await getCollection('Posts'))
 );
 ---
 
-<Layout>
+<Layout {title}>
   { posts.map(p => {
   return <div>
     <a href={`/posts/${p.slug}`}>

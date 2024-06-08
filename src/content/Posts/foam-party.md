@@ -21,8 +21,8 @@ tags:
 series: Ecosystem Architecture
 checksum: 9f89665831b49e0f9151d06d7495fe0a
 draft: true
-createdAt: 2024-06-08T17:39:33.143Z
-updatedAt: 2024-06-08T17:39:33.143Z
+createdAt: 2024-06-08T17:49:45.532Z
+updatedAt: 2024-06-08T17:49:45.532Z
 ---
 
 # Foam Party

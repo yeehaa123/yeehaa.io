@@ -21,9 +21,11 @@ tags:
   - fights
 series: Ecosystem Architecture
 checksum: e8a7c7d905a234f18941d3fd4b6d0b69
-draft: true
-createdAt: 2024-06-08T17:39:33.144Z
-updatedAt: 2024-06-08T17:39:33.144Z
+draft: false
+createdAt: 2024-06-08T17:49:29.880Z
+updatedAt: 2024-06-08T17:49:45.543Z
+publishedAt: 2024-06-08T17:49:45.543Z
+order: 2
 ---
 
 # Global Village People

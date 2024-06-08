@@ -18,8 +18,8 @@ tags:
 series: Ecosystem Architecture
 checksum: 0af417ab21870acd8b23293440ad316a
 draft: true
-createdAt: 2024-06-08T17:39:33.145Z
-updatedAt: 2024-06-08T17:39:33.145Z
+createdAt: 2024-06-08T17:49:45.536Z
+updatedAt: 2024-06-08T17:49:45.536Z
 ---
 
 # Reclaiming the Future
