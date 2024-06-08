@@ -3,7 +3,7 @@ title: Economy of Garbage
 series: Align The Misaligned
 author: Yeehaa
 draft: true
-createdAt: 2024-06-07T16:44:55.578Z
+createdAt: 2024-06-08T06:19:58.646Z
 ---
 ---
 aliases: null

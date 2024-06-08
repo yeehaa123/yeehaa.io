@@ -2,9 +2,8 @@
 title: Global Village People
 series: Align The Misaligned
 author: Yeehaa
-draft: false
-createdAt: 2024-06-07T16:44:55.581Z
-publishedAt: 2024-06-07T16:45:27.757Z
+draft: true
+createdAt: 2024-06-08T06:19:58.648Z
 ---
 # Global Village People
 

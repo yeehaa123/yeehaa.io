@@ -3,7 +3,7 @@ title: The Good Foot
 series: Align The Misaligned
 author: Yeehaa
 draft: true
-createdAt: 2024-06-07T16:44:55.585Z
+createdAt: 2024-06-08T06:19:58.652Z
 ---
 # The Good Foot
 
