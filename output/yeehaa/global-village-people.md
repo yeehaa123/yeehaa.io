@@ -1,6 +1,7 @@
 ---
 title: Global Village People
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.505Z
-updatedAt: 2024-06-08T09:42:31.505Z
+createdAt: 2024-06-08T13:03:31.901Z
+updatedAt: 2024-06-08T13:03:31.901Z
 ---
+
 # Global Village People
 
 In his revelatory works *The Gutenberg Galaxy* (1962) and *Understanding Media* (1964), Marshall McLuhan already predicts that connecting the world through technology will not lead to further unification. Rather, the connective powers of electricity, and the technical media built on top of it, will turn the world into a global village.

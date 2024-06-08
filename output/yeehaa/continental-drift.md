@@ -1,6 +1,7 @@
 ---
 title: Continental Drift
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,11 +12,11 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
 createdAt: 2024-06-08T08:26:51.700Z
-updatedAt: 2024-06-08T09:42:31.511Z
+updatedAt: 2024-06-08T13:03:31.908Z
 publishedAt: 2024-06-08T09:37:37.385Z
 ---
+
 # Continental Drift
 
 While the existence and dangers of the Chinese and Russian internet are widely known and debated, the prevalence of this discourse obscures the fact that our 'normal' internet experience has been far from the norm globally for quite a while. In most Asian countries, so-called superapps have replaced browsers and apps as the primary way to interact with the web. Africa is pioneering the adoption of mesh and P2P networks that creatively give (some form of) internet access to people who cannot afford or rely on stable and persistent connections. Finally, even our own mobile appstore ecosystems should be understood as a break from the open global web, which itself thus needs to be further predicated: let's call it the OG internet for now.

@@ -1,6 +1,7 @@
 ---
 title: Shenzhen Goes HAM
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.508Z
-updatedAt: 2024-06-08T09:42:31.508Z
+createdAt: 2024-06-08T13:03:31.904Z
+updatedAt: 2024-06-08T13:03:31.904Z
 ---
+
 # Shenzhen Goes HAM
 
 Foam demands rituals and practices that stimulate and facilitate alignment, both within and between different ecosystems. Decentralization is the umbrella term to cover a multiplicity of cultural techniques that can be employed to achieve this. Despite what crypto-boys want us to believe, blockchain, bitcoin, and DAOs are far from the first, let alone the best, manifestations of decentralization. The feudal system, the silk road, and the Greek city states were all built around principles of distributed power and organization.

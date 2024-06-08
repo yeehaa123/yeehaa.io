@@ -1,6 +1,5 @@
 import type { Frontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
-import * as cache from './cache';
 import * as ai from './ai';
 
 import Markdoc from '@markdoc/markdoc';
@@ -72,11 +71,12 @@ export function update(entry: Article, tableRow: TableRow) {
 
 export function render({ content, frontmatter }: Article) {
   const { title, author, summary, tags, series, createdAt, updatedAt, publishedAt } = frontmatter;
-  const meta = { title, author, summary, tags, series, createdAt, updatedAt, publishedAt };
+  const meta = { title, author, series, summary, tags, createdAt, updatedAt, publishedAt };
 
   return `---
 ${stringify({ ...meta }).trim()}
 ---
+
 ${content}
 `
 }

@@ -1,6 +1,7 @@
 ---
 title: The Practice of Ecosystem Architecture
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.511Z
-updatedAt: 2024-06-08T09:42:31.511Z
+createdAt: 2024-06-08T13:03:31.907Z
+updatedAt: 2024-06-08T13:03:31.907Z
 ---
+
 # The Practice of Ecosystem Architecture
 
 More than ever before, people enjoy the privilege to replace random communities with intentional ones. It is no longer necessary to base our choice of cohabitation based upon spatiotemporal contingency alone. Instead, we can choose to be members of ecosystems that are driven by shared values. Ecosystem architecture is the practice of designing such virtual spaces.

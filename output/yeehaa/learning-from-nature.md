@@ -1,6 +1,7 @@
 ---
 title: Learning from Nature
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.506Z
-updatedAt: 2024-06-08T09:42:31.506Z
+createdAt: 2024-06-08T13:03:31.902Z
+updatedAt: 2024-06-08T13:03:31.902Z
 ---
+
 # Learning from Nature
 
 When perceived through the lens of abundance, decentralized ecosystems have the potential to be more vibrant and resilient than any centralized community or organization can ever be. By giving communities more control over their resources and decision-making processes, they become increasingly empowered to collaboratively create healthier ecosystems. It is exactly in this north star vision where the practices of decentralization and regeneration meet.

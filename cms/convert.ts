@@ -1,4 +1,5 @@
 import * as path from 'path';
+import * as cache from './cache';
 import * as filetree from "./filetree";
 import * as table from "./table";
 import { initDir, initTable } from "./helpers";
@@ -11,6 +12,7 @@ const TABLE_PATH = path.join(OUTPUT_BASE, './contentTable.json');
 async function main() {
   await initDir(OUTPUT_DIR);
   await initTable(TABLE_PATH);
+  await cache.init();
 
   const tree = await filetree.create(INPUT_BASE);
   const tableData = await table.read(TABLE_PATH);

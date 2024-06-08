@@ -1,6 +1,7 @@
 ---
 title: The Good Foot
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.509Z
-updatedAt: 2024-06-08T09:42:31.509Z
+createdAt: 2024-06-08T13:03:31.906Z
+updatedAt: 2024-06-08T13:03:31.906Z
 ---
+
 # The Good Foot
 
 An ecosystems is a regenerative practice of continuous, decentralized alignment. The fact that it strives towards the most favorable conditions for most, however, inevitably also means that it will not work for all. This brings us to a crucial, and often overlooked, principle that we can learn from nature: the freedom to leave one habitat for another one. Healthy ecosystems facilitate the possibility to vote with your feet.

@@ -1,19 +1,34 @@
-export function get(checksum: string) {
-  console.log("RETRIEVING ITEM", checksum);
-  const summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  const tags = ["One", "Two", "Three"];
-  return {
-    summary,
-    tags
-  }
-}
+const CACHE_BASE = './.cache';
+import { existsSync } from "fs"
+import { readFile, writeFile, mkdir } from 'fs/promises'
+import path from 'path';
 
 type Item = {
   summary: string,
   tags: string[]
 }
 
-export async function set(checksum: string, item: Item) {
-  console.log("SETTING ITEM", checksum);
-  console.log(checksum);
+export async function init() {
+  const dirExists = existsSync(CACHE_BASE);
+  if (!dirExists) {
+    console.log("CREATING DIR: ", CACHE_BASE);
+    await mkdir(CACHE_BASE, { recursive: true })
+  }
 }
+
+export async function get(checksum: string) {
+  const filePath = path.join(CACHE_BASE, `${checksum}.json`);
+  const fileExists = existsSync(filePath);
+  if (fileExists) {
+    const file = await readFile(filePath, 'utf8');
+    return JSON.parse(file) as Item;
+  }
+}
+
+
+export async function set(checksum: string, item: Item) {
+  console.log("setting item: ", checksum);
+  const filePath = path.join(CACHE_BASE, `${checksum}.json`);
+  await writeFile(filePath, JSON.stringify(item, null, 2), 'utf8');
+}
+

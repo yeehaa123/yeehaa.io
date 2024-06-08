@@ -10,7 +10,7 @@ async function analyze(_content: string) {
 }
 
 export async function augment({ checksum, content }: { checksum: string, content: string }) {
-  const cachedItem = cache.get(checksum);
+  const cachedItem = await cache.get(checksum);
   if (cachedItem) {
     return cachedItem;
   }

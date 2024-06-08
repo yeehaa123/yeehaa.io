@@ -1,6 +1,7 @@
 ---
 title: The Case for Ecosystem Architecture
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.508Z
-updatedAt: 2024-06-08T09:42:31.508Z
+createdAt: 2024-06-08T13:03:31.904Z
+updatedAt: 2024-06-08T13:03:31.904Z
 ---
+
 # The Case for Ecosystem Architecture
 
 It is remarkable how the history of virtual space mimics that of its physical counterpart. Like the universe's big bang, better yet, the earth's tectonic shifts, our once one and only internet has shattered into many pieces. To lead with the bad news: no attempt to glue its pieces back together will ever mend it into a whole again. But the fact that something is broken does not mean that it is worth-less. Changing our relation to fragments and waste is key to our planetary future. So why exclude the internet from our new found consciousness?

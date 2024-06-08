@@ -1,6 +1,7 @@
 ---
 title: Reclaiming the Future
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
-createdAt: 2024-06-08T09:42:31.507Z
-updatedAt: 2024-06-08T09:42:31.507Z
+createdAt: 2024-06-08T13:03:31.903Z
+updatedAt: 2024-06-08T13:03:31.903Z
 ---
+
 # Reclaiming the Future
 
 Ecosystem architecture encourages us to invest in futures that we would like to inhabit rather than settling for the one that we expect to become reality. From its inception, the true promise of the decentralized internet has been the multiplication of public and private spaces. More importantly, we also acquired an unrivaled degree of ownership over them. We did not lose the internet due to fragmentation, but because we started outsourcing our responsibility to governments and corporations. It is high time to reclaim it.

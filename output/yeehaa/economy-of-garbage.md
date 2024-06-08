@@ -1,6 +1,7 @@
 ---
 title: Economy of Garbage
 author: Yeehaa
+series: Align The Misaligned
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -11,10 +12,10 @@ tags:
   - One
   - Two
   - Three
-series: Align The Misaligned
 createdAt: 2024-06-08T09:37:37.376Z
-updatedAt: 2024-06-08T09:42:31.511Z
+updatedAt: 2024-06-08T13:03:31.908Z
 ---
+
 # Economy of Garbage
 
 Decentralization is not fragmentation. When applied correctly, its cultural techniques can actually smoothen and alleviate the painful effects of foaming. The problem with its most emblematic, contemporary manifestation is that its community got mesmerized by an excess mindset. The original hype around the endless possibilities of blockchain's immutable and incorruptible ledger was entirely replaced by crypto's everyone can get rich instantly pyramid scheme.

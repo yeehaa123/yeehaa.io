@@ -3,7 +3,6 @@ import voca from "voca";
 import * as path from 'path';
 import { readdir, lstat, readFile, writeFile } from 'fs/promises'
 import * as article from "./article";
-import * as frontmatter from "./frontmatter";
 import { deslugify } from "./helpers";
 import type { TableRow } from "./table";
 
