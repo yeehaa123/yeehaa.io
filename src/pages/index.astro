@@ -4,22 +4,31 @@ const title = "YEEHAA";
 
 import { getCollection } from 'astro:content';
 
-
-const inspirational = ["Something", "Wicked"];
-
 const posts = (await getCollection('Posts'))
   .filter(({data}) => !data.draft)
-  .sort(
-).map(({data, ...a}, index) => { return { data, order: ('00' + index).slice(-3), ...a}})
-;
-
+  .sort((a, b) => {
+          return a.data.order - b.data.order
+    }
+).map(({data, ...a}) => { 
+  const order = ('00' + data.order).slice(-3);
+  return { 
+    data, 
+    order,
+    ...a
+  }}
+);
 ---
 
-<Layout {title} {inspirational} >
+<Layout>
   { posts.map(p => {
   return <div>
-  <a href={`/posts/${p.slug}`}><h1><span class="text-secondary">{p.order}</span> {p.data.title}</h1></a>
-  <p>{p.data.summary}<p>
+    <a href={`/posts/${p.slug}`}>
+{ p.data.series && <h2 class="flex mb-1 md:mb-2 gap-2">
+  <span class="text-secondary font-extrabold">{p.order}</span>
+  <span class="text-secondary-light">{p.data.series}</span></h2>}
+    <h1>{p.data.title}</div></h1>
+    </a>
+    <p>{p.data.summary}</p>
   </div>
   })}
 </Layout>

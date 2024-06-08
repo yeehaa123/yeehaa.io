@@ -52,9 +52,24 @@ export async function update(tree: FileTree, tableData: TableRow[]) {
   for (const tableRow of tableData) {
     const { title } = tableRow;
     const entry = tree.get(title);
-    tree.set(title, await article.update(entry, tableRow))
+    if (entry) {
+      tree.set(title, await article.update(entry, tableRow))
+    }
   }
 }
+
+export async function order(tree: FileTree) {
+  const seriesIndex = new Map<string, number>;
+  for (const [title, entry] of tree) {
+    const { series } = entry.frontmatter;
+    if (series) {
+      const seriesCount = seriesIndex.get(series) || 0;
+      tree.set(title, await article.addOrder(entry, seriesCount))
+      seriesIndex.set(series, seriesCount + 1);
+    }
+  }
+}
+
 
 export async function validate(tree: FileTree) {
   for (const [_title, entry] of tree) {

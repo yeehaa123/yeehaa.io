@@ -18,11 +18,11 @@ tags:
   - align
   - scale
   - spinout
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: 5d6f6f6ee484eca97181c32719f8eb4f
 draft: true
-createdAt: 2024-06-08T15:04:11.652Z
-updatedAt: 2024-06-08T15:04:11.652Z
+createdAt: 2024-06-08T17:32:38.653Z
+updatedAt: 2024-06-08T17:32:38.653Z
 ---
 
 # The Practice of Ecosystem Architecture

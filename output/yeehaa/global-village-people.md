@@ -19,11 +19,13 @@ tags:
   - global
   - values
   - fights
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: e8a7c7d905a234f18941d3fd4b6d0b69
-draft: true
-createdAt: 2024-06-08T15:04:11.646Z
-updatedAt: 2024-06-08T15:04:11.646Z
+draft: false
+createdAt: 2024-06-08T17:30:06.584Z
+updatedAt: 2024-06-08T17:34:38.211Z
+publishedAt: 2024-06-08T17:30:17.889Z
+order: 2
 ---
 
 # Global Village People

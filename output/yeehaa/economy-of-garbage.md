@@ -17,11 +17,11 @@ tags:
   - capital
   - excess
   - art
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: 2fa6a7e7bf592d41022eb9cd67f240db
 draft: true
-createdAt: 2024-06-08T15:04:11.643Z
-updatedAt: 2024-06-08T15:04:11.643Z
+createdAt: 2024-06-08T17:34:38.197Z
+updatedAt: 2024-06-08T17:34:38.197Z
 ---
 
 # Economy of Garbage

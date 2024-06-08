@@ -14,24 +14,15 @@ const { title, inspirational = ["nothing left...", "...to say"], logoLink = '#'}
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="bg-offwhite dark:bg-offblack print:bg-pure-white font-sans md:text-lg">
+  <body class="bg-white dark:bg-black print:bg-pure-white font-sans md:text-lg">
     <header class="z-10 sticky top-0">
       <NavBar><Logo class="text-1xl md:text-2xl" href={logoLink} slot="logo" /></NavBar>
     </header>
     <main transition:animate="fade">
-      <div class:list={["pt-10", "md:pt-24", "print:hidden"]}>
-        <div class="inspirational relative top-0 left-0 right-0 mx-auto text-center">
-          <quote class="text-gray-200 dark:text-gray-700" slot="inspirational">
-            {inspirational.map(l => <p>{l}</p>)}
-          </quote>
-        </div>
-        <slot name="top-animation"/>
-      </div>
       <div class="bg-white text-black dark:bg-black dark:text-white
         print:bg-pure-white print:text-pitch-black py-20 md:py-36 print:py-24" >
         <slot/>
       </div>
-      <slot name="bottom-animation"/>
     </main>
     <footer class="container overflow-hidden dark:text-white py-8 md:py-12 px-12 lg:px-0 lg:max-w-3xl mx-auto print:hidden">
       <Logo/>

@@ -1,73 +1,98 @@
 [
   {
+    "title": "Align the Misaligned",
+    "order": 0,
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
+    "draft": false,
+    "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
+    "createdAt": "2024-06-08T17:29:52.615Z",
+    "updatedAt": "2024-06-08T17:34:38.210Z",
+    "publishedAt": "2024-06-08T17:30:06.589Z"
+  },
+  {
     "title": "Continental Drift",
-    "draft": true,
+    "order": 1,
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
+    "draft": false,
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "createdAt": "2024-06-08T15:04:11.642Z",
-    "updatedAt": "2024-06-08T15:04:11.642Z"
+    "createdAt": "2024-06-08T17:29:52.617Z",
+    "updatedAt": "2024-06-08T17:34:38.211Z",
+    "publishedAt": "2024-06-08T17:30:06.589Z"
   },
   {
     "title": "Economy of Garbage",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
     "checksum": "2fa6a7e7bf592d41022eb9cd67f240db",
-    "createdAt": "2024-06-08T15:04:11.643Z",
-    "updatedAt": "2024-06-08T15:04:11.643Z"
+    "createdAt": "2024-06-08T17:34:38.197Z",
+    "updatedAt": "2024-06-08T17:34:38.197Z"
   },
   {
     "title": "Foam Party",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
-    "checksum": "c7a92ea345908cf217b1389ba2d0e918",
-    "createdAt": "2024-06-08T14:51:46.229Z",
-    "updatedAt": "2024-06-08T15:04:11.652Z"
+    "checksum": "9f89665831b49e0f9151d06d7495fe0a",
+    "createdAt": "2024-06-08T17:34:38.199Z",
+    "updatedAt": "2024-06-08T17:34:38.199Z"
   },
   {
     "title": "Global Village People",
-    "draft": true,
+    "order": 2,
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
+    "draft": false,
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "createdAt": "2024-06-08T15:04:11.646Z",
-    "updatedAt": "2024-06-08T15:04:11.646Z"
+    "createdAt": "2024-06-08T17:30:06.584Z",
+    "updatedAt": "2024-06-08T17:34:38.211Z",
+    "publishedAt": "2024-06-08T17:30:17.889Z"
   },
   {
     "title": "Learning from Nature",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
     "checksum": "b00ab9b260061c09b956c2e922ebcbad",
-    "createdAt": "2024-06-08T15:04:11.647Z",
-    "updatedAt": "2024-06-08T15:04:11.647Z"
+    "createdAt": "2024-06-08T17:34:38.202Z",
+    "updatedAt": "2024-06-08T17:34:38.202Z"
   },
   {
     "title": "Reclaiming the Future",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
     "checksum": "0af417ab21870acd8b23293440ad316a",
-    "createdAt": "2024-06-08T15:04:11.647Z",
-    "updatedAt": "2024-06-08T15:04:11.647Z"
+    "createdAt": "2024-06-08T17:34:38.203Z",
+    "updatedAt": "2024-06-08T17:34:38.203Z"
   },
   {
     "title": "Shenzhen Goes HAM",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
     "checksum": "7c7c83da8c82ad789aff5d7f7f171543",
-    "createdAt": "2024-06-08T15:04:11.648Z",
-    "updatedAt": "2024-06-08T15:04:11.648Z"
-  },
-  {
-    "title": "The Case for Ecosystem Architecture",
-    "draft": false,
-    "checksum": "26eb144367e1f5dac3f5c430ff012096",
-    "createdAt": "2024-06-08T14:58:55.080Z",
-    "updatedAt": "2024-06-08T15:04:11.652Z",
-    "publishedAt": "2024-06-08T15:04:11.652Z"
+    "createdAt": "2024-06-08T17:34:38.205Z",
+    "updatedAt": "2024-06-08T17:34:38.205Z"
   },
   {
     "title": "The Good Foot",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
     "checksum": "f0f31bb5617196b56b80e9fd43b1ce5f",
-    "createdAt": "2024-06-08T15:04:11.650Z",
-    "updatedAt": "2024-06-08T15:04:11.650Z"
+    "createdAt": "2024-06-08T17:34:38.207Z",
+    "updatedAt": "2024-06-08T17:34:38.207Z"
   },
   {
     "title": "The Practice of Ecosystem Architecture",
+    "series": "Ecosystem Architecture",
+    "author": "Yeehaa",
     "draft": true,
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f",
-    "createdAt": "2024-06-08T15:04:11.652Z",
-    "updatedAt": "2024-06-08T15:04:11.652Z"
+    "createdAt": "2024-06-08T17:34:38.210Z",
+    "updatedAt": "2024-06-08T17:34:38.210Z"
   }
 ]

@@ -15,11 +15,11 @@ tags:
   - future
   - data
   - align
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: 0af417ab21870acd8b23293440ad316a
 draft: true
-createdAt: 2024-06-08T15:04:11.647Z
-updatedAt: 2024-06-08T15:04:11.647Z
+createdAt: 2024-06-08T17:34:38.203Z
+updatedAt: 2024-06-08T17:34:38.203Z
 ---
 
 # Reclaiming the Future

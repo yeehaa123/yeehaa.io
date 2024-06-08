@@ -1,9 +1,7 @@
 import type { Frontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import * as ai from './ai';
-
 import Markdoc from '@markdoc/markdoc';
-
 import { stringify } from "yaml";
 import * as fm from "./frontmatter";
 import { generateChecksum } from "./helpers";
@@ -72,12 +70,19 @@ export async function update(entry: Article, tableRow: TableRow) {
     tags
   };
 }
+
+export function addOrder(entry: Article, order: number) {
+  const { frontmatter } = entry;
+  return {
+    ...entry,
+    frontmatter: { ...frontmatter, order }
+  };
+}
 export async function validate(entry: Article) {
   return fm.validate(entry.frontmatter);
 }
 
 export function render({ content, frontmatter }: Article) {
-
   return `---
 ${stringify({ ...frontmatter }).trim()}
 ---

@@ -1,29 +1,33 @@
 ---
-title: The Case for Ecosystem Architecture
+title: Align the Misaligned
 author: Yeehaa
-excerpt: The fragmentation of the internet gives rise to ecosystem
-  architecture—a practice that integrates decentralized and regenerative design
-  for vibrant, healthy systems and sees opportunities in fragmentation.
-summary: The article argues that the fragmentation of the internet parallels
-  physical space and presents an opportunity for a new practice called ecosystem
-  architecture. This practice, influenced by various disciplines, focuses on
-  decentralized and regenerative design to create healthier, vibrant ecosystems.
-  It moves beyond sustainability to revitalize systems and communities, viewing
-  the internet's fragments as seeds for a promising future rather than waste.
+excerpt: The article argues for 'ecosystem architecture,' a practice combining
+  decentralization and regenerative design, to rejuvenate fragmented internet
+  systems and communities.
+summary: The article explores the fragmentation of the internet, likening it to
+  tectonic shifts, and argues that this splintering mirrors our evolving
+  relationship with waste and resources. It introduces 'ecosystem
+  architecture'—a practice driven by decentralization and regenerative design.
+  Citing missteps and excesses in technological innovation, it calls for a more
+  mindful, multi-disciplinary approach that values the regenerative potential of
+  fragmented systems. Ultimately, this new perspective aims to rejuvenate
+  communities and ecosystems, seeing fragments as seeds of possibility rather
+  than remnants of the past.
 tags:
   - internet
   - design
   - future
-  - change
-series: Align The Misaligned
-checksum: 26eb144367e1f5dac3f5c430ff012096
+  - ecosystem
+series: Ecosystem Architecture
+checksum: 34d442a1971d4dbbe8315bbfa8de35d5
 draft: false
-createdAt: 2024-06-08T14:58:55.080Z
-updatedAt: 2024-06-08T15:04:11.652Z
-publishedAt: 2024-06-08T15:04:11.652Z
+createdAt: 2024-06-08T17:29:52.615Z
+updatedAt: 2024-06-08T17:34:38.210Z
+publishedAt: 2024-06-08T17:30:06.589Z
+order: 0
 ---
 
-# The Case for Ecosystem Architecture
+# Align the Misaligned
 
 It is remarkable how the history of virtual space mimics that of its physical counterpart. Like the universe's big bang, better yet, the earth's tectonic shifts, our once one and only internet has shattered into many pieces. To lead with the bad news: no attempt to glue its pieces back together will ever mend it into a whole again. But the fact that something is broken does not mean that it is worth-less. Changing our relation to fragments and waste is key to our planetary future. So why exclude the internet from our new found consciousness?
 

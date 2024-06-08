@@ -18,11 +18,11 @@ tags:
   - internet
   - values
   - unity
-series: Align The Misaligned
-checksum: c7a92ea345908cf217b1389ba2d0e918
+series: Ecosystem Architecture
+checksum: 9f89665831b49e0f9151d06d7495fe0a
 draft: true
-createdAt: 2024-06-08T14:51:46.229Z
-updatedAt: 2024-06-08T15:04:11.652Z
+createdAt: 2024-06-08T17:32:38.642Z
+updatedAt: 2024-06-08T17:32:38.642Z
 ---
 
 # Foam Party

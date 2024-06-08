@@ -15,11 +15,11 @@ tags:
   - china
   - decentral
   - tech
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: 7c7c83da8c82ad789aff5d7f7f171543
 draft: true
-createdAt: 2024-06-08T15:04:11.648Z
-updatedAt: 2024-06-08T15:04:11.648Z
+createdAt: 2024-06-08T17:34:38.205Z
+updatedAt: 2024-06-08T17:34:38.205Z
 ---
 
 # Shenzhen Goes HAM

@@ -16,11 +16,13 @@ tags:
   - divide
   - global
   - access
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: 6da78a490110bdc70b906c065f1b99ea
-draft: true
-createdAt: 2024-06-08T15:04:11.642Z
-updatedAt: 2024-06-08T15:04:11.642Z
+draft: false
+createdAt: 2024-06-08T17:29:52.617Z
+updatedAt: 2024-06-08T17:32:38.654Z
+publishedAt: 2024-06-08T17:30:06.589Z
+order: 1
 ---
 
 # Continental Drift

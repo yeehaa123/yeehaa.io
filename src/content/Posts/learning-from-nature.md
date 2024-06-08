@@ -15,11 +15,11 @@ tags:
   - design
   - ecology
   - system
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: b00ab9b260061c09b956c2e922ebcbad
 draft: true
-createdAt: 2024-06-08T15:04:11.647Z
-updatedAt: 2024-06-08T15:04:11.647Z
+createdAt: 2024-06-08T17:32:38.645Z
+updatedAt: 2024-06-08T17:32:38.645Z
 ---
 
 # Learning from Nature

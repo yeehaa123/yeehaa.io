@@ -1,29 +1,4 @@
----
-title: The Case for Ecosystem Architecture
-author: Yeehaa
-excerpt: The fragmentation of the internet gives rise to ecosystem
-  architecture—a practice that integrates decentralized and regenerative design
-  for vibrant, healthy systems and sees opportunities in fragmentation.
-summary: The article argues that the fragmentation of the internet parallels
-  physical space and presents an opportunity for a new practice called ecosystem
-  architecture. This practice, influenced by various disciplines, focuses on
-  decentralized and regenerative design to create healthier, vibrant ecosystems.
-  It moves beyond sustainability to revitalize systems and communities, viewing
-  the internet's fragments as seeds for a promising future rather than waste.
-tags:
-  - internet
-  - design
-  - future
-  - change
-series: Align The Misaligned
-checksum: 26eb144367e1f5dac3f5c430ff012096
-draft: false
-createdAt: 2024-06-08T14:58:55.080Z
-updatedAt: 2024-06-08T15:04:11.652Z
-publishedAt: 2024-06-08T15:04:11.652Z
----
-
-# The Case for Ecosystem Architecture
+# Align the Misaligned
 
 It is remarkable how the history of virtual space mimics that of its physical counterpart. Like the universe's big bang, better yet, the earth's tectonic shifts, our once one and only internet has shattered into many pieces. To lead with the bad news: no attempt to glue its pieces back together will ever mend it into a whole again. But the fact that something is broken does not mean that it is worth-less. Changing our relation to fragments and waste is key to our planetary future. So why exclude the internet from our new found consciousness?
 
@@ -44,4 +19,3 @@ Decentralization has undeniably been the motor of the late twentieth and early t
 Waste generation and accumulation are the shadow side of these modern distributed modes of production. From the early Frankfurt School, the Club of Rome, up until the current day climate movement, the drive for innovation has been equated to the excess mindset. Weirdly enough, that is one of the few thing that eco-warriors and venture capitalists fully agree on. In order to innovate, you need to produce large quantities of trash. I hold, however, that both sides have been looking at the wrong. Innovation is not a quality of the technological artifact but rather of the practice that produces it. 
 
 It is in this practical notion of innovation that decentralized and regenerative design meet. Regeneration goes beyond sustainability by not only aiming to restore, but also to renew and revitalize systems and communities. Whereas sustainable design aims for damage control by mitigating harm, regenerative design wants to make ecosystems healthier and more vibrant than ever before. From the perspective of regeneration, the fragments of the internet become seeds of a promising future rather than remainders of a paradise lost. Wabi-sabi and Kintsugi, rather than perfection and wholeness, are key to a better future. Ecosystem architecture thus embraces these and related practices wholeheartedly.
-

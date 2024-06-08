@@ -18,11 +18,11 @@ tags:
   - freedom
   - internet
   - values
-series: Align The Misaligned
+series: Ecosystem Architecture
 checksum: f0f31bb5617196b56b80e9fd43b1ce5f
 draft: true
-createdAt: 2024-06-08T15:04:11.650Z
-updatedAt: 2024-06-08T15:04:11.650Z
+createdAt: 2024-06-08T17:32:38.650Z
+updatedAt: 2024-06-08T17:32:38.650Z
 ---
 
 # The Good Foot
