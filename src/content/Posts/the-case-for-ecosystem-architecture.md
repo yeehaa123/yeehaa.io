@@ -1,17 +1,26 @@
 ---
-aliases: null
-tags:
-- blog
-draft: false
-excerpt: ' Inspired by the principles of Wabi-sabi and Kintsugi, we explore the transformative potential of embracing fragmentation in the digital and physical realms. As the  internet splinters, we find value not in the pursuit of an unattainable wholeness but in the beauty of brokenness. This article introduces the concept of ecosystem architecture: a practice drawing from diverse disciplines to design resilient, decentralized networks that thrive on biodiversity. By reimagining innovation through the lens of regeneration and decentralization, we position the fragments of our world as seeds of a more vibrant and sustainable future, challenging us to rethink our relationship with the digital and natural environments.'
-published_on: 2023-04-01
-series: Aligning the Misaligned
-inspirational:
-- Wabi-sabi and Kintsugi
-- rather than perfection and wholeness
-- are key to a better future
-order: 0
 title: The Case for Ecosystem Architecture
+author: Yeehaa
+excerpt: The fragmentation of the internet gives rise to ecosystem
+  architecture—a practice that integrates decentralized and regenerative design
+  for vibrant, healthy systems and sees opportunities in fragmentation.
+summary: The article argues that the fragmentation of the internet parallels
+  physical space and presents an opportunity for a new practice called ecosystem
+  architecture. This practice, influenced by various disciplines, focuses on
+  decentralized and regenerative design to create healthier, vibrant ecosystems.
+  It moves beyond sustainability to revitalize systems and communities, viewing
+  the internet's fragments as seeds for a promising future rather than waste.
+tags:
+  - internet
+  - design
+  - future
+  - change
+series: Align The Misaligned
+checksum: 26eb144367e1f5dac3f5c430ff012096
+draft: false
+createdAt: 2024-06-08T14:58:55.080Z
+updatedAt: 2024-06-08T15:04:11.652Z
+publishedAt: 2024-06-08T15:04:11.652Z
 ---
 
 # The Case for Ecosystem Architecture
@@ -20,7 +29,6 @@ It is remarkable how the history of virtual space mimics that of its physical co
 
 In her seminal *Atlas of AI* (2021), Kate Crawford shows that mining and extraction are the foundational cultural techniques of the tech industry. Examples that underline her thesis can be found high and low. From the 10x mindset of venture capital, the dehumanizing crunches of the game industry, to the e-waste burial lakes of Baotou, so-called innovation always comes at the expense of nature, people, and most frequently both. Value is produced by disposing more than is kept. And now that we have almost completely exploited our own planet, outer space has become the next frontier.
 
- > 
  > Extreme wealth and power generated from technology companies now enables a small group of men to pursue their own private space race. They depend on exploiting the knowledge and infrastructures of the public space programs of the twentieth century and often rely on government funding an tax incentives as well. Their aim is not to limit extraction and growth, but to extend it across the solar system.
 
 — Kate Crawford
@@ -36,3 +44,4 @@ Decentralization has undeniably been the motor of the late twentieth and early t
 Waste generation and accumulation are the shadow side of these modern distributed modes of production. From the early Frankfurt School, the Club of Rome, up until the current day climate movement, the drive for innovation has been equated to the excess mindset. Weirdly enough, that is one of the few thing that eco-warriors and venture capitalists fully agree on. In order to innovate, you need to produce large quantities of trash. I hold, however, that both sides have been looking at the wrong. Innovation is not a quality of the technological artifact but rather of the practice that produces it. 
 
 It is in this practical notion of innovation that decentralized and regenerative design meet. Regeneration goes beyond sustainability by not only aiming to restore, but also to renew and revitalize systems and communities. Whereas sustainable design aims for damage control by mitigating harm, regenerative design wants to make ecosystems healthier and more vibrant than ever before. From the perspective of regeneration, the fragments of the internet become seeds of a promising future rather than remainders of a paradise lost. Wabi-sabi and Kintsugi, rather than perfection and wholeness, are key to a better future. Ecosystem architecture thus embraces these and related practices wholeheartedly.
+

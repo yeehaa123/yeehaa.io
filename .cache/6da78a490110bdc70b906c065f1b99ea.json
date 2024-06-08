@@ -1,13 +1,10 @@
 {
-  "summary": "The article discusses the idea that the traditional experience of the internet ('OG internet') is not universal and has been fragmented due to various forces. Asian countries use superapps instead of browsers, Africa utilizes mesh and P2P networks, and our own app ecosystems diverge from the open web. Internet fragmentation has historical roots, and today it's categorized into technical, governmental, and commercial fragmentation. The Internet Society works to combat these issues for a more connected internet. However, media narratives often romanticize the OG internet, ignoring its failures and the need for a more evolved web. The article argues that the original ideal of the internet didn't deliver universal harmony but exposed and even exacerbated societal divisions.",
+  "summary": "The article discusses the fragmentation of the internet, highlighting differences such as Asia's superapps, Africa's mesh networks, and appstore ecosystems. It traces the history of fragmentation to the 1990s, categorizing it into technical, governmental, and commercial fragmentation. Efforts by the Internet Society aim to make the internet more cohesive, but mainstream narratives often idealize an 'OG Internet' that never fully met its promises of open, universal access.",
   "tags": [
-    "Internet fragmentation",
-    "Internet Society",
-    "OG Internet",
-    "Superapps",
-    "Mesh Networks",
-    "Technical fragmentation",
-    "Governmental fragmentation",
-    "Commercial fragmentation"
-  ]
+    "internet",
+    "divide",
+    "global",
+    "access"
+  ],
+  "excerpt": "The internet's history shows that open access does not lead to universal consensus but rather to propaganda and division. Efforts by ISOC aim to address this by fostering a globally accessible web."
 }

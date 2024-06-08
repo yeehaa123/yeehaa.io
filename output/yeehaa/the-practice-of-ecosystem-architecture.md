@@ -1,28 +1,28 @@
 ---
 title: The Practice of Ecosystem Architecture
 author: Yeehaa
-series: Align The Misaligned
-summary: "The article discusses 'Ecosystem Architecture,' emphasizing the shift
-  from random communities to intentional ecosystems based on shared values. This
-  practice designs virtual spaces using bottom-up, decentralized, and
-  regenerative methods, rather than traditional top-down approaches. The
-  importance of balancing structure and creative practice is highlighted,
-  drawing on insights from Michel de Certeau's and Rick Rubin's work. Cellular
-  automata are presented as a model for emergent complexity and creativity
-  within simple rule-based systems. The process of ecosystem architecture
-  involves four movements: Align, Validate, Scale, and Spin Out, analogous to
-  phases in startup theory but emphasizing the eventual autonomy of the
-  ecosystem."
+excerpt: "Ecosystem architecture designs value-driven communities via
+  decentralized, bottom-up processes. It balances structure and creativity,
+  following four phases: Align, Validate, Scale, and Spin Out."
+summary: "Ecosystem architecture is the practice of designing communities based
+  on shared values rather than spatiotemporal contingency. This approach
+  emphasizes decentralized, bottom-up development and values the interplay
+  between structure and practice, fostering creativity and innovation. Unlike
+  traditional controlled systems, ecosystems evolve organically, guided by rules
+  that reflect underlying values. This practice is performed through four
+  phases: Align, Validate, Scale, and Spin Out, aimed at creating
+  self-sustaining, thriving ecosystems."
 tags:
-  - Ecosystem Architecture
-  - Community Building
-  - Decentralization
-  - Creativity
-  - Complex Systems
-  - Cellular Automata
-  - Startup Theory
-createdAt: 2024-06-08T13:42:29.292Z
-updatedAt: 2024-06-08T13:42:29.292Z
+  - design
+  - values
+  - align
+  - scale
+  - spinout
+series: Align The Misaligned
+checksum: 5d6f6f6ee484eca97181c32719f8eb4f
+draft: true
+createdAt: 2024-06-08T15:04:11.652Z
+updatedAt: 2024-06-08T15:04:11.652Z
 ---
 
 # The Practice of Ecosystem Architecture

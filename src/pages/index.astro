@@ -7,11 +7,10 @@ import { getCollection } from 'astro:content';
 
 const inspirational = ["Something", "Wicked"];
 
-const posts = (await getCollection('Posts')).sort(
-  (a,b) => {
-    return a.data.order - b.data.order;
-  }
-).map(({data, ...a}) => { return { data, order: ('00' + data.order).slice(-3), ...a}})
+const posts = (await getCollection('Posts'))
+  .filter(({data}) => !data.draft)
+  .sort(
+).map(({data, ...a}, index) => { return { data, order: ('00' + index).slice(-3), ...a}})
 ;
 
 ---
@@ -20,7 +19,7 @@ const posts = (await getCollection('Posts')).sort(
   { posts.map(p => {
   return <div>
   <a href={`/posts/${p.slug}`}><h1><span class="text-secondary">{p.order}</span> {p.data.title}</h1></a>
-  <p>{p.data.excerpt}<p>
+  <p>{p.data.summary}<p>
   </div>
   })}
 </Layout>

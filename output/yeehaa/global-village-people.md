@@ -1,27 +1,29 @@
 ---
 title: Global Village People
 author: Yeehaa
-series: Align The Misaligned
-summary: Marshall McLuhan predicted that technology would turn the world into a
-  global village, erasing distinctions between local and global cultures but
-  also heightening clashes between different tribes. The internet, embodying
-  McLuhan's vision, is a battleground where cultural, political, and religious
-  factions vie for control over communication mediums, not just content.
-  Friedrich Kittler contextualized media warfare as a struggle for control over
-  transmission channels. Incidents like Cambridge Analytica and the rise of deep
-  fakes exemplify this battle. The global village is marked by complex
-  relationships and the futility of old dichotomies. Value pluralism is
-  suggested as the pragmatic way forward.
+excerpt: McLuhan's and Kittler's insights into the global village predict modern
+  web's tribal conflicts and media wars, highlighting the ongoing battle for
+  control over communication channels and moral values.
+summary: Marshall McLuhan in his works, "The Gutenberg Galaxy" and
+  "Understanding Media," predicted that technical media would create a global
+  village, dissolving distinctions between local and global, and accelerating
+  tribal conflicts. Modern internet exemplifies these predictions, with
+  competing factions battling for control over communication channels. Friedrich
+  Kittler elaborated on this by highlighting the influence of media
+  infrastructure on warfare and entertainment. The internet's tribalism and
+  media wars showcase a complex landscape where moral questions and values
+  remain deeply contested.
 tags:
-  - Global Village
-  - Marshall McLuhan
-  - Technology
-  - Media Warfare
-  - Cultural Clashes
-  - Internet
-  - Value Pluralism
-createdAt: 2024-06-08T13:42:09.416Z
-updatedAt: 2024-06-08T13:42:09.416Z
+  - media
+  - tribal
+  - global
+  - values
+  - fights
+series: Align The Misaligned
+checksum: e8a7c7d905a234f18941d3fd4b6d0b69
+draft: true
+createdAt: 2024-06-08T15:04:11.646Z
+updatedAt: 2024-06-08T15:04:11.646Z
 ---
 
 # Global Village People

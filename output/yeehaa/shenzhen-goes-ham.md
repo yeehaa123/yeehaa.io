@@ -1,34 +1,25 @@
 ---
 title: Shenzhen Goes HAM
 author: Yeehaa
-series: Align The Misaligned
-summary: The article "Shenzhen Goes HAM" explores the evolution of decentralized
-  models and highlights how Shenzhen's shanzhai manufacturers exemplify a
-  superior form of decentralization akin to ham radio operators. While
-  traditional ham radio symbolizes peer-to-peer communication and community
-  resilience without reliance on centralized infrastructures, the shanzhai in
-  Shenzhen extend these principles to electronics manufacturing. Known for their
-  daring innovations and rapid pace, the shanzhai adapt quickly to technological
-  trends and market demands. Andrew 'bunnie' Huang's analysis in "The Hardware
-  Hacker" reveals the true innovation of the shanzhai lies not in their products
-  but in their production model and collaborative ecosystem. Their approach,
-  which includes peer-to-peer collaboration, iterative innovation, market
-  resilience, civil resilience, and ecosystem-sourced development, contrasts
-  with Western notions of intellectual property. However, this rapid innovation
-  comes at an environmental cost, emphasizing the need to balance technological
-  advancement with ecological considerations.
+excerpt: The article delves into how the shanzhai ecosystem in Shenzhen
+  exemplifies advanced decentralized practices in electronics manufacturing,
+  highlighting both its innovative potential and environmental costs.
+summary: The article explores the evolution of decentralization from ham radio
+  to the shanzhai ecosystem in Shenzhen. Shanzhai’s model of rapid,
+  peer-to-peer, and resilient production contrasts with Western perspectives on
+  innovation and intellectual property. Despite its strengths, the system incurs
+  significant environmental costs due to rapid iterations and waste production.
 tags:
-  - Shanzhai
-  - Decentralization
-  - Ham Radio
-  - Innovation
-  - Technology
-  - Andrew 'bunnie' Huang
-  - Shenzhen
-  - Intellectual Property
-  - Environmental Impact
-createdAt: 2024-06-08T13:42:19.870Z
-updatedAt: 2024-06-08T13:42:19.870Z
+  - shanzhai
+  - ham
+  - china
+  - decentral
+  - tech
+series: Align The Misaligned
+checksum: 7c7c83da8c82ad789aff5d7f7f171543
+draft: true
+createdAt: 2024-06-08T15:04:11.648Z
+updatedAt: 2024-06-08T15:04:11.648Z
 ---
 
 # Shenzhen Goes HAM

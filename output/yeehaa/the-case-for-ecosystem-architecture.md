@@ -1,26 +1,26 @@
 ---
 title: The Case for Ecosystem Architecture
 author: Yeehaa
-series: Align The Misaligned
-summary: The article discusses the fragmentation of the internet and the
-  corresponding need to rethink how we interact with these fragments. It
-  introduces the concept of 'ecosystem architecture,' inspired by biology's
-  ecosystems but extending to contemporary artistic, societal, and business
-  contexts. The author argues that, unlike natural ecosystems, human-designed
-  ecosystems require intentional and open-ended nurturing. Drawing from varied
-  disciplines, the article positions ecosystem architecture at the intersection
-  of decentralization and regenerative design. Regenerative design aims not just
-  for sustainability but for renewing and revitalizing systems. The fragmented
-  internet, therefore, is seen as holding potential for a vibrant future rather
-  than being a lost paradise.
+excerpt: The fragmentation of the internet gives rise to ecosystem
+  architecture—a practice that integrates decentralized and regenerative design
+  for vibrant, healthy systems and sees opportunities in fragmentation.
+summary: The article argues that the fragmentation of the internet parallels
+  physical space and presents an opportunity for a new practice called ecosystem
+  architecture. This practice, influenced by various disciplines, focuses on
+  decentralized and regenerative design to create healthier, vibrant ecosystems.
+  It moves beyond sustainability to revitalize systems and communities, viewing
+  the internet's fragments as seeds for a promising future rather than waste.
 tags:
-  - internet fragmentation
-  - ecosystem architecture
-  - regenerative design
-  - decentralization
-  - innovation
-createdAt: 2024-06-08T13:42:22.636Z
-updatedAt: 2024-06-08T13:42:22.636Z
+  - internet
+  - design
+  - future
+  - change
+series: Align The Misaligned
+checksum: 26eb144367e1f5dac3f5c430ff012096
+draft: false
+createdAt: 2024-06-08T14:58:55.080Z
+updatedAt: 2024-06-08T15:04:11.652Z
+publishedAt: 2024-06-08T15:04:11.652Z
 ---
 
 # The Case for Ecosystem Architecture
@@ -29,7 +29,6 @@ It is remarkable how the history of virtual space mimics that of its physical co
 
 In her seminal *Atlas of AI* (2021), Kate Crawford shows that mining and extraction are the foundational cultural techniques of the tech industry. Examples that underline her thesis can be found high and low. From the 10x mindset of venture capital, the dehumanizing crunches of the game industry, to the e-waste burial lakes of Baotou, so-called innovation always comes at the expense of nature, people, and most frequently both. Value is produced by disposing more than is kept. And now that we have almost completely exploited our own planet, outer space has become the next frontier.
 
- > 
  > Extreme wealth and power generated from technology companies now enables a small group of men to pursue their own private space race. They depend on exploiting the knowledge and infrastructures of the public space programs of the twentieth century and often rely on government funding an tax incentives as well. Their aim is not to limit extraction and growth, but to extend it across the solar system.
 
 — Kate Crawford

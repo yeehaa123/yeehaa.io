@@ -19,6 +19,7 @@ async function main() {
 
 
   await filetree.update(tree, tableData);
+  await filetree.validate(tree);
 
   await filetree.write(OUTPUT_DIR, tree);
   await table.write(TABLE_PATH, tree);

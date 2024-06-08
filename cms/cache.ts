@@ -5,7 +5,8 @@ import path from 'path';
 
 type Item = {
   summary: string,
-  tags: string[]
+  tags: string[],
+  excerpt: string,
 }
 
 export async function init() {

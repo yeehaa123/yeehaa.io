@@ -1,17 +1,29 @@
 ---
-aliases: null
-tags:
-- blog
-draft: false
-excerpt: This post explores the concept of the world as a global village, as predicted by Marshall McLuhan, in the context of the internet's role in eroding traditional cultural and spatial boundaries, paradoxically heightening clashes between differing values and beliefs. McLuhan's foresight into the digital age's capacity to both connect and divide is evident in the current online landscape, marked by tribalism and a battle for control over the narrative. Friedrich Kittler's insights into the media's role in shaping discourse highlight the ongoing struggle for dominance in the digital realm, suggesting that the internet's fragmentation is a symptom of deeper ideological battles. This piece challenges us to move beyond binary distinctions of good and evil, advocating for a pragmatic embrace of value pluralism as the path forward in navigating the complexities of our interconnected world."
-published_on: 2024-04-15
 title: Global Village People
-inspirational:
-- Wabi-sabi and Kintsugi
-- rather than perfection and wholeness
-- are key to a better future
-order: 2
-series: Aligning the Misaligned
+author: Yeehaa
+excerpt: McLuhan's and Kittler's insights into the global village predict modern
+  web's tribal conflicts and media wars, highlighting the ongoing battle for
+  control over communication channels and moral values.
+summary: Marshall McLuhan in his works, "The Gutenberg Galaxy" and
+  "Understanding Media," predicted that technical media would create a global
+  village, dissolving distinctions between local and global, and accelerating
+  tribal conflicts. Modern internet exemplifies these predictions, with
+  competing factions battling for control over communication channels. Friedrich
+  Kittler elaborated on this by highlighting the influence of media
+  infrastructure on warfare and entertainment. The internet's tribalism and
+  media wars showcase a complex landscape where moral questions and values
+  remain deeply contested.
+tags:
+  - media
+  - tribal
+  - global
+  - values
+  - fights
+series: Align The Misaligned
+checksum: e8a7c7d905a234f18941d3fd4b6d0b69
+draft: true
+createdAt: 2024-06-08T15:04:11.646Z
+updatedAt: 2024-06-08T15:04:11.646Z
 ---
 
 # Global Village People
@@ -41,3 +53,4 @@ Cambridge Analytica, the latest Philippine elections, the rebranding of twitter 
 Attractive as it may be, we should not resort to old dichotomies when we are looking for perpetrators and saviours. In the global village nothing is simple; every relation is complex. The fact that the government is not your enemy, does not make it your friend. Not all companies are evil, but do not trust anyone that says they are not. And despite the name doing good may not always be the philanthropist's true motivation.
 
 Virtue signaling needs to be understood as the ultimate sign of moral confusion: an expression of complete and utter doubt. Am I truly good person? Any attempt to answer this question is in vain. Instead, we need to short-circuit the tribal, monotheistic logic that underlies it for once and for all. While there may very well be an objective truth, clear good and evil, and pure beauty, we all have to come to terms with the fact that we will never agree on it. Hence, it does not really matter. Pragmatically, value pluralism is the only way forward.
+

@@ -21,5 +21,15 @@ export async function write(basePath: string, tree: FileTree) {
 
 export async function read(basePath: string) {
   const tableJSON = await readFile(basePath, 'utf8');
-  return JSON.parse(tableJSON) as TableRow[]
+  const raw = JSON.parse(tableJSON);
+  return raw.map(({ title, draft, checksum, createdAt, updatedAt, publishedAt }) => {
+    return {
+      title,
+      draft,
+      checksum,
+      createdAt: new Date(createdAt),
+      publishedAt: publishedAt ? new Date(publishedAt) : undefined,
+      updatedAt: new Date(updatedAt)
+    }
+  })
 }

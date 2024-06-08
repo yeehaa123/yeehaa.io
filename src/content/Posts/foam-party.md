@@ -1,10 +1,36 @@
+---
+title: Foam Party
+author: Yeehaa
+excerpt: The article rethinks fragmentation, inspired by Peter Sloterdijk's
+  'foam.' Instead of lamenting wholeness lost, it sees multiplicity as
+  empowering, proposing 'internet foaming' over 'fragmentation.'
+summary: The article discusses the pervasive nature of conceptual metaphors
+  implying wholeness and the difficulty of embracing fragmentation. Peter
+  Sloterdijk's concept of 'foam' in his Spheres trilogy celebrates multiplicity
+  rather than universality. The modern internet exemplifies this 'foaming,' from
+  the dot-com bubble to filter bubbles. Rather than viewing fragmentation
+  negatively, the article suggests embracing it to foster connectivity and
+  ecosystem building, while addressing issues like entrapment and solipsism
+  within bubbles.
+tags:
+  - foam
+  - bubble
+  - internet
+  - values
+  - unity
+series: Align The Misaligned
+checksum: c7a92ea345908cf217b1389ba2d0e918
+draft: true
+createdAt: 2024-06-08T14:51:46.229Z
+updatedAt: 2024-06-08T15:04:11.652Z
+---
+
 # Foam Party
 
 Everyday language is overloaded with conceptual metaphors that either celebrate the whole or lament its absence: broken heart, phantom pain, paradise lost, etcetera. The fact that these sentiments are so deeply ingrained into our means of communication also explains why it is so difficult to let universality go. This is already true *de facto*, let alone *de jure*. Even if we are willing to submit ourselves to the existential fact of living without absolute truth, it is still probable that we conceive its absence as a loss. Reframing fragmentation as something positive is next to impossible.
 
 That is why it is admirable that Peter Sloterdijk takes on this challenge against all odds. In the third volume of his Spheres trilogy titled *Foams* (1998), he introduces the titular concept as an antipode to those conceptual metaphors that signify wholeness, unity, and completeness. Foam is a phenomenon that celebrates multiplicity. As a concept, it defies all notions of universality without even referring to it negatively.
 
- > 
  > The foam metaphor has the merit of capturing the topological allocation of creative and self-securing creations of living space in an image. It not only reminds us of the tight proximity between fragile units, but also of the necessary self-enclosure of each foam cell, even though they can only exist as users of shared separation installations
 
 — Peter Sloterdijk
@@ -26,3 +52,4 @@ Popping filter bubbles would thus mean throwing out the baby with the bathwater.
 **Solipsism**: This is the condition where you genuinely believe that your bubble is the one and only. If you are too enamored by your community's values, you are bound to overlook its limitations and problems. Every ecosystem is defined by boundaries. A bubble that is good for you can be stifling, or even harmful, to someone else.
 
 From now onward, the challenge lies in solving these problems without reentering the arena of universal values and norms. As soon as we start bursting bubbles again — either that of someone else or our own — foam reveals its most important characteristic: it has no outside. There is no bird's eye point of view. The outside of a bubble is another bubble. As soon as we truly accept this existential fact, we stop bursting bubbles and begin to foster ecosystems.
+

@@ -4,7 +4,6 @@ Everyday language is overloaded with conceptual metaphors that either celebrate 
 
 That is why it is admirable that Peter Sloterdijk takes on this challenge against all odds. In the third volume of his Spheres trilogy titled *Foams* (1998), he introduces the titular concept as an antipode to those conceptual metaphors that signify wholeness, unity, and completeness. Foam is a phenomenon that celebrates multiplicity. As a concept, it defies all notions of universality without even referring to it negatively.
 
- > 
  > The foam metaphor has the merit of capturing the topological allocation of creative and self-securing creations of living space in an image. It not only reminds us of the tight proximity between fragile units, but also of the necessary self-enclosure of each foam cell, even though they can only exist as users of shared separation installations
 
 — Peter Sloterdijk

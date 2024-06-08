@@ -1,5 +1,28 @@
 ---
-series: Aligning the Misaligned
+title: The Practice of Ecosystem Architecture
+author: Yeehaa
+excerpt: "Ecosystem architecture designs value-driven communities via
+  decentralized, bottom-up processes. It balances structure and creativity,
+  following four phases: Align, Validate, Scale, and Spin Out."
+summary: "Ecosystem architecture is the practice of designing communities based
+  on shared values rather than spatiotemporal contingency. This approach
+  emphasizes decentralized, bottom-up development and values the interplay
+  between structure and practice, fostering creativity and innovation. Unlike
+  traditional controlled systems, ecosystems evolve organically, guided by rules
+  that reflect underlying values. This practice is performed through four
+  phases: Align, Validate, Scale, and Spin Out, aimed at creating
+  self-sustaining, thriving ecosystems."
+tags:
+  - design
+  - values
+  - align
+  - scale
+  - spinout
+series: Align The Misaligned
+checksum: 5d6f6f6ee484eca97181c32719f8eb4f
+draft: true
+createdAt: 2024-06-08T15:04:11.652Z
+updatedAt: 2024-06-08T15:04:11.652Z
 ---
 
 # The Practice of Ecosystem Architecture
@@ -73,3 +96,4 @@ The goal of this phase is to make our efforts entirely redundant. All functional
 While the previous phases all share a lot with startup theory, this last phase is actually its complete opposite. In this last phase, there is only one action involved. Better yet, it is a non-action: letting go. The ecosystem — that is now hopefully thriving — is not going to be lead by us, part of our empire, or controlled by our holding company. We can still be a part of it, of course, but as one member amongst many. 
 
 This is not a selfless act, mind you. If the earlier phases were performed correctly, the collective gains should now also benefit us. We just have no control over it any longer. In the end ecosystem architecture is more akin to farming than to business model generation. We plant our seeds, nurture them, and then reap what we sow.
+

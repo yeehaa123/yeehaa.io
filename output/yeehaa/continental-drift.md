@@ -1,29 +1,26 @@
 ---
 title: Continental Drift
 author: Yeehaa
-series: Align The Misaligned
-summary: The article discusses the idea that the traditional experience of the
-  internet ('OG internet') is not universal and has been fragmented due to
-  various forces. Asian countries use superapps instead of browsers, Africa
-  utilizes mesh and P2P networks, and our own app ecosystems diverge from the
-  open web. Internet fragmentation has historical roots, and today it's
-  categorized into technical, governmental, and commercial fragmentation. The
-  Internet Society works to combat these issues for a more connected internet.
-  However, media narratives often romanticize the OG internet, ignoring its
-  failures and the need for a more evolved web. The article argues that the
-  original ideal of the internet didn't deliver universal harmony but exposed
-  and even exacerbated societal divisions.
+excerpt: The internet's history shows that open access does not lead to
+  universal consensus but rather to propaganda and division. Efforts by ISOC aim
+  to address this by fostering a globally accessible web.
+summary: The article discusses the fragmentation of the internet, highlighting
+  differences such as Asia's superapps, Africa's mesh networks, and appstore
+  ecosystems. It traces the history of fragmentation to the 1990s, categorizing
+  it into technical, governmental, and commercial fragmentation. Efforts by the
+  Internet Society aim to make the internet more cohesive, but mainstream
+  narratives often idealize an 'OG Internet' that never fully met its promises
+  of open, universal access.
 tags:
-  - Internet fragmentation
-  - Internet Society
-  - OG Internet
-  - Superapps
-  - Mesh Networks
-  - Technical fragmentation
-  - Governmental fragmentation
-  - Commercial fragmentation
-createdAt: 2024-06-08T08:26:51.700Z
-updatedAt: 2024-06-08T13:42:29.292Z
+  - internet
+  - divide
+  - global
+  - access
+series: Align The Misaligned
+checksum: 6da78a490110bdc70b906c065f1b99ea
+draft: true
+createdAt: 2024-06-08T15:04:11.642Z
+updatedAt: 2024-06-08T15:04:11.642Z
 ---
 
 # Continental Drift

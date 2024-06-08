@@ -56,6 +56,12 @@ export async function update(tree: FileTree, tableData: TableRow[]) {
   }
 }
 
+export async function validate(tree: FileTree) {
+  for (const [_title, entry] of tree) {
+    article.validate(entry);
+  }
+}
+
 export async function write(basePath: string, tree: FileTree) {
   for (const [title, entry] of tree) {
     const fileName = `${voca.slugify(title)}.md`;

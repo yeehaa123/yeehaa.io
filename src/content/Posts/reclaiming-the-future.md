@@ -1,17 +1,25 @@
 ---
-aliases: null
-tags:
-- blog
-draft: false
-excerpt: Ecosystem architecture is a proactive stance against the deterministic narratives shaped by surveillance capitalism and the monopolization of the digital sphere by corporations and governments. Highlighting the importance of investing in futures aligned with our values rather than succumbing to those imposed upon us, the piece argues for a return to the foundational promise of the internet as a decentralized space of diverse public and private realms. Drawing on Shoshana Zuboff's critique of surveillance capitalism, it underscores the urgent need to reclaim our digital environments from entities that seek to exploit personal data for profit. The essay calls for a collective effort to realign our digital landscapes with human needs and values, emphasizing the role of creativity, imagination, and alternative visions in resisting a future dominated by data-driven control. By embracing the principles of ecosystem architecture, we are urged to design, develop, and nurture digital and physical spaces that reflect our shared aspirations for a more equitable and interconnected world.
-published_on: 2023-12-23
 title: Reclaiming the Future
-inspirational:
-- Wabi-sabi and Kintsugi
-- rather than perfection and wholeness
-- are key to a better future
-order: 9
-series: Aligning the Misaligned
+author: Yeehaa
+excerpt: Ecosystem architecture can help reclaim the internet by designing
+  spaces aligned with people's needs, preventing a surveillance capitalism
+  future. It emphasizes diverse, inclusive, and ownership-based futures.
+summary: The decentralized internet's promise of diverse spaces has been
+  undermined by outsourcing responsibility to governments and corporations. We
+  must reclaim it to prevent a future dominated by surveillance capitalism. True
+  alignment starts with understanding people's needs and creating multiple
+  possible futures rather than settling for inevitable ones. Ecosystem
+  architecture can help design and nurture such inclusive spaces.
+tags:
+  - internet
+  - future
+  - data
+  - align
+series: Align The Misaligned
+checksum: 0af417ab21870acd8b23293440ad316a
+draft: true
+createdAt: 2024-06-08T15:04:11.647Z
+updatedAt: 2024-06-08T15:04:11.647Z
 ---
 
 # Reclaiming the Future
@@ -39,3 +47,4 @@ These questions are not only important for present futures. They are equally app
 — Kodwo Eshun
 
 Past futurists are our future allies. They can teach us to reject the logic of a future that has already been written for us. The only way to avoid bleak dystopian scenarios, is to keep imagining, shaping, and performing better alternatives. What distinguishes our current reality, is that we no longer need to settle for an all-size-fits-all model of the future. Multiple inhabitable ecosystems based on shared values can peacefully coexists. These spaces, however, will not appear out of nowhere. They need to be designed, developed, and nurtured. Ecosystem architecture is the practice that does exactly that.
+

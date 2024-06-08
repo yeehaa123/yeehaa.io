@@ -1,31 +1,27 @@
 ---
 title: Economy of Garbage
 author: Yeehaa
-series: Align The Misaligned
-summary: "The article delves into the concept of decentralization, contrasting
-  it with fragmentation, and explores the cultural and economic implications of
-  an 'excess' mindset, particularly in the context of modern capitalism and
-  blockchain technology. It reflects on the rise and fall of crypto as a modern
-  iteration of 1990s beliefs in boundless capitalism and liberalism. The
-  discussion transitions to Walter Benjamin's and Georges Bataille's ideas:
-  Benjamin highlights how modernity eliminates scarcity, while Bataille
-  advocates for embracing excess and waste. Shraddha Borawake's artistic
-  practice, 'Garb-Age,' exemplifies this idea by blurring the lines between
-  nature, culture, and trash, suggesting that waste is central to both."
+excerpt: The article critiques the crypto craze's excess mindset, challenges
+  capitalism's scarcity principle through the works of Benjamin and Bataille,
+  and explores artist Shraddha Borawake's views on waste.
+summary: Decentralization, despite its potential, became synonymous with an
+  excess mindset due to the crypto craze, echoing past economic illusions of
+  limitless growth. Capitalism's focus on scarcity is questioned by thinkers
+  like Walter Benjamin and Georges Bataille, who argue for an economy of excess
+  and reconfiguring societal values around waste. Artist Shraddha Borawake
+  embraces this philosophy by blurring lines between nature, culture, and trash,
+  suggesting waste is central to our existence.
 tags:
-  - decentralization
-  - economy
-  - excess mindset
   - crypto
-  - blockchain
-  - Walter Benjamin
-  - Georges Bataille
-  - Shraddha Borawake
-  - Garb-Age
-  - modern capitalism
-createdAt: 2024-06-08T09:37:37.376Z
-updatedAt: 2024-06-08T13:42:31.850Z
-publishedAt: 2024-06-08T13:24:24.974Z
+  - waste
+  - capital
+  - excess
+  - art
+series: Align The Misaligned
+checksum: 2fa6a7e7bf592d41022eb9cd67f240db
+draft: true
+createdAt: 2024-06-08T15:04:11.643Z
+updatedAt: 2024-06-08T15:04:11.643Z
 ---
 
 # Economy of Garbage

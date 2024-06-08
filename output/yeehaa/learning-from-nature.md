@@ -1,27 +1,25 @@
 ---
 title: Learning from Nature
 author: Yeehaa
-series: Align The Misaligned
-summary: The article "Learning from Nature" discusses the advantages of
-  decentralized ecosystems, emphasizing that they can be more resilient and
-  vibrant than centralized organizations. It explores how communities empowered
-  through decentralization can collaboratively create healthier ecosystems. The
-  article highlights regenerative design, which aims to sustainably improve both
-  the environment and society. Two approaches to regenerative
-  design—permaculture and biomimicry—are explained. Permaculture promotes
-  working with nature by using resources thoughtfully, while biomimicry involves
-  replicating natural processes for human innovation. The article emphasizes
-  collaboration over competition in ecosystems, arguing that collaboration leads
-  to optimal systemic health over time.
+excerpt: Decentralized ecosystems foster community-driven regenerative cultures
+  through techniques like permaculture and biomimicry, enhancing sustainability
+  and collaboration with nature.
+summary: Decentralized ecosystems, empowered by community-driven control and
+  collaborative decision-making, offer resilient and regenerative cultures.
+  Techniques like permaculture and biomimicry instill practices that enhance
+  environments sustainably. Regeneration fosters alignment and dialogue with
+  nature, challenging the traditional competitive Darwinian view, embracing
+  organic collaboration for overall system health.
 tags:
-  - decentralized ecosystems
-  - regenerative design
-  - permaculture
-  - biomimicry
-  - collaboration
-  - sustainability
-createdAt: 2024-06-08T13:42:11.987Z
-updatedAt: 2024-06-08T13:42:11.987Z
+  - nature
+  - design
+  - ecology
+  - system
+series: Align The Misaligned
+checksum: b00ab9b260061c09b956c2e922ebcbad
+draft: true
+createdAt: 2024-06-08T15:04:11.647Z
+updatedAt: 2024-06-08T15:04:11.647Z
 ---
 
 # Learning from Nature

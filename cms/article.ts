@@ -41,10 +41,11 @@ export function parse(content: string) {
 export async function init({ content, series }: { series?: string, content: string }) {
   const checksum = generateChecksum(content);
   const { title } = parse(content);
-  const { summary, tags } = await ai.augment({ checksum, content })
+  const { summary, tags, excerpt } = await ai.augment({ checksum, content })
   const frontmatter = fm.init({
     title,
     summary,
+    excerpt,
     tags,
     author: "Yeehaa",
     series,
@@ -71,13 +72,14 @@ export async function update(entry: Article, tableRow: TableRow) {
     tags
   };
 }
+export async function validate(entry: Article) {
+  return fm.validate(entry.frontmatter);
+}
 
 export function render({ content, frontmatter }: Article) {
-  const { title, author, summary, tags, series, createdAt, updatedAt, publishedAt } = frontmatter;
-  const meta = { title, author, series, summary, tags, createdAt, updatedAt, publishedAt };
 
   return `---
-${stringify({ ...meta }).trim()}
+${stringify({ ...frontmatter }).trim()}
 ---
 
 ${content}

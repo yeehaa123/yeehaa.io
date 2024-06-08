@@ -1,17 +1,26 @@
 ---
-aliases: null
-tags:
-- blog
-draft: false
-excerpt: When we delve into the nuanced landscape of internet fragmentation, challenging the notion that the global web experience is uniform. From the dominance of superapps in Asia to the innovative mesh and P2P networks in Africa, the internet's evolution has diverged significantly from the 'open global web'. This fragmentation, traced back to the browser wars of the 1990s and further catalyzed by governmental surveillance revelations, is not merely a technical or regulatory issue but a reflection of diverse global needs and challenges. Through examining the efforts of the Internet Society (ISOC) in promoting interoperability and open standards, the piece argues for a reimagined approach to the internet—one that embraces diversity and fosters connectivity rather than striving for an unrealistic uniformity. By acknowledging and valuing the internet's myriad forms, 'Continental Drift' advocates for a future where digital inclusivity and access transcend traditional barriers, highlighting the potential for a more interconnected and understanding global community.
-published_on: 2024-04-08
 title: Continental Drift
-inspirational:
-- Wabi-sabi and Kintsugi
-- rather than perfection and wholeness
-- are key to a better future
-order: 1
-series: Aligning the Misaligned
+author: Yeehaa
+excerpt: The internet's history shows that open access does not lead to
+  universal consensus but rather to propaganda and division. Efforts by ISOC aim
+  to address this by fostering a globally accessible web.
+summary: The article discusses the fragmentation of the internet, highlighting
+  differences such as Asia's superapps, Africa's mesh networks, and appstore
+  ecosystems. It traces the history of fragmentation to the 1990s, categorizing
+  it into technical, governmental, and commercial fragmentation. Efforts by the
+  Internet Society aim to make the internet more cohesive, but mainstream
+  narratives often idealize an 'OG Internet' that never fully met its promises
+  of open, universal access.
+tags:
+  - internet
+  - divide
+  - global
+  - access
+series: Align The Misaligned
+checksum: 6da78a490110bdc70b906c065f1b99ea
+draft: true
+createdAt: 2024-06-08T15:04:11.642Z
+updatedAt: 2024-06-08T15:04:11.642Z
 ---
 
 # Continental Drift
@@ -24,7 +33,7 @@ Internet fragmentation goes as far back as least the browser wars of the mid 199
 
 **Governmental Fragmentation**: Government policies and actions that constrain or prevent certain uses of the Internet to create, distribute, or access information resources.
 
-**Commercial Fragmentation**: Business practices that constrain or prevent certain uses of the Internet to create, distribute, or access information resources
+**Commercial Fragmentation**: Business practices that constrain or prevent certain uses of the Internet to create, distribute, or access information resources.
 
 On all three of these fronts, the Internet Society (ISOC) has put tremendous effort in making these concerns actionable and putting them on the political agenda. Its aim is to 'connect the unconnected' by fostering a more connected and interoperable online environment. Through initiatives aimed at promoting open standards, ISOC has played a pivotal role in ensuring that diverse systems can seamlessly communicate and exchange data packets. By advocating for a cohesive and globally accessible internet, the organization has contributed to overcome technical barriers that could impede the internet's functioning across different endpoints. Most importantly, the Internet Society has been instrumental in facilitating collaborative efforts among stakeholders, encouraging the development and adoption of protocols that enhance compatibility.
 
@@ -41,3 +50,4 @@ Underlying the rhetorics of all these manifestations of the restorative stance i
 A critical reflection of the OG Internet's promises, the conditions under which this assumed historical exception could appear, and the reasons for its quick demise, is long overdue. But, this is neither the place or time for that evaluation. For current purposes, the executive summary needs to suffice: the digital city was only inhabitable for those fortunate enough to be born in the right village, the information superhighway only took us to destinations that we wanted to be see. And as long as that privilege was kept implicit, the OG internet could be a place of civil and peaceful discourse.
 
 As soon as the rest of the world got access to the web, the clash of civilizations immediately turned into full-blown culture war. If anything, the internet's short history has made it crystal clear that open access to all information does not lead to universal consensus, trust, and understanding. Quite the opposite, it has lead to an explosion of propaganda, fake news, and identity politics. In short, the OG internet never lived up to its original promise. It rendered our differences visible but did little to nothing to align them.
+

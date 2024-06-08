@@ -1,29 +1,25 @@
 ---
 title: Reclaiming the Future
 author: Yeehaa
-series: Align The Misaligned
-summary: The article 'Reclaiming the Future' advocates for investing in desired
-  future scenarios through the concept of ecosystem architecture, rather than
-  passively accepting a future shaped by surveillance capitalism. The
-  decentralized internet initially empowered individuals with unprecedented
-  ownership over digital spaces, but this control has diminished as
-  responsibility has been outsourced to governments and corporations.
-  Surveillance capitalism exploits human experience for data extraction, aiming
-  to control behavior by analyzing extensive behavioral patterns. To counter
-  this, the article suggests alignment based on people's needs and the creation
-  of multiple tangible futures. It stresses the importance of questioning who
-  presents unavoidable future narratives and highlights the value of exploring
-  'counter-futures,' as discussed by Kodwo Eshun. Ultimately, the piece calls
-  for ongoing imagination and cultivation of diverse ecosystems founded on
-  shared values.
+excerpt: Ecosystem architecture can help reclaim the internet by designing
+  spaces aligned with people's needs, preventing a surveillance capitalism
+  future. It emphasizes diverse, inclusive, and ownership-based futures.
+summary: The decentralized internet's promise of diverse spaces has been
+  undermined by outsourcing responsibility to governments and corporations. We
+  must reclaim it to prevent a future dominated by surveillance capitalism. True
+  alignment starts with understanding people's needs and creating multiple
+  possible futures rather than settling for inevitable ones. Ecosystem
+  architecture can help design and nurture such inclusive spaces.
 tags:
-  - Ecosystem Architecture
-  - Decentralized Internet
-  - Surveillance Capitalism
-  - Future Scenarios
-  - Counter-Futures
-createdAt: 2024-06-08T13:42:16.084Z
-updatedAt: 2024-06-08T13:42:16.084Z
+  - internet
+  - future
+  - data
+  - align
+series: Align The Misaligned
+checksum: 0af417ab21870acd8b23293440ad316a
+draft: true
+createdAt: 2024-06-08T15:04:11.647Z
+updatedAt: 2024-06-08T15:04:11.647Z
 ---
 
 # Reclaiming the Future

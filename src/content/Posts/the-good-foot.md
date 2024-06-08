@@ -1,17 +1,28 @@
 ---
-aliases: null
-tags:
-- blog
-draft: false
-excerpt: The concept of ecosystems as regenerative and continuously aligning entities underscores the importance of diversity and the freedom to migrate or 'vote with your feet.' This principle, deeply rooted in nature, suggests that healthy ecosystems allow for movement and change, reflecting a dynamic balance rather than a static perfection. Drawing parallels between natural ecosystems and digital communities, the discussion extends to the transformative potential of the internet as a decentralized space where multiplicity and the ability to choose one's digital habitat are celebrated. Highlighting Balaji Srinivasan's ideas in The Network State, it presents a future where digital communities transcend traditional state boundaries, offering a new model of citizenship based on shared values and mutual recognition rather than geographic constraints. This vision for the future emphasizes the necessity of designing digital and physical spaces that prioritize the autonomy of individuals and communities, enabling them to thrive in diverse and interconnected ecosystems.
-published_on: 2023-12-23
 title: The Good Foot
-inspirational:
-- Wabi-sabi and Kintsugi
-- rather than perfection and wholeness
-- are key to a better future
-order: 7
-series: Aligning the Misaligned
+author: Yeehaa
+excerpt: Ecosystems are dynamic networks enabling adaptability. The concept of
+  'voting with your feet' fosters creativity and innovation, crucial for startup
+  societies with ethical values in digital and natural realms.
+summary: The article explores the concept of ecosystems as dynamic, regenerative
+  networks that allow for movement and adaptation in response to environmental
+  conditions. It emphasizes the importance of 'voting with your feet,' drawing
+  parallels between natural ecosystems and human digital ecosystems such as the
+  internet. The freedom to switch habitats fosters creativity, innovation, and
+  value pluralism. The piece argues against the universality of shared digital
+  values and highlights the rise of digital communities as the new paradigm,
+  advocating for startup societies that prioritize ethical values and allow for
+  coexistence of multiple habitats.
+tags:
+  - ecosystem
+  - freedom
+  - internet
+  - values
+series: Align The Misaligned
+checksum: f0f31bb5617196b56b80e9fd43b1ce5f
+draft: true
+createdAt: 2024-06-08T15:04:11.650Z
+updatedAt: 2024-06-08T15:04:11.650Z
 ---
 
 # The Good Foot
@@ -22,7 +33,6 @@ In nature, organisms move or migrate in response to environmental conditions. Th
 
 Voting with your feet underscores the dynamic nature of ecosystems, where the distribution and abundance of species are constantly shifting in response to changing environmental factors. It also unveils the relativity of boundaries. Where does one habitat end and another begin? Is there a whole, and if so, does it really matter? Turns out that nature and foam have a lot in common. Which, after this lengthy detour, brings me back to the human ecosystems and the internet.
 
- > 
  > People vote with their feet.
 
 — Milton Friedman
@@ -31,7 +41,6 @@ The desire for the freedom to switch habitats is a decisive argument against the
 
 The privilege to hop from bubble to bubble is not to be taken lightly. It is an necessary condition for creativity and innovation. Imagination demands the possibility of another habitat. Accessing other realms, even if it is just in the mind, is a necessary condition to dream, design, develop, and maintain new, better, or simply different ecosystems. This phenomenon is of all ages. As Walter Benjamin showed throughout his work, the history of utopianism and that of architecture are one and the same. Buildings, cities, and parks are yesterday's projection of how tomorrow's ecosystems should look like. And in the age of the internet, architecture far exceeds mere physical bricks and mortar.
 
- > 
  > Not architecture alone but all technology is, at certain stages, evidence of a collective dream.
 
 — Walter Benjamin
@@ -42,7 +51,6 @@ As mentioned earlier, letting go of that dream of globally shared values should 
 
 Balaji Srinivan's *The Network State* (2022) may be this new era paradigm first philosophical masterpiece. Its claim is deceivingly simple: the era of the nation state is nearing its end. In Srinivan's view, states no longer need to be defined by their claim on contiguous physical space. The internet has removed the necessity for that requirement:
 
- > 
  > What underpins the new dynamic of network states is the intrinsic lack of scarcity of digital territory, the return of unclaimed land and terra nullius, the reopened frontier.
 
 — Balaji Srinivasan
@@ -55,7 +63,6 @@ Of these three stages, the first one is most interesting for the current purpose
 
 In the case of a startup society, however, the proposition that needs to be developed is not commercial but ethical in nature. This is the most exciting difference between a nation and a network state. Rather than starting from temporal contingency and physical proximity, startup societies shape around shared values.
 
- > 
  > Every new startup society needs to have a moral premise at its core, one that its founding nation subscribes to, one that is supported by a digital history that a more powerful state can’t delete, one that justifies its existence as a righteous yet peaceful protest against the powers that be.
 
 — Balaji Srinivasan
@@ -65,3 +72,4 @@ Freed from the scarcity of physical space, it becomes much easier for communitie
 Future ecosystems should be designed first and foremost around the right of their inhabitants to vote with their feet feet. The idea that people are unconditionally loyal to a ruler, a state, a company, or an ideology is no longer viable in the age of foam. It has always been impossible to fully encapsulate a culture inside its physical borders. Traveling salesmen, academic networks, broadcast networks, and pandemics, all broke the illusion of containment. The decentralized internet, however, took this phenomenon to the next level and rendered any attempt to shield an ecosystem from its outside utterly futile.
 
 Any state, organization, or network that continues to restrict the desire to vote with your feet should be met with great scepticism. Forceful entrapment — both physically and ideologically —should be treated as an alarming signal. It indicates that there are fundamental flaws in the moral proposition of an ecosystem. Any community that functions around strong shared values does not need to hold on to anyone that does not subscribe to them. On the contrary, healthy ecosystems should encourage their members to imagine, design, and build new even better spaces.
+

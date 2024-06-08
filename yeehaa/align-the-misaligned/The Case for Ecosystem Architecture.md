@@ -4,7 +4,6 @@ It is remarkable how the history of virtual space mimics that of its physical co
 
 In her seminal *Atlas of AI* (2021), Kate Crawford shows that mining and extraction are the foundational cultural techniques of the tech industry. Examples that underline her thesis can be found high and low. From the 10x mindset of venture capital, the dehumanizing crunches of the game industry, to the e-waste burial lakes of Baotou, so-called innovation always comes at the expense of nature, people, and most frequently both. Value is produced by disposing more than is kept. And now that we have almost completely exploited our own planet, outer space has become the next frontier.
 
- > 
  > Extreme wealth and power generated from technology companies now enables a small group of men to pursue their own private space race. They depend on exploiting the knowledge and infrastructures of the public space programs of the twentieth century and often rely on government funding an tax incentives as well. Their aim is not to limit extraction and growth, but to extend it across the solar system.
 
 — Kate Crawford
