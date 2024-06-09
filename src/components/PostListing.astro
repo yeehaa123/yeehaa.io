@@ -1,0 +1,14 @@
+---
+import { SeriesHeading } from "./SeriesHeading";
+
+const { slug, order, series, title, summary } = Astro.props;
+
+---
+
+<div>
+<SeriesHeading href="/" {order} {series} />
+  <a href={`/posts/${slug}`}>
+    <h1>{title}</div></h1>
+  </a>
+  <p>{summary}</p>
+</div>

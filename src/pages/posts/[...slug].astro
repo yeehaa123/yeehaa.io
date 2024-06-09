@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Article.astro"
+import { SeriesHeading } from "../../components/SeriesHeading";
 import { getCollection } from 'astro:content';
 
 const title = "YEEHAA";
@@ -12,13 +13,10 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const order = ('00' + entry.data.order).slice(-3);
 const { Content } = await entry.render();
+const { order, series } = entry.data;
 ---
-
 <Layout {title}>
-  { entry.data.series && <h2 class="flex mb-1 md:mb-2 gap-2">
-  <span class="text-secondary font-extrabold">{order}</span>
-  <span class="text-secondary-light">{entry.data.series}</span></h2>}
+  <SeriesHeading href={"/"} {order} {series} />
   <Content/ >
 </Layout>

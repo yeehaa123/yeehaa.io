@@ -1,34 +1,21 @@
 ---
 import Layout from "../layouts/Article.astro"
+import PostListing from "../components/PostListing.astro"
 const title = "YEEHAA";
 
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('Posts'))
-  .filter(({data}) => !data.draft)
-  .sort((a, b) => {
-          return a.data.order - b.data.order
-    }
-).map(({data, ...a}) => { 
-  const order = ('00' + data.order).slice(-3);
-  return { 
-    data, 
-    order,
-    ...a
-  }}
-);
+.filter(({data}) => !data.draft)
+.sort((a, b) => {
+  if(a.data.publishedAt && b.data.publishedAt) {
+    return b.data.publishedAt.getTime() - a.data.publishedAt.getTime();
+  } else {
+    return -1
+  }
+  });
 ---
 
 <Layout {title}>
-  { posts.map(p => {
-  return <div>
-    <a href={`/posts/${p.slug}`}>
-{ p.data.series && <h2 class="flex mb-1 md:mb-2 gap-2">
-  <span class="text-secondary font-extrabold">{p.order}</span>
-  <span class="text-secondary-light">{p.data.series}</span></h2>}
-    <h1>{p.data.title}</div></h1>
-    </a>
-    <p>{p.data.summary}</p>
-  </div>
-  })}
+  { posts.map(({data, slug}) => <PostListing {slug} {...data} />)}
 </Layout>
