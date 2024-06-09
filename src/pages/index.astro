@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Article.astro"
+import Layout from "../layouts/Base.astro"
 import PostListing from "../components/PostListing.astro"
 const title = "YEEHAA";
 
@@ -17,5 +17,5 @@ const posts = (await getCollection('Posts'))
 ---
 
 <Layout {title}>
-  { posts.map(({data, slug}) => <PostListing {slug} {...data} />)}
+    { posts.map(({data, slug}) => <PostListing {slug} {...data} />)}
 </Layout>

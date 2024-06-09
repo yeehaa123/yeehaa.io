@@ -12,7 +12,7 @@ export const schema = z.object({
   updatedAt: z.date(),
   excerpt: z.string(),
   summary: z.string(),
-  tags: z.array(z.string()),
+  tags: z.array(z.string()).min(3).max(7),
   draft: z.nullable(z.boolean()),
 })
 
@@ -21,6 +21,7 @@ export interface Frontmatter {
   author: string,
   summary: string,
   order?: number,
+  slug?: string,
   excerpt: string,
   tags: string[],
   series?: string,

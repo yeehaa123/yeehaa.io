@@ -18,8 +18,8 @@ tags:
 series: Ecosystem Architecture
 checksum: 7c7c83da8c82ad789aff5d7f7f171543
 draft: true
-createdAt: 2024-06-08T17:49:45.538Z
-updatedAt: 2024-06-08T17:49:45.538Z
+createdAt: 2024-06-09T09:09:49.209Z
+updatedAt: 2024-06-09T09:09:49.209Z
 ---
 
 # Shenzhen Goes HAM

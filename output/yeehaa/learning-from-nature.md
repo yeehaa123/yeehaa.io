@@ -18,8 +18,8 @@ tags:
 series: Ecosystem Architecture
 checksum: b00ab9b260061c09b956c2e922ebcbad
 draft: true
-createdAt: 2024-06-08T17:49:45.535Z
-updatedAt: 2024-06-08T17:49:45.535Z
+createdAt: 2024-06-09T09:09:49.207Z
+updatedAt: 2024-06-09T09:09:49.207Z
 ---
 
 # Learning from Nature

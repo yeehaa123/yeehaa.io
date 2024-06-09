@@ -21,8 +21,8 @@ tags:
 series: Ecosystem Architecture
 checksum: f0f31bb5617196b56b80e9fd43b1ce5f
 draft: true
-createdAt: 2024-06-08T17:49:45.540Z
-updatedAt: 2024-06-08T17:49:45.540Z
+createdAt: 2024-06-09T09:09:49.210Z
+updatedAt: 2024-06-09T09:09:49.210Z
 ---
 
 # The Good Foot

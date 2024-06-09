@@ -3,9 +3,8 @@ import Layout from "./Base.astro"
 const { title, logoLink = "/"} = Astro.props;
 ---
 
-<Layout {logoLink}>
-  <article class="prose container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto
-    prose-base md:prose-lg lg:prose-xl
+<Layout {logoLink} {title}>
+  <article class="prose prose-base md:prose-lg lg:prose-xl
     prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
     prose-lead:first-letter:text-3xl
     prose-lead:md:first-letter:text-4xl

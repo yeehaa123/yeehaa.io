@@ -1,14 +1,16 @@
 ---
+import { Tags } from "@/components/Tags";
 import { SeriesHeading } from "./SeriesHeading";
 
-const { slug, order, series, title, summary } = Astro.props;
+const { slug, order, series, title, summary,tags } = Astro.props;
 
 ---
 
-<div>
-<SeriesHeading href="/" {order} {series} />
+<div class="flex flex-col my-32">
+  <SeriesHeading href="/" {order} {series} />
   <a href={`/posts/${slug}`}>
-    <h1>{title}</div></h1>
-  </a>
-  <p>{summary}</p>
+    <h1 class="font-serif font-black hover:font-sans md:text-6xl text-4xl mb-2 md:mb-8">{title}</h1>
+</a>
+<p class="my-8 text-md lg:text-xl leading-loose lg:leading-loose">{summary}</p>
+<Tags {tags} />
 </div>

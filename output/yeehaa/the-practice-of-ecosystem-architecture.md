@@ -21,8 +21,8 @@ tags:
 series: Ecosystem Architecture
 checksum: 5d6f6f6ee484eca97181c32719f8eb4f
 draft: true
-createdAt: 2024-06-08T17:49:45.542Z
-updatedAt: 2024-06-08T17:49:45.542Z
+createdAt: 2024-06-09T09:09:49.211Z
+updatedAt: 2024-06-09T09:09:49.211Z
 ---
 
 # The Practice of Ecosystem Architecture
