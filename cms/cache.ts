@@ -24,6 +24,7 @@ export async function get(checksum: string) {
     const file = await readFile(filePath, 'utf8');
     return JSON.parse(file) as Item;
   }
+  return false;
 }
 
 

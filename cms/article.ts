@@ -27,6 +27,7 @@ function collectTitle(node: RenderableTreeNode, sections = []): string {
       }
     }
   }
+  throw ("ARTICLE NEEDS TITLE");
 }
 
 export function parse(content: string) {
@@ -36,7 +37,7 @@ export function parse(content: string) {
   return { title };
 }
 
-export async function init({ content, series }: { series?: string, content: string }) {
+export async function init({ content, series }: { series?: string | undefined, content: string }) {
   const checksum = generateChecksum(content);
   const { title } = parse(content);
   const { summary, tags, excerpt } = await ai.augment({ checksum, content })

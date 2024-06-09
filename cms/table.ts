@@ -1,6 +1,5 @@
 import type { FileTree } from "./filetree";
 import { readFile, writeFile } from 'fs/promises'
-import * as article from "./article";
 import type { Frontmatter } from "./frontmatter";
 
 export type TableRow = Pick<Frontmatter,
@@ -35,7 +34,7 @@ export async function write(basePath: string, tree: FileTree) {
 
 export async function read(basePath: string) {
   const tableJSON = await readFile(basePath, 'utf8');
-  const raw = JSON.parse(tableJSON);
+  const raw = JSON.parse(tableJSON) as TableRow[];
   return raw.map(({ title, order, draft, checksum, createdAt, updatedAt, publishedAt }) => {
     return {
       title,

@@ -13,7 +13,7 @@ async function processFile(filePath: string, series?: string) {
     const item = await readFile(filePath, 'utf8');
     return article.init({ series, content: item })
   } catch (e) {
-    console.log(e, filePath);
+    throw (e);
   }
 }
 
@@ -25,8 +25,10 @@ async function processDir(tree: FileTree, dirPath: string) {
   for (const ext of dir) {
     const filePath = path.join(dirPath, ext);
     const processedFile = await processFile(filePath, seriesName);
-    const { title } = processedFile.frontmatter;
-    tree.set(title, processedFile);
+    if (processedFile) {
+      const { title } = processedFile.frontmatter;
+      tree.set(title, processedFile);
+    }
   }
 }
 
@@ -41,8 +43,10 @@ export async function create(basePath: string): Promise<FileTree> {
       await processDir(tree, newPath);
     } else {
       const processedFile = await processFile(newPath);
-      const { title } = processedFile.frontmatter;
-      tree.set(title, processedFile);
+      if (processedFile) {
+        const { title } = processedFile.frontmatter;
+        tree.set(title, processedFile);
+      }
     }
   }
   return tree;
@@ -62,7 +66,11 @@ export function order(tree: FileTree) {
   const publishedInSeries = Array.from(tree).filter(([_, { frontmatter }]) => {
     return frontmatter.series && frontmatter.publishedAt
   }).sort(([_a, a], [_b, b]) => {
-    return a.frontmatter.publishedAt.getTime() - b.frontmatter.publishedAt.getTime();
+    if (a.frontmatter.publishedAt && b.frontmatter.publishedAt) {
+      return a.frontmatter.publishedAt.getTime() - b.frontmatter.publishedAt.getTime();
+    } else {
+      return -1
+    }
   });
 
   publishedInSeries.forEach(([title, entry], index) => {

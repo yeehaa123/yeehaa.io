@@ -5,7 +5,7 @@ import { generateObject } from 'ai';
 import { z } from 'zod';
 import 'dotenv/config'
 
-const openai = createOpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY"});
 
 async function analyze(content: string) {
   const summary_length = 600;

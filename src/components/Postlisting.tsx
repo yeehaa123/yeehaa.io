@@ -19,10 +19,10 @@ export function PostListing({ series, order, title, summary, tags, slug }: Props
           {title}
         </h1>
       </a>
+      <Tags tags={tags} />
       <p className="my-8 text-md lg:text-xl leading-loose lg:leading-loose">
         {summary}
       </p>
-      <Tags tags={tags} />
     </div>
   )
 }
