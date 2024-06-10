@@ -1,7 +1,7 @@
 import { existsSync } from "fs"
 import crypto from "crypto"
 import voca from "voca";
-import { mkdir, rm, writeFile } from 'fs/promises'
+import { mkdir, rm } from 'fs/promises'
 
 export async function initDir(dirName: string) {
   try {
@@ -12,19 +12,6 @@ export async function initDir(dirName: string) {
       console.log("CLEANED OUTPUT");
     }
     await mkdir(dirName, { recursive: true })
-  }
-  catch (e) {
-    console.log(e);
-  }
-}
-
-export async function initTable(path: string) {
-  try {
-    const tableExists = existsSync(path);
-    if (!tableExists) {
-      console.log("CREATING TABLE: ", path);
-      await writeFile(path, JSON.stringify([]), 'utf8');
-    }
   }
   catch (e) {
     console.log(e);

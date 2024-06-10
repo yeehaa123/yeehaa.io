@@ -1,29 +1,30 @@
 ---
 title: Align the Misaligned
 author: Yeehaa
-excerpt: The article argues for 'ecosystem architecture,' a practice combining
-  decentralization and regenerative design, to rejuvenate fragmented internet
-  systems and communities.
-summary: The article explores the fragmentation of the internet, likening it to
-  tectonic shifts, and argues that this splintering mirrors our evolving
-  relationship with waste and resources. It introduces 'ecosystem
-  architecture'—a practice driven by decentralization and regenerative design.
-  Citing missteps and excesses in technological innovation, it calls for a more
-  mindful, multi-disciplinary approach that values the regenerative potential of
-  fragmented systems. Ultimately, this new perspective aims to rejuvenate
-  communities and ecosystems, seeing fragments as seeds of possibility rather
-  than remnants of the past.
+excerpt: This article discusses the fragmentation of the internet, likening it
+  to natural processes and advocating for 'ecosystem architecture.' This new
+  practice integrates decentralization and regenerative design to create vibrant
+  communities.
+imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
+summary: The history of virtual and physical spaces parallels each other, with
+  the internet fragmenting much like tectonic shifts. Kate Crawford's work
+  highlights that tech's innovation relies on extraction and waste. As internet
+  fragmentation becomes evident, the concept of ‘ecosystem architecture’
+  emerges, blending philosophies like decentralization and regenerative design.
+  This approach argues that innovation lies in practices that foster healthier
+  systems, drawing from diverse fields to create resilient, vibrant communities.
 tags:
   - internet
   - design
   - future
-  - ecosystem
+  - system
+  - eco
 series: Ecosystem Architecture
 checksum: 34d442a1971d4dbbe8315bbfa8de35d5
 draft: false
-createdAt: 2024-06-08T17:37:07.320Z
-updatedAt: 2024-06-08T17:49:45.543Z
-publishedAt: 2024-06-08T17:37:32.873Z
+createdAt: 2024-06-10T08:50:59.903Z
+updatedAt: 2024-06-10T17:50:27.793Z
+publishedAt: 2024-06-10T08:51:34.857Z
 order: 0
 ---
 

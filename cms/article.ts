@@ -11,7 +11,6 @@ export type Article = {
   frontmatter: Frontmatter
   content: string,
 }
-
 function isTag(node: RenderableTreeNode): node is Tag {
   return (node as Tag).name !== undefined;
 }
@@ -40,12 +39,13 @@ export function parse(content: string) {
 export async function init({ content, series }: { series?: string | undefined, content: string }) {
   const checksum = generateChecksum(content);
   const { title } = parse(content);
-  const { summary, tags, excerpt } = await ai.augment({ checksum, content })
+  const { summary, tags, excerpt, imageURL } = await ai.augment({ checksum, title, content })
   const frontmatter = fm.init({
     title,
     summary,
     excerpt,
     tags,
+    imageURL,
     author: "Yeehaa",
     series,
     checksum
@@ -62,13 +62,21 @@ export async function update(entry: Article, tableRow: TableRow) {
   const statusChanged = entry.frontmatter.draft !== draft;
   const isUpdated = checksumChanged || statusChanged;
   if (!isUpdated) { return entry }
-  const frontmatter = fm.update(entry.frontmatter, tableRow)
-  const { summary, tags } = await ai.augment({ checksum, content: entry.content })
+  const { summary, tags, excerpt, imageURL } = await ai.augment({
+    checksum,
+    title: entry.frontmatter.title,
+    content: entry.content
+  })
+  const frontmatter = {
+    ...fm.update(entry.frontmatter, tableRow),
+    summary,
+    tags,
+    excerpt,
+    imageURL
+  }
   return {
     ...entry,
     frontmatter,
-    summary,
-    tags
   };
 }
 

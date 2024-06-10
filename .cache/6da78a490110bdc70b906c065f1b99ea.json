@@ -1,10 +1,12 @@
 {
-  "summary": "The article discusses the fragmentation of the internet, highlighting differences such as Asia's superapps, Africa's mesh networks, and appstore ecosystems. It traces the history of fragmentation to the 1990s, categorizing it into technical, governmental, and commercial fragmentation. Efforts by the Internet Society aim to make the internet more cohesive, but mainstream narratives often idealize an 'OG Internet' that never fully met its promises of open, universal access.",
+  "summary": "The article discusses how our current internet experience is fragmented into different forms across the globe. In Asia, superapps dominate web interaction, while Africa pioneers mesh and P2P networks for connectivity. It also highlights three types of internet fragmentation: technical, governmental, and commercial. The Internet Society's efforts to address these challenges emphasize promoting open standards and interoperability. The article critiques the nostalgic view of the 'OG internet,' noting it failed to deliver its idealized promise of universal consensus and understanding.",
   "tags": [
     "internet",
-    "divide",
+    "society",
     "global",
-    "access"
+    "growth",
+    "OG"
   ],
-  "excerpt": "The internet's history shows that open access does not lead to universal consensus but rather to propaganda and division. Efforts by ISOC aim to address this by fostering a globally accessible web."
+  "excerpt": "The article explores global internet fragmentation, tracing its roots back to the 90s browser wars and differentiating between technical, governmental, and commercial fragmentation. The role of ISOC is highlighted, along with a critique of the nostalgic 'OG internet' narrative.",
+  "imageURL": "6da78a490110bdc70b906c065f1b99ea.png"
 }

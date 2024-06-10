@@ -12,7 +12,7 @@ type Props = Pick<Frontmatter,
 
 export function PostListing({ series, order, title, summary, tags, slug }: Props) {
   return (
-    <div className="flex flex-col my-32">
+    <div className="flex flex-col mt-14 mb-32">
       <SeriesHeading href="/" order={order} series={series} />
       <a href={`/posts/${slug}`}>
         <h1 className="font-serif font-black hover:font-sans md:text-6xl text-4xl mb-2 md:mb-8">

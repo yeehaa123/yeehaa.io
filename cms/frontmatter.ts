@@ -8,6 +8,7 @@ export const schema = z.object({
   order: z.number().optional(),
   series: z.string().optional(),
   publishedAt: z.date().optional(),
+  imageURL: z.string(),
   createdAt: z.date(),
   updatedAt: z.date(),
   excerpt: z.string(),
@@ -22,6 +23,7 @@ export interface Frontmatter {
   summary: string,
   order?: number | undefined,
   slug?: string,
+  imageURL: string,
   excerpt: string,
   tags: string[],
   series?: string | undefined,
@@ -35,11 +37,12 @@ export interface Frontmatter {
 type FrontmatterInit = Omit<Frontmatter, 'draft' | 'createdAt' | 'updatedAt' | 'publishedAt'>
 
 export function init(
-  { title, author, series, checksum, summary, tags, excerpt }: FrontmatterInit) {
+  { title, author, series, imageURL, checksum, summary, tags, excerpt }: FrontmatterInit) {
   return {
     title,
     author,
     excerpt,
+    imageURL,
     summary,
     tags,
     series,

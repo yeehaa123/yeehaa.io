@@ -1,10 +1,10 @@
 import type { Article } from "./article";
+import type { TableRow } from "./table";
 import voca from "voca";
 import * as path from 'path';
-import { readdir, lstat, readFile, writeFile } from 'fs/promises'
+import { readdir, copyFile, lstat, readFile, writeFile } from 'fs/promises'
 import * as article from "./article";
 import { deslugify } from "./helpers";
-import type { TableRow } from "./table";
 
 export type FileTree = Map<string, Article>
 
@@ -78,7 +78,6 @@ export function order(tree: FileTree) {
   })
 }
 
-
 export async function validate(tree: FileTree) {
   for (const [_title, entry] of tree) {
     article.validate(entry);
@@ -87,9 +86,15 @@ export async function validate(tree: FileTree) {
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [title, entry] of tree) {
-    const fileName = `${voca.slugify(title)}.md`;
-    const filePath = path.join(basePath, fileName);
-    const file = article.render(entry);
-    await writeFile(filePath, file, 'utf8');
+    if (!entry.frontmatter.draft) {
+      const { checksum } = entry.frontmatter;
+      const fileSlug = `${voca.slugify(title)}`;
+      const filePath = path.join(basePath, `${fileSlug}.md`);
+      const imgSrc = path.join('./.cache', `${checksum}.png`);
+      const imgDest = path.join(basePath, `${checksum}.png`);
+      await copyFile(imgSrc, imgDest);
+      const file = article.render(entry);
+      await writeFile(filePath, file, 'utf8');
+    }
   }
 }
