@@ -21,7 +21,7 @@ series: Ecosystem Architecture
 checksum: 2fa6a7e7bf592d41022eb9cd67f240db
 draft: false
 createdAt: 2024-06-11T05:34:20.624Z
-updatedAt: 2024-06-11T16:20:47.794Z
+updatedAt: 2024-06-11T16:24:14.833Z
 publishedAt: 2024-06-11T05:34:36.312Z
 order: 2
 ---
