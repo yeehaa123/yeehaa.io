@@ -6,6 +6,7 @@ import { createOpenAI } from '@ai-sdk/openai';
 import { generateObject } from 'ai';
 import { z } from 'zod';
 import 'dotenv/config'
+import colors from "../styles/colorSchemes/BambooCurtain";
 
 const vercel = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY" });
 
@@ -33,15 +34,16 @@ ${content}
 
 Also add ${min_num_tags} to ${max_num_tags} tags. A single tags is a single-word, simple, non-hyphenated and are associated to a href? Only include tags that are really important. Again, only give me the answer. No extra words. Tags can have no more than ${tag_length} characters, are not composed of multiple words and can thus not contain a hyphen, and are all lowercase.
 
-    Finally, add a ${excerpt_length} characters excerpt of the article.`
+    Additional, add a ${excerpt_length} characters excerpt of the article.`
   });
   return object;
 }
 
 async function generateImage({ summary, title, checksum }: { summary: string, title: string, checksum: string }) {
+  const { primary, secondary } = colors;
   const response = await openai.images.generate({
     model: "dall-e-3",
-    prompt: `generate a banner image that matches the blog post with the following title '${title}' and summary: ${summary}`,
+    prompt: `generate a banner image using the following colors: ${primary} and ${secondary} that matches the blog post with the following title '${title}' and summary: ${summary}`,
     n: 1,
     response_format: "b64_json",
     size: "1792x1024",

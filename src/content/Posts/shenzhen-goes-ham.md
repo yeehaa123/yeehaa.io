@@ -1,27 +1,26 @@
 ---
 title: Shenzhen Goes HAM
 author: Yeehaa
-excerpt: Shanzhai manufacturers in Shenzhen epitomize rapid, resilient
-  innovation and decentralized production, challenging traditional Western IP
-  norms, but face environmental critiques due to fast-paced iteration.
+excerpt: Shenzhen's shanzhai ecosystem exemplifies rapid, decentralized
+  innovation in electronics manufacturing, inspired by ham radio and challenging
+  Western views on intellectual property.
 imageURL: 7c7c83da8c82ad789aff5d7f7f171543.png
-summary: Shanzhai manufacturers in Shenzhen exemplify a superior decentralized
-  model, reminiscent of ham radio's peer-to-peer ethos. Their ecosystem's rapid,
-  resilient, and collaborative innovation in electronics production has global
-  transformative potential. Despite criticisms of intellectual property
-  practices, shanzhai's expansive and accessible approach fosters robust open
-  hardware development.
+summary: Shenzhen's shanzhai ecosystem showcases decentralized innovation by
+  rapidly iterating and adapting in electronics manufacturing. Inspired by ham
+  radio's decentralization, it emphasizes peer-to-peer collaboration and shared
+  blueprints, challenging Western notions of IP and innovation. Andrew 'bunnie'
+  Huang's work highlights the resilience and potential of this model, despite
+  environmental concerns from rapid production cycles.
 tags:
-  - shanzai
   - shenzhen
-  - ham
+  - shanzhai
   - decentral
-  - ip
+  - ham
 series: Ecosystem Architecture
 checksum: 7c7c83da8c82ad789aff5d7f7f171543
 draft: false
 createdAt: 2024-06-11T05:36:02.172Z
-updatedAt: 2024-06-11T05:49:17.354Z
+updatedAt: 2024-06-11T08:01:13.613Z
 publishedAt: 2024-06-11T05:36:10.123Z
 order: 7
 ---

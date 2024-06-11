@@ -1,24 +1,25 @@
 ---
 title: Learning from Nature
 author: Yeehaa
-excerpt: Nature-inspired decentralized ecosystems enhance resilience and
-  sustainability through collaborative design practices like permaculture and
-  biomimicry.
+excerpt: Decentralized ecosystems, utilizing permaculture and biomimicry,
+  prioritize collaboration and sustainable design to create resilient, healthy
+  communities. Regenerative practices seek alignment with nature.
 imageURL: b00ab9b260061c09b956c2e922ebcbad.png
-summary: Decentralized ecosystems, inspired by nature's principles, offer more
-  vibrancy and resilience than centralized systems. Regenerative design
-  practices like permaculture and biomimicry promote collaboration over
-  competition. By learning from natural ecosystems, communities can create
-  healthier, sustainable cultures.
+summary: "'Learning from Nature' discusses the benefits of decentralized and
+  regenerative ecosystems. It highlights permaculture and biomimicry as key
+  concepts in regenerative design, emphasizing collaboration over competition to
+  foster resilient and healthy communities."
 tags:
   - nature
+  - ecosystem
   - design
   - culture
+  - nature
 series: Ecosystem Architecture
 checksum: b00ab9b260061c09b956c2e922ebcbad
 draft: false
 createdAt: 2024-06-11T05:35:41.609Z
-updatedAt: 2024-06-11T05:49:17.353Z
+updatedAt: 2024-06-11T08:01:13.613Z
 publishedAt: 2024-06-11T05:35:50.793Z
 order: 5
 ---

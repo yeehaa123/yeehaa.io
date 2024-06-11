@@ -1,20 +1,21 @@
 ---
 title: The Practice of Ecosystem Architecture
 author: Yeehaa
-excerpt: Ecosystem architecture shifts community building from traditional
-  structures to value-based, emergent systems via decentralized design. Stages
-  include Align, Validate, Scale, and Spin Out.
+excerpt: Ecosystem architecture designs intentional, value-driven virtual
+  communities. It uses a bottom-up approach and balances rule conformation with
+  innovation. The practice includes Align, Validate, Scale, and Spin Out stages.
 imageURL: 5d6f6f6ee484eca97181c32719f8eb4f.png
-summary: "Ecosystem architecture is the practice of designing virtual spaces
-  driven by shared values instead of traditional structures. It emphasizes
-  decentralized, regenerative, bottom-up design, leading to emergent systems
-  rather than controlled ones. Practitioners navigate between conformation and
-  creativity, similar to artists and cellular automata. The process comprises
-  four stages: Align, Validate, Scale, and Spin Out, to eventually let the
-  ecosystem thrive independently."
+summary: "Ecosystem architecture involves creating intentional, value-driven
+  virtual communities rather than relying on traditional community formation. It
+  adopts a bottom-up approach, focusing on emergent structures rather than
+  pre-planned blueprints. Practitioners balance conformation to rules with
+  innovation and playfulness. Cellular automata exemplify this, using simple
+  rules to generate complex behaviors and creativity. The practice is divided
+  into four stages: Align, Validate, Scale, and Spin Out, emphasizing continuous
+  alignment, validation, and eventual independence of the ecosystem."
 tags:
+  - ecosystem
   - design
-  - values
   - virtual
   - align
   - scale
@@ -22,7 +23,7 @@ series: Ecosystem Architecture
 checksum: 5d6f6f6ee484eca97181c32719f8eb4f
 draft: false
 createdAt: 2024-06-11T05:36:21.461Z
-updatedAt: 2024-06-11T05:49:17.354Z
+updatedAt: 2024-06-11T08:01:13.613Z
 publishedAt: 2024-06-11T05:36:30.773Z
 order: 9
 ---

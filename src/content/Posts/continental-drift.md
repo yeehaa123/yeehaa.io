@@ -1,27 +1,30 @@
 ---
 title: Continental Drift
 author: Yeehaa
-excerpt: Internet fragmentation is shaped by superapps in Asia, mesh networks in
-  Africa, and governmental, technical, and commercial divides. The OG internet's
-  promise of open access led to misinformation and culture clashes.
+excerpt: The article highlights the global variance in internet experiences,
+  noting the dominance of superapps in Asia and mesh networks in Africa. It
+  critiques media for nostalgic views of the early internet.
 imageURL: 6da78a490110bdc70b906c065f1b99ea.png
-summary: The article 'Continental Drift' highlights how internet experiences
-  vary globally, driven by superapps in Asia, mesh networks in Africa, and
-  fragmented by governmental, technical, and commercial practices. The Internet
-  Society aims to unify the web, but mainstream narratives often idealize the
-  past, overshadowing pragmatic progress. The original internet (OG) promised
-  open access but fell short, leading to misinformation and culture wars.
+summary: The article 'Continental Drift' delves into the fragmentation of the
+  internet, highlighting differences between global internet experiences. In
+  countries like China and Russia, national controls are evident, while in Asia,
+  superapps dominate. Africa relies on mesh and P2P networks for connectivity.
+  The divide between academic and defense internet use dates back to the
+  mid-1990s, and fragmentation intensified around 2013 with revelations from
+  Edward Snowden. The article categorizes fragmentation into technical,
+  governmental, and commercial. It critiques mainstream media's
+  oversimplification by focusing on the 'OG internet' and urges a reevaluation
+  of the internet's early promises.
 tags:
   - internet
-  - global
-  - access
   - fragment
-  - culture
+  - asia
+  - africa
 series: Ecosystem Architecture
 checksum: 6da78a490110bdc70b906c065f1b99ea
 draft: false
 createdAt: 2024-06-10T17:23:42.850Z
-updatedAt: 2024-06-11T05:49:17.353Z
+updatedAt: 2024-06-11T08:01:13.612Z
 publishedAt: 2024-06-11T05:34:20.632Z
 order: 1
 ---

@@ -1,27 +1,26 @@
 ---
 title: Global Village People
 author: Yeehaa
-excerpt: Marshall McLuhan's vision of the global village predicted increased
-  tribalism despite technological connectivity. Friedrich Kittler critiques
-  media control wars, urging value pluralism in today's fragmented internet.
+excerpt: Marshall McLuhan's prediction of a 'global village' merging
+  connectivity and chaos is evident in today's internet, with cultural tribalism
+  and media wars over communication channels being the new norm.
 imageURL: e8a7c7d905a234f18941d3fd4b6d0b69.png
-summary: In 'Global Village People,' the predictions of Marshall McLuhan are
-  discussed, particularly his view that technology's connectivity would create a
-  global village, blurring distinctions between local and global but leading to
-  increased tribalism. Friedrich Kittler's analysis further frames these media
-  wars as struggles for communication control. Incidents like the Cambridge
-  Analytica scandal exemplify this covert struggle. The piece concludes with a
-  call for value pluralism amidst moral confusion.
+summary: Marshall McLuhan predicted that technology would turn the world into a
+  'global village,' combining simultaneous connectivity and chaos. Modern media
+  reflect this, creating cultural tribalism and media wars over communication
+  channels. The current internet landscape mirrors McLuhan's visions, showcasing
+  the tensions and complexities within this global village.
 tags:
   - media
+  - chaos
   - tribes
   - global
-  - unity
+  - tech
 series: Ecosystem Architecture
 checksum: e8a7c7d905a234f18941d3fd4b6d0b69
 draft: false
 createdAt: 2024-06-11T05:35:22.342Z
-updatedAt: 2024-06-11T05:49:17.353Z
+updatedAt: 2024-06-11T08:01:13.613Z
 publishedAt: 2024-06-11T05:35:41.618Z
 order: 4
 ---

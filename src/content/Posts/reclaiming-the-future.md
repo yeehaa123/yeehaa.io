@@ -1,28 +1,28 @@
 ---
 title: Reclaiming the Future
 author: Yeehaa
-excerpt: The article explores how decentralized internet and ecosystem
-  architecture can reclaim the future from surveillance capitalism. It calls for
-  designed, diverse, and value-based futures.
+excerpt: The article discusses the importance of reclaiming the internet's
+  decentralized potential, resisting surveillance capitalism, and actively
+  shaping better futures based on people's needs.
 imageURL: 0af417ab21870acd8b23293440ad316a.png
-summary: The article 'Reclaiming the Future' discusses the need for ecosystem
-  architecture to build desirable futures rather than succumbing to surveillance
-  capitalism. It emphasizes the importance of individual ownership, the dangers
-  of data control by corporations and governments, and the need for diverse and
-  designed futures. Key figures like Shoshana Zuboff and Kodwo Eshun are
-  referenced to highlight the philosophy of counter-futurism and the necessity
-  of proactive intervention.
+summary: "\"Reclaiming the Future\" emphasizes the need to reclaim the
+  decentralized promise of the internet, resist surveillance capitalism, and
+  imagine better futures. The article calls for proactive intervention to
+  prevent a predetermined dystopian future controlled by corporate and
+  governmental surveillance. It stresses the importance of creating alternative
+  futures that align with people's needs rather than maintaining the current
+  status quo."
 tags:
-  - future
   - internet
+  - future
+  - ownership
   - data
   - design
-  - control
 series: Ecosystem Architecture
 checksum: 0af417ab21870acd8b23293440ad316a
 draft: false
 createdAt: 2024-06-11T05:35:50.786Z
-updatedAt: 2024-06-11T05:49:17.353Z
+updatedAt: 2024-06-11T08:01:13.613Z
 publishedAt: 2024-06-11T05:36:02.175Z
 order: 6
 ---

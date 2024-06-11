@@ -4,8 +4,6 @@ import Layout from "../../layouts/Article.astro"
 import { SeriesHeading } from "../../components/SeriesHeading";
 import { getCollection } from 'astro:content';
 
-const title = "YEEHAA";
-
 export async function getStaticPaths() {
   const blogEntries = await getCollection('Posts');
   return blogEntries.map(entry => ({
@@ -15,10 +13,10 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { order, series, imageURL} = entry.data;
+const { order, series, imageURL, title } = entry.data;
 ---
 <Layout {title}>
-  <Image src={imageURL} alt="A bird sitting on a nest of eggs." />
+  <Image src={imageURL} alt={title} />
   <SeriesHeading href={"/"} {order} {series} />
   <Content/ >
 </Layout>

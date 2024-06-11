@@ -1,27 +1,27 @@
 ---
 title: The Good Foot
 author: Yeehaa
-excerpt: The article elaborates on the freedom to switch habitats in ecosystems
-  and digital communities, highlighting its importance for creativity,
-  innovation, and healthy communities based on shared values.
+excerpt: The article explores ecosystems' alignment and freedom to migrate,
+  likening natural movements to the digital era's ecosystem evolutions,
+  emphasizing creativity, innovation, and the right to move freely.
 imageURL: f0f31bb5617196b56b80e9fd43b1ce5f.png
-summary: The article discusses the concept of voting with your feet in
-  ecosystems, emphasizing the importance of the freedom to leave one habitat for
-  another. This principle is crucial for creativity, innovation, and building
-  healthy ecosystems, both in nature and digital spaces. The idea extends to
-  digital communities, where the concept of 'network states' suggests that the
-  future of governance might be shaped by shared values rather than geographic
-  boundaries.
+summary: The article "The Good Foot" explores the concept of ecosystems as
+  regenerative practices allowing for decentralized alignment and the freedom to
+  leave unsuited environments, similar to natural migrations. It compares this
+  to the evolving internet era where digital ecosystems, unbound by physical
+  space, facilitate creativity, innovation, and ethical startup societies.
+  Emphasizing the right to "vote with your feet," it critiques any system
+  enforcing ideological or physical entrapment.
 tags:
   - nature
   - digital
   - freedom
-  - values
+  - internet
 series: Ecosystem Architecture
 checksum: f0f31bb5617196b56b80e9fd43b1ce5f
 draft: false
 createdAt: 2024-06-11T05:36:10.119Z
-updatedAt: 2024-06-11T05:49:17.354Z
+updatedAt: 2024-06-11T08:01:13.613Z
 publishedAt: 2024-06-11T05:36:21.463Z
 order: 8
 ---
