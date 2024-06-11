@@ -14,6 +14,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   experimental: {},
+  site: 'https://yeehaa.io',
   markdown: {
     remarkPlugins: [unwrapImages, remarkGfm],
     rehypePlugins: [[classNames, {
