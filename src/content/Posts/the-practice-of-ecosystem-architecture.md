@@ -23,7 +23,7 @@ series: Ecosystem Architecture
 checksum: 5d6f6f6ee484eca97181c32719f8eb4f
 draft: false
 createdAt: 2024-06-11T05:36:21.461Z
-updatedAt: 2024-06-11T15:57:06.669Z
+updatedAt: 2024-06-11T16:20:47.795Z
 publishedAt: 2024-06-11T05:36:30.773Z
 order: 9
 ---

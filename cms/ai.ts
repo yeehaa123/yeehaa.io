@@ -57,6 +57,7 @@ async function generateImage({ summary, title, checksum }: { summary: string, ti
 
 export async function augment({ checksum, title, content }:
   { checksum: string, title: string, content: string }) {
+
   const cachedItem = await cache.get(checksum);
   if (cachedItem) {
     return cachedItem;
@@ -69,5 +70,6 @@ export async function augment({ checksum, title, content }:
     await cache.set(checksum, { summary, tags, excerpt, imageURL });
     return { summary, tags, excerpt, imageURL }
   }
+
   throw ("PROBLEM WITH OPENAI");
 }
