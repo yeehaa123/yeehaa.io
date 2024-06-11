@@ -2,7 +2,6 @@ import type { APIRoute } from "astro";
 import { readFile } from "fs/promises";
 import { getCollection } from "astro:content";
 import path from "path";
-import { getImage } from "astro:assets";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('Posts');

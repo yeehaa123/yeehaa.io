@@ -14,9 +14,9 @@ export async function getStaticPaths() {
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const { slug , data } = entry
-const { order, series, imageURL, title } = data;
+const { order, series, imageURL, title, excerpt} = data;
 ---
-<Layout {title} {slug}>
+<Layout {title} {slug} {excerpt}>
   <Image class="w-full 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
   <SeriesHeading href={"/"} {order} {series} />
   <Content/ >
