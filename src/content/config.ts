@@ -1,10 +1,12 @@
-import { defineCollection } from "astro:content";
+import { z, defineCollection } from "astro:content";
 import * as fm from "../../cms/frontmatter";
 
 
 const postsCollection = defineCollection({
   type: "content", // v2.5.0 and later
-  schema: fm.schema
+  schema: ({ image }) => fm.schema.extend({
+    imageURL: image()
+  })
 });
 
 // 3. Export a single `collections` object to register your collection(s)

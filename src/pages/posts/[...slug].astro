@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "../../layouts/Article.astro"
 import { SeriesHeading } from "../../components/SeriesHeading";
 import { getCollection } from 'astro:content';
@@ -14,9 +15,11 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { order, series } = entry.data;
+const { order, series, imageURL} = entry.data;
+console.log(imageURL);
 ---
 <Layout {title}>
+  <Image src={imageURL} alt="A bird sitting on a nest of eggs." />
   <SeriesHeading href={"/"} {order} {series} />
   <Content/ >
 </Layout>

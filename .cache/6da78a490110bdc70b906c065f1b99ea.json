@@ -1,12 +1,12 @@
 {
-  "summary": "The article discusses how our current internet experience is fragmented into different forms across the globe. In Asia, superapps dominate web interaction, while Africa pioneers mesh and P2P networks for connectivity. It also highlights three types of internet fragmentation: technical, governmental, and commercial. The Internet Society's efforts to address these challenges emphasize promoting open standards and interoperability. The article critiques the nostalgic view of the 'OG internet,' noting it failed to deliver its idealized promise of universal consensus and understanding.",
+  "summary": "The article 'Continental Drift' highlights how internet experiences vary globally, driven by superapps in Asia, mesh networks in Africa, and fragmented by governmental, technical, and commercial practices. The Internet Society aims to unify the web, but mainstream narratives often idealize the past, overshadowing pragmatic progress. The original internet (OG) promised open access but fell short, leading to misinformation and culture wars.",
   "tags": [
     "internet",
-    "society",
     "global",
-    "growth",
-    "OG"
+    "access",
+    "fragment",
+    "culture"
   ],
-  "excerpt": "The article explores global internet fragmentation, tracing its roots back to the 90s browser wars and differentiating between technical, governmental, and commercial fragmentation. The role of ISOC is highlighted, along with a critique of the nostalgic 'OG internet' narrative.",
+  "excerpt": "Internet fragmentation is shaped by superapps in Asia, mesh networks in Africa, and governmental, technical, and commercial divides. The OG internet's promise of open access led to misinformation and culture clashes.",
   "imageURL": "6da78a490110bdc70b906c065f1b99ea.png"
 }

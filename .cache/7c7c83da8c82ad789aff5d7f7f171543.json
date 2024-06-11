@@ -1,11 +1,12 @@
 {
-  "summary": "The article discusses the innovative and decentralized manufacturing model of Shenzhen's Shanzhai, which builds on principles of amateur radio. The Shanzhai ecosystem, characterized by rapid and iterative innovation, peer-to-peer collaboration, market resilience, and ecosystem-sourced development (gongkai), challenges Western modes of IP and open-source production. While this model promotes economic and civil resilience, it also generates significant environmental waste and shares Silicon Valley’s mindset of exponential growth.",
+  "summary": "Shanzhai manufacturers in Shenzhen exemplify a superior decentralized model, reminiscent of ham radio's peer-to-peer ethos. Their ecosystem's rapid, resilient, and collaborative innovation in electronics production has global transformative potential. Despite criticisms of intellectual property practices, shanzhai's expansive and accessible approach fosters robust open hardware development.",
   "tags": [
     "shanzai",
+    "shenzhen",
     "ham",
-    "gongkai",
-    "china"
+    "decentral",
+    "ip"
   ],
-  "excerpt": "Shenzhen's Shanzhai exemplify decentralized manufacturing with rapid innovation, peer-to-peer collaboration, and resilience. Their gongkai model challenges Western IP norms but creates environmental waste.",
+  "excerpt": "Shanzhai manufacturers in Shenzhen epitomize rapid, resilient innovation and decentralized production, challenging traditional Western IP norms, but face environmental critiques due to fast-paced iteration.",
   "imageURL": "7c7c83da8c82ad789aff5d7f7f171543.png"
 }
