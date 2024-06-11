@@ -7,6 +7,7 @@ const { title, slug, logoLink = "/"} = Astro.props;
   <Fragment slot="og:data">
     <meta property="og:image" content={`${Astro.url}/og.png`}/>
   </Fragment>
+  <slot slot="image" name="image"/>
   <article class="prose prose-base md:prose-lg lg:prose-xl
     prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
     prose-lead:first-letter:text-3xl

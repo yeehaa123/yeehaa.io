@@ -17,7 +17,7 @@ const { slug , data } = entry
 const { order, series, imageURL, title } = data;
 ---
 <Layout {title} {slug}>
-  <Image src={imageURL} alt={title} />
+  <Image class="w-full 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
   <SeriesHeading href={"/"} {order} {series} />
   <Content/ >
 </Layout>
