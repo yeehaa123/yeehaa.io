@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import Layout from "../../layouts/Article.astro"
-import { SeriesHeading } from "../../components/SeriesHeading";
+import Layout from "@/layouts/Article.astro"
+import { SeriesHeading } from "@/components/SeriesHeading";
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -11,11 +11,12 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry } = Astro.props;
+const { entry  } = Astro.props;
 const { Content } = await entry.render();
-const { order, series, imageURL, title } = entry.data;
+const { slug , data } = entry
+const { order, series, imageURL, title } = data;
 ---
-<Layout {title}>
+<Layout {title} {slug}>
   <Image src={imageURL} alt={title} />
   <SeriesHeading href={"/"} {order} {series} />
   <Content/ >

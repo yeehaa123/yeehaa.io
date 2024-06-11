@@ -1,9 +1,12 @@
 ---
 import Layout from "./Base.astro"
-const { title, logoLink = "/"} = Astro.props;
+const { title, slug, logoLink = "/"} = Astro.props;
 ---
 
-<Layout {logoLink} {title}>
+<Layout {logoLink} {title} {slug}>
+  <Fragment slot="og:data">
+    <meta property="og:image" content={`${Astro.url}/og.png`}/>
+  </Fragment>
   <article class="prose prose-base md:prose-lg lg:prose-xl
     prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
     prose-lead:first-letter:text-3xl

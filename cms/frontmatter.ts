@@ -8,6 +8,7 @@ export const schema = z.object({
   order: z.number().optional(),
   series: z.string().optional(),
   publishedAt: z.date().optional(),
+  checksum: z.string(),
   imageURL: z.string(),
   createdAt: z.date(),
   updatedAt: z.date(),
