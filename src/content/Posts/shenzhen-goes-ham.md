@@ -1,26 +1,28 @@
 ---
 title: Shenzhen Goes HAM
 author: Yeehaa
-excerpt: Shenzhen's shanzhai ecosystem exemplifies rapid, decentralized
-  innovation in electronics manufacturing, inspired by ham radio and challenging
-  Western views on intellectual property.
+excerpt: The shanzhai in Shenzhen epitomize modern-day decentralization through
+  rapid innovation and peer-to-peer collaboration, as explored by Andrew
+  'bunnie' Huang. Yet, their practices also generate significant electronic
+  waste.
 imageURL: 7c7c83da8c82ad789aff5d7f7f171543.png
-summary: Shenzhen's shanzhai ecosystem showcases decentralized innovation by
-  rapidly iterating and adapting in electronics manufacturing. Inspired by ham
-  radio's decentralization, it emphasizes peer-to-peer collaboration and shared
-  blueprints, challenging Western notions of IP and innovation. Andrew 'bunnie'
-  Huang's work highlights the resilience and potential of this model, despite
-  environmental concerns from rapid production cycles.
+summary: The article discusses the concept of decentralization, tracing it from
+  historical examples like the feudal system and ham radio to modern-day
+  Shenzhen's shanzhai. Andrew 'bunnie' Huang's analysis in 'The Hardware Hacker'
+  emphasizes that the shanzhai's true innovation lies in their decentralized
+  production model, rapid iterative innovation, and peer-to-peer collaboration.
+  However, the shanzhai’s fast-paced production has environmental costs,
+  creating substantial electronic waste.
 tags:
-  - shenzhen
+  - tech
   - shanzhai
-  - decentral
-  - ham
+  - bunnie
+  - radio
 series: Ecosystem Architecture
 checksum: 7c7c83da8c82ad789aff5d7f7f171543
 draft: false
 createdAt: 2024-06-11T05:36:02.172Z
-updatedAt: 2024-06-11T08:01:13.613Z
+updatedAt: 2024-06-11T15:57:06.668Z
 publishedAt: 2024-06-11T05:36:10.123Z
 order: 7
 ---

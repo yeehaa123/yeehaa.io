@@ -1,26 +1,27 @@
 ---
 title: Align the Misaligned
 author: Yeehaa
-excerpt: The article emphasizes fragmenting the internet and the importance of
-  ecosystem architecture, blending decentralization and regenerative design to
-  foster innovation in practice, not just artifacts.
+excerpt: The internet has fragmented much like natural processes. By adopting
+  "ecosystem architecture," which combines decentralization and regenerative
+  design, we can create healthier, vibrant systems from these fragments.
 imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
-summary: This article discusses the parallels between the fragmentation of the
-  internet and cosmic events, emphasizing that broken systems still hold value.
-  Using the concept of 'ecosystem architecture,' it suggests maintaining and
-  nurturing decentralized and regenerative systems. Drawing from varied
-  disciplines, the article proposes that innovation lies in practice rather than
-  artifacts, and fragments can be seeds for a vibrant future.
+summary: The article discusses the fragmentation of the internet, comparing it
+  to natural processes like tectonic shifts. It highlights that while the
+  internet may never be whole again, value can still be derived from its
+  fragments by adopting a practice called "ecosystem architecture." This
+  approach, inspired by various disciplines, merges decentralization with
+  regenerative design, aiming to create healthier, more vibrant systems. The
+  excess mindset, prevalent in tech and innovation, is seen as unsustainable,
+  and a shift towards more mindful practices is advocated.
 tags:
   - internet
   - design
   - future
-  - tech
 series: Ecosystem Architecture
 checksum: 34d442a1971d4dbbe8315bbfa8de35d5
 draft: false
 createdAt: 2024-06-10T08:50:59.903Z
-updatedAt: 2024-06-11T08:01:13.612Z
+updatedAt: 2024-06-11T15:57:06.667Z
 publishedAt: 2024-06-10T08:51:34.857Z
 order: 0
 ---

@@ -1,11 +1,11 @@
 {
-  "summary": "The article 'Continental Drift' delves into the fragmentation of the internet, highlighting differences between global internet experiences. In countries like China and Russia, national controls are evident, while in Asia, superapps dominate. Africa relies on mesh and P2P networks for connectivity. The divide between academic and defense internet use dates back to the mid-1990s, and fragmentation intensified around 2013 with revelations from Edward Snowden. The article categorizes fragmentation into technical, governmental, and commercial. It critiques mainstream media's oversimplification by focusing on the 'OG internet' and urges a reevaluation of the internet's early promises.",
+  "summary": "The article 'Continental Drift' discusses the fragmentation of the internet, contrasting the conventional Western experience with global variations like Asia's superapps and Africa's mesh networks. It identifies three types of internet fragmentation: technical, governmental, and commercial, and critiques the idealized view of the early internet held by various groups. The Internet Society's efforts to enhance global internet connectivity are also highlighted.",
   "tags": [
     "internet",
-    "fragment",
-    "asia",
-    "africa"
+    "global",
+    "access",
+    "society"
   ],
-  "excerpt": "The article highlights the global variance in internet experiences, noting the dominance of superapps in Asia and mesh networks in Africa. It critiques media for nostalgic views of the early internet.",
+  "excerpt": "The article examines internet fragmentation, contrasting the traditional Western experience with global variations like superapps and mesh networks. It critiques the idealized view of the early internet and covers ISOC's efforts for better connectivity.",
   "imageURL": "6da78a490110bdc70b906c065f1b99ea.png"
 }

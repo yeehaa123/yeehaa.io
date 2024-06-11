@@ -1,29 +1,29 @@
 ---
 title: The Practice of Ecosystem Architecture
 author: Yeehaa
-excerpt: Ecosystem architecture designs intentional, value-driven virtual
-  communities. It uses a bottom-up approach and balances rule conformation with
-  innovation. The practice includes Align, Validate, Scale, and Spin Out stages.
+excerpt: "Ecosystem architecture creates intentional communities through shared
+  values, focusing on decentralized design. It follows stages: Align, Validate,
+  Scale, Spin Out, to foster self-sustaining ecosystems."
 imageURL: 5d6f6f6ee484eca97181c32719f8eb4f.png
-summary: "Ecosystem architecture involves creating intentional, value-driven
-  virtual communities rather than relying on traditional community formation. It
-  adopts a bottom-up approach, focusing on emergent structures rather than
-  pre-planned blueprints. Practitioners balance conformation to rules with
-  innovation and playfulness. Cellular automata exemplify this, using simple
-  rules to generate complex behaviors and creativity. The practice is divided
-  into four stages: Align, Validate, Scale, and Spin Out, emphasizing continuous
-  alignment, validation, and eventual independence of the ecosystem."
+summary: "Ecosystem architecture involves creating intentional communities
+  through shared values, emphasizing decentralized, regenerative design. It
+  forgoes traditional planning in favor of emergent structures, paralleling
+  concepts of practice, conformation, and playfulness. Using examples like
+  cellular automata, it explores how simple rule sets can generate complex,
+  innovative systems. The practice follows a framework with stages: Align,
+  Validate, Scale, and Spin Out, fostering self-sustaining, thriving
+  ecosystems."
 tags:
   - ecosystem
   - design
-  - virtual
-  - align
-  - scale
+  - values
+  - emergent
+  - community
 series: Ecosystem Architecture
 checksum: 5d6f6f6ee484eca97181c32719f8eb4f
 draft: false
 createdAt: 2024-06-11T05:36:21.461Z
-updatedAt: 2024-06-11T08:01:13.613Z
+updatedAt: 2024-06-11T15:57:06.669Z
 publishedAt: 2024-06-11T05:36:30.773Z
 order: 9
 ---

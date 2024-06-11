@@ -1,28 +1,25 @@
 ---
 title: Reclaiming the Future
 author: Yeehaa
-excerpt: The article discusses the importance of reclaiming the internet's
-  decentralized potential, resisting surveillance capitalism, and actively
-  shaping better futures based on people's needs.
+excerpt: The decentralized internet's promise was ownership of spaces. To avoid
+  the dystopia of surveillance capitalism, we must reshape futures based on
+  needs and actively design inclusive ecosystems.
 imageURL: 0af417ab21870acd8b23293440ad316a.png
-summary: "\"Reclaiming the Future\" emphasizes the need to reclaim the
-  decentralized promise of the internet, resist surveillance capitalism, and
-  imagine better futures. The article calls for proactive intervention to
-  prevent a predetermined dystopian future controlled by corporate and
-  governmental surveillance. It stresses the importance of creating alternative
-  futures that align with people's needs rather than maintaining the current
-  status quo."
+summary: The decentralized internet's promise was ownership and multiplicity of
+  spaces, but outsourcing to governments and corporations has jeopardized this.
+  To avoid the dystopia of surveillance capitalism, we must reshape futures
+  based on needs, not wants, actively design inclusive ecosystems, and learn
+  from past futurisms to challenge the status quo.
 tags:
   - internet
   - future
-  - ownership
   - data
-  - design
+  - control
 series: Ecosystem Architecture
 checksum: 0af417ab21870acd8b23293440ad316a
 draft: false
 createdAt: 2024-06-11T05:35:50.786Z
-updatedAt: 2024-06-11T08:01:13.613Z
+updatedAt: 2024-06-11T15:57:06.668Z
 publishedAt: 2024-06-11T05:36:02.175Z
 order: 6
 ---

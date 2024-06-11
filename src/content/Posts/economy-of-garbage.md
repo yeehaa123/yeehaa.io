@@ -1,28 +1,27 @@
 ---
 title: Economy of Garbage
 author: Yeehaa
-excerpt: "'Economy of Garbage' critiques the excess mindset in modern capitalism
-  and crypto, contrasting it with Bataille's philosophy of embracing waste.
-  Shraddha Borawake highlights the intertwined nature of waste, culture, and
-  nature."
+excerpt: Walter Benjamin and Georges Bataille explore how the crypto market
+  deviated from its potential, emphasizing excess and abundance. Shraddha
+  Borawake recontextualizes waste, blending nature and culture.
 imageURL: 2fa6a7e7bf592d41022eb9cd67f240db.png
-summary: The article 'Economy of Garbage' explores the cultural and ideological
-  dimensions of decentralization, excess, and waste in modern capitalism. It
-  critiques the excess mindset seen in crypto and contrasts it with Bataille's
-  philosophy of embracing waste. Shraddha Borawake's artistic practice
-  highlights the intertwined nature of waste, culture, and nature, arguing that
-  abundance and excess are central to understanding modernity.
+summary: This article examines the concept of decentralization and its cultural
+  implications, highlighting how the rise of the crypto market distorted its
+  original potential. It references Walter Benjamin and Georges Bataille to
+  discuss the ideological shifts and the obsession with scarcity versus
+  abundance. The piece also delves into the transformative practice of Shraddha
+  Borawake, who recontextualizes waste, blending nature and culture.
 tags:
-  - excess
-  - waste
   - crypto
-  - art
+  - waste
+  - ideas
+  - nature
   - tech
 series: Ecosystem Architecture
 checksum: 2fa6a7e7bf592d41022eb9cd67f240db
 draft: false
 createdAt: 2024-06-11T05:34:20.624Z
-updatedAt: 2024-06-11T08:01:13.612Z
+updatedAt: 2024-06-11T15:57:06.668Z
 publishedAt: 2024-06-11T05:34:36.312Z
 order: 2
 ---

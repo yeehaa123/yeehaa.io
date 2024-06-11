@@ -43,7 +43,7 @@ async function generateImage({ summary, title, checksum }: { summary: string, ti
   const { primary, secondary } = colors;
   const response = await openai.images.generate({
     model: "dall-e-3",
-    prompt: `generate a banner image using the following colors: ${primary} and ${secondary} that matches the blog post with the following title '${title}' and summary: ${summary}`,
+    prompt: `generate a banner image in a brutalist style matching the following colors: ${primary} and ${secondary} that matches the blog post with the following title '${title}' and summary: ${summary}`,
     n: 1,
     response_format: "b64_json",
     size: "1792x1024",
