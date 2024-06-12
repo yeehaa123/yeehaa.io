@@ -1,5 +1,6 @@
 ---
 title: Align the Misaligned
+contentType: article
 author: Yeehaa
 excerpt: The internet has fragmented much like natural processes. By adopting
   "ecosystem architecture," which combines decentralization and regenerative
@@ -21,7 +22,7 @@ series: Ecosystem Architecture
 checksum: 34d442a1971d4dbbe8315bbfa8de35d5
 draft: false
 createdAt: 2024-06-10T08:50:59.903Z
-updatedAt: 2024-06-12T06:29:30.418Z
+updatedAt: 2024-06-12T09:39:24.716Z
 publishedAt: 2024-06-10T08:51:34.857Z
 order: 0
 ---

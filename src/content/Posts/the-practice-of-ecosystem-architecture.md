@@ -1,5 +1,6 @@
 ---
 title: The Practice of Ecosystem Architecture
+contentType: article
 author: Yeehaa
 excerpt: "Ecosystem architecture creates intentional communities through shared
   values, focusing on decentralized design. It follows stages: Align, Validate,
@@ -23,7 +24,7 @@ series: Ecosystem Architecture
 checksum: 5d6f6f6ee484eca97181c32719f8eb4f
 draft: false
 createdAt: 2024-06-12T06:28:43.965Z
-updatedAt: 2024-06-12T06:29:30.419Z
+updatedAt: 2024-06-12T09:39:24.717Z
 publishedAt: 2024-06-12T06:29:10.665Z
 order: 8
 ---

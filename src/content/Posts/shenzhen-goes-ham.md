@@ -1,5 +1,6 @@
 ---
 title: Shenzhen Goes HAM
+contentType: article
 author: Yeehaa
 excerpt: The shanzhai in Shenzhen epitomize modern-day decentralization through
   rapid innovation and peer-to-peer collaboration, as explored by Andrew
@@ -22,7 +23,7 @@ series: Ecosystem Architecture
 checksum: 7c7c83da8c82ad789aff5d7f7f171543
 draft: false
 createdAt: 2024-06-12T06:25:21.586Z
-updatedAt: 2024-06-12T06:29:30.419Z
+updatedAt: 2024-06-12T09:39:24.716Z
 publishedAt: 2024-06-12T06:27:07.218Z
 order: 4
 ---

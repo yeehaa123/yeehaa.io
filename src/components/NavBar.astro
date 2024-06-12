@@ -1,11 +1,9 @@
 ---
-import ThemeSelector from "./ThemeSelector.astro"
+import { DarkModeToggle } from "@/components/DarkModeToggle";
 ---
-
 <nav class="backdrop-blur-none dark:text-white flex items-center justify-between p-4 md:p-6 transition-all print:hidden">
   <slot name="logo"/>
   <div class="flex gap-6 font-black text-right text-base md:text-1xl text-secondary select-none">
-    <ThemeSelector class="print:hidden"/>
-    <!-- <div class="hover:text-secondary-light dark:hover:text-primary-light">CONTACT</div> -->
+    <DarkModeToggle class="print:hidden" client:load/>
   </div>
 </nav>

@@ -1,5 +1,6 @@
 ---
 title: Reclaiming the Future
+contentType: article
 author: Yeehaa
 excerpt: The decentralized internet's promise was ownership of spaces. To avoid
   the dystopia of surveillance capitalism, we must reshape futures based on
@@ -19,7 +20,7 @@ series: Ecosystem Architecture
 checksum: 0af417ab21870acd8b23293440ad316a
 draft: false
 createdAt: 2024-06-12T06:29:10.661Z
-updatedAt: 2024-06-12T06:29:30.419Z
+updatedAt: 2024-06-12T09:39:24.716Z
 publishedAt: 2024-06-12T06:29:30.419Z
 order: 9
 ---

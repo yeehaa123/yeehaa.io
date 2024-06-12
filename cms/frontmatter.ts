@@ -2,8 +2,10 @@ import type { TableRow } from "./table";
 
 import { z } from 'zod';
 
+
 export const schema = z.object({
   title: z.string(),
+  contentType: z.literal("article"),
   author: z.string(),
   order: z.number().optional(),
   series: z.string().optional(),
@@ -22,6 +24,7 @@ export interface Frontmatter {
   title: string,
   author: string,
   summary: string,
+  contentType: string,
   order?: number | undefined,
   slug?: string,
   imageURL: string,
@@ -35,12 +38,19 @@ export interface Frontmatter {
   publishedAt: Date | undefined
 }
 
-type FrontmatterInit = Omit<Frontmatter, 'draft' | 'createdAt' | 'updatedAt' | 'publishedAt'>
+type FrontmatterInit = Omit<Frontmatter,
+  'draft'
+  | 'createdAt'
+  | 'updatedAt'
+  | 'publishedAt'
+  | 'contentType'
+>
 
 export function init(
   { title, author, series, imageURL, checksum, summary, tags, excerpt }: FrontmatterInit) {
   return {
     title,
+    contentType: "article",
     author,
     excerpt,
     imageURL,

@@ -1,5 +1,6 @@
 ---
 title: The Good Foot
+contentType: article
 author: Yeehaa
 excerpt: The essence of 'The Good Foot' is about the freedom to move between
   habitats or digital ecosystems in reaction to changing conditions, promoting
@@ -23,7 +24,7 @@ series: Ecosystem Architecture
 checksum: f0f31bb5617196b56b80e9fd43b1ce5f
 draft: false
 createdAt: 2024-06-12T06:28:10.858Z
-updatedAt: 2024-06-12T06:29:30.419Z
+updatedAt: 2024-06-12T09:39:24.717Z
 publishedAt: 2024-06-12T06:28:43.967Z
 order: 7
 ---

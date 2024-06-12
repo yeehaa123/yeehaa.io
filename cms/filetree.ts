@@ -4,14 +4,22 @@ import voca from "voca";
 import * as path from 'path';
 import { readdir, copyFile, lstat, readFile, writeFile } from 'fs/promises'
 import * as article from "./article";
+import * as course from "./course";
 import { deslugify } from "./helpers";
 
 export type FileTree = Map<string, Article>
 
 async function processFile(filePath: string, series?: string) {
   try {
+    const { ext } = path.parse(filePath);
     const item = await readFile(filePath, 'utf8');
-    return article.init({ series, content: item })
+    if (ext === ".md") {
+      return article.init({ series, content: item })
+    } else if (ext === '.offcourse') {
+      const newCourse = await course.init({ content: item })
+      console.log(newCourse);
+    }
+    return false;
   } catch (e) {
     throw (e);
   }

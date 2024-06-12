@@ -2,11 +2,9 @@
 const { class:className } = Astro.props;
 ---
 
-<div
-class:list={[className]}
+<div class:list={[className]}
 x-data="{'darkMode': false}"
-x-init="
-darkMode = JSON.parse(localStorage.getItem('darkMode'));
+x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
 darkMode ? document.documentElement.classList.add('dark') :
 document.documentElement.classList.remove('dark');
 $watch('darkMode', value => {

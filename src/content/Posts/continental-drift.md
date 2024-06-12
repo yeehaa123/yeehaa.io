@@ -1,5 +1,6 @@
 ---
 title: Continental Drift
+contentType: article
 author: Yeehaa
 excerpt: The article examines internet fragmentation, contrasting the
   traditional Western experience with global variations like superapps and mesh
@@ -22,7 +23,7 @@ series: Ecosystem Architecture
 checksum: 6da78a490110bdc70b906c065f1b99ea
 draft: false
 createdAt: 2024-06-10T17:23:42.850Z
-updatedAt: 2024-06-12T06:29:30.418Z
+updatedAt: 2024-06-12T09:39:24.716Z
 publishedAt: 2024-06-11T05:34:20.632Z
 order: 1
 ---
