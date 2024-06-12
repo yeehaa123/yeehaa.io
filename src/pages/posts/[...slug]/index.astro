@@ -15,9 +15,10 @@ const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const { slug , data } = entry
 const { order, series, imageURL, title, excerpt, author, publishedAt, updatedAt, tags} = data;
+
 ---
 <Layout {title} {slug} {excerpt} {author} {publishedAt} {updatedAt} {tags}>
-  <Image class="w-full 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
+  <Image class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
   <SeriesHeading href={"/"} {order} {series} />
   <Content/ >
 </Layout>
