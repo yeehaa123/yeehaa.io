@@ -1,11 +1,13 @@
 import type { Frontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
-import * as ai from './ai';
+import * as ai from '../ai';
 import Markdoc from '@markdoc/markdoc';
 import { stringify } from "yaml";
 import * as fm from "./frontmatter";
-import { generateChecksum } from "./helpers";
-import type { TableRow } from "./table";
+import { generateChecksum } from "../helpers";
+import type { TableRow } from "../table";
+
+export const schema = fm.schema;
 
 export type Article = {
   frontmatter: Frontmatter

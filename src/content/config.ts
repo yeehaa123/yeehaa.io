@@ -1,10 +1,10 @@
 import { defineCollection } from "astro:content";
-import * as fm from "../../cms/frontmatter";
+import * as article from "../../cms/article";
 
 
 const postsCollection = defineCollection({
   type: "content", // v2.5.0 and later
-  schema: ({ image }) => fm.schema.extend({
+  schema: ({ image }) => article.schema.extend({
     imageURL: image()
   })
 });
