@@ -1,4 +1,5 @@
 ---
+import { BaseHead, OGType} from "@/components/BaseHead";
 import Layout from "../layouts/Base.astro"
 import { PostListing } from "../components/Postlisting"
 const title = "YEEHAA";
@@ -14,8 +15,13 @@ const posts = (await getCollection('Posts'))
     return -1
   }
   });
+
+const type = OGType.WEBSITE;
+const description = "Jan Hein Hoogstad's personal website"
+const { url } = Astro;
 ---
 
 <Layout {title}>
+  <BaseHead slot="og:data" {type} {title} {description} {url} />
     { posts.map(({data, slug}) => <PostListing {slug} {...data} />)}
 </Layout>

@@ -20,9 +20,9 @@ tags:
 series: Ecosystem Architecture
 checksum: 9f89665831b49e0f9151d06d7495fe0a
 draft: false
-createdAt: 2024-06-11T05:34:36.303Z
-updatedAt: 2024-06-11T16:29:48.135Z
-publishedAt: 2024-06-11T05:35:22.352Z
+createdAt: 2024-06-12T06:22:49.116Z
+updatedAt: 2024-06-12T06:29:30.419Z
+publishedAt: 2024-06-12T06:23:39.841Z
 order: 3
 ---
 

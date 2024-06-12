@@ -1,7 +1,5 @@
 ---
-import { Image } from 'astro:assets';
 import Layout from "@/layouts/Article.astro"
-import { SeriesHeading } from "@/components/SeriesHeading";
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -14,11 +12,7 @@ export async function getStaticPaths() {
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const { slug , data } = entry
-const { order, series, imageURL, title, excerpt, author, publishedAt, updatedAt, tags} = data;
-
 ---
-<Layout {title} {slug} {excerpt} {author} {publishedAt} {updatedAt} {tags}>
-  <Image class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
-  <SeriesHeading href={"/"} {order} {series} />
+<Layout {...data}>
   <Content/ >
 </Layout>

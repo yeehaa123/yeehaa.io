@@ -1,31 +1,30 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "./Base.astro"
-const { title, slug, excerpt, author, publishedAt, updatedAt, tags,logoLink = "/"} = Astro.props;
+import { SeriesHeading } from "@/components/SeriesHeading";
+import  { BaseHead, OGType  }from "@/components/BaseHead";
+const { 
+  title, 
+  order, 
+  series, 
+  slug, 
+  excerpt,
+  author, 
+  publishedAt, 
+  imageURL,
+  updatedAt, 
+  tags,
+  logoLink = "/"
+} = Astro.props;
+
+const { url } = Astro;
+const type = OGType.ARTICLE;
 ---
 
 <Layout {logoLink} {title} {slug}>
-  <Fragment slot="og:data">
-    <meta name="description" content="">
-
-    <meta property="og:url" content={Astro.url}>
-    <meta property="og:type" content="article">
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={excerpt}>
-    <meta property="og:image" content={`${Astro.url}og.png`}/>
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content={Astro.url.pathname}>
-    <meta property="twitter:url" content={Astro.url}>
-    <meta name="twitter:title" content={title}>
-    <meta name="twitter:description" content={excerpt}>
-    <meta property="twitter:image" content={`${Astro.url}og.png`}/>
-
-    <meta name="author" content={author}>
-    <meta property="article:published_time" content={publishedAt} />
-    <meta property="article:modified_time" content={updatedAt} />
-    <meta property="article:tag" content={tags.join(" ")} />
-  </Fragment>
-  <slot slot="image" name="image"/>
+  <BaseHead slot="og:data" 
+    {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
+  <Image class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
   <article class="prose prose-base md:prose-lg lg:prose-xl
     prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
     prose-lead:first-letter:text-3xl
@@ -42,6 +41,7 @@ const { title, slug, excerpt, author, publishedAt, updatedAt, tags,logoLink = "/
     prose-blockquote:border-secondary
     prose-a:no-underline prose-a:text-secondary-dark hover:prose-a:text-secondary-light
     " transition:name="content" >
+    <SeriesHeading href={"/"} {order} {series} />
     <slot/>
   </article>
 </Layout>
