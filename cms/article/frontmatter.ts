@@ -1,9 +1,10 @@
-import type { Frontmatter } from "../frontmatter";
-import * as fm from "../frontmatter";
+import type { TableRow } from "../table/tableRow";
+import * as tr from "../table/tableRow";
 
 import { z } from 'zod';
 
-export const schema = fm.schema.extend({
+export const schema = tr.schema.extend({
+  contentType: z.literal(tr.ContentType.ARTICLE),
   author: z.string(),
   order: z.number().optional(),
   series: z.string().optional(),
@@ -13,7 +14,7 @@ export const schema = fm.schema.extend({
   tags: z.array(z.string()).min(3).max(7),
 })
 
-export interface ArticleFrontmatter extends Frontmatter {
+export interface ArticleFrontmatter extends TableRow {
   author: string,
   slug?: string | undefined,
   summary: string,
@@ -22,7 +23,7 @@ export interface ArticleFrontmatter extends Frontmatter {
   tags: string[],
 }
 
-type FrontmatterInit = Omit<ArticleFrontmatter,
+type TableRowInit = Omit<ArticleFrontmatter,
   'draft'
   | 'createdAt'
   | 'updatedAt'
@@ -31,36 +32,35 @@ type FrontmatterInit = Omit<ArticleFrontmatter,
 >
 
 export function init(
-  { title, author, series, imageURL, checksum, summary, tags, excerpt }: FrontmatterInit) {
-  return {
+  { title, author, series, imageURL, checksum, summary, tags, excerpt }: TableRowInit) {
+  const frontmatter = tr.init({
     title,
     contentType: "article",
+    series,
+    checksum,
+  })
+  return {
+    ...frontmatter,
     author,
     excerpt,
     imageURL,
     summary,
     tags,
-    series,
-    checksum,
-    draft: true,
-    createdAt: new Date,
-    updatedAt: new Date,
-    publishedAt: undefined,
   };
 }
 export function validate(frontmatter: ArticleFrontmatter) {
   return schema.parse(frontmatter);
 }
 
-export function update(frontmatter: ArticleFrontmatter, tableRow: Frontmatter) {
-  const { draft, checksum, createdAt, publishedAt, order } = tableRow;
-  return {
+export function update(frontmatter: ArticleFrontmatter, tableRow: TableRow) {
+  const { draft, publishedAt } = tableRow;
+  return schema.parse({
     ...frontmatter,
-    checksum,
-    updatedAt: new Date,
-    createdAt,
-    draft,
-    order,
-    publishedAt: draft ? undefined : publishedAt ? publishedAt : new Date
-  }
+    ...tr.init({
+      ...frontmatter,
+      ...tableRow,
+      updatedAt: new Date,
+      publishedAt: draft ? undefined : publishedAt ? publishedAt : new Date
+    })
+  })
 }

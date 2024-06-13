@@ -1,5 +1,6 @@
 import type { Article } from "./article";
-import type { Frontmatter } from "./frontmatter";
+import type { TableRow } from "./table/tableRow";
+import { ContentType } from "./table/tableRow";
 import voca from "voca";
 import * as path from 'path';
 import { readdir, copyFile, lstat, readFile, writeFile } from 'fs/promises'
@@ -7,7 +8,19 @@ import * as article from "./article";
 import * as course from "./course";
 import { deslugify } from "./helpers";
 
-export type FileTree = Map<string, Article>
+type Course = { frontmatter: TableRow }
+
+type Entity = Article | Course;
+
+function isArticle(entity: Entity): entity is Article {
+  return (entity as Article).frontmatter.contentType === ContentType.ARTICLE;;
+}
+
+function isCourse(entity: Entity): entity is Course {
+  return (entity as Course).frontmatter.contentType === ContentType.COURSE;;
+}
+
+export type FileTree = Map<string, Entity>
 
 async function processFile(filePath: string, series?: string) {
   try {
@@ -16,14 +29,14 @@ async function processFile(filePath: string, series?: string) {
     if (ext === ".md") {
       return article.init({ series, content: item })
     } else if (ext === '.offcourse') {
-      const newCourse = await course.init({ content: item })
-      console.log(newCourse);
+      return await course.init({ content: item })
     }
     return false;
   } catch (e) {
     throw (e);
   }
 }
+
 
 async function processDir(tree: FileTree, dirPath: string) {
   const seriesPath = path.parse(dirPath)
@@ -60,11 +73,11 @@ export async function create(basePath: string): Promise<FileTree> {
   return tree;
 }
 
-export async function update(tree: FileTree, tableData: Frontmatter[]) {
+export async function update(tree: FileTree, tableData: TableRow[]) {
   for (const tableRow of tableData) {
     const { title } = tableRow;
     const entry = tree.get(title);
-    if (entry) {
+    if (entry && isArticle(entry)) {
       const newEntry = await article.update(entry, tableRow);
       tree.set(title, newEntry);
     }
@@ -83,27 +96,35 @@ export function order(tree: FileTree) {
   });
 
   publishedInSeries.forEach(([title, entry], index) => {
-    tree.set(title, article.addOrder(entry, index));
+    if (isArticle(entry)) {
+      tree.set(title, article.addOrder(entry, index));
+    }
   })
 }
 
 export async function validate(tree: FileTree) {
   for (const [_title, entry] of tree) {
-    article.validate(entry);
+    if (isArticle(entry)) {
+      article.validate(entry);
+    }
   }
 }
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [title, entry] of tree) {
-    if (!entry.frontmatter.draft) {
-      const { checksum } = entry.frontmatter;
-      const fileSlug = `${voca.slugify(title)}`;
-      const filePath = path.join(basePath, `${fileSlug}.md`);
-      const imgSrc = path.join('./.cache', `${checksum}.png`);
-      const imgDest = path.join(basePath, `${checksum}.png`);
-      await copyFile(imgSrc, imgDest);
-      const file = article.render(entry);
-      await writeFile(filePath, file, 'utf8');
+    if (!entry.frontmatter.draft)
+      if (isArticle(entry)) {
+        const { checksum } = entry.frontmatter;
+        const fileSlug = `${voca.slugify(title)}`;
+        const filePath = path.join(basePath, `${fileSlug}.md`);
+        const imgSrc = path.join('./.cache', `${checksum}.png`);
+        const imgDest = path.join(basePath, `${checksum}.png`);
+        await copyFile(imgSrc, imgDest);
+        const file = article.render(entry);
+        await writeFile(filePath, file, 'utf8');
+      }
+    if (isCourse(entry)) {
+      console.log(entry);
     }
   }
 }

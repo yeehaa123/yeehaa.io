@@ -1,4 +1,4 @@
-import type { Frontmatter } from "../frontmatter";
+import type { TableRow } from "../table/tableRow";
 import type { ArticleFrontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import * as ai from '../ai';
@@ -13,6 +13,7 @@ export type Article = {
   frontmatter: ArticleFrontmatter,
   content: string,
 }
+
 function isTag(node: RenderableTreeNode): node is Tag {
   return (node as Tag).name !== undefined;
 }
@@ -58,7 +59,7 @@ export async function init({ content, series }: { series?: string | undefined, c
   };
 }
 
-export async function update(entry: Article, tableRow: Frontmatter) {
+export async function update(entry: Article, tableRow: TableRow) {
   const { checksum, draft } = tableRow;
   const checksumChanged = entry.frontmatter.checksum !== checksum;
   const statusChanged = entry.frontmatter.draft !== draft;
