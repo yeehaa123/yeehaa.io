@@ -1,16 +1,16 @@
-import type { Frontmatter } from "./frontmatter";
+import type { Frontmatter } from "../frontmatter";
+import type { ArticleFrontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import * as ai from '../ai';
 import Markdoc from '@markdoc/markdoc';
 import { stringify } from "yaml";
 import * as fm from "./frontmatter";
 import { generateChecksum } from "../helpers";
-import type { TableRow } from "../table";
 
 export const schema = fm.schema;
 
 export type Article = {
-  frontmatter: Frontmatter
+  frontmatter: ArticleFrontmatter,
   content: string,
 }
 function isTag(node: RenderableTreeNode): node is Tag {
@@ -58,17 +58,19 @@ export async function init({ content, series }: { series?: string | undefined, c
   };
 }
 
-export async function update(entry: Article, tableRow: TableRow) {
+export async function update(entry: Article, tableRow: Frontmatter) {
   const { checksum, draft } = tableRow;
   const checksumChanged = entry.frontmatter.checksum !== checksum;
   const statusChanged = entry.frontmatter.draft !== draft;
   const isUpdated = checksumChanged || statusChanged;
   if (!isUpdated) { return entry }
+
   const { summary, tags, excerpt, imageURL } = await ai.augment({
     checksum,
     title: entry.frontmatter.title,
     content: entry.content
   })
+
   const frontmatter = {
     ...fm.update(entry.frontmatter, tableRow),
     summary,
@@ -76,6 +78,7 @@ export async function update(entry: Article, tableRow: TableRow) {
     excerpt,
     imageURL
   }
+
   return {
     ...entry,
     frontmatter,

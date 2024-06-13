@@ -5,6 +5,7 @@ import { ViewTransitions } from 'astro:transitions';
 import '@/styles/globals.css'
 const { title, logoLink = '#'} = Astro.props;
 ---
+
 <script is:inline>
 	const getThemePreference = () => {
 		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -13,6 +14,7 @@ const { title, logoLink = '#'} = Astro.props;
 		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 	};
 	const isDark = getThemePreference() === 'dark';
+    console.log(isDark);
 	document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
  
 	if (typeof localStorage !== 'undefined') {
@@ -22,6 +24,10 @@ const { title, logoLink = '#'} = Astro.props;
 		});
 		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	}
+  document.addEventListener('astro:after-swap', function () {
+    if (localStorage.getItem('theme') === 'dark')
+    document.documentElement.classList.toggle('dark', true);
+  });
 </script>
 
 <html lang="en" transition:animate="none">
@@ -54,33 +60,6 @@ const { title, logoLink = '#'} = Astro.props;
     </footer>
   </body>
 </html>
-
-<style>
-.inspirational {
-  animation: fade 10s linear forwards;
-}
-
-@keyframes fade {
-
-0%{
-  opacity: 0;
-}
-
-20%{
-  opacity: 0;
-}
-
-
-70% {
-  opacity: 1;
-}
-
-100% {
-  opacity: 0;
-}
-}
-</style>
-
 
 <style is:global>
 @font-face {

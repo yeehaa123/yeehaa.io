@@ -1,8 +1,8 @@
-import type { Frontmatter } from "cms/frontmatter";
+import type { ArticleFrontmatter } from "cms/article/frontmatter";
 import { SeriesHeading } from "./SeriesHeading";
 import { Tags } from "@/components/Tags";
 
-type Props = Pick<Frontmatter,
+type Props = Pick<ArticleFrontmatter,
   'series'
   | 'order'
   | 'title'

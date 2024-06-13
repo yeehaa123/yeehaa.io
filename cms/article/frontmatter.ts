@@ -1,4 +1,4 @@
-import type { TableRow } from "../table";
+import type { Frontmatter } from "../frontmatter";
 import * as fm from "../frontmatter";
 
 import { z } from 'zod';
@@ -13,25 +13,16 @@ export const schema = fm.schema.extend({
   tags: z.array(z.string()).min(3).max(7),
 })
 
-export interface Frontmatter {
-  title: string,
+export interface ArticleFrontmatter extends Frontmatter {
   author: string,
+  slug?: string | undefined,
   summary: string,
-  contentType: string,
-  order?: number | undefined,
-  slug?: string,
   imageURL: string,
   excerpt: string,
   tags: string[],
-  series?: string | undefined,
-  draft: boolean,
-  checksum: string,
-  createdAt: Date,
-  updatedAt: Date,
-  publishedAt: Date | undefined
 }
 
-type FrontmatterInit = Omit<Frontmatter,
+type FrontmatterInit = Omit<ArticleFrontmatter,
   'draft'
   | 'createdAt'
   | 'updatedAt'
@@ -57,11 +48,11 @@ export function init(
     publishedAt: undefined,
   };
 }
-export function validate(frontmatter: Frontmatter) {
+export function validate(frontmatter: ArticleFrontmatter) {
   return schema.parse(frontmatter);
 }
 
-export function update(frontmatter: Frontmatter, tableRow: TableRow) {
+export function update(frontmatter: ArticleFrontmatter, tableRow: Frontmatter) {
   const { draft, checksum, createdAt, publishedAt, order } = tableRow;
   return {
     ...frontmatter,
