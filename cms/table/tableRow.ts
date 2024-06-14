@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import voca from "voca";
 
 export enum ContentType {
   ARTICLE = "article",
@@ -7,6 +8,8 @@ export enum ContentType {
 
 export const schema = z.object({
   title: z.string(),
+  author: z.string(),
+  slug: z.string(),
   contentType: z.nativeEnum(ContentType),
   draft: z.boolean(),
   order: z.number().optional(),
@@ -19,7 +22,9 @@ export const schema = z.object({
 
 export interface TableRow {
   title: string,
+  author: string,
   contentType: string,
+  slug: string,
   draft: boolean,
   order?: number | undefined,
   series?: string | undefined,
@@ -31,6 +36,7 @@ export interface TableRow {
 
 interface TableRowInit {
   title: string,
+  author: string,
   contentType: string,
   checksum: string,
   draft?: boolean,
@@ -46,6 +52,7 @@ function validate(frontmatter: TableRow): TableRow {
 }
 export function init({
   title,
+  author,
   order,
   series,
   contentType,
@@ -57,6 +64,8 @@ export function init({
 }: TableRowInit) {
   const frontmatter = {
     title,
+    author,
+    slug: `${voca.slugify(title)}`,
     order,
     series,
     contentType,
@@ -67,4 +76,14 @@ export function init({
     publishedAt: publishedAt || undefined,
   };
   return validate(frontmatter);
+}
+
+export function update(tableRow: TableRow) {
+  const { draft, publishedAt } = tableRow;
+  const meta = init({
+    ...tableRow,
+    updatedAt: new Date,
+    publishedAt: draft ? undefined : publishedAt ? publishedAt : new Date
+  })
+  return schema.parse(meta);
 }

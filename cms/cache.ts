@@ -32,6 +32,7 @@ export async function set(checksum: string, item: Item) {
   console.log("setting item: ", checksum);
   const filePath = path.join(CACHE_BASE, `${checksum}.json`);
   await writeFile(filePath, JSON.stringify(item, null, 2), 'utf8');
+  return item;
 }
 
 export async function writeImage({ checksum, b64_json }: { checksum: string, b64_json: string }) {

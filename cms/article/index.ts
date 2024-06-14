@@ -1,16 +1,23 @@
 import type { TableRow } from "../table/tableRow";
 import type { ArticleFrontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
-import * as ai from '../ai';
+import * as path from 'path';
 import Markdoc from '@markdoc/markdoc';
 import { stringify } from "yaml";
+import { writeFile } from 'fs/promises'
 import * as fm from "./frontmatter";
+import * as tr from "../table/tableRow";
 import { generateChecksum } from "../helpers";
 
 export const schema = fm.schema;
 
 export type Article = {
   frontmatter: ArticleFrontmatter,
+  content: string,
+}
+
+export type BaseArticle = {
+  meta: TableRow,
   content: string,
 }
 
@@ -42,59 +49,17 @@ export function parse(content: string) {
 export async function init({ content, series }: { series?: string | undefined, content: string }) {
   const checksum = generateChecksum(content);
   const { title } = parse(content);
-  const { summary, tags, excerpt, imageURL } = await ai.augment({ checksum, title, content })
-  const frontmatter = fm.init({
+  const meta = tr.init({
     title,
-    summary,
-    excerpt,
-    tags,
-    imageURL,
+    contentType: tr.ContentType.ARTICLE,
     author: "Yeehaa",
     series,
     checksum
   })
   return {
-    frontmatter,
+    meta,
     content
   };
-}
-
-export async function update(entry: Article, tableRow: TableRow) {
-  const { checksum, draft } = tableRow;
-  const checksumChanged = entry.frontmatter.checksum !== checksum;
-  const statusChanged = entry.frontmatter.draft !== draft;
-  const isUpdated = checksumChanged || statusChanged;
-  if (!isUpdated) { return entry }
-
-  const { summary, tags, excerpt, imageURL } = await ai.augment({
-    checksum,
-    title: entry.frontmatter.title,
-    content: entry.content
-  })
-
-  const frontmatter = {
-    ...fm.update(entry.frontmatter, tableRow),
-    summary,
-    tags,
-    excerpt,
-    imageURL
-  }
-
-  return {
-    ...entry,
-    frontmatter,
-  };
-}
-
-export function addOrder(entry: Article, order: number) {
-  const { frontmatter } = entry;
-  return {
-    ...entry,
-    frontmatter: { ...frontmatter, order }
-  };
-}
-export async function validate(entry: Article) {
-  return fm.validate(entry.frontmatter);
 }
 
 export function render({ content, frontmatter }: Article) {
@@ -104,4 +69,11 @@ ${stringify({ ...frontmatter }).trim()}
 
 ${content}
 `
+}
+
+export async function write(basePath: string, entry: Article) {
+  fm.validate(entry.frontmatter);
+  const filePath = path.join(basePath, `${entry.frontmatter.slug}.md`);
+  const file = render(entry);
+  await writeFile(filePath, file, 'utf8');
 }

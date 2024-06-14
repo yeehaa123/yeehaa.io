@@ -16,11 +16,7 @@ async function main() {
 
   const tree = await filetree.create(INPUT_BASE);
   const tableData = await table.read(CMS_PATH);
-
   await filetree.update(tree, tableData);
-  filetree.order(tree);
-  await filetree.validate(tree);
-
   await filetree.write(OUTPUT_DIR, tree);
   await table.write(CMS_PATH, tree);
 }
