@@ -2,7 +2,6 @@ import type { BaseArticle } from "./article";
 import type { CourseEntity } from "./course";
 import type { TableRow } from "./table/tableRow";
 import { ContentType } from "./table/tableRow";
-import * as ai from './ai';
 import * as tr from "./table/tableRow";
 import * as path from 'path';
 import { readdir, copyFile, lstat, readFile } from 'fs/promises'
@@ -89,22 +88,14 @@ export async function update(tree: FileTree, tableData: TableRow[]) {
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [_title, entry] of tree) {
-    const { checksum, title, draft, slug } = entry.meta;
+    const { checksum, draft, slug } = entry.meta;
     if (!draft) {
       if (isArticle(entry)) {
-        const { content } = entry;
-        const { summary, tags, excerpt, imageURL } = await ai.augment({
-          checksum,
-          title: title,
-          content
-        })
         const imgSrc = path.join('./.cache', `${checksum}.png`);
         const imgDest = path.join(basePath, `${checksum}.png`);
         await copyFile(imgSrc, imgDest);
-        await article.write(basePath, {
-          frontmatter: { ...entry.meta, summary, tags, excerpt, imageURL },
-          content
-        });
+        const augmented = await article.augment(entry);
+        await article.write(basePath, augmented);
       } else if (isCourse(entry)) {
         const filePath = path.join(basePath, `${slug}.yaml`);
         console.log(filePath);

@@ -5,6 +5,7 @@ import * as path from 'path';
 import Markdoc from '@markdoc/markdoc';
 import { stringify } from "yaml";
 import { writeFile } from 'fs/promises'
+import * as ai from '../ai';
 import * as fm from "./frontmatter";
 import * as tr from "../table/tableRow";
 import { generateChecksum } from "../helpers";
@@ -60,6 +61,20 @@ export async function init({ content, series }: { series?: string | undefined, c
     meta,
     content
   };
+}
+
+export async function augment(entry: BaseArticle) {
+  const { content, meta } = entry;
+  const { checksum, title } = meta;
+  const { summary, tags, excerpt, imageURL } = await ai.augment({
+    checksum,
+    title: title,
+    content
+  })
+  return {
+    frontmatter: { ...entry.meta, summary, tags, excerpt, imageURL },
+    content
+  }
 }
 
 export function render({ content, frontmatter }: Article) {

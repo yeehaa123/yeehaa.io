@@ -8,7 +8,7 @@ order: 0
 series: Econsystem Architecture
 checksum: 34d442a1971d4dbbe8315bbfa8de35d5
 createdAt: 2024-06-14T17:21:54.107Z
-updatedAt: 2024-06-14T17:22:21.653Z
+updatedAt: 2024-06-14T17:29:51.523Z
 publishedAt: 2024-06-14T17:21:54.107Z
 summary: The article discusses the fragmentation of the internet, comparing it
   to natural processes like tectonic shifts. It highlights that while the
