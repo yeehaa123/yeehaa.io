@@ -122,9 +122,8 @@ export async function write(basePath: string, tree: FileTree) {
         await copyFile(imgSrc, imgDest);
         const file = article.render(entry);
         await writeFile(filePath, file, 'utf8');
+      } else if (isCourse(entry)) {
+        console.log(entry);
       }
-    if (isCourse(entry)) {
-      console.log(entry);
-    }
   }
 }
