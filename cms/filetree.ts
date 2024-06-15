@@ -8,6 +8,8 @@ import * as article from "./article";
 import * as course from "./course";
 import { deslugify } from "./helpers";
 
+export const PATH_SUFFIXES = [article.PATH_SUFFIX, course.PATH_SUFFIX];
+
 type Entity = CourseEntity | BaseArticle;
 
 function isArticle(entity: Entity): entity is BaseArticle {
@@ -44,8 +46,8 @@ async function processDir(tree: FileTree, dirPath: string) {
     const filePath = path.join(dirPath, ext);
     const processedFile = await processFile(filePath, seriesName);
     if (processedFile) {
-      const { title } = processedFile.meta;
-      tree.set(title, processedFile);
+      const { id } = processedFile.meta;
+      tree.set(id, processedFile);
     }
   }
 }
@@ -62,8 +64,8 @@ export async function create(basePath: string): Promise<FileTree> {
     } else {
       const processedFile = await processFile(newPath);
       if (processedFile) {
-        const { title } = processedFile.meta;
-        tree.set(title, processedFile);
+        const { id } = processedFile.meta;
+        tree.set(id, processedFile);
       }
     }
   }
@@ -72,20 +74,21 @@ export async function create(basePath: string): Promise<FileTree> {
 
 export function update(tree: FileTree, metaTable: Meta[]) {
   for (const meta of metaTable) {
-    const { title } = meta;
-    const entry = tree.get(title);
+    const { id } = meta;
+    const entry = tree.get(id);
     if (entry) {
-      tree.set(title, { ...entry, meta });
+      tree.set(id, { ...entry, meta });
     }
   }
 }
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [_, entry] of tree) {
-    if (!entry.meta.draft) {
+    const { draft, checksum } = entry.meta;
+    if (!draft) {
       if (isArticle(entry)) {
         const augmented = await article.augment(entry);
-        await article.write(basePath, augmented);
+        await article.write(basePath, checksum, augmented);
       } else if (isCourse(entry)) {
         const augmented = await course.augment(entry);
         await course.write(basePath, augmented);

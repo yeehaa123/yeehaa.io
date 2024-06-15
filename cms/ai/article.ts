@@ -1,11 +1,14 @@
 import 'dotenv/config'
 import { createOpenAI } from '@ai-sdk/openai';
+import * as cache from '../cache';
 import { generateObject } from 'ai';
 import { z } from 'zod';
 
 const vercel = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY" });
 
-export async function analyze({ content, title }: { content: string, title: string }) {
+export async function analyze({ checksum, content, title }: { checksum: string, content: string, title: string }) {
+  const cachedItem = await cache.getArticle(checksum);
+  if (cachedItem) { return cachedItem; }
   const summary_length = 600;
   const excerpt_length = 200;
   const min_num_tags = 3;
@@ -29,7 +32,7 @@ Also add ${min_num_tags} to ${max_num_tags} tags. A single tags is a single-word
   });
   const { summary, tags, excerpt } = object;
   if (summary && tags && excerpt) {
-    return { summary, tags, excerpt }
+    return cache.setArticle(checksum, { summary, tags, excerpt });
   }
   throw ("PROBLEM WITH OPENAI");
 }

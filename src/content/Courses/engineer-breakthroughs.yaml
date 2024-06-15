@@ -1,24 +1,58 @@
-title: Engineer breakthroughs
-author: Yeehaa
-contentType: course
-draft: false
-checksum: c37f6fd346eb0b79cfa69b1f2e224fae
-createdAt: 2024-06-15T09:30:51.596Z
-updatedAt: 2024-06-15T09:30:51.596Z
-publishedAt: 2024-06-15T09:31:04.855Z
-goal: Engineer breakthroughs
+courseId: 0477f0572abfb56bb97ce01c29fc7a4a
+goal: Engineer Breakthroughs
 curator: Yeehaa
+description: These resources guide individuals to engineer breakthroughs by
+  helping them discover personal strengths, embrace weaknesses, and perform SWOT
+  analyses for strategic decision-making. Additionally, they provide insights on
+  leveraging important connections and making critical asks to foster innovation
+  and progress.
 habitat: /cases/engineering-breakthrough-moments
-description: >
-  At critical moments, scaling requires outside help. But asking for help is
-  difficult if you do not know what you need. This course helps you figure it
-  out.
+createdAt: 2024-06-15T17:17:51.813Z
+updatedAt: 2024-06-15T17:17:51.813Z
+publishedAt: 2024-06-15T17:18:09.542Z
+tags:
+  - strengths
+  - skills
+  - growth
+  - self
+  - work
+  - analysis
+  - startups
+  - network
+  - connect
 checkpoints:
   - task: Discover your personal strengths
+    description: This resource assists individuals in identifying and understanding
+      their core competencies and unique talents, essential for driving
+      innovation and achieving significant breakthroughs.
+    tags:
+      - strengths
+      - skills
     href: https://80000hours.org/articles/personal-strengths/
   - task: Embrace your weaknesses
+    description: This article provides insights on identifying personal weaknesses,
+      encouraging self-awareness and growth. Understanding and embracing
+      weaknesses fosters personal improvement, facilitating breakthroughs and
+      progress in various aspects of life.
+    tags:
+      - growth
+      - self
+      - work
     href: https://maven.com/articles/identifying-greatest-weakness
   - task: Do a SWOT analysis of your startup
+    description: The link provides a comprehensive guide on conducting a SWOT
+      analysis for startups, identifying strengths, weaknesses, opportunities,
+      and threats. This empowers founders to make strategic decisions, foster
+      innovation, and engineer breakthroughs.
+    tags:
+      - analysis
+      - startups
     href: https://fullscale.io/blog/swot-analysis-for-startups/
   - task: Formulate your critical ask
+    description: The article provides insights into leveraging superconnectors in
+      Rotterdam to help engineer breakthroughs by making critical asks, forming
+      strategic connections, and finding resources through influential networks.
+    tags:
+      - network
+      - connect
     href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/

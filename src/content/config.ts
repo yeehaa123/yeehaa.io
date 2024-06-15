@@ -1,14 +1,20 @@
 import { defineCollection } from "astro:content";
 import * as article from "../../cms/article";
+import * as course from "../../cms/course";
 
 const postsCollection = defineCollection({
-  type: "content", // v2.5.0 and later
+  type: "content",
   schema: ({ image }) => article.schema.extend({
     imageURL: image()
   })
 });
 
-// 3. Export a single `collections` object to register your collection(s)
+const coursesCollection = defineCollection({
+  type: "data",
+  schema: course.schema
+});
+
 export const collections = {
   Posts: postsCollection,
+  Courses: coursesCollection
 };

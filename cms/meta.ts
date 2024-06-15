@@ -6,8 +6,11 @@ export enum ContentType {
 }
 
 export const schema = z.object({
-  title: z.string(),
-  author: z.string(),
+  id: z.string(),
+  author: z.string().optional(),
+  curator: z.string().optional(),
+  title: z.string().optional(),
+  goal: z.string().optional(),
   contentType: z.nativeEnum(ContentType),
   draft: z.boolean(),
   order: z.number().optional(),
@@ -18,31 +21,14 @@ export const schema = z.object({
   publishedAt: z.date().optional(),
 })
 
-export interface Meta {
-  title: string,
-  author: string,
-  contentType: string,
-  draft: boolean,
-  order?: number | undefined,
-  series?: string | undefined,
-  checksum: string,
-  createdAt: Date,
-  updatedAt: Date,
-  publishedAt?: Date | undefined
-}
+export type Meta = z.infer<typeof schema>
 
-interface MetaInit {
-  title: string,
-  author: string,
-  contentType: string,
-  checksum: string,
-  draft?: boolean,
-  order?: number | undefined,
-  series?: string | undefined,
-  createdAt?: Date,
-  updatedAt?: Date,
-  publishedAt?: Date | undefined
-}
+const initSchema = schema.extend({
+  draft: z.boolean().optional(),
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional()
+})
+export type MetaInit = z.infer<typeof initSchema>
 
 function validate(frontmatter: Meta) {
   return schema.parse(frontmatter);

@@ -10,7 +10,7 @@ const INPUT_BASE = './yeehaa';
 const CMS_PATH = path.join(OUTPUT_BASE, "CMS");
 
 async function main() {
-  await initDirs(OUTPUT_BASE, ["Posts", "Courses"]);
+  await initDirs(OUTPUT_BASE, filetree.PATH_SUFFIXES);
   await table.init(CMS_PATH);
   await cache.init();
 

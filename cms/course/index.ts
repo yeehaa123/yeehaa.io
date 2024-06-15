@@ -1,48 +1,68 @@
 import type { Meta } from "../meta"
+import type { Course } from "./course";
+import * as c from "./course";
+import * as cp from "./checkpoint";
+import * as ai from '../ai';
 import voca from "voca";
 import { generateChecksum } from "../helpers";
+import { createHash } from 'crypto';
 import { writeFile } from 'fs/promises'
 import * as path from 'path';
 import * as m from "../meta"
 import { parse, stringify } from "yaml";
 
-export interface Checkpoint {
+export const PATH_SUFFIX = "Courses"
+export const schema = c.schema;
+
+export interface BaseCheckpoint {
   task: string,
   href: string,
 }
 
-export interface Course {
+export interface BaseCourse {
   goal: string
   curator: string,
   habitat: string,
-  description: string,
-  checkpoints: Checkpoint[]
+  checkpoints: BaseCheckpoint[]
 }
 
 export interface CourseEntity {
   meta: Meta;
-  course: Course
+  course: BaseCourse
 }
 
 export async function init({ content }: { content: string }) {
   const checksum = generateChecksum(content);
   const course = await parse(content)
+  let hash = createHash('md5').update(course.goal + course.curator).digest("hex")
   const meta = m.init({
     checksum,
     contentType: m.ContentType.COURSE,
-    author: course.curator,
-    title: course.goal
+    curator: course.curator,
+    goal: course.goal,
+    id: hash
   });
   return { meta, course };
 }
 
-export async function augment({ meta, course }: CourseEntity) {
-  return { ...meta, ...course };
+export async function augment({ meta, course: old }: CourseEntity) {
+  const { goal } = old;
+  const promises = old.checkpoints.map(checkpoint => {
+    return cp.augment({ ...checkpoint, goal: old.goal });
+  })
+  const checkpoints = await Promise.all(promises);
+  const { description } = await ai.course.analyze({
+    goal, checkpoints, id: meta.id
+  })
+  const allTags = checkpoints.flatMap(({ tags }) => tags);
+  const tags = [...new Set([...allTags])]
+  const course = { ...meta, ...old, checkpoints, description, tags, courseId: meta.id };
+  return c.init(course);
 }
 
 export async function write(basePath: string, course: Course) {
   const slug = `${voca.slugify(course.goal)}`;
-  const filePath = path.join(basePath, "Courses", `${slug}.yaml`);
+  const filePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
   const file = stringify(course);
   await writeFile(filePath, file, 'utf8');
 }

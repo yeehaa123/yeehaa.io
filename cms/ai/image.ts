@@ -8,6 +8,8 @@ const openai = new OpenAI({
 });
 
 export async function generate({ summary, title, checksum }: { summary: string, title: string, checksum: string }) {
+  const imageURL = await cache.getImage(checksum);
+  if (imageURL) { return imageURL };
   const { primary, secondary } = colors;
   const response = await openai.images.generate({
     model: "dall-e-3",

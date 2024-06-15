@@ -7,8 +7,7 @@ type Props = Pick<ArticleFrontmatter,
   | 'order'
   | 'title'
   | 'summary'
-  | 'tags'
-  | 'slug'>
+  | 'tags'> & { slug: string }
 
 export function PostListing({ series, order, title, summary, tags, slug }: Props) {
   return (
