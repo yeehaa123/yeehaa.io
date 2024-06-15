@@ -2,9 +2,8 @@ import type { BaseArticle } from "./article";
 import type { CourseEntity } from "./course";
 import type { Meta } from "./meta";
 import { ContentType } from "./meta";
-import voca from "voca";
 import * as path from 'path';
-import { readdir, copyFile, lstat, readFile } from 'fs/promises'
+import { readdir, lstat, readFile } from 'fs/promises'
 import * as article from "./article";
 import * as course from "./course";
 import { deslugify } from "./helpers";
@@ -82,19 +81,14 @@ export function update(tree: FileTree, metaTable: Meta[]) {
 }
 
 export async function write(basePath: string, tree: FileTree) {
-  for (const [_title, entry] of tree) {
-    const { checksum, draft, title } = entry.meta;
-    if (!draft) {
+  for (const [_, entry] of tree) {
+    if (!entry.meta.draft) {
       if (isArticle(entry)) {
-        const imgSrc = path.join('./.cache', `${checksum}.png`);
-        const imgDest = path.join(basePath, `${checksum}.png`);
-        await copyFile(imgSrc, imgDest);
         const augmented = await article.augment(entry);
         await article.write(basePath, augmented);
       } else if (isCourse(entry)) {
-        const slug = `${voca.slugify(title)}`;
-        const filePath = path.join(basePath, `${slug}.yaml`);
-        console.log(filePath);
+        const augmented = await course.augment(entry);
+        await course.write(basePath, augmented);
       }
     }
   }

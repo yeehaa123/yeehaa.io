@@ -1,7 +1,10 @@
 import type { Meta } from "../meta"
+import voca from "voca";
 import { generateChecksum } from "../helpers";
+import { writeFile } from 'fs/promises'
+import * as path from 'path';
 import * as m from "../meta"
-import { parse } from "yaml";
+import { parse, stringify } from "yaml";
 
 export interface Checkpoint {
   task: string,
@@ -31,4 +34,15 @@ export async function init({ content }: { content: string }) {
     title: course.goal
   });
   return { meta, course };
+}
+
+export async function augment({ meta, course }: CourseEntity) {
+  return { ...meta, ...course };
+}
+
+export async function write(basePath: string, course: Course) {
+  const slug = `${voca.slugify(course.goal)}`;
+  const filePath = path.join(basePath, "Courses", `${slug}.yaml`);
+  const file = stringify(course);
+  await writeFile(filePath, file, 'utf8');
 }

@@ -15,10 +15,11 @@
     "title": "Engineer breakthroughs",
     "author": "Yeehaa",
     "contentType": "course",
-    "draft": true,
+    "draft": false,
     "checksum": "c37f6fd346eb0b79cfa69b1f2e224fae",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T09:30:51.596Z",
+    "updatedAt": "2024-06-15T09:30:51.596Z",
+    "publishedAt": "2024-06-15T09:31:04.855Z"
   },
   {
     "title": "Continental Drift",
@@ -36,11 +37,13 @@
     "title": "Economy of Garbage",
     "author": "Yeehaa",
     "contentType": "article",
-    "draft": true,
+    "draft": false,
+    "order": 2,
     "series": "Ecosystem Architecture",
     "checksum": "2fa6a7e7bf592d41022eb9cd67f240db",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T09:31:04.889Z",
+    "updatedAt": "2024-06-15T09:31:04.889Z",
+    "publishedAt": "2024-06-15T09:31:13.194Z"
   },
   {
     "title": "Foam Party",
@@ -49,8 +52,8 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "9f89665831b49e0f9151d06d7495fe0a",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   },
   {
     "title": "Global Village People",
@@ -59,8 +62,8 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   },
   {
     "title": "Learning from Nature",
@@ -69,8 +72,8 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "b00ab9b260061c09b956c2e922ebcbad",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   },
   {
     "title": "Reclaiming the Future",
@@ -79,8 +82,8 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "0af417ab21870acd8b23293440ad316a",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   },
   {
     "title": "Shenzhen Goes HAM",
@@ -89,8 +92,8 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "7c7c83da8c82ad789aff5d7f7f171543",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   },
   {
     "title": "The Good Foot",
@@ -99,8 +102,8 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "f0f31bb5617196b56b80e9fd43b1ce5f",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   },
   {
     "title": "The Practice of Ecosystem Architecture",
@@ -109,7 +112,7 @@
     "draft": true,
     "series": "Ecosystem Architecture",
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f",
-    "createdAt": "2024-06-15T09:10:39.902Z",
-    "updatedAt": "2024-06-15T09:10:39.902Z"
+    "createdAt": "2024-06-15T10:13:22.656Z",
+    "updatedAt": "2024-06-15T10:13:22.656Z"
   }
 ]

@@ -2,10 +2,10 @@ import type { Meta } from "../meta"
 import type { ArticleFrontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import * as path from 'path';
-import Markdoc from '@markdoc/markdoc';
 import voca from "voca";
+import Markdoc from '@markdoc/markdoc';
 import { stringify } from "yaml";
-import { writeFile } from 'fs/promises'
+import { writeFile, copyFile } from 'fs/promises'
 import * as ai from '../ai';
 import * as fm from "./frontmatter";
 import * as tr from "../meta";
@@ -48,7 +48,8 @@ export function parse(content: string) {
   return { title };
 }
 
-export async function init({ content, series }: { series?: string | undefined, content: string }) {
+export async function init({ content, series }:
+  { series?: string | undefined, content: string }) {
   const checksum = generateChecksum(content);
   const { title } = parse(content);
   const meta = tr.init({
@@ -68,9 +69,7 @@ export async function augment(entry: BaseArticle) {
   const { content, meta } = entry;
   const { checksum, title } = meta;
   const { summary, tags, excerpt, imageURL } = await ai.augment({
-    checksum,
-    title: title,
-    content
+    checksum, title, content
   })
   return {
     frontmatter: { ...meta, summary, tags, excerpt, imageURL },
@@ -80,17 +79,21 @@ export async function augment(entry: BaseArticle) {
 
 export function render({ content, frontmatter }: Article) {
   return `---
-${stringify({ ...frontmatter }).trim()}
+${stringify(frontmatter).trim()}
 ---
 
 ${content}
 `
 }
 
-export async function write(basePath: string, entry: Article) {
-  fm.validate(entry.frontmatter);
-  const slug = `${voca.slugify(entry.frontmatter.title)}`;
-  const filePath = path.join(basePath, `${slug}.md`);
-  const file = render(entry);
+export async function write(basePath: string, article: Article) {
+  fm.validate(article.frontmatter);
+  const { title, checksum } = article.frontmatter;
+  const imgSrc = path.join('./.cache', `${checksum}.png`);
+  const imgDest = path.join(basePath, "Posts", `${checksum}.png`);
+  await copyFile(imgSrc, imgDest);
+  const slug = `${voca.slugify(title)}`;
+  const filePath = path.join(basePath, "Posts", `${slug}.md`);
+  const file = render(article);
   await writeFile(filePath, file, 'utf8');
 }

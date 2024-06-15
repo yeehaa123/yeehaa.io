@@ -3,15 +3,14 @@ import * as cache from './cache';
 import * as filetree from "./filetree";
 import * as table from "./table";
 import * as series from "./series";
-import { initDir } from "./helpers";
+import { initDirs } from "./helpers";
 
 const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './yeehaa';
-const OUTPUT_DIR = path.join(OUTPUT_BASE, "Posts");
 const CMS_PATH = path.join(OUTPUT_BASE, "CMS");
 
 async function main() {
-  await initDir(OUTPUT_DIR);
+  await initDirs(OUTPUT_BASE, ["Posts", "Courses"]);
   await table.init(CMS_PATH);
   await cache.init();
 
@@ -23,7 +22,7 @@ async function main() {
   const updatedTable = series.order(seriesGroup);
   filetree.update(tree, updatedTable);
 
-  await filetree.write(OUTPUT_DIR, tree);
+  await filetree.write(OUTPUT_BASE, tree);
   await table.write(CMS_PATH, tree);
 }
 

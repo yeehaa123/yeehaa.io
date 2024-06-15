@@ -1,0 +1,24 @@
+title: Engineer breakthroughs
+author: Yeehaa
+contentType: course
+draft: false
+checksum: c37f6fd346eb0b79cfa69b1f2e224fae
+createdAt: 2024-06-15T09:30:51.596Z
+updatedAt: 2024-06-15T09:30:51.596Z
+publishedAt: 2024-06-15T09:31:04.855Z
+goal: Engineer breakthroughs
+curator: Yeehaa
+habitat: /cases/engineering-breakthrough-moments
+description: >
+  At critical moments, scaling requires outside help. But asking for help is
+  difficult if you do not know what you need. This course helps you figure it
+  out.
+checkpoints:
+  - task: Discover your personal strengths
+    href: https://80000hours.org/articles/personal-strengths/
+  - task: Embrace your weaknesses
+    href: https://maven.com/articles/identifying-greatest-weakness
+  - task: Do a SWOT analysis of your startup
+    href: https://fullscale.io/blog/swot-analysis-for-startups/
+  - task: Formulate your critical ask
+    href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/
