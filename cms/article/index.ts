@@ -72,7 +72,7 @@ export async function augment(entry: BaseArticle) {
     content
   })
   return {
-    frontmatter: { ...entry.meta, summary, tags, excerpt, imageURL },
+    frontmatter: { ...meta, summary, tags, excerpt, imageURL },
     content
   }
 }
