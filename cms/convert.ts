@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as cache from './cache';
 import * as filetree from "./filetree";
 import * as table from "./table";
+import * as series from "./series";
 import { initDir } from "./helpers";
 
 const OUTPUT_BASE = './src/content';
@@ -16,7 +17,12 @@ async function main() {
 
   const tree = await filetree.create(INPUT_BASE);
   const tableData = await table.read(CMS_PATH);
-  await filetree.update(tree, tableData);
+  filetree.update(tree, tableData);
+
+  const seriesGroup = series.group(tableData);
+  const updatedTable = series.order(seriesGroup);
+  filetree.update(tree, updatedTable);
+
   await filetree.write(OUTPUT_DIR, tree);
   await table.write(CMS_PATH, tree);
 }

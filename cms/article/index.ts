@@ -1,13 +1,14 @@
-import type { TableRow } from "../table/tableRow";
+import type { Meta } from "../meta"
 import type { ArticleFrontmatter } from "./frontmatter";
 import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import * as path from 'path';
 import Markdoc from '@markdoc/markdoc';
+import voca from "voca";
 import { stringify } from "yaml";
 import { writeFile } from 'fs/promises'
 import * as ai from '../ai';
 import * as fm from "./frontmatter";
-import * as tr from "../table/tableRow";
+import * as tr from "../meta";
 import { generateChecksum } from "../helpers";
 
 export const schema = fm.schema;
@@ -18,7 +19,7 @@ export type Article = {
 }
 
 export type BaseArticle = {
-  meta: TableRow,
+  meta: Meta,
   content: string,
 }
 
@@ -88,7 +89,8 @@ ${content}
 
 export async function write(basePath: string, entry: Article) {
   fm.validate(entry.frontmatter);
-  const filePath = path.join(basePath, `${entry.frontmatter.slug}.md`);
+  const slug = `${voca.slugify(entry.frontmatter.title)}`;
+  const filePath = path.join(basePath, `${slug}.md`);
   const file = render(entry);
   await writeFile(filePath, file, 'utf8');
 }

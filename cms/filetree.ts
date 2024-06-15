@@ -1,8 +1,8 @@
 import type { BaseArticle } from "./article";
 import type { CourseEntity } from "./course";
-import type { TableRow } from "./table/tableRow";
-import { ContentType } from "./table/tableRow";
-import * as tr from "./table/tableRow";
+import type { Meta } from "./meta";
+import { ContentType } from "./meta";
+import voca from "voca";
 import * as path from 'path';
 import { readdir, copyFile, lstat, readFile } from 'fs/promises'
 import * as article from "./article";
@@ -36,13 +36,6 @@ async function processFile(filePath: string, series?: string) {
   }
 }
 
-function set(tree: FileTree, entry: Entity | false) {
-  if (entry) {
-    const { title } = entry.meta;
-    tree.set(title, entry);
-  }
-}
-
 async function processDir(tree: FileTree, dirPath: string) {
   const seriesPath = path.parse(dirPath)
   const seriesSlug = seriesPath.name;
@@ -51,10 +44,12 @@ async function processDir(tree: FileTree, dirPath: string) {
   for (const ext of dir) {
     const filePath = path.join(dirPath, ext);
     const processedFile = await processFile(filePath, seriesName);
-    set(tree, processedFile);
+    if (processedFile) {
+      const { title } = processedFile.meta;
+      tree.set(title, processedFile);
+    }
   }
 }
-
 
 export async function create(basePath: string): Promise<FileTree> {
   const dir = await readdir(basePath);
@@ -67,28 +62,28 @@ export async function create(basePath: string): Promise<FileTree> {
       await processDir(tree, newPath);
     } else {
       const processedFile = await processFile(newPath);
-      set(tree, processedFile);
+      if (processedFile) {
+        const { title } = processedFile.meta;
+        tree.set(title, processedFile);
+      }
     }
   }
   return tree;
 }
 
-export async function update(tree: FileTree, tableData: TableRow[]) {
-  for (const tableRow of tableData) {
-    const { title } = tableRow;
+export function update(tree: FileTree, metaTable: Meta[]) {
+  for (const meta of metaTable) {
+    const { title } = meta;
     const entry = tree.get(title);
     if (entry) {
-      set(tree, {
-        ...entry,
-        meta: tr.update(tableRow)
-      });
+      tree.set(title, { ...entry, meta });
     }
   }
 }
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [_title, entry] of tree) {
-    const { checksum, draft, slug } = entry.meta;
+    const { checksum, draft, title } = entry.meta;
     if (!draft) {
       if (isArticle(entry)) {
         const imgSrc = path.join('./.cache', `${checksum}.png`);
@@ -97,6 +92,7 @@ export async function write(basePath: string, tree: FileTree) {
         const augmented = await article.augment(entry);
         await article.write(basePath, augmented);
       } else if (isCourse(entry)) {
+        const slug = `${voca.slugify(title)}`;
         const filePath = path.join(basePath, `${slug}.yaml`);
         console.log(filePath);
       }

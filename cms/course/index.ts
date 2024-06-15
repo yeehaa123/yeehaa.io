@@ -1,6 +1,6 @@
-import type { TableRow } from "../table/tableRow";
+import type { Meta } from "../meta"
 import { generateChecksum } from "../helpers";
-import * as tr from "../table/tableRow";
+import * as m from "../meta"
 import { parse } from "yaml";
 
 export interface Checkpoint {
@@ -17,16 +17,16 @@ export interface Course {
 }
 
 export interface CourseEntity {
-  meta: TableRow;
+  meta: Meta;
   course: Course
 }
 
 export async function init({ content }: { content: string }) {
   const checksum = generateChecksum(content);
-  const course = await parse(content) as Course;
-  const meta = tr.init({
+  const course = await parse(content)
+  const meta = m.init({
     checksum,
-    contentType: tr.ContentType.COURSE,
+    contentType: m.ContentType.COURSE,
     author: course.curator,
     title: course.goal
   });

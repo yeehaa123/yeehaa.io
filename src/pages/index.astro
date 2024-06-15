@@ -22,5 +22,5 @@ const { url } = Astro;
 
 <Layout {title}>
   <BaseHead slot="og:data" {type} {title} {description} {url} />
-    { posts.map(({data}) => <PostListing {...data} />)}
-</Layout>
+    { posts.map(({slug, data}) => <PostListing {slug} {...data} />)}
+</Layout

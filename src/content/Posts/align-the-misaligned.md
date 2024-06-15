@@ -1,15 +1,14 @@
 ---
 title: Align the Misaligned
 author: Yeehaa
-slug: align-the-misaligned
 contentType: article
 draft: false
 order: 0
-series: Econsystem Architecture
+series: Ecosystem Architecture
 checksum: 34d442a1971d4dbbe8315bbfa8de35d5
-createdAt: 2024-06-14T17:21:54.107Z
-updatedAt: 2024-06-14T17:29:51.523Z
-publishedAt: 2024-06-14T17:21:54.107Z
+createdAt: 2024-06-15T08:56:28.493Z
+updatedAt: 2024-06-15T08:58:41.002Z
+publishedAt: 2024-06-15T08:56:40.560Z
 summary: The article discusses the fragmentation of the internet, comparing it
   to natural processes like tectonic shifts. It highlights that while the
   internet may never be whole again, value can still be derived from its
