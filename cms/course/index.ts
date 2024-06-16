@@ -43,14 +43,13 @@ export async function init({ content, author }: { author: string, content: strin
     id: hash
   });
   const checkpoints = course.checkpoints.map(checkpoint => cp.init({ ...checkpoint, goal, curator }))
-  console.log(checkpoints);
   return {
     meta, course: { ...course, checkpoints }
   }
 }
 
 export async function augment({ meta, course: old }: CourseEntity) {
-  const { id, publicationData, author, habitat } = meta;
+  const { id, publicationData, author } = meta;
   const { goal } = old;
   const promises = old.checkpoints.map(checkpoint => {
     return cp.augment({ ...checkpoint, goal: old.goal });
@@ -59,15 +58,16 @@ export async function augment({ meta, course: old }: CourseEntity) {
   const { description } = await ai.course.analyze({ goal, checkpoints, id })
   const allTags = checkpoints.flatMap(({ tags }) => tags);
   const tags = [...new Set([...allTags])]
+  const habitat = meta.habitat && slugify(meta.habitat);
   const course = {
     goal,
     curator: author,
+    habitat,
     courseId: id,
     ...publicationData,
     checkpoints,
     description,
     tags,
-    habitat,
   };
   return c.init(course);
 }

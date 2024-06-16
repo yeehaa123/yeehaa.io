@@ -6,7 +6,7 @@ import * as path from 'path';
 import { readdir, lstat, readFile } from 'fs/promises'
 import * as article from "./article";
 import * as course from "./course";
-import { deslugify, slugify } from "./helpers";
+import { deslugify } from "./helpers";
 
 export const PATH_SUFFIXES = [article.PATH_SUFFIX, course.PATH_SUFFIX];
 
@@ -79,27 +79,23 @@ export function associate(tree: FileTree, metaTable: MetaTable) {
     if (contentType === ContentType.ARTICLE) {
       const courseMeta = metaTable
         .filter(m => m.contentType === ContentType.COURSE)
-        .find((m) => {
-          return m.title === articleMeta.title || m.habitat === articleMeta.title
-        });
+        .find((m) => m.title === articleMeta.title || m.habitat === articleMeta.title);
       if (courseMeta) {
         const article = tree.get(articleMeta.id);
         const course = tree.get(courseMeta.id);
         if (article && course) {
-          const articleSlug = slugify(articleMeta.title);
-          const courseSlug = slugify(courseMeta.title);
           tree.set(articleMeta.id, {
             ...article,
             meta: {
               ...article.meta,
-              course: courseSlug
+              course: course.meta.title
             }
           });
           tree.set(courseMeta.id, {
             ...course,
             meta: {
               ...course.meta,
-              habitat: articleSlug
+              habitat: article.meta.title
             }
           });
         }

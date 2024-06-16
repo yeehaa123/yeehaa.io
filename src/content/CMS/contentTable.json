@@ -4,25 +4,25 @@
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "article",
-    "status": "published",
-    "order": 0,
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
-    "publicationData": {
-      "createdAt": "2024-06-16T09:44:55.295Z",
-      "updatedAt": "2024-06-16T09:44:55.295Z",
-      "publishedAt": "2024-06-16T09:44:55.295Z"
-    },
-    "course": "align-the-misaligned"
+    "checksum": "34d442a1971d4dbbe8315bbfa8de35d5"
   },
   {
     "id": "88be3ee13fcaec1270308625b34696aa",
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
+    "order": 0,
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea"
+    "checksum": "6da78a490110bdc70b906c065f1b99ea",
+    "publicationData": {
+      "createdAt": "2024-06-16T10:30:58.593Z",
+      "updatedAt": "2024-06-16T10:30:58.593Z",
+      "publishedAt": "2024-06-16T10:30:58.593Z"
+    },
+    "course": "Engineer Breakthroughs"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -101,14 +101,8 @@
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "course",
-    "status": "published",
-    "checksum": "f5a302909caa3c3a22fa9087760ec915",
-    "publicationData": {
-      "createdAt": "2024-06-16T09:44:55.295Z",
-      "updatedAt": "2024-06-16T09:44:55.295Z",
-      "publishedAt": "2024-06-16T09:44:55.295Z"
-    },
-    "habitat": "align-the-misaligned"
+    "status": "draft",
+    "checksum": "f5a302909caa3c3a22fa9087760ec915"
   },
   {
     "id": "127debf7951504f7e59f1441a4b0a473",
@@ -118,10 +112,10 @@
     "status": "published",
     "checksum": "578a287e4a43071c4b0310729bbb87bc",
     "publicationData": {
-      "createdAt": "2024-06-16T09:42:28.011Z",
-      "updatedAt": "2024-06-16T09:42:28.011Z",
-      "publishedAt": "2024-06-16T09:42:28.011Z"
+      "createdAt": "2024-06-16T10:35:18.592Z",
+      "updatedAt": "2024-06-16T10:35:18.592Z",
+      "publishedAt": "2024-06-16T10:35:18.592Z"
     },
-    "habitat": "continental-drift"
+    "habitat": "Continental Drift"
   }
 ]
