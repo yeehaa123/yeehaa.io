@@ -1,12 +1,12 @@
-import type { Meta } from "../meta"
+import { Status, type Meta } from "../meta"
 
 type SeriesMap = Map<string, Meta[]>
 
 export function group(tableData: Meta[]) {
   return tableData.reduce(
     (acc: SeriesMap, tableRow: Meta) => {
-      const { series, draft } = tableRow;
-      if (!draft && series) {
+      const { series, status } = tableRow;
+      if (status !== Status.DRAFT && series) {
         const oldEntries = acc.get(series);
         const entries = oldEntries ? [...oldEntries, tableRow] : [tableRow];
         acc.set(series, entries);

@@ -6,7 +6,8 @@ const title = "YEEHAA";
 
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('Posts')).sort((a, b) => {
+const posts = (await getCollection('Posts'))
+.sort((a, b) => {
   if(a.data.publishedAt && b.data.publishedAt) {
     return b.data.publishedAt.getTime() - a.data.publishedAt.getTime();
   } else {

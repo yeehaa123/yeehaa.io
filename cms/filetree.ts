@@ -1,7 +1,7 @@
 import type { BaseArticle } from "./article";
 import type { CourseEntity } from "./course";
 import type { Meta } from "./meta";
-import { ContentType } from "./meta";
+import { ContentType, Status } from "./meta";
 import * as path from 'path';
 import { readdir, lstat, readFile } from 'fs/promises'
 import * as article from "./article";
@@ -84,8 +84,8 @@ export function update(tree: FileTree, metaTable: Meta[]) {
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [_, entry] of tree) {
-    const { draft, checksum } = entry.meta;
-    if (!draft) {
+    const { status, checksum } = entry.meta;
+    if (status !== Status.DRAFT) {
       if (isArticle(entry)) {
         const augmented = await article.augment(entry);
         await article.write(basePath, checksum, augmented);

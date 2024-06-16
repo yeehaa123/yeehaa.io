@@ -55,7 +55,7 @@ export async function init({ content, series }:
   const checksum = generateChecksum(content);
   const { title } = parse(content);
   const author = "Yeehaa"
-  let hash = createHash('md5').update(title + author).digest("hex")
+  let hash = createHash('md5').update(JSON.stringify({ title, author })).digest("hex")
   const meta = tr.init({
     id: hash,
     title,

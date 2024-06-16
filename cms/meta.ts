@@ -5,6 +5,11 @@ export enum ContentType {
   COURSE = "course"
 }
 
+export enum Status {
+  DRAFT = "draft",
+  PUBLISHED = "published"
+}
+
 export const schema = z.object({
   id: z.string(),
   author: z.string().optional(),
@@ -12,7 +17,7 @@ export const schema = z.object({
   title: z.string().optional(),
   goal: z.string().optional(),
   contentType: z.nativeEnum(ContentType),
-  draft: z.boolean(),
+  status: z.nativeEnum(Status),
   order: z.number().optional(),
   series: z.string().optional(),
   checksum: z.string(),
@@ -24,7 +29,7 @@ export const schema = z.object({
 export type Meta = z.infer<typeof schema>
 
 const initSchema = schema.extend({
-  draft: z.boolean().optional(),
+  status: z.nativeEnum(Status).optional(),
   createdAt: z.date().optional(),
   updatedAt: z.date().optional()
 })
@@ -34,15 +39,15 @@ function validate(frontmatter: Meta) {
   return schema.parse(frontmatter);
 }
 export function init({
-  draft,
+  status,
   createdAt,
   updatedAt,
   publishedAt,
   ...rest
 }: MetaInit) {
-  if (draft === false) {
+  if (status === Status.PUBLISHED) {
     const publishStatus = {
-      draft: false,
+      status,
       createdAt: createdAt ? new Date(createdAt) : new Date,
       publishedAt: publishedAt ? new Date(publishedAt) : new Date,
       updatedAt: updatedAt ? new Date(updatedAt) : new Date
@@ -50,7 +55,7 @@ export function init({
     return validate({ ...rest, ...publishStatus });
   } else {
     const publishStatus = {
-      draft: true,
+      status: Status.DRAFT,
       createdAt: new Date,
       updatedAt: new Date,
       publishedAt: undefined,

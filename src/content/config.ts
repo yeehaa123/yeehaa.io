@@ -1,20 +1,23 @@
-import { defineCollection } from "astro:content";
+import { defineCollection, reference } from "astro:content";
 import * as article from "../../cms/article";
 import * as course from "../../cms/course";
 
-const postsCollection = defineCollection({
+const posts = defineCollection({
   type: "content",
   schema: ({ image }) => article.schema.extend({
-    imageURL: image()
+    imageURL: image(),
+    course: reference('Courses').optional()
   })
 });
 
-const coursesCollection = defineCollection({
+const courses = defineCollection({
   type: "data",
-  schema: course.schema
+  schema: course.schema.extend({
+    habitat: reference('Posts').optional()
+  })
 });
 
 export const collections = {
-  Posts: postsCollection,
-  Courses: coursesCollection
+  Posts: posts,
+  Courses: courses
 };

@@ -34,5 +34,5 @@ export async function read(basePath: string) {
   const tablePath = path.join(basePath, TABLE_FILE_NAME);
   const tableJSON = await readFile(tablePath, 'utf8');
   const raw = JSON.parse(tableJSON) as Meta[];
-  return raw.map((meta) => m.init(meta)).filter(({ draft }) => draft === false);
+  return raw.map((meta) => m.init(meta)).filter(({ status }) => status !== m.Status.DRAFT);
 }

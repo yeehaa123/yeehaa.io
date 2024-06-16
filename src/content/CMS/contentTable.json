@@ -1,125 +1,138 @@
 [
   {
-    "id": "1eab39aab816062fe408eb522f173ce5",
+    "id": "59f3dcef9e5ae444f0ce7dc02c9c87b8",
     "author": "Yeehaa",
     "title": "Align the Misaligned",
     "contentType": "article",
-    "draft": false,
+    "status": "published",
     "order": 0,
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
-    "createdAt": "2024-06-15T17:16:06.165Z",
-    "updatedAt": "2024-06-15T17:16:06.165Z",
-    "publishedAt": "2024-06-15T17:16:15.627Z"
+    "createdAt": "2024-06-16T06:11:11.966Z",
+    "updatedAt": "2024-06-16T06:11:11.966Z",
+    "publishedAt": "2024-06-16T06:12:32.672Z"
   },
   {
-    "id": "99e3fb960e8dd6c0bd6d917838a902b5",
+    "id": "4302d39722f48b9c8704e07d7428dc88",
     "author": "Yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "draft": true,
+    "status": "published",
+    "order": 1,
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "createdAt": "2024-06-15T17:20:56.951Z",
-    "updatedAt": "2024-06-15T17:20:56.951Z"
+    "createdAt": "2024-06-16T06:14:10.256Z",
+    "updatedAt": "2024-06-16T06:14:10.256Z",
+    "publishedAt": "2024-06-16T06:14:33.737Z"
   },
   {
-    "id": "4d3a25ad683c63ae63ca37cc09e37869",
+    "id": "685ce33425611e699af9de8894a94f89",
     "author": "Yeehaa",
     "title": "Economy of Garbage",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "2fa6a7e7bf592d41022eb9cd67f240db",
-    "createdAt": "2024-06-15T17:20:56.951Z",
-    "updatedAt": "2024-06-15T17:20:56.951Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "8b6bda0c34dba15390f014aa3857d5bd",
+    "id": "0af6b2c8609dcdf28c2614c96609b86e",
     "author": "Yeehaa",
     "title": "Foam Party",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "9f89665831b49e0f9151d06d7495fe0a",
-    "createdAt": "2024-06-15T17:20:56.951Z",
-    "updatedAt": "2024-06-15T17:20:56.951Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "07fea33a97999935a63811e7caa86c3d",
+    "id": "1a1ffe28310303143be1b645b2a3ebad",
     "author": "Yeehaa",
     "title": "Global Village People",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "createdAt": "2024-06-15T17:20:56.951Z",
-    "updatedAt": "2024-06-15T17:20:56.951Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "b7d0e86da7ebd3676c367d6e1cc3bb5a",
+    "id": "ed58d41bcb98ded45378f32f60b143c1",
     "author": "Yeehaa",
     "title": "Learning from Nature",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "b00ab9b260061c09b956c2e922ebcbad",
-    "createdAt": "2024-06-15T17:20:56.951Z",
-    "updatedAt": "2024-06-15T17:20:56.951Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "8e6cd3b48ac904a5a6a0961eb0d0c941",
+    "id": "f58fa2f81a91f92ddff067c7414358a6",
     "author": "Yeehaa",
     "title": "Reclaiming the Future",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "0af417ab21870acd8b23293440ad316a",
-    "createdAt": "2024-06-15T17:20:56.952Z",
-    "updatedAt": "2024-06-15T17:20:56.952Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "8728565069c40ea19486ce9e383ba6f3",
+    "id": "42320c6b67df2bd2062e629436811e65",
     "author": "Yeehaa",
     "title": "Shenzhen Goes HAM",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "7c7c83da8c82ad789aff5d7f7f171543",
-    "createdAt": "2024-06-15T17:20:56.952Z",
-    "updatedAt": "2024-06-15T17:20:56.952Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "7a23f80977ca05ab7d1d805693bd292a",
+    "id": "654a49d7ad24b92dc1aaf4cc8260a234",
     "author": "Yeehaa",
     "title": "The Good Foot",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "f0f31bb5617196b56b80e9fd43b1ce5f",
-    "createdAt": "2024-06-15T17:20:56.952Z",
-    "updatedAt": "2024-06-15T17:20:56.952Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "873eba5bce82314ebda6f104fd83377a",
+    "id": "e7727262686cc13df053a30c156de922",
     "author": "Yeehaa",
     "title": "The Practice of Ecosystem Architecture",
     "contentType": "article",
-    "draft": true,
+    "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f",
-    "createdAt": "2024-06-15T17:20:56.952Z",
-    "updatedAt": "2024-06-15T17:20:56.952Z"
+    "createdAt": "2024-06-16T06:14:33.763Z",
+    "updatedAt": "2024-06-16T06:14:33.763Z"
   },
   {
-    "id": "0477f0572abfb56bb97ce01c29fc7a4a",
+    "id": "57e6410ef7972ddeb914baea3032d92b",
+    "curator": "Yeehaa",
+    "goal": "Align the Misaligned",
+    "contentType": "course",
+    "status": "published",
+    "checksum": "fd10ccafc354bd24f184817640d3c1dc",
+    "createdAt": "2024-06-16T06:11:11.966Z",
+    "updatedAt": "2024-06-16T06:11:11.966Z",
+    "publishedAt": "2024-06-16T06:12:32.673Z"
+  },
+  {
+    "id": "b0c7baa573cc440769cf0c4b6d7de124",
     "curator": "Yeehaa",
     "goal": "Engineer Breakthroughs",
     "contentType": "course",
-    "draft": false,
-    "checksum": "1afdbbdd7e0d8fbe1a1ae64172a0d831",
-    "createdAt": "2024-06-15T17:17:51.813Z",
-    "updatedAt": "2024-06-15T17:17:51.813Z",
-    "publishedAt": "2024-06-15T17:18:09.542Z"
+    "status": "published",
+    "checksum": "b3085feb591fc7c967ca38b774660899",
+    "createdAt": "2024-06-16T06:11:11.966Z",
+    "updatedAt": "2024-06-16T06:11:11.966Z",
+    "publishedAt": "2024-06-16T06:12:32.673Z"
   }
 ]

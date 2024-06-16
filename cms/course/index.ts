@@ -22,7 +22,7 @@ export interface BaseCheckpoint {
 export interface BaseCourse {
   goal: string
   curator: string,
-  habitat: string,
+  habitat?: string,
   checkpoints: BaseCheckpoint[]
 }
 
@@ -34,7 +34,8 @@ export interface CourseEntity {
 export async function init({ content }: { content: string }) {
   const checksum = generateChecksum(content);
   const course = await parse(content)
-  let hash = createHash('md5').update(course.goal + course.curator).digest("hex")
+  const { goal, curator } = course;
+  let hash = createHash('md5').update(JSON.stringify({ goal, curator })).digest("hex")
   const meta = m.init({
     checksum,
     contentType: m.ContentType.COURSE,
@@ -56,7 +57,8 @@ export async function augment({ meta, course: old }: CourseEntity) {
   })
   const allTags = checkpoints.flatMap(({ tags }) => tags);
   const tags = [...new Set([...allTags])]
-  const course = { ...meta, ...old, checkpoints, description, tags, courseId: meta.id };
+  const habitat = old.habitat ? `${voca.slugify(old.habitat)}` : undefined;
+  const course = { ...meta, ...old, checkpoints, description, tags, habitat, courseId: meta.id };
   return c.init(course);
 }
 
