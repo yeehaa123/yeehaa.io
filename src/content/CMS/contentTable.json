@@ -4,9 +4,16 @@
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
+    "order": 1,
     "series": "Ecosystem Architecture",
-    "checksum": "34d442a1971d4dbbe8315bbfa8de35d5"
+    "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
+    "publicationData": {
+      "createdAt": "2024-06-16T13:15:44.816Z",
+      "updatedAt": "2024-06-16T13:15:44.816Z",
+      "publishedAt": "2024-06-16T13:15:44.816Z"
+    },
+    "course": "Align the Misaligned"
   },
   {
     "id": "88be3ee13fcaec1270308625b34696aa",
@@ -101,8 +108,14 @@
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "course",
-    "status": "draft",
-    "checksum": "f5a302909caa3c3a22fa9087760ec915"
+    "status": "published",
+    "checksum": "f5a302909caa3c3a22fa9087760ec915",
+    "publicationData": {
+      "createdAt": "2024-06-16T13:15:44.816Z",
+      "updatedAt": "2024-06-16T13:15:44.816Z",
+      "publishedAt": "2024-06-16T13:15:44.816Z"
+    },
+    "habitat": "Align the Misaligned"
   },
   {
     "id": "127debf7951504f7e59f1441a4b0a473",

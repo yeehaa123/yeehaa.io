@@ -20,16 +20,11 @@ const { title, logoLink = '#'} = Astro.props;
     <header class="z-10 sticky top-0">
       <NavBar><Logo class="text-1xl md:text-2xl" href={logoLink} slot="logo" /></NavBar>
     </header>
-    <main transition:animate="fade">
-      <div class="bg-white text-black dark:bg-black dark:text-white
-        print:bg-pure-white print:text-pitch-black print:py-24" >
+    <main transition:animate="fade" class="bg-white text-black dark:bg-black dark:text-white print:bg-pure-white print:text-pitch-black print:py-24 w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto">
         <div class="flex justify-center w-full" >
           <slot name="image"/>
         </div>
-        <div class="container overflow-hidden px-10 lg:px-0 lg:max-w-4xl mx-auto">
           <slot/>
-        </div>
-      </div>
     </main>
     <footer class="container overflow-hidden dark:text-white py-8 md:py-12 px-12 lg:px-0 lg:max-w-3xl mx-auto print:hidden">
       <Logo/>

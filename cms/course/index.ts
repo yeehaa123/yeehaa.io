@@ -42,17 +42,15 @@ export async function init({ content, author }: { author: string, content: strin
     title: course.goal,
     id: hash
   });
-  const checkpoints = course.checkpoints.map(checkpoint => cp.init({ ...checkpoint, goal, curator }))
   return {
-    meta, course: { ...course, checkpoints }
+    meta, course
   }
 }
 
 export async function augment({ meta, course: old }: CourseEntity) {
-  const { id, publicationData, author } = meta;
-  const { goal } = old;
+  const { id, publicationData, author, title: goal, author: curator } = meta;
   const promises = old.checkpoints.map(checkpoint => {
-    return cp.augment({ ...checkpoint, goal: old.goal });
+    return cp.augment({ ...checkpoint, goal, curator });
   })
   const checkpoints = await Promise.all(promises);
   const { description } = await ai.course.analyze({ goal, checkpoints, id })

@@ -1,0 +1,58 @@
+courseId: c3084a039e22e0a5c597605d698cba2a
+goal: Align the Misaligned
+curator: yeehaa
+description: These steps guide you to align the misaligned by identifying
+  personal strengths and weaknesses, conducting a SWOT analysis for strategic
+  clarity, and utilizing networking strategies to make impactful connections and
+  critical asks, fostering overall alignment in personal and professional
+  aspects.
+habitat: align-the-misaligned
+createdAt: 2024-06-16T13:15:44.816Z
+updatedAt: 2024-06-16T13:15:44.816Z
+publishedAt: 2024-06-16T13:15:44.816Z
+tags:
+  - skills
+  - career
+  - self
+  - growth
+  - swot
+  - guide
+  - startups
+  - network
+checkpoints:
+  - task: Discover your personal strengths
+    href: https://80000hours.org/articles/personal-strengths/
+    description: The link provides practical advice and structured steps to help you
+      identify and understand your personal strengths, which can align your
+      career and personal goals effectively.
+    tags:
+      - skills
+      - career
+      - self
+  - task: Embrace your weaknesses
+    href: https://maven.com/articles/identifying-greatest-weakness
+    description: The article provides insights on identifying and understanding
+      one's greatest weaknesses, a crucial step in aligning intentions and
+      actions. By acknowledging these areas, individuals can better strategize
+      on how to improve, ultimately fostering personal growth and alignment with
+      their goals.
+    tags:
+      - growth
+      - self
+  - task: Do a SWOT analysis of your startup
+    href: https://fullscale.io/blog/swot-analysis-for-startups/
+    description: The article provides a detailed guide on performing a SWOT analysis
+      for startups, helping to align business strategies by identifying
+      strengths, weaknesses, opportunities, and threats.
+    tags:
+      - swot
+      - guide
+      - startups
+  - task: Formulate your critical ask
+    href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/
+    description: The guide provides insights into key networkers in Rotterdam who
+      can facilitate connections, support, and collaboration to align efforts
+      effectively.
+    tags:
+      - network
+      - guide

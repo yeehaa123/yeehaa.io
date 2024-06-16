@@ -1,9 +1,11 @@
 ---
+import { CourseCard } from "@/offcourse/containers"
 import { Image } from 'astro:assets';
 import Layout from "./Base.astro"
 import { SeriesHeading } from "@/components/SeriesHeading";
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 const { 
+  course,
   title, 
   order, 
   series, 
@@ -19,29 +21,43 @@ const {
 
 const { url } = Astro;
 const type = OGType.ARTICLE;
+console.log(course);
 ---
 
-<Layout {logoLink} {title} {slug}>
+<Layout {logoLink} {title} {slug} {course}>
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
-  <Image class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12" slot="image" src={imageURL} alt={title} />
-  <article class="prose prose-base md:prose-lg lg:prose-xl
-    prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
-    prose-lead:first-letter:text-3xl
-    prose-lead:md:first-letter:text-4xl
-    prose-lead:lg:first-letter:text-5xl
-    prose-lead:prose-lg md:prose-lead:prose-xl lg:prose-lead:prose-2xl
-    dark:prose-invert
-    prose-h1:font-serif hover:prose-h1:font-sans
-    prose-h2:font-serif hover:prose-h2:font-sans
-    md:prose-h1:text-6xl prose-h1:text-4xl
-    md:prose-h2:text-3xl prose-h2:text-xl
-    prose-strong:font-serif
-    prose-blockquote:font-serif prose-blockquote:font-normal prose-blockquote:not-italic
-    prose-blockquote:border-secondary
-    prose-a:no-underline prose-a:text-secondary-dark hover:prose-a:text-secondary-light
-    " transition:name="content" >
-    <SeriesHeading href={"/"} {order} {series} />
-    <slot/>
+  <Image class="w-full" slot="image" src={imageURL} alt={title} />
+  <article class="flex flex-col-reverse lg:flex-row px-5 lg:px-8 lg:gap-x-8 py-12 lg:py-24">
+    <div>
+      <div>
+        <SeriesHeading href={"/"} {order} {series} />
+        <h1 class="font-serif hover:font-sans md:text-6xl text-4xl font-extrabold">
+          {title}
+        </h1>
+      </div>
+      <div class="prose prose-base md:prose-lg lg:prose-xl
+        prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
+        prose-lead:first-letter:text-3xl
+        prose-lead:md:first-letter:text-4xl
+        prose-lead:lg:first-letter:text-5xl
+        prose-lead:prose-lg md:prose-lead:prose-xl lg:prose-lead:prose-2xl
+        dark:prose-invert
+        prose-h1:font-serif hover:prose-h1:font-sans
+        prose-h2:font-serif hover:prose-h2:font-sans
+        md:prose-h1:text-6xl prose-h1:text-4xl
+        md:prose-h2:text-3xl prose-h2:text-xl
+        prose-h1:hidden
+        prose-strong:font-serif
+        prose-blockquote:font-serif prose-blockquote:font-normal prose-blockquote:not-italic
+        prose-blockquote:border-secondary
+        prose-a:no-underline prose-a:text-secondary-dark hover:prose-a:text-secondary-light
+        " transition:name="content" >
+        <slot/>
+      </div>
+    </div>
+    <div class="hidden lg:block">
+      { course && <CourseCard course={course.data} standAlone/>}
+      </div>
   </article>
 </Layout>

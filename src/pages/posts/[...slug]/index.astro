@@ -12,9 +12,9 @@ export async function getStaticPaths() {
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const { data} = entry
-const course = await getEntry(data.course);
+
+const course = data.course ? await getEntry(data.course) : null;
 ---
-<Layout {...data}>
-  <pre>{JSON.stringify(course?.data, null, 2)}</pre>
+<Layout {...data} {course}>
   <Content/ >
 </Layout>

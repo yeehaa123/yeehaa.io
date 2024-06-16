@@ -4,6 +4,8 @@ import * as filetree from "./filetree";
 import * as table from "./table";
 import * as series from "./series";
 import { initDirs } from "./helpers";
+import type { Course } from "./course/course"
+import type { Checkpoint } from "./course/checkpoint"
 
 const OUTPUT_BASE = './src/content';
 const INPUT_BASE = './yeehaa';
@@ -20,6 +22,7 @@ async function main() {
 
   const seriesGroup = series.group(tableData);
   const updatedTable = series.order(seriesGroup);
+
   filetree.update(tree, updatedTable);
 
   filetree.associate(tree, tableData);
@@ -30,3 +33,5 @@ async function main() {
 }
 
 main();
+
+export type { Course, Checkpoint }
