@@ -32,10 +32,11 @@ export interface CourseEntity {
 export async function init({ content, author }: { author: string, content: string }) {
   const checksum = generateChecksum(content);
   const course = await parse(content)
-  const { goal, curator } = course;
+  const { goal, curator, habitat } = course;
   let hash = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
     checksum,
+    habitat,
     contentType: m.ContentType.COURSE,
     author,
     title: course.goal,

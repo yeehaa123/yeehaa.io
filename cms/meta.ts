@@ -23,7 +23,6 @@ export const schema = z.object({
   publicationData: pd.schema.optional(),
   habitat: z.string().optional(),
   course: z.string().optional(),
-
 })
 
 export type Meta = z.infer<typeof schema>
