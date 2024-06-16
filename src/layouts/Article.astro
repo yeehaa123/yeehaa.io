@@ -2,7 +2,7 @@
 import { CourseCard } from "@/offcourse/containers"
 import { Image } from 'astro:assets';
 import Layout from "./Base.astro"
-import { SeriesHeading } from "@/components/SeriesHeading";
+import { ArticleHeading } from "@/components/ArticleHeading";
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 const { 
   course,
@@ -27,14 +27,9 @@ const type = OGType.ARTICLE;
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
   <Image class="w-full" slot="image" src={imageURL} alt={title} />
-  <article class="flex flex-col-reverse lg:flex-row px-5 sm:px-8 lg:gap-x-8 py-12 lg:py-24">
+  <article class="container flex flex-col-reverse lg:flex-row px-5 sm:px-8 lg:gap-x-8 py-12 lg:py-20 mx-auto">
     <div>
-      <div>
-        <SeriesHeading href={"/"} {order} {series} />
-        <h1 class="font-serif hover:font-sans md:text-6xl text-4xl font-extrabold">
-          {title}
-        </h1>
-      </div>
+      <ArticleHeading href={"/"} {order} {series} {title}/>
       <div class="prose prose-base md:prose-lg lg:prose-xl
         prose-lead:font-serif prose-lead:text-black dark:prose-lead:text-white
         prose-lead:first-letter:text-3xl
@@ -55,8 +50,8 @@ const type = OGType.ARTICLE;
         <slot/>
       </div>
     </div>
-    <div class="hidden lg:block">
-      { course && <CourseCard course={course.data} standAlone/>}
-      </div>
+    { course && <div class="hidden lg:block">
+      <CourseCard course={course.data} standAlone/>
+      </div>}
   </article>
 </Layout>

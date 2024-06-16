@@ -1,6 +1,5 @@
 import AvatarImage from "./GeneratedAvatar"
 import Bookmark from "./Bookmark"
-import CardChrome from "./CardChrome";
 import CardMeta from "./CardMeta"
 import Checkbox from "./Checkbox"
 import Checkpoint from "./Checkpoint"
@@ -13,7 +12,6 @@ import Toolbar from "./Toolbar"
 export {
   AvatarImage,
   Bookmark,
-  CardChrome,
   CardMeta,
   Checkbox,
   Checkpoint,
