@@ -20,8 +20,8 @@ export default function Checkpoint({
   canCheckComplete }: Props) {
   const taskId = `${courseId}-${task}`
   return (
-    <li className="group flex align-middle bg-gray-100 
-    hover:bg-gray-900 hover:text-white p-3 flex items-center space-x-2">
+    <li className="group flex align-middle bg-gray-100 dark:bg-gray-900 dark:text-white
+    hover:bg-gray-900 dark:hover:bg-gray-100 hover:text-white dark:hover:text-black p-3 flex items-center space-x-2">
       <Checkbox
         checked={!!isCompleted}
         disabled={!canCheckComplete}

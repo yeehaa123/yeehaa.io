@@ -21,14 +21,13 @@ const {
 
 const { url } = Astro;
 const type = OGType.ARTICLE;
-console.log(course);
 ---
 
 <Layout {logoLink} {title} {slug} {course}>
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
   <Image class="w-full" slot="image" src={imageURL} alt={title} />
-  <article class="flex flex-col-reverse lg:flex-row px-5 lg:px-8 lg:gap-x-8 py-12 lg:py-24">
+  <article class="flex flex-col-reverse lg:flex-row px-5 sm:px-8 lg:gap-x-8 py-12 lg:py-24">
     <div>
       <div>
         <SeriesHeading href={"/"} {order} {series} />
