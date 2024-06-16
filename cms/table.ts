@@ -5,6 +5,8 @@ import { mkdir, readFile, writeFile } from 'fs/promises'
 import type { Meta } from "./meta";
 import * as m from "./meta";
 
+export type MetaTable = Meta[];
+
 const TABLE_FILE_NAME = "contentTable.json";
 
 export async function init(basePath: string) {
@@ -36,3 +38,4 @@ export async function read(basePath: string) {
   const raw = JSON.parse(tableJSON) as Meta[];
   return raw.map((meta) => m.init(meta)).filter(({ status }) => status !== m.Status.DRAFT);
 }
+

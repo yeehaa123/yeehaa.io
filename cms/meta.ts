@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import * as pd from "./publicationData";
 
 export enum ContentType {
   ARTICLE = "article",
@@ -12,27 +13,25 @@ export enum Status {
 
 export const schema = z.object({
   id: z.string(),
-  author: z.string().optional(),
-  curator: z.string().optional(),
-  title: z.string().optional(),
-  goal: z.string().optional(),
+  author: z.string(),
+  title: z.string(),
   contentType: z.nativeEnum(ContentType),
   status: z.nativeEnum(Status),
   order: z.number().optional(),
   series: z.string().optional(),
   checksum: z.string(),
-  createdAt: z.date(),
-  updatedAt: z.date(),
-  publishedAt: z.date().optional(),
+  publicationData: pd.schema.optional(),
+  habitat: z.string().optional(),
+  course: z.string().optional(),
+
 })
 
 export type Meta = z.infer<typeof schema>
 
 const initSchema = schema.extend({
   status: z.nativeEnum(Status).optional(),
-  createdAt: z.date().optional(),
-  updatedAt: z.date().optional()
 })
+
 export type MetaInit = z.infer<typeof initSchema>
 
 function validate(frontmatter: Meta) {
@@ -40,26 +39,20 @@ function validate(frontmatter: Meta) {
 }
 export function init({
   status,
-  createdAt,
-  updatedAt,
-  publishedAt,
+  publicationData,
   ...rest
 }: MetaInit) {
   if (status === Status.PUBLISHED) {
-    const publishStatus = {
+    return validate({
+      ...rest,
       status,
-      createdAt: createdAt ? new Date(createdAt) : new Date,
-      publishedAt: publishedAt ? new Date(publishedAt) : new Date,
-      updatedAt: updatedAt ? new Date(updatedAt) : new Date
-    }
-    return validate({ ...rest, ...publishStatus });
+      publicationData: pd.init(publicationData)
+    });
   } else {
-    const publishStatus = {
-      status: Status.DRAFT,
-      createdAt: new Date,
-      updatedAt: new Date,
-      publishedAt: undefined,
-    };
-    return validate({ ...rest, ...publishStatus });
+    const status = Status.DRAFT;
+    return validate({
+      ...rest,
+      status
+    });
   }
 }

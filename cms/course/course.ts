@@ -15,8 +15,15 @@ export const schema = z.object({
   checkpoints: z.array(cp.schema)
 })
 
-export type Course = z.infer<typeof schema>
+export const initSchema = schema.extend({
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional(),
+  publishedAt: z.date().optional(),
+})
 
-export function init(course: Course) {
+export type Course = z.infer<typeof schema>
+export type InitCourse = z.infer<typeof initSchema>
+
+export function init(course: InitCourse) {
   return schema.parse(course);
 }

@@ -18,8 +18,8 @@ export function group(tableData: Meta[]) {
 export function order(seriesMap: SeriesMap) {
   return Array.from(seriesMap).flatMap(([_, series]) => {
     return series.sort((a, b) => {
-      if (a.publishedAt && b.publishedAt) {
-        return a.publishedAt.getTime() - b.publishedAt.getTime();
+      if (a.publicationData?.publishedAt && b.publicationData?.publishedAt) {
+        return a.publicationData.publishedAt.getTime() - b.publicationData.publishedAt.getTime();
       } else {
         return -1
       }
@@ -28,4 +28,3 @@ export function order(seriesMap: SeriesMap) {
     })
   })
 }
-

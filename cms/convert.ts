@@ -22,6 +22,9 @@ async function main() {
   const updatedTable = series.order(seriesGroup);
   filetree.update(tree, updatedTable);
 
+  filetree.associate(tree, tableData);
+
+
   await filetree.write(OUTPUT_BASE, tree);
   await table.write(CMS_PATH, tree);
 }

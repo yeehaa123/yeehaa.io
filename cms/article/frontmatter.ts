@@ -12,10 +12,18 @@ export const schema = z.object({
   excerpt: z.string(),
   summary: z.string(),
   tags: z.array(z.string()).min(3).max(7),
+  course: z.string().optional(),
+})
+
+export const initSchema = schema.extend({
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional(),
+  publishedAt: z.date().optional(),
 })
 
 export type ArticleFrontmatter = z.infer<typeof schema>
+export type InitArticleFrontmatter = z.infer<typeof initSchema>
 
-export function init(frontmatter: ArticleFrontmatter) {
+export function init(frontmatter: InitArticleFrontmatter) {
   return schema.parse(frontmatter);
 }
