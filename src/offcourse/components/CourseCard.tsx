@@ -30,7 +30,7 @@ export default function CourseCard({ course }: CourseCardStore) {
   } = course;
 
   return (
-    <Card className={cn("flex flex-col select-none rounded-none")}>
+    <Card className={cn("flex flex-col select-none")}>
       <CardHeader className="space-y-4">
         <CardTitle className="flex w-full justify-between space-x-5 ">
           <span className="max-w-[80%]">{goal}</span>
