@@ -1,0 +1,60 @@
+courseId: c3084a039e22e0a5c597605d698cba2a
+goal: Align the Misaligned
+curator: yeehaa
+description: These steps guide you to align the misaligned by identifying
+  personal strengths and weaknesses, conducting a SWOT analysis for strategic
+  clarity, and utilizing networking strategies to make impactful connections and
+  critical asks, fostering overall alignment in personal and professional
+  aspects.
+habitat: align-the-misaligned
+createdAt: 2024-06-16T09:44:55.295Z
+updatedAt: 2024-06-16T09:44:55.295Z
+publishedAt: 2024-06-16T09:44:55.295Z
+tags:
+  - career
+  - skills
+  - growth
+  - self
+  - align
+  - swot
+  - guide
+  - start
+  - connect
+  - network
+checkpoints:
+  - task: Discover your personal strengths
+    description: This article helps identify personal strengths by offering insights
+      and methodologies to assess skills, values, and interests, enabling better
+      alignment of one's career and personal life.
+    tags:
+      - career
+      - skills
+    href: https://80000hours.org/articles/personal-strengths/
+  - task: Embrace your weaknesses
+    description: The article provides insights on how to identify and understand
+      personal weaknesses, turning them into opportunities for growth and
+      improvement, which supports the goal of aligning oneself and embracing
+      weaknesses effectively.
+    tags:
+      - growth
+      - self
+      - align
+    href: https://maven.com/articles/identifying-greatest-weakness
+  - task: Do a SWOT analysis of your startup
+    description: This article guides startups through a SWOT analysis, providing
+      insight on identifying strengths, weaknesses, opportunities, and threats,
+      which aids in aligning and strategizing business goals effectively.
+    tags:
+      - swot
+      - guide
+      - start
+    href: https://fullscale.io/blog/swot-analysis-for-startups/
+  - task: Formulate your critical ask
+    description: The link provides insights on becoming a superconnector in
+      Rotterdam, offering strategies to bridge gaps and foster relationships,
+      essential for aligning the misaligned and making a critical ask
+      effectively.
+    tags:
+      - connect
+      - network
+    href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/
