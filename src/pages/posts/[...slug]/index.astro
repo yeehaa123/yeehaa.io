@@ -16,5 +16,6 @@ const course = await getEntry(data.course);
 console.log(course);
 ---
 <Layout {...data}>
+  <pre>{JSON.stringify(course.data, null, 2)}</pre>
   <Content/ >
 </Layout>

@@ -91,14 +91,14 @@ export function associate(tree: FileTree, metaTable: MetaTable) {
           tree.set(articleMeta.id, {
             ...article,
             meta: {
-              ...articleMeta,
+              ...article.meta,
               course: courseSlug
             }
           });
           tree.set(courseMeta.id, {
             ...course,
             meta: {
-              ...courseMeta,
+              ...course.meta,
               habitat: articleSlug
             }
           });

@@ -12,48 +12,54 @@ createdAt: 2024-06-16T09:42:28.011Z
 updatedAt: 2024-06-16T09:42:28.011Z
 publishedAt: 2024-06-16T09:42:28.011Z
 tags:
-  - strengths
-  - skills
+  - talent
+  - career
+  - goals
   - growth
   - self
-  - work
-  - analysis
+  - swot
   - startups
   - network
-  - connect
+  - mentor
 checkpoints:
-  - task: Discover your personal strengths
-    description: This resource assists individuals in identifying and understanding
-      their core competencies and unique talents, essential for driving
-      innovation and achieving significant breakthroughs.
+  - checkpointId: e7d5089251d04225a2c8ad13633d8e70
+    task: Discover your personal strengths
+    description: The article offers a structured approach to identify personal
+      strengths, helping individuals analyze their talents, understand their
+      value, and select career paths that maximize their potential, thereby
+      enabling them to engineer breakthroughs.
     tags:
-      - strengths
-      - skills
+      - talent
+      - career
+      - goals
     href: https://80000hours.org/articles/personal-strengths/
-  - task: Embrace your weaknesses
-    description: This article provides insights on identifying personal weaknesses,
-      encouraging self-awareness and growth. Understanding and embracing
-      weaknesses fosters personal improvement, facilitating breakthroughs and
-      progress in various aspects of life.
+  - checkpointId: f67d98322342b5da594a6264817e42da
+    task: Embrace your weaknesses
+    description: The article guides readers in identifying and understanding their
+      greatest weaknesses, promoting self-awareness and growth. This awareness
+      is crucial for addressing and improving upon these areas, ultimately
+      fostering personal and professional breakthroughs.
     tags:
       - growth
       - self
-      - work
     href: https://maven.com/articles/identifying-greatest-weakness
-  - task: Do a SWOT analysis of your startup
-    description: The link provides a comprehensive guide on conducting a SWOT
-      analysis for startups, identifying strengths, weaknesses, opportunities,
-      and threats. This empowers founders to make strategic decisions, foster
-      innovation, and engineer breakthroughs.
+  - checkpointId: 53b957bf7e025a54892848efe8d550ec
+    task: Do a SWOT analysis of your startup
+    description: This blog outlines a clear methodology for conducting a SWOT
+      analysis tailored to startups, helping you identify strengths, weaknesses,
+      opportunities, and threats. Understanding these factors aids in strategic
+      planning and innovation, which is vital for engineering breakthroughs.
     tags:
-      - analysis
+      - swot
       - startups
     href: https://fullscale.io/blog/swot-analysis-for-startups/
-  - task: Formulate your critical ask
-    description: The article provides insights into leveraging superconnectors in
-      Rotterdam to help engineer breakthroughs by making critical asks, forming
-      strategic connections, and finding resources through influential networks.
+  - checkpointId: ca209ff6b41c582cbbcf76188aa477f6
+    task: Formulate your critical ask
+    description: The guide introduces individuals in Rotterdam's innovation
+      ecosystem to influential superconnectors, helping to forge pivotal
+      relationships and access key resources for driving innovation and
+      achieving breakthrough results.
     tags:
       - network
-      - connect
+      - mentor
     href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/

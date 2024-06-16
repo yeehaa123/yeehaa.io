@@ -31,7 +31,7 @@ export interface CourseEntity {
 
 export async function init({ content, author }: { author: string, content: string }) {
   const checksum = generateChecksum(content);
-  const course = await parse(content)
+  const course = await parse(content) as BaseCourse;
   const { goal, curator, habitat } = course;
   let hash = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
@@ -42,7 +42,11 @@ export async function init({ content, author }: { author: string, content: strin
     title: course.goal,
     id: hash
   });
-  return { meta, course };
+  const checkpoints = course.checkpoints.map(checkpoint => cp.init({ ...checkpoint, goal, curator }))
+  console.log(checkpoints);
+  return {
+    meta, course: { ...course, checkpoints }
+  }
 }
 
 export async function augment({ meta, course: old }: CourseEntity) {
