@@ -1,7 +1,7 @@
 ---
 title: Align the Misaligned
 author: yeehaa
-order: 1
+order: 0
 series: Ecosystem Architecture
 createdAt: 2024-06-16T13:15:44.816Z
 updatedAt: 2024-06-16T13:15:44.816Z

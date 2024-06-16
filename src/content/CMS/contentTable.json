@@ -5,7 +5,7 @@
     "title": "Align the Misaligned",
     "contentType": "article",
     "status": "published",
-    "order": 1,
+    "order": 0,
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
@@ -20,16 +20,9 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "published",
-    "order": 0,
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "publicationData": {
-      "createdAt": "2024-06-16T10:30:58.593Z",
-      "updatedAt": "2024-06-16T10:30:58.593Z",
-      "publishedAt": "2024-06-16T10:30:58.593Z"
-    },
-    "course": "Engineer Breakthroughs"
+    "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",

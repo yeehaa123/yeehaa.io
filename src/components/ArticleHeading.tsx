@@ -12,7 +12,7 @@ type Props = {
 export function ArticleHeading({ className, href, slug, order, series, title }: Props) {
   return (
     <div className={className}>
-      {order && series && <SeriesHeading href={href} order={order} series={series} />}
+      {series && <SeriesHeading href={href} order={order} series={series} />}
       {slug
         ? <a href={`/posts/${slug}`}>
           <h1 className="font-serif hover:font-sans md:text-6xl text-4xl font-extrabold">
