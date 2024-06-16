@@ -27,7 +27,7 @@ const type = OGType.ARTICLE;
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
   <Image class="w-full" slot="image" src={imageURL} alt={title} />
-  <article class="container flex flex-col-reverse lg:flex-row px-5 sm:px-8 lg:gap-x-8 py-12 lg:py-20 mx-auto">
+  <article class="container flex flex-col lg:flex-row px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
     <div>
       <ArticleHeading href={"/"} {order} {series} {title}/>
       <div class="prose prose-base md:prose-lg lg:prose-xl
@@ -50,7 +50,7 @@ const type = OGType.ARTICLE;
         <slot/>
       </div>
     </div>
-    { course && <div class="hidden lg:block">
+    { course && <div >
       <CourseCard course={course.data} standAlone/>
       </div>}
   </article>
