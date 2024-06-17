@@ -3,6 +3,10 @@ import { ActionType, reducer } from "./reducer"
 import { initialize } from "./initialize"
 import { useImmerReducer } from 'use-immer';
 
+function timeout(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export function useOffcourse(data: Course | Course[]) {
   const [state, dispatch] = useImmerReducer(reducer, data, initialize);
 
@@ -12,8 +16,10 @@ export function useOffcourse(data: Course | Course[]) {
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
     dispatch({ type: ActionType.SHOW_CHECKPOINT_OVERLAY, payload })
 
-  const hideCheckpointOverlay = (payload: CourseQuery) =>
-    dispatch({ type: ActionType.HIDE_CHECKPOINT_OVERLAY, payload })
+  const hideCheckpointOverlay = async (payload: CourseQuery) => {
+    dispatch({ type: ActionType.HIDE_OVERLAY, payload })
+    await timeout(3000);
+  }
 
 
   const actions = {

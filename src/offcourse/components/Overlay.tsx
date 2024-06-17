@@ -26,9 +26,9 @@ export function Overlay(props: Props) {
       enter="ease-out duration-200"
       enterFrom="translate-y-full opacity-80"
       enterTo="translate-y-0 z-10 opacity-100"
-      leave="ease-out duration-150"
-      leaveFrom="translate-y-0 opacity-100"
-      leaveTo="translate-y-full opacity-80" >
+      leave="ease-out duration-100"
+      leaveFrom="translate-y-0 opacity-60"
+      leaveTo="translate-y-full opacity-0" >
       <InternalOverlay {...props} />
     </Transition>)
 }
