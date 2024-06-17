@@ -27,7 +27,7 @@ const type = OGType.ARTICLE;
 <Layout {logoLink} {title} {slug} {course}>
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
-  <Image class="w-full" slot="image" src={imageURL} alt={title} />
+  <Image class="w-full" slot="image" src={imageURL} alt={title} loading="eager"/>
   <article class="container flex flex-col lg:flex-row px-5 gap-5 lg:gap-10 xl:gap-12 py-12 lg:py-20 mx-auto">
     <div>
       <ArticleHeading href={"/"} {order} {series} {title}/>
