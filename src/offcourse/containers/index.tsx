@@ -1,3 +1,3 @@
-import { CourseCard } from "./CourseCard"
+import { Offcourse } from "./Offcourse"
 
-export { CourseCard }
+export { Offcourse }

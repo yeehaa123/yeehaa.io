@@ -1,19 +1,20 @@
 import { CourseCard } from "."
-import type { Course } from "@/offcourse/types";
+import type { OffcourseState } from "@/offcourse/containers/state";
+import type { Actions } from "./CourseCard";
 
-type CollectionProps = {
-  courses: Course[]
+
+export type Props = {
+  cards: OffcourseState
+  actions: Actions
 }
 
-export default function CourseCollection({ courses }: CollectionProps) {
+export default function CourseCollection({ cards, actions }: Props) {
   return (
     <div
       className="grid justify-center items-start gap-4 gap-y-8 m-2 
       grid-cols-[repeat(auto-fit,minmax(360px,400px))]">
-      {courses.map((course) => {
-        const { courseId } = course;
-        return <CourseCard key={courseId} course={course} />
-      })}
+      {cards.map(card => (
+        <CourseCard {...card} key={card.courseId} actions={actions} />)
+      )}
     </div>)
 }
-

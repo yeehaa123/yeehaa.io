@@ -1,4 +1,4 @@
-import type { CourseCardStore } from "@/offcourse/types";
+import type { Course } from "@/offcourse/types";
 import { cn } from "@/lib/utils"
 import { Card } from "@/components/ui/card"
 
@@ -17,8 +17,23 @@ import {
   Checkpoint,
   Tags
 } from "./";
+export type Actions = {
+  toggleBookmark: (courseId: string) => void
+}
 
-export default function CourseCard({ course }: CourseCardStore) {
+export type CourseCard = {
+  courseId: string,
+  course: Course,
+  userData: {
+    isBookmarked: boolean
+  }
+  affordances: {
+    canBookmark: boolean
+  }
+  actions: Actions
+}
+
+export default function CourseCard({ course, userData, affordances, actions }: CourseCard) {
   const {
     courseId,
     goal,
@@ -29,12 +44,27 @@ export default function CourseCard({ course }: CourseCardStore) {
     habitat
   } = course;
 
+  const {
+    toggleBookmark
+  } = actions
+
+  const {
+    isBookmarked
+  } = userData
+
+  const {
+    canBookmark
+  } = affordances
+
   return (
     <Card className={cn("flex flex-col select-none")}>
       <CardHeader className="space-y-4">
         <CardTitle className="flex w-full justify-between space-x-5 ">
           <span className="max-w-[80%]">{goal}</span>
-          <Bookmark onClick={console.log} />
+          <Bookmark
+            canBookmark={canBookmark}
+            isBookmarked={isBookmarked}
+            onClick={() => toggleBookmark(courseId)} />
         </CardTitle>
         <Curator alias={curator} socials={{}} />
         <CardDescription onClick={console.log}>

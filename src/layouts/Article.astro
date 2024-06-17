@@ -1,5 +1,5 @@
 ---
-import { CourseCard } from "@/offcourse/containers"
+import { Offcourse } from "@/offcourse/containers"
 import { Image } from 'astro:assets';
 import Layout from "./Base.astro"
 import { ArticleHeading } from "@/components/ArticleHeading";
@@ -51,7 +51,7 @@ const type = OGType.ARTICLE;
       </div>
     </div>
     { course && <div >
-      <CourseCard course={course.data} standAlone/>
+      <Offcourse data={course.data} client:load/>
       </div>}
   </article>
 </Layout>
