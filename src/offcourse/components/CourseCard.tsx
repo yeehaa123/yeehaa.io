@@ -1,4 +1,4 @@
-import type { Course } from "@/offcourse/types";
+import type { Course, CourseQuery, CheckpointQuery, UserCourseData, Affordances } from "@/offcourse/types";
 import { cn } from "@/lib/utils"
 import { Card } from "@/components/ui/card"
 
@@ -17,23 +17,24 @@ import {
   Checkpoint,
   Tags
 } from "./";
-export type Actions = {
-  toggleBookmark: (courseId: string) => void
-}
 
-export type CourseCard = {
+export type CourseCardState = {
   courseId: string,
   course: Course,
-  userData: {
-    isBookmarked: boolean
-  }
-  affordances: {
-    canBookmark: boolean
-  }
+  userData: UserCourseData,
+  affordances: Affordances,
+}
+
+export type Actions = {
+  toggleBookmark: (query: CourseQuery) => void,
+  showCheckpoint: (query: CheckpointQuery) => void
+}
+
+type Props = CourseCardState & {
   actions: Actions
 }
 
-export default function CourseCard({ course, userData, affordances, actions }: CourseCard) {
+export default function CourseCard({ course, userData, affordances, actions }: Props) {
   const {
     courseId,
     goal,
@@ -45,7 +46,8 @@ export default function CourseCard({ course, userData, affordances, actions }: C
   } = course;
 
   const {
-    toggleBookmark
+    toggleBookmark,
+    showCheckpoint
   } = actions
 
   const {
@@ -64,7 +66,7 @@ export default function CourseCard({ course, userData, affordances, actions }: C
           <Bookmark
             canBookmark={canBookmark}
             isBookmarked={isBookmarked}
-            onClick={() => toggleBookmark(courseId)} />
+            onClick={() => toggleBookmark({ courseId })} />
         </CardTitle>
         <Curator alias={curator} socials={{}} />
         <CardDescription onClick={console.log}>
@@ -74,13 +76,14 @@ export default function CourseCard({ course, userData, affordances, actions }: C
       </CardHeader>
       <CardContent>
         <ul className="flex flex-col gap-2">
-          {checkpoints.map((cp, index) => (
+          {checkpoints.map((({ checkpointId, ...cp }, index) => (
             <Checkpoint
               courseId={courseId}
               toggleComplete={console.log}
-              showCheckpoint={console.log}
+              showCheckpoint={() => showCheckpoint({ courseId, checkpointId })}
               key={index}
-              {...cp} />))
+              checkpointId={checkpointId}
+              {...cp} />)))
           }
         </ul>
       </CardContent>
