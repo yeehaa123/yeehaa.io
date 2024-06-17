@@ -25,9 +25,9 @@ export function Overlay(props: Props) {
       show={overlayMode !== OverlayModes.NONE}
       enter="ease-out duration-200"
       enterFrom="translate-y-full opacity-80"
-      enterTo="translate-y-0 z-10 opacity-95"
-      leave="ease-in duration-200"
-      leaveFrom="translate-y-0 opacity-95"
+      enterTo="translate-y-0 z-10 opacity-100"
+      leave="ease-out duration-150"
+      leaveFrom="translate-y-0 opacity-100"
       leaveTo="translate-y-full opacity-80" >
       <InternalOverlay {...props} />
     </Transition>)
