@@ -26,7 +26,7 @@ export default function Curator({ alias, socials }: Curator) {
       <a href={`/offcourse/curator/${alias}`} className="flex items-center space-x-3">
         <Avatar>
           <AvatarImage userName={alias} saturation={100} lightness={100} />
-          <AvatarFallback className="bg-indigo-600 text-white">YH</AvatarFallback>
+          <AvatarFallback className="bg-secondary text-white">YH</AvatarFallback>
         </Avatar>
         <CardDescription className="capitalize">{alias}</CardDescription>
       </a>
