@@ -30,6 +30,7 @@ export function BaseHead({
   return (
     <>
       <meta name="description" content={excerpt} />
+      <meta property="og:site_name" content="YEEHAA" />
 
       <meta property="og:url" content={url.toString()} />
       <meta property="og:type" content={type} />
