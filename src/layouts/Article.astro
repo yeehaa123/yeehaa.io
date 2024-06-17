@@ -28,7 +28,7 @@ const type = OGType.ARTICLE;
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
   <Image class="w-full" slot="image" src={imageURL} alt={title} />
-  <article class="container flex flex-col lg:flex-row px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
+  <article class="container flex flex-col lg:flex-row px-5 gap-5 lg:gap-10 xl:gap-12 py-12 lg:py-20 mx-auto">
     <div>
       <ArticleHeading href={"/"} {order} {series} {title}/>
       <div class="prose prose-base md:prose-lg lg:prose-xl
