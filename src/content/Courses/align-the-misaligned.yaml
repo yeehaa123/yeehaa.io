@@ -22,6 +22,7 @@ tags:
 checkpoints:
   - task: Discover your personal strengths
     href: https://80000hours.org/articles/personal-strengths/
+    checkpointId: 2e559d297496526acf256dcab9322ff2
     description: The link provides practical advice and structured steps to help you
       identify and understand your personal strengths, which can align your
       career and personal goals effectively.
@@ -31,6 +32,7 @@ checkpoints:
       - self
   - task: Embrace your weaknesses
     href: https://maven.com/articles/identifying-greatest-weakness
+    checkpointId: 81fb0cdc7aee82af58cee3e999bacd37
     description: The article provides insights on identifying and understanding
       one's greatest weaknesses, a crucial step in aligning intentions and
       actions. By acknowledging these areas, individuals can better strategize
@@ -41,6 +43,7 @@ checkpoints:
       - self
   - task: Do a SWOT analysis of your startup
     href: https://fullscale.io/blog/swot-analysis-for-startups/
+    checkpointId: 219f0802d74c06daf8932c76707d4a73
     description: The article provides a detailed guide on performing a SWOT analysis
       for startups, helping to align business strategies by identifying
       strengths, weaknesses, opportunities, and threats.
@@ -50,6 +53,7 @@ checkpoints:
       - startups
   - task: Formulate your critical ask
     href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/
+    checkpointId: ccd7049287630785a390b6500562f0a7
     description: The guide provides insights into key networkers in Rotterdam who
       can facilitate connections, support, and collaboration to align efforts
       effectively.

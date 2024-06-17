@@ -1,5 +1,3 @@
-import type { Course, Checkpoint } from "../../cms/convert"
-
 export type CourseQuery = {
   courseId: string
 }
@@ -13,8 +11,16 @@ export type Affordances = {
   canBookmark: boolean,
 }
 
-export type UserCourseData = {
-  isBookmarked: boolean
+export enum OverlayModes {
+  NONE = "NONE",
+  CHECKPOINT = "CHECKPOINT"
+}
+
+export type CardState = {
+  isBookmarked: boolean,
+  overlayMode: OverlayModes,
+  selectedCheckpoint: Checkpoint | undefined,
+  affordances: Affordances,
 }
 
 export type Curator = {
@@ -22,11 +28,26 @@ export type Curator = {
   socials: { linkedin?: string }
 }
 
-export type OffcourseCardState = {
-  course: Course,
-  affordances: Affordances,
-  userData: UserCourseData,
-}[]
+export type Checkpoint = {
+  checkpointId: string,
+  task: string,
+  href: string,
+  description: string,
+  tags: string[]
+}
+
+export type Habitat = {
+  slug: string
+}
+
+export type Course = {
+  courseId: string
+  goal: string,
+  curator: Curator,
+  description: string,
+  tags: string[]
+  checkpoints: Checkpoint[]
+  habitat?: Habitat | undefined
+}
 
 
-export type { Course, Checkpoint }

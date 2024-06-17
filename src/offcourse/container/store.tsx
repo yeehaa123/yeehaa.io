@@ -9,10 +9,17 @@ export function useOffcourse(data: Course | Course[]) {
   const toggleBookmark = (payload: CourseQuery) =>
     dispatch({ type: ActionType.TOGGLE_BOOKMARK, payload })
 
-  const showCheckpoint = (payload: CheckpointQuery) =>
-    dispatch({ type: ActionType.SHOW_CHECKPOINT, payload })
+  const showCheckpointOverlay = (payload: CheckpointQuery) =>
+    dispatch({ type: ActionType.SHOW_CHECKPOINT_OVERLAY, payload })
+
+  const hideCheckpointOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.HIDE_CHECKPOINT_OVERLAY, payload })
 
 
-  const actions = { toggleBookmark, showCheckpoint }
+  const actions = {
+    toggleBookmark,
+    showCheckpointOverlay,
+    hideCheckpointOverlay
+  }
   return { state, actions }
 }

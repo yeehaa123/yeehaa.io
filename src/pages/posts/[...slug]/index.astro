@@ -11,10 +11,15 @@ export async function getStaticPaths() {
 
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
-const { data} = entry
+const { data } = entry
+
+const curator = {
+  alias: "Yeehaa",
+  socials: {}
+}
 
 const course = data.course ? await getEntry(data.course) : null;
 ---
-<Layout {...data} {course}>
+<Layout {...data} course={course} {curator}>
   <Content/ >
 </Layout>

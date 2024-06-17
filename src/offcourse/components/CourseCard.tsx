@@ -1,11 +1,9 @@
-import type { Course, CourseQuery, CheckpointQuery, UserCourseData, Affordances } from "@/offcourse/types";
-import { cn } from "@/lib/utils"
-import { Card } from "@/components/ui/card"
+import type { Course, CourseQuery, CheckpointQuery, CardState } from "@/offcourse/types";
+import { Overlay } from "./Overlay";
+import CardChrome from "./CardChrome";
 
 import {
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  CardDescription, CardHeader, CardTitle,
   CardFooter,
   CardContent,
 } from "@/components/ui/card"
@@ -21,20 +19,20 @@ import {
 export type CourseCardState = {
   courseId: string,
   course: Course,
-  userData: UserCourseData,
-  affordances: Affordances,
+  cardState: CardState,
 }
 
 export type Actions = {
   toggleBookmark: (query: CourseQuery) => void,
-  showCheckpoint: (query: CheckpointQuery) => void
+  showCheckpointOverlay: (query: CheckpointQuery) => void
+  hideCheckpointOverlay: (query: CourseQuery) => void
 }
 
 type Props = CourseCardState & {
   actions: Actions
 }
 
-export default function CourseCard({ course, userData, affordances, actions }: Props) {
+export default function CourseCard({ course, cardState, actions }: Props) {
   const {
     courseId,
     goal,
@@ -47,49 +45,52 @@ export default function CourseCard({ course, userData, affordances, actions }: P
 
   const {
     toggleBookmark,
-    showCheckpoint
+    showCheckpointOverlay
   } = actions
 
   const {
-    isBookmarked
-  } = userData
+    isBookmarked,
+    affordances
+  } = cardState
 
   const {
     canBookmark
   } = affordances
 
   return (
-    <Card className={cn("flex flex-col select-none")}>
-      <CardHeader className="space-y-4">
-        <CardTitle className="flex w-full justify-between space-x-5 ">
-          <span className="max-w-[80%]">{goal}</span>
-          <Bookmark
-            canBookmark={canBookmark}
-            isBookmarked={isBookmarked}
-            onClick={() => toggleBookmark({ courseId })} />
-        </CardTitle>
-        <Curator alias={curator} socials={{}} />
-        <CardDescription onClick={console.log}>
-          {description}
-        </CardDescription>
-        <Tags tags={tags} />
-      </CardHeader>
-      <CardContent>
-        <ul className="flex flex-col gap-2">
-          {checkpoints.map((({ checkpointId, ...cp }, index) => (
-            <Checkpoint
-              courseId={courseId}
-              toggleComplete={console.log}
-              showCheckpoint={() => showCheckpoint({ courseId, checkpointId })}
-              key={index}
-              checkpointId={checkpointId}
-              {...cp} />)))
-          }
-        </ul>
-      </CardContent>
-      <CardFooter className="flex flex-col gap-y-4">
-        <Toolbar habitat={habitat} />
-      </CardFooter>
-    </Card >
-  )
+    <div className="grid *:col-start-1 *:row-start-1 overflow-hidden" >
+      <Overlay courseId={courseId} cardState={cardState} actions={actions} />
+      <CardChrome>
+        <CardHeader className="space-y-4">
+          <CardTitle className="flex w-full justify-between space-x-5 ">
+            <span className="max-w-[80%]">{goal}</span>
+            <Bookmark
+              canBookmark={canBookmark}
+              isBookmarked={isBookmarked}
+              onClick={() => toggleBookmark({ courseId })} />
+          </CardTitle>
+          <Curator {...curator} />
+          <CardDescription onClick={console.log}>
+            {description}
+          </CardDescription>
+          <Tags tags={tags} />
+        </CardHeader>
+        <CardContent>
+          <ul className="flex flex-col gap-2">
+            {checkpoints.map((({ checkpointId, ...cp }, index) => (
+              <Checkpoint
+                courseId={courseId}
+                toggleComplete={console.log}
+                showCheckpoint={() => showCheckpointOverlay({ courseId, checkpointId })}
+                key={index}
+                checkpointId={checkpointId}
+                {...cp} />)))
+            }
+          </ul>
+        </CardContent>
+        <CardFooter className="flex flex-col gap-y-4">
+          <Toolbar habitat={habitat} />
+        </CardFooter>
+      </CardChrome >
+    </div >)
 }

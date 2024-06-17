@@ -1,4 +1,4 @@
-import type { Course } from "@/offcourse/types";
+import { OverlayModes, type Course } from "@/offcourse/types";
 type OffCourseData = Course | Course[]
 
 function isCourse(data: OffCourseData): data is Course {
@@ -10,12 +10,14 @@ export function initialize(data: OffCourseData) {
     return {
       courseId: course.courseId,
       course,
-      userData: {
-        isBookmarked: false
+      cardState: {
+        isBookmarked: false,
+        selectedCheckpoint: undefined,
+        overlayMode: OverlayModes.NONE,
+        affordances: {
+          canBookmark: false
+        }
       },
-      affordances: {
-        canBookmark: true
-      }
     }
   })
 }

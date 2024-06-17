@@ -4,6 +4,7 @@ import * as filetree from "./filetree";
 import * as table from "./table";
 import * as series from "./series";
 import { initDirs } from "./helpers";
+
 import type { Course } from "./course/course"
 import type { Checkpoint } from "./course/checkpoint"
 

@@ -9,6 +9,7 @@ export const initSchema = z.object({
 })
 
 export const schema = initSchema.extend({
+  checkpointId: z.string(),
   description: z.string(),
   tags: z.array(z.string()),
 })

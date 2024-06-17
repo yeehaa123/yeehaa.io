@@ -1,11 +1,12 @@
 ---
-import { Offcourse } from "@/offcourse"
+import { Offcourse } from "@/offcourse/"
 import { Image } from 'astro:assets';
 import Layout from "./Base.astro"
 import { ArticleHeading } from "@/components/ArticleHeading";
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 const { 
   course,
+  curator,
   title, 
   order, 
   series, 
@@ -50,8 +51,8 @@ const type = OGType.ARTICLE;
         <slot/>
       </div>
     </div>
-    { course && <div >
-      <Offcourse data={course.data} client:load/>
+    { course && <div>
+      <Offcourse data={{...course.data, curator}} client:load/>
       </div>}
   </article>
 </Layout>
