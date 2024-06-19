@@ -83,6 +83,12 @@ dependencies:
   dotenv:
     specifier: ^16.4.5
     version: 16.4.5
+  form-data:
+    specifier: ^4.0.0
+    version: 4.0.0
+  formdata-node:
+    specifier: ^6.0.3
+    version: 6.0.3
   lucide-react:
     specifier: ^0.390.0
     version: 0.390.0(react@18.3.1)
@@ -3616,6 +3622,11 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 4.0.0-beta.3
+    dev: false
+
+  /formdata-node@6.0.3:
+    resolution: {integrity: sha512-8e1++BCiTzUno9v5IZ2J6bv4RU+3UKDmqWUQD0MIMVCd9AdhWkO1gw57oo1mNEX1dMq2EGI+FbWz4B92pscSQg==}
+    engines: {node: '>= 18'}
     dev: false
 
   /fraction.js@4.3.7:

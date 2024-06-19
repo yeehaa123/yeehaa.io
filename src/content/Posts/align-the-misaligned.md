@@ -6,7 +6,7 @@ series: Ecosystem Architecture
 createdAt: 2024-06-16T13:15:44.816Z
 updatedAt: 2024-06-16T13:15:44.816Z
 publishedAt: 2024-06-16T13:15:44.816Z
-imageURL: .cache/34d442a1971d4dbbe8315bbfa8de35d5.png
+imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
 excerpt: The internet has fragmented much like natural processes. By adopting
   "ecosystem architecture," which combines decentralization and regenerative
   design, we can create healthier, vibrant systems from these fragments.

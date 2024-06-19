@@ -44,7 +44,7 @@ export async function augment(entry: BaseArticle) {
   const { content, meta } = entry;
   const { checksum, title, publicationData } = meta;
   const { summary, tags, excerpt } = await ai.article.analyze({ title, content, checksum });
-  const imageURL = await ai.image.generate({ title, summary, checksum });
+  const imageURL = await ai.image.generate({ title, tags, summary, content, checksum });
   const course = meta.course && slugify(meta.course);
   const frontmatter = fm.init({
     ...meta,
