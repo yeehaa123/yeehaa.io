@@ -6,21 +6,22 @@ series: Ecosystem Architecture
 createdAt: 2024-06-16T13:15:44.816Z
 updatedAt: 2024-06-16T13:15:44.816Z
 publishedAt: 2024-06-16T13:15:44.816Z
-imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
-excerpt: The internet has fragmented much like natural processes. By adopting
-  "ecosystem architecture," which combines decentralization and regenerative
-  design, we can create healthier, vibrant systems from these fragments.
-summary: The article discusses the fragmentation of the internet, comparing it
-  to natural processes like tectonic shifts. It highlights that while the
-  internet may never be whole again, value can still be derived from its
-  fragments by adopting a practice called "ecosystem architecture." This
-  approach, inspired by various disciplines, merges decentralization with
-  regenerative design, aiming to create healthier, more vibrant systems. The
-  excess mindset, prevalent in tech and innovation, is seen as unsustainable,
-  and a shift towards more mindful practices is advocated.
+imageURL: .cache/34d442a1971d4dbbe8315bbfa8de35d5.png
+excerpt: Ecosystem architecture reimagines the fragmented internet, drawing on
+  interdisciplinary knowledge and regenerative design to transform waste into
+  innovation and foster vibrant, decentralized ecosystems.
+summary: The history of virtual space parallels physical space's fragmentation,
+  leaving the internet shattered and irreparable. Mining and extraction drive
+  the tech industry, causing environmental and social damages. Ecosystem
+  architecture, inspired by decentralization and regenerative design, offers a
+  new approach to harnessing the fragmented internet, turning waste into
+  innovation. It emphasizes the importance of designing biodiverse conceptual
+  ecosystems that thrive through interdisciplinary collaboration for a
+  regenerative future.
 tags:
   - internet
   - design
+  - tech
   - future
 course: align-the-misaligned
 ---

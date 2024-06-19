@@ -1,11 +1,11 @@
-export type CourseQuery = {
-  courseId: string
-}
-
-export type CheckpointQuery = {
-  courseId: string,
-  checkpointId: string,
-}
+import type {
+  Course,
+  CourseQuery,
+  CheckpointQuery,
+  Curator,
+  Checkpoint,
+  Habitat
+} from "./schema"
 
 export type Affordances = {
   canBookmark: boolean,
@@ -23,31 +23,11 @@ export type CardState = {
   affordances: Affordances,
 }
 
-export type Curator = {
-  alias: string;
-  socials: { linkedin?: string }
+export type {
+  Course,
+  Checkpoint,
+  CourseQuery,
+  CheckpointQuery,
+  Habitat,
+  Curator
 }
-
-export type Checkpoint = {
-  checkpointId: string,
-  task: string,
-  href: string,
-  description: string,
-  tags: string[]
-}
-
-export type Habitat = {
-  slug: string
-}
-
-export type Course = {
-  courseId: string
-  goal: string,
-  curator: Curator,
-  description: string,
-  tags: string[]
-  checkpoints: Checkpoint[]
-  habitat?: Habitat | undefined
-}
-
-

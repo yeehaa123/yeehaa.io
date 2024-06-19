@@ -29,9 +29,9 @@ export interface CourseEntity {
   course: BaseCourse
 }
 
-export async function init({ content, author }: { author: string, content: string }) {
-  const checksum = generateChecksum(content);
-  const course = await parse(content) as BaseCourse;
+export async function init({ item, author }: { author: string, item: string }) {
+  const checksum = generateChecksum(item);
+  const course = await parse(item) as BaseCourse;
   const { goal, curator, habitat } = course;
   let hash = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
@@ -43,7 +43,8 @@ export async function init({ content, author }: { author: string, content: strin
     id: hash
   });
   return {
-    meta, course
+    meta,
+    course
   }
 }
 

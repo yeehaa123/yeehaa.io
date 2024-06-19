@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import OpenAI from "openai";
 import * as cache from '../cache';
+import colors from "../../styles/colorSchemes/BambooCurtain";
 
 type ImageData = {
   summary: string,
@@ -10,22 +11,25 @@ type ImageData = {
   checksum: string
 }
 
-
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function dallEGenerate({ summary, title, tags, checksum }: ImageData) {
   const imageURL = await cache.getImage(checksum);
+  const { primary, secondary } = colors;
   if (imageURL) { return imageURL };
   const response = await openai.images.generate({
     model: "dall-e-3",
-    prompt: `generate a banner image for a blog post with the following title '${title}', summary: '${summary}' and tags: ${tags.join(", ")}.`,
+    prompt: `generate a banner image for a blog post with the following title '${title}', summary: '${summary}' and tags: ${tags.join(", ")}. Try to use the following primary color: '${primary}' and secondary color: '${secondary}' in the image`,
     n: 1,
+    quality: 'hd',
+    style: 'vivid',
     response_format: "b64_json",
     size: "1792x1024",
   });
   const b64_json = response?.data[0]?.b64_json;
+  console.log(checksum, response?.data[0]?.revised_prompt);
   if (b64_json) {
     return cache.writeImage({ checksum, b64_json });
   }

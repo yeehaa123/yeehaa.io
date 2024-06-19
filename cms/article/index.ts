@@ -6,7 +6,7 @@ import { writeFile, copyFile } from 'fs/promises'
 import * as ai from '../ai';
 import * as fm from "./frontmatter";
 import * as m from "../meta";
-import { generateChecksum, hashify, parseMarkdown, slugify } from "../helpers";
+import { generateChecksum, hashify, parseMarkdoc, slugify } from "../helpers";
 
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
@@ -21,10 +21,11 @@ export type BaseArticle = {
   content: string,
 }
 
-export async function init({ content, author, series }:
-  { series?: string | undefined, author: string, content: string }) {
-  const checksum = generateChecksum(content);
-  const { title } = parseMarkdown(content);
+export async function init({ item, author, series }:
+  { series?: string | undefined, author: string, item: string }) {
+  const checksum = generateChecksum(item);
+  const { title, content } = parseMarkdoc(item);
+  if (!title) { throw ("ARTICLE NEEDS TITLE"); }
   let hash = hashify(JSON.stringify({ title, author }));
   const meta = m.init({
     id: hash,

@@ -1,0 +1,11 @@
+---
+alias: yeehaa
+name: Jan Hein Hoogstad
+socials:
+  linkedin: https://www.linkedin.com/in/yeehaa/
+  github: https://www.github.com/yeehaa123/
+  instagram: https://www.instagram.com/yeehaa12345/
+---
+
+Yeehaa is the alias of Jan Hein Hoogstad
+

@@ -3,7 +3,8 @@ import * as pd from "./publicationData";
 
 export enum ContentType {
   ARTICLE = "article",
-  COURSE = "course"
+  COURSE = "course",
+  PROFILE = "profile"
 }
 
 export enum Status {

@@ -1,4 +1,5 @@
 import type { BaseArticle } from "./article";
+import type { BaseProfile } from "./profile";
 import type { MetaTable } from "./table";
 import type { CourseEntity } from "./course";
 import { ContentType, Status } from "./meta";
@@ -6,11 +7,11 @@ import * as path from 'path';
 import { readdir, lstat, readFile } from 'fs/promises'
 import * as article from "./article";
 import * as course from "./course";
+import * as profile from "./profile";
+import * as people from "./people";
 import { deslugify } from "./helpers";
 
-export const PATH_SUFFIXES = [article.PATH_SUFFIX, course.PATH_SUFFIX];
-
-type Entity = CourseEntity | BaseArticle;
+type Entity = CourseEntity | BaseArticle | BaseProfile
 
 function isArticle(entity: Entity): entity is BaseArticle {
   return (entity as BaseArticle).meta.contentType === ContentType.ARTICLE;;
@@ -20,16 +21,23 @@ function isCourse(entity: Entity): entity is CourseEntity {
   return (entity as CourseEntity).meta.contentType === ContentType.COURSE;;
 }
 
+function isProfile(entity: Entity): entity is BaseProfile {
+  return (entity as BaseProfile).meta.contentType === ContentType.PROFILE;;
+}
+
 export type FileTree = Map<string, Entity>
 
 async function processFile(filePath: string, author: string, series?: string) {
   try {
-    const { ext } = path.parse(filePath);
+    const { ext, name, } = path.parse(filePath);
     const item = await readFile(filePath, 'utf8');
+    if (name === "profile") {
+      return profile.init({ item, author })
+    }
     if (ext === ".md") {
-      return article.init({ series, author, content: item })
+      return article.init({ series, author, item })
     } else if (ext === '.offcourse') {
-      return await course.init({ author, content: item })
+      return await course.init({ author, item })
     }
     return false;
   } catch (e) {
@@ -74,9 +82,22 @@ export async function create(basePath: string): Promise<FileTree> {
 }
 
 export function associate(tree: FileTree, metaTable: MetaTable) {
-  for (const articleMeta of metaTable) {
-    const { contentType } = articleMeta;
+  for (const meta of metaTable) {
+    const { contentType } = meta;
+    if (contentType === ContentType.PROFILE) {
+      const profileMeta = meta;
+      const x = metaTable
+        .filter(m => m.author === profileMeta.author)
+        .filter(m => m.contentType !== ContentType.PROFILE)
+        .reduce((acc, item) => {
+          const items = acc.get(item.contentType);
+          acc.set(item.contentType, items ? [...items, item] : [item]);
+          return acc;
+        }, new Map);
+      console.log(x);
+    }
     if (contentType === ContentType.ARTICLE) {
+      const articleMeta = meta;
       const courseMeta = metaTable
         .filter(m => m.contentType === ContentType.COURSE)
         .find((m) => m.title === articleMeta.title || m.habitat === articleMeta.title);
@@ -124,6 +145,10 @@ export async function write(basePath: string, tree: FileTree) {
       } else if (isCourse(entry)) {
         const augmented = await course.augment(entry);
         await course.write(basePath, augmented);
+      } else if (isProfile(entry)) {
+        const augmented = await profile.augment(entry);
+        await profile.write(basePath, augmented);
+        await people.write(basePath, augmented);
       }
     }
   }

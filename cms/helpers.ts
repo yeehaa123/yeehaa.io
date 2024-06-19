@@ -4,8 +4,12 @@ import Markdoc from '@markdoc/markdoc';
 import { createHash } from 'crypto';
 import crypto from "crypto"
 import voca from "voca";
+import * as yaml from "yaml";
 import { mkdir, rm } from 'fs/promises'
 import path from "path";
+import matter from 'gray-matter';
+
+
 
 function isTag(node: RenderableTreeNode): node is Tag {
   return (node as Tag).name !== undefined;
@@ -55,7 +59,7 @@ export function slugify(str: string) {
   return voca.slugify(str)
 }
 
-function collectTitle(node: RenderableTreeNode, sections = []): string {
+function collectTitle(node: RenderableTreeNode, sections = []): string | undefined {
   if (node && isTag(node)) {
     if (node.name.match(/h1/)) {
       return node.children[0] as string;
@@ -66,12 +70,17 @@ function collectTitle(node: RenderableTreeNode, sections = []): string {
       }
     }
   }
-  throw ("ARTICLE NEEDS TITLE");
+  return undefined;
 }
 
 export function parseMarkdown(content: string) {
+  return matter(content)
+}
+
+export function parseMarkdoc(content: string) {
   const ast = Markdoc.parse(content);
   const contentTree = Markdoc.transform(ast);
   const title = collectTitle(contentTree);
-  return { title };
+  const frontmatter = ast.attributes.frontmatter ? yaml.parse(ast.attributes.frontmatter) : {};
+  return { title, frontmatter, content };
 }
