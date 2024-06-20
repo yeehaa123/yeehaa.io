@@ -1,6 +1,6 @@
 import type { MetaTable } from "../table";
-import type { Entity, FileType } from "./entity"
-import * as et from "./entity"
+import type { Entity, FileType } from "../entity"
+import * as et from "../entity"
 import * as path from 'path';
 import { readdir, lstat, readFile } from 'fs/promises'
 import { deslugify } from "../helpers";
@@ -8,8 +8,7 @@ import { deslugify } from "../helpers";
 export type FileTree = Map<string, Entity>
 
 function set(tree: FileTree, entity: Entity) {
-  const { id } = entity.meta;
-  tree.set(id, entity)
+  tree.set(entity.meta.id, entity)
 }
 
 async function processFile(tree: FileTree, filePath: string, author: string, series?: string) {
@@ -65,9 +64,10 @@ export function associate(tree: FileTree, metaTable: MetaTable) {
 export function update(tree: FileTree, metaTable: MetaTable) {
   for (const meta of metaTable) {
     const { id } = meta;
-    const entry = tree.get(id);
-    if (entry) {
-      set(tree, { ...entry, meta });
+    const entity = tree.get(id);
+    if (entity) {
+      const updated = et.update(entity, meta);
+      set(tree, updated);
     }
   }
 }
