@@ -1,29 +1,14 @@
-import type { BaseArticle } from "./article";
-import type { BaseProfile } from "./profile";
-import type { MetaTable } from "./table";
-import type { CourseEntity } from "./course";
-import { ContentType, Status } from "./meta";
+import type { MetaTable } from "../table";
+import type { Entity } from "./entity"
+import * as entity from "./entity"
+import { ContentType } from "../meta";
 import * as path from 'path';
 import { readdir, lstat, readFile } from 'fs/promises'
-import * as article from "./article";
-import * as course from "./course";
-import * as profile from "./profile";
-import * as people from "./people";
-import { deslugify } from "./helpers";
+import * as article from "../article";
+import * as course from "../course";
+import * as profile from "../profile";
+import { deslugify } from "../helpers";
 
-type Entity = CourseEntity | BaseArticle | BaseProfile
-
-function isArticle(entity: Entity): entity is BaseArticle {
-  return (entity as BaseArticle).meta.contentType === ContentType.ARTICLE;;
-}
-
-function isCourse(entity: Entity): entity is CourseEntity {
-  return (entity as CourseEntity).meta.contentType === ContentType.COURSE;;
-}
-
-function isProfile(entity: Entity): entity is BaseProfile {
-  return (entity as BaseProfile).meta.contentType === ContentType.PROFILE;;
-}
 
 export type FileTree = Map<string, Entity>
 
@@ -137,19 +122,6 @@ export function update(tree: FileTree, metaTable: MetaTable) {
 
 export async function write(basePath: string, tree: FileTree) {
   for (const [_, entry] of tree) {
-    const { status, checksum } = entry.meta;
-    if (status !== Status.DRAFT) {
-      if (isArticle(entry)) {
-        const augmented = await article.augment(entry);
-        await article.write(basePath, checksum, augmented);
-      } else if (isCourse(entry)) {
-        const augmented = await course.augment(entry);
-        await course.write(basePath, augmented);
-      } else if (isProfile(entry)) {
-        const augmented = await profile.augment(entry);
-        await profile.write(basePath, augmented);
-        await people.write(basePath, augmented);
-      }
-    }
+    entity.write(basePath, entry);
   }
 }
