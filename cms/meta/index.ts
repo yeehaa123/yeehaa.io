@@ -1,6 +1,6 @@
+import type { Meta, MetaInit } from "./schema"
 import * as pd from "./publicationData";
 import * as filters from "./filters"
-import type { Meta, MetaInit } from "./schema"
 import { schema, Status } from "./schema"
 
 export function validate(frontmatter: Meta) {
@@ -19,17 +19,10 @@ export function associate(meta: Meta, other: Meta) {
 
 export function init(metaInit: MetaInit) {
   const status = metaInit.status || Status.DRAFT;
-  if (status === Status.PUBLISHED) {
-    return validate({
-      ...metaInit,
-      status,
-      publicationData: pd.init(metaInit.publicationData)
-    });
-  } else {
-    const status = Status.DRAFT;
-    return validate({
-      ...metaInit,
-      status
-    });
+  const meta = { ...metaInit, status }
+  if (filters.isPublished(meta)) {
+    const publicationData = pd.init(meta.publicationData);
+    return validate({ ...meta, publicationData });
   }
+  return validate(meta);
 }
