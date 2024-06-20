@@ -1,4 +1,5 @@
-import type { Meta } from "../meta"
+import type { Meta } from "../meta/schema"
+import { ContentType } from "../meta/schema"
 import type { Course } from "./course";
 import * as c from "./course";
 import * as cp from "./checkpoint";
@@ -37,7 +38,7 @@ export async function init({ item, author }: { author: string, item: string }) {
   const meta = m.init({
     checksum,
     habitat,
-    contentType: m.ContentType.COURSE,
+    contentType: ContentType.COURSE,
     author,
     title: course.goal,
     id: hash

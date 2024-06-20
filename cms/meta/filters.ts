@@ -1,5 +1,5 @@
-import type { Meta, MetaInit } from ".";
-import { ContentType, Status } from ".";
+import type { Meta, MetaInit } from "./schema";
+import { ContentType, Status } from "./schema";
 
 export function isProfile(meta: Meta) {
   return meta.contentType === ContentType.PROFILE;;

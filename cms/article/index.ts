@@ -1,5 +1,6 @@
-import type { Meta } from "../meta"
+import type { Meta } from "../meta/schema"
 import type { ArticleFrontmatter } from "./frontmatter";
+import { ContentType } from "../meta/schema"
 import * as path from 'path';
 import { stringify } from "yaml";
 import { writeFile, copyFile } from 'fs/promises'
@@ -30,7 +31,7 @@ export async function init({ item, author, series }:
   const meta = m.init({
     id: hash,
     title,
-    contentType: m.ContentType.ARTICLE,
+    contentType: ContentType.ARTICLE,
     author,
     series,
     checksum

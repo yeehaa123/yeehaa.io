@@ -1,4 +1,5 @@
-import { Status, type Meta } from "../meta"
+import type { Meta } from "../meta/schema"
+import { Status } from "../meta/schema"
 
 type SeriesMap = Map<string, Meta[]>
 

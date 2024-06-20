@@ -3,7 +3,8 @@ import type { BaseProfile } from "../profile";
 import type { Entity } from "."
 import type { InitEntity } from "./schema"
 import type { CourseEntity } from "../course";
-import { ContentType, filters as metaFilters } from "../meta";
+import { ContentType } from "../meta/schema";
+import * as mf from "../meta/filters";
 
 export enum FileType {
   MARKDOWN = ".md",
@@ -35,5 +36,5 @@ export function isOffcourseFile({ fileType }: InitEntity) {
 }
 
 export function isNotDraft({ meta }: Entity) {
-  return metaFilters.isNotDraft(meta);
+  return mf.isNotDraft(meta);
 }

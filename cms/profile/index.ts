@@ -1,12 +1,14 @@
-import type { Meta } from "../meta";
+import type { Meta } from "../meta/schema";
+import type { InitEntity } from "cms/entity/schema";
 import type { Curator } from "@/offcourse/schema";
+
+import { ContentType } from "../meta/schema"
 
 import * as path from 'path';
 import * as m from "../meta";
 import { generateChecksum, hashify, parseMarkdown, slugify } from "../helpers";
 import { writeFile } from 'fs/promises'
 import { stringify } from "yaml";
-import type { InitEntity } from "cms/entity/schema";
 
 export const PATH_SUFFIX = "Profiles"
 
@@ -28,7 +30,7 @@ export function init({ item, author }: InitEntity) {
   const meta = m.init({
     id: hash,
     title: author,
-    contentType: m.ContentType.PROFILE,
+    contentType: ContentType.PROFILE,
     author,
     checksum
   })
