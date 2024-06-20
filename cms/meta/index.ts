@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import * as pd from "./publicationData";
+import * as filters from "./filters"
 
+export { filters }
 export enum ContentType {
   ARTICLE = "article",
   COURSE = "course",
@@ -28,15 +30,33 @@ export const schema = z.object({
 
 export type Meta = z.infer<typeof schema>
 
+
 const initSchema = schema.extend({
   status: z.nativeEnum(Status).optional(),
 })
 
 export type MetaInit = z.infer<typeof initSchema>
 
-function validate(frontmatter: Meta) {
+export function validate(frontmatter: Meta) {
   return schema.parse(frontmatter);
 }
+
+export function associate(meta: Meta, other: Meta) {
+  if (filters.isHabitat(meta, other)) {
+    return {
+      ...meta,
+      course: meta.title
+    }
+  }
+  if (filters.hasHabitat(meta, other)) {
+    return {
+      ...meta,
+      habitat: meta.title
+    }
+  }
+  return false;
+}
+
 export function init({
   status,
   publicationData,

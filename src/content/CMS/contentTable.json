@@ -9,9 +9,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-16T13:15:44.816Z",
-      "updatedAt": "2024-06-16T13:15:44.816Z",
-      "publishedAt": "2024-06-16T13:15:44.816Z"
+      "createdAt": "2024-06-20T09:59:01.113Z",
+      "updatedAt": "2024-06-20T09:59:01.113Z",
+      "publishedAt": "2024-06-20T09:59:01.113Z"
     },
     "course": "Align the Misaligned"
   },
@@ -20,15 +20,9 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "published",
-    "order": 1,
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "publicationData": {
-      "createdAt": "2024-06-19T09:41:32.272Z",
-      "updatedAt": "2024-06-19T09:41:32.272Z",
-      "publishedAt": "2024-06-19T09:41:32.272Z"
-    }
+    "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -53,15 +47,9 @@
     "author": "yeehaa",
     "title": "Global Village People",
     "contentType": "article",
-    "status": "published",
-    "order": 2,
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "publicationData": {
-      "createdAt": "2024-06-19T15:20:07.777Z",
-      "updatedAt": "2024-06-19T15:20:07.777Z",
-      "publishedAt": "2024-06-19T15:20:07.777Z"
-    }
+    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
   },
   {
     "id": "e7b4fa43f10163d5d384cac81e4b5c29",
@@ -116,9 +104,9 @@
     "status": "published",
     "checksum": "f5a302909caa3c3a22fa9087760ec915",
     "publicationData": {
-      "createdAt": "2024-06-16T13:15:44.816Z",
-      "updatedAt": "2024-06-16T13:15:44.816Z",
-      "publishedAt": "2024-06-16T13:15:44.816Z"
+      "createdAt": "2024-06-20T10:15:36.846Z",
+      "updatedAt": "2024-06-20T10:15:36.846Z",
+      "publishedAt": "2024-06-20T10:15:36.846Z"
     },
     "habitat": "Align the Misaligned"
   },
@@ -139,9 +127,9 @@
     "status": "published",
     "checksum": "15a5954a6cf2f1e0334e320d4680bdeb",
     "publicationData": {
-      "createdAt": "2024-06-19T17:54:27.749Z",
-      "updatedAt": "2024-06-19T17:54:27.749Z",
-      "publishedAt": "2024-06-19T17:54:27.749Z"
+      "createdAt": "2024-06-20T10:30:09.730Z",
+      "updatedAt": "2024-06-20T10:30:09.730Z",
+      "publishedAt": "2024-06-20T10:30:09.730Z"
     }
   }
 ]
