@@ -20,9 +20,16 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
+    "order": 1,
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea"
+    "checksum": "6da78a490110bdc70b906c065f1b99ea",
+    "publicationData": {
+      "createdAt": "2024-06-20T17:06:46.800Z",
+      "updatedAt": "2024-06-20T17:06:46.800Z",
+      "publishedAt": "2024-06-20T17:06:46.800Z"
+    },
+    "course": "Continental Drift"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -115,9 +122,14 @@
     "author": "yeehaa",
     "title": "Engineer Breakthroughs",
     "contentType": "course",
-    "status": "draft",
+    "status": "published",
     "checksum": "578a287e4a43071c4b0310729bbb87bc",
-    "habitat": "Continental Drift"
+    "publicationData": {
+      "createdAt": "2024-06-20T17:07:00.500Z",
+      "updatedAt": "2024-06-20T17:07:00.500Z",
+      "publishedAt": "2024-06-20T17:07:00.500Z"
+    },
+    "habitat": "Engineer Breakthroughs"
   },
   {
     "id": "90145c64e30b6529d28643ee315fd1f4",

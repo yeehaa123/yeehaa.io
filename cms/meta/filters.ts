@@ -1,4 +1,4 @@
-import type { Meta } from ".";
+import type { Meta, MetaInit } from ".";
 import { ContentType, Status } from ".";
 
 export function isProfile(meta: Meta) {
@@ -28,7 +28,7 @@ export function hasHabitat(meta: Meta, other: Meta) {
     (hasSameTitle(meta, other) || meta.habitat === other.title)
 }
 
-export function isPublished(meta: Meta) {
+export function isPublished(meta: Meta | MetaInit) {
   return meta.status === Status.PUBLISHED
 }
 
@@ -44,3 +44,6 @@ export function isCourse(meta: Meta) {
   return meta.contentType === ContentType.COURSE;;
 }
 
+export function isNotDraft(meta: Meta) {
+  return meta.status !== Status.DRAFT;
+}

@@ -1,0 +1,65 @@
+courseId: 127debf7951504f7e59f1441a4b0a473
+goal: Engineer Breakthroughs
+curator: yeehaa
+description: The sequence guides through self-discovery and strategic planning
+  to engineer breakthroughs. Identifying personal strengths and embracing
+  weaknesses fosters growth and innovation. Conducting a SWOT analysis of your
+  startup empowers strategic decisions. Formulating a critical ask leverages
+  networks for essential resources and connections, driving innovation and
+  breakthroughs.
+habitat: engineer-breakthroughs
+createdAt: 2024-06-20T17:07:00.500Z
+updatedAt: 2024-06-20T17:07:00.500Z
+publishedAt: 2024-06-20T17:07:00.500Z
+tags:
+  - skills
+  - career
+  - growth
+  - self
+  - success
+  - swot
+  - startups
+  - network
+  - connect
+  - mentor
+checkpoints:
+  - task: Discover your personal strengths
+    href: https://80000hours.org/articles/personal-strengths/
+    checkpointId: c390245b6a5baf5af01cee6aadc78223
+    description: The article provides a structured approach to identifying personal
+      strengths using methods like introspection, feedback, and testing. It
+      focuses on aligning these strengths with impactful career choices,
+      fostering innovation, and driving significant career breakthroughs.
+    tags:
+      - skills
+      - career
+  - task: Embrace your weaknesses
+    href: https://maven.com/articles/identifying-greatest-weakness
+    checkpointId: 458b8962f9c36c2da646144642cdf6e6
+    description: The resource guides individuals to identify and embrace their
+      weaknesses, turning them into opportunities for growth and innovation,
+      which is pivotal for engineering breakthroughs.
+    tags:
+      - growth
+      - self
+      - success
+  - task: Do a SWOT analysis of your startup
+    href: https://fullscale.io/blog/swot-analysis-for-startups/
+    checkpointId: 53d626b05559df39bf26821aaa2a1cc0
+    description: This article assists startups in conducting a SWOT analysis by
+      identifying strengths, weaknesses, opportunities, and threats, crucial for
+      engineering breakthroughs and strategic planning.
+    tags:
+      - swot
+      - startups
+  - task: Formulate your critical ask
+    href: https://www.42workspace.com/guide/superconnectors-in-rotterdam/
+    checkpointId: 1ff4e492d7a7f2d3249a556aca257010
+    description: The link offers insights on connecting with key influencers and
+      network hubs in Rotterdam, aiding in creating valuable professional
+      relationships and collaborations that can drive innovative engineering
+      breakthroughs.
+    tags:
+      - network
+      - connect
+      - mentor

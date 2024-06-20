@@ -1,5 +1,5 @@
 import type { MetaTable } from "../table";
-import type { Entity, FileType } from "../entity"
+import type { Entity } from "../entity"
 import * as et from "../entity"
 import * as path from 'path';
 import { readdir, lstat, readFile } from 'fs/promises'
@@ -12,9 +12,8 @@ function set(tree: FileTree, entity: Entity) {
 }
 
 async function processFile(tree: FileTree, filePath: string, author: string, series?: string) {
-  const { ext, name: fileName } = path.parse(filePath);
+  const { ext: fileType, name: fileName } = path.parse(filePath);
   const item = await readFile(filePath, 'utf8');
-  const fileType = ext as FileType
   const entity = await et.init({ item, fileType, fileName, series, author })
   set(tree, entity);
 }
@@ -66,7 +65,7 @@ export function update(tree: FileTree, metaTable: MetaTable) {
     const { id } = meta;
     const entity = tree.get(id);
     if (entity) {
-      const updated = et.update(entity, meta);
+      const updated = { ...entity, meta }
       set(tree, updated);
     }
   }

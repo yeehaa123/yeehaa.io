@@ -57,11 +57,7 @@ export function associate(meta: Meta, other: Meta) {
   return false;
 }
 
-export function init({
-  status,
-  publicationData,
-  ...rest
-}: MetaInit) {
+export function init({ status, publicationData, ...rest }: MetaInit) {
   if (status === Status.PUBLISHED) {
     return validate({
       ...rest,

@@ -6,6 +6,7 @@ import * as m from "../meta";
 import { generateChecksum, hashify, parseMarkdown, slugify } from "../helpers";
 import { writeFile } from 'fs/promises'
 import { stringify } from "yaml";
+import type { InitEntity } from "cms/entity/schema";
 
 export const PATH_SUFFIX = "Profiles"
 
@@ -20,8 +21,7 @@ export type Profile = {
   content: string
 }
 
-export function init({ item, author }:
-  { author: string, item: string }) {
+export function init({ item, author }: InitEntity) {
   const checksum = generateChecksum(item);
   const { content, data } = parseMarkdown(item);
   let hash = hashify(JSON.stringify({ author }));
