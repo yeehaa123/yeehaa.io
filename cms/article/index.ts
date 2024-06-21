@@ -8,19 +8,29 @@ import * as ai from '../ai';
 import * as fm from "./frontmatter";
 import * as m from "../meta";
 import { generateChecksum, hashify, parseMarkdoc, slugify } from "../helpers";
+import type { Analysis } from "@/offcourse/schema";
 
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
-
-export type Article = {
-  frontmatter: ArticleFrontmatter,
-  content: string,
-}
 
 export type BaseArticle = {
   meta: Meta,
   content: string,
 }
+
+export type AnalyzedArticle = {
+  meta: Meta,
+  analysis: Analysis,
+  content: string,
+}
+
+export type FinalArticle = {
+  meta: Meta,
+  frontmatter: ArticleFrontmatter,
+  content: string,
+}
+
+export type Article = BaseArticle | FinalArticle;
 
 export async function init({ item, author, series }:
   { series?: string | undefined, author: string, item: string }) {
@@ -42,6 +52,11 @@ export async function init({ item, author, series }:
   };
 }
 
+export function analysis(entity: BaseArticle) {
+  const analysis = { summary: "BLA", tags: [], excerpt: "HHHH" }
+  return { ...entity, analysis }
+}
+
 export async function augment(entry: BaseArticle) {
   const { content, meta } = entry;
   const { checksum, title, publicationData } = meta;
@@ -58,12 +73,13 @@ export async function augment(entry: BaseArticle) {
     imageURL
   });
   return {
+    meta,
     frontmatter,
     content
   }
 }
 
-export function render({ content, frontmatter }: Article) {
+export function render({ content, frontmatter }: FinalArticle) {
   return `---
 ${stringify(frontmatter).trim()}
 ---
@@ -72,7 +88,8 @@ ${content}
 `
 }
 
-export async function write(basePath: string, checksum: string, article: Article) {
+export async function write(basePath: string, article: FinalArticle) {
+  const { checksum } = article.meta;
   const { title } = article.frontmatter;
   const imgSrc = path.join('./.cache', `${checksum}.png`);
   const imgDest = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);

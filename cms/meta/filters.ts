@@ -9,10 +9,6 @@ export function hasSameAuthor(meta: Meta, other: Meta) {
   return meta.author === other.author;
 }
 
-export function isAuthor(meta: Meta, other: Meta) {
-  return isProfile(meta) && isNotProfile(other) && hasSameAuthor(meta, other);
-}
-
 export function hasSameTitle(meta: Meta, other: Meta) {
   return meta.title === other.title;
 }

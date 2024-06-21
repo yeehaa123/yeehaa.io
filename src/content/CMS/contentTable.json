@@ -9,27 +9,19 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-21T07:48:58.483Z",
-      "updatedAt": "2024-06-21T07:48:58.483Z",
-      "publishedAt": "2024-06-21T07:48:58.483Z"
-    },
-    "course": "Align the Misaligned"
+      "createdAt": "2024-06-21T18:14:09.775Z",
+      "updatedAt": "2024-06-21T18:14:09.775Z",
+      "publishedAt": "2024-06-21T18:14:09.775Z"
+    }
   },
   {
     "id": "88be3ee13fcaec1270308625b34696aa",
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "published",
-    "order": 1,
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "publicationData": {
-      "createdAt": "2024-06-21T08:31:36.222Z",
-      "updatedAt": "2024-06-21T08:31:36.222Z",
-      "publishedAt": "2024-06-21T08:31:36.222Z"
-    },
-    "course": "Engineer Breakthroughs"
+    "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -111,24 +103,18 @@
     "status": "published",
     "checksum": "f5a302909caa3c3a22fa9087760ec915",
     "publicationData": {
-      "createdAt": "2024-06-21T07:49:15.347Z",
-      "updatedAt": "2024-06-21T07:49:15.347Z",
-      "publishedAt": "2024-06-21T07:49:15.347Z"
-    },
-    "habitat": "Align the Misaligned"
+      "createdAt": "2024-06-21T18:14:09.775Z",
+      "updatedAt": "2024-06-21T18:14:09.775Z",
+      "publishedAt": "2024-06-21T18:14:09.775Z"
+    }
   },
   {
     "id": "127debf7951504f7e59f1441a4b0a473",
     "author": "yeehaa",
     "title": "Engineer Breakthroughs",
     "contentType": "course",
-    "status": "published",
+    "status": "draft",
     "checksum": "578a287e4a43071c4b0310729bbb87bc",
-    "publicationData": {
-      "createdAt": "2024-06-21T08:31:36.223Z",
-      "updatedAt": "2024-06-21T08:31:36.223Z",
-      "publishedAt": "2024-06-21T08:31:36.223Z"
-    },
     "habitat": "Continental Drift"
   },
   {
@@ -139,9 +125,9 @@
     "status": "published",
     "checksum": "15a5954a6cf2f1e0334e320d4680bdeb",
     "publicationData": {
-      "createdAt": "2024-06-21T08:08:19.450Z",
-      "updatedAt": "2024-06-21T08:08:19.450Z",
-      "publishedAt": "2024-06-21T08:08:19.450Z"
+      "createdAt": "2024-06-21T18:04:14.829Z",
+      "updatedAt": "2024-06-21T18:04:14.829Z",
+      "publishedAt": "2024-06-21T18:04:14.829Z"
     }
   }
 ]

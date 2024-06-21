@@ -1,22 +1,19 @@
-import type { MetaTable } from "../table";
-import type { Entity } from "../entity"
+import type { MetaTable } from "../metaTable";
+import type { BaseEntity } from "../entity"
 import * as et from "../entity"
 import * as path from 'path';
+import * as ef from "../entity/filters";
+import * as m from "../meta";
 import { readdir, lstat, readFile } from 'fs/promises'
 import { deslugify } from "../helpers";
 
-export type FileTree = Map<string, Entity>
-
-function set(tree: FileTree, entity: Entity) {
-  tree.set(entity.meta.id, entity)
-}
-
+export type FileTree = Map<string, BaseEntity>
 
 async function processFile(tree: FileTree, filePath: string, author: string, series?: string) {
   const { ext: fileType, name: fileName } = path.parse(filePath);
   const item = await readFile(filePath, 'utf8');
   const entity = await et.init({ item, fileType, fileName, series, author })
-  set(tree, entity);
+  tree.set(entity.meta.id, entity);
 }
 
 async function processDir(tree: FileTree, author: string, dirPath: string) {
@@ -46,16 +43,14 @@ export async function create(basePath: string): Promise<FileTree> {
   return tree;
 }
 
-export function associate(tree: FileTree, metaTable: MetaTable) {
-  for (const { id } of metaTable) {
-    const entity = tree.get(id);
-    if (entity) {
-      const associated = et.associate(entity, metaTable);
-      if (associated) {
-        tree.set(id, associated);
-      }
-    }
-  }
+export function toMetaTable(tree: FileTree) {
+  return Array.from(tree).map(([_, { meta }]) => {
+    return m.init({ ...meta });
+  })
+}
+
+export function toOutputTable(tree: FileTree) {
+  return Array.from(tree).map(([_, entity]) => entity).filter((ef.isNotDraft))
 }
 
 export function update(tree: FileTree, metaTable: MetaTable) {
@@ -64,13 +59,7 @@ export function update(tree: FileTree, metaTable: MetaTable) {
     const entity = tree.get(id);
     if (entity) {
       const updated = { ...entity, meta }
-      set(tree, updated);
+      tree.set(entity.meta.id, updated);
     }
-  }
-}
-
-export async function write(basePath: string, tree: FileTree) {
-  for (const [_, entry] of tree) {
-    et.write(basePath, entry);
   }
 }

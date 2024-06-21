@@ -14,7 +14,3 @@ export const initSchema = schema.extend({
 
 export type Course = z.infer<typeof schema>
 export type InitCourse = z.infer<typeof initSchema>
-
-export function init(course: InitCourse) {
-  return schema.parse(course);
-}

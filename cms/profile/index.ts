@@ -1,27 +1,28 @@
 import type { Meta } from "../meta/schema";
 import type { InitEntity } from "cms/entity/schema";
-import type { Curator } from "@/offcourse/schema";
-
+import type { ProfileData } from "./schema"
 import { ContentType } from "../meta/schema"
-
 import * as path from 'path';
 import * as m from "../meta";
-import { generateChecksum, hashify, parseMarkdown, slugify } from "../helpers";
 import { writeFile } from 'fs/promises'
+import { generateChecksum, hashify, parseMarkdown, slugify } from "../helpers";
 import { stringify } from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
 
 export type BaseProfile = {
   meta: Meta,
-  data: Omit<Curator, 'alias'>,
+  profile: Omit<ProfileData, 'alias'>,
   content: string,
 }
 
-export type Profile = {
-  frontmatter: Curator,
+export type FinalProfile = {
+  meta: Meta,
+  profile: ProfileData,
   content: string
 }
+
+export type Profile = BaseProfile | FinalProfile;
 
 export function init({ item, author }: InitEntity) {
   const checksum = generateChecksum(item);
@@ -36,29 +37,29 @@ export function init({ item, author }: InitEntity) {
   })
   return {
     meta,
-    data,
+    profile: data,
     content
   };
 }
 
-export async function augment({ content, meta, data }: BaseProfile) {
-  const frontmatter = { alias: meta.author, ...data };
-  return { frontmatter, content };
+export async function augment({ content, meta, profile }: BaseProfile) {
+  const p = { alias: meta.author, ...profile };
+  const m = { ...meta, contentType: ContentType.PROFILE };
+  return { meta: m, profile: p, content };
 }
 
-export function render({ content, frontmatter }: Profile) {
+export function render({ content, profile }: FinalProfile) {
   return `---
-${stringify(frontmatter).trim()}
+${stringify(profile).trim()}
 ---
 
 ${content}
 `
 }
 
-
-export async function write(basePath: string, { content, frontmatter }: Profile) {
-  const slug = slugify(frontmatter.alias);
+export async function write(basePath: string, { meta, content, profile }: FinalProfile) {
+  const slug = slugify(profile.alias);
   const markdownFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);
-  const profile = render({ content, frontmatter });
-  await writeFile(markdownFilePath, profile, 'utf8');
+  const rendered = render({ meta, profile, content });
+  await writeFile(markdownFilePath, rendered, 'utf8');
 }

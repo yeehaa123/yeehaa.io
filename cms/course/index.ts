@@ -1,6 +1,6 @@
 import type { Meta } from "../meta/schema"
 import { ContentType } from "../meta/schema"
-import type { Course } from "./course";
+import type { Course as CO } from "./course";
 import * as c from "./course";
 import * as cp from "./checkpoint";
 import * as ai from '../ai';
@@ -13,26 +13,33 @@ import { parse, stringify } from "yaml";
 export const PATH_SUFFIX = "Courses"
 export const schema = c.schema;
 
-export interface BaseCheckpoint {
+export interface RawCheckpoint {
   task: string,
   href: string,
 }
 
-export interface BaseCourse {
+export interface RawCourse {
   goal: string
   curator: string,
   habitat?: string,
-  checkpoints: BaseCheckpoint[]
+  checkpoints: RawCheckpoint[]
 }
 
-export interface CourseEntity {
+export interface BaseCourse {
   meta: Meta;
-  course: BaseCourse
+  course: RawCourse
 }
+
+export interface FinalCourse {
+  meta: Meta,
+  course: CO
+}
+
+export type Course = BaseCourse | FinalCourse;
 
 export async function init({ item, author }: { author: string, item: string }) {
   const checksum = generateChecksum(item);
-  const course = await parse(item) as BaseCourse;
+  const course = await parse(item) as RawCourse;
   const { goal, curator, habitat } = course;
   let hash = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
@@ -49,7 +56,7 @@ export async function init({ item, author }: { author: string, item: string }) {
   }
 }
 
-export async function augment({ meta, course: old }: CourseEntity) {
+export async function augment({ meta, course: old }: BaseCourse) {
   const { id, publicationData, author, title: goal, author: curator } = meta;
   const promises = old.checkpoints.map(checkpoint => {
     return cp.augment({ ...checkpoint, goal, curator });
@@ -59,7 +66,7 @@ export async function augment({ meta, course: old }: CourseEntity) {
   const allTags = checkpoints.flatMap(({ tags }) => tags);
   const tags = [...new Set([...allTags])]
   const habitat = meta.habitat && slugify(meta.habitat);
-  const course = {
+  const course = c.schema.parse({
     goal,
     curator: author,
     habitat,
@@ -68,11 +75,14 @@ export async function augment({ meta, course: old }: CourseEntity) {
     checkpoints,
     description,
     tags,
-  };
-  return c.init(course);
+  });
+  return {
+    meta,
+    course
+  }
 }
 
-export async function write(basePath: string, course: Course) {
+export async function write(basePath: string, { course }: FinalCourse) {
   const slug = slugify(course.goal);
   const filePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
   const file = stringify(course);

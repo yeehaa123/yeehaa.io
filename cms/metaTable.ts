@@ -1,5 +1,4 @@
 import { existsSync } from "fs"
-import type { FileTree } from "./filetree";
 import * as path from 'path';
 import { mkdir, readFile, writeFile } from 'fs/promises'
 import type { Meta } from "./meta/schema";
@@ -20,21 +19,11 @@ export async function init(basePath: string) {
   }
 }
 
-export async function write(basePath: string, tree: FileTree) {
+export async function write(basePath: string, table: MetaTable) {
   const tablePath = path.join(basePath, TABLE_FILE_NAME);
-  const table = Array.from(tree).map(([_, { meta }]) => {
-    return m.init({ ...meta });
-  })
   await writeFile(tablePath, JSON.stringify(table, null, 2), 'utf8');
 }
 
-export function findHabitat(metaTable: MetaTable, meta: Meta) {
-  return metaTable.find(other => filters.hasHabitat(meta, other));
-}
-
-export function findCourse(metaTable: MetaTable, meta: Meta) {
-  return metaTable.find(other => filters.isHabitat(meta, other));
-}
 
 export async function read(basePath: string) {
   const tablePath = path.join(basePath, TABLE_FILE_NAME);

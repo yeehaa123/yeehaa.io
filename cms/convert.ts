@@ -1,7 +1,8 @@
 import * as path from 'path';
 import * as cache from './cache';
 import * as filetree from "./filetree";
-import * as table from "./table";
+import * as mt from "./metaTable";
+import * as ot from "./outputTable";
 import * as series from "./series";
 import * as article from "./article";
 import * as course from "./course";
@@ -23,22 +24,26 @@ export const PATH_SUFFIXES = [
 
 async function main() {
   await initDirs(OUTPUT_BASE, PATH_SUFFIXES);
-  await table.init(CMS_PATH);
+  await mt.init(CMS_PATH);
   await cache.init();
 
   const tree = await filetree.create(INPUT_BASE);
-  const tableData = await table.read(CMS_PATH);
-  filetree.update(tree, tableData);
+  const metaTableData = await mt.read(CMS_PATH);
+  filetree.update(tree, metaTableData);
 
-  const seriesGroup = series.group(tableData);
-  const updatedTable = series.order(seriesGroup);
+  const seriesGroup = series.group(metaTableData);
+  const seriesData = series.order(seriesGroup);
 
-  filetree.update(tree, updatedTable);
+  filetree.update(tree, seriesData);
 
-  filetree.associate(tree, tableData);
+  const outputTable = filetree.toOutputTable(tree);
+  const associatedTable = ot.associate(outputTable);
+  const augmentedTable = await ot.augment(associatedTable);
 
-  await filetree.write(OUTPUT_BASE, tree);
-  await table.write(CMS_PATH, tree);
+  await ot.write(OUTPUT_BASE, augmentedTable);
+
+  const metaTable = filetree.toMetaTable(tree);
+  await mt.write(CMS_PATH, metaTable);
 }
 
 main();

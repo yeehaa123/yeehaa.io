@@ -23,6 +23,8 @@ export const schema = z.object({
   publicationData: pd.schema.optional(),
   habitat: z.string().optional(),
   course: z.string().optional(),
+  courses: z.array(z.string()).optional(),
+  articles: z.array(z.string()).optional(),
 })
 
 export const initSchema = schema.extend({
@@ -30,7 +32,5 @@ export const initSchema = schema.extend({
 })
 
 export type Meta = z.infer<typeof schema>
-
-
 
 export type MetaInit = z.infer<typeof initSchema>

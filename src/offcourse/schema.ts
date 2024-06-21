@@ -11,6 +11,12 @@ export const habitatSchema = z.object({
   slug: z.string()
 })
 
+export const analysisSchema = z.object({
+  excerpt: z.string(),
+  summary: z.string(),
+  tags: z.array(z.string())
+})
+
 export const checkpointSchema = z.object({
   task: z.string(),
   href: z.string(),
@@ -41,6 +47,7 @@ export const checkpointQuery = courseQuery.merge(checkpointSchema).pick({
   checkpointId: true
 })
 
+export type Analysis = z.infer<typeof analysisSchema>
 export type Course = z.infer<typeof courseSchema>
 export type Checkpoint = z.infer<typeof checkpointSchema>
 
