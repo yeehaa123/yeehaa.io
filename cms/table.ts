@@ -28,6 +28,14 @@ export async function write(basePath: string, tree: FileTree) {
   await writeFile(tablePath, JSON.stringify(table, null, 2), 'utf8');
 }
 
+export function findHabitat(metaTable: MetaTable, meta: Meta) {
+  return metaTable.find(other => filters.hasHabitat(meta, other));
+}
+
+export function findCourse(metaTable: MetaTable, meta: Meta) {
+  return metaTable.find(other => filters.isHabitat(meta, other));
+}
+
 export async function read(basePath: string) {
   const tablePath = path.join(basePath, TABLE_FILE_NAME);
   const tableJSON = await readFile(tablePath, 'utf8');

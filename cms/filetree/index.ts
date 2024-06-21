@@ -11,6 +11,7 @@ function set(tree: FileTree, entity: Entity) {
   tree.set(entity.meta.id, entity)
 }
 
+
 async function processFile(tree: FileTree, filePath: string, author: string, series?: string) {
   const { ext: fileType, name: fileName } = path.parse(filePath);
   const item = await readFile(filePath, 'utf8');
@@ -48,13 +49,10 @@ export async function create(basePath: string): Promise<FileTree> {
 export function associate(tree: FileTree, metaTable: MetaTable) {
   for (const { id } of metaTable) {
     const entity = tree.get(id);
-    for (const { id } of metaTable) {
-      const other = tree.get(id);
-      if (entity && other) {
-        const associatedEntity = et.associate(entity, other);
-        if (associatedEntity) {
-          set(tree, associatedEntity);
-        }
+    if (entity) {
+      const associated = et.associate(entity, metaTable);
+      if (associated) {
+        tree.set(id, associated);
       }
     }
   }

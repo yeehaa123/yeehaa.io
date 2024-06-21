@@ -24,8 +24,9 @@ export function isHabitat(meta: Meta, other: Meta) {
 }
 
 export function hasHabitat(meta: Meta, other: Meta) {
-  return isCourse(meta) && isArticle(other) &&
-    (hasSameTitle(meta, other) || meta.habitat === other.title)
+  return isCourse(meta)
+    && isArticle(other)
+    && (hasSameTitle(meta, other) || meta.habitat === other.title)
 }
 
 export function isPublished(meta: Meta | MetaInit) {
@@ -34,6 +35,9 @@ export function isPublished(meta: Meta | MetaInit) {
 
 export function isNotProfile(meta: Meta) {
   return meta.contentType !== ContentType.PROFILE;;
+}
+export function isNotSelf(meta: Meta, other: Meta) {
+  return meta.id !== other.id
 }
 
 export function isArticle(meta: Meta) {

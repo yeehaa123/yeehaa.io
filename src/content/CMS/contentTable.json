@@ -9,9 +9,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-20T09:59:01.113Z",
-      "updatedAt": "2024-06-20T09:59:01.113Z",
-      "publishedAt": "2024-06-20T09:59:01.113Z"
+      "createdAt": "2024-06-21T07:48:58.483Z",
+      "updatedAt": "2024-06-21T07:48:58.483Z",
+      "publishedAt": "2024-06-21T07:48:58.483Z"
     },
     "course": "Align the Misaligned"
   },
@@ -25,11 +25,11 @@
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
     "publicationData": {
-      "createdAt": "2024-06-20T17:06:46.800Z",
-      "updatedAt": "2024-06-20T17:06:46.800Z",
-      "publishedAt": "2024-06-20T17:06:46.800Z"
+      "createdAt": "2024-06-21T08:31:36.222Z",
+      "updatedAt": "2024-06-21T08:31:36.222Z",
+      "publishedAt": "2024-06-21T08:31:36.222Z"
     },
-    "course": "Continental Drift"
+    "course": "Engineer Breakthroughs"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -111,9 +111,9 @@
     "status": "published",
     "checksum": "f5a302909caa3c3a22fa9087760ec915",
     "publicationData": {
-      "createdAt": "2024-06-20T10:15:36.846Z",
-      "updatedAt": "2024-06-20T10:15:36.846Z",
-      "publishedAt": "2024-06-20T10:15:36.846Z"
+      "createdAt": "2024-06-21T07:49:15.347Z",
+      "updatedAt": "2024-06-21T07:49:15.347Z",
+      "publishedAt": "2024-06-21T07:49:15.347Z"
     },
     "habitat": "Align the Misaligned"
   },
@@ -125,11 +125,11 @@
     "status": "published",
     "checksum": "578a287e4a43071c4b0310729bbb87bc",
     "publicationData": {
-      "createdAt": "2024-06-20T17:07:00.500Z",
-      "updatedAt": "2024-06-20T17:07:00.500Z",
-      "publishedAt": "2024-06-20T17:07:00.500Z"
+      "createdAt": "2024-06-21T08:31:36.223Z",
+      "updatedAt": "2024-06-21T08:31:36.223Z",
+      "publishedAt": "2024-06-21T08:31:36.223Z"
     },
-    "habitat": "Engineer Breakthroughs"
+    "habitat": "Continental Drift"
   },
   {
     "id": "90145c64e30b6529d28643ee315fd1f4",
@@ -139,9 +139,9 @@
     "status": "published",
     "checksum": "15a5954a6cf2f1e0334e320d4680bdeb",
     "publicationData": {
-      "createdAt": "2024-06-20T10:30:09.730Z",
-      "updatedAt": "2024-06-20T10:30:09.730Z",
-      "publishedAt": "2024-06-20T10:30:09.730Z"
+      "createdAt": "2024-06-21T08:08:19.450Z",
+      "updatedAt": "2024-06-21T08:08:19.450Z",
+      "publishedAt": "2024-06-21T08:08:19.450Z"
     }
   }
 ]

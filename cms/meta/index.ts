@@ -7,14 +7,18 @@ export function validate(frontmatter: Meta) {
   return schema.parse(frontmatter);
 }
 
-export function associate(meta: Meta, other: Meta) {
-  if (filters.isHabitat(meta, other)) {
-    return { ...meta, course: meta.title }
+export function updateHabitat(meta: Meta, habitat?: Meta) {
+  return {
+    ...meta,
+    habitat: habitat?.title
   }
-  if (filters.hasHabitat(meta, other)) {
-    return { ...meta, habitat: meta.title }
+}
+
+export function updateCourse(meta: Meta, course?: Meta) {
+  return {
+    ...meta,
+    course: course?.title
   }
-  return false;
 }
 
 export function init(metaInit: MetaInit) {
