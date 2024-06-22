@@ -2,6 +2,12 @@ import { curatorSchema } from '@/offcourse/schema';
 import * as m from "../meta/schema"
 import { z } from 'zod';
 
+export type Profile =
+  | BaseProfile
+  | AnalyzedProfile
+  | AssociatedProfile
+  | FinalProfile
+
 export const profileDataSchema = curatorSchema.extend({
   courses: z.array(z.string()),
   article: z.array(z.string()),
@@ -37,9 +43,3 @@ export type BaseProfile = z.infer<typeof baseSchema>
 export type AnalyzedProfile = z.infer<typeof analyzedSchema>
 export type AssociatedProfile = z.infer<typeof associatedSchema>
 export type FinalProfile = z.infer<typeof finalSchema>
-
-export type Profile =
-  | BaseProfile
-  | AnalyzedProfile
-  | AssociatedProfile
-  | FinalProfile

@@ -2,6 +2,12 @@ import { z } from 'zod';
 import * as m from "../meta/schema"
 import { courseSchema, checkpointSchema } from "@/offcourse/schema";
 
+export type Course =
+  | BaseCourse
+  | AnalyzedCourse
+  | AssociatedCourse
+  | FinalCourse;
+
 export const rawCheckpointSchema = z.object({
   task: z.string(),
   href: z.string(),
@@ -62,8 +68,3 @@ export type AnalyzedCourse = z.infer<typeof analyzedSchema>
 export type AssociatedCourse = z.infer<typeof associatedSchema>
 export type FinalCourse = z.infer<typeof finalSchema>
 
-export type Course =
-  | BaseCourse
-  | AnalyzedCourse
-  | AssociatedCourse
-  | FinalCourse;

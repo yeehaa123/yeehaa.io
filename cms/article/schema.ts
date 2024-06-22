@@ -1,6 +1,12 @@
 import { z } from 'zod';
 import * as m from "../meta/schema"
 
+export type Article =
+  | BaseArticle
+  | AnalyzedArticle
+  | AssociatedArticle
+  | FinalArticle;
+
 const analysisSchema = z.object({
   summary: z.string(),
   excerpt: z.string(),
@@ -44,9 +50,3 @@ export type BaseArticle = z.infer<typeof baseSchema>
 export type AnalyzedArticle = z.infer<typeof analyzedSchema>
 export type AssociatedArticle = z.infer<typeof associatedSchema>
 export type FinalArticle = z.infer<typeof finalSchema>
-
-export type Article =
-  | BaseArticle
-  | AnalyzedArticle
-  | AssociatedArticle
-  | FinalArticle;
