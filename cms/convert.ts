@@ -38,7 +38,8 @@ async function main() {
 
   const outputTable = filetree.toOutputTable(tree);
   const associatedTable = ot.associate(outputTable);
-  const augmentedTable = await ot.augment(associatedTable);
+  const analyzedTable = await ot.analyze(associatedTable);
+  const augmentedTable = await ot.augment(analyzedTable);
 
   await ot.write(OUTPUT_BASE, augmentedTable);
 

@@ -1,6 +1,6 @@
-import type { BaseProfile, FinalProfile, InitProfile, Profile } from "./schema"
+import type { AnalyzedProfile, BaseProfile, FinalProfile, InitProfile, Profile } from "./schema"
 import { ContentType } from "../meta/schema"
-import { baseSchema, finalSchema } from "./schema"
+import { analyzedSchema, baseSchema, finalSchema } from "./schema"
 import * as path from 'path';
 import * as m from "../meta";
 import { writeFile } from 'fs/promises'
@@ -8,7 +8,7 @@ import { generateChecksum, hashify, slugify } from "../helpers";
 import { stringify } from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
-export type { BaseProfile, FinalProfile, Profile }
+export type { BaseProfile, AnalyzedProfile, FinalProfile, Profile }
 
 export function init({ content, data, author }: InitProfile) {
   const checksum = generateChecksum(content);
@@ -28,7 +28,11 @@ export function init({ content, data, author }: InitProfile) {
   })
 }
 
-export async function augment({ bio, meta, profile }: BaseProfile) {
+export async function analyze({ bio, meta, profile }: BaseProfile) {
+  return analyzedSchema.parse({ meta, bio, profile });
+}
+
+export async function augment({ bio, meta, profile }: AnalyzedProfile) {
   return finalSchema.parse({ meta, bio, profile });
 }
 

@@ -19,11 +19,16 @@ export const baseSchema = z.object({
   article: z.string()
 })
 
-export const finalSchema = baseSchema.extend({
+export const analyzedSchema = baseSchema.extend({
+  analysis: augmentationsSchema
+})
+
+export const finalSchema = analyzedSchema.extend({
   augmentations: augmentationsSchema
 })
 
 export type InitArticle = z.infer<typeof initSchema>
 export type BaseArticle = z.infer<typeof baseSchema>
+export type AnalyzedArticle = z.infer<typeof analyzedSchema>
 export type FinalArticle = z.infer<typeof finalSchema>
-export type Article = BaseArticle | FinalArticle;
+export type Article = BaseArticle | AnalyzedArticle | FinalArticle;

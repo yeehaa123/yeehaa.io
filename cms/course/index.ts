@@ -6,10 +6,10 @@ import { writeFile } from 'fs/promises'
 import * as path from 'path';
 import * as m from "../meta"
 import { stringify } from "yaml";
-import { baseSchema, finalSchema, outputSchema } from "./schema"
-import type { InitCourse, RawCourse, BaseCourse, FinalCourse, Course } from "./schema"
+import { analyzedSchema, baseSchema, finalSchema, outputSchema } from "./schema"
+import type { InitCourse, RawCourse, BaseCourse, FinalCourse, Course, AnalyzedCourse } from "./schema"
 
-export type { RawCourse, BaseCourse, FinalCourse, Course }
+export type { RawCourse, BaseCourse, AnalyzedCourse, FinalCourse, Course }
 
 export const PATH_SUFFIX = "Courses"
 export const schema = outputSchema
@@ -28,7 +28,7 @@ export function init({ course: raw, author }: InitCourse) {
   return baseSchema.parse({ meta, course })
 }
 
-export async function augment({ meta, course }: BaseCourse) {
+export async function analyze({ meta, course }: BaseCourse) {
   const { id } = meta;
   const { goal, curator } = course;
   const promises = course.checkpoints.map(checkpoint => {
@@ -38,16 +38,17 @@ export async function augment({ meta, course }: BaseCourse) {
   const { description } = await ai.course.analyze({ goal, checkpoints, id })
   const allTags = checkpoints.flatMap(({ tags }) => tags);
   const tags = [...new Set([...allTags])]
-  const augmentations = {
+  const analysis = {
     description,
     tags,
     checkpoints
   }
-  return finalSchema.parse({
-    course,
-    meta,
-    augmentations
-  })
+  return analyzedSchema.parse({ course, meta, analysis })
+}
+
+export async function augment({ meta, analysis, course }: AnalyzedCourse) {
+  const augmentations = analysis;
+  return finalSchema.parse({ course, meta, analysis, augmentations })
 }
 
 export async function write(basePath: string, { meta, augmentations, course }: FinalCourse) {

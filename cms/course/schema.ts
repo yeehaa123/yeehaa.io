@@ -7,7 +7,6 @@ export const rawCheckpointSchema = z.object({
   href: z.string(),
 })
 
-
 const augmentationsSchema = z.object({
   description: z.string(),
   tags: z.array(z.string()),
@@ -38,8 +37,11 @@ export const baseSchema = z.object({
 })
 
 
+export const analyzedSchema = baseSchema.extend({
+  analysis: augmentationsSchema
+})
 
-export const finalSchema = baseSchema.extend({
+export const finalSchema = analyzedSchema.extend({
   augmentations: augmentationsSchema
 })
 
@@ -47,5 +49,6 @@ export type RawCheckpoint = z.infer<typeof rawCheckpointSchema>
 export type RawCourse = z.infer<typeof rawCourseSchema>
 export type InitCourse = z.infer<typeof initSchema>
 export type BaseCourse = z.infer<typeof baseSchema>
+export type AnalyzedCourse = z.infer<typeof analyzedSchema>
 export type FinalCourse = z.infer<typeof finalSchema>
-export type Course = BaseCourse | FinalCourse;
+export type Course = BaseCourse | AnalyzedCourse | FinalCourse;

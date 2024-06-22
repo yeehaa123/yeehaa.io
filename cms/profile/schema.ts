@@ -19,9 +19,12 @@ export const baseSchema = z.object({
   bio: z.string()
 })
 
+export const analyzedSchema = baseSchema
+
 export const finalSchema = baseSchema
 
 export type InitProfile = z.infer<typeof initSchema>
 export type BaseProfile = z.infer<typeof baseSchema>
+export type AnalyzedProfile = z.infer<typeof analyzedSchema>
 export type FinalProfile = z.infer<typeof finalSchema>
-export type Profile = BaseProfile | FinalProfile
+export type Profile = BaseProfile | AnalyzedProfile | FinalProfile

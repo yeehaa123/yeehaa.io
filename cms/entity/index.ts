@@ -1,6 +1,6 @@
-import type { BaseArticle, FinalArticle } from "../article";
-import type { BaseProfile, FinalProfile } from "../profile";
-import type { RawCourse, BaseCourse, FinalCourse } from "../course";
+import type { BaseArticle, AnalyzedArticle, FinalArticle } from "../article";
+import type { BaseProfile, AnalyzedProfile, FinalProfile } from "../profile";
+import type { RawCourse, BaseCourse, AnalyzedCourse, FinalCourse } from "../course";
 import type { InitEntity } from "./schema";
 import type { OutputTable } from "../outputTable";
 import * as article from "../article";
@@ -20,6 +20,7 @@ import {
 } from "./filters";
 
 export type BaseEntity = BaseCourse | BaseArticle | BaseProfile
+export type AnalyzedEntity = AnalyzedCourse | AnalyzedProfile | AnalyzedArticle
 export type FinalEntity = FinalCourse | FinalArticle | FinalProfile
 export type Entity = BaseEntity | FinalEntity;
 
@@ -63,8 +64,23 @@ export function associate(entity: BaseEntity, table: OutputTable) {
   throw ("INVALID ENTITY TYPE");
 }
 
+export async function analyze(entity: BaseEntity) {
+  if (isProfile(entity)) {
+    return await profile.analyze(entity);
+  }
 
-export async function augment(entity: BaseEntity) {
+  if (isArticle(entity)) {
+    return await article.analyze(entity)
+  }
+
+  if (isCourse(entity)) {
+    return await course.analyze(entity)
+  }
+
+  throw ("INVALID ENTITY TYPE");
+}
+
+export async function augment(entity: AnalyzedEntity) {
   if (isProfile(entity)) {
     return await profile.augment(entity);
   }

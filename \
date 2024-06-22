@@ -33,7 +33,7 @@ export function associate(table: OutputTable) {
   return table.map((entity) => et.associate(entity, table))
 }
 
-export async function analyze(table: BaseTable) {
+export async function analyze(table: OutputTable) {
   const promises = table.map(entity => et.analyze(entity))
   return await Promise.all(promises);
 }
