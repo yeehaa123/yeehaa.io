@@ -1,11 +1,12 @@
-import type { Entity, BaseEntity, AnalyzedEntity, FinalEntity } from "./entity";
+import type { Entity, BaseEntity, AnalyzedEntity, AssociatedEntity, FinalEntity } from "./entity";
 import * as filters from "./meta/filters";
 import * as et from "./entity"
 
 export type BaseTable = BaseEntity[];
 export type AnalyzedTable = AnalyzedEntity[];
+export type AssociatedTable = AssociatedEntity[];
 export type FinalTable = FinalEntity[];
-export type OutputTable = BaseTable | AnalyzedTable
+export type OutputTable = BaseTable | AnalyzedTable | FinalTable;
 
 export function findHabitatForCourse(table: OutputTable, entity: Entity) {
   const article = table.find(({ meta }) => filters.hasHabitat(entity.meta, meta));
@@ -29,7 +30,7 @@ export function findByAuthor(table: OutputTable, entity: Entity) {
   return { articles, courses }
 }
 
-export function associate(table: OutputTable) {
+export function associate(table: AnalyzedTable) {
   return table.map((entity) => et.associate(entity, table))
 }
 
@@ -38,7 +39,7 @@ export async function analyze(table: BaseTable) {
   return await Promise.all(promises);
 }
 
-export async function augment(table: AnalyzedTable) {
+export async function augment(table: AssociatedTable) {
   const promises = table.map(entity => et.augment(entity))
   return await Promise.all(promises);
 }

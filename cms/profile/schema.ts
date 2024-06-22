@@ -13,6 +13,11 @@ export const initSchema = z.object({
   content: z.string(),
 })
 
+const associationsSchema = z.object({
+  courses: z.array(z.string()).optional(),
+  articles: z.array(z.string()).optional()
+})
+
 export const baseSchema = z.object({
   meta: m.schema,
   profile: curatorSchema,
@@ -21,10 +26,20 @@ export const baseSchema = z.object({
 
 export const analyzedSchema = baseSchema
 
-export const finalSchema = baseSchema
+export const associatedSchema = analyzedSchema.extend({
+  associations: associationsSchema
+})
+
+export const finalSchema = associatedSchema
 
 export type InitProfile = z.infer<typeof initSchema>
 export type BaseProfile = z.infer<typeof baseSchema>
 export type AnalyzedProfile = z.infer<typeof analyzedSchema>
+export type AssociatedProfile = z.infer<typeof associatedSchema>
 export type FinalProfile = z.infer<typeof finalSchema>
-export type Profile = BaseProfile | AnalyzedProfile | FinalProfile
+
+export type Profile =
+  | BaseProfile
+  | AnalyzedProfile
+  | AssociatedProfile
+  | FinalProfile

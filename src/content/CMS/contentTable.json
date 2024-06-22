@@ -9,9 +9,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-22T05:12:53.800Z",
-      "updatedAt": "2024-06-22T05:12:53.800Z",
-      "publishedAt": "2024-06-22T05:12:53.800Z"
+      "createdAt": "2024-06-22T09:58:50.409Z",
+      "updatedAt": "2024-06-22T09:58:50.409Z",
+      "publishedAt": "2024-06-22T09:58:50.409Z"
     }
   },
   {
@@ -19,9 +19,15 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
+    "order": 1,
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea"
+    "checksum": "6da78a490110bdc70b906c065f1b99ea",
+    "publicationData": {
+      "createdAt": "2024-06-22T09:59:39.420Z",
+      "updatedAt": "2024-06-22T09:59:39.420Z",
+      "publishedAt": "2024-06-22T09:59:39.420Z"
+    }
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -103,9 +109,9 @@
     "status": "published",
     "checksum": "08e4923c8025cfa80581a39485c03cdd",
     "publicationData": {
-      "createdAt": "2024-06-22T08:42:52.835Z",
-      "updatedAt": "2024-06-22T08:42:52.835Z",
-      "publishedAt": "2024-06-22T08:42:52.835Z"
+      "createdAt": "2024-06-22T09:58:50.409Z",
+      "updatedAt": "2024-06-22T09:58:50.409Z",
+      "publishedAt": "2024-06-22T09:58:50.409Z"
     }
   },
   {
@@ -113,8 +119,13 @@
     "author": "yeehaa",
     "title": "Engineer Breakthroughs",
     "contentType": "course",
-    "status": "draft",
+    "status": "published",
     "checksum": "1e28d4acef2919748b0fdb6f343656d1",
+    "publicationData": {
+      "createdAt": "2024-06-22T09:59:39.420Z",
+      "updatedAt": "2024-06-22T09:59:39.420Z",
+      "publishedAt": "2024-06-22T09:59:39.420Z"
+    },
     "habitat": "Continental Drift"
   },
   {
@@ -123,11 +134,11 @@
     "title": "yeehaa",
     "contentType": "profile",
     "status": "published",
-    "checksum": "15a5954a6cf2f1e0334e320d4680bdeb",
+    "checksum": "f57640c1132e3acb42feeb27584ad58a",
     "publicationData": {
-      "createdAt": "2024-06-22T04:42:24.225Z",
-      "updatedAt": "2024-06-22T04:42:24.225Z",
-      "publishedAt": "2024-06-22T04:42:24.225Z"
+      "createdAt": "2024-06-22T09:58:50.409Z",
+      "updatedAt": "2024-06-22T09:58:50.409Z",
+      "publishedAt": "2024-06-22T09:58:50.409Z"
     }
   }
 ]

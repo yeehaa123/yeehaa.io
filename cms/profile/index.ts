@@ -1,4 +1,11 @@
-import type { AnalyzedProfile, BaseProfile, FinalProfile, InitProfile, Profile } from "./schema"
+import type {
+  AnalyzedProfile,
+  BaseProfile,
+  AssociatedProfile,
+  FinalProfile,
+  InitProfile,
+  Profile
+} from "./schema"
 import { ContentType } from "../meta/schema"
 import { analyzedSchema, baseSchema, finalSchema } from "./schema"
 import * as path from 'path';
@@ -8,7 +15,7 @@ import { generateChecksum, hashify, slugify } from "../helpers";
 import { stringify } from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
-export type { BaseProfile, AnalyzedProfile, FinalProfile, Profile }
+export type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile, Profile }
 
 export function init({ content, data, author }: InitProfile) {
   const checksum = generateChecksum(content);
@@ -32,22 +39,21 @@ export async function analyze({ bio, meta, profile }: BaseProfile) {
   return analyzedSchema.parse({ meta, bio, profile });
 }
 
-export async function augment({ bio, meta, profile }: AnalyzedProfile) {
-  return finalSchema.parse({ meta, bio, profile });
+export async function augment({ bio, meta, profile, associations }: AssociatedProfile) {
+  return finalSchema.parse({ meta, bio, profile, associations });
 }
 
-export function render({ bio, profile }: FinalProfile) {
+export function render({ bio, profile, associations }: FinalProfile) {
   return `---
-${stringify(profile).trim()}
+${stringify({ ...profile, ...associations }).trim()}
 ---
-
 ${bio}
 `
 }
 
-export async function write(basePath: string, { meta, bio, profile }: FinalProfile) {
+export async function write(basePath: string, { meta, bio, profile, associations }: FinalProfile) {
   const slug = slugify(profile.alias);
   const markdownFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);
-  const rendered = render({ meta, profile, bio });
+  const rendered = render({ meta, profile, bio, associations });
   await writeFile(markdownFilePath, rendered, 'utf8');
 }

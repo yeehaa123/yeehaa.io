@@ -1,4 +1,11 @@
-import type { BaseArticle, FinalArticle, AnalyzedArticle, InitArticle, Article } from "./schema"
+import type {
+  Article,
+  InitArticle,
+  BaseArticle,
+  AnalyzedArticle,
+  AssociatedArticle,
+  FinalArticle,
+} from "./schema"
 import { ContentType } from "../meta/schema"
 import { analyzedSchema, baseSchema, finalSchema } from "./schema"
 import * as path from 'path';
@@ -9,7 +16,6 @@ import * as fm from "./frontmatter";
 import * as m from "../meta";
 import { generateChecksum, hashify, slugify } from "../helpers";
 
-export type { BaseArticle, FinalArticle, Article, AnalyzedArticle }
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
 
@@ -26,32 +32,32 @@ export async function init({ article, title, author, series }: InitArticle) {
 }
 
 export async function analyze(entry: BaseArticle) {
-  const { article, meta } = entry;
+  const { article: content, meta } = entry;
   const { checksum, title } = meta;
-  const { summary, tags, excerpt } =
-    await ai.article.analyze({ title, content: article, checksum });
-  const imageURL = await ai.image.generate({ title, tags, summary, content: article, checksum });
-  const analysis = { summary, tags, imageURL, excerpt };
-  return analyzedSchema.parse({
-    meta,
-    analysis,
-    article
-  })
+  const { summary, tags, excerpt } = await ai.article.analyze({ title, content, checksum });
+  const analysis = { summary, tags, excerpt };
+  return analyzedSchema.parse({ ...entry, analysis })
 }
 
-export async function augment({ analysis, ...entity }: AnalyzedArticle) {
-  const augmentations = analysis;
+export async function augment({ analysis, ...entity }: AssociatedArticle) {
+  const { article, meta } = entity;
+  const { checksum, title } = meta;
+  const { summary, tags } = analysis;
+  const imageURL = await ai.image.generate({ title, tags, summary, content: article, checksum });
+  const augmentations = { imageURL };
   return finalSchema.parse({
     ...entity,
+    analysis,
     augmentations,
   })
 }
 
-export function render({ article, meta, augmentations }: FinalArticle) {
-  const course = meta.course && slugify(meta.course);
+export function render({ article, analysis, associations, meta, augmentations }: FinalArticle) {
+  const course = associations.course && slugify(associations.course);
   const { publicationData } = meta;
   const frontmatter = fm.init({
     ...meta,
+    ...analysis,
     ...publicationData,
     ...augmentations,
     course,
@@ -73,3 +79,5 @@ export async function write(basePath: string, article: FinalArticle) {
   const file = render(article);
   await writeFile(filePath, file, 'utf8');
 }
+
+export type { BaseArticle, AnalyzedArticle, AssociatedArticle, FinalArticle, Article }

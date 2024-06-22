@@ -29,17 +29,16 @@ async function main() {
 
   const tree = await filetree.create(INPUT_BASE);
   const metaTableData = await mt.read(CMS_PATH);
-  filetree.update(tree, metaTableData);
 
+  filetree.update(tree, metaTableData);
   const seriesGroup = series.group(metaTableData);
   const seriesData = series.order(seriesGroup);
-
   filetree.update(tree, seriesData);
 
   const outputTable = filetree.toOutputTable(tree);
-  const associatedTable = ot.associate(outputTable);
-  const analyzedTable = await ot.analyze(associatedTable);
-  const augmentedTable = await ot.augment(analyzedTable);
+  const analyzedTable = await ot.analyze(outputTable);
+  const associatedTable = ot.associate(analyzedTable);
+  const augmentedTable = await ot.augment(associatedTable);
 
   await ot.write(OUTPUT_BASE, augmentedTable);
 

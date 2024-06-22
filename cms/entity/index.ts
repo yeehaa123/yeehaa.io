@@ -1,6 +1,6 @@
-import type { BaseArticle, AnalyzedArticle, FinalArticle } from "../article";
-import type { BaseProfile, AnalyzedProfile, FinalProfile } from "../profile";
-import type { RawCourse, BaseCourse, AnalyzedCourse, FinalCourse } from "../course";
+import type { BaseArticle, AnalyzedArticle, AssociatedArticle, FinalArticle } from "../article";
+import type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile } from "../profile";
+import type { RawCourse, BaseCourse, AssociatedCourse, AnalyzedCourse, FinalCourse } from "../course";
 import type { InitEntity } from "./schema";
 import type { OutputTable } from "../outputTable";
 import * as article from "../article";
@@ -21,6 +21,7 @@ import {
 
 export type BaseEntity = BaseCourse | BaseArticle | BaseProfile
 export type AnalyzedEntity = AnalyzedCourse | AnalyzedProfile | AnalyzedArticle
+export type AssociatedEntity = AssociatedCourse | AssociatedProfile | AssociatedArticle
 export type FinalEntity = FinalCourse | FinalArticle | FinalProfile
 export type Entity = BaseEntity | FinalEntity;
 
@@ -46,23 +47,6 @@ export async function init(initEntitity: InitEntity) {
   throw ("INVALID ENTITY")
 }
 
-export function associate(entity: BaseEntity, table: OutputTable) {
-  if (isArticle(entity)) {
-    const course = ot.findCourseForHabitat(table, entity);
-    const associations = { course }
-    return { ...entity, associations }
-  }
-  if (isCourse(entity)) {
-    const habitat = ot.findHabitatForCourse(table, entity);
-    const associations = { habitat }
-    return { ...entity, associations }
-  }
-  if (isProfile(entity)) {
-    const associations = ot.findByAuthor(table, entity)
-    return { ...entity, associations }
-  };
-  throw ("INVALID ENTITY TYPE");
-}
 
 export async function analyze(entity: BaseEntity) {
   if (isProfile(entity)) {
@@ -80,7 +64,25 @@ export async function analyze(entity: BaseEntity) {
   throw ("INVALID ENTITY TYPE");
 }
 
-export async function augment(entity: AnalyzedEntity) {
+export function associate(entity: AnalyzedEntity, table: OutputTable) {
+  if (isArticle(entity)) {
+    const course = ot.findCourseForHabitat(table, entity);
+    const associations = { course }
+    return { ...entity, associations }
+  }
+  if (isCourse(entity)) {
+    const habitat = ot.findHabitatForCourse(table, entity);
+    const associations = { habitat }
+    return { ...entity, associations }
+  }
+  if (isProfile(entity)) {
+    const associations = ot.findByAuthor(table, entity)
+    return { ...entity, associations }
+  };
+  throw ("INVALID ENTITY TYPE");
+}
+
+export async function augment(entity: AssociatedEntity) {
   if (isProfile(entity)) {
     return await profile.augment(entity);
   }

@@ -1,3 +1,11 @@
-alias: yeehaa
-socials:
-  linkedin: https://www.linkedin.com/in/yeehaa/
+profile:
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+associations:
+  courses:
+    - Align the Misaligned
+    - Engineer Breakthroughs
+  articles:
+    - Align the Misaligned
+    - Continental Drift
