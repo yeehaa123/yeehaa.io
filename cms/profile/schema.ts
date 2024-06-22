@@ -25,6 +25,10 @@ const associationsSchema = z.object({
   articles: z.array(as.schema).optional()
 })
 
+const augmentationsSchema = z.object({
+  tags: z.array(z.string())
+})
+
 export const baseSchema = z.object({
   meta: m.schema,
   profile: curatorSchema,
@@ -39,7 +43,9 @@ export const associatedSchema = analyzedSchema.extend({
   associations: associationsSchema
 })
 
-export const finalSchema = associatedSchema
+export const finalSchema = associatedSchema.extend({
+  augmentations: augmentationsSchema
+})
 
 export type InitProfile = z.infer<typeof initSchema>
 export type BaseProfile = z.infer<typeof baseSchema>

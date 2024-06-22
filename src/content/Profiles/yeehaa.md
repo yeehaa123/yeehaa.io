@@ -2,6 +2,22 @@
 alias: yeehaa
 socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
+tags:
+  - internet
+  - design
+  - tech
+  - future
+  - global
+  - access
+  - society
+  - skills
+  - career
+  - self
+  - growth
+  - swot
+  - guide
+  - startups
+  - network
 courses:
   - id: bf1f22b2dd9785389afb1b1aaea31f57
     title: Align the Misaligned

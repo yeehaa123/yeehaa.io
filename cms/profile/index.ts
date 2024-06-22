@@ -52,7 +52,11 @@ export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedProfile) {
-  return finalSchema.parse(entity);
+  const { associations } = entity;
+  const { articles, courses } = associations;
+  const tags = [...new Set([...(articles || []), ...(courses || [])].flatMap(({ tags }) => tags))]
+  const augmentations = { tags }
+  return finalSchema.parse({ ...entity, augmentations });
 }
 
 export async function write(basePath: string, entity: FinalProfile) {
@@ -62,9 +66,9 @@ export async function write(basePath: string, entity: FinalProfile) {
   await writeFile(markdownFilePath, rendered, 'utf8');
 }
 
-export function render({ bio, profile, associations }: FinalProfile) {
+export function render({ bio, profile, augmentations, associations }: FinalProfile) {
   return `---
-${stringify({ ...profile, ...associations }).trim()}
+${stringify({ ...profile, ...augmentations, ...associations }).trim()}
 ---
 ${bio}
 `
