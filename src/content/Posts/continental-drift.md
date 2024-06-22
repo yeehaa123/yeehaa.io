@@ -3,10 +3,10 @@ title: Continental Drift
 author: yeehaa
 order: 1
 series: Ecosystem Architecture
-createdAt: 2024-06-22T09:59:39.420Z
-updatedAt: 2024-06-22T09:59:39.420Z
-publishedAt: 2024-06-22T09:59:39.420Z
-imageURL: .cache/6da78a490110bdc70b906c065f1b99ea.png
+createdAt: 2024-06-22T17:36:00.575Z
+updatedAt: 2024-06-22T17:36:00.575Z
+publishedAt: 2024-06-22T17:36:00.575Z
+imageURL: 6da78a490110bdc70b906c065f1b99ea.png
 excerpt: The article examines internet fragmentation, contrasting the
   traditional Western experience with global variations like superapps and mesh
   networks. It critiques the idealized view of the early internet and covers
@@ -23,7 +23,6 @@ tags:
   - global
   - access
   - society
-course: engineer-breakthroughs
 ---
 # Continental Drift
 

@@ -1,5 +1,6 @@
 import { curatorSchema } from '@/offcourse/schema';
 import * as m from "../meta/schema"
+import * as as from "../association"
 import { z } from 'zod';
 
 export type Profile =
@@ -12,16 +13,16 @@ export const profileDataSchema = curatorSchema.extend({
   courses: z.array(z.string()),
   article: z.array(z.string()),
 })
-
 export const initSchema = z.object({
   author: z.string(),
   data: curatorSchema.partial(),
   content: z.string(),
 })
+export const analysisSchema = z.object({})
 
 const associationsSchema = z.object({
-  courses: z.array(z.string()).optional(),
-  articles: z.array(z.string()).optional()
+  courses: z.array(as.schema).optional(),
+  articles: z.array(as.schema).optional()
 })
 
 export const baseSchema = z.object({
@@ -30,7 +31,9 @@ export const baseSchema = z.object({
   bio: z.string()
 })
 
-export const analyzedSchema = baseSchema
+export const analyzedSchema = baseSchema.extend({
+  analysis: analysisSchema
+})
 
 export const associatedSchema = analyzedSchema.extend({
   associations: associationsSchema

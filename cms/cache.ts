@@ -84,7 +84,7 @@ export async function getImage(checksum: string) {
   const imageUrl = path.join(CACHE_BASE, `${checksum}.png`);
   const fileExists = existsSync(imageUrl);
   if (fileExists) {
-    return imageUrl
+    return path.join(".", `${checksum}.png`);
   }
   return false;
 }

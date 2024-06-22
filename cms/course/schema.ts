@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import * as m from "../meta/schema"
+import * as as from "../association"
 import { courseSchema, checkpointSchema } from "@/offcourse/schema";
 
 export type Course =
@@ -13,14 +14,14 @@ export const rawCheckpointSchema = z.object({
   href: z.string(),
 })
 
-const analysisSchema = z.object({
+export const analysisSchema = z.object({
   description: z.string(),
   tags: z.array(z.string()),
   checkpoints: z.array(checkpointSchema)
 })
 
 const associationsSchema = z.object({
-  habitat: z.string().optional()
+  habitat: as.schema.optional()
 })
 
 const augmentationsSchema = analysisSchema;
@@ -67,4 +68,3 @@ export type BaseCourse = z.infer<typeof baseSchema>
 export type AnalyzedCourse = z.infer<typeof analyzedSchema>
 export type AssociatedCourse = z.infer<typeof associatedSchema>
 export type FinalCourse = z.infer<typeof finalSchema>
-

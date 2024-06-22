@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import * as as from "../association"
 import * as m from "../meta/schema"
 
 export type Article =
@@ -7,7 +8,7 @@ export type Article =
   | AssociatedArticle
   | FinalArticle;
 
-const analysisSchema = z.object({
+export const analysisSchema = z.object({
   summary: z.string(),
   excerpt: z.string(),
   tags: z.array(z.string()),
@@ -18,7 +19,7 @@ const augmentationsSchema = z.object({
 })
 
 const associationsSchema = z.object({
-  course: z.string().optional()
+  course: as.schema.optional(),
 })
 
 export const initSchema = z.object({
@@ -50,3 +51,4 @@ export type BaseArticle = z.infer<typeof baseSchema>
 export type AnalyzedArticle = z.infer<typeof analyzedSchema>
 export type AssociatedArticle = z.infer<typeof associatedSchema>
 export type FinalArticle = z.infer<typeof finalSchema>
+

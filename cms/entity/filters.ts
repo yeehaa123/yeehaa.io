@@ -40,3 +40,15 @@ export function isOffcourseFile({ fileType }: InitEntity) {
 export function isNotDraft({ meta }: Entity) {
   return mf.isNotDraft(meta);
 }
+
+export function hasHabitat(entity: Entity, other: Entity) {
+  return mf.hasHabitat(entity.meta, other.meta);
+}
+
+export function isHabitat(entity: Entity, other: Entity) {
+  return mf.isHabitat(entity.meta, other.meta);
+}
+
+export function hasSameAuthor(entity: Entity, other: Entity) {
+  return mf.hasSameAuthor(entity.meta, other.meta);
+}

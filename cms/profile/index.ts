@@ -6,10 +6,13 @@ import type {
   InitProfile,
   Profile
 } from "./schema"
+import type { AnalyzedTable } from "../outputTable";
 import { ContentType } from "../meta/schema"
-import { analyzedSchema, baseSchema, finalSchema } from "./schema"
+import { analyzedSchema, associatedSchema, baseSchema, finalSchema } from "./schema"
 import * as path from 'path';
 import * as m from "../meta";
+import * as as from "../association";
+import * as ot from "../outputTable";
 import { writeFile } from 'fs/promises'
 import { generateChecksum, hashify, slugify } from "../helpers";
 import { stringify } from "yaml";
@@ -35,12 +38,28 @@ export function init({ content, data, author }: InitProfile) {
   })
 }
 
-export async function analyze({ bio, meta, profile }: BaseProfile) {
-  return analyzedSchema.parse({ meta, bio, profile });
+export async function analyze(entity: BaseProfile) {
+  const analysis = {};
+  return analyzedSchema.parse({ ...entity, analysis });
 }
 
-export async function augment({ bio, meta, profile, associations }: AssociatedProfile) {
-  return finalSchema.parse({ meta, bio, profile, associations });
+export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
+  const { author } = entity.meta;
+  const articles = ot.findArticlesForAuthor(table, author).map(as.init)
+  const courses = ot.findCoursesForAuthor(table, author).map(as.init)
+  const associations = { articles, courses }
+  return associatedSchema.parse({ ...entity, associations })
+}
+
+export async function augment(entity: AssociatedProfile) {
+  return finalSchema.parse(entity);
+}
+
+export async function write(basePath: string, entity: FinalProfile) {
+  const slug = slugify(entity.profile.alias);
+  const markdownFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);
+  const rendered = render(entity);
+  await writeFile(markdownFilePath, rendered, 'utf8');
 }
 
 export function render({ bio, profile, associations }: FinalProfile) {
@@ -49,11 +68,4 @@ ${stringify({ ...profile, ...associations }).trim()}
 ---
 ${bio}
 `
-}
-
-export async function write(basePath: string, { meta, bio, profile, associations }: FinalProfile) {
-  const slug = slugify(profile.alias);
-  const markdownFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);
-  const rendered = render({ meta, profile, bio, associations });
-  await writeFile(markdownFilePath, rendered, 'utf8');
 }

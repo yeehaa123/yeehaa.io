@@ -18,9 +18,8 @@ export async function initDir(dirName: string) {
   try {
     const outputExists = existsSync(dirName)
     if (outputExists) {
-      console.log("CLEANING OUTPUT", dirName);
       await rm(dirName, { recursive: true })
-      console.log("CLEANED OUTPUT");
+      console.log(`CLEANED ${dirName} OUTPUT`);
     }
     await mkdir(dirName, { recursive: true })
   }
