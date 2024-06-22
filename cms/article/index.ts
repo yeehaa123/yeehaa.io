@@ -13,19 +13,16 @@ export type { BaseArticle, FinalArticle, Article }
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
 
-export async function init({ content, title, author, series }: InitArticle) {
+export async function init({ article, title, author, series }: InitArticle) {
   const meta = m.init({
     id: hashify(JSON.stringify({ title, author })),
     title,
     contentType: ContentType.ARTICLE,
     author,
     series,
-    checksum: generateChecksum(content)
+    checksum: generateChecksum(article)
   })
-  return baseSchema.parse({
-    meta,
-    article: content
-  });
+  return baseSchema.parse({ meta, article });
 }
 
 export async function augment(entry: BaseArticle) {

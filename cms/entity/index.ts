@@ -1,6 +1,6 @@
 import type { BaseArticle, FinalArticle } from "../article";
 import type { BaseProfile, FinalProfile } from "../profile";
-import type { BaseCourse, FinalCourse } from "../course";
+import type { RawCourse, BaseCourse, FinalCourse } from "../course";
 import type { InitEntity } from "./schema";
 import type { OutputTable } from "../outputTable";
 import * as article from "../article";
@@ -8,6 +8,7 @@ import * as course from "../course";
 import * as profile from "../profile";
 import * as people from "../people";
 import * as ot from "../outputTable";
+import * as yaml from "yaml";
 import { parseMarkdoc, parseMarkdown } from "../helpers";
 import {
   isProfileFile,
@@ -33,13 +34,14 @@ export async function init(initEntitity: InitEntity) {
     const { item, author, series } = initEntitity;
     const { title, content } = parseMarkdoc(item);
     if (!title) { throw ("ARTICLE NEEDS TITLE"); }
-    return article.init({ title, content, author, series })
+    return article.init({ title, article: content, author, series })
   }
 
   if (isOffcourseFile(initEntitity)) {
-    return await course.init(initEntitity)
+    const { item, author } = initEntitity;
+    const content = await yaml.parse(item) as RawCourse;
+    return course.init({ course: content, author })
   }
-
   throw ("INVALID ENTITY")
 }
 

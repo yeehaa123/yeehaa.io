@@ -96,25 +96,25 @@
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f"
   },
   {
-    "id": "c3084a039e22e0a5c597605d698cba2a",
+    "id": "bf1f22b2dd9785389afb1b1aaea31f57",
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "course",
     "status": "published",
-    "checksum": "f5a302909caa3c3a22fa9087760ec915",
+    "checksum": "08e4923c8025cfa80581a39485c03cdd",
     "publicationData": {
-      "createdAt": "2024-06-22T05:12:53.800Z",
-      "updatedAt": "2024-06-22T05:12:53.800Z",
-      "publishedAt": "2024-06-22T05:12:53.800Z"
+      "createdAt": "2024-06-22T08:42:52.835Z",
+      "updatedAt": "2024-06-22T08:42:52.835Z",
+      "publishedAt": "2024-06-22T08:42:52.835Z"
     }
   },
   {
-    "id": "127debf7951504f7e59f1441a4b0a473",
+    "id": "d71fe3a19689792e548b07f879e7bf55",
     "author": "yeehaa",
     "title": "Engineer Breakthroughs",
     "contentType": "course",
     "status": "draft",
-    "checksum": "578a287e4a43071c4b0310729bbb87bc",
+    "checksum": "1e28d4acef2919748b0fdb6f343656d1",
     "habitat": "Continental Drift"
   },
   {

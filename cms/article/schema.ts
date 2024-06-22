@@ -12,7 +12,7 @@ export const initSchema = z.object({
   title: z.string(),
   author: z.string(),
   series: z.string().optional(),
-  content: z.string(),
+  article: z.string(),
 })
 export const baseSchema = z.object({
   meta: m.schema,
