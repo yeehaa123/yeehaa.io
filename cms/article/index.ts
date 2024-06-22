@@ -1,5 +1,5 @@
-import type { Meta } from "../meta/schema"
-import type { ArticleFrontmatter } from "./frontmatter";
+import type { BaseArticle, FinalArticle, InitArticle } from "./schema"
+import { baseSchema, finalSchema } from "./schema"
 import { ContentType } from "../meta/schema"
 import * as path from 'path';
 import { stringify } from "yaml";
@@ -7,90 +7,61 @@ import { writeFile, copyFile } from 'fs/promises'
 import * as ai from '../ai';
 import * as fm from "./frontmatter";
 import * as m from "../meta";
-import { generateChecksum, hashify, parseMarkdoc, slugify } from "../helpers";
-import type { Analysis } from "@/offcourse/schema";
+import { generateChecksum, hashify, slugify } from "../helpers";
 
+type Article = BaseArticle | FinalArticle;
+export type { BaseArticle, FinalArticle, Article }
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
 
-export type BaseArticle = {
-  meta: Meta,
-  content: string,
-}
-
-export type AnalyzedArticle = {
-  meta: Meta,
-  analysis: Analysis,
-  content: string,
-}
-
-export type FinalArticle = {
-  meta: Meta,
-  frontmatter: ArticleFrontmatter,
-  content: string,
-}
-
-export type Article = BaseArticle | FinalArticle;
-
-export async function init({ item, author, series }:
-  { series?: string | undefined, author: string, item: string }) {
-  const checksum = generateChecksum(item);
-  const { title, content } = parseMarkdoc(item);
-  if (!title) { throw ("ARTICLE NEEDS TITLE"); }
-  let hash = hashify(JSON.stringify({ title, author }));
+export async function init({ content, title, author, series }: InitArticle) {
   const meta = m.init({
-    id: hash,
+    id: hashify(JSON.stringify({ title, author })),
     title,
     contentType: ContentType.ARTICLE,
     author,
     series,
-    checksum
+    checksum: generateChecksum(content)
   })
-  return {
+  return baseSchema.parse({
     meta,
-    content
-  };
-}
-
-export function analysis(entity: BaseArticle) {
-  const analysis = { summary: "BLA", tags: [], excerpt: "HHHH" }
-  return { ...entity, analysis }
+    article: content
+  });
 }
 
 export async function augment(entry: BaseArticle) {
-  const { content, meta } = entry;
-  const { checksum, title, publicationData } = meta;
-  const { summary, tags, excerpt } = await ai.article.analyze({ title, content, checksum });
-  const imageURL = await ai.image.generate({ title, tags, summary, content, checksum });
-  const course = meta.course && slugify(meta.course);
-  const frontmatter = fm.init({
-    ...meta,
-    course,
-    ...publicationData,
-    summary,
-    tags,
-    excerpt,
-    imageURL
-  });
-  return {
+  const { article, meta } = entry;
+  const { checksum, title } = meta;
+  const { summary, tags, excerpt } =
+    await ai.article.analyze({ title, content: article, checksum });
+  const imageURL = await ai.image.generate({ title, tags, summary, content: article, checksum });
+  const augmentations = { summary, tags, imageURL, excerpt };
+  return finalSchema.parse({
     meta,
-    frontmatter,
-    content
-  }
+    augmentations,
+    article
+  })
 }
 
-export function render({ content, frontmatter }: FinalArticle) {
+
+export function render({ article, meta, augmentations }: FinalArticle) {
+  const course = meta.course && slugify(meta.course);
+  const { publicationData } = meta;
+  const frontmatter = fm.init({
+    ...meta,
+    ...publicationData,
+    ...augmentations,
+    course,
+  });
   return `---
 ${stringify(frontmatter).trim()}
 ---
-
-${content}
+${article}
 `
 }
 
 export async function write(basePath: string, article: FinalArticle) {
-  const { checksum } = article.meta;
-  const { title } = article.frontmatter;
+  const { checksum, title } = article.meta;
   const imgSrc = path.join('./.cache', `${checksum}.png`);
   const imgDest = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
   await copyFile(imgSrc, imgDest);

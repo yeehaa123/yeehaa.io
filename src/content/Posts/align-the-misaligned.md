@@ -3,9 +3,9 @@ title: Align the Misaligned
 author: yeehaa
 order: 0
 series: Ecosystem Architecture
-createdAt: 2024-06-21T18:14:09.775Z
-updatedAt: 2024-06-21T18:14:09.775Z
-publishedAt: 2024-06-21T18:14:09.775Z
+createdAt: 2024-06-22T05:12:53.800Z
+updatedAt: 2024-06-22T05:12:53.800Z
+publishedAt: 2024-06-22T05:12:53.800Z
 imageURL: .cache/34d442a1971d4dbbe8315bbfa8de35d5.png
 excerpt: Ecosystem architecture reimagines the fragmented internet, drawing on
   interdisciplinary knowledge and regenerative design to transform waste into
@@ -24,7 +24,6 @@ tags:
   - tech
   - future
 ---
-
 # Align the Misaligned
 
 It is remarkable how the history of virtual space mimics that of its physical counterpart. Like the universe's big bang, better yet, the earth's tectonic shifts, our once one and only internet has shattered into many pieces. To lead with the bad news: no attempt to glue its pieces back together will ever mend it into a whole again. But the fact that something is broken does not mean that it is worth-less. Changing our relation to fragments and waste is key to our planetary future. So why exclude the internet from our new found consciousness?

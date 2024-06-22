@@ -1,9 +1,9 @@
 import { curatorSchema } from '@/offcourse/schema';
 import { z } from 'zod';
 
-export const schema = curatorSchema.extend({
+export const profileDataSchema = curatorSchema.extend({
   courses: z.array(z.string()),
   article: z.array(z.string()),
 })
 
-export type ProfileData = z.infer<typeof schema>
+export type ProfileData = z.infer<typeof profileDataSchema>

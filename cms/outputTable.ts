@@ -1,8 +1,6 @@
 import type { Entity, BaseEntity, FinalEntity } from "./entity";
 import * as filters from "./meta/filters";
 import * as et from "./entity"
-import * as ot from "./outputTable"
-import { isArticle, isCourse, isProfile } from "./entity/filters";
 
 export type OutputTable = BaseEntity[];
 
@@ -16,7 +14,7 @@ export function findCourseForHabitat(table: OutputTable, entity: Entity) {
   return course?.meta.title;
 }
 
-export function findArticlesByAuthor(table: OutputTable, entity: Entity) {
+export function findByAuthor(table: OutputTable, entity: Entity) {
   const articles = table
     .filter(({ meta }) => filters.isArticle(meta))
     .filter(({ meta }) => filters.hasSameAuthor(entity.meta, meta))
@@ -29,21 +27,7 @@ export function findArticlesByAuthor(table: OutputTable, entity: Entity) {
 }
 
 export function associate(table: OutputTable) {
-  return table.map((entity) => {
-    if (isCourse(entity)) {
-      const habitat = ot.findHabitatForCourse(table, entity);
-      return { ...entity, associations: { habitat } }
-    }
-    if (isProfile(entity)) {
-      const associations = ot.findArticlesByAuthor(table, entity)
-      return { ...entity, associations }
-    }
-    if (isArticle(entity)) {
-      const course = ot.findCourseForHabitat(table, entity);
-      return { ...entity, associations: { course } }
-    }
-    throw ("INVALID ENTITY TYPE");
-  })
+  return table.map((entity) => et.associate(entity, table))
 }
 
 export async function augment(table: OutputTable) {

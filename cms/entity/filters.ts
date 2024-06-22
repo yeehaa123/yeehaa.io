@@ -3,7 +3,6 @@ import type { Profile, } from "../profile";
 import type { Course } from "../course";
 import type { Entity } from "."
 import type { InitEntity } from "./schema"
-import { ContentType } from "../meta/schema";
 import * as mf from "../meta/filters";
 
 export enum FileType {
@@ -12,15 +11,18 @@ export enum FileType {
 }
 
 export function isArticle(entity: Entity): entity is Article {
-  return (entity as Article).meta.contentType === ContentType.ARTICLE;
+  const meta = (entity as Article).meta
+  return mf.isArticle(meta)
 }
 
 export function isCourse(entity: Entity): entity is Course {
-  return (entity as Course).meta.contentType === ContentType.COURSE;
+  const meta = (entity as Course).meta
+  return mf.isCourse(meta);
 }
 
 export function isProfile(entity: Entity): entity is Profile {
-  return (entity as Profile).meta.contentType === ContentType.PROFILE;
+  const meta = (entity as Profile).meta
+  return mf.isProfile(meta);
 }
 
 export function isProfileFile({ fileName }: InitEntity) {

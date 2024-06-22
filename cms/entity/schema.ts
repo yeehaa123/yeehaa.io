@@ -9,4 +9,3 @@ const initSchema = z.object({
 })
 
 export type InitEntity = z.infer<typeof initSchema>
-

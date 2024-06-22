@@ -7,7 +7,6 @@ export function validate(meta: Meta) {
   return schema.parse(meta);
 }
 
-
 export function init(metaInit: MetaInit) {
   const status = metaInit.status || Status.DRAFT;
   const meta = { ...metaInit, status }
