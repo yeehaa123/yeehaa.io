@@ -1,28 +1,18 @@
-import type { InitEntity } from "../entity/schema";
-import { ContentType, type Meta } from "../meta/schema"
+import type { BaseProfile, FinalProfile, InitProfile, Profile } from "./schema"
+import { ContentType } from "../meta/schema"
+import { baseSchema, finalSchema } from "./schema"
 import * as path from 'path';
 import * as m from "../meta";
 import { writeFile } from 'fs/promises'
-import { generateChecksum, hashify, parseMarkdown, slugify } from "../helpers";
+import { generateChecksum, hashify, slugify } from "../helpers";
 import { stringify } from "yaml";
-import type { Curator } from "@/offcourse/schema";
 
 export const PATH_SUFFIX = "Profiles"
+export type { BaseProfile, FinalProfile, Profile }
 
-export type BaseProfile = {
-  meta: Meta,
-  profile: Curator,
-  bio: string,
-}
-
-export type FinalProfile = BaseProfile
-
-export type Profile = BaseProfile | FinalProfile
-
-export function init({ item, author }: InitEntity) {
-  const checksum = generateChecksum(item);
-  const { content, data } = parseMarkdown(item);
-  const profile = { ...data, alias: author }
+export function init({ content, data, author }: InitProfile) {
+  const checksum = generateChecksum(content);
+  const profile = { socials: data.socials, alias: author }
   let hash = hashify(JSON.stringify({ author }));
   const meta = m.init({
     id: hash,
@@ -31,15 +21,15 @@ export function init({ item, author }: InitEntity) {
     author,
     checksum
   })
-  return {
+  return baseSchema.parse({
     meta,
     profile,
     bio: content
-  } as BaseProfile;
+  })
 }
 
 export async function augment({ bio, meta, profile }: BaseProfile) {
-  return { meta, bio, profile };
+  return finalSchema.parse({ meta, bio, profile });
 }
 
 export function render({ bio, profile }: FinalProfile) {

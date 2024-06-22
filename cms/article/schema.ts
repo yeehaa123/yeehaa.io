@@ -26,3 +26,4 @@ export const finalSchema = baseSchema.extend({
 export type InitArticle = z.infer<typeof initSchema>
 export type BaseArticle = z.infer<typeof baseSchema>
 export type FinalArticle = z.infer<typeof finalSchema>
+export type Article = BaseArticle | FinalArticle;

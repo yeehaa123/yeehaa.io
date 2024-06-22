@@ -8,7 +8,7 @@ import * as course from "../course";
 import * as profile from "../profile";
 import * as people from "../people";
 import * as ot from "../outputTable";
-import { parseMarkdoc } from "../helpers";
+import { parseMarkdoc, parseMarkdown } from "../helpers";
 import {
   isProfileFile,
   isMarkdownFile,
@@ -24,7 +24,9 @@ export type Entity = BaseEntity | FinalEntity;
 
 export async function init(initEntitity: InitEntity) {
   if (isProfileFile(initEntitity)) {
-    return profile.init(initEntitity)
+    const { item, author } = initEntitity;
+    const { content, data } = parseMarkdown(item);
+    return profile.init({ content, data, author })
   }
 
   if (isMarkdownFile(initEntitity)) {

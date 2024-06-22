@@ -1,6 +1,6 @@
-import type { BaseArticle, FinalArticle, InitArticle } from "./schema"
-import { baseSchema, finalSchema } from "./schema"
+import type { BaseArticle, FinalArticle, InitArticle, Article } from "./schema"
 import { ContentType } from "../meta/schema"
+import { baseSchema, finalSchema } from "./schema"
 import * as path from 'path';
 import { stringify } from "yaml";
 import { writeFile, copyFile } from 'fs/promises'
@@ -9,7 +9,6 @@ import * as fm from "./frontmatter";
 import * as m from "../meta";
 import { generateChecksum, hashify, slugify } from "../helpers";
 
-type Article = BaseArticle | FinalArticle;
 export type { BaseArticle, FinalArticle, Article }
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
@@ -42,7 +41,6 @@ export async function augment(entry: BaseArticle) {
     article
   })
 }
-
 
 export function render({ article, meta, augmentations }: FinalArticle) {
   const course = meta.course && slugify(meta.course);
