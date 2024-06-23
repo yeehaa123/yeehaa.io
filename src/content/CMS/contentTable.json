@@ -9,9 +9,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-23T10:50:47.726Z",
-      "updatedAt": "2024-06-23T10:50:47.726Z",
-      "publishedAt": "2024-06-23T10:50:47.726Z"
+      "createdAt": "2024-06-23T18:20:50.357Z",
+      "updatedAt": "2024-06-23T18:20:50.357Z",
+      "publishedAt": "2024-06-23T18:20:50.357Z"
     }
   },
   {
@@ -24,9 +24,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
     "publicationData": {
-      "createdAt": "2024-06-23T10:54:08.772Z",
-      "updatedAt": "2024-06-23T10:54:08.772Z",
-      "publishedAt": "2024-06-23T10:54:08.772Z"
+      "createdAt": "2024-06-23T18:20:50.357Z",
+      "updatedAt": "2024-06-23T18:20:50.357Z",
+      "publishedAt": "2024-06-23T18:20:50.357Z"
     }
   },
   {
@@ -106,13 +106,8 @@
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "course",
-    "status": "published",
-    "checksum": "08e4923c8025cfa80581a39485c03cdd",
-    "publicationData": {
-      "createdAt": "2024-06-23T10:54:08.772Z",
-      "updatedAt": "2024-06-23T10:54:08.772Z",
-      "publishedAt": "2024-06-23T10:54:08.772Z"
-    }
+    "status": "draft",
+    "checksum": "08e4923c8025cfa80581a39485c03cdd"
   },
   {
     "id": "d71fe3a19689792e548b07f879e7bf55",
@@ -131,9 +126,9 @@
     "status": "published",
     "checksum": "f57640c1132e3acb42feeb27584ad58a",
     "publicationData": {
-      "createdAt": "2024-06-23T10:50:56.567Z",
-      "updatedAt": "2024-06-23T10:50:56.567Z",
-      "publishedAt": "2024-06-23T10:50:56.567Z"
+      "createdAt": "2024-06-23T18:14:27.052Z",
+      "updatedAt": "2024-06-23T18:14:27.052Z",
+      "publishedAt": "2024-06-23T18:14:27.052Z"
     }
   }
 ]

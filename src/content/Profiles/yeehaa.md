@@ -2,28 +2,23 @@
 alias: yeehaa
 socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
-description: Jan Hein Hoogstad, known as Yeehaa, is a professional active on
-  LinkedIn. Yeehaa is also a writer and curator. His writings explore themes
-  like internet fragmentation, ecosystem architecture, and global internet
-  variations. He has curated a course focused on aligning goals through personal
-  and professional development.
+description: Jan Hein Hoogstad, also known as Yeehaa, is a skilled professional
+  with notable expertise in internet fragmentation and ecosystem design. He has
+  authored influential blog posts on transforming online spaces and the global
+  variations of internet use.
 tags:
   - internet
   - design
   - tech
-  - future
   - global
   - access
   - skills
-  - career
-  - growth
-  - swot
 blurb: Jan Hein Hoogstad, also known as Yeehaa, is a skilled professional
   renowned for his expertise in his field. Connect with him on LinkedIn to
   explore his extensive experience and insights.
-checksum: 0273bfe634df501890b4f04a970733b2
-profileImageURL: 0273bfe634df501890b4f04a970733b2-profile.png
-bannerImageURL: 0273bfe634df501890b4f04a970733b2-banner.png
+checksum: 5e066a143c225a9499094e41b7e7d792
+profileImageURL: 5e066a143c225a9499094e41b7e7d792-profile.png
+bannerImageURL: 5e066a143c225a9499094e41b7e7d792-banner.png
 articles:
   - title: Align the Misaligned
     excerpt: Ecosystem architecture reimagines the fragmented internet, drawing on
@@ -34,13 +29,7 @@ articles:
       traditional Western experience with global variations like superapps and
       mesh networks. It critiques the idealized view of the early internet and
       covers ISOC's efforts for better connectivity.
-courses:
-  - title: Align the Misaligned
-    description: The sequence helps align goals by discovering personal strengths to
-      maximize potential, embracing weaknesses for self-improvement, performing
-      a SWOT analysis for strategic clarity, and formulating crucial asks to
-      leverage networking opportunities. This holistic approach ensures personal
-      and professional objectives are effectively aligned.
+courses: []
 ---
 Yeehaa is the alias of Jan Hein Hoogstad
 

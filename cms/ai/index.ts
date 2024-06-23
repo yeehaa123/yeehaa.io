@@ -4,4 +4,3 @@ import * as checkpoint from "./checkpoint"
 import * as course from "./course"
 
 export { article, image, checkpoint, course };
-

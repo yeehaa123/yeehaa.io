@@ -15,6 +15,7 @@ type ProfileItem = {
   description: string,
   tags: string[],
   blurb: string,
+  checksum: string,
 }
 
 type CourseAnnotations = {
@@ -96,18 +97,18 @@ export async function setProfile(checksum: string, item: ProfileItem) {
   return item;
 }
 
-export async function writeImage({ checksum, b64_json }: { checksum: string, b64_json: string }) {
+export async function writeImage({ id, b64_json }: { id: string, b64_json: string }) {
   let buff = Buffer.from(b64_json, 'base64');
-  const imageUrl = path.join(CACHE_BASE, `${checksum}.png`);
+  const imageUrl = path.join(CACHE_BASE, `${id}.png`);
   await writeFile(imageUrl, buff);
-  return path.join(".", `${checksum}.png`);
+  return path.join(".", `${id}.png`);
 }
 
-export async function getImage(checksum: string) {
-  const imageUrl = path.join(CACHE_BASE, `${checksum}.png`);
+export async function getImage(id: string) {
+  const imageUrl = path.join(CACHE_BASE, `${id}.png`);
   const fileExists = existsSync(imageUrl);
   if (fileExists) {
-    return path.join(".", `${checksum}.png`);
+    return path.join(".", `${id}.png`);
   }
   return false;
 }

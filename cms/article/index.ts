@@ -18,6 +18,7 @@ import * as ot from "../outputTable";
 import * as m from "../meta";
 import { generateChecksum, hashify, slugify } from "../helpers";
 import type { AnalyzedTable } from "cms/outputTable";
+import { generateBanner } from "./ai";
 
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
@@ -49,10 +50,7 @@ export function associate(entity: AnalyzedArticle, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedArticle) {
-  const { article, meta, analysis } = entity;
-  const { checksum, title } = meta;
-  const { summary, tags } = analysis;
-  const imageURL = await ai.image.generate({ title, tags, summary, content: article, checksum });
+  const imageURL = await generateBanner(entity);
   const augmentations = { imageURL };
   return finalSchema.parse({ ...entity, augmentations })
 }

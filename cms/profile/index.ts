@@ -32,11 +32,7 @@ export function init({ content, data, author }: InitProfile) {
     author,
     checksum
   })
-  return baseSchema.parse({
-    meta,
-    profile,
-    bio: content
-  })
+  return baseSchema.parse({ meta, profile, bio: content })
 }
 
 export async function analyze(entity: BaseProfile) {
@@ -53,11 +49,10 @@ export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedProfile) {
-  const { description, blurb, tags, checksum } = await ai.augment(entity);
-  console.log(checksum);
-  const profileImageURL = await ai.profilePicture({ description, tags, alias: entity.profile.alias, checksum })
-  const bannerImageURL = await ai.bannerImage({ description, tags, alias: entity.profile.alias, checksum })
-  const augmentations = { description, blurb, tags, bannerImageURL, profileImageURL, checksum }
+  const aiAug = await ai.augment(entity);
+  const profileImageURL = await ai.profilePicture(aiAug)
+  const bannerImageURL = await ai.bannerImage(aiAug);
+  const augmentations = { ...aiAug, bannerImageURL, profileImageURL }
   return finalSchema.parse({ ...entity, augmentations });
 }
 

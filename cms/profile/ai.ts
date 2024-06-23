@@ -1,16 +1,12 @@
 import type { BaseProfile, AssociatedProfile } from ".";
-import OpenAI from "openai";
 import * as cache from '../cache';
 import { createOpenAI } from '@ai-sdk/openai';
 import * as ps from "../profile/schema"
-import colors from "../../styles/colorSchemes/BambooCurtain";
+import * as ai from "../ai";
 import { generateObject } from 'ai';
 import { generateChecksum } from "cms/helpers";
 
 const vercel = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY" });
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 export async function analyze(entity: BaseProfile) {
   const { meta, profile, bio } = entity;
@@ -42,7 +38,7 @@ Also add ${min_num_tags} to ${max_num_tags} tags. A single tags is a single-word
   });
   const { description, tags, blurb } = object;
   if (description && tags && blurb) {
-    return cache.setProfile(checksum, { description, tags, blurb });
+    return cache.setProfile(checksum, { description, tags, blurb, checksum });
   }
   throw ("PROBLEM WITH AI");
 }
@@ -51,8 +47,7 @@ export async function augment(entity: AssociatedProfile) {
   const { profile, bio, analysis, associations } = entity;
   const checksum = generateChecksum(JSON.stringify(entity));
   const cachedItem = await cache.getProfile(checksum);
-  if (cachedItem) { return { ...cachedItem, checksum }; }
-  console.log("regenerating profile data for", profile.alias);
+  if (cachedItem) { return cachedItem }
   const summary_length = 600;
   const excerpt_length = 200;
   const min_num_tags = 6;
@@ -60,7 +55,7 @@ export async function augment(entity: AssociatedProfile) {
   const tag_length = 7;
   const { object } = await generateObject({
     model: vercel('gpt-4o'),
-    schema: ps.augmentationsSchema,
+    schema: ps.augmentationsSchema.omit({ checksum: true }),
     prompt: `Please summarize the profile of the following person for me in a maximum of ${summary_length} characters for me: 
 
 This person goes by the name of ${profile.alias}
@@ -79,59 +74,23 @@ Also add ${min_num_tags} to ${max_num_tags} tags.A single tags is a single - wor
   });
   const { description, tags, blurb } = object;
   if (description && tags && blurb) {
-    cache.setProfile(checksum, { description, tags, blurb });
+    cache.setProfile(checksum, { description, tags, blurb, checksum });
     return { description, tags, blurb, checksum }
   }
   throw ("PROBLEM WITH OPENAI");
 }
 
 export async function bannerImage({ description, tags, checksum }:
-  { description: string, alias: string, tags: string[], checksum: string }) {
-  const key = `${checksum}-banner`
-  const imageURL = await cache.getImage(key);
-  const { primary, secondary } = colors;
-  if (imageURL) { return imageURL };
-  const response = await openai.images.generate({
-    prompt: `generate a banner image for a blog post with the following description: '${description}' and tags: ${tags.join(", ")}. Try to use the following primary color: '${primary}' and secondary color: '${secondary}' in the image`,
-    model: "dall-e-3",
-    n: 1,
-    quality: 'hd',
-    style: 'vivid',
-    response_format: "b64_json",
-    size: "1792x1024",
-  });
-  const b64_json = response?.data[0]?.b64_json;
-  console.log(checksum, response?.data[0]?.revised_prompt);
-  if (b64_json) {
-    return cache.writeImage({ checksum: key, b64_json });
-  }
-  throw ("PROBLEM WITH OPENAI");
+  { description: string, tags: string[], checksum: string }) {
+  const id = `${checksum}-banner`
+  const prompt = `generate a banner image for a profile page with the following description: '${description}' and tags: ${tags.join(", ")}.`
+  return await ai.image.generate({ prompt, id });
 }
 
-export async function profilePicture({ description, alias, tags, checksum }:
-  { description: string, alias: string, tags: string[], checksum: string }) {
-  const key = `${checksum}-profile`
-  const imageURL = await cache.getImage(key);
-  if (imageURL) { return imageURL };
-  const response = await openai.images.generate({
-    model: "dall-e-3",
-    prompt: `Based on the following description:
-${description}
-
-and tags: 
-
-${tags.join(", ")}
-Generate an profile picture for a person with the alias: ${alias}`,
-    n: 1,
-    quality: 'hd',
-    style: 'vivid',
-    response_format: "b64_json",
-    size: "1024x1024",
-  });
-  const b64_json = response?.data[0]?.b64_json;
-  console.log(checksum, response?.data[0]?.revised_prompt);
-  if (b64_json) {
-    return cache.writeImage({ checksum: key, b64_json });
-  }
-  throw ("PROBLEM WITH OPENAI");
+export async function profilePicture({ description, tags, checksum }:
+  { description: string, tags: string[], checksum: string }) {
+  const id = `${checksum}-profile`
+  const prompt = `Based on the following description: ${description} and tags: ${tags.join(", ")}
+Generate an profile picture`
+  return await ai.image.generate({ prompt, id, shape: "SQUARE" });
 }
