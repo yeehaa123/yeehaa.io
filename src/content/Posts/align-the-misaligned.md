@@ -3,9 +3,9 @@ title: Align the Misaligned
 author: yeehaa
 order: 0
 series: Ecosystem Architecture
-createdAt: 2024-06-22T16:31:43.638Z
-updatedAt: 2024-06-22T16:31:43.638Z
-publishedAt: 2024-06-23T06:14:49.752Z
+createdAt: 2024-06-23T10:50:47.726Z
+updatedAt: 2024-06-23T10:50:47.726Z
+publishedAt: 2024-06-23T10:50:47.726Z
 imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
 excerpt: Ecosystem architecture reimagines the fragmented internet, drawing on
   interdisciplinary knowledge and regenerative design to transform waste into

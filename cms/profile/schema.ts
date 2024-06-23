@@ -29,7 +29,11 @@ const associationsSchema = z.object({
   articles: z.array(as.schema),
 })
 
-export const augmentationsSchema = analysisSchema;
+export const augmentationsSchema = analysisSchema.extend({
+  checksum: z.string(),
+  profileImageURL: z.string(),
+  bannerImageURL: z.string()
+})
 
 export const baseSchema = z.object({
   meta: m.schema,

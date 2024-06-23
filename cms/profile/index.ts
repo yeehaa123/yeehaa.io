@@ -14,7 +14,7 @@ import * as m from "../meta";
 import * as as from "../association";
 import * as ai from "./ai";
 import * as ot from "../outputTable";
-import { writeFile } from 'fs/promises'
+import { writeFile, copyFile } from 'fs/promises'
 import { generateChecksum, hashify, slugify } from "../helpers";
 import { stringify } from "yaml";
 
@@ -53,11 +53,22 @@ export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedProfile) {
-  const augmentations = await ai.augment(entity);
+  const { description, blurb, tags, checksum } = await ai.augment(entity);
+  console.log(checksum);
+  const profileImageURL = await ai.profilePicture({ description, tags, alias: entity.profile.alias, checksum })
+  const bannerImageURL = await ai.bannerImage({ description, tags, alias: entity.profile.alias, checksum })
+  const augmentations = { description, blurb, tags, bannerImageURL, profileImageURL, checksum }
   return finalSchema.parse({ ...entity, augmentations });
 }
 
 export async function write(basePath: string, entity: FinalProfile) {
+  const { checksum } = entity.augmentations;
+  const profileImgSrc = path.join('./.cache', `${checksum}-profile.png`);
+  const profileImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
+  await copyFile(profileImgSrc, profileImgDst);
+  const bannerImgSrc = path.join('./.cache', `${checksum}-banner.png`);
+  const bannerImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
+  await copyFile(bannerImgSrc, bannerImgDst);
   const slug = slugify(entity.profile.alias);
   const markdownFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);
   const rendered = render(entity);
