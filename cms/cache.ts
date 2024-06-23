@@ -5,10 +5,16 @@ import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path';
 import type { Checkpoint } from "./course/checkpoint";
 
-type Item = {
+type ArticleItem = {
   summary: string,
   tags: string[],
   excerpt: string,
+}
+
+type ProfileItem = {
+  description: string,
+  tags: string[],
+  blurb: string,
 }
 
 type CourseAnnotations = {
@@ -54,7 +60,17 @@ export async function getArticle(checksum: string) {
   const fileExists = existsSync(filePath);
   if (fileExists) {
     const file = await readFile(filePath, 'utf8');
-    return JSON.parse(file) as Item;
+    return JSON.parse(file) as ArticleItem;
+  }
+  return false;
+}
+
+export async function getProfile(checksum: string) {
+  const filePath = path.join(CACHE_BASE, `${checksum}.json`);
+  const fileExists = existsSync(filePath);
+  if (fileExists) {
+    const file = await readFile(filePath, 'utf8');
+    return JSON.parse(file) as ProfileItem;
   }
   return false;
 }
@@ -66,8 +82,15 @@ export async function setCheckpoint(hash: string, checkpoint: Checkpoint) {
   return checkpoint;
 }
 
-export async function setArticle(checksum: string, item: Item) {
-  console.log("setting item: ", checksum);
+export async function setArticle(checksum: string, item: ArticleItem) {
+  console.log("setting article: ", checksum);
+  const filePath = path.join(CACHE_BASE, `${checksum}.json`);
+  await writeFile(filePath, JSON.stringify(item, null, 2), 'utf8');
+  return item;
+}
+
+export async function setProfile(checksum: string, item: ProfileItem) {
+  console.log("setting profile: ", checksum);
   const filePath = path.join(CACHE_BASE, `${checksum}.json`);
   await writeFile(filePath, JSON.stringify(item, null, 2), 'utf8');
   return item;

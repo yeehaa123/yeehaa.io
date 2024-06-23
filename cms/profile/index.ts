@@ -12,6 +12,7 @@ import { analyzedSchema, associatedSchema, baseSchema, finalSchema } from "./sch
 import * as path from 'path';
 import * as m from "../meta";
 import * as as from "../association";
+import * as ai from "./ai";
 import * as ot from "../outputTable";
 import { writeFile } from 'fs/promises'
 import { generateChecksum, hashify, slugify } from "../helpers";
@@ -39,7 +40,7 @@ export function init({ content, data, author }: InitProfile) {
 }
 
 export async function analyze(entity: BaseProfile) {
-  const analysis = {};
+  const analysis = await ai.analyze(entity);
   return analyzedSchema.parse({ ...entity, analysis });
 }
 
@@ -52,10 +53,7 @@ export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedProfile) {
-  const { associations } = entity;
-  const { articles, courses } = associations;
-  const tags = [...new Set([...(articles || []), ...(courses || [])].flatMap(({ tags }) => tags))]
-  const augmentations = { tags }
+  const augmentations = await ai.augment(entity);
   return finalSchema.parse({ ...entity, augmentations });
 }
 
@@ -66,9 +64,11 @@ export async function write(basePath: string, entity: FinalProfile) {
   await writeFile(markdownFilePath, rendered, 'utf8');
 }
 
-export function render({ bio, profile, augmentations, associations }: FinalProfile) {
+export function render({ bio, profile, analysis, augmentations, associations }: FinalProfile) {
+  const courses = associations.courses.map(({ title, description }) => ({ title, description }));
+  const articles = associations.articles.map(({ title, excerpt }) => ({ title, excerpt }));
   return `---
-${stringify({ ...profile, ...augmentations, ...associations }).trim()}
+${stringify({ ...profile, ...analysis, ...augmentations, articles, courses }).trim()}
 ---
 ${bio}
 `

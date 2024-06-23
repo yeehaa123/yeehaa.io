@@ -6,9 +6,9 @@ import { slugify } from "../helpers";
 
 export const PATH_SUFFIX = "People"
 
-export async function write(basePath: string, { profile, associations, augmentations }: FinalProfile) {
+export async function write(basePath: string, { profile, analysis, augmentations, associations }: FinalProfile) {
   const slug = slugify(profile.alias);
   const dataFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
-  const dataFile = stringify({ ...profile, ...augmentations, ...associations, });
+  const dataFile = stringify({ ...profile, ...analysis, ...augmentations, ...associations });
   await writeFile(dataFilePath, dataFile, 'utf8');
 }

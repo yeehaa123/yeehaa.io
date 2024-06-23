@@ -1,22 +1,24 @@
 alias: yeehaa
 socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
+description: Jan Hein Hoogstad, alias Yeehaa, is a seasoned strategist and
+  consultant excelling in business development and innovation. He authored
+  'Align the Misaligned,' discussing the fragmentation of digital space and
+  curated a course on aligning personal and professional goals.
 tags:
-  - internet
+  - strategy
+  - expert
+  - growth
+  - digital
   - design
   - tech
   - future
-  - global
-  - access
-  - society
   - skills
   - career
   - self
-  - growth
-  - swot
-  - guide
-  - startups
-  - network
+blurb: Jan Hein Hoogstad, a.k.a. Yeehaa, leverages his business development and
+  digital transformation experience for organizational success. Passionate about
+  innovation, he provides expert strategies for improved performance and growth.
 courses:
   - id: bf1f22b2dd9785389afb1b1aaea31f57
     title: Align the Misaligned
@@ -55,22 +57,3 @@ articles:
       - design
       - tech
       - future
-  - id: 88be3ee13fcaec1270308625b34696aa
-    title: Continental Drift
-    author: yeehaa
-    summary: "The article 'Continental Drift' discusses the fragmentation of the
-      internet, contrasting the conventional Western experience with global
-      variations like Asia's superapps and Africa's mesh networks. It identifies
-      three types of internet fragmentation: technical, governmental, and
-      commercial, and critiques the idealized view of the early internet held by
-      various groups. The Internet Society's efforts to enhance global internet
-      connectivity are also highlighted."
-    excerpt: The article examines internet fragmentation, contrasting the
-      traditional Western experience with global variations like superapps and
-      mesh networks. It critiques the idealized view of the early internet and
-      covers ISOC's efforts for better connectivity.
-    tags:
-      - internet
-      - global
-      - access
-      - society

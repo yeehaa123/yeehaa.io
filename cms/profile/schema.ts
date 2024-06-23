@@ -18,16 +18,18 @@ export const initSchema = z.object({
   data: curatorSchema.partial(),
   content: z.string(),
 })
-export const analysisSchema = z.object({})
+export const analysisSchema = z.object({
+  description: z.string(),
+  tags: z.array(z.string()),
+  blurb: z.string(),
+})
 
 const associationsSchema = z.object({
-  courses: z.array(as.schema).optional(),
-  articles: z.array(as.schema).optional()
+  courses: z.array(as.schema),
+  articles: z.array(as.schema),
 })
 
-const augmentationsSchema = z.object({
-  tags: z.array(z.string())
-})
+export const augmentationsSchema = analysisSchema;
 
 export const baseSchema = z.object({
   meta: m.schema,
