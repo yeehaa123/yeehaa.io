@@ -20,9 +20,9 @@ import { stringify } from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
 
-export function init({ data, author }: InitProfile) {
-  const checksum = generateChecksum(JSON.stringify(data));
-  const profile = { ...data, alias: author }
+export function init({ profile: initial, author }: InitProfile) {
+  const checksum = generateChecksum(JSON.stringify(initial));
+  const profile = { ...initial, alias: author }
   let hash = hashify(JSON.stringify({ author }));
   const meta = m.init({
     id: hash,
@@ -50,7 +50,6 @@ export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
 export async function augment(entity: AssociatedProfile) {
   const checksum = generateChecksum(JSON.stringify(entity));
   const aiAug = await ai.augment(entity, checksum);
-  console.log(aiAug);
   const profileImageURL = await ai.profilePicture(aiAug, checksum)
   const bannerImageURL = await ai.bannerImage(aiAug, checksum);
   const augmentations = { ...aiAug, bannerImageURL, profileImageURL, checksum }
@@ -68,7 +67,9 @@ export async function write(basePath: string, entity: FinalProfile) {
   await copyFile(bannerImgSrc, bannerImgDst);
   const slug = slugify(entity.profile.alias);
   const dataFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
-  const dataFile = stringify({ ...profile, ...analysis, ...augmentations, ...associations });
+  const articles = associations.articles.map(({ title }) => title);
+  const courses = associations.courses.map(({ title }) => title);
+  const dataFile = stringify({ ...profile, ...analysis, ...augmentations, articles, courses });
   await writeFile(dataFilePath, dataFile, 'utf8');
 }
 export type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile, Profile }

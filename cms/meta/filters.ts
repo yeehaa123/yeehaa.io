@@ -44,6 +44,10 @@ export function isCourse(meta: Meta) {
   return meta.contentType === ContentType.COURSE;;
 }
 
+export function isSeries(meta: Meta) {
+  return meta.contentType === ContentType.SERIES;;
+}
+
 export function isNotDraft(meta: Meta) {
   return meta.status !== Status.DRAFT;
 }

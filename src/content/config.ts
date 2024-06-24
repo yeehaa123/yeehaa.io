@@ -10,6 +10,7 @@ const posts = defineCollection({
   })
 });
 
+
 const courses = defineCollection({
   type: "data",
   schema: course.schema.extend({

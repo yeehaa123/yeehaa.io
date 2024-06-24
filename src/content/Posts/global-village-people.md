@@ -3,9 +3,9 @@ title: Global Village People
 author: yeehaa
 order: 2
 series: Ecosystem Architecture
-createdAt: 2024-06-24T09:12:45.168Z
-updatedAt: 2024-06-24T09:12:45.168Z
-publishedAt: 2024-06-24T09:12:45.168Z
+createdAt: 2024-06-24T17:06:45.502Z
+updatedAt: 2024-06-24T17:06:45.502Z
+publishedAt: 2024-06-24T17:06:45.502Z
 imageURL: e8a7c7d905a234f18941d3fd4b6d0b69.png
 excerpt: Marshall McLuhan predicted that technology would create a 'global
   village,' eroding local-global distinctions while intensifying tribalism. The

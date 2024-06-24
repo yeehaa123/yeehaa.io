@@ -3,7 +3,6 @@ import * as pd from "./publicationData";
 import * as filters from "./filters"
 import { schema, Status } from "./schema"
 
-
 export function init(metaInit: MetaInit) {
   const status = metaInit.status || Status.DRAFT;
   const meta = { ...metaInit, status }

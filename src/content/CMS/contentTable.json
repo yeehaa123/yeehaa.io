@@ -1,5 +1,18 @@
 [
   {
+    "id": "aeeba19a01eb87dff1275d1f4b90dffa",
+    "author": "yeehaa",
+    "title": "Ecosystem Architecture",
+    "contentType": "series",
+    "status": "published",
+    "checksum": "6862700aeb6ead5a5c0301dafa33c2c9",
+    "publicationData": {
+      "createdAt": "2024-06-24T16:56:33.722Z",
+      "updatedAt": "2024-06-24T16:56:33.722Z",
+      "publishedAt": "2024-06-24T16:56:33.722Z"
+    }
+  },
+  {
     "id": "714be9470d94eb0533a473d98bb7daa4",
     "author": "yeehaa",
     "title": "Align the Misaligned",
@@ -9,9 +22,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-24T09:08:04.807Z",
-      "updatedAt": "2024-06-24T09:08:04.807Z",
-      "publishedAt": "2024-06-24T09:08:04.807Z"
+      "createdAt": "2024-06-24T16:57:38.544Z",
+      "updatedAt": "2024-06-24T16:57:38.544Z",
+      "publishedAt": "2024-06-24T16:57:38.544Z"
     }
   },
   {
@@ -24,9 +37,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
     "publicationData": {
-      "createdAt": "2024-06-24T09:12:45.168Z",
-      "updatedAt": "2024-06-24T09:12:45.168Z",
-      "publishedAt": "2024-06-24T09:12:45.168Z"
+      "createdAt": "2024-06-24T17:00:48.341Z",
+      "updatedAt": "2024-06-24T17:00:48.341Z",
+      "publishedAt": "2024-06-24T17:00:48.341Z"
     }
   },
   {
@@ -57,9 +70,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
     "publicationData": {
-      "createdAt": "2024-06-24T09:12:45.168Z",
-      "updatedAt": "2024-06-24T09:12:45.168Z",
-      "publishedAt": "2024-06-24T09:12:45.168Z"
+      "createdAt": "2024-06-24T17:06:45.502Z",
+      "updatedAt": "2024-06-24T17:06:45.502Z",
+      "publishedAt": "2024-06-24T17:06:45.502Z"
     }
   },
   {
@@ -112,8 +125,13 @@
     "author": "yeehaa",
     "title": "Align the Misaligned",
     "contentType": "course",
-    "status": "draft",
-    "checksum": "4151e963a15243167e9175616f9cebdc"
+    "status": "published",
+    "checksum": "4151e963a15243167e9175616f9cebdc",
+    "publicationData": {
+      "createdAt": "2024-06-24T17:11:10.456Z",
+      "updatedAt": "2024-06-24T17:11:10.456Z",
+      "publishedAt": "2024-06-24T17:11:10.456Z"
+    }
   },
   {
     "id": "d71fe3a19689792e548b07f879e7bf55",
@@ -132,9 +150,9 @@
     "status": "published",
     "checksum": "0511c550f1421f5bbf1abc06773e0a57",
     "publicationData": {
-      "createdAt": "2024-06-24T09:01:44.895Z",
-      "updatedAt": "2024-06-24T09:01:44.895Z",
-      "publishedAt": "2024-06-24T09:01:44.895Z"
+      "createdAt": "2024-06-24T17:07:57.068Z",
+      "updatedAt": "2024-06-24T17:07:57.068Z",
+      "publishedAt": "2024-06-24T17:07:57.068Z"
     }
   }
 ]

@@ -3,26 +3,27 @@ title: Continental Drift
 author: yeehaa
 order: 1
 series: Ecosystem Architecture
-createdAt: 2024-06-24T09:12:45.168Z
-updatedAt: 2024-06-24T09:12:45.168Z
-publishedAt: 2024-06-24T09:12:45.168Z
+createdAt: 2024-06-24T17:00:48.341Z
+updatedAt: 2024-06-24T17:00:48.341Z
+publishedAt: 2024-06-24T17:00:48.341Z
 imageURL: 6da78a490110bdc70b906c065f1b99ea.png
-excerpt: The article examines internet fragmentation, contrasting the
-  traditional Western experience with global variations like superapps and mesh
-  networks. It critiques the idealized view of the early internet and covers
-  ISOC's efforts for better connectivity.
-summary: "The article 'Continental Drift' discusses the fragmentation of the
-  internet, contrasting the conventional Western experience with global
-  variations like Asia's superapps and Africa's mesh networks. It identifies
-  three types of internet fragmentation: technical, governmental, and
-  commercial, and critiques the idealized view of the early internet held by
-  various groups. The Internet Society's efforts to enhance global internet
-  connectivity are also highlighted."
+excerpt: The article analyzes the fragmentation of the internet, its historical
+  roots, and current forms, highlighting variations in global access and the
+  role of the Internet Society in promoting inclusivity.
+summary: The article delves into the concept of internet fragmentation, tracing
+  its origins and current manifestations. It discusses the different ways
+  internet experiences vary globally, from superapps in Asia to mesh networks in
+  Africa, and categorizes the fragmentation into technical, governmental, and
+  commercial. The Internet Society's efforts to foster a more inclusive and
+  interoperable internet are highlighted. The narrative critiques the nostalgia
+  for the OG internet and emphasizes the need for a realistic assessment of its
+  promises and limitations.
 tags:
   - internet
   - global
   - access
-  - society
+  - tech
+  - policy
 ---
 # Continental Drift
 

@@ -1,74 +1,77 @@
-import type { BaseArticle, AnalyzedArticle, AssociatedArticle, FinalArticle } from "../article";
-import type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile } from "../profile";
-import type { RawCourse, BaseCourse, AssociatedCourse, AnalyzedCourse, FinalCourse } from "../course";
+import type { RawCourse } from "../course";
 import type { AnalyzedTable } from "../outputTable";
-import type { InitEntity } from "./schema";
+import type {
+  InitEntity,
+  BaseEntity,
+  AnalyzedEntity,
+  AssociatedEntity,
+  FinalEntity,
+  Entity
+} from "./schema";
 import * as article from "../article";
 import * as course from "../course";
 import * as profile from "../profile";
-import * as yaml from "yaml";
-import { parseMarkdoc } from "../helpers";
+import * as series from "../series";
 import {
-  isProfileFile,
-  isMarkdownFile,
-  isOffcourseFile,
   isCourse,
   isProfile,
   isArticle,
+  isSeries,
 } from "./filters";
 import type { Curator } from "@/offcourse/schema";
+import { ContentType } from "cms/meta/schema";
 
-export type BaseEntity = BaseCourse | BaseArticle | BaseProfile
-export type AnalyzedEntity = AnalyzedCourse | AnalyzedProfile | AnalyzedArticle
-export type AssociatedEntity = AssociatedCourse | AssociatedProfile | AssociatedArticle
-export type FinalEntity = FinalCourse | FinalArticle | FinalProfile
-export type Entity = BaseEntity | FinalEntity;
+export type { BaseEntity, AnalyzedEntity, AssociatedEntity, FinalEntity, Entity }
 
 export async function init(initEntitity: InitEntity) {
-  if (isProfileFile(initEntitity)) {
-    const { item, author } = initEntitity;
-    const data = yaml.parse(item) as Curator
-    return profile.init({ data, author })
-  }
+  const { contentType, content, title, author, seriesName } = initEntitity;
+  switch (contentType) {
+    case ContentType.PROFILE: {
+      return profile.init({ profile: content as Curator, author })
+    }
 
-  if (isMarkdownFile(initEntitity)) {
-    const { item, author, series } = initEntitity;
-    const { title, content } = parseMarkdoc(item);
-    if (!title) { throw ("ARTICLE NEEDS TITLE"); }
-    return article.init({ title, article: content, author, series })
-  }
+    case ContentType.ARTICLE: {
+      if (!title) { throw ("ARTICLE NEEDS TITLE"); }
+      return article.init({ title, article: content as string, author, series: seriesName })
+    }
 
-  if (isOffcourseFile(initEntitity)) {
-    const { item, author } = initEntitity;
-    const content = await yaml.parse(item) as RawCourse;
-    return course.init({ course: content, author })
+    case ContentType.COURSE: {
+      return course.init({ course: content as RawCourse, author })
+    }
+
+    case ContentType.SERIES: {
+      return series.init({ series: seriesName!, author })
+    }
   }
-  throw ("INVALID ENTITY")
 }
 
 export async function analyze(entity: BaseEntity) {
   if (isProfile(entity)) { return await profile.analyze(entity); }
   if (isArticle(entity)) { return await article.analyze(entity); }
   if (isCourse(entity)) { return await course.analyze(entity) }
-  throw ("INVALID ENTITY TYPE");
+  if (isSeries(entity)) { return series.analyze(entity) }
+  throw ("ANALYSIS RECEIVED INVALID ENTITY TYPE");
 }
 
 export function associate(table: AnalyzedTable, entity: AnalyzedEntity) {
   if (isCourse(entity)) { return course.associate(entity, table) }
   if (isArticle(entity)) { return article.associate(entity, table); }
   if (isProfile(entity)) { return profile.associate(entity, table); }
-  throw ("INVALID ENTITY TYPE");
+  if (isSeries(entity)) { return series.associate(entity, table) }
+  throw ("ASSOCIATE RECEIVED INVALID ENTITY TYPE");
 }
 
 export async function augment(entity: AssociatedEntity) {
   if (isProfile(entity)) { return await profile.augment(entity); }
   if (isArticle(entity)) { return await article.augment(entity); }
   if (isCourse(entity)) { return await course.augment(entity) }
-  throw ("INVALID ENTITY TYPE");
+  if (isSeries(entity)) { return await series.augment(entity) }
+  throw ("AUGMENT RECEIVED INVALID ENTITY TYPE");
 }
 
 export async function write(basePath: string, entity: FinalEntity) {
   if (isCourse(entity)) { await course.write(basePath, entity) }
   if (isArticle(entity)) { await article.write(basePath, entity); }
   if (isProfile(entity)) { await profile.write(basePath, entity); }
+  if (isSeries(entity)) { await series.write(basePath, entity) }
 }

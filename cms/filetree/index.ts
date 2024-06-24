@@ -1,18 +1,49 @@
 import type { MetaTable } from "../metaTable";
-import type { BaseEntity } from "../entity"
+import type { Curator } from "@/offcourse/schema";
+import type { File, FileTree } from "./schema"
 import * as et from "../entity"
 import * as path from 'path';
 import * as ef from "../entity/filters";
 import * as m from "../meta";
 import { readdir, lstat, readFile } from 'fs/promises'
-import { deslugify } from "../helpers";
+import { deslugify, parseMarkdoc } from "../helpers";
+import * as yaml from "yaml";
+import type { RawCourse } from "cms/course";
+import { ContentType } from "cms/meta/schema";
+import { isMarkdownFile, isOffcourseFile, isProfileFile } from "./filters";
 
-export type FileTree = Map<string, BaseEntity>
 
-async function processFile(tree: FileTree, filePath: string, author: string, series?: string) {
+async function convertFile(fileData: File) {
+  const { item } = fileData;
+  if (isProfileFile(fileData)) {
+    const content = yaml.parse(item) as Curator
+    return { content, contentType: ContentType.PROFILE }
+  }
+
+  if (isMarkdownFile(fileData)) {
+    const { title, content } = parseMarkdoc(item);
+    if (!title) { throw ("ARTICLE NEEDS TITLE"); }
+    return { title, content, contentType: ContentType.ARTICLE }
+  }
+
+  if (isOffcourseFile(fileData)) {
+    const content = await yaml.parse(item) as RawCourse;
+    return { content, contentType: ContentType.COURSE }
+  }
+  throw ("INVALID FILE TYPE")
+}
+
+async function processFile(tree: FileTree, filePath: string, author: string, seriesName?: string) {
   const { ext: fileType, name: fileName } = path.parse(filePath);
   const item = await readFile(filePath, 'utf8');
-  const entity = await et.init({ item, fileType, fileName, series, author })
+  const { content, title, contentType } = await convertFile({ fileName, fileType, item });
+  const entity = await et.init({
+    content,
+    title,
+    contentType,
+    seriesName,
+    author
+  })
   tree.set(entity.meta.id, entity);
 }
 
@@ -20,6 +51,13 @@ async function processDir(tree: FileTree, author: string, dirPath: string) {
   const seriesPath = path.parse(dirPath)
   const seriesSlug = seriesPath.name;
   const seriesName = deslugify(seriesSlug);
+  const entity = await et.init({
+    contentType: ContentType.SERIES,
+    content: "TBD",
+    seriesName,
+    author
+  });
+  tree.set(entity.meta.id, entity);
   const dir = await readdir(dirPath);
   for (const ext of dir) {
     const filePath = path.join(dirPath, ext);

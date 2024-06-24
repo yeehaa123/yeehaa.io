@@ -25,7 +25,7 @@ ${content}
 
 Also add ${min_num_tags} to ${max_num_tags} tags. A single tags is a single-word, simple, non-hyphenated and are associated to a href? Only include tags that are really important. Again, only give me the answer. No extra words. Tags can have no more than ${tag_length} characters, are not composed of multiple words and can thus not contain a hyphen, and are all lowercase.
 
-    Additional, add a ${excerpt_length} characters excerpt of the article.`
+    Additional, add a ${excerpt_length} characters excerpt of the article. No quotations mark please`
   return ai.text.analyze({ prompt, schema, id })
 }
 

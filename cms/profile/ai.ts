@@ -11,7 +11,7 @@ export async function analyze(entity: BaseProfile) {
   if (cachedItem) { return cachedItem; }
 
   const { alias, name, socials } = profile;
-  const description_length = 300;
+  const description_length = 600;
   const blurb_length = 200;
   const min_num_tags = 3;
   const max_num_tags = 5;
@@ -22,11 +22,11 @@ Aanalyze the content of the following linkedin profile: '${socials.linkedin}'.
 
 It belongs to a person with the following name '${name}' and alias '${alias}'.
 
-Please describe this person's bio in a maximum of ${description_length} words for me. Carefully consider his/her education, work experience and accomplished skills. Don't mention the persons actual name. Only the alias. No quotation marks please.
+Please describe this person's bio in a maximum of ${description_length} characters for me. Carefully consider his/her education, work experience and accomplished skills. Don't mention the persons actual name. Only the alias. No quotation marks please.
 
 Also add ${min_num_tags} to ${max_num_tags} tags. A single tags is a single-word, simple, non-hyphenated and are associated to a href? Only include tags that are really important. Again, only give me the answer. No extra words. Tags can have no more than ${tag_length} characters, are not composed of multiple words and can thus not contain a hyphen, and are all lowercase.
 
-    Additional, add a ${blurb_length} characters excerpt of the article.`
+    Additional, add a ${blurb_length} characters excerpt of the article. No quotations marks please.`
   return await ai.text.analyze({ prompt, schema, id })
 }
 

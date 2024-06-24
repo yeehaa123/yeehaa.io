@@ -10,6 +10,7 @@ import { isArticle, isCourse } from "./entity/filters";
 export type OutputTable =
   | BaseTable
   | AnalyzedTable
+  | AnalyzedTable
   | FinalTable;
 
 export type BaseTable = BaseEntity[];
@@ -66,4 +67,11 @@ export function findCoursesForAuthor(table: AnalyzedTable, author: string) {
   return table
     .filter(isCourse)
     .filter(other => other.meta.author === author)
+}
+
+export function findSeriesForArticle(table: AnalyzedTable, series: string) {
+  console.log(series);
+  return table
+    .filter(isArticle)
+    .filter(other => other.meta.series === series)
 }

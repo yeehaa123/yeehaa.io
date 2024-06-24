@@ -4,7 +4,8 @@ import * as pd from "./publicationData";
 export enum ContentType {
   ARTICLE = "article",
   COURSE = "course",
-  PROFILE = "profile"
+  PROFILE = "profile",
+  SERIES = "series"
 }
 
 export enum Status {
@@ -23,8 +24,6 @@ export const schema = z.object({
   checksum: z.string(),
   publicationData: pd.schema.optional(),
   habitat: z.string().optional(),
-  courses: z.array(z.string()).optional(),
-  articles: z.array(z.string()).optional(),
 })
 
 export const initSchema = schema.extend({

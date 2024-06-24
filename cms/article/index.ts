@@ -45,7 +45,9 @@ export async function analyze(entry: BaseArticle) {
 
 export function associate(entity: AnalyzedArticle, table: AnalyzedTable) {
   const course = ot.findCourseForArticle(table, entity.meta.title);
-  const associations = { course: course ? as.init(course) : undefined }
+  const associations = {
+    course: course ? as.init(course) : undefined,
+  }
   return associatedSchema.parse({ ...entity, associations })
 }
 

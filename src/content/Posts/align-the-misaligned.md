@@ -3,9 +3,9 @@ title: Align the Misaligned
 author: yeehaa
 order: 0
 series: Ecosystem Architecture
-createdAt: 2024-06-24T09:08:04.807Z
-updatedAt: 2024-06-24T09:08:04.807Z
-publishedAt: 2024-06-24T09:08:04.807Z
+createdAt: 2024-06-24T16:57:38.544Z
+updatedAt: 2024-06-24T16:57:38.544Z
+publishedAt: 2024-06-24T16:57:38.544Z
 imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
 excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
   exploitative tech practices. Embracing fragmented systems, 'ecosystem
@@ -24,6 +24,7 @@ tags:
   - design
   - future
   - eco
+course: align-the-misaligned
 ---
 # Align the Misaligned
 

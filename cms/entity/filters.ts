@@ -1,8 +1,8 @@
 import type { Article } from "../article";
 import type { Profile, } from "../profile";
 import type { Course } from "../course";
+import type { Series } from "../series";
 import type { Entity } from "."
-import type { InitEntity } from "./schema"
 import * as mf from "../meta/filters";
 
 export enum FileType {
@@ -25,16 +25,9 @@ export function isProfile(entity: Entity): entity is Profile {
   return mf.isProfile(meta);
 }
 
-export function isProfileFile({ fileName }: InitEntity) {
-  return fileName === "profile";
-}
-
-export function isMarkdownFile({ fileType }: InitEntity) {
-  return fileType === FileType.MARKDOWN;
-}
-
-export function isOffcourseFile({ fileType }: InitEntity) {
-  return fileType === FileType.OFFCOURSE;
+export function isSeries(entity: Entity): entity is Series {
+  const meta = (entity as Series).meta
+  return mf.isSeries(meta);
 }
 
 export function isNotDraft({ meta }: Entity) {

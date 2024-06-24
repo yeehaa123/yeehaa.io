@@ -18,6 +18,7 @@ export const PATH_SUFFIXES = [
   article.PATH_SUFFIX,
   course.PATH_SUFFIX,
   profile.PATH_SUFFIX,
+  series.PATH_SUFFIX,
 ];
 
 async function main() {
