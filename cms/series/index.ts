@@ -1,7 +1,6 @@
-import type { Meta } from "../meta/schema"
 import type { AnalyzedSeries, BaseSeries, AssociatedSeries, FinalSeries, Series } from "./schema";
 import type { AnalyzedTable } from "cms/outputTable";
-import { ContentType, Status } from "../meta/schema"
+import { ContentType } from "../meta/schema"
 import { analyzedSchema, baseSchema, associatedSchema, finalSchema } from "./schema";
 import * as path from 'path';
 import * as ai from "./ai";
@@ -15,8 +14,6 @@ import * as as from "../association"
 
 export const PATH_SUFFIX = "Series"
 
-type SeriesMap = Map<string, Meta[]>
-
 export function init({ series, author }: { series: string, author: string }) {
   const id = hashify(JSON.stringify({ series, author }));
   const meta = m.init({
@@ -29,10 +26,8 @@ export function init({ series, author }: { series: string, author: string }) {
   return baseSchema.parse({ meta, series: true })
 }
 
-
 export function analyze(entry: BaseSeries) {
-  const analysis = {};
-  return analyzedSchema.parse({ ...entry, analysis })
+  return analyzedSchema.parse({ ...entry, analysis: {} })
 }
 
 export function associate(entity: AnalyzedSeries, table: AnalyzedTable) {
@@ -62,33 +57,5 @@ export async function write(basePath: string, entity: FinalSeries) {
   const dataFile = yaml.stringify({ title, ...augmentations, articles })
   await writeFile(dataFilePath, dataFile, 'utf8');
 }
-
-export function group(tableData: Meta[]) {
-  return tableData.reduce(
-    (acc: SeriesMap, tableRow: Meta) => {
-      const { series, status } = tableRow;
-      if (status !== Status.DRAFT && series) {
-        const oldEntries = acc.get(series);
-        const entries = oldEntries ? [...oldEntries, tableRow] : [tableRow];
-        acc.set(series, entries);
-      }
-      return acc
-    }, new Map)
-}
-
-export function order(seriesMap: SeriesMap) {
-  return Array.from(seriesMap).flatMap(([_, series]) => {
-    return series.sort((a, b) => {
-      if (a.publicationData?.publishedAt && b.publicationData?.publishedAt) {
-        return a.publicationData.publishedAt.getTime() - b.publicationData.publishedAt.getTime();
-      } else {
-        return -1
-      }
-    }).map((tableRow, order) => {
-      return { ...tableRow, order }
-    })
-  })
-}
-
 
 export type { BaseSeries, AnalyzedSeries, AssociatedSeries, FinalSeries, Series }

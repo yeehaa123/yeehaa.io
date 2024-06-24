@@ -18,7 +18,6 @@
     "title": "Align the Misaligned",
     "contentType": "article",
     "status": "published",
-    "order": 0,
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
@@ -33,7 +32,6 @@
     "title": "Continental Drift",
     "contentType": "article",
     "status": "published",
-    "order": 1,
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
     "publicationData": {
@@ -66,7 +64,6 @@
     "title": "Global Village People",
     "contentType": "article",
     "status": "published",
-    "order": 2,
     "series": "Ecosystem Architecture",
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
     "publicationData": {

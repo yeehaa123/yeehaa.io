@@ -10,7 +10,7 @@ export type Series =
 
 export const baseSchema = z.object({
   meta: m.schema,
-  series: z.object({})
+  series: z.boolean()
 
 })
 export const analysisSchema = z.object({})

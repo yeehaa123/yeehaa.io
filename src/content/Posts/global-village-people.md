@@ -1,7 +1,6 @@
 ---
 title: Global Village People
 author: yeehaa
-order: 2
 series: Ecosystem Architecture
 createdAt: 2024-06-24T17:06:45.502Z
 updatedAt: 2024-06-24T17:06:45.502Z

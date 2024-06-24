@@ -1,7 +1,6 @@
 ---
 title: Continental Drift
 author: yeehaa
-order: 1
 series: Ecosystem Architecture
 createdAt: 2024-06-24T17:00:48.341Z
 updatedAt: 2024-06-24T17:00:48.341Z

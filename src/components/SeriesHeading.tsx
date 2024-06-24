@@ -4,7 +4,7 @@ type Props = {
   series: string | undefined
 }
 
-export function SeriesHeading({ series, order, href }: Props) {
+export function SeriesHeading({ series, order = 1, href }: Props) {
   const formattedOrder = ('00' + order).slice(-3);
   if (!series) return;
   return (

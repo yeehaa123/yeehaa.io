@@ -1,5 +1,6 @@
 import type { RawCourse } from "../course";
 import type { AnalyzedTable } from "../outputTable";
+import type { Curator } from "@/offcourse/schema";
 import type {
   InitEntity,
   BaseEntity,
@@ -8,6 +9,7 @@ import type {
   FinalEntity,
   Entity
 } from "./schema";
+import { ContentType } from "cms/meta/schema";
 import * as article from "../article";
 import * as course from "../course";
 import * as profile from "../profile";
@@ -18,10 +20,6 @@ import {
   isArticle,
   isSeries,
 } from "./filters";
-import type { Curator } from "@/offcourse/schema";
-import { ContentType } from "cms/meta/schema";
-
-export type { BaseEntity, AnalyzedEntity, AssociatedEntity, FinalEntity, Entity }
 
 export async function init(initEntitity: InitEntity) {
   const { contentType, content, title, author, seriesName } = initEntitity;
@@ -75,3 +73,5 @@ export async function write(basePath: string, entity: FinalEntity) {
   if (isProfile(entity)) { await profile.write(basePath, entity); }
   if (isSeries(entity)) { await series.write(basePath, entity) }
 }
+
+export type { BaseEntity, AnalyzedEntity, AssociatedEntity, FinalEntity, Entity }

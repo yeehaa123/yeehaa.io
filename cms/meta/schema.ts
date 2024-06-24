@@ -19,7 +19,6 @@ export const schema = z.object({
   title: z.string(),
   contentType: z.nativeEnum(ContentType),
   status: z.nativeEnum(Status),
-  order: z.number().optional(),
   series: z.string().optional(),
   checksum: z.string(),
   publicationData: pd.schema.optional(),
