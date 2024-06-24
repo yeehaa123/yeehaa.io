@@ -3,7 +3,7 @@ const CACHE_BASE = './.cache';
 import { existsSync } from "fs"
 import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path';
-import type { Checkpoint } from "./course/checkpoint";
+import type { Checkpoint } from "./checkpoint/schema";
 
 type ArticleItem = {
   summary: string,

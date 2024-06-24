@@ -9,9 +9,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-23T18:20:50.357Z",
-      "updatedAt": "2024-06-23T18:20:50.357Z",
-      "publishedAt": "2024-06-23T18:20:50.357Z"
+      "createdAt": "2024-06-24T09:08:04.807Z",
+      "updatedAt": "2024-06-24T09:08:04.807Z",
+      "publishedAt": "2024-06-24T09:08:04.807Z"
     }
   },
   {
@@ -24,9 +24,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
     "publicationData": {
-      "createdAt": "2024-06-23T18:20:50.357Z",
-      "updatedAt": "2024-06-23T18:20:50.357Z",
-      "publishedAt": "2024-06-23T18:20:50.357Z"
+      "createdAt": "2024-06-24T09:12:45.168Z",
+      "updatedAt": "2024-06-24T09:12:45.168Z",
+      "publishedAt": "2024-06-24T09:12:45.168Z"
     }
   },
   {
@@ -52,9 +52,15 @@
     "author": "yeehaa",
     "title": "Global Village People",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
+    "order": 2,
     "series": "Ecosystem Architecture",
-    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
+    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
+    "publicationData": {
+      "createdAt": "2024-06-24T09:12:45.168Z",
+      "updatedAt": "2024-06-24T09:12:45.168Z",
+      "publishedAt": "2024-06-24T09:12:45.168Z"
+    }
   },
   {
     "id": "e7b4fa43f10163d5d384cac81e4b5c29",
@@ -107,7 +113,7 @@
     "title": "Align the Misaligned",
     "contentType": "course",
     "status": "draft",
-    "checksum": "08e4923c8025cfa80581a39485c03cdd"
+    "checksum": "4151e963a15243167e9175616f9cebdc"
   },
   {
     "id": "d71fe3a19689792e548b07f879e7bf55",
@@ -115,7 +121,7 @@
     "title": "Engineer Breakthroughs",
     "contentType": "course",
     "status": "draft",
-    "checksum": "1e28d4acef2919748b0fdb6f343656d1",
+    "checksum": "792b5234292e6773850b4518abdeed0d",
     "habitat": "Continental Drift"
   },
   {
@@ -124,11 +130,11 @@
     "title": "yeehaa",
     "contentType": "profile",
     "status": "published",
-    "checksum": "f57640c1132e3acb42feeb27584ad58a",
+    "checksum": "0511c550f1421f5bbf1abc06773e0a57",
     "publicationData": {
-      "createdAt": "2024-06-23T18:14:27.052Z",
-      "updatedAt": "2024-06-23T18:14:27.052Z",
-      "publishedAt": "2024-06-23T18:14:27.052Z"
+      "createdAt": "2024-06-24T09:01:44.895Z",
+      "updatedAt": "2024-06-24T09:01:44.895Z",
+      "publishedAt": "2024-06-24T09:01:44.895Z"
     }
   }
 ]

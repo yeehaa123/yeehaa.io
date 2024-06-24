@@ -6,9 +6,8 @@ import type { InitEntity } from "./schema";
 import * as article from "../article";
 import * as course from "../course";
 import * as profile from "../profile";
-import * as people from "../people";
 import * as yaml from "yaml";
-import { parseMarkdoc, parseMarkdown } from "../helpers";
+import { parseMarkdoc } from "../helpers";
 import {
   isProfileFile,
   isMarkdownFile,
@@ -17,6 +16,7 @@ import {
   isProfile,
   isArticle,
 } from "./filters";
+import type { Curator } from "@/offcourse/schema";
 
 export type BaseEntity = BaseCourse | BaseArticle | BaseProfile
 export type AnalyzedEntity = AnalyzedCourse | AnalyzedProfile | AnalyzedArticle
@@ -27,8 +27,8 @@ export type Entity = BaseEntity | FinalEntity;
 export async function init(initEntitity: InitEntity) {
   if (isProfileFile(initEntitity)) {
     const { item, author } = initEntitity;
-    const { content, data } = parseMarkdown(item);
-    return profile.init({ content, data, author })
+    const data = yaml.parse(item) as Curator
+    return profile.init({ data, author })
   }
 
   if (isMarkdownFile(initEntitity)) {
@@ -70,8 +70,5 @@ export async function augment(entity: AssociatedEntity) {
 export async function write(basePath: string, entity: FinalEntity) {
   if (isCourse(entity)) { await course.write(basePath, entity) }
   if (isArticle(entity)) { await article.write(basePath, entity); }
-  if (isProfile(entity)) {
-    await profile.write(basePath, entity);
-    await people.write(basePath, entity);
-  }
+  if (isProfile(entity)) { await profile.write(basePath, entity); }
 }

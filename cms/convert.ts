@@ -7,7 +7,6 @@ import * as series from "./series";
 import * as article from "./article";
 import * as course from "./course";
 import * as profile from "./profile";
-import * as people from "./people";
 import { initDirs } from "./helpers";
 
 
@@ -19,7 +18,6 @@ export const PATH_SUFFIXES = [
   article.PATH_SUFFIX,
   course.PATH_SUFFIX,
   profile.PATH_SUFFIX,
-  people.PATH_SUFFIX
 ];
 
 async function main() {

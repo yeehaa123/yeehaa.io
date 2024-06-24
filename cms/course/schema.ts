@@ -1,7 +1,8 @@
 import { z } from 'zod';
 import * as m from "../meta/schema"
 import * as as from "../association"
-import { courseSchema, checkpointSchema } from "@/offcourse/schema";
+import { courseSchema } from "@/offcourse/schema";
+import { baseCheckpointSchema, checkpointSchema } from "../checkpoint/schema"
 
 export type Course =
   | BaseCourse
@@ -9,10 +10,6 @@ export type Course =
   | AssociatedCourse
   | FinalCourse;
 
-export const rawCheckpointSchema = z.object({
-  task: z.string(),
-  href: z.string(),
-})
 
 export const analysisSchema = z.object({
   description: z.string(),
@@ -31,12 +28,12 @@ export const outputSchema = courseSchema.extend({
   habitat: z.string().optional(),
 })
 
-
 export const rawCourseSchema = z.object({
+  courseId: z.string(),
   goal: z.string(),
   curator: z.string(),
   habitat: z.string().optional(),
-  checkpoints: z.array(rawCheckpointSchema)
+  checkpoints: z.array(baseCheckpointSchema)
 })
 
 export const initSchema = z.object({
@@ -61,7 +58,6 @@ export const finalSchema = associatedSchema.extend({
   augmentations: augmentationsSchema
 })
 
-export type RawCheckpoint = z.infer<typeof rawCheckpointSchema>
 export type RawCourse = z.infer<typeof rawCourseSchema>
 export type InitCourse = z.infer<typeof initSchema>
 export type BaseCourse = z.infer<typeof baseSchema>

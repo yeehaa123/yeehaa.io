@@ -1,0 +1,94 @@
+name: Jan Hein Hoogstad
+alias: yeehaa
+socials:
+  linkedin: https://www.linkedin.com/in/yeehaa/
+bio: Yeehaa is a seasoned professional known for his expertise in digital
+  transformation and innovation leadership. With a rich educational background
+  from prestigious institutions, including a master's degree in Business
+  Administration, Yeehaa has built a robust career in the technology and
+  management consulting sectors. Work experiences span across leading roles in
+  top-tier consulting firms, focusing on driving strategic initiatives and
+  delivering impactful solutions. Yeehaa's skill set includes digital strategy,
+  change management, and business development, making him a valuable asset to
+  any forward-thinking organization.
+tags:
+  - leader
+  - digital
+  - change
+  - internet
+  - tech
+  - media
+checksum: 133e857528df9c3073837d64b4511f9f
+description: Yeehaa is a seasoned professional known for expertise in digital
+  transformation and innovation leadership. With a rich educational background,
+  including an MBA, Yeehaa has excelled in top-tier consulting roles. His blog
+  posts reflect a deep understanding of internet fragmentation, technological
+  impacts, and global media dynamics. Yeehaa advocates for sustainable digital
+  ecosystems and values pluralism in the digital age.
+blurb: Yeehaa's expertise spans digital strategy, change management, and
+  business development, making him invaluable to forward-thinking organizations.
+profileImageURL: 133e857528df9c3073837d64b4511f9f-profile.png
+bannerImageURL: 133e857528df9c3073837d64b4511f9f-banner.png
+courses: []
+articles:
+  - id: 714be9470d94eb0533a473d98bb7daa4
+    title: Align the Misaligned
+    author: yeehaa
+    summary: The fragmentation of the internet mirrors both the Earth’s tectonic
+      shifts and the exploitative practices of the tech industry. Yet,
+      brokenness does not imply worthlessness. Embracing fragmented systems, the
+      article proposes ‘ecosystem architecture,’ a new approach inspired by
+      decentralization and regenerative design. By fostering an
+      interdisciplinary mix from philosophy to coding, the aim is to create
+      vibrant, sustainable digital ecosystems. These systems, though scattered,
+      can be innovative seeds for the future, promoting a healthier, more
+      dynamic environment.
+    excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
+      exploitative tech practices. Embracing fragmented systems, 'ecosystem
+      architecture' aims for creating vibrant, sustainable digital ecosystems.
+    tags:
+      - internet
+      - tech
+      - design
+      - future
+      - eco
+  - id: 88be3ee13fcaec1270308625b34696aa
+    title: Continental Drift
+    author: yeehaa
+    summary: "The article 'Continental Drift' discusses the fragmentation of the
+      internet, contrasting the conventional Western experience with global
+      variations like Asia's superapps and Africa's mesh networks. It identifies
+      three types of internet fragmentation: technical, governmental, and
+      commercial, and critiques the idealized view of the early internet held by
+      various groups. The Internet Society's efforts to enhance global internet
+      connectivity are also highlighted."
+    excerpt: The article examines internet fragmentation, contrasting the
+      traditional Western experience with global variations like superapps and
+      mesh networks. It critiques the idealized view of the early internet and
+      covers ISOC's efforts for better connectivity.
+    tags:
+      - internet
+      - global
+      - access
+      - society
+  - id: d1095d6044b09f646e508eaaf1856b2e
+    title: Global Village People
+    author: yeehaa
+    summary: Marshall McLuhan predicted that electric technology would turn the
+      world into a 'global village,' eroding the distinctions between local and
+      global cultures. While this creates a sense of unity, it also intensifies
+      tribalism and cultural clashes, as seen on the internet today. The modern
+      web is a battleground for control over communication channels and ideas.
+      The pervasive media creates distractions while hiding deeper struggles for
+      power. Friedrich Kittler asserts that this media war extends beyond
+      content to control infrastructure. Examples like Cambridge Analytica and
+      the rise of deep fakes illustrate this ongoing conflict, indicating that
+      we must navigate complex relationships and value pluralism.
+    excerpt: Marshall McLuhan predicted that technology would create a 'global
+      village,' eroding local-global distinctions while intensifying tribalism.
+      The internet is now a battleground for communication control.
+    tags:
+      - media
+      - global
+      - tribes
+      - power

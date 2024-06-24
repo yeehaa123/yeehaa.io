@@ -19,11 +19,10 @@ import { generateChecksum, hashify, slugify } from "../helpers";
 import { stringify } from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
-export type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile, Profile }
 
-export function init({ content, data, author }: InitProfile) {
-  const checksum = generateChecksum(content);
-  const profile = { socials: data.socials, alias: author }
+export function init({ data, author }: InitProfile) {
+  const checksum = generateChecksum(JSON.stringify(data));
+  const profile = { ...data, alias: author }
   let hash = hashify(JSON.stringify({ author }));
   const meta = m.init({
     id: hash,
@@ -32,7 +31,7 @@ export function init({ content, data, author }: InitProfile) {
     author,
     checksum
   })
-  return baseSchema.parse({ meta, profile, bio: content })
+  return baseSchema.parse({ meta, profile })
 }
 
 export async function analyze(entity: BaseProfile) {
@@ -49,14 +48,17 @@ export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedProfile) {
-  const aiAug = await ai.augment(entity);
-  const profileImageURL = await ai.profilePicture(aiAug)
-  const bannerImageURL = await ai.bannerImage(aiAug);
-  const augmentations = { ...aiAug, bannerImageURL, profileImageURL }
+  const checksum = generateChecksum(JSON.stringify(entity));
+  const aiAug = await ai.augment(entity, checksum);
+  console.log(aiAug);
+  const profileImageURL = await ai.profilePicture(aiAug, checksum)
+  const bannerImageURL = await ai.bannerImage(aiAug, checksum);
+  const augmentations = { ...aiAug, bannerImageURL, profileImageURL, checksum }
   return finalSchema.parse({ ...entity, augmentations });
 }
 
 export async function write(basePath: string, entity: FinalProfile) {
+  const { profile, analysis, augmentations, associations } = entity;
   const { checksum } = entity.augmentations;
   const profileImgSrc = path.join('./.cache', `${checksum}-profile.png`);
   const profileImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
@@ -65,17 +67,8 @@ export async function write(basePath: string, entity: FinalProfile) {
   const bannerImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
   await copyFile(bannerImgSrc, bannerImgDst);
   const slug = slugify(entity.profile.alias);
-  const markdownFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);
-  const rendered = render(entity);
-  await writeFile(markdownFilePath, rendered, 'utf8');
+  const dataFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
+  const dataFile = stringify({ ...profile, ...analysis, ...augmentations, ...associations });
+  await writeFile(dataFilePath, dataFile, 'utf8');
 }
-
-export function render({ bio, profile, analysis, augmentations, associations }: FinalProfile) {
-  const courses = associations.courses.map(({ title, description }) => ({ title, description }));
-  const articles = associations.articles.map(({ title, excerpt }) => ({ title, excerpt }));
-  return `---
-${stringify({ ...profile, ...analysis, ...augmentations, articles, courses }).trim()}
----
-${bio}
-`
-}
+export type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile, Profile }

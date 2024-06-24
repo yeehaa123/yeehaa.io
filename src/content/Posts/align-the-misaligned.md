@@ -3,26 +3,27 @@ title: Align the Misaligned
 author: yeehaa
 order: 0
 series: Ecosystem Architecture
-createdAt: 2024-06-23T18:20:50.357Z
-updatedAt: 2024-06-23T18:20:50.357Z
-publishedAt: 2024-06-23T18:20:50.357Z
+createdAt: 2024-06-24T09:08:04.807Z
+updatedAt: 2024-06-24T09:08:04.807Z
+publishedAt: 2024-06-24T09:08:04.807Z
 imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
-excerpt: Ecosystem architecture reimagines the fragmented internet, drawing on
-  interdisciplinary knowledge and regenerative design to transform waste into
-  innovation and foster vibrant, decentralized ecosystems.
-summary: The history of virtual space parallels physical space's fragmentation,
-  leaving the internet shattered and irreparable. Mining and extraction drive
-  the tech industry, causing environmental and social damages. Ecosystem
-  architecture, inspired by decentralization and regenerative design, offers a
-  new approach to harnessing the fragmented internet, turning waste into
-  innovation. It emphasizes the importance of designing biodiverse conceptual
-  ecosystems that thrive through interdisciplinary collaboration for a
-  regenerative future.
+excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
+  exploitative tech practices. Embracing fragmented systems, 'ecosystem
+  architecture' aims for creating vibrant, sustainable digital ecosystems.
+summary: The fragmentation of the internet mirrors both the Earth’s tectonic
+  shifts and the exploitative practices of the tech industry. Yet, brokenness
+  does not imply worthlessness. Embracing fragmented systems, the article
+  proposes ‘ecosystem architecture,’ a new approach inspired by decentralization
+  and regenerative design. By fostering an interdisciplinary mix from philosophy
+  to coding, the aim is to create vibrant, sustainable digital ecosystems. These
+  systems, though scattered, can be innovative seeds for the future, promoting a
+  healthier, more dynamic environment.
 tags:
   - internet
-  - design
   - tech
+  - design
   - future
+  - eco
 ---
 # Align the Misaligned
 

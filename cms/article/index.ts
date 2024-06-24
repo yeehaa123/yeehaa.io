@@ -11,7 +11,7 @@ import { analyzedSchema, associatedSchema, baseSchema, finalSchema } from "./sch
 import * as path from 'path';
 import { stringify } from "yaml";
 import { writeFile, copyFile } from 'fs/promises'
-import * as ai from '../ai';
+import * as ai from './ai';
 import * as as from "../association";
 import * as fm from "./frontmatter";
 import * as ot from "../outputTable";
@@ -38,7 +38,7 @@ export async function init({ article, title, author, series }: InitArticle) {
 export async function analyze(entry: BaseArticle) {
   const { article: content, meta } = entry;
   const { checksum, title } = meta;
-  const { summary, tags, excerpt } = await ai.article.analyze({ title, content, checksum });
+  const { summary, tags, excerpt } = await ai.analyzeArticle({ title, content, checksum });
   const analysis = { summary, tags, excerpt };
   return analyzedSchema.parse({ ...entry, analysis })
 }

@@ -9,14 +9,14 @@ import type {
 } from "./schema"
 import type { AnalyzedTable } from "../outputTable";
 import { ContentType } from "../meta/schema"
-import * as cp from "./checkpoint";
-import * as ai from '../ai';
+import * as ai from './ai';
 import { generateChecksum, hashify, slugify } from "../helpers";
 import { writeFile } from 'fs/promises'
 import * as path from 'path';
 import * as m from "../meta"
 import * as ot from "../outputTable"
 import * as yaml from "yaml";
+import * as cp from "../checkpoint";
 import * as as from "../association";
 import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema } from "./schema"
 
@@ -24,28 +24,28 @@ export const PATH_SUFFIX = "Courses"
 export const schema = outputSchema
 
 export function init({ course: raw, author }: InitCourse) {
-  const course = { ...raw, curator: author };
-  const { goal, curator, habitat } = course;
+  const curator = author;
+  const { goal, habitat } = raw;
+  const courseId = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
-    id: hashify(JSON.stringify({ goal, curator })),
+    id: courseId,
     title: goal,
     contentType: ContentType.COURSE,
     author,
     habitat,
-    checksum: generateChecksum(JSON.stringify(course)),
+    checksum: generateChecksum(JSON.stringify(raw)),
   });
+  const checkpoints = raw.checkpoints.map(checkpoint => cp.init({ ...checkpoint, goal, curator }));
+  const course = { courseId, goal, curator, checkpoints };
   return baseSchema.parse({ meta, course })
 }
 
 export async function analyze(entity: BaseCourse) {
-  const { meta, course } = entity;
-  const { id } = meta;
-  const { goal, curator } = course;
-  const promises = course.checkpoints.map(checkpoint => {
-    return cp.augment({ ...checkpoint, goal, curator });
-  })
+  const { course } = entity;
+  const { goal } = course;
+  const promises = course.checkpoints.map(checkpoint => cp.analyze({ ...checkpoint, goal }));
   const checkpoints = await Promise.all(promises);
-  const { description } = await ai.course.analyze({ goal, checkpoints, id })
+  const { description } = await ai.analyzeCourse(course)
   const allTags = checkpoints.flatMap(({ tags }) => tags);
   const tags = [...new Set([...allTags])]
   const analysis = {

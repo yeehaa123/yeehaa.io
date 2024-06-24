@@ -9,19 +9,18 @@ export type Profile =
   | AssociatedProfile
   | FinalProfile
 
+
 export const profileDataSchema = curatorSchema.extend({
   courses: z.array(z.string()),
   article: z.array(z.string()),
 })
 export const initSchema = z.object({
   author: z.string(),
-  data: curatorSchema.partial(),
-  content: z.string(),
+  data: curatorSchema.partial()
 })
 export const analysisSchema = z.object({
-  description: z.string(),
+  bio: z.string(),
   tags: z.array(z.string()),
-  blurb: z.string(),
 })
 
 const associationsSchema = z.object({
@@ -29,8 +28,11 @@ const associationsSchema = z.object({
   articles: z.array(as.schema),
 })
 
-export const augmentationsSchema = analysisSchema.extend({
+export const augmentationsSchema = z.object({
   checksum: z.string(),
+  tags: z.array(z.string()),
+  description: z.string(),
+  blurb: z.string(),
   profileImageURL: z.string(),
   bannerImageURL: z.string()
 })
@@ -38,7 +40,6 @@ export const augmentationsSchema = analysisSchema.extend({
 export const baseSchema = z.object({
   meta: m.schema,
   profile: curatorSchema,
-  bio: z.string()
 })
 
 export const analyzedSchema = baseSchema.extend({
