@@ -33,6 +33,6 @@ Also add ${min_num_tags} to ${max_num_tags} tags.A single tags is a single - wor
 export async function bannerImage({ summary, tags }:
   { summary: string, tags: string[] }, checksum: string) {
   const id = `${checksum}-banner`
-  const prompt = `generate a banner image for a cover page for a series of blog posts with the following description: '${summary}' and tags: ${tags.join(", ")}.`
-  return await ai.image.generate({ prompt, id });
+  const prompt = `generate an illustration for a cover page for a series of blog posts with the following description: '${summary}' and tags: ${tags.join(", ")}. The image should not display any words or text`
+  return await ai.image.generate({ prompt, id, shape: "SQUARE" });
 }

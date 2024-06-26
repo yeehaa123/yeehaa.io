@@ -1,7 +1,7 @@
 import type { AnalyzedSeries, BaseSeries, AssociatedSeries, FinalSeries, Series } from "./schema";
 import type { AnalyzedTable } from "cms/outputTable";
 import { ContentType } from "../meta/schema"
-import { analyzedSchema, associatedSchema, baseSchema, finalSchema } from "./schema";
+import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema } from "./schema";
 import * as path from 'path';
 import * as ai from "./ai";
 import { writeFile, copyFile } from 'fs/promises'
@@ -12,6 +12,7 @@ import * as yaml from "yaml";
 import * as as from "../association"
 
 export const PATH_SUFFIX = "Series"
+export const schema = outputSchema;
 
 export function init({ series, author }: { series: string, author: string }) {
   const id = hashify(JSON.stringify({ series }));
@@ -47,14 +48,17 @@ export async function augment(entity: AssociatedSeries) {
 export async function write(basePath: string, entity: FinalSeries) {
   const { meta, augmentations, associations } = entity;
   const { title } = meta;
-  const { checksum } = augmentations;
-  const bannerImgSrc = path.join('./.cache', `${checksum}-banner.png`);
-  const bannerImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
+  const { bannerImageURL } = augmentations;
+  console.log(bannerImageURL);
+  const bannerImgSrc = path.join('./.cache', bannerImageURL);
+  const bannerImgDst = path.join(basePath, PATH_SUFFIX, bannerImageURL);
   await copyFile(bannerImgSrc, bannerImgDst);
   const slug = slugify(title);
   const dataFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
-  const articles = associations.articles.map(({ title }) => title);
-  const dataFile = yaml.stringify({ title, ...augmentations, articles })
+  const articles = associations.articles.map(({ title }) => slugify(title));
+  console.log(articles);
+  const output = outputSchema.parse({ title, ...augmentations, articles, bannerImageURL: `./${bannerImageURL}` })
+  const dataFile = yaml.stringify(output)
   await writeFile(dataFilePath, dataFile, 'utf8');
 }
 

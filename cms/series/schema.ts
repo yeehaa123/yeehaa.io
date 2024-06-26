@@ -32,6 +32,11 @@ export const analyzedSchema = baseSchema.extend({
   analysis: analysisSchema
 })
 
+export const outputSchema = augmentationsSchema.merge(associationsSchema).extend({
+  articles: z.array(z.string()),
+  title: z.string()
+})
+
 export const associatedSchema = analyzedSchema.extend({
   associations: associationsSchema
 })
