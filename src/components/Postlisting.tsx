@@ -3,11 +3,15 @@ import { ArticleHeading } from "./ArticleHeading";
 import { Tags } from "@/components/Tags";
 
 type Props = Pick<ArticleFrontmatter,
-  'series'
   | 'order'
   | 'title'
   | 'summary'
-  | 'tags'> & { slug: string }
+  | 'tags'> & {
+    slug: string,
+    series: {
+      id: string
+    }
+  }
 
 export function PostListing({ series, order, title, summary, tags, slug }: Props) {
   return (

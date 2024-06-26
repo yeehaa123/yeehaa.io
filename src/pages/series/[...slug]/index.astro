@@ -11,14 +11,14 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry  } = Astro.props;
+const { entry, logoLink = "/"} = Astro.props;
 const { data } = entry
 const { title, summary, bannerImageURL, articles} = data;
 const posts = await getEntries(articles)
 
 ---
-<Layout >
-  <div slot="hero" class="w-full bg-offblack dark:bg-offwhite">
+<Layout {logoLink}>
+  <div slot="hero" class="w-full bg-black dark:bg-white">
     <div class="flex flex-col lg:flex-row-reverse gap-x-8 w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto">
       <Image class="w-full lg:w-1/2 h-full aspect-ratio-auto" src={bannerImageURL} alt={title} loading="eager"/>
       <div class="px-8 flex flex-col justify-center gap-y-5 py-8 md:py-12">

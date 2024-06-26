@@ -73,12 +73,14 @@ export async function write(basePath: string, entity: FinalArticle) {
 export function render(entity: FinalArticle) {
   const { meta, analysis, associations, augmentations, article } = entity;
   const course = associations.course?.title && slugify(associations.course?.title);
+  const series = meta.series && slugify(meta.series);
   const { publicationData } = meta;
   const frontmatter = fm.init({
     ...meta,
     ...analysis,
     ...publicationData,
     ...augmentations,
+    series,
     course,
   });
   return `---

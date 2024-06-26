@@ -1,9 +1,13 @@
 import { SeriesHeading } from "@/components/SeriesHeading";
 
+type Series = {
+  id: string;
+}
+
 type Props = {
   className?: string | undefined;
   order?: number | undefined;
-  series?: string | undefined;
+  series?: Series | undefined;
   title: string;
   href: string;
   slug?: string

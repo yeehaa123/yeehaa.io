@@ -8,7 +8,8 @@ const posts = defineCollection({
   type: "content",
   schema: ({ image }) => article.schema.extend({
     bannerImageURL: image(),
-    course: reference('Courses').optional()
+    course: reference('Courses').optional(),
+    series: reference('Series').optional()
   })
 });
 

@@ -1,20 +1,23 @@
+import { deslugify } from "cms/helpers";
 type Props = {
   href: string,
   order: number | undefined,
-  series: string | undefined
+  series?: {
+    id: string
+  } | undefined
 }
 
-export function SeriesHeading({ series, order = 1, href }: Props) {
+export function SeriesHeading({ series, order = 1 }: Props) {
   const formattedOrder = ('00' + order).slice(-3);
   if (!series) return;
   return (
-    <a href={href}>
+    <a href={`/series/${series.id}`}>
       <h2 className="flex mb-1 md:mb-2 gap-2 text-xl md:text-3xl">
         <span className="text-secondary font-extrabold font-black">
           {formattedOrder}
         </span>
         <span className="text-secondary-light font-normal font-sans">
-          {series}
+          {deslugify(series.id)}
         </span>
       </h2>
     </a>

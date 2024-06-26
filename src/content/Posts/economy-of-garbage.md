@@ -1,7 +1,7 @@
 ---
 title: Economy of Garbage
 author: yeehaa
-series: Ecosystem Architecture
+series: ecosystem-architecture
 createdAt: 2024-06-26T10:49:14.747Z
 updatedAt: 2024-06-26T10:49:14.747Z
 publishedAt: 2024-06-26T10:49:14.747Z
