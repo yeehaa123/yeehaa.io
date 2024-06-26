@@ -8,17 +8,18 @@ import type {
 } from "./schema"
 import type { AnalyzedTable } from "../outputTable";
 import { ContentType } from "../meta/schema"
-import { analyzedSchema, associatedSchema, baseSchema, finalSchema } from "./schema"
+import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema } from "./schema"
 import * as path from 'path';
 import * as m from "../meta";
 import * as as from "../association";
 import * as ai from "./ai";
-import * as ot from "../outputTable";
+import * as ot from "../outputTable/filters";
 import { writeFile, copyFile } from 'fs/promises'
 import { generateChecksum, hashify, slugify } from "../helpers";
-import { stringify } from "yaml";
+import * as yaml from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
+export const schema = outputSchema
 
 export function init({ profile: initial, author }: InitProfile) {
   const checksum = generateChecksum(JSON.stringify(initial));
@@ -40,10 +41,11 @@ export async function analyze(entity: BaseProfile) {
 }
 
 export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
-  const { author } = entity.meta;
-  const articles = ot.findArticlesForAuthor(table, author).map(as.init)
-  const courses = ot.findCoursesForAuthor(table, author).map(as.init)
-  const associations = { articles, courses }
+  const { title } = entity.meta;
+  const series = ot.findSeriesForAuthor(table, title).map(as.init)
+  const articles = ot.findArticlesForAuthor(table, title).map(as.init)
+  const courses = ot.findCoursesForAuthor(table, title).map(as.init)
+  const associations = { articles, series, courses }
   return associatedSchema.parse({ ...entity, associations })
 }
 
@@ -57,19 +59,33 @@ export async function augment(entity: AssociatedProfile) {
 }
 
 export async function write(basePath: string, entity: FinalProfile) {
-  const { profile, analysis, augmentations, associations } = entity;
-  const { checksum } = entity.augmentations;
-  const profileImgSrc = path.join('./.cache', `${checksum}-profile.png`);
-  const profileImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
+  const { profileImageURL } = entity.augmentations;
+  const profileImgSrc = path.join('./.cache', profileImageURL);
+  const profileImgDst = path.join(basePath, PATH_SUFFIX, profileImageURL);
   await copyFile(profileImgSrc, profileImgDst);
-  const bannerImgSrc = path.join('./.cache', `${checksum}-banner.png`);
-  const bannerImgDst = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
-  await copyFile(bannerImgSrc, bannerImgDst);
   const slug = slugify(entity.profile.alias);
   const dataFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
-  const articles = associations.articles.map(({ title }) => title);
-  const courses = associations.courses.map(({ title }) => title);
-  const dataFile = stringify({ ...profile, ...analysis, ...augmentations, articles, courses });
+  const dataFile = render(entity);
   await writeFile(dataFilePath, dataFile, 'utf8');
 }
+
+function render(entity: FinalProfile) {
+  const { profile, analysis, augmentations, associations } = entity;
+  const { profileImageURL } = entity.augmentations;
+  const articles = associations.articles.map(({ title }) => title);
+  const series = associations.series.map(({ title }) => title);
+  const courses = associations.courses.map(({ title }) => title);
+  const output = outputSchema.parse({
+    ...profile,
+    ...analysis,
+    ...augmentations,
+    profileImageURL: `./${profileImageURL}`,
+    series,
+    articles,
+    courses
+  });
+  return yaml.stringify(output);
+}
+
+
 export type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile, Profile }

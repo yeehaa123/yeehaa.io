@@ -3,9 +3,10 @@ import type {
   AnalyzedEntity,
   AssociatedEntity,
   FinalEntity
-} from "./entity";
-import * as et from "./entity"
-import { isArticle, isCourse } from "./entity/filters";
+} from "../entity";
+
+
+import * as et from "../entity"
 
 export type OutputTable =
   | BaseTable
@@ -25,6 +26,12 @@ export async function analyze(table: BaseTable) {
   return await Promise.all(promises);
 }
 
+export function initCollections(table: AnalyzedTable) {
+  // const allTags = table.flatMap(({ analysis }) => analysis.tags);
+  // const tagEntities = [...new Set([...allTags])].map(tag => t.init({ tag }));
+  return table
+}
+
 export function associate(table: AnalyzedTable) {
   console.log(`ASSOCIATING ${table.length} ENTITIES`)
   return table.map((entity) => {
@@ -42,36 +49,4 @@ export async function write(basePath: string, table: FinalTable) {
   for (const entity of table) {
     et.write(basePath, entity);
   }
-}
-
-export function findCourseForArticle(table: AnalyzedTable, title: string) {
-  return table
-    .filter(isCourse)
-    .find(other => other.meta.habitat === title ||
-      other.meta.title === title)
-}
-
-export function findArticleforCourse(table: AnalyzedTable, habitat: string) {
-  return table
-    .filter(isArticle)
-    .find(other => other.meta.title === habitat)
-}
-
-export function findArticlesForAuthor(table: AnalyzedTable, author: string) {
-  return table
-    .filter(isArticle)
-    .filter(other => other.meta.author === author)
-}
-
-export function findCoursesForAuthor(table: AnalyzedTable, author: string) {
-  return table
-    .filter(isCourse)
-    .filter(other => other.meta.author === author)
-}
-
-export function findSeriesForArticle(table: AnalyzedTable, series: string) {
-  console.log(series);
-  return table
-    .filter(isArticle)
-    .filter(other => other.meta.series === series)
 }

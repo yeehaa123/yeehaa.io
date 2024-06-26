@@ -1,15 +1,15 @@
 [
   {
-    "id": "aeeba19a01eb87dff1275d1f4b90dffa",
+    "id": "c810d0f63a5d70db6419fc0db81f7417",
     "author": "yeehaa",
     "title": "Ecosystem Architecture",
     "contentType": "series",
     "status": "published",
-    "checksum": "6862700aeb6ead5a5c0301dafa33c2c9",
+    "checksum": "5e37465e9af5868a190415f9b31dca86",
     "publicationData": {
-      "createdAt": "2024-06-24T16:56:33.722Z",
-      "updatedAt": "2024-06-24T16:56:33.722Z",
-      "publishedAt": "2024-06-24T16:56:33.722Z"
+      "createdAt": "2024-06-26T05:25:42.012Z",
+      "updatedAt": "2024-06-26T05:25:42.012Z",
+      "publishedAt": "2024-06-26T05:25:42.012Z"
     }
   },
   {
@@ -21,9 +21,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
     "publicationData": {
-      "createdAt": "2024-06-24T16:57:38.544Z",
-      "updatedAt": "2024-06-24T16:57:38.544Z",
-      "publishedAt": "2024-06-24T16:57:38.544Z"
+      "createdAt": "2024-06-26T05:27:44.659Z",
+      "updatedAt": "2024-06-26T05:27:44.659Z",
+      "publishedAt": "2024-06-26T05:27:44.659Z"
     }
   },
   {
@@ -31,14 +31,9 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "publicationData": {
-      "createdAt": "2024-06-24T17:00:48.341Z",
-      "updatedAt": "2024-06-24T17:00:48.341Z",
-      "publishedAt": "2024-06-24T17:00:48.341Z"
-    }
+    "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -63,14 +58,9 @@
     "author": "yeehaa",
     "title": "Global Village People",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "publicationData": {
-      "createdAt": "2024-06-24T17:06:45.502Z",
-      "updatedAt": "2024-06-24T17:06:45.502Z",
-      "publishedAt": "2024-06-24T17:06:45.502Z"
-    }
+    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
   },
   {
     "id": "e7b4fa43f10163d5d384cac81e4b5c29",
@@ -125,9 +115,9 @@
     "status": "published",
     "checksum": "4151e963a15243167e9175616f9cebdc",
     "publicationData": {
-      "createdAt": "2024-06-24T17:11:10.456Z",
-      "updatedAt": "2024-06-24T17:11:10.456Z",
-      "publishedAt": "2024-06-24T17:11:10.456Z"
+      "createdAt": "2024-06-26T05:30:46.883Z",
+      "updatedAt": "2024-06-26T05:30:46.883Z",
+      "publishedAt": "2024-06-26T05:30:46.883Z"
     }
   },
   {
@@ -147,9 +137,9 @@
     "status": "published",
     "checksum": "0511c550f1421f5bbf1abc06773e0a57",
     "publicationData": {
-      "createdAt": "2024-06-24T17:07:57.068Z",
-      "updatedAt": "2024-06-24T17:07:57.068Z",
-      "publishedAt": "2024-06-24T17:07:57.068Z"
+      "createdAt": "2024-06-26T05:30:46.883Z",
+      "updatedAt": "2024-06-26T05:30:46.883Z",
+      "publishedAt": "2024-06-26T05:30:46.883Z"
     }
   }
 ]

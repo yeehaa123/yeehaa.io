@@ -2,7 +2,6 @@ import { existsSync } from "fs"
 import * as path from 'path';
 import { mkdir, readFile, writeFile } from 'fs/promises'
 import type { Meta } from "./meta/schema";
-import * as filters from "./meta/filters";
 import * as m from "./meta";
 
 export type MetaTable = Meta[];
@@ -24,11 +23,10 @@ export async function write(basePath: string, table: MetaTable) {
   await writeFile(tablePath, JSON.stringify(table, null, 2), 'utf8');
 }
 
-
 export async function read(basePath: string) {
   const tablePath = path.join(basePath, TABLE_FILE_NAME);
   const tableJSON = await readFile(tablePath, 'utf8');
   const raw = JSON.parse(tableJSON) as Meta[];
-  return raw.map((meta) => m.init(meta)).filter(filters.isNotDraft);
+  return raw.map((meta) => m.init(meta))
 }
 

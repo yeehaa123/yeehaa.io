@@ -1,0 +1,11 @@
+---
+import Layout from "@/layouts/ImagePage.astro"
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry("Profiles", "yeehaa")
+const { data } = entry
+
+---
+<Layout title={data.alias} {...data}>
+  {JSON.stringify(data, null, 2)}
+</Layout>

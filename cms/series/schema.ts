@@ -13,7 +13,8 @@ export const baseSchema = z.object({
   series: z.boolean()
 
 })
-export const analysisSchema = z.object({})
+export const analysisSchema = z.object({
+})
 
 const associationsSchema = z.object({
   articles: z.array(as.schema),

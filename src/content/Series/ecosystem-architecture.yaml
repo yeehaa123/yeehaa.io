@@ -1,26 +1,23 @@
 title: Ecosystem Architecture
-checksum: 582c7ff5235a54f52ebe4cf328c56578
-summary: The Ecosystem Architecture series by yeehaa explores internet
-  fragmentation and its implications, proposing 'ecosystem architecture' as a
-  solution inspired by decentralization and regenerative design. It analyzes
-  global access disparities and critiques the nostalgia for early internet days.
-  The series underscores the internet as a battleground for control over
-  communication and ideas, highlighting the need for valuing pluralism and
-  navigating complex relationships.
-excerpt: Internet fragmentation's issues and solutions through 'ecosystem
-  architecture,' analyzing global disparities and control over communication.
-  Importance of valuing pluralism and navigating complexity.
+checksum: cb48e69e586d82ed6baf650a8360d9b9
+summary: The 'Ecosystem Architecture' series delves into the fragmentation of
+  the internet, comparing it to tectonic shifts and tech industry exploitation.
+  It introduces 'ecosystem architecture,' a decentralization and regenerative
+  design-inspired approach. This interdisciplinary strategy aims to form
+  vibrant, sustainable digital ecosystems, fostering a healthier online
+  environment.
+excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
+  exploitative tech practices. Embracing fragmented systems, 'ecosystem
+  architecture' aims for creating vibrant, sustainable digital ecosystems.
 tags:
   - internet
-  - global
   - tech
-  - eco
-  - media
-  - future
-  - power
   - design
-bannerImageURL: 582c7ff5235a54f52ebe4cf328c56578-banner.png
+  - future
+  - eco
+  - web
+  - code
+  - digital
+bannerImageURL: cb48e69e586d82ed6baf650a8360d9b9-banner.png
 articles:
   - Align the Misaligned
-  - Continental Drift
-  - Global Village People

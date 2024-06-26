@@ -14,7 +14,7 @@ import { writeFile, copyFile } from 'fs/promises'
 import * as ai from './ai';
 import * as as from "../association";
 import * as fm from "./frontmatter";
-import * as ot from "../outputTable";
+import * as ot from "../outputTable/filters";
 import * as m from "../meta";
 import { generateChecksum, hashify, slugify } from "../helpers";
 import type { AnalyzedTable } from "cms/outputTable";
@@ -52,16 +52,17 @@ export function associate(entity: AnalyzedArticle, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedArticle) {
-  const imageURL = await generateBanner(entity);
-  const augmentations = { imageURL };
+  const bannerImageURL = await generateBanner(entity);
+  const augmentations = { bannerImageURL };
   return finalSchema.parse({ ...entity, augmentations })
 }
 
 export async function write(basePath: string, entity: FinalArticle) {
-  const { meta } = entity
-  const { checksum, title } = meta;
-  const imgSrc = path.join('./.cache', `${checksum}.png`);
-  const imgDest = path.join(basePath, PATH_SUFFIX, `${checksum}.png`);
+  const { meta, augmentations } = entity
+  const { title } = meta;
+  const { bannerImageURL } = augmentations;
+  const imgSrc = path.join('./.cache', bannerImageURL);
+  const imgDest = path.join(basePath, PATH_SUFFIX, bannerImageURL);
   await copyFile(imgSrc, imgDest);
   const slug = slugify(title);
   const filePath = path.join(basePath, PATH_SUFFIX, `${slug}.md`);

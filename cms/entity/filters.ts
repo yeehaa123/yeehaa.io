@@ -3,7 +3,7 @@ import type { Profile, } from "../profile";
 import type { Course } from "../course";
 import type { Series } from "../series";
 import type { Entity } from "."
-import * as mf from "../meta/filters";
+import { ContentType, Status } from "../meta/schema";
 
 export enum FileType {
   MARKDOWN = ".md",
@@ -12,36 +12,24 @@ export enum FileType {
 
 export function isArticle(entity: Entity): entity is Article {
   const meta = (entity as Article).meta
-  return mf.isArticle(meta)
+  return meta.contentType === ContentType.ARTICLE;;
 }
 
 export function isCourse(entity: Entity): entity is Course {
   const meta = (entity as Course).meta
-  return mf.isCourse(meta);
+  return meta.contentType === ContentType.COURSE;
 }
 
 export function isProfile(entity: Entity): entity is Profile {
   const meta = (entity as Profile).meta
-  return mf.isProfile(meta);
+  return meta.contentType === ContentType.PROFILE;;
 }
 
 export function isSeries(entity: Entity): entity is Series {
   const meta = (entity as Series).meta
-  return mf.isSeries(meta);
+  return meta.contentType === ContentType.SERIES;;
 }
 
 export function isNotDraft({ meta }: Entity) {
-  return mf.isNotDraft(meta);
-}
-
-export function hasHabitat(entity: Entity, other: Entity) {
-  return mf.hasHabitat(entity.meta, other.meta);
-}
-
-export function isHabitat(entity: Entity, other: Entity) {
-  return mf.isHabitat(entity.meta, other.meta);
-}
-
-export function hasSameAuthor(entity: Entity, other: Entity) {
-  return mf.hasSameAuthor(entity.meta, other.meta);
+  return meta.status !== Status.DRAFT;
 }

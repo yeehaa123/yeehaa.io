@@ -12,7 +12,7 @@ export type Profile =
 
 export const profileDataSchema = curatorSchema.extend({
   courses: z.array(z.string()),
-  article: z.array(z.string()),
+  articles: z.array(z.string()),
 })
 export const initSchema = z.object({
   author: z.string(),
@@ -25,6 +25,7 @@ export const analysisSchema = z.object({
 
 const associationsSchema = z.object({
   courses: z.array(as.schema),
+  series: z.array(as.schema),
   articles: z.array(as.schema),
 })
 
@@ -34,8 +35,11 @@ export const augmentationsSchema = z.object({
   description: z.string(),
   blurb: z.string(),
   profileImageURL: z.string(),
-  bannerImageURL: z.string()
 })
+
+export const outputSchema = profileDataSchema
+  .merge(analysisSchema)
+  .merge(augmentationsSchema)
 
 export const baseSchema = z.object({
   meta: m.schema,

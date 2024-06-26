@@ -1,33 +1,33 @@
 import type { AnalyzedSeries, BaseSeries, AssociatedSeries, FinalSeries, Series } from "./schema";
 import type { AnalyzedTable } from "cms/outputTable";
 import { ContentType } from "../meta/schema"
-import { analyzedSchema, baseSchema, associatedSchema, finalSchema } from "./schema";
+import { analyzedSchema, associatedSchema, baseSchema, finalSchema } from "./schema";
 import * as path from 'path';
 import * as ai from "./ai";
 import { writeFile, copyFile } from 'fs/promises'
-import * as ot from "../outputTable";
+import * as ot from "../outputTable/filters";
 import * as m from "../meta";
 import { generateChecksum, hashify, slugify } from "../helpers";
 import * as yaml from "yaml";
 import * as as from "../association"
 
-
 export const PATH_SUFFIX = "Series"
 
 export function init({ series, author }: { series: string, author: string }) {
-  const id = hashify(JSON.stringify({ series, author }));
+  const id = hashify(JSON.stringify({ series }));
   const meta = m.init({
     id,
     title: series,
-    contentType: ContentType.SERIES,
     author,
+    contentType: ContentType.SERIES,
     checksum: generateChecksum(id)
   })
   return baseSchema.parse({ meta, series: true })
 }
 
 export function analyze(entry: BaseSeries) {
-  return analyzedSchema.parse({ ...entry, analysis: {} })
+  const analysis = {}
+  return analyzedSchema.parse({ ...entry, analysis })
 }
 
 export function associate(entity: AnalyzedSeries, table: AnalyzedTable) {

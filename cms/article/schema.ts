@@ -15,7 +15,7 @@ export const analysisSchema = z.object({
 })
 
 const augmentationsSchema = z.object({
-  imageURL: z.string(),
+  bannerImageURL: z.string(),
 })
 
 const associationsSchema = z.object({

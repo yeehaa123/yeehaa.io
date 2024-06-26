@@ -10,12 +10,13 @@ export enum ContentType {
 
 export enum Status {
   DRAFT = "draft",
+  DERRIVED = "derrived",
   PUBLISHED = "published"
 }
 
 export const schema = z.object({
   id: z.string(),
-  author: z.string(),
+  author: z.string().optional(),
   title: z.string(),
   contentType: z.nativeEnum(ContentType),
   status: z.nativeEnum(Status),

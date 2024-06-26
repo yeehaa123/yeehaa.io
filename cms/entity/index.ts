@@ -40,6 +40,7 @@ export async function init(initEntitity: InitEntity) {
     case ContentType.SERIES: {
       return series.init({ series: seriesName!, author })
     }
+    default: throw ("INVALID ENTITY TYPE");
   }
 }
 
@@ -55,7 +56,9 @@ export function associate(table: AnalyzedTable, entity: AnalyzedEntity) {
   if (isCourse(entity)) { return course.associate(entity, table) }
   if (isArticle(entity)) { return article.associate(entity, table); }
   if (isProfile(entity)) { return profile.associate(entity, table); }
-  if (isSeries(entity)) { return series.associate(entity, table) }
+  if (isSeries(entity)) {
+    return series.associate(entity, table)
+  }
   throw ("ASSOCIATE RECEIVED INVALID ENTITY TYPE");
 }
 

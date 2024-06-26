@@ -14,7 +14,7 @@ import { generateChecksum, hashify, slugify } from "../helpers";
 import { writeFile } from 'fs/promises'
 import * as path from 'path';
 import * as m from "../meta"
-import * as ot from "../outputTable"
+import * as ot from "../outputTable/filters"
 import * as yaml from "yaml";
 import * as cp from "../checkpoint";
 import * as as from "../association";
@@ -29,9 +29,9 @@ export function init({ course: raw, author }: InitCourse) {
   const courseId = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
     id: courseId,
+    author,
     title: goal,
     contentType: ContentType.COURSE,
-    author,
     habitat,
     checksum: generateChecksum(JSON.stringify(raw)),
   });
@@ -70,13 +70,13 @@ export async function augment(entity: AssociatedCourse) {
 
 export async function write(basePath: string, entity: FinalCourse) {
   const { meta, associations, augmentations, course } = entity
-  const { publicationData, author, id } = meta;
-  const { goal } = course;
+  const { publicationData, id } = meta;
+  const { goal, curator } = course;
   const { tags, description, checkpoints } = augmentations;
   const habitat = associations.habitat?.title && slugify(associations.habitat.title);
   const output = outputSchema.parse({
     goal,
-    curator: author,
+    curator,
     habitat,
     courseId: id,
     ...publicationData,

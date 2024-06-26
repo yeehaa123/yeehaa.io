@@ -2,39 +2,36 @@ name: Jan Hein Hoogstad
 alias: yeehaa
 socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
-bio: Yeehaa is a seasoned professional known for his expertise in digital
-  transformation and innovation leadership. With a rich educational background
-  from prestigious institutions, including a master's degree in Business
-  Administration, Yeehaa has built a robust career in the technology and
-  management consulting sectors. Work experiences span across leading roles in
-  top-tier consulting firms, focusing on driving strategic initiatives and
-  delivering impactful solutions. Yeehaa's skill set includes digital strategy,
-  change management, and business development, making him a valuable asset to
-  any forward-thinking organization.
+courses:
+  - Align the Misaligned
+articles:
+  - Align the Misaligned
+bio: Yeehaa excels in transformative design with extensive experience in both
+  academics and industry. With a background in cognitive science and a career
+  spanning various high-impact roles, Yeehaa brings a unique blend of creativity
+  and analytical skills to any team. Accomplished in innovation, project
+  leadership, and user-centered design, Yeehaa is driven by a passion for
+  creating impactful solutions
 tags:
-  - leader
-  - digital
-  - change
-  - internet
-  - global
-  - tech
   - design
-checksum: 32b22a38b235a3510df938013c9a57d8
-description: Yeehaa is a seasoned professional known for his expertise in
-  digital transformation and innovation leadership. With a robust career and a
-  master's in Business Administration, he excels in digital strategy, change
-  management, and business development. Yeehaa authored insightful blog posts
-  like 'Align the Misaligned' and curated courses such as 'Align the
-  Misaligned', focusing on growth, strategic planning, and fostering sustainable
-  digital ecosystems.
+  - tech
+  - leader
+  - ux
+  - eco
+  - growth
+  - guide
+  - skills
+  - connect
+checksum: 3db9e7ab802e1fb2739c8ff692ebaad9
+description: Yeehaa excels in transformative design with extensive experience in
+  both academics and industry. With a background in cognitive science and a
+  career spanning various high-impact roles, Yeehaa brings a unique blend of
+  creativity and analytical skills to any team. Accomplished in innovation,
+  project leadership, and user-centered design, Yeehaa is driven by a passion
+  for creating impactful solutions. Published works and curated courses on
+  aligning fragmented digital ecosystems and strategic growth reflect Yeehaa's
+  expertise.
 blurb: Fragmentation of the internet mirrors Earth's tectonic shifts and
   exploitative tech practices. Embracing fragmented systems, 'ecosystem
   architecture' aims for creating vibrant, sustainable digital ecosystems.
-profileImageURL: 32b22a38b235a3510df938013c9a57d8-profile.png
-bannerImageURL: 32b22a38b235a3510df938013c9a57d8-banner.png
-articles:
-  - Align the Misaligned
-  - Continental Drift
-  - Global Village People
-courses:
-  - Align the Misaligned
+profileImageURL: ./3db9e7ab802e1fb2739c8ff692ebaad9-profile.png

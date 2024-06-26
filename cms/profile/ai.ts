@@ -1,15 +1,11 @@
 import type { BaseProfile, AssociatedProfile } from ".";
-import * as cache from '../cache';
 import * as ps from "../profile/schema"
 import * as ai from "../ai";
 
 export async function analyze(entity: BaseProfile) {
   const { meta, profile } = entity;
   const { checksum } = meta;
-  const id = checksum + "-analysis";
-  const cachedItem = await cache.getProfile(id);
-  if (cachedItem) { return cachedItem; }
-
+  const id = checksum;
   const { alias, name, socials } = profile;
   const description_length = 600;
   const blurb_length = 200;
@@ -41,7 +37,6 @@ export async function augment(entity: AssociatedProfile, id: string) {
   const schema = ps.augmentationsSchema.omit({
     checksum: true,
     profileImageURL: true,
-    bannerImageURL: true
   });
   const prompt = `
 Given the following things:

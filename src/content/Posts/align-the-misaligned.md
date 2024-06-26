@@ -2,10 +2,10 @@
 title: Align the Misaligned
 author: yeehaa
 series: Ecosystem Architecture
-createdAt: 2024-06-24T16:57:38.544Z
-updatedAt: 2024-06-24T16:57:38.544Z
-publishedAt: 2024-06-24T16:57:38.544Z
-imageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
+createdAt: 2024-06-26T05:27:44.659Z
+updatedAt: 2024-06-26T05:27:44.659Z
+publishedAt: 2024-06-26T05:27:44.659Z
+bannerImageURL: 34d442a1971d4dbbe8315bbfa8de35d5.png
 excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
   exploitative tech practices. Embracing fragmented systems, 'ecosystem
   architecture' aims for creating vibrant, sustainable digital ecosystems.

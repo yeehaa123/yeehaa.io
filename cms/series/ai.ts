@@ -4,7 +4,7 @@ import type { AssociatedSeries } from "./schema";
 
 export async function analyze(entity: AssociatedSeries, id: string) {
   const { meta, associations } = entity;
-  const { author, title } = meta;
+  const { title } = meta;
   const { articles } = associations;;
   const summary_length = 600;
   const excerpt_length = 200;
@@ -17,7 +17,7 @@ export async function analyze(entity: AssociatedSeries, id: string) {
   });
   const prompt = `
 Given the following things:
-- a series of blog posts with the title '${title}' by the following author '${author}'
+- a series of blog posts with the title '${title}' 
 - and the following summary of the posts:
 
 ${JSON.stringify(articles, null, 2)}
