@@ -1,11 +1,29 @@
 ---
-import Layout from "@/layouts/ImagePage.astro"
-import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from "@/layouts/Base.astro"
+import { PostListing } from "../components/Postlisting"
+import { getEntry, getEntries } from 'astro:content';
 
+const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("Profiles", "yeehaa")
 const { data } = entry
+const { articles, title, description} = data;
+const posts = await getEntries(articles)
 
 ---
-<Layout title={data.alias} {...data}>
-  {JSON.stringify(data, null, 2)}
+<Layout {logoLink}  {...data}>
+  <div slot="hero" class="w-full bg-secondary">
+  <div class="flex flex-col lg:flex-row-reverse gap-x-8 w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto">
+    <Image class="w-full lg:w-1/2" src={data.profileImageURL} alt={title} loading="eager"/>
+    <div class="px-8 w-full flex flex-col justify-center gap-y-8 py-8 md:py-12">
+      <h1 class="font-sans hover:font-serif md:text-5xl text-white dark:text-black text-4xl font-extrabold">
+        { title }
+      </h1>
+      <p class="text-white dark:text-black">{ description }</p>
+    </div>
+    </div>
+  </div>
+  <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+    { posts.map(({slug, data}) => <PostListing {...data} {slug}/>)}
+  </div>
 </Layout>

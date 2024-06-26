@@ -39,7 +39,8 @@ export const augmentationsSchema = z.object({
 
 export const outputSchema = profileDataSchema
   .merge(analysisSchema)
-  .merge(augmentationsSchema)
+  .merge(augmentationsSchema).
+  extend({ title: z.string() })
 
 export const baseSchema = z.object({
   meta: m.schema,

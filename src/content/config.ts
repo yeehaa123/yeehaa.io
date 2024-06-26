@@ -1,4 +1,4 @@
-import { defineCollection, reference } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 import * as article from "../../cms/article";
 import * as course from "../../cms/course";
 import * as profile from "../../cms/profile";
@@ -15,6 +15,7 @@ const profiles = defineCollection({
   type: "data",
   schema: ({ image }) => profile.schema.extend({
     profileImageURL: image(),
+    articles: z.array(reference('Posts')),
   })
 });
 

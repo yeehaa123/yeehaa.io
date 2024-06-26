@@ -1,23 +1,26 @@
 title: Ecosystem Architecture
-checksum: cb48e69e586d82ed6baf650a8360d9b9
-summary: The 'Ecosystem Architecture' series delves into the fragmentation of
-  the internet, comparing it to tectonic shifts and tech industry exploitation.
-  It introduces 'ecosystem architecture,' a decentralization and regenerative
-  design-inspired approach. This interdisciplinary strategy aims to form
-  vibrant, sustainable digital ecosystems, fostering a healthier online
-  environment.
-excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
-  exploitative tech practices. Embracing fragmented systems, 'ecosystem
-  architecture' aims for creating vibrant, sustainable digital ecosystems.
+checksum: 166173da75c292c8c0b5bc146af9f936
+summary: This series, Ecosystem Architecture, explores the fragmentation of the
+  internet and its implications for future digital ecosystems. Emphasizing
+  decentralization and regenerative design, the posts discuss global internet
+  variations, the cultural impact of decentralization, and recontextualizing
+  waste to blend nature and technology.
+excerpt: Exploring internet fragmentation, decentralization, and the blend of
+  nature and technology, this series emphasizes creating sustainable digital
+  ecosystems through innovative, interdisciplinary approaches.
 tags:
   - internet
   - tech
   - design
   - future
-  - eco
-  - web
-  - code
-  - digital
-bannerImageURL: cb48e69e586d82ed6baf650a8360d9b9-banner.png
+  - global
+  - policy
+  - ideas
+  - nature
+  - crypto
+  - waste
+bannerImageURL: 166173da75c292c8c0b5bc146af9f936-banner.png
 articles:
   - Align the Misaligned
+  - Continental Drift
+  - Economy of Garbage

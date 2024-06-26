@@ -15,7 +15,7 @@ import * as as from "../association";
 import * as ai from "./ai";
 import * as ot from "../outputTable/filters";
 import { writeFile, copyFile } from 'fs/promises'
-import { generateChecksum, hashify, slugify } from "../helpers";
+import { generateChecksum, hashify, slugify, deslugify } from "../helpers";
 import * as yaml from "yaml";
 
 export const PATH_SUFFIX = "Profiles"
@@ -70,12 +70,14 @@ export async function write(basePath: string, entity: FinalProfile) {
 }
 
 function render(entity: FinalProfile) {
-  const { profile, analysis, augmentations, associations } = entity;
+  const { meta, profile, analysis, augmentations, associations } = entity;
+  const title = deslugify(meta.title);
   const { profileImageURL } = entity.augmentations;
-  const articles = associations.articles.map(({ title }) => title);
+  const articles = associations.articles.map(({ title }) => slugify(title));
   const series = associations.series.map(({ title }) => title);
   const courses = associations.courses.map(({ title }) => title);
   const output = outputSchema.parse({
+    title,
     ...profile,
     ...analysis,
     ...augmentations,
