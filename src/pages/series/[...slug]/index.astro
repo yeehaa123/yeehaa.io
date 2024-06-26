@@ -18,9 +18,9 @@ const posts = await getEntries(articles)
 
 ---
 <Layout {logoLink}>
-  <div slot="hero" class="w-full bg-black dark:bg-white">
-    <div class="flex flex-col lg:flex-row-reverse gap-x-8 w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto">
-      <Image class="w-full lg:w-1/2 h-full aspect-ratio-auto" src={bannerImageURL} alt={title} loading="eager"/>
+  <div slot="hero" class="w-full w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto"> 
+    <div class="flex flex-col gap-x-8 bg-black dark:bg-white">
+      <Image class="w-full" src={bannerImageURL} alt={title} loading="eager"/>
       <div class="px-8 flex flex-col justify-center gap-y-5 py-8 md:py-12">
         <h1 class="font-sans hover:font-serif md:text-5xl text-white dark:text-black text-4xl font-extrabold">
           { title }
