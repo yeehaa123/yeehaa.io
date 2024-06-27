@@ -1,9 +1,9 @@
-checksum: 9886763f23c29e14044f78d4c1ac4058
-summary: An overview of tech, exploring its intersections with internet
-  fragmentation, innovative digital ecosystems, decentralization, and cultural
-  implications. Articles discuss the emergence of 'ecosystem architecture,' the
-  impact of global internet access variations, and the ideological shifts in the
-  crypto market, alongside a profile highlighting a leader in design and UX.
+checksum: 0d78ad1b2d7b3f8c7585903e867fddd5
+summary: This section explores the intersection of technology with various
+  fields, from internet fragmentation to innovative digital ecosystems. It
+  includes in-depth analyses and critiques of current tech practices, promotes
+  interdisciplinary approaches, and features profiles of influential leaders in
+  tech and design.
 excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
   exploitative tech practices. Embracing fragmented systems, 'ecosystem
   architecture' aims for creating vibrant, sustainable digital ecosystems.
@@ -11,7 +11,6 @@ title: Tech
 articles:
   - align-the-misaligned
   - continental-drift
-  - economy-of-garbage
 profiles:
   - yeehaa
 courses: []

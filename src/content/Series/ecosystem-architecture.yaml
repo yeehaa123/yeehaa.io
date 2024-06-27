@@ -1,21 +1,26 @@
-checksum: 4eb9f47693b433ba2aa160f8389e0c0d
-summary: The 'Ecosystem Architecture' series examines digital fragmentation and
-  proposes sustainable designs for dynamic ecosystems. Themes include
-  decentralization, global variations, and cultural shifts in technology.
-excerpt: Explores digital fragmentation and sustainable designs for dynamic
-  ecosystems, covering decentralization, global internet variations, and
-  cultural shifts.
+checksum: 570c27be1c98f2a94f73121ace552a5e
+summary: The Ecosystem Architecture series explores the fragmentation of the
+  internet, likening it to Earth's tectonic shifts and discussing impacts from
+  technical, governmental, and commercial angles. It reviews historical roots,
+  global variations, and the emerging need for a new digital design inspired by
+  decentralization and regenerative principles. It addresses the implications of
+  a 'global village' and the battle for control over communication channels.
+excerpt: The series covers internet fragmentation, its origins, global impacts,
+  and the need for decentralized, sustainable digital ecosystems, highlighting
+  the struggle for control over communication.
 tags:
-  - tech
-  - design
+  - internet
   - global
+  - tech
+  - media
+  - design
   - future
-  - eco
-  - ideas
-  - net
-bannerImageURL: ./4eb9f47693b433ba2aa160f8389e0c0d-banner.png
+  - power
+  - policy
+  - access
+bannerImageURL: ./570c27be1c98f2a94f73121ace552a5e-banner.png
 articles:
   - align-the-misaligned
   - continental-drift
-  - economy-of-garbage
+  - global-village-people
 title: Ecosystem Architecture

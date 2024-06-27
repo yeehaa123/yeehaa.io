@@ -8,7 +8,6 @@ const vercel = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY" }
 
 
 export async function analyze({ prompt, id, schema }: { prompt: string, id: string, schema: ZodSchema }) {
-  console.log(id);
   const cachedItem = await cache.getArticle(id);
   if (cachedItem) { return schema.parse(cachedItem); }
   const { object } = await generateObject({

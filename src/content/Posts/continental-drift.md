@@ -2,9 +2,9 @@
 title: Continental Drift
 author: yeehaa
 series: ecosystem-architecture
-createdAt: 2024-06-26T15:36:51.846Z
-updatedAt: 2024-06-26T15:36:51.846Z
-publishedAt: 2024-06-26T15:36:51.846Z
+createdAt: 2024-06-27T17:40:38.797Z
+updatedAt: 2024-06-27T17:40:38.797Z
+publishedAt: 2024-06-27T17:40:38.797Z
 bannerImageURL: 6da78a490110bdc70b906c065f1b99ea.png
 excerpt: The article analyzes the fragmentation of the internet, its historical
   roots, and current forms, highlighting variations in global access and the

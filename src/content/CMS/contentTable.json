@@ -22,9 +22,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea",
     "publicationData": {
-      "createdAt": "2024-06-26T15:36:51.846Z",
-      "updatedAt": "2024-06-26T15:36:51.846Z",
-      "publishedAt": "2024-06-26T15:36:51.846Z"
+      "createdAt": "2024-06-27T17:40:38.797Z",
+      "updatedAt": "2024-06-27T17:40:38.797Z",
+      "publishedAt": "2024-06-27T17:40:38.797Z"
     }
   },
   {
@@ -32,14 +32,9 @@
     "author": "yeehaa",
     "title": "Economy of Garbage",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "2fa6a7e7bf592d41022eb9cd67f240db",
-    "publicationData": {
-      "createdAt": "2024-06-26T15:36:51.846Z",
-      "updatedAt": "2024-06-26T15:36:51.846Z",
-      "publishedAt": "2024-06-26T15:36:51.846Z"
-    }
+    "checksum": "2fa6a7e7bf592d41022eb9cd67f240db"
   },
   {
     "id": "5d7667cc62fa2ee4e6b664657dcd1f8d",
@@ -55,9 +50,14 @@
     "author": "yeehaa",
     "title": "Global Village People",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
+    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
+    "publicationData": {
+      "createdAt": "2024-06-27T17:40:38.797Z",
+      "updatedAt": "2024-06-27T17:40:38.797Z",
+      "publishedAt": "2024-06-27T17:40:38.797Z"
+    }
   },
   {
     "id": "e7b4fa43f10163d5d384cac81e4b5c29",
