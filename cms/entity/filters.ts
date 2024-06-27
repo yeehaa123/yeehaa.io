@@ -4,6 +4,7 @@ import type { Course } from "../course";
 import type { Series } from "../series";
 import type { Entity } from "."
 import { ContentType, Status } from "../meta/schema";
+import type { Tag } from "cms/tag/schema";
 
 export enum FileType {
   MARKDOWN = ".md",
@@ -27,7 +28,12 @@ export function isProfile(entity: Entity): entity is Profile {
 
 export function isSeries(entity: Entity): entity is Series {
   const meta = (entity as Series).meta
-  return meta.contentType === ContentType.SERIES;;
+  return meta.contentType === ContentType.SERIES;
+}
+
+export function isTag(entity: Entity): entity is Tag {
+  const meta = (entity as Series).meta
+  return meta.contentType === ContentType.TAG;
 }
 
 export function isNotDraft({ meta }: Entity) {

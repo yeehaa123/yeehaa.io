@@ -3,6 +3,7 @@ import * as article from "../../cms/article";
 import * as course from "../../cms/course";
 import * as profile from "../../cms/profile";
 import * as serie from "../../cms/series";
+import * as tag from "../../cms/tag";
 
 const posts = defineCollection({
   type: "content",
@@ -17,6 +18,7 @@ const profiles = defineCollection({
   type: "data",
   schema: ({ image }) => profile.schema.extend({
     profileImageURL: image(),
+    series: z.array(reference('Series')),
     articles: z.array(reference('Posts')),
   })
 });
@@ -29,6 +31,14 @@ const series = defineCollection({
   })
 });
 
+const tags = defineCollection({
+  type: "data",
+  schema: tag.schema.extend({
+    articles: z.array(reference('Posts')),
+    courses: z.array(reference('Courses')),
+    profiles: z.array(reference('Profiles')),
+  })
+});
 
 const courses = defineCollection({
   type: "data",
@@ -39,6 +49,7 @@ const courses = defineCollection({
 
 export const collections = {
   Posts: posts,
+  Tags: tags,
   Profiles: profiles,
   Courses: courses,
   Series: series

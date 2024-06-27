@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Base.astro"
+import { SeriesHero } from "@/components/SeriesHero"
+import { PostListing } from "@/components/Postlisting"
+import { getCollection, getEntries } from 'astro:content';
+
+export async function getStaticPaths() {
+  const tagEntries = await getCollection('Tags');
+  return tagEntries.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry
+const { title, summary, articles,courses, profiles} = data;
+const posts = await getEntries(articles)
+const cc = await getEntries(courses)
+const pp = await getEntries(profiles)
+const logoLink = "/"
+---
+<Layout {logoLink}>
+  <SeriesHero slot="hero" title={title} summary={summary}/>
+  <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+    { posts.map(({slug, data}) => <PostListing {...data} {slug}/>)}
+  </div>
+</Layout>

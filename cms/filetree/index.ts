@@ -37,7 +37,7 @@ async function processFile(tree: FileTree, filePath: string, author: string, ser
   const { ext: fileType, name: fileName } = path.parse(filePath);
   const item = await readFile(filePath, 'utf8');
   const { content, title, contentType } = await convertFile({ fileName, fileType, item });
-  const entity = await et.init({
+  const entity = et.init({
     content,
     title,
     contentType,
@@ -51,13 +51,6 @@ async function processDir(tree: FileTree, author: string, dirPath: string) {
   const seriesPath = path.parse(dirPath)
   const seriesSlug = seriesPath.name;
   const seriesName = deslugify(seriesSlug);
-  const entity = await et.init({
-    contentType: ContentType.SERIES,
-    content: "TBD",
-    seriesName,
-    author
-  });
-  tree.set(entity.meta.id, entity);
   const dir = await readdir(dirPath);
   for (const ext of dir) {
     const filePath = path.join(dirPath, ext);

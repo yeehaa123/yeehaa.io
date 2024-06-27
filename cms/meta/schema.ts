@@ -5,7 +5,8 @@ export enum ContentType {
   ARTICLE = "article",
   COURSE = "course",
   PROFILE = "profile",
-  SERIES = "series"
+  SERIES = "series",
+  TAG = "tag"
 }
 
 export enum Status {

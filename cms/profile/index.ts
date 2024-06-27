@@ -74,8 +74,8 @@ function render(entity: FinalProfile) {
   const title = deslugify(meta.title);
   const { profileImageURL } = entity.augmentations;
   const articles = associations.articles.map(({ title }) => slugify(title));
-  const series = associations.series.map(({ title }) => title);
-  const courses = associations.courses.map(({ title }) => title);
+  const series = associations.series.map(({ title }) => slugify(title));
+  const courses = associations.courses.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     title,
     ...profile,

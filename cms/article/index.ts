@@ -23,7 +23,7 @@ import { generateBanner } from "./ai";
 export const PATH_SUFFIX = "Posts"
 export const schema = fm.schema;
 
-export async function init({ article, title, author, series }: InitArticle) {
+export function init({ article, title, author, series }: InitArticle) {
   const meta = m.init({
     id: hashify(JSON.stringify({ title, author })),
     title,

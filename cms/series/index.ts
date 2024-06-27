@@ -1,7 +1,7 @@
 import type { AnalyzedSeries, BaseSeries, AssociatedSeries, FinalSeries, Series } from "./schema";
 import type { AnalyzedTable } from "cms/outputTable";
-import { ContentType } from "../meta/schema"
-import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema } from "./schema";
+import { ContentType, Status } from "../meta/schema"
+import { analyzedSchema, associatedSchema, finalSchema, outputSchema } from "./schema";
 import * as path from 'path';
 import * as ai from "./ai";
 import { writeFile, copyFile } from 'fs/promises'
@@ -20,15 +20,12 @@ export function init({ series, author }: { series: string, author: string }) {
     id,
     title: series,
     author,
+    status: Status.PUBLISHED,
     contentType: ContentType.SERIES,
     checksum: generateChecksum(id)
   })
-  return baseSchema.parse({ meta, series: true })
-}
-
-export function analyze(entry: BaseSeries) {
-  const analysis = {}
-  return analyzedSchema.parse({ ...entry, analysis })
+  const analysis = { tags: [] }
+  return analyzedSchema.parse({ meta, series: true, analysis })
 }
 
 export function associate(entity: AnalyzedSeries, table: AnalyzedTable) {
@@ -38,7 +35,8 @@ export function associate(entity: AnalyzedSeries, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedSeries) {
-  const checksum = generateChecksum(JSON.stringify(entity));
+  const { associations } = entity;
+  const checksum = generateChecksum(JSON.stringify(associations));
   const { summary, tags, excerpt } = await ai.analyze(entity, checksum);
   const bannerImageURL = await ai.bannerImage({ summary, tags }, checksum);
   const augmentations = { summary, tags, excerpt, bannerImageURL, checksum }
@@ -46,20 +44,30 @@ export async function augment(entity: AssociatedSeries) {
 }
 
 export async function write(basePath: string, entity: FinalSeries) {
-  const { meta, augmentations, associations } = entity;
+  const { meta, augmentations } = entity;
   const { title } = meta;
   const { bannerImageURL } = augmentations;
-  console.log(bannerImageURL);
   const bannerImgSrc = path.join('./.cache', bannerImageURL);
   const bannerImgDst = path.join(basePath, PATH_SUFFIX, bannerImageURL);
   await copyFile(bannerImgSrc, bannerImgDst);
   const slug = slugify(title);
   const dataFilePath = path.join(basePath, PATH_SUFFIX, `${slug}.yaml`);
-  const articles = associations.articles.map(({ title }) => slugify(title));
-  console.log(articles);
-  const output = outputSchema.parse({ title, ...augmentations, articles, bannerImageURL: `./${bannerImageURL}` })
-  const dataFile = yaml.stringify(output)
+  const dataFile = render(entity);
   await writeFile(dataFilePath, dataFile, 'utf8');
+}
+
+function render(entity: FinalSeries) {
+  const { meta, augmentations, associations } = entity;
+  const { title } = meta;
+  const { bannerImageURL } = augmentations;
+  const articles = associations.articles.map(({ title }) => slugify(title));
+  const output = outputSchema.parse({
+    ...augmentations,
+    title,
+    articles,
+    bannerImageURL: `./${bannerImageURL}`
+  })
+  return yaml.stringify(output)
 }
 
 export type { BaseSeries, AnalyzedSeries, AssociatedSeries, FinalSeries, Series }

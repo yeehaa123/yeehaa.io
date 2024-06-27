@@ -1,5 +1,5 @@
 import type { AnalyzedTable } from "./"
-import { isArticle, isCourse, isSeries } from "../entity/filters";
+import { isArticle, isCourse, isProfile, isSeries } from "../entity/filters";
 export function findCourseForArticle(table: AnalyzedTable, title: string) {
   return table
     .filter(isCourse)
@@ -17,6 +17,24 @@ export function findArticlesForAuthor(table: AnalyzedTable, author: string) {
   return table
     .filter(isArticle)
     .filter(other => other.meta.author === author)
+}
+
+export function findArticlesForTag(table: AnalyzedTable, tag: string) {
+  return table
+    .filter(isArticle)
+    .filter(other => other.analysis.tags.find(t => t === tag))
+}
+
+export function findCoursesForTag(table: AnalyzedTable, tag: string) {
+  return table
+    .filter(isCourse)
+    .filter(other => other.analysis.tags.find(t => t === tag))
+}
+
+export function findProfilesForTag(table: AnalyzedTable, tag: string) {
+  return table
+    .filter(isProfile)
+    .filter(other => other.analysis.tags.find(t => t === tag))
 }
 
 export function findCoursesForAuthor(table: AnalyzedTable, author: string) {

@@ -11,9 +11,10 @@ export type Series =
 export const baseSchema = z.object({
   meta: m.schema,
   series: z.boolean()
-
 })
+
 export const analysisSchema = z.object({
+  tags: z.array(z.string()),
 })
 
 const associationsSchema = z.object({
@@ -32,11 +33,6 @@ export const analyzedSchema = baseSchema.extend({
   analysis: analysisSchema
 })
 
-export const outputSchema = augmentationsSchema.merge(associationsSchema).extend({
-  articles: z.array(z.string()),
-  title: z.string()
-})
-
 export const associatedSchema = analyzedSchema.extend({
   associations: associationsSchema
 })
@@ -44,6 +40,12 @@ export const associatedSchema = analyzedSchema.extend({
 export const finalSchema = associatedSchema.extend({
   augmentations: augmentationsSchema
 })
+
+export const outputSchema = augmentationsSchema.merge(associationsSchema).extend({
+  articles: z.array(z.string()),
+  title: z.string()
+})
+
 
 
 export type BaseSeries = z.infer<typeof baseSchema>

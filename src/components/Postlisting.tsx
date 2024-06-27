@@ -8,9 +8,9 @@ type Props = Pick<ArticleFrontmatter,
   | 'summary'
   | 'tags'> & {
     slug: string,
-    series: {
+    series?: {
       id: string
-    }
+    } | undefined
   }
 
 export function PostListing({ series, order, title, summary, tags, slug }: Props) {

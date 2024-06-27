@@ -2,6 +2,7 @@ import type { BaseArticle, AnalyzedArticle, AssociatedArticle, FinalArticle } fr
 import type { BaseProfile, AnalyzedProfile, AssociatedProfile, FinalProfile } from "../profile";
 import type { BaseCourse, AssociatedCourse, AnalyzedCourse, FinalCourse } from "../course";
 import type { AnalyzedSeries, AssociatedSeries, BaseSeries, FinalSeries, } from "../series/schema";
+import type { BaseTag, AnalyzedTag, AssociatedTag, FinalTag } from "../tag/schema";
 import { curatorSchema } from "@/offcourse/schema";
 import { rawCourseSchema } from "cms/course/schema";
 import { ContentType } from "cms/meta/schema";
@@ -22,23 +23,28 @@ export type BaseEntity =
   | BaseArticle
   | BaseProfile
   | BaseSeries
+  | BaseTag
 
 export type AnalyzedEntity =
   | AnalyzedCourse
   | AnalyzedProfile
   | AnalyzedArticle
   | AnalyzedSeries
+  | AnalyzedTag
 
 export type AssociatedEntity =
   | AssociatedCourse
   | AssociatedProfile
   | AssociatedArticle
   | AssociatedSeries
+  | AssociatedTag
+
 export type FinalEntity =
   | FinalCourse
   | FinalArticle
   | FinalProfile
   | FinalSeries
+  | FinalTag
 
 export type Entity =
   | BaseEntity

@@ -12,11 +12,11 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry, logoLink = "/"} = Astro.props;
+const { entry } = Astro.props;
 const { data } = entry
 const { title, summary, bannerImageURL, articles} = data;
 const posts = await getEntries(articles)
-
+const logoLink = "/"
 ---
 <Layout {logoLink}>
   <SeriesHero slot="hero" title={title} summary={summary}>

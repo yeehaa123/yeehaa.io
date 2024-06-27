@@ -1,18 +1,5 @@
 [
   {
-    "id": "c810d0f63a5d70db6419fc0db81f7417",
-    "author": "yeehaa",
-    "title": "Ecosystem Architecture",
-    "contentType": "series",
-    "status": "published",
-    "checksum": "5e37465e9af5868a190415f9b31dca86",
-    "publicationData": {
-      "createdAt": "2024-06-26T05:25:42.012Z",
-      "updatedAt": "2024-06-26T05:25:42.012Z",
-      "publishedAt": "2024-06-26T05:25:42.012Z"
-    }
-  },
-  {
     "id": "714be9470d94eb0533a473d98bb7daa4",
     "author": "yeehaa",
     "title": "Align the Misaligned",

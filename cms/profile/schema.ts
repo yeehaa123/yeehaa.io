@@ -12,6 +12,7 @@ export type Profile =
 
 export const profileDataSchema = curatorSchema.extend({
   courses: z.array(z.string()),
+  series: z.array(z.string()),
   articles: z.array(z.string()),
 })
 export const initSchema = z.object({

@@ -7,6 +7,8 @@ import * as series from "./series";
 import * as article from "./article";
 import * as course from "./course";
 import * as profile from "./profile";
+import * as tags from "./tag";
+import * as collections from "./collections";
 import { initDirs } from "./helpers";
 
 
@@ -19,6 +21,7 @@ export const PATH_SUFFIXES = [
   course.PATH_SUFFIX,
   profile.PATH_SUFFIX,
   series.PATH_SUFFIX,
+  tags.PATH_SUFFIX,
 ];
 
 async function main() {
@@ -32,16 +35,11 @@ async function main() {
 
   const outputTable = filetree.toOutputTable(tree);
   const analyzedTable = await ot.analyze(outputTable);
+  const seriesTable = collections.deriveSeries(analyzedTable);
+  const tagsTable = collections.deriveTags(analyzedTable);
 
-  // const collectionsTable = ot.initCollections(analyzedTable);
-  // const analyzedCollectionsTable = collectionsTable
-  // console.log(analyzedCollectionsTable)
-
-  const associatedTable = ot.associate(analyzedTable);
+  const associatedTable = ot.associate([...analyzedTable, ...seriesTable, ...tagsTable]);
   const augmentedTable = await ot.augment(associatedTable);
-
-
-
 
   await ot.write(OUTPUT_BASE, augmentedTable);
   const metaTable = filetree.toMetaTable(tree);

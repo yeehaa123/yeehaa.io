@@ -5,7 +5,6 @@ import type {
   FinalEntity
 } from "../entity";
 
-
 import * as et from "../entity"
 
 export type OutputTable =
@@ -19,17 +18,10 @@ export type AnalyzedTable = AnalyzedEntity[];
 export type AssociatedTable = AssociatedEntity[];
 export type FinalTable = FinalEntity[];
 
-
 export async function analyze(table: BaseTable) {
   console.log(`ANALYZING ${table.length} ENTITIES`)
   const promises = table.map(entity => et.analyze(entity))
   return await Promise.all(promises);
-}
-
-export function initCollections(table: AnalyzedTable) {
-  // const allTags = table.flatMap(({ analysis }) => analysis.tags);
-  // const tagEntities = [...new Set([...allTags])].map(tag => t.init({ tag }));
-  return table
 }
 
 export function associate(table: AnalyzedTable) {
