@@ -2,9 +2,9 @@
 title: Economy of Garbage
 author: yeehaa
 series: ecosystem-architecture
-createdAt: 2024-06-26T10:49:14.747Z
-updatedAt: 2024-06-26T10:49:14.747Z
-publishedAt: 2024-06-26T10:49:14.747Z
+createdAt: 2024-06-26T15:36:51.846Z
+updatedAt: 2024-06-26T15:36:51.846Z
+publishedAt: 2024-06-26T15:36:51.846Z
 bannerImageURL: 2fa6a7e7bf592d41022eb9cd67f240db.png
 excerpt: Walter Benjamin and Georges Bataille explore how the crypto market
   deviated from its potential, emphasizing excess and abundance. Shraddha
