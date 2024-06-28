@@ -10,7 +10,6 @@ const {
   title, 
   order, 
   series, 
-  slug, 
   excerpt,
   author, 
   publishedAt, 
@@ -26,7 +25,7 @@ const orientation = 2 % 2  ? "flex-row" : "flex-row-reverse"
 console.log(order, orientation);
 ---
 
-<Layout {logoLink} {title} {slug} {course}>
+<Layout {logoLink} {title} >
   <BaseHead slot="og:data" 
     {url} {type} {title} {excerpt} {author} {publishedAt} {updatedAt} {tags} />
   <div slot="hero" class=`w-full flex ${orientation}`>

@@ -16,9 +16,8 @@ const { entry } = Astro.props;
 const { data } = entry
 const { title, summary, bannerImageURL, articles} = data;
 const posts = await getEntries(articles)
-const logoLink = "/"
 ---
-<Layout {logoLink}>
+<Layout {title}>
   <SeriesHero slot="hero" title={title} summary={summary}>
     <Image class="w-full" src={bannerImageURL} alt={title} loading="eager"/>
   </SeriesHero>
