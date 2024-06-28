@@ -7,11 +7,10 @@ type Props = {
   title: string,
   url: URL,
   type: "website" | "article",
-  description?: string,
-  excerpt?: string,
-  author?: string,
-  publishedAt?: Date,
-  updatedAt?: Date,
+  description: string,
+  author?: string | undefined,
+  publishedAt?: Date | undefined,
+  updatedAt?: Date | undefined,
   tags?: string[]
 }
 
@@ -19,7 +18,6 @@ export function BaseHead({
   url,
   title,
   type,
-  excerpt,
   description,
   author,
   publishedAt,
@@ -29,20 +27,20 @@ export function BaseHead({
   const ogImageURL = `${url}og.png`
   return (
     <>
-      <meta name="description" content={excerpt} />
+      <meta name="description" content={description} />
       <meta property="og:site_name" content="YEEHAA" />
 
       <meta property="og:url" content={url.toString()} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={excerpt || description} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImageURL} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content={url.pathname} />
       <meta property="twitter:url" content={url.toString()} />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={excerpt || description} />
+      <meta name="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImageURL} />
 
       {type === OGType.ARTICLE &&

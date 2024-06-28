@@ -18,7 +18,7 @@ const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const { data } = entry
 const { course: courseRef, ...rest} = data;
-const { order, series, title, bannerImageURL, ...article} = rest;
+const { order, series, title, bannerImageURL, excerpt, ...article} = rest;
 const { url } = Astro;
 const course = courseRef && await getEntry(courseRef);
 const curator = {
@@ -34,9 +34,11 @@ const curator = {
   <BaseHead 
     slot="og:data" 
     type={OGType.ARTICLE} 
+    description={excerpt}
     {title}
-    {url} 
+    {url}
     {...article}
+
   />
   <Image 
     slot="hero" 
