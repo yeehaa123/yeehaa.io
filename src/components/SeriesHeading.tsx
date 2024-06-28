@@ -1,6 +1,5 @@
 import { deslugify } from "cms/helpers";
 type Props = {
-  href: string,
   order: number | undefined,
   series?: {
     id: string

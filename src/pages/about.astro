@@ -4,10 +4,14 @@ import Layout from "@/layouts/Base.astro"
 import { PostListing } from "../components/Postlisting"
 import { getEntry, getEntries } from 'astro:content';
 
+interface Props  {
+  logoLink: "/"
+}
+
 const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("Profiles", "yeehaa")
 const { data } = entry
-const { articles, title, description} = data;
+const { articles, title, description } = data;
 const posts = await getEntries(articles)
 
 ---
@@ -19,11 +23,13 @@ const posts = await getEntries(articles)
         <h1 class="font-sans hover:font-serif md:text-5xl text-white dark:text-black text-4xl font-extrabold">
           { title }
         </h1>
-        <p class="font-serif text-white dark:text-black">{ description }</p>
+        <p class="font-serif text-white dark:text-black">
+          { description }
+        </p>
       </div>
     </div>
   </div>
   <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { posts.map(({slug, data}) => <PostListing {...data} {slug}/>)}
+    { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
   </div>
 </Layout>

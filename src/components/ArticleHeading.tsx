@@ -1,22 +1,18 @@
 import { SeriesHeading } from "@/components/SeriesHeading";
+import type { ComponentProps } from 'astro/types';
 
-type Series = {
-  id: string;
-}
+type SeriesHeadingProps = ComponentProps<typeof SeriesHeading>
 
 type Props = {
   className?: string | undefined;
-  order?: number | undefined;
-  series?: Series | undefined;
   title: string;
-  href: string;
   slug?: string
-}
+} & SeriesHeadingProps
 
-export function ArticleHeading({ className, href, slug, order, series, title }: Props) {
+export function ArticleHeading({ className, slug, order, series, title }: Props) {
   return (
     <div className={className}>
-      {series && <SeriesHeading href={href} order={order} series={series} />}
+      {series && <SeriesHeading order={order} series={series} />}
       {slug
         ? <a href={`/posts/${slug}`}>
           <h1 className="font-serif hover:font-sans md:text-6xl text-4xl font-extrabold">

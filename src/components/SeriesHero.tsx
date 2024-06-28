@@ -3,7 +3,7 @@ import type { ReactElement } from "react"
 type Props = {
   title: string,
   summary: string,
-  children: ReactElement
+  children?: ReactElement
 }
 
 

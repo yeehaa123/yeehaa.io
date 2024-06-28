@@ -13,15 +13,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { data } = entry
-const { title, summary, articles,courses, profiles} = data;
+const { title, summary, articles } = data;
 const posts = await getEntries(articles)
-const cc = await getEntries(courses)
-const pp = await getEntries(profiles)
 const logoLink = "/"
 ---
 <Layout {logoLink}>
   <SeriesHero slot="hero" title={title} summary={summary}/>
   <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { posts.map(({slug, data}) => <PostListing {...data} {slug}/>)}
+    { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
   </div>
 </Layout>
