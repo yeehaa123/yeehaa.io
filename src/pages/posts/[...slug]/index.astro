@@ -1,32 +1,30 @@
 ---
 import { Image } from 'astro:assets';
-import { getCollection, getEntry } from 'astro:content';
-import { Offcourse } from "@/offcourse/"
 import Layout from "@/layouts/Base.astro"
+import { Offcourse } from "@/offcourse/"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import { ArticleContent} from "@/components/ArticleContent";
 import { SeriesHeading } from "@/components/SeriesHeading";
+import  { getPostsWithCourse } from '@/pages/helpers';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('Posts');
+  const blogEntries = await getPostsWithCourse()
   return blogEntries.map(entry => ({
     params: { slug: entry.slug }, props: { entry },
   }));
 }
 
-const { url } = Astro;
-
-const { entry  } = Astro.props;
+const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { course: courseRef, ...rest} = entry.data;
-const { order, series, title, bannerImageURL, excerpt, ...article} = rest;
-const course = courseRef && await getEntry(courseRef);
-const curator = {
-  name: "Jan Hein Hoogstad",
-  alias: "Yeehaa",
-  socials: {}
-}
-
+const { 
+  order, 
+  series, 
+  title, 
+  bannerImageURL, 
+  excerpt, 
+  course, 
+  ...article
+} = entry.data;
 
 ---
 
@@ -54,6 +52,6 @@ const curator = {
         <Content/>
       </ArticleContent>
     </article>
-    { course && <Offcourse data={{...course.data, curator}} client:load/>}
+    { course && <Offcourse data={course} client:load/>}
   </div>
 </Layout>

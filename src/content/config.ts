@@ -43,6 +43,7 @@ const tags = defineCollection({
 const courses = defineCollection({
   type: "data",
   schema: course.schema.extend({
+    curator: reference('Profiles'),
     habitat: reference('Posts').optional()
   })
 });

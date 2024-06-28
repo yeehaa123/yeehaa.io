@@ -2,21 +2,13 @@
 import { BaseHead, OGType} from "@/components/BaseHead";
 import Layout from "../layouts/Base.astro"
 import { PostListing } from "../components/Postlisting"
+
 const title = "YEEHAA";
-
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('Posts'))
-.sort((a, b) => {
-  if(a.data.publishedAt && b.data.publishedAt) {
-    return b.data.publishedAt.getTime() - a.data.publishedAt.getTime();
-  } else {
-    return -1
-  }
-})
+import { getPosts } from "./helpers";
+const posts = await getPosts();
 const description = "Jan Hein Hoogstad's personal website"
----
 
+---
 <Layout {title}>
   <BaseHead 
     slot="og:data" 
@@ -24,7 +16,7 @@ const description = "Jan Hein Hoogstad's personal website"
     {title} 
     {description} 
     url={Astro.url} />
-  <div class="container px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
+  <div class="px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
+    { posts.map(({slug, data }) => <PostListing {...data} {slug}/>)}
   </div>
 </Layout>
