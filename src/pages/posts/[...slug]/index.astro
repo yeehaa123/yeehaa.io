@@ -1,6 +1,11 @@
 ---
-import Layout from "@/layouts/Article.astro"
+import { Image } from 'astro:assets';
 import { getCollection, getEntry } from 'astro:content';
+import { Offcourse } from "@/offcourse/"
+import Layout from "@/layouts/Base.astro"
+import  { BaseHead, OGType  }from "@/components/BaseHead";
+import { ArticleContent} from "@/components/ArticleContent";
+import { SeriesHeading } from "@/components/SeriesHeading";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('Posts');
@@ -12,14 +17,41 @@ export async function getStaticPaths() {
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const { data } = entry
-
+const { course: courseRef, ...rest} = data;
+const { order, series, title, bannerImageURL, ...article} = rest;
+const { url } = Astro;
+const course = courseRef && await getEntry(courseRef);
 const curator = {
+  name: "Jan Hein Hoogstad",
   alias: "Yeehaa",
   socials: {}
 }
 
-const course = data.course ? await getEntry(data.course) : null;
+
 ---
-<Layout {...data} course={course} {curator}>
-  <Content/ >
+
+<Layout {title} >
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.ARTICLE} 
+    {title}
+    {url} 
+    {...article}
+  />
+  <Image 
+    slot="hero" 
+    class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto" 
+    src={bannerImageURL} 
+    alt={title} 
+    loading="eager"/>
+  <div class="container flex flex-col lg:flex-row 
+    px-5 gap-5 lg:gap-10 xl:gap-12 py-12 lg:py-20">
+    <article transition:name="content" >
+      <SeriesHeading order={order} series={series} />
+      <ArticleContent>
+        <Content/>
+      </ArticleContent>
+    </article>
+    { course && <Offcourse data={{...course.data, curator}} client:load/>}
+  </div>
 </Layout>
