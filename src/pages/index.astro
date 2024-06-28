@@ -14,14 +14,16 @@ const posts = (await getCollection('Posts'))
     return -1
   }
 })
-
-const type = OGType.WEBSITE;
 const description = "Jan Hein Hoogstad's personal website"
-const { url } = Astro;
 ---
 
 <Layout {title}>
-  <BaseHead slot="og:data" {type} {title} {description} {url} />
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.WEBSITE} 
+    {title} 
+    {description} 
+    url={Astro.url} />
   <div class="container px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
     { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
   </div>

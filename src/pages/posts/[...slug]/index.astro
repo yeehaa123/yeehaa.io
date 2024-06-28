@@ -14,12 +14,12 @@ export async function getStaticPaths() {
   }));
 }
 
+const { url } = Astro;
+
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
-const { data } = entry
-const { course: courseRef, ...rest} = data;
+const { course: courseRef, ...rest} = entry.data;
 const { order, series, title, bannerImageURL, excerpt, ...article} = rest;
-const { url } = Astro;
 const course = courseRef && await getEntry(courseRef);
 const curator = {
   name: "Jan Hein Hoogstad",
@@ -36,7 +36,7 @@ const curator = {
     type={OGType.ARTICLE} 
     description={excerpt}
     {title}
-    {url}
+    url={Astro.url}
     {...article}
 
   />
