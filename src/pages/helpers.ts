@@ -9,7 +9,13 @@ export async function getPosts() {
     if (!seriesRef) { return { ...article, data: { ...data, order: undefined } } }
     const series = await getEntry(seriesRef);
     const order = series.data.articles.findIndex(article => article.slug === slug);
-    return { ...article, data: { ...data, order } }
+    return {
+      ...article,
+      data: {
+        ...data,
+        order
+      }
+    }
   })
   return await Promise.all(promises)
 }
@@ -24,7 +30,14 @@ export async function getPostsWithCourse() {
     const curatorRef = course.data.curator
     const curator = await getEntry(curatorRef);
     return {
-      ...article, data: { ...data, course: { ...course.data, curator: curator.data } }
+      ...article,
+      data: {
+        ...data,
+        course: {
+          ...course.data,
+          curator: curator.data
+        }
+      }
     }
   })
   return await Promise.all(promises)

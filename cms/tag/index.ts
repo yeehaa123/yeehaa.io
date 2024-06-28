@@ -40,8 +40,9 @@ export function associate(entity: AnalyzedTag, table: AnalyzedTable) {
 }
 
 export async function augment(entity: AssociatedTag) {
-  const { associations } = entity;
-  const checksum = generateChecksum(JSON.stringify(associations));
+  const { meta, associations } = entity;
+  const checksum = generateChecksum(JSON.stringify({ meta, associations }));
+  console.log(checksum);
   const { summary, excerpt } = await ai.analyze(entity, checksum);
   const augmentations = { summary, excerpt, checksum }
   return finalSchema.parse({ ...entity, augmentations })
