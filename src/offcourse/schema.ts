@@ -4,7 +4,9 @@ export const curatorSchema = z.object({
   name: z.string(),
   alias: z.string(),
   socials: z.object({
-    linkedin: z.string().optional()
+    linkedin: z.string().optional(),
+    github: z.string().optional(),
+    instagram: z.string().optional()
   })
 })
 

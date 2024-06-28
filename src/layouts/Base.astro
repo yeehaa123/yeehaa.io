@@ -3,11 +3,17 @@ import NavBar from "../components/NavBar.astro"
 import Logo from "../components/Logo.astro"
 import { ViewTransitions } from 'astro:transitions';
 import '@/styles/globals.css'
+import { getEntry } from "astro:content";
+import { Socials } from "@/offcourse/components/Socials";
 
 interface Props  {
   logoLink?: string;
   title: string
 }
+
+
+const profile = await getEntry("Profiles", "yeehaa");
+
 
 const { title, logoLink = '/'} = Astro.props;
 ---
@@ -32,8 +38,9 @@ const { title, logoLink = '/'} = Astro.props;
         </div>
           <slot/>
     </main>
-    <footer class="container overflow-hidden dark:text-white py-8 md:py-12 px-12 lg:px-0 mx-auto w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 print:hidden">
+    <footer class="display flex justify-between overflow-hidden dark:text-white py-8 md:py-12 px-12 lg:px-0 mx-auto w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 print:hidden">
       <Logo/>
+      <Socials {...profile.data.socials} />
     </footer>
   </body>
 </html>
