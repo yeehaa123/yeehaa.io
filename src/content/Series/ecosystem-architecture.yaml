@@ -1,26 +1,23 @@
-checksum: 570c27be1c98f2a94f73121ace552a5e
-summary: The Ecosystem Architecture series explores the fragmentation of the
-  internet, likening it to Earth's tectonic shifts and discussing impacts from
-  technical, governmental, and commercial angles. It reviews historical roots,
-  global variations, and the emerging need for a new digital design inspired by
-  decentralization and regenerative principles. It addresses the implications of
-  a 'global village' and the battle for control over communication channels.
-excerpt: The series covers internet fragmentation, its origins, global impacts,
-  and the need for decentralized, sustainable digital ecosystems, highlighting
-  the struggle for control over communication.
+checksum: abf8505f502ed10334a2d5de2ded7a48
+summary: The Ecosystem Architecture blog series explores the idea of embracing
+  fragmented systems in the digital world, inspired by decentralization and
+  regenerative design. By integrating interdisciplinary insights, the series
+  advocates for building vibrant, sustainable digital ecosystems that are
+  innovative and forward-looking. This approach mirrors natural processes and
+  aims to foster a healthier and more dynamic digital environment.
+excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
+  exploitative tech practices. Embracing fragmented systems, 'ecosystem
+  architecture' aims for creating vibrant, sustainable digital ecosystems.
 tags:
   - internet
-  - global
   - tech
-  - media
   - design
   - future
-  - power
-  - policy
-  - access
-bannerImageURL: ./570c27be1c98f2a94f73121ace552a5e-banner.png
+  - eco
+  - digital
+  - coding
+  - nature
+bannerImageURL: ./abf8505f502ed10334a2d5de2ded7a48-banner.png
 articles:
   - align-the-misaligned
-  - continental-drift
-  - global-village-people
 title: Ecosystem Architecture

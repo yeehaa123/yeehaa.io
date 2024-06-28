@@ -18,14 +18,9 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "publicationData": {
-      "createdAt": "2024-06-27T17:40:38.797Z",
-      "updatedAt": "2024-06-27T17:40:38.797Z",
-      "publishedAt": "2024-06-27T17:40:38.797Z"
-    }
+    "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -50,14 +45,9 @@
     "author": "yeehaa",
     "title": "Global Village People",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69",
-    "publicationData": {
-      "createdAt": "2024-06-27T17:40:38.797Z",
-      "updatedAt": "2024-06-27T17:40:38.797Z",
-      "publishedAt": "2024-06-27T17:40:38.797Z"
-    }
+    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
   },
   {
     "id": "e7b4fa43f10163d5d384cac81e4b5c29",

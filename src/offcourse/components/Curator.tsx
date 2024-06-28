@@ -7,7 +7,7 @@ import { AvatarImage } from "./";
 export default function Curator({ alias, socials }: Curator) {
   return (
     <div className="flex align-middle py-4 items-center justify-between">
-      <a href={`/offcourse/curator/${alias}`} className="flex items-center space-x-3">
+      <a href={`/about`} className="flex items-center space-x-3">
         <Avatar>
           <AvatarImage userName={alias} saturation={100} lightness={100} />
           <AvatarFallback className="bg-secondary text-white">YH</AvatarFallback>
