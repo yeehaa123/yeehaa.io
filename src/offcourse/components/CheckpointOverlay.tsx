@@ -36,11 +36,11 @@ export function CheckpointOverlay(
           onClick={() => toggleComplete({ courseId, checkpointId })} />
       </CardHeader>
       <CardContent className="space-y-4 grow flex flex-col justify-center">
-        <Tags tags={tags} />
         <CardDescription>{description}</CardDescription>
+        <Tags tags={tags} />
         <a href={href}
           onClick={() => hideCheckpointOverlay({ courseId })}
-          className="flex text-xs items-center text-left text-gray-900">
+          className="flex text-xs items-center text-left text-gray-900 dark:text-gray-100">
           <ExternalLinkIcon className="mr-2 w-5 h-5" />
           <span className="break-words max-w-[70%]">{href}</span></a>
       </CardContent >

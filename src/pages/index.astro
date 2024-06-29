@@ -5,8 +5,10 @@ import { PostListing } from "../components/Postlisting"
 
 const title = "YEEHAA";
 import { getPosts } from "@/helpers/pages";
+import { getEntry } from "astro:content";
 const posts = await getPosts();
-const description = "Jan Hein Hoogstad's personal website"
+const series = await getEntry("Series", "ecosystem-architecture");
+const description = series.data.summary;
 
 ---
 <Layout {title}>
