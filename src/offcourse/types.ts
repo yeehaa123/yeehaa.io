@@ -13,6 +13,7 @@ export type Affordances = {
 
 export enum OverlayModes {
   NONE = "NONE",
+  INFO = "INFO",
   CHECKPOINT = "CHECKPOINT"
 }
 

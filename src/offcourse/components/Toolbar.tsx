@@ -7,15 +7,17 @@ import {
 
 type Props = {
   habitat?: Habitat | undefined
+  showInfoOverlay: () => void
 }
 
 export default function Toolbar({
+  showInfoOverlay,
   habitat,
 }: Props) {
   return (
     <div className="flex w-full justify-between">
       <div className="flex flex-start gap-x-4 ">
-        <Logo onClick={console.log}
+        <Logo onClick={showInfoOverlay}
           className={cn("h-4 w-4 fill-gray-500 hover:fill-secondary", { "hidden": false })} />
       </div>
       <div className="flex gap-x-4 ">

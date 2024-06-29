@@ -16,14 +16,23 @@ export function useOffcourse(data: Course | Course[]) {
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
     dispatch({ type: ActionType.SHOW_CHECKPOINT_OVERLAY, payload })
 
+  const showInfoOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.SHOW_INFO_OVERLAY, payload })
+
   const hideCheckpointOverlay = async (payload: CourseQuery) => {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
-    await timeout(3000);
+    await timeout(1000);
+    dispatch({ type: ActionType.UNSELECT_CHECKPOINT, payload })
+  }
+  const hideOverlay = async (payload: CourseQuery) => {
+    dispatch({ type: ActionType.HIDE_OVERLAY, payload })
   }
 
 
   const actions = {
     toggleBookmark,
+    hideOverlay,
+    showInfoOverlay,
     showCheckpointOverlay,
     hideCheckpointOverlay
   }

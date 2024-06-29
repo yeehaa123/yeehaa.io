@@ -15,8 +15,9 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { data } = entry
-const { title, summary, bannerImageURL, articles} = data;
-const posts = await getEntries(articles)
+const { title, summary, bannerImageURL, articles: articlesRef, courses: coursesRef} = data;
+const posts = await getEntries(articlesRef)
+const courses = coursesRef && await getEntries(coursesRef)
 ---
 <Layout {title}>
   <BaseHead 

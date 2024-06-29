@@ -4,6 +4,7 @@ import type { Actions } from "./CourseCard"
 
 import { Transition } from "@headlessui/react"
 import { CheckpointOverlay } from "./CheckpointOverlay";
+import { InfoOverlay } from "./InfoOverlay";
 import CardChrome from "./CardChrome";
 
 type Props = {
@@ -15,7 +16,8 @@ type Props = {
 export function Overlay(props: Props) {
   const overlayMode = props.cardState.overlayMode;
   const InternalOverlay = {
-    [OverlayModes.NONE]: CheckpointOverlay,
+    [OverlayModes.NONE]: InfoOverlay,
+    [OverlayModes.INFO]: InfoOverlay,
     [OverlayModes.CHECKPOINT]: CheckpointOverlay,
   }[overlayMode]
 

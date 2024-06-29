@@ -25,6 +25,7 @@ export type CourseCardState = {
 export type Actions = {
   toggleBookmark: (query: CourseQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
+  showInfoOverlay: (query: CourseQuery) => void
   hideCheckpointOverlay: (query: CourseQuery) => void
 }
 
@@ -45,6 +46,7 @@ export default function CourseCard({ course, cardState, actions }: Props) {
 
   const {
     toggleBookmark,
+    showInfoOverlay,
     showCheckpointOverlay
   } = actions
 
@@ -89,7 +91,7 @@ export default function CourseCard({ course, cardState, actions }: Props) {
           </ul>
         </CardContent>
         <CardFooter className="flex flex-col gap-y-4">
-          <Toolbar habitat={habitat} />
+          <Toolbar showInfoOverlay={() => showInfoOverlay({ courseId })} habitat={habitat} />
         </CardFooter>
       </CardChrome >
     </div >)
