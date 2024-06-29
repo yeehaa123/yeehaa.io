@@ -21,7 +21,7 @@ const posts = await getEntries(articles)
   <SeriesHero slot="hero" title={title} summary={summary}>
     <Image class="w-full" src={bannerImageURL} alt={title} loading="eager"/>
   </SeriesHero>
-  <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
+  <div transition:name="content" class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+    { posts.map(({slug, data}, index) => <PostListing {...data} order={index} {slug}/>)}
   </div>
 </Layout>

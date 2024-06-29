@@ -1,14 +1,18 @@
-checksum: 2d602a47aabe356ec19ccd1b9d8ae69f
-summary: The tech label encompasses diverse aspects from the internet's
-  fragmentation and exploitative practices to innovative solutions like
-  'ecosystem architecture,' aiming for sustainable digital ecosystems. It also
-  highlights leadership and user experience in the tech industry.
+checksum: a49b9b0d57045f9b6828cf47cfdf3b3a
+summary: Exploring the intersections of technology, design, and global internet
+  experiences, this overview encapsulates the fragmented yet innovative
+  landscape of the digital world. Articles discuss internet fragmentation
+  inspired by tectonic shifts and the disparity in global internet usage while
+  proposing sustainable, inclusive digital ecosystems. The profiles highlight
+  leaders in tech and design, aiming to foster interdisciplinary innovation for
+  a dynamic digital future.
 excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
   exploitative tech practices. Embracing fragmented systems, 'ecosystem
   architecture' aims for creating vibrant, sustainable digital ecosystems.
-title: Tech
+title: tech
 articles:
   - align-the-misaligned
+  - continental-drift
 profiles:
   - yeehaa
 courses: []

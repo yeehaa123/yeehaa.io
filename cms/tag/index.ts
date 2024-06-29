@@ -41,7 +41,8 @@ export function associate(entity: AnalyzedTag, table: AnalyzedTable) {
 
 export async function augment(entity: AssociatedTag) {
   const { meta, associations } = entity;
-  const checksum = generateChecksum(JSON.stringify({ meta, associations }));
+  const { title } = meta;
+  const checksum = generateChecksum(JSON.stringify({ title, associations }));
   const { summary, excerpt } = await ai.analyze(entity, checksum);
   const augmentations = { summary, excerpt, checksum }
   return finalSchema.parse({ ...entity, augmentations })
@@ -64,7 +65,7 @@ function render(entity: FinalTag) {
   const profiles = associations.profiles.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     ...augmentations,
-    title: deslugify(title),
+    title,
     articles,
     profiles,
     courses,

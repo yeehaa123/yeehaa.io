@@ -1,23 +1,24 @@
-checksum: abf8505f502ed10334a2d5de2ded7a48
-summary: The Ecosystem Architecture blog series explores the idea of embracing
-  fragmented systems in the digital world, inspired by decentralization and
-  regenerative design. By integrating interdisciplinary insights, the series
-  advocates for building vibrant, sustainable digital ecosystems that are
-  innovative and forward-looking. This approach mirrors natural processes and
-  aims to foster a healthier and more dynamic digital environment.
-excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
-  exploitative tech practices. Embracing fragmented systems, 'ecosystem
-  architecture' aims for creating vibrant, sustainable digital ecosystems.
+checksum: edfca6d99129b810f561310258b54fc2
+summary: The series Ecosystem Architecture explores internet fragmentation
+  through analogies like tectonic shifts and continental drift. It highlights
+  how fragmented digital systems can lead to innovative, sustainable ecosystems
+  by integrating interdisciplinary ideas from philosophy to coding. The series
+  critiques the notion of a unified internet, emphasizing realistic assessments
+  and inclusive efforts by organizations like the Internet Society.
+excerpt: The series Ecosystem Architecture explores how fragmented digital
+  systems can lead to innovative, sustainable ecosystems. It critiques the
+  notion of a unified internet and highlights inclusivity.
 tags:
   - internet
   - tech
   - design
+  - global
+  - access
   - future
+  - policy
   - eco
-  - digital
-  - coding
-  - nature
-bannerImageURL: ./abf8505f502ed10334a2d5de2ded7a48-banner.png
+bannerImageURL: ./edfca6d99129b810f561310258b54fc2-banner.png
 articles:
   - align-the-misaligned
+  - continental-drift
 title: Ecosystem Architecture
