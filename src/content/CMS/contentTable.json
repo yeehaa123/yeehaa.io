@@ -18,14 +18,9 @@
     "author": "yeehaa",
     "title": "Continental Drift",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6da78a490110bdc70b906c065f1b99ea",
-    "publicationData": {
-      "createdAt": "2024-06-29T05:01:22.910Z",
-      "updatedAt": "2024-06-29T05:01:22.910Z",
-      "publishedAt": "2024-06-29T05:01:22.910Z"
-    }
+    "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
     "id": "439a85f16a9137cc43055062454f1f0c",
@@ -107,9 +102,9 @@
     "status": "published",
     "checksum": "4151e963a15243167e9175616f9cebdc",
     "publicationData": {
-      "createdAt": "2024-06-29T04:53:03.499Z",
-      "updatedAt": "2024-06-29T04:53:03.499Z",
-      "publishedAt": "2024-06-29T04:53:03.499Z"
+      "createdAt": "2024-06-29T05:24:49.068Z",
+      "updatedAt": "2024-06-29T05:24:49.068Z",
+      "publishedAt": "2024-06-29T05:24:49.068Z"
     }
   },
   {

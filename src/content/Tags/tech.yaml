@@ -1,18 +1,16 @@
-checksum: a49b9b0d57045f9b6828cf47cfdf3b3a
-summary: Exploring the intersections of technology, design, and global internet
-  experiences, this overview encapsulates the fragmented yet innovative
-  landscape of the digital world. Articles discuss internet fragmentation
-  inspired by tectonic shifts and the disparity in global internet usage while
-  proposing sustainable, inclusive digital ecosystems. The profiles highlight
-  leaders in tech and design, aiming to foster interdisciplinary innovation for
-  a dynamic digital future.
+checksum: 0ea8957bad8ce69cdd89dc66db1484c4
+summary: The tech tag encapsulates articles and profiles focused on the evolving
+  landscape of technology. Highlights include the exploration of decentralized
+  and regenerative design in digital ecosystems as well as profiles of industry
+  leaders specializing in tech and design. The content fosters an
+  interdisciplinary approach, merging philosophy, coding, and user experience to
+  create innovative and sustainable solutions for the future.
 excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
   exploitative tech practices. Embracing fragmented systems, 'ecosystem
   architecture' aims for creating vibrant, sustainable digital ecosystems.
 title: tech
 articles:
   - align-the-misaligned
-  - continental-drift
 profiles:
   - yeehaa
 courses: []

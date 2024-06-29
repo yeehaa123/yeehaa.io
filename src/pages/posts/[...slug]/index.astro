@@ -5,7 +5,7 @@ import { Offcourse } from "@/offcourse/"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import { ArticleContent} from "@/components/ArticleContent";
 import { SeriesHeading } from "@/components/SeriesHeading";
-import  { getPostsWithCourse } from '@/pages/helpers';
+import  { getPostsWithCourse } from '@/helpers/pages';
 
 export async function getStaticPaths() {
   const blogEntries = await getPostsWithCourse()
@@ -40,8 +40,7 @@ const {
     slot="hero" 
     class="w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto" 
     src={bannerImageURL} 
-    alt={title} 
-    loading="eager"/>
+    alt={title} />
   <div class="container flex flex-col lg:flex-row 
     px-5 gap-5 lg:gap-10 xl:gap-12 py-12 lg:py-20" transition:name="content" >
     <article>

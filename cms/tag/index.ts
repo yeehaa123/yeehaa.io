@@ -8,7 +8,7 @@ import * as ot from "../outputTable/filters";
 import { writeFile } from 'fs/promises'
 import * as yaml from "yaml";
 import * as path from 'path';
-import { deslugify, generateChecksum, hashify, slugify } from "../helpers";
+import { generateChecksum, hashify, slugify } from "../helpers";
 import { analyzedSchema, associatedSchema, finalSchema, outputSchema } from "./schema";
 
 export const PATH_SUFFIX = "Tags"

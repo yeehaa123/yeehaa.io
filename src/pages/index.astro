@@ -4,7 +4,7 @@ import Layout from "../layouts/Base.astro"
 import { PostListing } from "../components/Postlisting"
 
 const title = "YEEHAA";
-import { getPosts } from "./helpers";
+import { getPosts } from "@/helpers/pages";
 const posts = await getPosts();
 const description = "Jan Hein Hoogstad's personal website"
 

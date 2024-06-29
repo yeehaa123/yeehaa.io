@@ -8,8 +8,9 @@ import remarkGfm from 'remark-gfm';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import alpinejs from '@astrojs/alpinejs';
-
 import react from "@astrojs/react";
+
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +22,7 @@ export default defineConfig({
       'h1 + p': 'lead'
     }], slug, section]
   },
-  integrations: [tailwind(
-    {applyBaseStyles: false}
-  ), mdx(), alpinejs(), react()]
+  integrations: [tailwind({
+    applyBaseStyles: false
+  }), mdx(), alpinejs(), react(), sitemap()]
 });
