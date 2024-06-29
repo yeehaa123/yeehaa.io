@@ -31,12 +31,11 @@ export function init(initEntitity: InitEntity) {
     }
 
     case ContentType.ARTICLE: {
-      if (!title) { throw ("ARTICLE NEEDS TITLE"); }
       return article.init({ title, article: content as string, author, series: seriesName })
     }
 
     case ContentType.COURSE: {
-      return course.init({ course: content as RawCourse, author })
+      return course.init({ title, course: content as RawCourse, author })
     }
 
     case ContentType.SERIES: {

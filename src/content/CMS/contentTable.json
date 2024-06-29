@@ -1,16 +1,16 @@
 [
   {
-    "id": "714be9470d94eb0533a473d98bb7daa4",
+    "id": "f3cfbafaad1760bf949d001d58e0e648",
     "author": "yeehaa",
-    "title": "Align the Misaligned",
+    "title": "Align The Misaligned",
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "34d442a1971d4dbbe8315bbfa8de35d5",
+    "checksum": "da7237ed96ff6ab4594a03515f6a0689",
     "publicationData": {
-      "createdAt": "2024-06-26T05:27:44.659Z",
-      "updatedAt": "2024-06-26T05:27:44.659Z",
-      "publishedAt": "2024-06-26T05:27:44.659Z"
+      "createdAt": "2024-06-29T07:54:47.758Z",
+      "updatedAt": "2024-06-29T07:54:47.758Z",
+      "publishedAt": "2024-06-29T07:54:47.758Z"
     }
   },
   {
@@ -23,9 +23,9 @@
     "checksum": "6da78a490110bdc70b906c065f1b99ea"
   },
   {
-    "id": "439a85f16a9137cc43055062454f1f0c",
+    "id": "e3189627309fbc15f0903dd9f7b9070d",
     "author": "yeehaa",
-    "title": "Economy of Garbage",
+    "title": "Economy Of Garbage",
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
@@ -50,27 +50,27 @@
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
   },
   {
-    "id": "e7b4fa43f10163d5d384cac81e4b5c29",
+    "id": "d63a54cc9f24ebf6c8ce8cf33e860ef4",
     "author": "yeehaa",
-    "title": "Learning from Nature",
+    "title": "Learning From Nature",
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "b00ab9b260061c09b956c2e922ebcbad"
   },
   {
-    "id": "ac99db24db2a0dd845e6ddaaba927268",
+    "id": "60b3687a0f78924fb19685ba21650e52",
     "author": "yeehaa",
-    "title": "Reclaiming the Future",
+    "title": "Reclaiming The Future",
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "0af417ab21870acd8b23293440ad316a"
   },
   {
-    "id": "811526f4bd3f05a00943ee045d252faa",
+    "id": "2464b805ec1f564bcc2ad6c688dfc071",
     "author": "yeehaa",
-    "title": "Shenzhen Goes HAM",
+    "title": "Shenzhen Goes Ham",
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
@@ -86,25 +86,25 @@
     "checksum": "f0f31bb5617196b56b80e9fd43b1ce5f"
   },
   {
-    "id": "718a92d36026c524680ea6abe3f96409",
+    "id": "9efad3dd56e85b64973872a48acd777b",
     "author": "yeehaa",
-    "title": "The Practice of Ecosystem Architecture",
+    "title": "The Practice Of Ecosystem Architecture",
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f"
   },
   {
-    "id": "bf1f22b2dd9785389afb1b1aaea31f57",
+    "id": "dab57a97b73c41955321d0f6def877ae",
     "author": "yeehaa",
-    "title": "Align the Misaligned",
+    "title": "Align The Misaligned",
     "contentType": "course",
     "status": "published",
-    "checksum": "4151e963a15243167e9175616f9cebdc",
+    "checksum": "290a2f09c9c69ada507ee2cf6b1ef866",
     "publicationData": {
-      "createdAt": "2024-06-29T05:24:49.068Z",
-      "updatedAt": "2024-06-29T05:24:49.068Z",
-      "publishedAt": "2024-06-29T05:24:49.068Z"
+      "createdAt": "2024-06-29T08:17:58.764Z",
+      "updatedAt": "2024-06-29T08:17:58.764Z",
+      "publishedAt": "2024-06-29T08:17:58.764Z"
     }
   },
   {

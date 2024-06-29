@@ -21,9 +21,8 @@ async function convertFile(fileData: File) {
   }
 
   if (isMarkdownFile(fileData)) {
-    const { title, content } = parseMarkdoc(item);
-    if (!title) { throw ("ARTICLE NEEDS TITLE"); }
-    return { title, content, contentType: ContentType.ARTICLE }
+    const { content } = parseMarkdoc(item);
+    return { content, contentType: ContentType.ARTICLE }
   }
 
   if (isOffcourseFile(fileData)) {
@@ -35,8 +34,9 @@ async function convertFile(fileData: File) {
 
 async function processFile(tree: FileTree, filePath: string, author: string, seriesName?: string) {
   const { ext: fileType, name: fileName } = path.parse(filePath);
+  const title = deslugify(fileName);
   const item = await readFile(filePath, 'utf8');
-  const { content, title, contentType } = await convertFile({ fileName, fileType, item });
+  const { content, contentType } = await convertFile({ fileName, fileType, item });
   const entity = et.init({
     content,
     title,

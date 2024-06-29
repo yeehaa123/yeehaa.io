@@ -1,10 +1,13 @@
 import type { AnalyzedTable } from "./"
 import { isArticle, isCourse, isProfile, isSeries } from "../entity/filters";
+
 export function findCourseForArticle(table: AnalyzedTable, title: string) {
   return table
     .filter(isCourse)
-    .find(other => other.meta.habitat === title ||
-      other.meta.title === title)
+    .find(other => {
+      return other.meta.habitat === title ||
+        other.meta.title === title
+    })
 }
 
 export function findArticleforCourse(table: AnalyzedTable, habitat: string) {

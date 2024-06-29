@@ -23,9 +23,10 @@ import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema
 export const PATH_SUFFIX = "Courses"
 export const schema = outputSchema
 
-export function init({ course: raw, author }: InitCourse) {
+export function init({ title, course: raw, author }: InitCourse) {
   const curator = author;
-  const { goal, habitat } = raw;
+  const { habitat } = raw;
+  const goal = title;
   const courseId = hashify(JSON.stringify({ goal, curator }));
   const meta = m.init({
     id: courseId,

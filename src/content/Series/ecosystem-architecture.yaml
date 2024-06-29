@@ -1,23 +1,25 @@
-checksum: abf8505f502ed10334a2d5de2ded7a48
-summary: The Ecosystem Architecture blog series explores the idea of embracing
-  fragmented systems in the digital world, inspired by decentralization and
-  regenerative design. By integrating interdisciplinary insights, the series
-  advocates for building vibrant, sustainable digital ecosystems that are
-  innovative and forward-looking. This approach mirrors natural processes and
-  aims to foster a healthier and more dynamic digital environment.
-excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
-  exploitative tech practices. Embracing fragmented systems, 'ecosystem
-  architecture' aims for creating vibrant, sustainable digital ecosystems.
+checksum: eeb8c050a82f36b7af2534ae6f423bc8
+summary: A series of blog posts titled 'Ecosystem Architecture' explores a new
+  practice designed to address the fragmentation of the internet. Inspired by
+  various fields, this approach combines decentralization and regenerative
+  design to transform digital fragments into seeds for a healthier, more vibrant
+  digital future. The posts emphasize embracing imperfection and fostering
+  healthier digital ecosystems.
+excerpt: The fragmentation of the internet mirrors the physical world. Ecosystem
+  architecture uses decentralization and regenerative design to turn these
+  digital fragments into seeds for a better future.
 tags:
   - internet
-  - tech
   - design
   - future
-  - eco
-  - digital
-  - coding
   - nature
-bannerImageURL: ./abf8505f502ed10334a2d5de2ded7a48-banner.png
+  - tech
+  - digital
+  - growth
+  - seeds
+  - better
+  - ecosys
+bannerImageURL: ./eeb8c050a82f36b7af2534ae6f423bc8-banner.png
 articles:
   - align-the-misaligned
 title: Ecosystem Architecture

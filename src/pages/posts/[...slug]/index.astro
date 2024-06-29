@@ -4,7 +4,7 @@ import Layout from "@/layouts/Base.astro"
 import { Offcourse } from "@/offcourse/"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import { ArticleContent} from "@/components/ArticleContent";
-import { SeriesHeading } from "@/components/SeriesHeading";
+import { ArticleHeading } from "@/components/ArticleHeading";
 import  { getPostsWithCourse } from '@/helpers/pages';
 
 export async function getStaticPaths() {
@@ -42,9 +42,9 @@ const {
     src={bannerImageURL} 
     alt={title} />
   <div class="container flex flex-col lg:flex-row 
-    px-5 gap-5 lg:gap-10 xl:gap-12 py-12 lg:py-20" transition:name="content" >
-    <article>
-      <SeriesHeading order={order} series={series} />
+    px-5 sm:px-8 py-12 gap-x-5 lg:gap-x-10 xl:gap-x-12 lg:py-20" transition:name="content" >
+    <article class="flex flex-col gap-y-8"> 
+      <ArticleHeading order={order} series={series} title={title}/>
       <ArticleContent>
         <Content/>
       </ArticleContent>

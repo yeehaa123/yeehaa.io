@@ -1,13 +1,14 @@
-checksum: 0ea8957bad8ce69cdd89dc66db1484c4
-summary: The tech tag encapsulates articles and profiles focused on the evolving
-  landscape of technology. Highlights include the exploration of decentralized
-  and regenerative design in digital ecosystems as well as profiles of industry
-  leaders specializing in tech and design. The content fosters an
-  interdisciplinary approach, merging philosophy, coding, and user experience to
-  create innovative and sustainable solutions for the future.
-excerpt: Fragmentation of the internet mirrors Earth's tectonic shifts and
-  exploitative tech practices. Embracing fragmented systems, 'ecosystem
-  architecture' aims for creating vibrant, sustainable digital ecosystems.
+checksum: 1d1498e8ff8efec7f64bc42c05035956
+summary: The tech category encompasses resources that explore technological
+  advancements, innovations, and their intersection with various fields. It
+  includes articles like Align The Misaligned, which delves into ecosystem
+  architecture and its role in creating healthier digital ecosystems through
+  decentralization and regenerative design. The profiles section features key
+  figures like Yeehaa, a leader in design and UX, highlighting contributions to
+  the tech landscape.
+excerpt: The internet's fragmentation mimics the physical world. Ecosystem
+  architecture combines decentralization and regenerative design to transform
+  digital fragments into seeds for a vibrant future.
 title: tech
 articles:
   - align-the-misaligned

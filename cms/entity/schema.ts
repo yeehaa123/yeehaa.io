@@ -9,7 +9,7 @@ import { ContentType } from "cms/meta/schema";
 import { z } from "zod";
 
 const initSchema = z.object({
-  title: z.string().optional(),
+  title: z.string(),
   contentType: z.nativeEnum(ContentType),
   content: z.string().or(curatorSchema).or(rawCourseSchema),
   author: z.string(),

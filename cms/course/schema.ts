@@ -37,6 +37,7 @@ export const rawCourseSchema = z.object({
 })
 
 export const initSchema = z.object({
+  title: z.string(),
   author: z.string(),
   course: rawCourseSchema
 })
