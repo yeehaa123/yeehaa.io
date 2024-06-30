@@ -65,12 +65,10 @@ function render(entity: FinalSeries) {
   const { title } = meta;
   const { bannerImageURL } = augmentations;
   const articles = associations.articles.map(({ title }) => slugify(title));
-  const courses = associations.courses.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     ...augmentations,
     title,
     articles,
-    courses,
     bannerImageURL: `./${bannerImageURL}`
   })
   return yaml.stringify(output)

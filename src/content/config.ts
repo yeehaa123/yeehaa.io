@@ -28,7 +28,6 @@ const series = defineCollection({
   schema: ({ image }) => serie.schema.extend({
     bannerImageURL: image(),
     articles: z.array(reference('Posts')),
-    courses: z.array(reference('Courses')),
   })
 });
 

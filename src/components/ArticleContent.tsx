@@ -21,7 +21,7 @@ export function ArticleContent({ children, className }: Props) {
         prose-strong:font-serif
         prose-blockquote:font-serif prose-blockquote:font-normal prose-blockquote:not-italic
         prose-blockquote:border-secondary
-        prose-a:no-underline prose-a:text-secondary-dark hover:prose-a:text-secondary-light`, className)} >
+        prose-a:no-underline prose-a:text-secondary-dark dark:prose-a:text-secondary-light hover:prose-a:text-secondary-light`, className)} >
     {children}
   </div>
 }

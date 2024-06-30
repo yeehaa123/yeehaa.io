@@ -19,7 +19,6 @@ export const analysisSchema = z.object({
 
 const associationsSchema = z.object({
   articles: z.array(as.schema),
-  courses: z.array(as.schema),
 })
 
 export const augmentationsSchema = z.object({
@@ -44,7 +43,6 @@ export const finalSchema = associatedSchema.extend({
 
 export const outputSchema = augmentationsSchema.merge(associationsSchema).extend({
   articles: z.array(z.string()),
-  courses: z.array(z.string()),
   title: z.string()
 })
 
