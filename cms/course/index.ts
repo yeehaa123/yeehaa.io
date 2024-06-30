@@ -23,7 +23,7 @@ import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema
 export const PATH_SUFFIX = "Courses"
 export const schema = outputSchema
 
-export function init({ title, course: raw, author }: InitCourse) {
+export function init({ title, course: raw, author, series }: InitCourse) {
   const curator = author;
   const { habitat } = raw;
   const goal = title;
@@ -31,6 +31,7 @@ export function init({ title, course: raw, author }: InitCourse) {
   const meta = m.init({
     id: courseId,
     author,
+    series,
     title: goal,
     contentType: ContentType.COURSE,
     habitat,
@@ -58,8 +59,12 @@ export async function analyze(entity: BaseCourse) {
 }
 
 export function associate(entity: AnalyzedCourse, table: AnalyzedTable) {
-  const habitat = ot.findArticleforCourse(table, entity.meta.habitat || entity.meta.title);
-  const associations = { habitat: habitat ? as.init(habitat) : undefined }
+  const habitat = ot.findArticleForCourse(table, entity.meta.habitat || entity.meta.title);
+  const profile = ot.findProfileForCourse(table, entity.course.curator);
+  const associations = {
+    habitat: habitat ? as.init(habitat) : undefined,
+    profile: profile ? as.init(profile) : undefined
+  }
   return associatedSchema.parse({ ...entity, associations })
 }
 
@@ -71,12 +76,14 @@ export async function augment(entity: AssociatedCourse) {
 
 export async function write(basePath: string, entity: FinalCourse) {
   const { meta, associations, augmentations, course } = entity
-  const { publicationData, id } = meta;
-  const { goal, curator } = course;
+  const { publicationData, id, series } = meta;
+  const { goal } = course;
+  const curator = associations.profile?.profile
   const { tags, description, checkpoints } = augmentations;
   const habitat = associations.habitat?.title && slugify(associations.habitat.title);
   const output = outputSchema.parse({
     goal,
+    series,
     curator,
     habitat,
     courseId: id,

@@ -37,7 +37,8 @@ export function init({ profile: initial, author }: InitProfile) {
 
 export async function analyze(entity: BaseProfile) {
   const analysis = await ai.analyze(entity);
-  return analyzedSchema.parse({ ...entity, analysis });
+  const { profile } = entity;
+  return analyzedSchema.parse({ ...entity, analysis: { ...analysis, profile } });
 }
 
 export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {

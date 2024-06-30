@@ -22,22 +22,26 @@ tags:
   - leader
   - ux
   - growth
-  - self
-  - swot
-  - future
-  - nature
   - skills
-checksum: be38cbe5d0238c08ba33ca18a533e45b
+  - startups
+profile:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+checksum: 6a2f73bf5401289ac4b1491e14bb6242
 description: Yeehaa excels in transformative design with extensive experience in
   both academics and industry. With a background in cognitive science and a
   career spanning various high-impact roles, Yeehaa brings a unique blend of
   creativity and analytical skills to any team. Accomplished in innovation,
   project leadership, and user-centered design, Yeehaa is driven by a passion
-  for creating impactful solutions. Yeehaa has authored 'Align The Misaligned'
-  and curated a course of the same name focusing on personal strengths,
-  weaknesses, and SWOT analysis.
+  for creating impactful solutions. They authored 'Align The Misaligned,'
+  focusing on ecosystem architecture and curated a course with the same title
+  emphasizing alignment and effectiveness.
 blurb: The internet's fragmentation mimics the physical world. Ecosystem
   architecture combines decentralization and regenerative design to transform
   digital fragments into seeds for a vibrant future.
-profileImageURL: ./be38cbe5d0238c08ba33ca18a533e45b-profile.png
+profileImageURL: ./6a2f73bf5401289ac4b1491e14bb6242-profile.png
 title: Yeehaa

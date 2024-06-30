@@ -2,9 +2,9 @@
 title: Align The Misaligned
 author: yeehaa
 series: ecosystem-architecture
-createdAt: 2024-06-29T07:54:47.758Z
-updatedAt: 2024-06-29T07:54:47.758Z
-publishedAt: 2024-06-29T07:54:47.758Z
+createdAt: 2024-06-30T10:17:00.413Z
+updatedAt: 2024-06-30T10:17:00.413Z
+publishedAt: 2024-06-30T10:17:00.413Z
 bannerImageURL: da7237ed96ff6ab4594a03515f6a0689.png
 excerpt: The internet's fragmentation mimics the physical world. Ecosystem
   architecture combines decentralization and regenerative design to transform

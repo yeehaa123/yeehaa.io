@@ -27,15 +27,12 @@ export async function getPostsWithCourse() {
     const coursesRef = data.course
     if (!coursesRef) { return { ...article, data: { ...data, course: undefined } } }
     const course = await getEntry(coursesRef);
-    const curatorRef = course.data.curator
-    const curator = await getEntry(curatorRef);
     return {
       ...article,
       data: {
         ...data,
         course: {
           ...course.data,
-          curator: curator.data
         }
       }
     }

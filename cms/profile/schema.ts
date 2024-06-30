@@ -22,6 +22,7 @@ export const initSchema = z.object({
 export const analysisSchema = z.object({
   bio: z.string(),
   tags: z.array(z.string()),
+  profile: curatorSchema
 })
 
 const associationsSchema = z.object({

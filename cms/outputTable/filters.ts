@@ -10,7 +10,7 @@ export function findCourseForArticle(table: AnalyzedTable, title: string) {
     })
 }
 
-export function findArticleforCourse(table: AnalyzedTable, habitat: string) {
+export function findArticleForCourse(table: AnalyzedTable, habitat: string) {
   return table
     .filter(isArticle)
     .find(other => other.meta.title === habitat)
@@ -40,6 +40,12 @@ export function findProfilesForTag(table: AnalyzedTable, tag: string) {
     .filter(other => other.analysis.tags.find(t => t === tag))
 }
 
+export function findProfileForCourse(table: AnalyzedTable, author: string) {
+  return table
+    .filter(isProfile)
+    .find(other => other.meta.author === author)
+}
+
 export function findCoursesForAuthor(table: AnalyzedTable, author: string) {
   return table
     .filter(isCourse)
@@ -53,8 +59,14 @@ export function findSeriesForAuthor(table: AnalyzedTable, author: string) {
 }
 
 
-export function findSeriesForArticle(table: AnalyzedTable, series: string) {
+export function findArticlesForSeries(table: AnalyzedTable, series: string) {
   return table
     .filter(isArticle)
+    .filter(other => other.meta.series === series)
+}
+
+export function findCoursesForSeries(table: AnalyzedTable, series: string) {
+  return table
+    .filter(isCourse)
     .filter(other => other.meta.series === series)
 }

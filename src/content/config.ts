@@ -28,6 +28,7 @@ const series = defineCollection({
   schema: ({ image }) => serie.schema.extend({
     bannerImageURL: image(),
     articles: z.array(reference('Posts')),
+    courses: z.array(reference('Courses')),
   })
 });
 
@@ -43,7 +44,6 @@ const tags = defineCollection({
 const courses = defineCollection({
   type: "data",
   schema: course.schema.extend({
-    curator: reference('Profiles'),
     habitat: reference('Posts').optional()
   })
 });

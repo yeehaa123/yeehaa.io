@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import * as m from "../meta/schema"
 import * as as from "../association"
-import { courseSchema } from "@/offcourse/schema";
+import { courseSchema, curatorSchema } from "@/offcourse/schema";
 import { baseCheckpointSchema, checkpointSchema } from "../checkpoint/schema"
 
 export type Course =
@@ -18,13 +18,15 @@ export const analysisSchema = z.object({
 })
 
 const associationsSchema = z.object({
-  habitat: as.schema.optional()
+  habitat: as.schema.optional(),
+  profile: as.schema.optional()
 })
 
 const augmentationsSchema = analysisSchema;
 
 export const outputSchema = courseSchema.extend({
-  curator: z.string(),
+  curator: curatorSchema,
+  series: z.string().optional(),
   habitat: z.string().optional(),
 })
 
@@ -39,7 +41,8 @@ export const rawCourseSchema = z.object({
 export const initSchema = z.object({
   title: z.string(),
   author: z.string(),
-  course: rawCourseSchema
+  course: rawCourseSchema,
+  series: z.string().optional()
 })
 
 export const baseSchema = z.object({

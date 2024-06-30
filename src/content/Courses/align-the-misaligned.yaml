@@ -1,6 +1,12 @@
 courseId: dab57a97b73c41955321d0f6def877ae
 goal: Align The Misaligned
-curator: yeehaa
+curator:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
 description: Begin by discovering your personal strengths to understand where
   you excel. Embrace your weaknesses to turn them into areas of growth. Next,
   perform a SWOT analysis of your startup to identify internal and external
@@ -8,9 +14,9 @@ description: Begin by discovering your personal strengths to understand where
   needs and goals. This cohesive strategy ensures better alignment and
   effectiveness.
 habitat: align-the-misaligned
-createdAt: 2024-06-29T08:17:58.764Z
-updatedAt: 2024-06-29T08:17:58.764Z
-publishedAt: 2024-06-29T08:17:58.764Z
+createdAt: 2024-06-30T10:17:00.413Z
+updatedAt: 2024-06-30T10:17:00.413Z
+publishedAt: 2024-06-30T10:17:00.413Z
 tags:
   - growth
   - skills
@@ -66,3 +72,4 @@ checkpoints:
       - goals
       - connect
       - success
+series: Ecosystem Architecture

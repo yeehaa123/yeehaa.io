@@ -35,7 +35,7 @@ export function init(initEntitity: InitEntity) {
     }
 
     case ContentType.COURSE: {
-      return course.init({ title, course: content as RawCourse, author })
+      return course.init({ title, course: content as RawCourse, author, series: seriesName })
     }
 
     case ContentType.SERIES: {

@@ -1,13 +1,13 @@
-checksum: eeb8c050a82f36b7af2534ae6f423bc8
-summary: A series of blog posts titled 'Ecosystem Architecture' explores a new
-  practice designed to address the fragmentation of the internet. Inspired by
-  various fields, this approach combines decentralization and regenerative
-  design to transform digital fragments into seeds for a healthier, more vibrant
-  digital future. The posts emphasize embracing imperfection and fostering
-  healthier digital ecosystems.
-excerpt: The fragmentation of the internet mirrors the physical world. Ecosystem
-  architecture uses decentralization and regenerative design to turn these
-  digital fragments into seeds for a better future.
+checksum: f042bebf3ff07e06b5aadda246884413
+summary: The Ecosystem Architecture series explores the parallels between the
+  internet's fragmentation and historical patterns in the physical world. It
+  introduces ecosystem architecture, a practice inspired by diverse fields,
+  aiming to transform digital fragments into seeds for a better future through
+  decentralization and regenerative design. This approach embraces imperfection
+  and promotes the creation of vibrant, healthy digital ecosystems.
+excerpt: Ecosystem architecture combines decentralization and regenerative
+  design to transform the fragmented internet into a seedbed for a vibrant
+  digital future, mirroring historical physical patterns.
 tags:
   - internet
   - design
@@ -16,10 +16,12 @@ tags:
   - tech
   - digital
   - growth
-  - seeds
-  - better
-  - ecosys
-bannerImageURL: ./eeb8c050a82f36b7af2534ae6f423bc8-banner.png
+  - health
+  - vibrant
+  - world
+bannerImageURL: ./f042bebf3ff07e06b5aadda246884413-banner.png
 articles:
+  - align-the-misaligned
+courses:
   - align-the-misaligned
 title: Ecosystem Architecture

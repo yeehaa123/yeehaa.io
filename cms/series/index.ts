@@ -29,8 +29,12 @@ export function init({ series, author }: { series: string, author: string }) {
 }
 
 export function associate(entity: AnalyzedSeries, table: AnalyzedTable) {
-  const series = ot.findSeriesForArticle(table, entity.meta.title);
-  const associations = { articles: series.map(as.init) };
+  const articles = ot.findArticlesForSeries(table, entity.meta.title);
+  const courses = ot.findCoursesForSeries(table, entity.meta.title);
+  const associations = {
+    articles: articles.map(as.init),
+    courses: courses.map(as.init),
+  }
   return associatedSchema.parse({ ...entity, associations })
 }
 
@@ -61,10 +65,12 @@ function render(entity: FinalSeries) {
   const { title } = meta;
   const { bannerImageURL } = augmentations;
   const articles = associations.articles.map(({ title }) => slugify(title));
+  const courses = associations.courses.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     ...augmentations,
     title,
     articles,
+    courses,
     bannerImageURL: `./${bannerImageURL}`
   })
   return yaml.stringify(output)

@@ -8,9 +8,9 @@
     "series": "Ecosystem Architecture",
     "checksum": "da7237ed96ff6ab4594a03515f6a0689",
     "publicationData": {
-      "createdAt": "2024-06-29T07:54:47.758Z",
-      "updatedAt": "2024-06-29T07:54:47.758Z",
-      "publishedAt": "2024-06-29T07:54:47.758Z"
+      "createdAt": "2024-06-30T10:17:00.413Z",
+      "updatedAt": "2024-06-30T10:17:00.413Z",
+      "publishedAt": "2024-06-30T10:17:00.413Z"
     }
   },
   {
@@ -100,11 +100,12 @@
     "title": "Align The Misaligned",
     "contentType": "course",
     "status": "published",
-    "checksum": "290a2f09c9c69ada507ee2cf6b1ef866",
+    "series": "Ecosystem Architecture",
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46",
     "publicationData": {
-      "createdAt": "2024-06-29T08:17:58.764Z",
-      "updatedAt": "2024-06-29T08:17:58.764Z",
-      "publishedAt": "2024-06-29T08:17:58.764Z"
+      "createdAt": "2024-06-30T10:17:00.413Z",
+      "updatedAt": "2024-06-30T10:17:00.413Z",
+      "publishedAt": "2024-06-30T10:17:00.413Z"
     }
   },
   {
@@ -113,6 +114,7 @@
     "title": "Engineer Breakthroughs",
     "contentType": "course",
     "status": "draft",
+    "series": "Ecosystem Architecture",
     "checksum": "792b5234292e6773850b4518abdeed0d",
     "habitat": "Continental Drift"
   },
@@ -124,9 +126,9 @@
     "status": "published",
     "checksum": "0511c550f1421f5bbf1abc06773e0a57",
     "publicationData": {
-      "createdAt": "2024-06-26T05:30:46.883Z",
-      "updatedAt": "2024-06-26T05:30:46.883Z",
-      "publishedAt": "2024-06-26T05:30:46.883Z"
+      "createdAt": "2024-06-30T10:17:00.413Z",
+      "updatedAt": "2024-06-30T10:17:00.413Z",
+      "publishedAt": "2024-06-30T10:17:00.413Z"
     }
   }
 ]

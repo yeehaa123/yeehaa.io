@@ -12,7 +12,7 @@ export async function analyze(entity: BaseProfile) {
   const min_num_tags = 3;
   const max_num_tags = 5;
   const tag_length = 7;
-  const schema = ps.analysisSchema;
+  const schema = ps.analysisSchema.omit({ profile: true })
   const prompt = `
 Aanalyze the content of the following linkedin profile: '${socials.linkedin}'.
 
