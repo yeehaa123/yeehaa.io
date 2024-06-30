@@ -29,7 +29,9 @@ const courses = coursesRef && await getEntries(coursesRef)
 
   />
   <SeriesHero slot="hero" title={title} summary={summary}>
-    <Image class="w-full" src={bannerImageURL} alt={title} />
+    <Image class="w-full" 
+      widths={[240, 540, 720, 1024, 1280]}
+      src={bannerImageURL} alt={title} />
   </SeriesHero>
   <div transition:name="content" class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
     { posts.map(({slug, data}, index) => <PostListing {...data} order={index} {slug}/>)}
