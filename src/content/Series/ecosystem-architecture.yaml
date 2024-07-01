@@ -1,25 +1,24 @@
-checksum: eeb8c050a82f36b7af2534ae6f423bc8
-summary: A series of blog posts titled 'Ecosystem Architecture' explores a new
-  practice designed to address the fragmentation of the internet. Inspired by
-  various fields, this approach combines decentralization and regenerative
-  design to transform digital fragments into seeds for a healthier, more vibrant
-  digital future. The posts emphasize embracing imperfection and fostering
-  healthier digital ecosystems.
-excerpt: The fragmentation of the internet mirrors the physical world. Ecosystem
-  architecture uses decentralization and regenerative design to turn these
-  digital fragments into seeds for a better future.
+checksum: f2ea2480c278599dfa15a0ef43194060
+summary: Ecosystem Architecture is a series exploring the use of the term
+  'ecosystem' moving from biology to human organizations. It argues for a
+  flexible interpretation that transcends traditional boundaries of space and
+  time. The series introduces the practice of 'ecosystem architecture,' which
+  synthesizes insights from various fields to design human ecosystems capable of
+  thriving beyond conventional limitations.
+excerpt: The term ecosystem has evolved beyond biology to describe dynamic,
+  non-bounded human organizations, transcending space and time. Introduction to
+  ecosystem architecture, a multidisciplinary practice.
 tags:
+  - eco
+  - bio
+  - crypto
   - internet
   - design
-  - future
-  - nature
-  - tech
-  - digital
-  - growth
-  - seeds
-  - better
-  - ecosys
-bannerImageURL: ./eeb8c050a82f36b7af2534ae6f423bc8-banner.png
+  - human
+  - space
+  - time
+  - fields
+bannerImageURL: ./f2ea2480c278599dfa15a0ef43194060-banner.png
 articles:
-  - align-the-misaligned
+  - across-space-and-time
 title: Ecosystem Architecture

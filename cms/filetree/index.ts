@@ -89,7 +89,9 @@ export function update(tree: FileTree, metaTable: MetaTable) {
     const { id } = meta;
     const entity = tree.get(id);
     if (entity) {
-      const updated = { ...entity, meta }
+      const updated = {
+        ...entity, meta: { ...meta, checksum: entity.meta.checksum }
+      }
       tree.set(entity.meta.id, updated);
     }
   }

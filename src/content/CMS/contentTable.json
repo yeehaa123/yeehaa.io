@@ -1,17 +1,26 @@
 [
   {
+    "id": "0db33aef6608b5824a9c5d98c9e259e6",
+    "author": "yeehaa",
+    "title": "Across Space And Time",
+    "contentType": "article",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "e3d6e303db0ad4371e448ddec312dc17",
+    "publicationData": {
+      "createdAt": "2024-07-01T08:43:33.622Z",
+      "updatedAt": "2024-07-01T08:43:33.622Z",
+      "publishedAt": "2024-07-01T08:43:33.622Z"
+    }
+  },
+  {
     "id": "f3cfbafaad1760bf949d001d58e0e648",
     "author": "yeehaa",
     "title": "Align The Misaligned",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "da7237ed96ff6ab4594a03515f6a0689",
-    "publicationData": {
-      "createdAt": "2024-06-30T10:17:00.413Z",
-      "updatedAt": "2024-06-30T10:17:00.413Z",
-      "publishedAt": "2024-06-30T10:17:00.413Z"
-    }
+    "checksum": "64d4961cbcbec61d8b84597f35d17851"
   },
   {
     "id": "88be3ee13fcaec1270308625b34696aa",
@@ -21,6 +30,15 @@
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea"
+  },
+  {
+    "id": "b8dda3ada4ea1b62ed2121e94c456956",
+    "author": "yeehaa",
+    "title": "Decentralization And Regeneration",
+    "contentType": "article",
+    "status": "draft",
+    "series": "Ecosystem Architecture",
+    "checksum": "e4679d7b71c21668461381d4e1fe15f2"
   },
   {
     "id": "e3189627309fbc15f0903dd9f7b9070d",
@@ -99,14 +117,9 @@
     "author": "yeehaa",
     "title": "Align The Misaligned",
     "contentType": "course",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46",
-    "publicationData": {
-      "createdAt": "2024-06-30T10:17:00.413Z",
-      "updatedAt": "2024-06-30T10:17:00.413Z",
-      "publishedAt": "2024-06-30T10:17:00.413Z"
-    }
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46"
   },
   {
     "id": "d71fe3a19689792e548b07f879e7bf55",
@@ -126,9 +139,9 @@
     "status": "published",
     "checksum": "0511c550f1421f5bbf1abc06773e0a57",
     "publicationData": {
-      "createdAt": "2024-06-30T10:17:00.413Z",
-      "updatedAt": "2024-06-30T10:17:00.413Z",
-      "publishedAt": "2024-06-30T10:17:00.413Z"
+      "createdAt": "2024-07-01T06:34:16.013Z",
+      "updatedAt": "2024-07-01T06:34:16.013Z",
+      "publishedAt": "2024-07-01T06:34:16.013Z"
     }
   }
 ]

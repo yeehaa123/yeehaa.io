@@ -1,16 +1,14 @@
-checksum: bd92c0568bf34e82d4e285426b85c333
-summary: This collection includes a thought-provoking article and a compelling
-  profile highlighting innovative practices in design and technology. The
-  featured article delves into the novel concept of ecosystem architecture,
-  merging decentralization and regenerative design to rejuvenate fragmented
-  digital spaces. The profile introduces Jan Hein Hoogstad, known as 'yeehaa,' a
-  leader in UX design active on LinkedIn, GitHub, and Instagram.
-excerpt: The internet's fragmentation mimics the physical world. Ecosystem
-  architecture combines decentralization and regenerative design to transform
-  digital fragments into seeds for a vibrant future.
+checksum: adcc305b7014210d73be75c5428bf27c
+summary: The design title encompasses various resources including articles,
+  courses, and profiles, but currently features only one profile. The
+  highlighted profile is that of Jan Hein Hoogstad, known as 'yeehaa'. Jan is a
+  leader in tech and UX, actively involved in the design community. You can
+  connect with Jan on LinkedIn, GitHub, and Instagram through his provided
+  links.
+excerpt: Explore Jan Hein Hoogstad's profile, a tech leader known as 'yeehaa'
+  with expertise in UX. Connect with him on LinkedIn, GitHub, and Instagram.
 title: design
-articles:
-  - align-the-misaligned
+articles: []
 profiles:
   - yeehaa
 courses: []

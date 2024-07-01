@@ -4,12 +4,11 @@ socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
   github: https://www.github.com/yeehaa123/
   instagram: https://www.instagram.com/yeehaa12345/
-courses:
-  - align-the-misaligned
+courses: []
 series:
   - ecosystem-architecture
 articles:
-  - align-the-misaligned
+  - across-space-and-time
 bio: Yeehaa excels in transformative design with extensive experience in both
   academics and industry. With a background in cognitive science and a career
   spanning various high-impact roles, Yeehaa brings a unique blend of creativity
@@ -21,9 +20,8 @@ tags:
   - tech
   - leader
   - ux
-  - growth
-  - skills
-  - startups
+  - "cog "
+  - innov
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -31,17 +29,16 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: 6a2f73bf5401289ac4b1491e14bb6242
+checksum: 4812154721faea6cb3cb56102204d127
 description: Yeehaa excels in transformative design with extensive experience in
   both academics and industry. With a background in cognitive science and a
   career spanning various high-impact roles, Yeehaa brings a unique blend of
   creativity and analytical skills to any team. Accomplished in innovation,
   project leadership, and user-centered design, Yeehaa is driven by a passion
-  for creating impactful solutions. They authored 'Align The Misaligned,'
-  focusing on ecosystem architecture and curated a course with the same title
-  emphasizing alignment and effectiveness.
-blurb: The internet's fragmentation mimics the physical world. Ecosystem
-  architecture combines decentralization and regenerative design to transform
-  digital fragments into seeds for a vibrant future.
-profileImageURL: ./6a2f73bf5401289ac4b1491e14bb6242-profile.png
+  for creating impactful solutions. Authored 'Across Space And Time,' exploring
+  'ecosystem architecture' and its applications beyond the biological sense.
+blurb: The term 'ecosystem' has evolved beyond biology to describe dynamic,
+  non-bounded human organizations, transcending space and time. Introduction to
+  'ecosystem architecture,' a multidisciplinary practice.
+profileImageURL: ./4812154721faea6cb3cb56102204d127-profile.png
 title: Yeehaa
