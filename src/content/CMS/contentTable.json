@@ -6,7 +6,7 @@
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "e3d6e303db0ad4371e448ddec312dc17",
+    "checksum": "b5c5044a05b0d468b085e0c0308ddd06",
     "publicationData": {
       "createdAt": "2024-07-01T08:43:33.622Z",
       "updatedAt": "2024-07-01T08:43:33.622Z",
@@ -30,15 +30,6 @@
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "6da78a490110bdc70b906c065f1b99ea"
-  },
-  {
-    "id": "b8dda3ada4ea1b62ed2121e94c456956",
-    "author": "yeehaa",
-    "title": "Decentralization And Regeneration",
-    "contentType": "article",
-    "status": "draft",
-    "series": "Ecosystem Architecture",
-    "checksum": "e4679d7b71c21668461381d4e1fe15f2"
   },
   {
     "id": "e3189627309fbc15f0903dd9f7b9070d",
@@ -68,6 +59,21 @@
     "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
   },
   {
+    "id": "6369a837b862a83f2aac27ebec2c742c",
+    "author": "yeehaa",
+    "title": "Groom Your Ecosystem",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "f92f7c2fe052b70e7c1b26e5482f4014",
+    "publicationData": {
+      "createdAt": "2024-07-01T17:32:58.930Z",
+      "updatedAt": "2024-07-01T17:32:58.930Z",
+      "publishedAt": "2024-07-01T17:32:58.930Z"
+    },
+    "habitat": "Across Space And Time"
+  },
+  {
     "id": "d63a54cc9f24ebf6c8ce8cf33e860ef4",
     "author": "yeehaa",
     "title": "Learning From Nature",
@@ -84,6 +90,15 @@
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "0af417ab21870acd8b23293440ad316a"
+  },
+  {
+    "id": "acb4b327c77bf326169b9de3250ddc5a",
+    "author": "yeehaa",
+    "title": "Return On Ecosystem",
+    "contentType": "article",
+    "status": "draft",
+    "series": "Ecosystem Architecture",
+    "checksum": "e4679d7b71c21668461381d4e1fe15f2"
   },
   {
     "id": "2464b805ec1f564bcc2ad6c688dfc071",

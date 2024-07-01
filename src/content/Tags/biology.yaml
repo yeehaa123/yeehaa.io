@@ -1,13 +1,11 @@
-checksum: de519c3522e420bb048d08f2c91b49bf
-summary: The resources under 'biology' encompass various interdisciplinary
-  domains. A prominent article delves into the term 'ecosystem,' tracing its
-  biological origin and its metaphorical application in human organizations like
-  cryptocurrencies and businesses. Highlighting space and time transcendence, it
-  introduces the innovative concept of 'ecosystem architecture,' an approach
-  integrating multiple disciplines to design adaptable human ecosystems.
-excerpt: The term ecosystem has evolved beyond biology to describe dynamic,
-  non-bounded human organizations, transcending space and time. Introduction to
-  ecosystem architecture, a multidisciplinary practice.
+checksum: a7bba0b72194a2a49c8d8a591c42c783
+summary: The biology category encompasses resources that explore living systems,
+  from traditional ecosystems to metaphorical uses in human organizations. It
+  includes interdisciplinary approaches for understanding and designing complex,
+  adaptive systems.
+excerpt: The term 'ecosystem' has evolved beyond its biological origins to
+  describe modern human organizations that transcend spatio-temporal
+  constraints, reflecting a shift towards less hierarchical structures.
 title: biology
 articles:
   - across-space-and-time

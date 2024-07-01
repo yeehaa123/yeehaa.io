@@ -4,7 +4,8 @@ socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
   github: https://www.github.com/yeehaa123/
   instagram: https://www.instagram.com/yeehaa12345/
-courses: []
+courses:
+  - groom-your-ecosystem
 series:
   - ecosystem-architecture
 articles:
@@ -20,8 +21,12 @@ tags:
   - tech
   - leader
   - ux
-  - "cog "
-  - innov
+  - ecosystem
+  - growth
+  - coding
+  - self
+  - bio
+  - tips
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -29,16 +34,19 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: 4812154721faea6cb3cb56102204d127
+checksum: d76ddae103d385722aa0ade4fa91b947
 description: Yeehaa excels in transformative design with extensive experience in
   both academics and industry. With a background in cognitive science and a
   career spanning various high-impact roles, Yeehaa brings a unique blend of
   creativity and analytical skills to any team. Accomplished in innovation,
   project leadership, and user-centered design, Yeehaa is driven by a passion
-  for creating impactful solutions. Authored 'Across Space And Time,' exploring
-  'ecosystem architecture' and its applications beyond the biological sense.
-blurb: The term 'ecosystem' has evolved beyond biology to describe dynamic,
-  non-bounded human organizations, transcending space and time. Introduction to
-  'ecosystem architecture,' a multidisciplinary practice.
-profileImageURL: ./4812154721faea6cb3cb56102204d127-profile.png
+  for creating impactful solutions. Wrote 'Across Space And Time' on ecosystems
+  and curated 'Groom Your Ecosystem' course.
+blurb: Yeehaa excels in transformative design with extensive experience in both
+  academics and industry. With a background in cognitive science and a career
+  spanning various high-impact roles, Yeehaa brings a unique blend of creativity
+  and analytical skills to any team. Accomplished in innovation, project
+  leadership, and user-centered design, Yeehaa is driven by a passion for
+  creating impactful solutions.
+profileImageURL: ./d76ddae103d385722aa0ade4fa91b947-profile.png
 title: Yeehaa

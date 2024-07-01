@@ -1,11 +1,11 @@
-checksum: 2a82a3ec79a5d421c0cbebc4777d7b37
-summary: Crypto is explored through articles discussing its evolution and broad
-  application. A key resource examines the term ecosystem's shift from biology
-  to metaphorical use in cryptocurrencies and businesses, introducing ecosystem
-  architecture as a practice to design thriving human ecosystems.
-excerpt: The term ecosystem has evolved beyond biology to describe dynamic,
-  non-bounded human organizations, transcending space and time. Introduction to
-  ecosystem architecture, a multidisciplinary practice.
+checksum: 1a23e8b038d94da0a9f530318c186b4f
+summary: Crypto refers to cryptography or cryptocurrency, emerging as pivotal in
+  digital security and decentralized finance. The tag encompasses secure
+  communication, blockchain technology, and innovative financial systems
+  leveraging encryption for transparency, security, and anonymity.
+excerpt: The term ecosystem has evolved beyond its biological origins to
+  describe modern human organizations that transcend spatio-temporal
+  constraints, reflecting a shift towards less hierarchical structures.
 title: crypto
 articles:
   - across-space-and-time

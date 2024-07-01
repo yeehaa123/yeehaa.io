@@ -1,24 +1,27 @@
-checksum: f2ea2480c278599dfa15a0ef43194060
-summary: Ecosystem Architecture is a series exploring the use of the term
-  'ecosystem' moving from biology to human organizations. It argues for a
-  flexible interpretation that transcends traditional boundaries of space and
-  time. The series introduces the practice of 'ecosystem architecture,' which
-  synthesizes insights from various fields to design human ecosystems capable of
-  thriving beyond conventional limitations.
-excerpt: The term ecosystem has evolved beyond biology to describe dynamic,
-  non-bounded human organizations, transcending space and time. Introduction to
-  ecosystem architecture, a multidisciplinary practice.
+checksum: 807ea0f882b3af132f6cf7cff3d61ee1
+summary: The Ecosystem Architecture series explores the crossover between
+  natural and metaphorical ecosystems in modern human organizations. It delves
+  into how the concept of ecosystems, originally confined to specific spaces and
+  times, now represents human organizations that break free from these
+  limitations. The series discusses the preference for less hierarchical, more
+  organic forms of organizations and introduces the practice of ecosystem
+  architecture, inspired by various disciplines to design and sustain these
+  entities.
+excerpt: The term ecosystem has evolved beyond its biological origins to
+  describe modern human organizations that transcend spatio-temporal
+  constraints, reflecting a shift towards less hierarchical structures.
 tags:
-  - eco
-  - bio
+  - ecosystem
+  - biology
   - crypto
-  - internet
   - design
-  - human
+  - growth
+  - modern
+  - system
   - space
   - time
-  - fields
-bannerImageURL: ./f2ea2480c278599dfa15a0ef43194060-banner.png
+  - trend
+bannerImageURL: ./807ea0f882b3af132f6cf7cff3d61ee1-banner.png
 articles:
   - across-space-and-time
 title: Ecosystem Architecture
