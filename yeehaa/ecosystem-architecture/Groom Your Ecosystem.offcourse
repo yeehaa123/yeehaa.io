@@ -1,14 +1,10 @@
 habitat: Across Space And Time
 checkpoints: 
-  - task: Learn from Animals
-    href: https://www.ifaw.org/international/journal/animals-help-people-and-planet
-  - task: Know Yourself
-    href: https://www.myhumandesign.com/get-your-chart/
-  - task: Take care of a Garden
-    href: https://renegadegardener.com/care-2/landscaping-101
-  - task: Become a Polyglot
-    href: https://medium.com/@guestposts_92864/what-is-a-polyglot-programmer-and-why-you-should-become-one-e5629bf720c2 
-  - task: Lead with Purpose
+  - task: Lead With Purpose
     href: https://www.indeed.com/career-advice/career-development/how-to-lead-with-purpose
+  - task: Become A Polyglot
+    href: https://medium.com/@guestposts_92864/what-is-a-polyglot-programmer-and-why-you-should-become-one-e5629bf720c2 
   - task: Bring Da Ruckus
     href: https://www.newyorker.com/magazine/2018/07/09/how-george-clinton-made-funk-a-world-view
+  - task: Make Some Beauty
+    href: https://renegadegardener.com/care-2/landscaping-101

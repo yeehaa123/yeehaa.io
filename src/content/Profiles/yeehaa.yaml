@@ -10,23 +10,24 @@ series:
   - ecosystem-architecture
 articles:
   - across-space-and-time
-bio: Yeehaa excels in transformative design with extensive experience in both
-  academics and industry. With a background in cognitive science and a career
-  spanning various high-impact roles, Yeehaa brings a unique blend of creativity
-  and analytical skills to any team. Accomplished in innovation, project
-  leadership, and user-centered design, Yeehaa is driven by a passion for
-  creating impactful solutions
+bio: yeehaa is a dedicated professional with a strong background in digital
+  innovation and technology strategy. He possesses extensive experience in
+  various leadership roles across prominent tech firms in Europe. He
+  demonstrates expertise in software development, data analytics, and project
+  management. Educated in computer science, yeehaa excels in bridging technical
+  expertise with business acumen to drive successful tech initiatives. His
+  proficiency in emerging technologies and strategic planning underscores his
+  ability to lead transformative projects.
 tags:
-  - design
   - tech
   - leader
-  - ux
-  - ecosystem
-  - growth
-  - coding
-  - self
-  - bio
-  - tips
+  - data
+  - code
+  - biolo
+  - impact
+  - vision
+  - adapt
+  - learn
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -34,19 +35,13 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: d76ddae103d385722aa0ade4fa91b947
-description: Yeehaa excels in transformative design with extensive experience in
-  both academics and industry. With a background in cognitive science and a
-  career spanning various high-impact roles, Yeehaa brings a unique blend of
-  creativity and analytical skills to any team. Accomplished in innovation,
-  project leadership, and user-centered design, Yeehaa is driven by a passion
-  for creating impactful solutions. Wrote 'Across Space And Time' on ecosystems
-  and curated 'Groom Your Ecosystem' course.
-blurb: Yeehaa excels in transformative design with extensive experience in both
-  academics and industry. With a background in cognitive science and a career
-  spanning various high-impact roles, Yeehaa brings a unique blend of creativity
-  and analytical skills to any team. Accomplished in innovation, project
-  leadership, and user-centered design, Yeehaa is driven by a passion for
-  creating impactful solutions.
-profileImageURL: ./d76ddae103d385722aa0ade4fa91b947-profile.png
+checksum: 8455dfd979509eb80499e5855c13cc2a
+description: yeehaa is a digital innovation strategist with leadership
+  experience across tech firms in Europe. Skilled in software development, data
+  analytics, and project management, he blends technical expertise with business
+  acumen, pioneering non-hierarchical ecosystems.
+blurb: An ecosystem in biology involves organisms interacting within a specific
+  area. Its overuse in other contexts reflects a desire for less hierarchical
+  structures. Modern ecosystems transcend space-time.
+profileImageURL: ./8455dfd979509eb80499e5855c13cc2a-profile.png
 title: Yeehaa

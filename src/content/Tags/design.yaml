@@ -1,14 +1,13 @@
-checksum: adcc305b7014210d73be75c5428bf27c
-summary: The design title encompasses various resources including articles,
-  courses, and profiles, but currently features only one profile. The
-  highlighted profile is that of Jan Hein Hoogstad, known as 'yeehaa'. Jan is a
-  leader in tech and UX, actively involved in the design community. You can
-  connect with Jan on LinkedIn, GitHub, and Instagram through his provided
-  links.
-excerpt: Explore Jan Hein Hoogstad's profile, a tech leader known as 'yeehaa'
-  with expertise in UX. Connect with him on LinkedIn, GitHub, and Instagram.
+checksum: 9141d8450ac0b0795316760cc2eca42a
+summary: Centering on the holistic grooming of one's ecosystem, this resource
+  emphasizes leadership, learning, adaptability, creativity, and aesthetics. It
+  offers a strategic vision that encourages innovative and cohesive
+  environments.
+excerpt: Lead With Purpose emphasizes strategic vision and leadership, Become A
+  Polyglot broadens skill sets, Bring Da Ruckus injects energy and innovation,
+  and Make Some Beauty focuses on aesthetics.
 title: design
 articles: []
-profiles:
-  - yeehaa
-courses: []
+profiles: []
+courses:
+  - groom-your-ecosystem
