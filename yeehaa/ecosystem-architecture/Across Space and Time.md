@@ -6,7 +6,7 @@ Up until this day, these ecological roots of the word ecosystem have also shaped
 
 — [ZombieSlayer83](https://www.reddit.com/r/CryptoCurrency/comments/pmng04/ecosystem_is_the_most_cringe_word_in_all_of_crypto/)
 
-While certainly cringeworthy, I actually believe that the inflation of the term ecosystem is symptomatic of a positive, underlying phenomenon. In fact, it is not the hype that made it a hypernym, but rather the exact opposite. People feel the need to overuse the word ecosystem because other,prevalent terms to describe human organizations are no longer fitting. Company, network, platform, association, circle, pact, club, company, consortium, corporation, establishment, federation, institute, league, party, society, team, family, tribe union: all fail to capture the zeitgeist.
+While certainly cringeworthy, I actually believe that the inflation of the term ecosystem is symptomatic of a positive, underlying phenomenon. In fact, it is not the hype that made it a hypernym, but rather the exact opposite. People feel the need to overuse the word ecosystem because other, prevalent terms to describe human organizations are no longer fitting. Company, network, platform, association, circle, pact, club, company, consortium, corporation, establishment, federation, institute, league, party, society, team, family, tribe union: all fail to capture the zeitgeist.
 
 The increased use of the term ecosystem signifies a shift in the wishes and expectations that we hold of organizations. People desire structures that work in less mechanical, less hierarchical, less linear ways. The word ecosystem, with its organic connotations, easily lends itself to be approriated to fulfill this craving.
 

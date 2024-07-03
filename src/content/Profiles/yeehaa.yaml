@@ -21,13 +21,10 @@ bio: yeehaa is a dedicated professional with a strong background in digital
 tags:
   - tech
   - leader
+  - europe
+  - coder
   - data
-  - code
-  - biolo
-  - impact
   - vision
-  - adapt
-  - learn
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -35,13 +32,15 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: 8455dfd979509eb80499e5855c13cc2a
-description: yeehaa is a digital innovation strategist with leadership
-  experience across tech firms in Europe. Skilled in software development, data
-  analytics, and project management, he blends technical expertise with business
-  acumen, pioneering non-hierarchical ecosystems.
-blurb: An ecosystem in biology involves organisms interacting within a specific
-  area. Its overuse in other contexts reflects a desire for less hierarchical
-  structures. Modern ecosystems transcend space-time.
-profileImageURL: ./8455dfd979509eb80499e5855c13cc2a-profile.png
+checksum: 13a53068268e2416d61980cb0228cdf1
+description: yeehaa is a seasoned professional in digital innovation and
+  technology strategy with extensive leadership experience in Europe's top tech
+  firms. He excels in software development, data analytics, and project
+  management. His work, including the blog 'Across Space And Time' and course
+  'Groom Your Ecosystem,' showcase his expertise in ecosystem architecture,
+  modern organizational structures, and tech-driven strategic vision.
+blurb: Ecosystems traditionally involve biotic and abiotic interactions within a
+  geographic space and time. Modern usage transcends this, describing
+  decentralized human organizations that require new models and skills.
+profileImageURL: ./13a53068268e2416d61980cb0228cdf1-profile.png
 title: Yeehaa

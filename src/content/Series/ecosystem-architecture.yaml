@@ -1,25 +1,25 @@
-checksum: 87fe3ab5d1006a0317c98e75908c06b4
-summary: The Ecosystem Architecture series explores the concept of ecosystems in
-  both biological and modern contexts, with a focus on decentralized
-  organizations. It critiques the overextended use of the term 'ecosystem'
-  outside its literal meaning, while advocating for less hierarchical and more
-  thriving organizational structures. The series draws inspiration from various
-  fields to propose new models and tools for modern, internet-driven ecosystems.
-excerpt: An ecosystem in biology involves organisms interacting within a
-  specific area. Its overuse in other contexts reflects a desire for less
-  hierarchical structures. Modern ecosystems transcend space-time.
+checksum: b15cd8183da3381e48e84776d3701412
+summary: The series 'Ecosystem Architecture' explores the concept of ecosystems,
+  both in their traditional sense involving biotic and abiotic interplay within
+  a geographic space and time, and in their modern sense applied to
+  decentralized human organizations. These contemporary ecosystems, which span
+  across space and time, require new conceptual models and skills to understand
+  and navigate. This exploration is termed Ecosystem Architecture.
+excerpt: Ecosystems traditionally involve biotic and abiotic interactions within
+  a geographic space and time. Modern usage transcends this, describing
+  decentralized human organizations needing new models.
 tags:
-  - eco
-  - bio
-  - crypto
-  - zeit
-  - orgs
-  - model
-  - tools
+  - ecosystem
+  - biology
+  - modern
   - space
   - time
-  - net
-bannerImageURL: ./87fe3ab5d1006a0317c98e75908c06b4-banner.png
+  - organic
+  - skills
+  - models
+  - human
+  - new
+bannerImageURL: ./b15cd8183da3381e48e84776d3701412-banner.png
 articles:
   - across-space-and-time
 title: Ecosystem Architecture
