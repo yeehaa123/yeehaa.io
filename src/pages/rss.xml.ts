@@ -18,8 +18,6 @@ export async function GET(context: AstroUserConfig) {
       pubDate: post.data.publishedAt,
       description: post.data.summary,
       link: `/posts/${post.slug}/`,
-    })),
-    // (optional) inject custom xml
-    customData: `<language>en-us</language>`,
+    }))
   });
 }
