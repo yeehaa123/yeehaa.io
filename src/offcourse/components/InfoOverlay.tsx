@@ -18,8 +18,7 @@ export function InfoOverlay(
       </CardHeader>
       <CardContent className="space-y-4 grow flex flex-col justify-center">
         <div className="flex w-full justify-center">
-          <Logo onClick={console.log}
-            className="w-36 h-36 mb-8 dark:fill-offwhite fill-offblack" />
+          <Logo className="w-36 h-36 mb-8 dark:fill-offwhite fill-offblack" />
         </div>
         <CardDescription>
           <a className="text-secondary" target="_blank" href="https://offcourse.io">Offcourse</a> is an open-source platform designed for online learning, leveraging the wealth of information available on the internet,

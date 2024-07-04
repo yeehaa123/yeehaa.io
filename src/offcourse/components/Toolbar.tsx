@@ -6,13 +6,11 @@ import {
 } from '@radix-ui/react-icons'
 
 type Props = {
-  className?: string,
   habitat?: Habitat | undefined
   showInfoOverlay: () => void
 }
 
 export default function Toolbar({
-  className,
   showInfoOverlay,
   habitat,
 }: Props) {
@@ -20,7 +18,7 @@ export default function Toolbar({
     <div className="flex w-full justify-between">
       <div className="flex flex-start gap-x-4 ">
         <Logo onClick={showInfoOverlay}
-          className={cn("h-4 w-4 fill-gray-500 hover:fill-secondary", className, { "hidden": false })} />
+          className={cn("h-4 w-4 fill-gray-500 hover:fill-secondary", { "hidden": false })} />
       </div>
       <div className="flex gap-x-4 ">
         {habitat && <a href={`/posts/${habitat.slug}`} className={cn("invisible", { "visible": habitat })}>
