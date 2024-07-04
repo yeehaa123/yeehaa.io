@@ -5,24 +5,23 @@ series: ecosystem-architecture
 createdAt: 2024-07-01T08:43:33.622Z
 updatedAt: 2024-07-01T08:43:33.622Z
 publishedAt: 2024-07-01T08:43:33.622Z
-bannerImageURL: 30b31951161489c2197c4d0270938492.png
-excerpt: Ecosystems traditionally involve biotic and abiotic interactions within
-  a geographic space and time. Modern usage transcends this, describing
-  decentralized human organizations that require new models and skills.
-summary: The article discusses the concept of an ecosystem, both literal and
-  metaphorical. Traditionally, ecosystems involve interactions among living
-  organisms within a specific geographic space and time, influenced by biotic
-  and abiotic factors. In modern usage, the term has transcended its origins,
-  describing contemporary human organizations seeking organic, non-hierarchical
-  structures. These new 'ecosystems' are dispersed across space and time and
-  demand new conceptual models and skills, a practice termed Ecosystem
-  Architecture.
+bannerImageURL: c5fbb9e85b274d62f71cb745328f621d.png
+excerpt: Ecosystems signify a move to non-hierarchical structures. They
+  transcend geography and require new models like Ecosystem Architecture to
+  thrive.
+summary: The term ecosystem in biology, typically bound to specific geographic
+  areas and timeframes, has been metaphorically stretched to describe human
+  organizations. This shift reflects a desire for non-hierarchical, organic
+  structures, extending beyond just geographic bounds to diverse and
+  asynchronous networks enabled by the internet. There's a pressing need for new
+  conceptual models like Ecosystem Architecture to effectively design and foster
+  these contemporary ecosystems.
 tags:
-  - ecosystem
   - biology
-  - modern
   - space
   - time
+  - crypto
+  - ecosystem
 course: groom-your-ecosystem
 ---
 In biology, an ecosystem is confined to a particular space and time. It is bound to the specific geographic area where a community of living organisms interacts with their physical environment. This space can vary greatly in size, from a small pond, to an expansive forest, or a vast ocean. Each ecosystem is characterized by its unique combination of biotic actors, such as plants, animals, and microorganisms, and abiotic factors, including climate, soil, water, and topography which can and will change over time. The spatio-temporal boundaries of a biological ecosystem are crucial because they determine the specific interactions and relationships among organisms.
@@ -35,21 +34,21 @@ Up until this day, these ecological roots of the word ecosystem have also shaped
 
 While certainly cringeworthy, I actually believe that the inflation of the term ecosystem is symptomatic of a positive, underlying phenomenon. In fact, it is not the hype that made it a hypernym, but rather the exact opposite. People feel the need to overuse the word ecosystem because other, prevalent terms to describe human organizations are no longer fitting. Company, network, platform, association, circle, pact, club, company, consortium, corporation, establishment, federation, institute, league, party, society, team, family, tribe union: all fail to capture the zeitgeist.
 
-The increased use of the term ecosystem signifies a shift in the wishes and expectations that we hold of organizations. People desire structures that work in less mechanical, less hierarchical, less linear ways. The word ecosystem, with its organic connotations, easily lends itself to be approriated to fulfill this craving.
+The increased use of the term ecosystem signifies a shift in the wishes and expectations that we hold of organizations. People desire structures that work in less mechanical, less hierarchical, less instrumental ways. The word ecosystem, with its organic connotations, easily lends itself to be approriated to fulfill this craving.
 
 > Organizations are living systems that reflect the consciousness of their members.
 
 — [Frederic Laloux](https://www.reinventingorganizations.com/)
 
-However, the same etymology that explains the word's appeal also keeps us from understanding its full potential. Artistic, societal, and business ecosystems do not merely mimic biological ones, they also go way beyond them. So far, the decisive shift in the meaning of the term has mostly been overlooked. As opposed to their biological counterparts, contemporary ecosystems transcend the mere contingent. They have expanded to forms of organization no longer bound to a contiguous territory, but can be dispersed across space and time.
+However, the same etymology that explains the word's appeal also keeps us from understanding its full potential. Artistic, societal, and business ecosystems do not merely mimic biological ones, they also go way beyond them. So far, the decisive shift in the meaning of the term has mostly been overlooked. As opposed to their biological counterparts, contemporary ecosystems transcend the mere contingent. They have expanded to forms of organization no longer bound to a contiguous territory, but are dispersed across space and time.
 
-It is not by accident that this shift in meaning happened parallel to the rise and subsequent shattering of the internet. The last three decades has seen an explosion of possibilities to create networks, ventures, and communities that are distributed and asynchronous. But this dispersion also made it clear that healthy non-natural ecosystems do not just organically come into fruition and thrive. 
+It is not by accident that this shift in meaning happened parallel to the rise and subsequent shattering of the internet. The last three decades have seen an explosion of possibilities to create networks, ventures, and communities that are distributed and asynchronous. But this dispersion also made it clear that healthy non-natural ecosystems do not just organically come into fruition and thrive. 
 
 > The Internet isn’t just a technology, it’s an ecosystem. Learning to really see the Internet— its structure and pieces —can help us better care for it.
 
 — [Michelle Ciccone](https://commonplace.knowledgefutures.org/pub/4ie859tv/release/2)
 
-Ecosystems need to be designed and groomed, but in an unforced, open-ended manner. Legacy business and management frameworks increasingly fall short in creating thriving organizations and networks, because they fail to meet people's growing desire for organic, non-hierarchical structures. Resorting to agricultural models is not the answer either, since farming and gardening were never meant to work across space and time. In order to groom succesful decentralized organizations new conceptual models, skills, and tools are needed. I will call this practice [Ecosystem Architecture](/series/ecosystem-architecture).
+Ecosystems need to be designed and groomed, but in an unforced, open-ended manner. Current day business and management frameworks increasingly fall short in creating thriving organizations and networks, because they fail to meet people's growing desire for organic, non-hierarchical structures. Resorting to ancient agricultural models is not the answer either, since farming and gardening were never meant to work across space and time. In order to groom succesful decentralized organizations new conceptual models, skills, and tools are needed. I will call this practice [Ecosystem Architecture](/series/ecosystem-architecture).
 
 Ecosystem architecture draws its inspiration from many sources: philosophy, gender studies, coding, spirituality, music, dance, visual arts, media theory to name a few. While this mix may seem eclectic or even erratic, there is actually reason to the madness. Natural ecosystems thrive on biodiversity and so do their conceptual antipodes. In order to tackle the challenges ahead of us, no single discipline or practice possesses all the knowledge and wisdom needed. And since ecosystems are wild and eclectic, so are their theoretical underpinnings. 
 

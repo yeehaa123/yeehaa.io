@@ -21,10 +21,10 @@ bio: yeehaa is a dedicated professional with a strong background in digital
 tags:
   - tech
   - leader
-  - europe
-  - coder
   - data
+  - coder
   - vision
+  - music
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -32,15 +32,15 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: 13a53068268e2416d61980cb0228cdf1
-description: yeehaa is a seasoned professional in digital innovation and
-  technology strategy with extensive leadership experience in Europe's top tech
-  firms. He excels in software development, data analytics, and project
-  management. His work, including the blog 'Across Space And Time' and course
-  'Groom Your Ecosystem,' showcase his expertise in ecosystem architecture,
-  modern organizational structures, and tech-driven strategic vision.
-blurb: Ecosystems traditionally involve biotic and abiotic interactions within a
-  geographic space and time. Modern usage transcends this, describing
-  decentralized human organizations that require new models and skills.
-profileImageURL: ./13a53068268e2416d61980cb0228cdf1-profile.png
+checksum: 8545b6af53ef76a029f8712c2e78f88d
+description: yeehaa is a dedicated professional with a background in digital
+  innovation and technology strategy. With extensive leadership experience in
+  Europe's tech firms, he excels in software development, data analytics, and
+  project management. His work includes writing on ecosystem architecture and
+  curating courses on ecosystem development, blending technical expertise with
+  creativity and strategic vision.
+blurb: A seasoned tech leader in Europe, proficient in software development,
+  data analytics, and tech strategy. Known for his work on ecosystem
+  architecture and innovative ecosystem development courses.
+profileImageURL: ./8545b6af53ef76a029f8712c2e78f88d-profile.png
 title: Yeehaa
