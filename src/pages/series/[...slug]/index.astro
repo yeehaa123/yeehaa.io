@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import { Offcourse } from "@/offcourse/"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import Layout from "@/layouts/Base.astro"
 import { SeriesHero } from "@/components/SeriesHero"
@@ -16,9 +15,9 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { data } = entry
-const { title, summary, bannerImageURL, articles: articlesRef, courses: coursesRef} = data;
+const { title, summary, bannerImageURL, articles: articlesRef}  = data;
 const posts = await getEntries(articlesRef)
-const courses = coursesRef && await getEntries(coursesRef)
+
 ---
 <Layout {title}>
   <BaseHead 
@@ -36,6 +35,5 @@ const courses = coursesRef && await getEntries(coursesRef)
   </SeriesHero>
   <div transition:name="content" class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
     { posts.map(({slug, data}, index) => <PostListing {...data} order={index} {slug}/>)}
-    { courses && <Offcourse data={courses.map(({data}) => data)} client:load/>}
   </div>
 </Layout>

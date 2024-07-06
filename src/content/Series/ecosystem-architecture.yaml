@@ -1,24 +1,25 @@
-checksum: 53df9e4866775b3da0142fb5034d8d36
-summary: The Ecosystem Architecture series explores the evolution of the term
-  'ecosystem' from its biological roots to its application in human
-  organizations. It highlights the impact of the internet on enabling
-  decentralized, non-hierarchical structures that transcend traditional
-  geographical boundaries. This series emphasizes the need for new cultivation
-  models for these modern ecosystems, reflecting a shift towards more fluid and
-  interconnected organizational frameworks.
-excerpt: Ecosystem has evolved from biology to describe human organizations
-  transcending boundaries, fostering decentralized, fluid, interconnected
-  networks.
+checksum: 6ba2fbfd230d1f1f685e0d75175a9754
+summary: The Ecosystem Architecture series explores the evolution of the
+  'ecosystem' concept from a biological community bound by space and time to a
+  broader metaphor for decentralized, non-hierarchical structures in various
+  fields. It advocates for new practices to build decentralized organizations
+  that transcend traditional frameworks.
+excerpt: Ecosystem describes a biological community bound by space and time. Its
+  metaphorical use signifies a shift towards decentralized structures. Ecosystem
+  Architecture emerges as a new practice to cultivate thriving, dispersed
+  organizations.
 tags:
-  - biology
-  - internet
-  - networks
-  - society
-  - fluid
-  - change
-  - model
-  - modern
-bannerImageURL: ./53df9e4866775b3da0142fb5034d8d36-banner.png
+  - eco
+  - space
+  - time
+  - shift
+  - decent
+  - build
+  - evolve
+  - bio
+  - field
+  - org
+bannerImageURL: ./6ba2fbfd230d1f1f685e0d75175a9754-banner.png
 articles:
   - across-space-and-time
 title: Ecosystem Architecture
