@@ -21,11 +21,10 @@ bio: yeehaa is a dedicated professional with a strong background in digital
 tags:
   - tech
   - leader
-  - data
   - coder
+  - data
   - europe
-  - vision
-  - code
+  - design
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -33,16 +32,16 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: 1b3bf4fd9ce4fd3f279257854effdec5
-description: yeehaa is a tech leader with extensive experience in digital
-  innovation and technology strategy in Europe. Specializing in software
-  development, data analytics, and project management, he has led various
-  successful tech initiatives. Author of 'Across Space And Time,' advocating for
-  decentralized organizational structures. Curator of 'Groom Your Ecosystem,'
-  focusing on vision, adaptability, and creativity.
-blurb: Ecosystem describes a biological community bound by space and time. Its
-  metaphorical use signifies a shift towards decentralized structures. Ecosystem
-  Architecture emerges as a new practice to cultivate thriving, dispersed
-  organizations.
-profileImageURL: ./1b3bf4fd9ce4fd3f279257854effdec5-profile.png
+checksum: 1d836706312dbc867b1e533a82b87806
+description: yeehaa is a dedicated professional with a strong background in
+  digital innovation and technology strategy. Extensive experience in various
+  leadership roles across prominent tech firms in Europe. Demonstrates expertise
+  in software development, data analytics, and project management. Educated in
+  computer science, excels in bridging technical expertise with business acumen
+  to drive successful tech initiatives. Proficient in emerging technologies and
+  strategic planning, leads transformative projects.
+blurb: Ecosystems describe decentralized, non-hierarchical organizations.
+  Ecosystem architecture, inspired by various disciplines, addresses modern
+  challenges and will be explored in future articles.
+profileImageURL: ./1d836706312dbc867b1e533a82b87806-profile.png
 title: Yeehaa

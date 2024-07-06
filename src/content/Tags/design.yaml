@@ -1,13 +1,17 @@
-checksum: 9141d8450ac0b0795316760cc2eca42a
-summary: Centering on the holistic grooming of one's ecosystem, this resource
-  emphasizes leadership, learning, adaptability, creativity, and aesthetics. It
-  offers a strategic vision that encourages innovative and cohesive
+checksum: 6735eb2b078a616f781d2c29aa914709
+summary: The Ecosystems section delves into both biological and metaphorical
+  ecosystems, emphasizing decentralized, non-hierarchical organizations. It
+  discusses ecosystem architecture inspired by diverse disciplines to tackle
+  modern issues and provides a strategic guide on grooming your ecosystem. This
+  tag covers themes such as biology, cryptocurrency, networking, vision,
+  leadership, and aesthetics, aiming to create adaptable and innovative
   environments.
-excerpt: Lead With Purpose emphasizes strategic vision and leadership, Become A
-  Polyglot broadens skill sets, Bring Da Ruckus injects energy and innovation,
-  and Make Some Beauty focuses on aesthetics.
+excerpt: Ecosystems describe decentralized, non-hierarchical organizations.
+  Ecosystem architecture, inspired by various disciplines, addresses modern
+  challenges and will be explored in future articles.
 title: design
-articles: []
+articles:
+  - across-space-and-time
 profiles: []
 courses:
   - groom-your-ecosystem

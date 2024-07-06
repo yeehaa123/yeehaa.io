@@ -5,23 +5,24 @@ series: ecosystem-architecture
 createdAt: 2024-07-01T08:43:33.622Z
 updatedAt: 2024-07-01T08:43:33.622Z
 publishedAt: 2024-07-01T08:43:33.622Z
-bannerImageURL: 760b9354bf9be67d1bbee52814d41e8f.png
-excerpt: Ecosystem describes a biological community bound by space and time. Its
-  metaphorical use signifies a shift towards decentralized structures. Ecosystem
-  Architecture emerges as a new practice to cultivate thriving, dispersed
-  organizations.
-summary: The term 'ecosystem' in biology describes a community of organisms and
-  their environment, bound by space and time. However, its metaphorical use has
-  expanded into various fields, signifying a shift towards decentralized,
-  non-hierarchical structures. These contemporary ecosystems transcend
-  geographical boundaries, flourishing across space and time. The article
-  advocates for Ecosystem Architecture, a new practice inspired by diverse
-  disciplines to cultivate thriving, decentralized organizations beyond
-  traditional frameworks.
+bannerImageURL: 89b1fb382ed57be8ba2258f9bc42187e.png
+excerpt: Ecosystems describe decentralized, non-hierarchical organizations.
+  Ecosystem architecture, inspired by various disciplines, addresses modern
+  challenges and will be explored in future articles.
+summary: The article explores the concept of ecosystems, both biological and
+  metaphorical. It highlights how the term has evolved beyond its original roots
+  and is now used to describe decentralized, non-hierarchical human
+  organizations. The article argues that the increased use of the term
+  'ecosystem' signifies a shift in societal expectations for more organic and
+  less structured forms of organization. It also introduces the concept of
+  ecosystem architecture, which draws inspiration from various disciplines to
+  address modern challenges. Future articles will delve into the practical
+  applications of this concept in the context of internet fragmentation.
 tags:
-  - ecosystem
   - biology
-  - decentral
+  - crypto
+  - network
+  - design
 course: groom-your-ecosystem
 ---
 In biology, an ecosystem is confined to a particular space and time. It is bound to the specific geographic area where a community of living organisms interacts with their physical environment. This space can vary greatly in size, from a small pond, to an expansive forest, or a vast ocean. Each ecosystem is characterized by its unique combination of biotic actors, such as plants, animals, and microorganisms, and abiotic factors, including climate, soil, water, and topography which can and will change over time. The spatio-temporal boundaries of a biological ecosystem are crucial because they determine the specific interactions and relationships among organisms.
@@ -48,9 +49,9 @@ It is not a coincidence that this shift in meaning happened parallel to the rise
 
 — [Michelle Ciccone](https://commonplace.knowledgefutures.org/pub/4ie859tv/release/2)
 
-Ecosystems need to be designed and cultivated, but in an unforced, open-ended manner. Current day business and management frameworks increasingly fall short in creating thriving organizations and networks, because they fail to meet people's growing desire for organic, non-hierarchical structures. Resorting to ancient agricultural models is not the answer either, since farming and gardening were never meant to work across space and time. In order to groom successful decentralized organizations new conceptual models, skills, and tools are needed. I will call this practice [Ecosystem Architecture](/series/ecosystem-architecture).
+Ecosystems need to be designed and cultivated, but in an unforced, open-ended manner. Current day business and management frameworks increasingly fall short in creating thriving organizations and networks, because they fail to meet people's growing desire for organic, non-hierarchical structures. Resorting to ancient agricultural models is not the answer either, since farming and gardening were never meant to work across space and time. In order to groom successful decentralized organizations new conceptual models, skills, and tools are needed. I will call this practice ecosystem Architecture.
 
 Ecosystem architecture draws its inspiration from many sources: philosophy, gender studies, coding, spirituality, music, dance, visual arts, media theory to name a few. While this mix may seem eclectic or even erratic, there is actually reason to the madness. Natural ecosystems thrive on biodiversity and so do their conceptual antipodes. In order to tackle the challenges ahead of us, no single discipline or practice possesses all the knowledge and wisdom needed. And since ecosystems are wild and eclectic, so are their theoretical underpinnings. 
 
-In this upcoming series of articles, I will explore ecosystems architecture's origins and inspirations, as well as its practical applications. The series will reevaluate dominant notions of innovation in light of their cultural and environmental costs. It emphasizes the need to extend our growing ecological consciousness beyond the physical into the virtual. This series will show how the vibrant and imaginative world of Afrofuturism challenges predictive algorithms, how the blockchain optimism of the Network State is attempting to rewrite history, and why the dynamic, unconventional Shanzhai culture of Shenzhen has put an end to Western notions of intellectual property. Through the exploration of these pioneering decentralized and regenerative practices, we will discover how redefining our relationship with waste and excess can create diverse, innovative, resilient, and thriving ecosystems.
+This upcoming series of articles will explore ecosystems architecture's origins, inspirations, and practical applications through the lens of internet fragmentation. It will reevaluate dominant notions of innovation in light of their cultural and environmental costs, extending our growing ecological consciousness beyond the physical into the virtual. The series will show how the vibrant world of Afrofuturism challenges predictive algorithms, how the Network State uses blockchain to rewrite history, and why the dynamic Shanzhai culture of Shenzhen had disrupted Western notions of intellectual property. By examining these pioneering decentralized and regenerative practices, we will learn how to create diverse, innovative, resilient, and thriving ecosystems.
 
