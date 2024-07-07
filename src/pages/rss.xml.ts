@@ -22,7 +22,7 @@ export async function GET(context: AstroUserConfig) {
       pubDate: post.data.publishedAt,
       author: post.data.author,
       categories: post.data.series && [post.data.series.id],
-      description: post.data.summary,
+      description: post.data.description,
       content: sanitizeHtml(parser.render(post.body), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img'])
       }),

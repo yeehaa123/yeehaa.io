@@ -8,7 +8,7 @@ const vercel = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY" }
 
 
 export async function analyze({ prompt, id, schema }: { prompt: string, id: string, schema: ZodSchema }) {
-  const cachedItem = await cache.getArticle(id);
+  const cachedItem = await cache.getItem(id);
   if (cachedItem) { return schema.parse(cachedItem); }
   const { object } = await generateObject({
     model: vercel('gpt-4o'),
@@ -16,7 +16,7 @@ export async function analyze({ prompt, id, schema }: { prompt: string, id: stri
     prompt
   })
   const item = schema.parse(object);
-  cache.setArticle(id, item);
+  cache.setItem(id, item);
   return item;
 }
 

@@ -4,8 +4,8 @@ import * as as from "./schema";
 
 export async function generateBanner({ meta, analysis }: AssociatedArticle) {
   const { checksum, title } = meta;
-  const { summary, tags } = analysis;
-  const prompt = `generate a banner image for a blog post with the following title '${title}', summary: '${summary}' and tags: ${tags.join(", ")}.`
+  const { description, tags } = analysis;
+  const prompt = `generate a banner image for a blog post with the following title '${title}', summary: '${description}' and tags: ${tags.join(", ")}.`
   const response = await ai.image.generate({ prompt, id: checksum });
   return response;
 }

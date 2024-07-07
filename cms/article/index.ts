@@ -38,8 +38,8 @@ export function init({ article, title, author, series }: InitArticle) {
 export async function analyze(entry: BaseArticle) {
   const { article: content, meta } = entry;
   const { checksum, title } = meta;
-  const { summary, tags, excerpt } = await ai.analyzeArticle({ title, content, checksum });
-  const analysis = { summary, tags, excerpt };
+  const { description, tags, excerpt } = await ai.analyzeArticle({ title, content, checksum });
+  const analysis = { description, tags, excerpt };
   return analyzedSchema.parse({ ...entry, analysis })
 }
 

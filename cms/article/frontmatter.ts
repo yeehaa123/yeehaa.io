@@ -10,7 +10,7 @@ export const schema = z.object({
   publishedAt: z.date().optional(),
   bannerImageURL: z.string(),
   excerpt: z.string(),
-  summary: z.string(),
+  description: z.string(),
   tags: z.array(z.string()).min(3).max(7),
   course: z.string().optional(),
 })

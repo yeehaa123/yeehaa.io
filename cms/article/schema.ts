@@ -9,7 +9,7 @@ export type Article =
   | FinalArticle;
 
 export const analysisSchema = z.object({
-  summary: z.string(),
+  description: z.string(),
   excerpt: z.string(),
   tags: z.array(z.string()),
 })

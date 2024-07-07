@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from "@/layouts/Base.astro"
-import { Offcourse } from "@/offcourse/"
+import { Offcourse } from "@/offcourse"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import { ArticleContent} from "@/components/ArticleContent";
 import { ArticleHeading } from "@/components/ArticleHeading";
@@ -21,20 +21,25 @@ const {
   series, 
   title, 
   bannerImageURL, 
+  publishedAt,
+  updatedAt,
+  author,
+  tags,
   excerpt, 
-  course, 
-  ...article
+  course
 } = entry.data;
 ---
-<Layout {title} >
+<Layout {title}>
   <BaseHead 
     slot="og:data" 
     type={OGType.ARTICLE} 
-    description={excerpt}
-    {title}
     url={Astro.url}
-    {...article}
-
+    description={excerpt}
+    {author}
+    {publishedAt}
+    {updatedAt}
+    {tags}
+    {title}
   />
   <Image 
     slot="hero" 
@@ -42,8 +47,9 @@ const {
     src={bannerImageURL} 
     widths={[240, 540, 720, 1024, 1280]}
     alt={title} />
-  <div class="container flex flex-col lg:flex-row 
-    px-5 sm:px-8 py-12 gap-x-5 gap-y-12 lg:gap-x-10 xl:gap-x-12 lg:py-20" transition:name="content" >
+  <div class="container flex flex-col lg:flex-row px-5 sm:px-8 
+    py-12 gap-x-5 gap-y-12 lg:gap-x-10 xl:gap-x-12 lg:py-20" 
+    transition:name="content" >
     <article class="flex flex-col gap-y-8"> 
       <ArticleHeading order={order} series={series} title={title}/>
       <ArticleContent>

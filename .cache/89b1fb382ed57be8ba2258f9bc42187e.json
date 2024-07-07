@@ -1,10 +1,11 @@
 {
-  "summary": "The article explores the concept of ecosystems, both biological and metaphorical. It highlights how the term has evolved beyond its original roots and is now used to describe decentralized, non-hierarchical human organizations. The article argues that the increased use of the term 'ecosystem' signifies a shift in societal expectations for more organic and less structured forms of organization. It also introduces the concept of ecosystem architecture, which draws inspiration from various disciplines to address modern challenges. Future articles will delve into the practical applications of this concept in the context of internet fragmentation.",
-  "excerpt": "Ecosystems describe decentralized, non-hierarchical organizations. Ecosystem architecture, inspired by various disciplines, addresses modern challenges and will be explored in future articles.",
+  "description": "The concept of ecosystems in biology, confined to space and time, has evolved metaphorically to describe decentralized and temporal organizations beyond geographic boundaries. These modern ecosystems emphasize non-hierarchical structures, reflecting a shift in organizational expectations. To create thriving ecosystems, a new practice called ecosystem architecture is proposed, drawing inspiration from diverse fields. This series will examine how decentralization and regenerative practices can foster innovative ecosystems.",
+  "excerpt": "Biological ecosystems are defined by space and time, but modern ecosystems transcend these. Ecosystem architecture proposes decentralized, non-hierarchical structures inspired by diverse disciplines.",
   "tags": [
+    "ecosystems",
     "biology",
-    "crypto",
-    "network",
-    "design"
+    "internet",
+    "design",
+    "future"
   ]
 }

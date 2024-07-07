@@ -6,23 +6,23 @@ createdAt: 2024-07-01T08:43:33.622Z
 updatedAt: 2024-07-01T08:43:33.622Z
 publishedAt: 2024-07-01T08:43:33.622Z
 bannerImageURL: 89b1fb382ed57be8ba2258f9bc42187e.png
-excerpt: Ecosystems describe decentralized, non-hierarchical organizations.
-  Ecosystem architecture, inspired by various disciplines, addresses modern
-  challenges and will be explored in future articles.
-summary: The article explores the concept of ecosystems, both biological and
-  metaphorical. It highlights how the term has evolved beyond its original roots
-  and is now used to describe decentralized, non-hierarchical human
-  organizations. The article argues that the increased use of the term
-  'ecosystem' signifies a shift in societal expectations for more organic and
-  less structured forms of organization. It also introduces the concept of
-  ecosystem architecture, which draws inspiration from various disciplines to
-  address modern challenges. Future articles will delve into the practical
-  applications of this concept in the context of internet fragmentation.
+excerpt: Biological ecosystems are defined by space and time, but modern
+  ecosystems transcend these. Ecosystem architecture proposes decentralized,
+  non-hierarchical structures inspired by diverse disciplines.
+description: The concept of ecosystems in biology, confined to space and time,
+  has evolved metaphorically to describe decentralized and temporal
+  organizations beyond geographic boundaries. These modern ecosystems emphasize
+  non-hierarchical structures, reflecting a shift in organizational
+  expectations. To create thriving ecosystems, a new practice called ecosystem
+  architecture is proposed, drawing inspiration from diverse fields. This series
+  will examine how decentralization and regenerative practices can foster
+  innovative ecosystems.
 tags:
+  - ecosystems
   - biology
-  - crypto
-  - network
+  - internet
   - design
+  - future
 course: groom-your-ecosystem
 ---
 In biology, an ecosystem is confined to a particular space and time. It is bound to the specific geographic area where a community of living organisms interacts with their physical environment. This space can vary greatly in size, from a small pond, to an expansive forest, or a vast ocean. Each ecosystem is characterized by its unique combination of biotic actors, such as plants, animals, and microorganisms, and abiotic factors, including climate, soil, water, and topography which can and will change over time. The spatio-temporal boundaries of a biological ecosystem are crucial because they determine the specific interactions and relationships among organisms.
