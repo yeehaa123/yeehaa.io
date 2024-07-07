@@ -3,7 +3,6 @@ import path from "path";
 import sharp from "sharp";
 
 export const prerender = false
-
 export const GET: APIRoute = async function get({ props }) {
   const postCover = await sharp(
     process.env.NODE_ENV === 'development'
