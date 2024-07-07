@@ -11,7 +11,7 @@ import alpinejs from '@astrojs/alpinejs';
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,8 +26,9 @@ export default defineConfig({
   integrations: [tailwind({
     applyBaseStyles: false
   }), mdx(), alpinejs(), react(), sitemap()],
-  output: "hybrid",
+  output: "static",
   adapter: vercel({
+    imageService: true,
     webAnalytics: {
       enabled: true,
     }
