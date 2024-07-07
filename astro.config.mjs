@@ -28,7 +28,6 @@ export default defineConfig({
   }), mdx(), alpinejs(), react(), sitemap()],
   output: "static",
   adapter: vercel({
-    imageService: true,
     webAnalytics: {
       enabled: true,
     }
