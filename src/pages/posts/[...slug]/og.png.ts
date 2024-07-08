@@ -18,7 +18,7 @@ export const GET: APIRoute = async function get({ props }) {
       ? path.resolve(
         props.entry.data.bannerImageURL.src.replace(/\?.*/, '').replace('/@fs', '/'),
       )
-      : path.resolve(props.entry.data.bannerImageURL.src.replace('/', 'dist/')),
+      : path.resolve(props.entry.data.bannerImageURL.src.replace('/', '.vercel/output/static/')),
   ).resize(1200).toBuffer()
 
   return new Response(postCover, {
