@@ -19,10 +19,7 @@ articles:
 tags:
   - tech
   - manager
-  - code
-  - vision
-  - adapt
-  - future
+  - consultant
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -59,16 +56,16 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: f6644405a91a34f3c0cf758fd938257a
-description: yeehaa is a seasoned professional with robust experience in
-  technology and consulting. With backgrounds in software engineering and
-  project management, yeehaa has driven major upgrades. They authored articles
-  like 'Across Space And Time' and 'Practice Innovation' and curated courses
-  like 'Groom Your Ecosystem' to advocate for decentralized systems and
-  adaptable ecosystems. An alum of top-tier institutions, yeehaa blends academic
-  insights with practical strategies.
-blurb: yeehaa, a seasoned pro in tech and consulting, authored 'Across Space And
-  Time' and curated 'Groom Your Ecosystem.' With top-tier education and
-  practical expertise, they drive innovation and efficiency.
-profileImageURL: ./f6644405a91a34f3c0cf758fd938257a-profile.png
+checksum: 7fe01f2f981d1006d603cacd918fc7d0
+description: yeehaa is a seasoned professional with robust experience across
+  industries including technology and consulting. With strong backgrounds in
+  software engineering and project management, yeehaa has driven significant
+  upgrades and implementations. An alumnus of top-tier institutions, yeehaa
+  combines academic insights with practical expertise to foster innovation and
+  efficiency.
+blurb: yeehaa is a seasoned professional with robust experience in technology
+  and consulting, with strong backgrounds in software engineering and project
+  management. An alumnus of top-tier institutions, yeehaa fosters innovation and
+  efficiency.
+profileImageURL: ./7fe01f2f981d1006d603cacd918fc7d0-profile.png
 title: Yeehaa
