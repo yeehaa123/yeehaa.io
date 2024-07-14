@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://yeehaa.io/sitemap-index.xml

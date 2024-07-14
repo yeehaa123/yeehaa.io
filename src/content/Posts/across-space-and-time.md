@@ -5,24 +5,22 @@ series: ecosystem-architecture
 createdAt: 2024-07-01T08:43:33.622Z
 updatedAt: 2024-07-01T08:43:33.622Z
 publishedAt: 2024-07-01T08:43:33.622Z
-bannerImageURL: 89b1fb382ed57be8ba2258f9bc42187e.png
-excerpt: Biological ecosystems are defined by space and time, but modern
-  ecosystems transcend these. Ecosystem architecture proposes decentralized,
-  non-hierarchical structures inspired by diverse disciplines.
-description: The concept of ecosystems in biology, confined to space and time,
-  has evolved metaphorically to describe decentralized and temporal
-  organizations beyond geographic boundaries. These modern ecosystems emphasize
-  non-hierarchical structures, reflecting a shift in organizational
-  expectations. To create thriving ecosystems, a new practice called ecosystem
-  architecture is proposed, drawing inspiration from diverse fields. This series
-  will examine how decentralization and regenerative practices can foster
-  innovative ecosystems.
+bannerImageURL: e313b97a9498621b924d013f77f66dc3.png
+excerpt: Biological ecosystems are specific to space and time, but the term
+  'ecosystem' has been broadened to describe non-natural organizations,
+  underscoring a shift towards organic, decentralized structures.
+description: Biological ecosystems are confined to space and time, featuring
+  unique biotic and abiotic factors. The term 'ecosystem' has been stretched to
+  describe non-natural organizations, reflecting a shift towards less
+  hierarchical and more organic structures. Ecosystem architecture draws from
+  diverse disciplines to address the need for decentralized, thriving, and
+  resilient organizations across space and time.
 tags:
-  - ecosystems
+  - ecosystem
   - biology
-  - internet
-  - design
-  - future
+  - network
+  - space
+  - nature
 course: groom-your-ecosystem
 ---
 In biology, an ecosystem is confined to a particular space and time. It is bound to the specific geographic area where a community of living organisms interacts with their physical environment. This space can vary greatly in size, from a small pond, to an expansive forest, or a vast ocean. Each ecosystem is characterized by its unique combination of biotic actors, such as plants, animals, and microorganisms, and abiotic factors, including climate, soil, water, and topography which can and will change over time. The spatio-temporal boundaries of a biological ecosystem are crucial because they determine the specific interactions and relationships among organisms.
@@ -49,7 +47,7 @@ It is not a coincidence that this shift in meaning happened parallel to the rise
 
 — [Michelle Ciccone](https://commonplace.knowledgefutures.org/pub/4ie859tv/release/2)
 
-Ecosystems need to be designed and cultivated, but in an unforced, open-ended manner. Current day business and management frameworks increasingly fall short in creating thriving organizations and networks, because they fail to meet people's growing desire for organic, non-hierarchical structures. Resorting to ancient agricultural models is not the answer either, since farming and gardening were never meant to work across space and time. In order to groom successful decentralized organizations new conceptual models, skills, and tools are needed. I will call this practice ecosystem Architecture.
+Ecosystems need to be designed and cultivated, but in an unforced, open-ended manner. Current day business and management frameworks increasingly fall short in creating thriving organizations and networks, because they fail to meet people's growing desire for organic, non-hierarchical structures. Resorting to ancient agricultural models is not the answer either, since farming and gardening were never meant to work across space and time. In order to groom successful decentralized organizations new conceptual models, skills, and tools are needed. I will call this practice ecosystem architecture.
 
 Ecosystem architecture draws its inspiration from many sources: philosophy, gender studies, coding, spirituality, music, dance, visual arts, media theory to name a few. While this mix may seem eclectic or even erratic, there is actually reason to the madness. Natural ecosystems thrive on biodiversity and so do their conceptual antipodes. In order to tackle the challenges ahead of us, no single discipline or practice possesses all the knowledge and wisdom needed. And since ecosystems are wild and eclectic, so are their theoretical underpinnings. 
 

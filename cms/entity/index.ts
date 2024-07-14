@@ -1,6 +1,5 @@
 import type { RawCourse } from "../course";
 import type { AnalyzedTable } from "../outputTable";
-import type { Curator } from "@/offcourse/schema";
 import type {
   InitEntity,
   BaseEntity,
@@ -22,14 +21,12 @@ import {
   isSeries,
   isTag,
 } from "./filters";
+import type { Curator } from "@/offcourse/schema";
+
 
 export function init(initEntitity: InitEntity) {
   const { contentType, content, title, author, seriesName } = initEntitity;
   switch (contentType) {
-    case ContentType.PROFILE: {
-      return profile.init({ profile: content as Curator, author })
-    }
-
     case ContentType.ARTICLE: {
       return article.init({ title, article: content as string, author, series: seriesName })
     }
@@ -37,6 +34,11 @@ export function init(initEntitity: InitEntity) {
     case ContentType.COURSE: {
       return course.init({ title, course: content as RawCourse, author, series: seriesName })
     }
+
+    case ContentType.PROFILE: {
+      return profile.init({ profile: content as Curator, author })
+    }
+
 
     case ContentType.SERIES: {
       return series.init({ series: seriesName!, author })

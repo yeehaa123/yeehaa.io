@@ -4,27 +4,25 @@ socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
   github: https://www.github.com/yeehaa123/
   instagram: https://www.instagram.com/yeehaa12345/
+bio: yeehaa is a seasoned professional with robust experience across industries
+  including technology and consulting. With strong backgrounds in software
+  engineering and project management, yeehaa has driven significant upgrades and
+  implementations. An alumnus of top-tier institutions, yeehaa combines academic
+  insights with practical expertise to foster innovation and efficiency.
 courses:
   - groom-your-ecosystem
 series:
   - ecosystem-architecture
 articles:
   - across-space-and-time
-bio: yeehaa is a dedicated professional with a strong background in digital
-  innovation and technology strategy. He possesses extensive experience in
-  various leadership roles across prominent tech firms in Europe. He
-  demonstrates expertise in software development, data analytics, and project
-  management. Educated in computer science, yeehaa excels in bridging technical
-  expertise with business acumen to drive successful tech initiatives. His
-  proficiency in emerging technologies and strategic planning underscores his
-  ability to lead transformative projects.
+  - practice-innovation
 tags:
   - tech
-  - leader
-  - data
-  - steel
+  - manager
   - code
-  - design
+  - vision
+  - adapt
+  - future
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -32,17 +30,45 @@ profile:
     linkedin: https://www.linkedin.com/in/yeehaa/
     github: https://www.github.com/yeehaa123/
     instagram: https://www.instagram.com/yeehaa12345/
-checksum: bd825a045de0943677659962fcd5deda
-description: yeehaa is a dedicated professional with a strong background in
-  digital innovation and technology strategy. He possesses extensive experience
-  in various leadership roles across prominent tech firms in Europe. He
-  demonstrates expertise in software development, data analytics, and project
-  management. Educated in computer science, yeehaa excels in bridging technical
-  expertise with business acumen to drive successful tech initiatives. His
-  proficiency in emerging technologies and strategic planning underscores his
-  ability to lead transformative projects.
-blurb: Biological ecosystems are defined by space and time, but modern
-  ecosystems transcend these. Ecosystem architecture proposes decentralized,
-  non-hierarchical structures inspired by diverse disciplines.
-profileImageURL: ./bd825a045de0943677659962fcd5deda-profile.png
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    Dutch tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+checksum: f6644405a91a34f3c0cf758fd938257a
+description: yeehaa is a seasoned professional with robust experience in
+  technology and consulting. With backgrounds in software engineering and
+  project management, yeehaa has driven major upgrades. They authored articles
+  like 'Across Space And Time' and 'Practice Innovation' and curated courses
+  like 'Groom Your Ecosystem' to advocate for decentralized systems and
+  adaptable ecosystems. An alum of top-tier institutions, yeehaa blends academic
+  insights with practical strategies.
+blurb: yeehaa, a seasoned pro in tech and consulting, authored 'Across Space And
+  Time' and curated 'Groom Your Ecosystem.' With top-tier education and
+  practical expertise, they drive innovation and efficiency.
+profileImageURL: ./f6644405a91a34f3c0cf758fd938257a-profile.png
 title: Yeehaa

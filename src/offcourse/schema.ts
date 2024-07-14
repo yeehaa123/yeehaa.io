@@ -7,7 +7,8 @@ export const curatorSchema = z.object({
     linkedin: z.string().optional(),
     github: z.string().optional(),
     instagram: z.string().optional()
-  })
+  }),
+  bio: z.string()
 })
 
 export const habitatSchema = z.object({

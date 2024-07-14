@@ -1,25 +1,24 @@
-checksum: 4d12852b6c6ab4f4643cdfab955ab61a
-summary: The Ecosystem Architecture series explores how the concept of
-  ecosystems, traditionally bound by space and time in biology, is redefined in
-  modern contexts to describe decentralized, non-hierarchical organizations.
-  Drawing inspiration from various fields, this series examines how
-  decentralization and regenerative practices can help build innovative
-  ecosystems that thrive beyond geographic boundaries.
-excerpt: Biological ecosystems are defined by space and time, but modern
-  ecosystems transcend these. Ecosystem architecture proposes decentralized,
-  non-hierarchical structures inspired by diverse disciplines.
+checksum: bef7f30bc96b305f867a60382403892e
+summary: The 'Ecosystem Architecture' series explores decentralized and
+  resilient organizations inspired by biological ecosystems. It emphasizes
+  adaptability, collaboration, and sustainability to create thriving communities
+  and address complex challenges.
+excerpt: The 'Ecosystem Architecture' series delves into decentralized,
+  resilient organizations inspired by biological ecosystems. It focuses on
+  adaptability, collaboration, and sustainability.
 tags:
   - ecosystem
-  - design
-  - future
-  - space
-  - time
-  - fields
-  - thrive
-  - modern
   - biology
-  - innovate
-bannerImageURL: ./4d12852b6c6ab4f4643cdfab955ab61a-banner.png
+  - design
+  - space
+  - future
+  - change
+  - systems
+  - ethics
+  - nature
+  - network
+bannerImageURL: ./bef7f30bc96b305f867a60382403892e-banner.png
 articles:
   - across-space-and-time
+  - practice-innovation
 title: Ecosystem Architecture

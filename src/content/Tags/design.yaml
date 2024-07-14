@@ -1,17 +1,16 @@
-checksum: 1d5020dc1b6b53cd69b868a30ba75cd9
-summary: The concept of ecosystems has evolved to describe decentralized and
-  temporal organizations, transcending geographic boundaries. Articles delve
-  into ecosystem architecture, exploring how decentralization and regenerative
-  practices can foster innovative ecosystems. Courses offer strategic vision,
-  leadership, adaptability, and creativity to groom ecosystems. Tags span
-  ecosystems, biology, internet, design, future, vision, impact, code, learn,
-  adapt, funk, music, creativity, design, tips, and beauty.
-excerpt: Biological ecosystems are defined by space and time, but modern
-  ecosystems transcend these. Ecosystem architecture proposes decentralized,
-  non-hierarchical structures inspired by diverse disciplines.
+checksum: 78d39cfd10192756f805597dd2286678
+summary: The 'future' category encompasses resources focused on
+  forward-thinking, innovation, and transformative practices that envision a
+  better world. It includes topics on decentralized systems, regenerative
+  design, strategic vision, leadership, and adaptability, aimed at fostering
+  cohesive and resilient communities and environments.
+excerpt: "'Practice Innovation' envisions a future where decentralized systems
+  and regenerative design rejuvenate both our environment and communities. This
+  transformative approach focuses on collaboration, adaptability, and
+  resilience."
 title: design
 articles:
-  - across-space-and-time
+  - practice-innovation
 profiles: []
 courses:
   - groom-your-ecosystem

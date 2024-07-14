@@ -1,22 +1,22 @@
 import type { MetaTable } from "../metaTable";
-import type { Curator } from "@/offcourse/schema";
 import type { File, FileTree } from "./schema"
 import * as et from "../entity"
 import * as path from 'path';
 import * as ef from "../entity/filters";
 import * as m from "../meta";
 import { readdir, lstat, readFile } from 'fs/promises'
-import { deslugify, parseMarkdoc } from "../helpers";
+import { deslugify, parseMarkdoc, parseProfileFile } from "../helpers";
 import * as yaml from "yaml";
 import type { RawCourse } from "cms/course";
 import { ContentType } from "cms/meta/schema";
 import { isMarkdownFile, isOffcourseFile, isProfileFile } from "./filters";
+import type { Curator } from "@/offcourse/schema";
 
 
 async function convertFile(fileData: File) {
   const { item } = fileData;
   if (isProfileFile(fileData)) {
-    const content = yaml.parse(item) as Curator
+    const content = parseProfileFile(item) as Curator;
     return { content, contentType: ContentType.PROFILE }
   }
 

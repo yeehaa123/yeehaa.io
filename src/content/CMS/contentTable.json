@@ -6,21 +6,12 @@
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "89b1fb382ed57be8ba2258f9bc42187e",
+    "checksum": "e313b97a9498621b924d013f77f66dc3",
     "publicationData": {
       "createdAt": "2024-07-01T08:43:33.622Z",
       "updatedAt": "2024-07-01T08:43:33.622Z",
       "publishedAt": "2024-07-01T08:43:33.622Z"
     }
-  },
-  {
-    "id": "f3cfbafaad1760bf949d001d58e0e648",
-    "author": "yeehaa",
-    "title": "Align The Misaligned",
-    "contentType": "article",
-    "status": "draft",
-    "series": "Ecosystem Architecture",
-    "checksum": "ac8937aa1c27745abeb90b5c117de4d1"
   },
   {
     "id": "88be3ee13fcaec1270308625b34696aa",
@@ -29,7 +20,7 @@
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "f412a7d6a35e6941791203b7b273869a"
+    "checksum": "d770f72c4289e7cb86b81fb31278fc7b"
   },
   {
     "id": "e3189627309fbc15f0903dd9f7b9070d",
@@ -81,6 +72,20 @@
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "b00ab9b260061c09b956c2e922ebcbad"
+  },
+  {
+    "id": "9ce5c6ab63030d9255e1d5076a53456e",
+    "author": "yeehaa",
+    "title": "Practice Innovation",
+    "contentType": "article",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "bec0e1454e60cea6d9701ef756d0658e",
+    "publicationData": {
+      "createdAt": "2024-07-14T06:49:17.003Z",
+      "updatedAt": "2024-07-14T06:49:17.003Z",
+      "publishedAt": "2024-07-14T06:49:17.003Z"
+    }
   },
   {
     "id": "60b3687a0f78924fb19685ba21650e52",
@@ -152,7 +157,7 @@
     "title": "yeehaa",
     "contentType": "profile",
     "status": "published",
-    "checksum": "0511c550f1421f5bbf1abc06773e0a57",
+    "checksum": "e2900780b5f3a258b214302164e0d068",
     "publicationData": {
       "createdAt": "2024-07-01T06:34:16.013Z",
       "updatedAt": "2024-07-01T06:34:16.013Z",

@@ -10,7 +10,6 @@ import path from "path";
 import matter from 'gray-matter';
 
 
-
 function isTag(node: RenderableTreeNode): node is Tag {
   return (node as Tag).name !== undefined;
 }
@@ -72,8 +71,9 @@ function collectTitle(node: RenderableTreeNode, sections = []): string | undefin
   return undefined;
 }
 
-export function parseMarkdown(content: string) {
-  return matter(content)
+export function parseProfileFile(file: string) {
+  const { data, content } = matter(file)
+  return { ...data, bio: content }
 }
 
 export function parseMarkdoc(content: string) {

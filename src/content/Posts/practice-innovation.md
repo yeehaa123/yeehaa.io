@@ -1,0 +1,53 @@
+---
+title: Practice Innovation
+author: yeehaa
+series: ecosystem-architecture
+createdAt: 2024-07-14T06:49:17.003Z
+updatedAt: 2024-07-14T06:49:17.003Z
+publishedAt: 2024-07-14T06:49:17.003Z
+bannerImageURL: bec0e1454e60cea6d9701ef756d0658e.png
+excerpt: "'Practice Innovation' envisions a future where decentralized systems
+  and regenerative design rejuvenate both our environment and communities. This
+  transformative approach focuses on collaboration, adaptability, and
+  resilience."
+description: Imagine a future where innovation rejuvenates our planet and
+  communities, driven by decentralized systems and regenerative design.
+  'Practice Innovation' argues for a shift from mere sustainability to a
+  transformative approach, emphasizing collaboration, adaptability, and
+  resilience. Through ecosystem architecture, we can create vibrant,
+  interconnected communities and address complex challenges sustainably.
+tags:
+  - future
+  - design
+  - systems
+  - change
+  - ethics
+---
+Imagine a world where innovation does not come at the expense of our planet and its people but instead enhances and revitalizes both. Picture a future where our educational systems are transformed to be inclusive and empowering for all, where our environmental practices not only preserve but also rejuvenate the natural world, and where social and economic inequalities are addressed through creative and equitable solutions. Envision communities thriving through sustainable development, interconnected by shared knowledge and resources, and driven by a collective spirit of innovation that prioritizes the well-being of all inhabitants and the only planet that we know to be inhabitable.
+
+This is the promise of ecosystem architecture, a forward-thinking, ecclective, though effective practice that blends the power of decentralized systems with the principles of regenerative design. As we navigate some of the most complex and pressing challenges in history, we should grasp the opportunity and rethink the frameworks that got us into trouble in the first place. We need to find new ways to build and sustain our communities, thereby turning the fragmented remnants of our digital age into fertile ground for a more resilient and harmonious future. In this article, I will explore how decentralization and regeneration converge to offer solutions that are not only sustainable but transformative, fostering ecosystems that thrive on renewal and interconnectedness.
+
+> We are called to be architects of the future, not its victims.
+
+— Buckminster Fuller
+
+Decentralization has undeniably been the motor of the late twentieth and early twenty-first century technology economy. The rise of many Asian countries to economic power houses would not have happened if the US and Europe had not displace their manufacturing oversees. The contemporary internet economy fully depends on the global open source movement delivering high quality software. And while globalization and decentralization are technically not the same, the first inevitably creates the need for the latter. When economic, political, and cultural activities are dispersed over time and space, new modes of control and coordination are an absolute must.
+
+In her seminal Atlas of AI (2021), Kate Crawford demonstrates that mining and extraction have been the tech economy's Pavlovian reaction to this needs. Like Pyramid schemes and empty bank accounts, these two cultural techniques always come with exploitation and abuse. Examples that underline her thesis can be found high and low. From the 10x mindset of venture capital and the dehumanizing crunches of the game industry to the e-waste burial lakes of Baotou, so-called innovation always comes at the expense of nature, people, and often both. Value is produced by disposing of more than is kept. And now that we have almost completely exploited our own planet, outer space has become the next frontier.
+
+> Extreme wealth and power generated from technology companies now enables a small group of men to pursue their own private space race. They depend on exploiting the knowledge and infrastructures of the public space programs of the twentieth century and often rely on government funding an tax incentives as well. Their aim is not to limit extraction and growth, but to extend it across the solar system.
+
+— Kate Crawford
+
+Thinkers have pointed out that waste generation and accumulation have been the shadow side of modern distributed modes of production since their inception. From the early Frankfurt School and the Club of Rome to the current climate movement, the drive for innovation has often been equated with an excess mindset. Ironically, this may be one of the few things that both eco-warriors and venture capitalists fully agree on: to innovate, you need to produce large quantities of waste. 
+
+However, I believe both sides have been looking at it the wrong way. Innovation is not a quality of the technological artifact but rather of the practice that produces it.
+
+True innovation is a practice because it involves a continuous process of ideation, experimentation, and refinement that adapts to changing circumstances and needs. It is not just about creating new products or technologies but about fostering a culture of creativity and problem-solving that permeates every aspect of an organization or community. By focusing on the practice of innovation, we emphasize collaboration, adaptability, and resilience, ensuring that the solutions we develop are sustainable, equitable, and capable of addressing complex, interconnected challenges.
+
+> Practices create paths where there were none
+
+— Michel de Certeau
+
+It is in this practical notion of innovation that decentralized and regenerative design meet. Regeneration goes beyond sustainability by not only aiming to restore, but also to renew and revitalize systems and communities. Whereas sustainable design aims for damage control by mitigating harm, regenerative design wants to make ecosystems healthier and more vibrant than ever before. From the perspective of regeneration, waste becomes the seeds of a promising future rather than a remainders of a paradise lost. Wabi-sabi and Kintsugi, rather than perfection and wholeness, are key to a better future. Ecosystem architecture thus embraces these and related practices wholeheartedly.
+
