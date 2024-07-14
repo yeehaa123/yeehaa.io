@@ -14,13 +14,18 @@
     }
   },
   {
-    "id": "88be3ee13fcaec1270308625b34696aa",
+    "id": "f3cfbafaad1760bf949d001d58e0e648",
     "author": "yeehaa",
-    "title": "Continental Drift",
+    "title": "Align The Misaligned",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "d770f72c4289e7cb86b81fb31278fc7b"
+    "checksum": "e8c86ea3d1ae9c96af714f5cefeb8f47",
+    "publicationData": {
+      "createdAt": "2024-07-14T17:29:01.457Z",
+      "updatedAt": "2024-07-14T17:29:01.457Z",
+      "publishedAt": "2024-07-14T17:29:01.457Z"
+    }
   },
   {
     "id": "e3189627309fbc15f0903dd9f7b9070d",

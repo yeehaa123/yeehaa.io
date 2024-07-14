@@ -64,7 +64,14 @@ function render(entity: FinalSeries) {
   const { meta, augmentations, associations } = entity;
   const { title } = meta;
   const { bannerImageURL } = augmentations;
-  const articles = associations.articles.map(({ title }) => slugify(title));
+  const articles = associations.articles.sort(
+    (a, b) => {
+      if (b.publishedAt && a.publishedAt) {
+        return a.publishedAt > b.publishedAt ? 0 : -1
+      } else {
+        return -1
+      }
+    }).map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     ...augmentations,
     title,

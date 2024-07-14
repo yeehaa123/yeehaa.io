@@ -7,17 +7,29 @@ import { PostListing } from "@/components/Postlisting"
 import { getCollection, getEntries } from 'astro:content';
 
 export async function getStaticPaths() {
-  const seriesEntries = await getCollection('Series');
-  return seriesEntries.map(entry => ({
-    params: { slug: entry.id }, props: { entry },
-  }));
+  const series = await getCollection('Series');
+  const  promises = series.map(async entry => {
+    const raw = await getEntries(entry.data.articles)
+    const articles = raw.map(article => {
+    const { data, slug } = article;
+      const order = entry.data.articles.findIndex(article => article.slug === slug);
+      return {
+        ...article,
+        data: {
+          ...data,
+          order
+        }
+      }
+    })
+    return {
+      params: { slug: entry.id }, props: { entry, articles },
+    }});
+  return await Promise.all(promises)
 }
 
-const { entry } = Astro.props;
+const { entry, articles } = Astro.props;
 const { data } = entry
-const { title, summary, bannerImageURL, articles: articlesRef}  = data;
-const posts = await getEntries(articlesRef)
-
+const { title, summary, bannerImageURL}  = data;
 ---
 <Layout {title}>
   <BaseHead 
@@ -34,6 +46,6 @@ const posts = await getEntries(articlesRef)
       src={bannerImageURL} alt={title} />
   </SeriesHero>
   <div transition:name="content" class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { posts.map(({slug, data}, index) => <PostListing {...data} order={index} {slug}/>)}
+    { articles.map(({slug, data} ) => <PostListing {...data} {slug}/>)}
   </div>
 </Layout>

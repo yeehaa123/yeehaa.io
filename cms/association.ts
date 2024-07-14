@@ -10,6 +10,7 @@ export const schema = z.object({
   excerpt: z.string().optional(),
   tags: z.array(z.string()).optional(),
   alias: z.string().optional(),
+  publishedAt: z.date(),
   profile: curatorSchema.optional()
 })
 

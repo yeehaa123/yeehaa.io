@@ -1,24 +1,25 @@
-checksum: adc7c15305ec5133e939bc71759f5b4a
-summary: The Ecosystem Architecture blog series explores how decentralized and
-  organic structures inspired by biological ecosystems can address global
-  challenges. The posts emphasize the importance of innovation, decentralized
-  systems, and regenerative design to create sustainable and resilient
-  organizations. The series critiques traditional harmful practices and
-  advocates for interconnected, thriving ecosystems.
-excerpt: The series discusses the shift towards decentralized, organic
-  structures inspired by biological ecosystems, emphasizing innovation and
-  regenerative design to solve global challenges.
+checksum: f946c014615434e080f5819f4e926db8
+summary: The Ecosystem Architecture series explores how decentralized and
+  resilient models in nature inspire the design of digital and societal systems.
+  It discusses the importance of diversity, adaptability, and regenerative
+  practices for sustainable innovation.
+excerpt: The series examines how nature's decentralized and resilient models
+  influence digital and societal designs, highlighting the need for diversity,
+  adaptability, and regenerative practices.
 tags:
-  - ecosystem
-  - design
+  - ecosys
   - nature
+  - design
+  - growth
   - future
-  - resilient
-  - biology
-  - network
   - space
-bannerImageURL: ./adc7c15305ec5133e939bc71759f5b4a-banner.png
+  - innov
+  - resili
+  - sustain
+  - biolog
+bannerImageURL: ./f946c014615434e080f5819f4e926db8-banner.png
 articles:
   - across-space-and-time
+  - align-the-misaligned
   - practice-innovation
 title: Ecosystem Architecture
