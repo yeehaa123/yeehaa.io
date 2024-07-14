@@ -19,6 +19,7 @@ export function ArticleContent({ children, className }: Props) {
         md:prose-h1:text-6xl prose-h1:text-4xl
         md:prose-h2:text-3xl prose-h2:text-xl
         prose-strong:font-serif
+        prose-strong:text-secondary
         prose-blockquote:font-serif prose-blockquote:font-normal prose-blockquote:not-italic
         prose-blockquote:border-secondary-light
         prose-a:no-underline prose-a:text-secondary-dark dark:prose-a:text-secondary-light hover:prose-a:text-secondary-light`, className)} >
