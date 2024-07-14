@@ -18,6 +18,6 @@ export type Association = z.infer<typeof schema>
 
 export function init(initial: AnalyzedEntity): Association {
   const { meta, analysis } = initial;
-  const { id, title } = meta;
-  return schema.parse({ id, title, ...analysis });
+  const { id, title, publicationData } = meta;
+  return schema.parse({ id, title, publishedAt: publicationData!.publishedAt, ...analysis });
 }

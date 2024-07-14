@@ -1,25 +1,24 @@
-checksum: f946c014615434e080f5819f4e926db8
-summary: The Ecosystem Architecture series explores how decentralized and
-  resilient models in nature inspire the design of digital and societal systems.
-  It discusses the importance of diversity, adaptability, and regenerative
-  practices for sustainable innovation.
-excerpt: The series examines how nature's decentralized and resilient models
-  influence digital and societal designs, highlighting the need for diversity,
-  adaptability, and regenerative practices.
+checksum: 3c3ea4c515a633202e4e0f3684708b51
+summary: The Ecosystem Architecture series explores the concept of
+  decentralized, resilient, and regenerative systems inspired by natural
+  ecosystems. It emphasizes diversity, fragmentation, and sustainable innovation
+  across digital and biological domains to adapt to varied conditions and needs.
+excerpt: The series highlights the importance of decentralized, resilient
+  systems and sustainable innovation, drawing parallels between natural
+  ecosystems and digital architectures.
 tags:
-  - ecosys
+  - ecosystem
   - nature
-  - design
-  - growth
+  - digital
   - future
+  - design
   - space
-  - innov
-  - resili
-  - sustain
-  - biolog
-bannerImageURL: ./f946c014615434e080f5819f4e926db8-banner.png
+  - network
+  - planet
+  - growth
+bannerImageURL: ./3c3ea4c515a633202e4e0f3684708b51-banner.png
 articles:
   - across-space-and-time
-  - align-the-misaligned
   - practice-innovation
+  - align-the-misaligned
 title: Ecosystem Architecture

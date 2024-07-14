@@ -5,27 +5,24 @@ series: ecosystem-architecture
 createdAt: 2024-07-14T17:29:01.457Z
 updatedAt: 2024-07-14T17:29:01.457Z
 publishedAt: 2024-07-14T17:29:01.457Z
-bannerImageURL: e8c86ea3d1ae9c96af714f5cefeb8f47.png
-excerpt: The article discusses internet fragmentation, drawing parallels with
-  ecosystem architecture. It highlights the need to embrace diversity and
-  adaptability for a more resilient digital future.
-description: The article 'Align The Misaligned' emphasizes the parallels between
-  the fragmentation of the internet and natural ecosystems, advocating for an
-  'ecosystem architecture' approach to digital spaces. Instead of viewing
-  fragmentation as a failure, it encourages embracing diversity and unique
-  regional adaptations as opportunities for growth and innovation, much like
-  ecosystems in nature. Historical splits, governmental policies, and business
-  practices shape this fragmentation, but fostering connections can create a
-  resilient, inclusive digital future.
+bannerImageURL: f851fb5255c4a7f8b7104e5d9d8ba266.png
+excerpt: The article emphasizes the need to embrace internet fragmentation as an
+  opportunity for growth, highlighting the potential for diverse, resilient
+  digital ecosystems over a nostalgic return to a 'perfect' early internet.
+description: The future of the internet lies in embracing fragmentation as a
+  form of ecosystem architecture, akin to natural ecosystems. This allows for
+  diversity, resilience, and adaptation to varied conditions and needs. The
+  article critiques nostalgic views aiming to restore the early, 'perfect'
+  internet and instead calls for designing robust digital ecosystems that
+  reflect diverse user experiences, infrastructures, and regulations.
 tags:
   - internet
-  - fragment
-  - ecosys
-  - growth
+  - future
+  - digital
 ---
 It is remarkable how the history of virtual space mimics that of its physical counterpart. Like the universe's big bang, or better yet, the earth's tectonic shifts, our once one and only internet has shattered into many pieces. To lead with the bad news: no attempt to glue its pieces back together will ever mend it into a whole again. But the fact that something is broken does not mean that it is worthless. Changing our relation to fragments and waste is key to our planetary future. So why exclude the internet from our newfound consciousness?
 
-This insight is key to the practice of **ecosystem architecture**. Just as natural ecosystems thrive on diversity and complex interdependencies, our digital ecosystems must embrace fragmentation and diversity as opportunities for growth and innovation rather than as obstacles to overcome. This perspective encourages us to see the internet not as a monolithic entity to be restored but as a dynamic ecosystem to be nurtured and evolved.
+This insight is key to the practice of ecosystem architecture. Just as natural ecosystems thrive on diversity and complex interdependencies, our digital ecosystems must embrace fragmentation and diversity as opportunities for growth and innovation rather than as obstacles to overcome. This perspective encourages us to see the internet not as a monolithic entity to be restored but as a dynamic ecosystem to be nurtured and evolved.
 
 While the existence and dangers of the Chinese and Russian internet are widely known and debated, the prevalence of this discourse obscures the fact that our 'normal' internet experience has been far from the norm globally for quite a while. In most Asian countries, so-called superapps have replaced browsers and apps as the primary way to interact with the web. Africa is pioneering the adoption of mesh and P2P networks that creatively give (some form of) internet access to people who cannot afford or rely on stable and persistent connections. Finally, even our own mobile app store ecosystems should be understood as a break from the open global web, which itself thus needs to be further predicated: let's call it the OG internet for now.
 

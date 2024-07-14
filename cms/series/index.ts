@@ -72,6 +72,7 @@ function render(entity: FinalSeries) {
         return -1
       }
     }).map(({ title }) => slugify(title));
+  console.log(articles);
   const output = outputSchema.parse({
     ...augmentations,
     title,

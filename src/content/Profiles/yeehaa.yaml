@@ -20,11 +20,11 @@ articles:
 tags:
   - tech
   - manager
-  - consult
-  - growth
+  - consultant
+  - ecosystem
   - design
-  - impact
-  - vision
+  - future
+  - biology
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -61,14 +61,17 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: ecad0cb2f03025eed2e7a83697370aad
-description: yeehaa is a seasoned professional with robust experience in
-  technology and consulting. With backgrounds in software engineering and
-  project management, yeehaa drives innovation and efficiency. Blogs cover
-  ecosystem architecture, internet fragmentation, and sustainable design.
-  Curated courses emphasize strategic leadership, adaptability, and creativity.
-blurb: Seasoned professional in tech and consulting, strong in software
-  engineering and project management. Blogs on ecosystem architecture and
-  sustainable design. Courses on leadership, adaptability, creativity.
-profileImageURL: ./ecad0cb2f03025eed2e7a83697370aad-profile.png
+checksum: 39175a11587a04d0998c465521aaa223
+description: yeehaa is a seasoned professional with robust experience across
+  industries including technology and consulting. With strong backgrounds in
+  software engineering and project management, yeehaa has driven significant
+  upgrades and implementations. An alumnus of top-tier institutions, yeehaa
+  combines academic insights with practical expertise to foster innovation and
+  efficiency. Wrote blogs focused on ecosystem architecture, innovation, and
+  internet future. Curated a course on grooming ecosystems with emphasis on
+  vision and creativity.
+blurb: yeehaa wrote blogs focused on ecosystem architecture, innovation, and
+  internet future. Curated a course on grooming ecosystems with emphasis on
+  vision and creativity.
+profileImageURL: ./39175a11587a04d0998c465521aaa223-profile.png
 title: Yeehaa
