@@ -5,6 +5,8 @@ import type {
   FinalEntity
 } from "../entity";
 
+import { limit } from "../helpers";
+
 import * as et from "../entity"
 
 export type OutputTable =
@@ -33,7 +35,9 @@ export function associate(table: AnalyzedTable) {
 
 export async function augment(table: AssociatedTable) {
   console.log(`AUGMENTING ${table.length} ENTITIES`)
-  const promises = table.map(entity => et.augment(entity))
+  const promises = table.map(entity => {
+    return limit(() => et.augment(entity))
+  })
   return await Promise.all(promises);
 }
 

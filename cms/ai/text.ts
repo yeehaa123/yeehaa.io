@@ -1,17 +1,19 @@
 import 'dotenv/config'
-import { createOpenAI } from '@ai-sdk/openai';
 import * as cache from '../cache';
 import { generateObject } from 'ai';
 import { ZodSchema } from 'zod';
 
-const vercel = createOpenAI({ apiKey: process.env.OPENAI_API_KEY || "FAKE_KEY" });
-
+import { anthropic } from '@ai-sdk/anthropic';
 
 export async function analyze({ prompt, id, schema }: { prompt: string, id: string, schema: ZodSchema }) {
   const cachedItem = await cache.getItem(id);
-  if (cachedItem) { return schema.parse(cachedItem); }
+  if (cachedItem) {
+    console.log("FROM CACHE", id);
+    return schema.parse(cachedItem);
+  }
+  console.log("NOT FROM CACHE", id);
   const { object } = await generateObject({
-    model: vercel('gpt-4o'),
+    model: anthropic('claude-3-5-sonnet-20240620'),
     schema: schema,
     prompt
   })

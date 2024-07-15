@@ -3,12 +3,14 @@ import type { Tag, RenderableTreeNode } from '@markdoc/markdoc';
 import Markdoc from '@markdoc/markdoc';
 import { createHash } from 'crypto';
 import crypto from "crypto"
+import pLimit from "p-limit";
 import voca from "voca";
 import * as yaml from "yaml";
 import { mkdir, rm } from 'fs/promises'
 import path from "path";
 import matter from 'gray-matter';
 
+export const limit = pLimit(3);
 
 function isTag(node: RenderableTreeNode): node is Tag {
   return (node as Tag).name !== undefined;

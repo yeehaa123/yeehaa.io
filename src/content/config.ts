@@ -18,7 +18,6 @@ const profiles = defineCollection({
   type: "data",
   schema: ({ image }) => profile.schema.extend({
     profileImageURL: image(),
-    series: z.array(reference('Series')),
     articles: z.array(reference('Posts')),
   })
 });
@@ -36,7 +35,6 @@ const tags = defineCollection({
   schema: tag.schema.extend({
     articles: z.array(reference('Posts')),
     courses: z.array(reference('Courses')),
-    profiles: z.array(reference('Profiles')),
   })
 });
 

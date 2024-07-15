@@ -30,11 +30,9 @@ export function init({ tagName }: { tagName: string }) {
 export function associate(entity: AnalyzedTag, table: AnalyzedTable) {
   const articles = ot.findArticlesForTag(table, entity.meta.title);
   const courses = ot.findCoursesForTag(table, entity.meta.title);
-  const profiles = ot.findProfilesForTag(table, entity.meta.title);
   const associations = {
     articles: articles.map(as.init),
     courses: courses.map(as.init),
-    profiles: profiles.map(as.init)
   };
   return associatedSchema.parse({ ...entity, associations })
 }
@@ -62,12 +60,10 @@ function render(entity: FinalTag) {
   const { title } = meta;
   const articles = associations.articles.map(({ title }) => slugify(title));
   const courses = associations.courses.map(({ title }) => slugify(title));
-  const profiles = associations.profiles.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     ...augmentations,
     title,
     articles,
-    profiles,
     courses,
   })
   return yaml.stringify(output)

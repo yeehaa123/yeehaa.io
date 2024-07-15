@@ -20,12 +20,21 @@
     "contentType": "article",
     "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "f851fb5255c4a7f8b7104e5d9d8ba266",
+    "checksum": "9c2c6dbe14179949330a01f8d039e032",
     "publicationData": {
-      "createdAt": "2024-07-14T17:29:01.457Z",
-      "updatedAt": "2024-07-14T17:29:01.457Z",
-      "publishedAt": "2024-07-14T17:29:01.457Z"
+      "createdAt": "2024-07-15T13:36:51.589Z",
+      "updatedAt": "2024-07-15T13:36:51.589Z",
+      "publishedAt": "2024-07-15T13:36:51.589Z"
     }
+  },
+  {
+    "id": "dab57a97b73c41955321d0f6def877ae",
+    "author": "yeehaa",
+    "title": "Align The Misaligned",
+    "contentType": "course",
+    "status": "draft",
+    "series": "Ecosystem Architecture",
+    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46"
   },
   {
     "id": "e3189627309fbc15f0903dd9f7b9070d",
@@ -52,7 +61,7 @@
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "e8a7c7d905a234f18941d3fd4b6d0b69"
+    "checksum": "d2fce2619175620794d26e1428882362"
   },
   {
     "id": "6369a837b862a83f2aac27ebec2c742c",
@@ -87,9 +96,23 @@
     "series": "Ecosystem Architecture",
     "checksum": "6fdb3d094e1182c2fd737b9655154825",
     "publicationData": {
-      "createdAt": "2024-07-14T06:49:17.003Z",
-      "updatedAt": "2024-07-14T06:49:17.003Z",
-      "publishedAt": "2024-07-14T06:49:17.003Z"
+      "createdAt": "2024-07-15T13:30:32.659Z",
+      "updatedAt": "2024-07-15T13:30:32.659Z",
+      "publishedAt": "2024-07-15T13:30:32.659Z"
+    }
+  },
+  {
+    "id": "435d37c4854bef9c03d78f045b9ed31a",
+    "author": "yeehaa",
+    "title": "Practice Innovation",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a",
+    "publicationData": {
+      "createdAt": "2024-07-15T14:07:26.917Z",
+      "updatedAt": "2024-07-15T14:07:26.917Z",
+      "publishedAt": "2024-07-15T14:07:26.917Z"
     }
   },
   {
@@ -117,7 +140,7 @@
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "7c7c83da8c82ad789aff5d7f7f171543"
+    "checksum": "a35028c3700c52843fe0dfa9303d57e5"
   },
   {
     "id": "5d5cf92471f667e9be0a1bb31cc1097e",
@@ -136,15 +159,6 @@
     "status": "draft",
     "series": "Ecosystem Architecture",
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f"
-  },
-  {
-    "id": "dab57a97b73c41955321d0f6def877ae",
-    "author": "yeehaa",
-    "title": "Align The Misaligned",
-    "contentType": "course",
-    "status": "draft",
-    "series": "Ecosystem Architecture",
-    "checksum": "dd5ac0d7b37a244e895afcf3a8edda46"
   },
   {
     "id": "d71fe3a19689792e548b07f879e7bf55",

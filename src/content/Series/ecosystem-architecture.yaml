@@ -1,22 +1,24 @@
-checksum: 3c3ea4c515a633202e4e0f3684708b51
-summary: The Ecosystem Architecture series explores the concept of
-  decentralized, resilient, and regenerative systems inspired by natural
-  ecosystems. It emphasizes diversity, fragmentation, and sustainable innovation
-  across digital and biological domains to adapt to varied conditions and needs.
-excerpt: The series highlights the importance of decentralized, resilient
-  systems and sustainable innovation, drawing parallels between natural
-  ecosystems and digital architectures.
+checksum: 069992c709cf32c62fc74c65aa5cab61
+summary: The 'Ecosystem Architecture' series explores the evolution of
+  ecosystems from biological to digital contexts. It discusses the internet's
+  fragmentation as an opportunity for growth, advocates for decentralized and
+  resilient organizational structures, and promotes innovation that rejuvenates
+  both society and the planet. The series emphasizes the need for sustainable,
+  interconnected systems that can address global challenges through
+  collaborative practices and regenerative design principles.
+excerpt: Ecosystem Architecture examines the transformation of ecosystems across
+  various domains. It advocates for embracing fragmentation, decentralized
+  structures, and regenerative innovation to create resilient, inclusive systems
+  that address global challenges.
 tags:
-  - ecosystem
-  - nature
-  - digital
+  - eco
+  - web
   - future
   - design
-  - space
-  - network
-  - planet
-  - growth
-bannerImageURL: ./3c3ea4c515a633202e4e0f3684708b51-banner.png
+  - nature
+  - tech
+  - global
+bannerImageURL: ./069992c709cf32c62fc74c65aa5cab61-banner.png
 articles:
   - across-space-and-time
   - practice-innovation

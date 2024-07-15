@@ -6,7 +6,7 @@ export async function analyze(entity: BaseProfile) {
   const { meta, profile } = entity;
   const { checksum } = meta;
   const id = checksum;
-  const { alias, name, socials } = profile;
+  const { alias, name, socials, bio } = profile;
   const description_length = 600;
   const blurb_length = 200;
   const min_num_tags = 3;
@@ -14,9 +14,9 @@ export async function analyze(entity: BaseProfile) {
   const tag_length = 7;
   const schema = ps.analysisSchema.omit({ profile: true })
   const prompt = `
-Aanalyze the content of the following linkedin profile: '${socials.linkedin}'.
+Analyze the content of the following linkedin profile: '${socials.linkedin}'.
 
-It belongs to a person with the following name '${name}' and alias '${alias}'.
+It belongs to a person with the following name '${name}', alias '${alias}', and bio '${bio}'
 
 Please describe this person's bio in a maximum of ${description_length} characters for me. Carefully consider his/her education, work experience and accomplished skills. Don't mention the persons actual name. Only the alias. No quotation marks please.
 

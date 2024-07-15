@@ -1,11 +1,9 @@
-# Global Village People
-
 In his revelatory works *The Gutenberg Galaxy* (1962) and *Understanding Media* (1964), Marshall McLuhan already predicts that connecting the world through technology will not lead to further unification. Rather, the connective powers of electricity, and the technical media built on top of it, will turn the world into a global village.
 
 As information travels rapidly across the globe, traditional distinctions between local and global, as well as between different cultures, are eroded. The concept of global village designates a contraction of space and time, creating a sense of simultaneous existence for people worldwide.
 
- > 
- > Today, after more than a century of electric technology, we have extended our central nervous system itself in a global embrace, abolishing both space and time as far as our planet is concerned.
+ 
+> Today, after more than a century of electric technology, we have extended our central nervous system itself in a global embrace, abolishing both space and time as far as our planet is concerned.
 
 — Marshall McLuhan
 
@@ -15,8 +13,7 @@ Considering the current landscape of the internet, it is safe to say that McLuha
 
 Still, these clashes go far beyond content alone In *Gramophone, Film, Typewriter* (1987), Friedrich Kittler aptly frames the essence of these media wars as a struggle for control over the conduits that transmit words, sounds, and images. Our media are overloaded with entertaining distractions thinly veiled as information. Bread and circus provides a captivating backdrop to the overarching battle for dominion over the channels of communication. The internet has become a dynamic arena where factions compete for power, not only in the realm of ideas but also in the infrastructure that shapes the very nature of discourse.
 
- > 
- > The Pentagon is engaged in far-sighted planning: only the substitution of optical fibers for metal cables can accommodate the enormous rates and volumes of bits required, spent, and celebrated by electronic warfare. All early warning systems, radar installations, missile bases and army staffs in Europe, the opposite coast, will finally be connected to computers safe from EMP and thus remain operational in wartime. In the meantime, pleasure is produced as a by-product: people are free to channel-surf between entertainment media. After all, fiber optics transmit all messages imaginable save for the one that counts--the bomb.
+> The Pentagon is engaged in far-sighted planning: only the substitution of optical fibers for metal cables can accommodate the enormous rates and volumes of bits required, spent, and celebrated by electronic warfare. All early warning systems, radar installations, missile bases and army staffs in Europe, the opposite coast, will finally be connected to computers safe from EMP and thus remain operational in wartime. In the meantime, pleasure is produced as a by-product: people are free to channel-surf between entertainment media. After all, fiber optics transmit all messages imaginable save for the one that counts--the bomb.
 
 — Friedrich Kittler
 

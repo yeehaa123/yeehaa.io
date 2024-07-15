@@ -2,9 +2,9 @@
 title: Practice Innovation
 author: yeehaa
 series: ecosystem-architecture
-createdAt: 2024-07-14T06:49:17.003Z
-updatedAt: 2024-07-14T06:49:17.003Z
-publishedAt: 2024-07-14T06:49:17.003Z
+createdAt: 2024-07-15T13:30:32.659Z
+updatedAt: 2024-07-15T13:30:32.659Z
+publishedAt: 2024-07-15T13:30:32.659Z
 bannerImageURL: 6fdb3d094e1182c2fd737b9655154825.png
 excerpt: Innovation should enhance the planet and society. Decentralized,
   regenerative design can solve global challenges, shifting from harmful
@@ -22,6 +22,7 @@ tags:
   - design
   - ecosystem
   - future
+course: practice-innovation
 ---
 Imagine a world where innovation does not come at the expense of our planet and its people but instead enhances and revitalizes both. Picture a future where our educational systems are transformed to be inclusive and empowering for all, where our environmental practices not only preserve but also rejuvenate the natural world, and where social and economic inequalities are addressed through creative and equitable solutions. Envision communities thriving through sustainable development, interconnected by shared knowledge and resources, and driven by a collective spirit of innovation that prioritizes the well-being of all inhabitants and the only planet that we know to be inhabitable.
 

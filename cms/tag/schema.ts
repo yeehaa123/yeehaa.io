@@ -20,7 +20,6 @@ export const analysisSchema = z.object({
 const associationsSchema = z.object({
   articles: z.array(as.schema),
   courses: z.array(as.schema),
-  profiles: z.array(as.schema),
 })
 
 export const augmentationsSchema = z.object({
@@ -36,7 +35,6 @@ export const analyzedSchema = baseSchema.extend({
 export const outputSchema = augmentationsSchema.extend({
   title: z.string(),
   articles: z.array(z.string()),
-  profiles: z.array(z.string()),
   courses: z.array(z.string()),
 })
 

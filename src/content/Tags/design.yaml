@@ -1,17 +1,19 @@
-checksum: c185a8b031c116e873755797f67b5365
-summary: The collection of resources centers on fostering a connected and
-  resilient future through sustainable and innovative design principles. It
-  includes discussions on rejuvenating society and ecosystems, strategic visions
-  for ecosystem management, and the role of creativity and adaptability in
-  shaping impactful environments. The primary focus is on transforming
-  traditional, harmful practices into collaborative, regenerative systems that
-  support both nature and human development.
+checksum: c7b2a25d8ecfeb273d9bb778cfd9e446
+summary: Design is a fundamental aspect of innovation and ecosystem development.
+  It encompasses creating sustainable, resilient, and interconnected systems
+  that rejuvenate both the planet and society. This concept applies to various
+  domains, from technological innovation to environmental practices. Design
+  thinking involves strategic vision, adaptability, creativity, and aesthetics.
+  It encourages a shift from harmful practices to regenerative approaches,
+  fostering continuous collaborative practice to address global challenges. The
+  focus is on renewal and resilience, going beyond mere sustainability to create
+  beautiful, functional, and impactful solutions.
 excerpt: Innovation should enhance the planet and society. Decentralized,
   regenerative design can solve global challenges, shifting from harmful
   practices to resilient, interconnected ecosystems.
 title: design
 articles:
   - practice-innovation
-profiles: []
 courses:
   - groom-your-ecosystem
+  - practice-innovation

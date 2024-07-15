@@ -1,16 +1,17 @@
-checksum: 45696734298eda608c5e74ca6e9a50c2
-summary: Tech encompasses profiles such as Yeehaa, a notable figure in the field
-  who is an entrepreneur, thinker, coder, and self-proclaimed ecosystem
-  architect. Focused on innovation in education and technology, Yeehaa brings
-  people together to create effective ecosystems, challenging traditional
-  notions of learning. With a PhD in Philosophy, extensive teaching and research
-  experience, and key contributions to the Dutch tech ecosystem, Yeehaa is
-  currently making an impact from Taipei, Taiwan.
-excerpt: Yeehaa, an entrepreneur and ecosystem architect, revolutionizes
-  learning and tech ecosystems. With a rich academic background and innovative
-  initiatives, Yeehaa shapes the future of education and collaboration.
+checksum: 7084a4daa88fd2f9f207f9c1193f641f
+summary: Tech encompasses a broad spectrum of technological advancements and
+  innovations. It's a dynamic field that influences various aspects of our
+  lives, from the internet's evolution to future developments. This category
+  explores how technology shapes our world, including topics like web
+  fragmentation, ecosystem architecture, and global digital trends. It delves
+  into the challenges and opportunities presented by technological progress,
+  encouraging readers to consider the implications of these changes on society,
+  communication, and innovation.
+excerpt: The internet has fragmented like tectonic shifts, but this isn't
+  necessarily negative. Ecosystem architecture views this as an opportunity for
+  growth and innovation. Different regions have developed unique solutions,
+  making the global internet ecosystem more resilient and diverse.
 title: tech
-articles: []
-profiles:
-  - yeehaa
+articles:
+  - align-the-misaligned
 courses: []

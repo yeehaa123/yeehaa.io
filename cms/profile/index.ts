@@ -43,15 +43,16 @@ export async function analyze(entity: BaseProfile) {
 
 export function associate(entity: AnalyzedProfile, table: AnalyzedTable) {
   const { title } = entity.meta;
-  const series = ot.findSeriesForAuthor(table, title).map(as.init)
   const articles = ot.findArticlesForAuthor(table, title).map(as.init)
   const courses = ot.findCoursesForAuthor(table, title).map(as.init)
-  const associations = { articles, series, courses }
+  const associations = { articles, courses }
   return associatedSchema.parse({ ...entity, associations })
 }
 
 export async function augment(entity: AssociatedProfile) {
-  const checksum = generateChecksum(JSON.stringify(entity));
+  const { meta, associations } = entity;
+  const { title } = meta;
+  const checksum = generateChecksum(JSON.stringify({ title, associations }));
   const aiAug = await ai.augment(entity, checksum);
   const profileImageURL = await ai.profilePicture(aiAug, checksum)
   const bannerImageURL = await ai.bannerImage(aiAug, checksum);
@@ -75,7 +76,6 @@ function render(entity: FinalProfile) {
   const title = deslugify(meta.title);
   const { profileImageURL } = entity.augmentations;
   const articles = associations.articles.map(({ title }) => slugify(title));
-  const series = associations.series.map(({ title }) => slugify(title));
   const courses = associations.courses.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     title,
@@ -83,7 +83,6 @@ function render(entity: FinalProfile) {
     ...analysis,
     ...augmentations,
     profileImageURL: `./${profileImageURL}`,
-    series,
     articles,
     courses
   });

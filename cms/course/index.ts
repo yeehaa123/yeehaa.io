@@ -19,6 +19,7 @@ import * as yaml from "yaml";
 import * as cp from "../checkpoint";
 import * as as from "../association";
 import { analyzedSchema, associatedSchema, baseSchema, finalSchema, outputSchema } from "./schema"
+import { limit } from "../helpers";
 
 export const PATH_SUFFIX = "Courses"
 export const schema = outputSchema
@@ -45,8 +46,12 @@ export function init({ title, course: raw, author, series }: InitCourse) {
 export async function analyze(entity: BaseCourse) {
   const { course } = entity;
   const { goal } = course;
-  const promises = course.checkpoints.map(checkpoint => cp.analyze({ ...checkpoint, goal }));
-  const checkpoints = await Promise.all(promises);
+  const promises = course.checkpoints.map(checkpoint => {
+    return limit(() => cp.analyze({ ...checkpoint, goal }));
+  })
+  const checkpoints = await Promise.all(
+    promises
+  );
   const { description } = await ai.analyzeCourse(course)
   const allTags = checkpoints.flatMap(({ tags }) => tags);
   const tags = [...new Set([...allTags])]

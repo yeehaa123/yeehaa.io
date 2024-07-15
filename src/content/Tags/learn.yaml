@@ -1,15 +1,18 @@
-checksum: 69d2b18b10a4a15733b7bfc0e6d80dd9
-summary: Learn encompasses a holistic approach to expanding one's knowledge and
-  skills. It features resources like the course 'Groom Your Ecosystem,' which
-  highlights strategic vision, adaptability, creativity, and aesthetics to
-  cultivate a thriving environment. This tag covers various aspects such as
-  vision, impact, code, adaptability, creativity, design, and more, offering
-  valuable insights for personal and professional growth.
-excerpt: The course Groom Your Ecosystem outlines steps like leading with
-  purpose, broadening skill sets, injecting creativity, and focusing on
-  aesthetics to foster a thriving environment.
+checksum: 22dec0dff825ea073e7fa1d7f16d016c
+summary: Learn encapsulates a journey of continuous growth and skill
+  acquisition. It's associated with courses that emphasize leadership,
+  adaptability, and innovation. The content encourages expanding one's knowledge
+  base, from becoming a polyglot programmer to fostering creativity and design
+  skills. This theme intertwines with concepts of purpose-driven actions,
+  embracing diversity, and bringing fresh, disruptive energy to projects. It's
+  about cultivating an ecosystem of knowledge that spans from strategic vision
+  to aesthetic appreciation, all aimed at enhancing problem-solving abilities
+  and fostering innovation in various domains.
+excerpt: Discover the path to personal and professional growth through learning.
+  Explore courses that combine leadership, coding skills, creativity, and design
+  thinking to foster innovation and adaptability in your ecosystem.
 title: learn
 articles: []
-profiles: []
 courses:
   - groom-your-ecosystem
+  - practice-innovation
