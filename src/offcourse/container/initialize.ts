@@ -6,7 +6,7 @@ function isCourse(data: OffCourseData): data is Course {
 }
 export function initialize(data: OffCourseData) {
   const courses = isCourse(data) ? [data] : [...data];
-  return courses.map(course => {
+  const cards = courses.map(course => {
     return {
       courseId: course.courseId,
       course,
@@ -20,4 +20,5 @@ export function initialize(data: OffCourseData) {
       },
     }
   })
+  return { cards, auth: undefined };
 }

@@ -1,4 +1,10 @@
-import type { Course, CourseQuery, CheckpointQuery, CardState } from "@/offcourse/types";
+import type {
+  Course,
+  CourseQuery,
+  CheckpointQuery,
+  CardState,
+  AuthState
+} from "@/offcourse/types";
 import { Overlay } from "./Overlay";
 import CardChrome from "./CardChrome";
 
@@ -20,9 +26,11 @@ export type CourseCardState = {
   courseId: string,
   course: Course,
   cardState: CardState,
+  authData?: AuthState,
 }
 
 export type Actions = {
+  signIn: () => void,
   toggleBookmark: (query: CourseQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
   showInfoOverlay: (query: CourseQuery) => void

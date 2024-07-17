@@ -2,6 +2,7 @@ import type { Course, CourseQuery, CheckpointQuery } from "../types";
 import { ActionType, reducer } from "./reducer"
 import { initialize } from "./initialize"
 import { useImmerReducer } from 'use-immer';
+import { fetchUserData } from "./helpers";
 
 function timeout(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -28,9 +29,18 @@ export function useOffcourse(data: Course | Course[]) {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
   }
 
+  const signIn = async () => {
+    const authData = { userName: "Yeehaa", repository: "/offcourse" };
+    const courseIds = state.cards.map(({ courseId }) => courseId);
+    const userData = await fetchUserData(authData, courseIds);
+    const payload = { authData, userData };
+    dispatch({ type: ActionType.AUTHENTICATE, payload })
+  }
+
 
   const actions = {
     toggleBookmark,
+    signIn,
     hideOverlay,
     showInfoOverlay,
     showCheckpointOverlay,

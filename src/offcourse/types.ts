@@ -24,6 +24,11 @@ export type CardState = {
   affordances: Affordances,
 }
 
+export type AuthState = {
+  userName: string
+  repository: string,
+}
+
 export type {
   Course,
   Checkpoint,
