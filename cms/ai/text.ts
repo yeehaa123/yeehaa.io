@@ -13,7 +13,7 @@ export async function analyze({ prompt, id, schema }: { prompt: string, id: stri
   }
   console.log("NOT FROM CACHE", id);
   const { object } = await generateObject({
-    // @ts-ignore: Unreachable code error
+    // @ts-ignore
     model: anthropic('claude-3-5-sonnet-20240620'),
     schema: schema,
     prompt
