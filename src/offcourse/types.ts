@@ -18,6 +18,7 @@ export enum OverlayModes {
 }
 
 export type CardState = {
+  userName: string | undefined,
   isBookmarked: boolean,
   overlayMode: OverlayModes,
   selectedCheckpoint: Checkpoint | undefined,

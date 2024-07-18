@@ -32,15 +32,20 @@ export function useOffcourse(data: Course | Course[]) {
   const signIn = async () => {
     const authData = { userName: "Yeehaa", repository: "/offcourse" };
     const courseIds = state.cards.map(({ courseId }) => courseId);
+    dispatch({ type: ActionType.AUTHENTICATE, payload: authData })
     const userData = await fetchUserData(authData, courseIds);
-    const payload = { authData, userData };
-    dispatch({ type: ActionType.AUTHENTICATE, payload })
+    dispatch({ type: ActionType.ADD_USER_DATA, payload: userData })
+  }
+
+  const signOut = async () => {
+    dispatch({ type: ActionType.LOG_OUT, payload: undefined })
   }
 
 
   const actions = {
     toggleBookmark,
     signIn,
+    signOut,
     hideOverlay,
     showInfoOverlay,
     showCheckpointOverlay,

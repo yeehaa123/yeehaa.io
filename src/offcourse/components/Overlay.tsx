@@ -7,13 +7,13 @@ import { CheckpointOverlay } from "./CheckpointOverlay";
 import { InfoOverlay } from "./InfoOverlay";
 import CardChrome from "./CardChrome";
 
-type Props = {
+export type OverlayProps = {
   courseId: string,
   cardState: CardState,
   actions: Actions
 }
 
-export function Overlay(props: Props) {
+export function Overlay(props: OverlayProps) {
   const overlayMode = props.cardState.overlayMode;
   const InternalOverlay = {
     [OverlayModes.NONE]: InfoOverlay,

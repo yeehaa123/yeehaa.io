@@ -8,23 +8,29 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card"
+import type { OverlayProps } from "./Overlay";
 
 export function InfoOverlay(
-  { courseId, actions }: any) {
-  const { hideOverlay, signIn } = actions;
+  { courseId, actions, cardState }: OverlayProps) {
+  const { userName } = cardState;
+  const { hideOverlay, signOut, signIn } = actions;
   return (
     <>
       <CardHeader className="flex flex-row gap-x-7 space-y-0 items-top">
-        <CardTitle>Offcourse</CardTitle>
+        <CardTitle>{userName || "Offcourse"}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4 grow flex flex-col justify-center">
         <div className="flex w-full justify-center">
           <Logo className="w-24 h-24 mb-8 dark:fill-offwhite fill-offblack" />
         </div>
-        <Button onClick={signIn} variant="outline" className="w-full">
-          <GitHubLogoIcon className="mr-2 h-4 w-4" />
-          Authenticate With Github
-        </Button>
+        {userName
+          ? <Button onClick={signOut} variant="outline" className="w-full">
+            SignOut
+          </Button>
+          : <Button onClick={signIn} variant="outline" className="w-full">
+            <GitHubLogoIcon className="mr-2 h-4 w-4" />
+            Authenticate With Github
+          </Button>}
         <CardDescription>
           <a className="text-secondary" target="_blank" href="https://offcourse.io">Offcourse</a> is an open-source platform designed for online learning, leveraging the wealth of information available on the internet,
           such as blogs, video tutorials, and podcasts. The platform enables users to organize these resources into structured, shareable courses,

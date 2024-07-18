@@ -31,10 +31,11 @@ export type CourseCardState = {
 
 export type Actions = {
   signIn: () => void,
+  signOut: () => void,
   toggleBookmark: (query: CourseQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
   showInfoOverlay: (query: CourseQuery) => void
-  hideCheckpointOverlay: (query: CourseQuery) => void
+  hideOverlay: (query: CourseQuery) => void
 }
 
 type Props = CourseCardState & {

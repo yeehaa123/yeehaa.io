@@ -18,8 +18,7 @@ export async function fetchUserData(authData: AuthState, courseIds: string[]) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(courseIds)
+    body: JSON.stringify({ courseIds })
   });
-  console.log(response);
-  return [];
+  return await response.json();
 }
