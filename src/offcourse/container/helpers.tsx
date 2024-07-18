@@ -13,8 +13,11 @@ export function getCheckpoint(card: CourseCardState, payload: CheckpointQuery) {
 }
 
 export async function fetchUserData(authData: AuthState, courseIds: string[]) {
-  const response = await fetch(authData.repository, {
+  const response = await fetch(`${authData.repository}.json`, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(courseIds)
   });
   console.log(response);

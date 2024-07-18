@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import path from "path";
 import sharp from "sharp";
 
+export const prerender = false;
+
 export async function getStaticPaths() {
   const seriesEntries = await getCollection('Series');
   return seriesEntries.map(entry => ({

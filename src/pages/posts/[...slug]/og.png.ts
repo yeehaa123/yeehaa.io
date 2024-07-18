@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import path from "path";
 import sharp from "sharp";
 
+export const prerender = false;
+
 export async function getStaticPaths() {
   const blogEntries = await getCollection('Posts');
   return blogEntries.map(entry => {
@@ -13,6 +15,7 @@ export async function getStaticPaths() {
 }
 
 export const GET: APIRoute = async function get({ props }) {
+  console.log(props.entry.data.bannerImageURL.src);
   const postCover = await sharp(
     process.env.NODE_ENV === 'development'
       ? path.resolve(

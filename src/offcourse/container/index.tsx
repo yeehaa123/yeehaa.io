@@ -8,6 +8,5 @@ type Props = {
 
 export function Offcourse({ data }: Props) {
   const { state, actions } = useOffcourse(data);
-  console.log(state);
   return <CourseCollection cards={state.cards} actions={actions} />
 }
