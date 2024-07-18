@@ -1,7 +1,5 @@
-import type { APIRoute, GetImageResult } from "astro";
+import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { getImage } from 'astro:assets';
-import path from "path";
 import sharp from "sharp";
 
 import fs from 'fs';
