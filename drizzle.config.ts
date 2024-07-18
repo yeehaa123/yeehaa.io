@@ -8,6 +8,6 @@ export default defineConfig({
   dialect: 'sqlite',
   driver: 'turso',
   dbCredentials: {
-    url: "file:local.db",
+    url: "file:offcourse.db",
   },
 });

@@ -1,19 +1,25 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "9d64570a-8bb4-4f37-965e-263d5a999fa0",
+  "id": "61174a86-cb28-44a2-936d-a000d47b6b4b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "foo": {
-      "name": "foo",
+    "bookmarks": {
+      "name": "bookmarks",
       "columns": {
-        "bar": {
-          "name": "bar",
+        "courseId": {
+          "name": "courseId",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
-          "autoincrement": false,
-          "default": "'Hey!'"
+          "autoincrement": false
+        },
+        "bookmarked_at": {
+          "name": "bookmarked_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
         }
       },
       "indexes": {},

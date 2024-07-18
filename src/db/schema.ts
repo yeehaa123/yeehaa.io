@@ -3,11 +3,8 @@ import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 
 export const bookmarkTable = sqliteTable("bookmarks", {
   courseId: text("courseId").notNull(),
-  userName: text("userName").notNull(),
-  bookmarkedAt: integer('bookmarked_at', { mode: 'timestamp' }),
-
+  bookmarkedAt: integer('bookmarked_at', { mode: 'timestamp' }).notNull()
 });
 
-export const fooInsertSchema = createInsertSchema(bookmarkTable);
-export const fooSelectSchema = createSelectSchema(bookmarkTable);
-
+export const bookmarkInsertSchema = createInsertSchema(bookmarkTable);
+export const bookmarkSelectSchema = createSelectSchema(bookmarkTable);
