@@ -51,6 +51,10 @@ export const checkpointQuery = courseQuery.merge(checkpointSchema).pick({
   checkpointId: true
 })
 
+export const userDataQuery = z.object({
+  courseIds: z.array(z.string())
+})
+
 export type Analysis = z.infer<typeof analysisSchema>
 export type Course = z.infer<typeof courseSchema>
 export type Checkpoint = z.infer<typeof checkpointSchema>

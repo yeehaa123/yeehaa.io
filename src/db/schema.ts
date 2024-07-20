@@ -6,5 +6,12 @@ export const bookmarkTable = sqliteTable("bookmarks", {
   bookmarkedAt: integer('bookmarked_at', { mode: 'timestamp' }).notNull()
 });
 
+export const commandTable = sqliteTable("commands", {
+  createdAt: integer('created_at', { mode: 'timestamp' }).notNull(),
+  type: text('type').notNull(),
+  payload: text('payload', { mode: 'json' })
+});
+
 export const bookmarkInsertSchema = createInsertSchema(bookmarkTable);
 export const bookmarkSelectSchema = createSelectSchema(bookmarkTable);
+export const commandInsertSchema = createInsertSchema(commandTable);

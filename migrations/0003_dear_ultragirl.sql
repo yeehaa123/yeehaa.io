@@ -1,0 +1,1 @@
+ALTER TABLE `commands` RENAME COLUMN `bookmarked_at` TO `created_at`;

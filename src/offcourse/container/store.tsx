@@ -1,18 +1,34 @@
 import type { Course, CourseQuery, CheckpointQuery } from "../types";
-import { ActionType, reducer } from "./reducer"
+import type { OffcourseState } from "./reducer"
+import type { Action } from "./action"
+import { ActionType } from "./action"
+import { reducer } from "./reducer"
 import { initialize } from "./initialize"
 import { useImmerReducer } from 'use-immer';
-import { fetchUserData } from "./helpers";
+import { Command, Read } from "./helpers";
+import type { Dispatch } from "react";
 
 function timeout(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export function useOffcourse(data: Course | Course[]) {
-  const [state, dispatch] = useImmerReducer(reducer, data, initialize);
+export function CommandDispatch({ auth }: OffcourseState, dispatch: Dispatch<Action>) {
+  return (action: Action) => {
+    if (auth) {
+      Command(auth, action);
+    }
+    return dispatch(action);
+  }
+}
 
-  const toggleBookmark = (payload: CourseQuery) =>
+export function useOffcourse(data: Course | Course[]) {
+  const [state, _dispatch] = useImmerReducer(reducer, data, initialize);
+  const dispatch = CommandDispatch(state, _dispatch);
+
+
+  const toggleBookmark = (payload: CourseQuery) => {
     dispatch({ type: ActionType.TOGGLE_BOOKMARK, payload })
+  }
 
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
     dispatch({ type: ActionType.SHOW_CHECKPOINT_OVERLAY, payload })
@@ -31,16 +47,15 @@ export function useOffcourse(data: Course | Course[]) {
 
   const signIn = async () => {
     const authData = { userName: "Yeehaa", repository: "/offcourse" };
-    const courseIds = state.cards.map(({ courseId }) => courseId);
     dispatch({ type: ActionType.AUTHENTICATE, payload: authData })
-    const userData = await fetchUserData(authData, courseIds);
+    const query = { courseIds: state.cards.map(({ course }) => course.courseId) }
+    const userData = await Read(authData, query);
     dispatch({ type: ActionType.ADD_USER_DATA, payload: userData })
   }
 
   const signOut = async () => {
     dispatch({ type: ActionType.LOG_OUT, payload: undefined })
   }
-
 
   const actions = {
     toggleBookmark,
