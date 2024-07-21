@@ -4,6 +4,7 @@ import type { CardActions } from "./CourseCard"
 
 import { Transition } from "@headlessui/react"
 import { CheckpointOverlay } from "./CheckpointOverlay";
+import { NoneOverlay } from "./NoneOverlay";
 import { InfoOverlay } from "./InfoOverlay";
 import CardChrome from "./CardChrome";
 
@@ -16,7 +17,7 @@ export type OverlayProps = {
 export function Overlay(props: OverlayProps) {
   const overlayMode = props.cardState.overlayMode;
   const InternalOverlay = {
-    [OverlayModes.NONE]: InfoOverlay,
+    [OverlayModes.NONE]: NoneOverlay,
     [OverlayModes.INFO]: InfoOverlay,
     [OverlayModes.CHECKPOINT]: CheckpointOverlay,
   }[overlayMode]
@@ -29,7 +30,7 @@ export function Overlay(props: OverlayProps) {
       enterFrom="translate-y-full opacity-80"
       enterTo="translate-y-0 z-10 opacity-100"
       leave="ease-out duration-100"
-      leaveFrom="translate-y-0 opacity-60"
+      leaveFrom="translate-y-0 opacity-100"
       leaveTo="translate-y-full opacity-0" >
       <InternalOverlay {...props} />
     </Transition>)

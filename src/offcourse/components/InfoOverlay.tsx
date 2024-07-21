@@ -25,7 +25,7 @@ export function InfoOverlay(
         </div>
         {userName
           ? <Button onClick={signOut} variant="outline" className="w-full">
-            SignOut
+            Sign Out
           </Button>
           : <Button onClick={signIn} variant="outline" className="w-full">
             <GitHubLogoIcon className="mr-2 h-4 w-4" />
