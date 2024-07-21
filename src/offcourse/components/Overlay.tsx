@@ -1,6 +1,6 @@
 import type { CardState } from "../types";
 import { OverlayModes } from "../types";
-import type { Actions } from "./CourseCard"
+import type { CardActions } from "./CourseCard"
 
 import { Transition } from "@headlessui/react"
 import { CheckpointOverlay } from "./CheckpointOverlay";
@@ -10,7 +10,7 @@ import CardChrome from "./CardChrome";
 export type OverlayProps = {
   courseId: string,
   cardState: CardState,
-  actions: Actions
+  actions: CardActions
 }
 
 export function Overlay(props: OverlayProps) {

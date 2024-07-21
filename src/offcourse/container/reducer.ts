@@ -1,32 +1,31 @@
-import type { CourseCardState } from "../components/CourseCard";
 import type { Action } from "./action";
+import type { OffcourseState } from "@/offcourse/container/store";
 import { ActionType } from "./action";
-import type { AuthState } from "../types";
-import { OverlayModes } from "../types";
+import { OverlayModes } from "@/offcourse/types";
 import { findCard, getCheckpoint } from "./helpers";
 import { initialCardState } from "./initialize";
-
-export type OffcourseState = {
-  cards: CourseCardState[],
-  auth: AuthState | undefined
-}
 
 export function reducer(state: OffcourseState, action: Action) {
   const { type, payload } = action;
   switch (type) {
-    case ActionType.TOGGLE_BOOKMARK: {
+    case ActionType.ADD_BOOKMARK: {
       const card = findCard(state, payload);
       if (card) {
-        const { isBookmarked } = card.cardState
-        card.cardState.isBookmarked = !isBookmarked
+        card.cardState.isBookmarked = true
+      }
+      break;
+    }
+    case ActionType.REMOVE_BOOKMARK: {
+      const card = findCard(state, payload);
+      if (card) {
+        card.cardState.isBookmarked = false
       }
       break;
     }
     case ActionType.SHOW_CHECKPOINT_OVERLAY: {
       const card = findCard(state, payload);
       if (card) {
-        const checkpoint = getCheckpoint(card, payload);
-        if (checkpoint) {
+        const checkpoint = getCheckpoint(card, payload); if (checkpoint) {
           card.cardState.overlayMode = OverlayModes.CHECKPOINT;
           card.cardState.selectedCheckpoint = checkpoint;
         }
@@ -54,7 +53,7 @@ export function reducer(state: OffcourseState, action: Action) {
       }
       break;
     }
-    case ActionType.AUTHENTICATE: {
+    case ActionType.ADD_AUTH_DATA: {
       state.auth = payload
       state.cards.forEach(card => {
         card.cardState.userName = payload.userName;

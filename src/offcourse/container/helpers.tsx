@@ -1,8 +1,9 @@
-import type { OffcourseState } from "./reducer";
-import type { Action } from "./action";
-import type { CourseCardState } from "../components/CourseCard";
-import type { AuthState, CourseQuery, CheckpointQuery } from "../types";
-import queryString from 'query-string';
+import type { OffcourseState, StoreCardState } from "./store";
+import type { Dispatch } from "react";
+import { ActionType, type Action } from "./action";
+import type { CourseQuery, CheckpointQuery } from "../types";
+import type { Query } from "../query";
+import { getAuthData } from "./auth";
 
 
 export function findCard(state: OffcourseState, payload: CourseQuery) {
@@ -11,70 +12,54 @@ export function findCard(state: OffcourseState, payload: CourseQuery) {
   ));
 }
 
-export function getCheckpoint(card: CourseCardState, payload: CheckpointQuery) {
+export function getCheckpoint(card: StoreCardState, payload: CheckpointQuery) {
   return card.course.checkpoints.find(cp => cp.checkpointId === payload.checkpointId);
 }
 
-// export async function fetchUserData(authData: AuthState, courseIds: string[]) {
-//   const { repository } = authData;
-//   const response = await fetch(`${repository}.json`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({ courseIds })
-//   });
-//   return await response.json();
-// }
-//
-// export async function addBookmark(authData: AuthState, courseQuery: CourseQuery) {
-//   const { repository } = authData;
-//   const { courseId } = courseQuery;
-//   const url = `${repository}/bookmarks/${courseId}.json`;
-//   const response = await fetch(url, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     }
-//   });
-//   return await response.json();
-// }
-//
-// export async function removeBookmark(authData: AuthState, courseQuery: CourseQuery) {
-//   const { repository } = authData;
-//   const { courseId } = courseQuery;
-//   const url = `${repository}/bookmarks/${courseId}.json`;
-//   const response = await fetch(url, {
-//     method: "DELETE",
-//     headers: {
-//       "Content-Type": "application/json",
-//     }
-//   });
-//   return await response.json();
-// }
-//
-//
-export async function Read(authData: AuthState, query: { courseIds: string[] }) {
-  const { repository } = authData;
-  const url = queryString.stringifyUrl({ url: `${repository}.json`, query });
-  const response = await fetch(url, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  return await response.json();
+export function timeout(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export async function Command(authData: AuthState, action: Action) {
+export function command({ auth }: OffcourseState, dispatch: Dispatch<Action>) {
+  return (action: Action) => {
+    if (auth && action.type !== ActionType.LOG_OUT) {
+      sendCommand(action);
+    }
+    return dispatch(action);
+  }
+}
+
+export async function sendCommand(action: Action) {
+  const authData = getAuthData();
+  if (!authData) {
+    throw (`${action.type} UNAUTHORIZED USE`)
+  }
   const { repository } = authData;
-  const url = `${repository}.json`;
+  const url = `${repository}/command.json`;
   const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ action })
+    body: JSON.stringify(action)
   });
   return await response.json();
 }
+
+export async function query(query: Query) {
+  const authData = getAuthData();
+  if (!authData) {
+    throw ("UNAUTHORIZED USE")
+  }
+  const { repository } = authData;
+  const url = `${repository}/query.json`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(query)
+  });
+  return await response.json();
+}
+

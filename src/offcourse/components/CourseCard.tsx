@@ -22,27 +22,25 @@ import {
   Tags
 } from "./";
 
-export type CourseCardState = {
-  courseId: string,
-  course: Course,
-  cardState: CardState,
-  authData?: AuthState,
-}
-
-export type Actions = {
+export type CardActions = {
   signIn: () => void,
   signOut: () => void,
-  toggleBookmark: (query: CourseQuery) => void,
+  addBookmark: (query: CourseQuery) => void,
+  removeBookmark: (query: CourseQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
   showInfoOverlay: (query: CourseQuery) => void
   hideOverlay: (query: CourseQuery) => void
 }
 
-type Props = CourseCardState & {
-  actions: Actions
+export type CourseCardState = {
+  courseId: string,
+  course: Course,
+  cardState: CardState,
+  authData?: AuthState,
+  actions: CardActions
 }
 
-export default function CourseCard({ course, cardState, actions }: Props) {
+export default function CourseCard({ course, cardState, actions }: CourseCardState) {
   const {
     courseId,
     goal,
@@ -54,7 +52,8 @@ export default function CourseCard({ course, cardState, actions }: Props) {
   } = course;
 
   const {
-    toggleBookmark,
+    addBookmark,
+    removeBookmark,
     showInfoOverlay,
     showCheckpointOverlay
   } = actions
@@ -63,6 +62,8 @@ export default function CourseCard({ course, cardState, actions }: Props) {
     isBookmarked,
     affordances
   } = cardState
+
+  const toggleBookmark = isBookmarked ? removeBookmark : addBookmark;
 
   const {
     canBookmark

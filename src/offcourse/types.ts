@@ -1,4 +1,5 @@
 import type {
+  AuthState,
   Course,
   CourseQuery,
   CheckpointQuery,
@@ -25,12 +26,8 @@ export type CardState = {
   affordances: Affordances,
 }
 
-export type AuthState = {
-  userName: string
-  repository: string,
-}
-
 export type {
+  AuthState,
   Course,
   Checkpoint,
   CourseQuery,

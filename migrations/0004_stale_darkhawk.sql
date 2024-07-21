@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `bookmarks_courseId_unique` ON `bookmarks` (`courseId`);

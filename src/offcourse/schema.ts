@@ -46,21 +46,31 @@ export const courseQuery = courseSchema.pick({
   courseId: true
 })
 
+export const coursesQuery = z.object({
+  courseIds: z.array(z.string())
+})
+
 export const checkpointQuery = courseQuery.merge(checkpointSchema).pick({
   courseId: true,
   checkpointId: true
 })
 
-export const userDataQuery = z.object({
-  courseIds: z.array(z.string())
+export const authState = z.object({
+  userName: z.string(),
+  repository: z.string()
 })
 
+export const userRecord = z.object({ courseId: z.string(), isBookmarked: z.boolean() });
+
+export type AuthState = z.infer<typeof authState>
 export type Analysis = z.infer<typeof analysisSchema>
 export type Course = z.infer<typeof courseSchema>
 export type Checkpoint = z.infer<typeof checkpointSchema>
+export type UserRecord = z.infer<typeof userRecord>
 
 export type Habitat = z.infer<typeof habitatSchema>
 export type Curator = z.infer<typeof curatorSchema>
 
 export type CourseQuery = z.infer<typeof courseQuery>
+export type CoursesQuery = z.infer<typeof coursesQuery>
 export type CheckpointQuery = z.infer<typeof checkpointQuery>

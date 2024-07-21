@@ -1,33 +1,41 @@
+import type { AuthState } from "../types";
+import type { CourseCardState } from "@/offcourse/components/CourseCard"
 import type { Course, CourseQuery, CheckpointQuery } from "../types";
-import type { OffcourseState } from "./reducer"
-import type { Action } from "./action"
 import { ActionType } from "./action"
 import { reducer } from "./reducer"
 import { initialize } from "./initialize"
 import { useImmerReducer } from 'use-immer';
-import { Command, Read } from "./helpers";
-import type { Dispatch } from "react";
+import { timeout, query, command } from "./helpers";
+import { QueryType } from "../query";
+import { responder } from "./responder";
+import { authenticate, getAuthData, logout } from "./auth";
+import { useEffect } from "react";
 
-function timeout(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-export function CommandDispatch({ auth }: OffcourseState, dispatch: Dispatch<Action>) {
-  return (action: Action) => {
-    if (auth) {
-      Command(auth, action);
-    }
-    return dispatch(action);
-  }
+export type StoreCardState = Omit<CourseCardState, "actions">
+export type OffcourseState = {
+  cards: StoreCardState[],
+  auth: AuthState | undefined
 }
 
 export function useOffcourse(data: Course | Course[]) {
   const [state, _dispatch] = useImmerReducer(reducer, data, initialize);
-  const dispatch = CommandDispatch(state, _dispatch);
+  const dispatch = command(state, _dispatch);
+  const respond = responder(dispatch);
+
+  useEffect(() => {
+    const authData = getAuthData()
+    if (authData) {
+      _authenticate(authData);
+    }
+  }, [])
 
 
-  const toggleBookmark = (payload: CourseQuery) => {
-    dispatch({ type: ActionType.TOGGLE_BOOKMARK, payload })
+  const addBookmark = (payload: CourseQuery) => {
+    dispatch({ type: ActionType.ADD_BOOKMARK, payload })
+  }
+
+  const removeBookmark = (payload: CourseQuery) => {
+    dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
   }
 
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
@@ -38,7 +46,7 @@ export function useOffcourse(data: Course | Course[]) {
 
   const hideCheckpointOverlay = async (payload: CourseQuery) => {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
-    await timeout(1000);
+    await timeout(100);
     dispatch({ type: ActionType.UNSELECT_CHECKPOINT, payload })
   }
   const hideOverlay = async (payload: CourseQuery) => {
@@ -47,18 +55,25 @@ export function useOffcourse(data: Course | Course[]) {
 
   const signIn = async () => {
     const authData = { userName: "Yeehaa", repository: "/offcourse" };
-    dispatch({ type: ActionType.AUTHENTICATE, payload: authData })
-    const query = { courseIds: state.cards.map(({ course }) => course.courseId) }
-    const userData = await Read(authData, query);
-    dispatch({ type: ActionType.ADD_USER_DATA, payload: userData })
+    _authenticate(authData);
+  }
+
+  const _authenticate = async (authData: AuthState) => {
+    const authResponse = await authenticate(authData);
+    respond(authResponse);
+    const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
+    const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
+    respond(response);
   }
 
   const signOut = async () => {
-    dispatch({ type: ActionType.LOG_OUT, payload: undefined })
+    const response = await logout();
+    respond(response);
   }
 
   const actions = {
-    toggleBookmark,
+    addBookmark,
+    removeBookmark,
     signIn,
     signOut,
     hideOverlay,
@@ -66,5 +81,6 @@ export function useOffcourse(data: Course | Course[]) {
     showCheckpointOverlay,
     hideCheckpointOverlay
   }
+
   return { state, actions }
 }
