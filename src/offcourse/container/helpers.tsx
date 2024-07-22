@@ -1,6 +1,6 @@
 import type { OffcourseState, StoreCardState } from "./store";
 import type { Dispatch } from "react";
-import { ActionType, type Action } from "./action";
+import { ActionType, type Action, actionSchema } from "./action";
 import type { CourseQuery, CheckpointQuery } from "../types";
 import type { Query } from "../query";
 import { getAuthData } from "./auth";
@@ -22,10 +22,11 @@ export function timeout(ms: number) {
 
 export function command({ auth }: OffcourseState, dispatch: Dispatch<Action>) {
   return (action: Action) => {
-    if (auth && action.type !== ActionType.LOG_OUT) {
-      sendCommand(action);
+    const parsedAction = actionSchema.parse(action);
+    if (auth && parsedAction.type !== ActionType.LOG_OUT) {
+      sendCommand(parsedAction);
     }
-    return dispatch(action);
+    return dispatch(parsedAction);
   }
 }
 

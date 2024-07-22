@@ -5,7 +5,7 @@ import { ActionType } from "./action"
 import { reducer } from "./reducer"
 import { initialize } from "./initialize"
 import { useImmerReducer } from 'use-immer';
-import { timeout, query, command } from "./helpers";
+import { query, command, findCard } from "./helpers";
 import { QueryType } from "../query";
 import { responder } from "./responder";
 import { authenticate, getAuthData, logout } from "./auth";
@@ -30,12 +30,13 @@ export function useOffcourse(data: Course | Course[]) {
   }, [])
 
 
-  const addBookmark = (payload: CourseQuery) => {
-    dispatch({ type: ActionType.ADD_BOOKMARK, payload })
-  }
-
-  const removeBookmark = (payload: CourseQuery) => {
-    dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
+  const toggleBookmark = (payload: CourseQuery) => {
+    const card = findCard(state, payload);
+    if (card) {
+      card.cardState.isBookmarked
+        ? dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
+        : dispatch({ type: ActionType.ADD_BOOKMARK, payload: card.course })
+    }
   }
 
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
@@ -71,8 +72,7 @@ export function useOffcourse(data: Course | Course[]) {
   }
 
   const actions = {
-    addBookmark,
-    removeBookmark,
+    toggleBookmark,
     signIn,
     signOut,
     hideOverlay,

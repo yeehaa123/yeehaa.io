@@ -35,9 +35,9 @@ export const courseSchema = z.object({
   curator: curatorSchema,
   description: z.string(),
   habitat: habitatSchema.optional(),
-  createdAt: z.date(),
-  updatedAt: z.date(),
-  publishedAt: z.date().optional(),
+  createdAt: z.coerce.date(),
+  updatedAt: z.coerce.date(),
+  publishedAt: z.coerce.date().optional(),
   tags: z.array(z.string()),
   checkpoints: z.array(checkpointSchema)
 })
@@ -70,6 +70,7 @@ export type UserRecord = z.infer<typeof userRecord>
 
 export type Habitat = z.infer<typeof habitatSchema>
 export type Curator = z.infer<typeof curatorSchema>
+
 
 export type CourseQuery = z.infer<typeof courseQuery>
 export type CoursesQuery = z.infer<typeof coursesQuery>

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { authState, checkpointQuery, courseQuery, userRecord } from "../schema";
+import { authState, checkpointQuery, courseQuery, courseSchema, userRecord } from "../schema";
 
 export enum ActionType {
   ADD_AUTH_DATA = "AUTHENTICATE",
@@ -14,7 +14,7 @@ export enum ActionType {
 }
 
 export const actionSchema = z.union([
-  z.object({ type: z.literal(ActionType.ADD_BOOKMARK), payload: courseQuery }),
+  z.object({ type: z.literal(ActionType.ADD_BOOKMARK), payload: courseSchema }),
   z.object({ type: z.literal(ActionType.REMOVE_BOOKMARK), payload: courseQuery }),
   z.object({ type: z.literal(ActionType.SHOW_CHECKPOINT_OVERLAY), payload: checkpointQuery }),
   z.object({ type: z.literal(ActionType.SHOW_INFO_OVERLAY), payload: courseQuery }),

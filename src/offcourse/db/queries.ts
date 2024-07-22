@@ -1,18 +1,29 @@
 import type { Action } from "@/offcourse/container/action";
 import { db } from "./";
-import { bookmarkInsertSchema, bookmarkTable, commandInsertSchema, commandTable } from "./schema";
-import type { CourseQuery } from "../schema";
+import { bookmarkInsertSchema, bookmarkTable, commandTable, courseTable } from "./schema";
+import type { CourseQuery, Course } from "../schema";
 import { eq } from "drizzle-orm";
 
 export const getBookmarks = async () => {
   return await db.select().from(bookmarkTable).all();
 }
 
-export const insertCommand = async (command: Action) => {
+export const insertCommand = async ({ type, payload }: Action) => {
   const createdAt = new Date()
-  const value = commandInsertSchema.parse({ ...command, createdAt });
-  await db.insert(commandTable).values(value);
+  console.log("X", createdAt);
+  // const value = commandInsertSchema.parse({ type, payload, createdAt });
+  await db.insert(commandTable).values({ type, payload, createdAt });
   return createdAt;
+}
+
+export const insertCourse = async (course: Course) => {
+  const { courseId, curator } = course;
+  await db.insert(courseTable).values({
+    courseId,
+    curator: curator.alias,
+    course
+  }).onConflictDoNothing()
+  return courseId;
 }
 
 export const insertBookmark = async (courseQuery: CourseQuery) => {

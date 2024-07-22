@@ -25,8 +25,7 @@ import {
 export type CardActions = {
   signIn: () => void,
   signOut: () => void,
-  addBookmark: (query: CourseQuery) => void,
-  removeBookmark: (query: CourseQuery) => void,
+  toggleBookmark: (query: CourseQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
   showInfoOverlay: (query: CourseQuery) => void
   hideOverlay: (query: CourseQuery) => void
@@ -52,8 +51,7 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
   } = course;
 
   const {
-    addBookmark,
-    removeBookmark,
+    toggleBookmark,
     showInfoOverlay,
     showCheckpointOverlay
   } = actions
@@ -63,7 +61,6 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
     affordances
   } = cardState
 
-  const toggleBookmark = isBookmarked ? removeBookmark : addBookmark;
 
   const {
     canBookmark
