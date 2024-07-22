@@ -9,7 +9,7 @@ export type Props = {
 export default function CourseCollection({ cards, actions }: Props) {
   return (
     <div
-      className="grid justify-center items-start gap-y-8 
+      className="grid justify-center items-start gap-8 
       grid-cols-[repeat(auto-fit,minmax(360px,360px))]">
       {cards.map(card => (
         <CourseCard {...card} key={card.course.courseId} actions={actions} />)
