@@ -3,7 +3,7 @@ import type { CourseCardState } from "@/offcourse/components/CourseCard"
 import type { Course, CourseQuery, CheckpointQuery } from "../types";
 import { ActionType } from "./action"
 import { reducer } from "./reducer"
-import { initialize } from "./initialize"
+import { initialize } from "./cardState"
 import { useImmerReducer } from 'use-immer';
 import { query, command, findCard } from "./helpers";
 import { QueryType } from "../query";
@@ -24,6 +24,7 @@ export function useOffcourse(data: Course | Course[]) {
 
   useEffect(() => {
     const authData = getAuthData()
+    console.log(authData);
     if (authData) {
       _authenticate(authData);
     }
@@ -62,7 +63,9 @@ export function useOffcourse(data: Course | Course[]) {
     const authResponse = await authenticate(authData);
     respond(authResponse);
     const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
+    console.log(payload);
     const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
+    console.log(response);
     respond(response);
   }
 

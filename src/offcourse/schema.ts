@@ -60,7 +60,11 @@ export const authState = z.object({
   repository: z.string()
 })
 
-export const userRecord = z.object({ courseId: z.string(), isBookmarked: z.boolean() });
+export const userRecord = z.object({
+  courseId: z.string(),
+  isBookmarked: z.boolean(),
+  isFollowed: z.boolean()
+});
 
 export type AuthState = z.infer<typeof authState>
 export type Analysis = z.infer<typeof analysisSchema>

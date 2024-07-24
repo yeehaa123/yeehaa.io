@@ -11,7 +11,8 @@ export async function handleQuery(body: string) {
       const courseData = payload.courseIds.map((courseId: string) => {
         return {
           courseId,
-          isBookmarked: !!bookmarks.find(record => courseId === record.courseId)
+          isBookmarked: !!bookmarks.find(record => courseId === record.courseId),
+          isFollowed: false
         }
       })
       return {

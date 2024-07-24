@@ -10,6 +10,7 @@ import type {
 
 export type Affordances = {
   canBookmark: boolean,
+  canFollow: boolean,
 }
 
 export enum OverlayModes {
@@ -21,6 +22,7 @@ export enum OverlayModes {
 export type CardState = {
   userName: string | undefined,
   isBookmarked: boolean,
+  isFollowed: boolean,
   overlayMode: OverlayModes,
   selectedCheckpoint: Checkpoint | undefined,
   affordances: Affordances,

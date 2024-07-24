@@ -3,7 +3,7 @@ import type { OffcourseState } from "@/offcourse/container/store";
 import { ActionType } from "./action";
 import { OverlayModes } from "@/offcourse/types";
 import { findCard, getCheckpoint } from "./helpers";
-import { initialCardState } from "./initialize";
+import { initialCardState, updateAffordances, updateUserRecord } from "./cardState";
 
 export function reducer(state: OffcourseState, action: Action) {
   const { type, payload } = action;
@@ -58,7 +58,7 @@ export function reducer(state: OffcourseState, action: Action) {
       state.cards.forEach(card => {
         card.cardState.userName = payload.userName;
         card.cardState.overlayMode = OverlayModes.NONE;
-        card.cardState.affordances.canBookmark = true;
+        card.cardState.affordances = updateAffordances(payload);
       })
       break;
     }
@@ -73,7 +73,7 @@ export function reducer(state: OffcourseState, action: Action) {
       payload.map((record) => {
         const card = findCard(state, record);
         if (card) {
-          card.cardState.isBookmarked = record.isBookmarked;
+          card.cardState = updateUserRecord(card.cardState, record);
         }
       })
       break;
