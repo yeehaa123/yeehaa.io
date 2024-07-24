@@ -89,11 +89,11 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
           <ul className="flex flex-col gap-2">
             {checkpoints.map((({ checkpointId, ...cp }, index) => (
               <Checkpoint
+                key={index}
                 courseId={courseId}
                 canCheckComplete={canFollow}
                 toggleComplete={console.log}
                 showCheckpoint={() => showCheckpointOverlay({ courseId, checkpointId })}
-                key={index}
                 checkpointId={checkpointId}
                 {...cp} />)))
             }

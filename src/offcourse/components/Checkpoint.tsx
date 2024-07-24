@@ -2,6 +2,7 @@ import type { Checkpoint } from "@/offcourse/types";
 
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/offcourse/components"
+import { cn } from "@/lib/utils";
 
 interface Props extends Checkpoint {
   courseId: string,
@@ -29,7 +30,7 @@ export default function Checkpoint({
           disabled={!canCheckComplete}
           id={`${courseId}-${task}`}
           onClick={toggleComplete} />}
-      <Label htmlFor={taskId} className="px-2 py-1">
+      <Label htmlFor={taskId} className={cn("px-2 py-1", { "px-4": canCheckComplete })}>
         <button onClick={showCheckpoint}>{task}</button>
       </Label>
     </li>
