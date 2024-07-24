@@ -6,7 +6,7 @@ import { Checkbox } from "@/offcourse/components"
 interface Props extends Checkpoint {
   courseId: string,
   isCompleted?: boolean | undefined
-  canCheckComplete?: boolean | undefined
+  canCheckComplete: boolean | undefined
   toggleComplete: () => void
   showCheckpoint: () => void
 }
@@ -17,17 +17,19 @@ export default function Checkpoint({
   isCompleted,
   toggleComplete,
   showCheckpoint,
-  canCheckComplete }: Props) {
+  canCheckComplete
+}: Props) {
   const taskId = `${courseId}-${task}`
   return (
     <li className="group flex align-middle bg-gray-100 dark:bg-gray-900 dark:text-white
-    hover:bg-gray-900 dark:hover:bg-gray-100 hover:text-white dark:hover:text-black p-3 flex items-center space-x-2">
-      <Checkbox
-        checked={!!isCompleted}
-        disabled={!canCheckComplete}
-        id={`${courseId}-${task}`}
-        onClick={toggleComplete} />
-      <Label htmlFor={taskId}>
+    hover:bg-gray-900 dark:hover:bg-gray-100 hover:text-white dark:hover:text-black p-3 flex items-center">
+      {canCheckComplete &&
+        <Checkbox
+          checked={!!isCompleted}
+          disabled={!canCheckComplete}
+          id={`${courseId}-${task}`}
+          onClick={toggleComplete} />}
+      <Label htmlFor={taskId} className="px-2 py-1">
         <button onClick={showCheckpoint}>{task}</button>
       </Label>
     </li>

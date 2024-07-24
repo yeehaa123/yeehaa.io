@@ -24,7 +24,6 @@ export function useOffcourse(data: Course | Course[]) {
 
   useEffect(() => {
     const authData = getAuthData()
-    console.log(authData);
     if (authData) {
       _authenticate(authData);
     }
@@ -63,9 +62,7 @@ export function useOffcourse(data: Course | Course[]) {
     const authResponse = await authenticate(authData);
     respond(authResponse);
     const payload = { courseIds: state.cards.map(({ courseId }) => courseId) }
-    console.log(payload);
     const response = await query({ type: QueryType.FETCH_USER_RECORDS, payload });
-    console.log(response);
     respond(response);
   }
 

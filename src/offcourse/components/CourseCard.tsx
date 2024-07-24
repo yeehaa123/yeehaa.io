@@ -63,7 +63,8 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
 
 
   const {
-    canBookmark
+    canBookmark,
+    canFollow
   } = affordances
 
   return (
@@ -89,6 +90,7 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
             {checkpoints.map((({ checkpointId, ...cp }, index) => (
               <Checkpoint
                 courseId={courseId}
+                canCheckComplete={canFollow}
                 toggleComplete={console.log}
                 showCheckpoint={() => showCheckpointOverlay({ courseId, checkpointId })}
                 key={index}
