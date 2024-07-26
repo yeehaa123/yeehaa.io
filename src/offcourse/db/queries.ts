@@ -10,8 +10,8 @@ export const insertCommand = async ({ type, payload }: Action) => {
   return createdAt;
 }
 
-export const insertCourse = async (course: Course) => {
-  const { courseId, curator } = course;
+export const insertCourse = async ({ course, courseId }: { course: Course, courseId: string }) => {
+  const { curator } = course;
   await db.insert(courseTable).values({
     courseId,
     curator: curator.alias,

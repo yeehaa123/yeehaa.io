@@ -1,7 +1,7 @@
 import { insertCommand, insertCourse } from "@/offcourse/db/queries"
 import { deleteBookmark, insertBookmark, } from "@/offcourse/db/models/bookmark"
 import { actionSchema, ActionType } from '@/offcourse/container/action';
-import { deleteCompletion, insertCompletion } from "./models/competion";
+import { deleteCompletion, insertCompletion } from "./models/completion";
 
 export async function handleCommand(body: string) {
   const action = actionSchema.parse(body)
@@ -10,7 +10,7 @@ export async function handleCommand(body: string) {
   switch (type) {
     case ActionType.COMPLETE_CHECKPOINT: {
       insertCompletion(payload);
-      insertCourse(payload.course);
+      insertCourse(payload);
       break;
     }
     case ActionType.UNCOMPLETE_CHECKPOINT: {

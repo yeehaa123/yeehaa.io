@@ -35,7 +35,13 @@ export function useOffcourse(data: Course | Course[]) {
     if (card) {
       card.cardState.isBookmarked
         ? dispatch({ type: ActionType.REMOVE_BOOKMARK, payload })
-        : dispatch({ type: ActionType.ADD_BOOKMARK, payload: card.course })
+        : dispatch({
+          type: ActionType.ADD_BOOKMARK,
+          payload: {
+            ...payload,
+            course: card.course
+          }
+        })
     }
   }
 
@@ -44,11 +50,11 @@ export function useOffcourse(data: Course | Course[]) {
     const checkpointId = payload.checkpointId
     if (card) {
       const isCompleted = card.cardState.completed.find(id => id === checkpointId)
-      console.log("IS", isCompleted);
       isCompleted
         ? dispatch({ type: ActionType.UNCOMPLETE_CHECKPOINT, payload })
         : dispatch({
-          type: ActionType.COMPLETE_CHECKPOINT, payload: {
+          type: ActionType.COMPLETE_CHECKPOINT,
+          payload: {
             ...payload,
             course: card.course
           }

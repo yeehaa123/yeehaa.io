@@ -15,6 +15,13 @@
       "when": 1722003420641,
       "tag": "0001_lame_killraven",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1722004428372,
+      "tag": "0002_lazy_cargill",
+      "breakpoints": true
     }
   ]
 }

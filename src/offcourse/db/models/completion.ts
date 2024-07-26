@@ -13,7 +13,7 @@ export const insertCompletion = async (checkpointQuery: CheckpointQuery) => {
 
 export const deleteCompletion = async (checkpointQuery: CheckpointQuery) => {
   try {
-    const x = await db.delete(completionTable)
+    await db.delete(completionTable)
       .where(and(
         eq(completionTable.courseId, checkpointQuery.courseId),
         eq(completionTable.checkpointId, checkpointQuery.checkpointId)

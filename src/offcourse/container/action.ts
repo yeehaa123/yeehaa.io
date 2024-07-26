@@ -16,13 +16,15 @@ export enum ActionType {
 }
 
 export const actionSchema = z.union([
-  z.object({ type: z.literal(ActionType.ADD_BOOKMARK), payload: courseSchema }),
+  z.object({
+    type: z.literal(ActionType.ADD_BOOKMARK), payload: courseQuery.extend({
+      course: courseSchema,
+    })
+  }),
   z.object({ type: z.literal(ActionType.REMOVE_BOOKMARK), payload: courseQuery }),
   z.object({
-    type: z.literal(ActionType.COMPLETE_CHECKPOINT), payload: z.object({
+    type: z.literal(ActionType.COMPLETE_CHECKPOINT), payload: checkpointQuery.extend({
       course: courseSchema,
-      checkpointId: z.string(),
-      courseId: z.string()
     })
   }),
   z.object({ type: z.literal(ActionType.UNCOMPLETE_CHECKPOINT), payload: checkpointQuery }),
