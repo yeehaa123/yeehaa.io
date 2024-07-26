@@ -9,7 +9,9 @@ import { Overlay } from "./Overlay";
 import CardChrome from "./CardChrome";
 
 import {
-  CardDescription, CardHeader, CardTitle,
+  CardDescription,
+  CardHeader,
+  CardTitle,
   CardFooter,
   CardContent,
 } from "@/components/ui/card"
@@ -26,6 +28,7 @@ export type CardActions = {
   signIn: () => void,
   signOut: () => void,
   toggleBookmark: (query: CourseQuery) => void,
+  toggleCheckpoint: (query: CheckpointQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
   showInfoOverlay: (query: CourseQuery) => void
   hideOverlay: (query: CourseQuery) => void
@@ -52,13 +55,15 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
 
   const {
     toggleBookmark,
+    toggleCheckpoint,
     showInfoOverlay,
     showCheckpointOverlay
   } = actions
 
   const {
     isBookmarked,
-    affordances
+    affordances,
+    completed
   } = cardState
 
 
@@ -90,9 +95,10 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
             {checkpoints.map((({ checkpointId, ...cp }, index) => (
               <Checkpoint
                 key={index}
+                isCompleted={!!completed.find(id => id === checkpointId)}
                 courseId={courseId}
                 canCheckComplete={canFollow}
-                toggleComplete={console.log}
+                toggleComplete={() => toggleCheckpoint({ checkpointId, courseId })}
                 showCheckpoint={() => showCheckpointOverlay({ courseId, checkpointId })}
                 checkpointId={checkpointId}
                 {...cp} />)))

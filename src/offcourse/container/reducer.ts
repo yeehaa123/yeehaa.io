@@ -8,6 +8,23 @@ import { initialCardState, updateAffordances, updateUserRecord } from "./cardSta
 export function reducer(state: OffcourseState, action: Action) {
   const { type, payload } = action;
   switch (type) {
+    case ActionType.COMPLETE_CHECKPOINT: {
+      const card = findCard(state, payload);
+      const { checkpointId } = payload;
+      if (card) {
+        card.cardState.completed = [...card.cardState.completed, checkpointId]
+      }
+      break;
+    }
+    case ActionType.UNCOMPLETE_CHECKPOINT: {
+      const card = findCard(state, payload);
+      const { checkpointId } = payload;
+      if (card) {
+        const completed = card.cardState.completed.filter(id => id !== checkpointId);
+        card.cardState.completed = completed
+      }
+      break;
+    }
     case ActionType.ADD_BOOKMARK: {
       const card = findCard(state, payload);
       if (card) {

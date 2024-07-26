@@ -63,7 +63,8 @@ export const authState = z.object({
 export const userRecord = z.object({
   courseId: z.string(),
   isBookmarked: z.boolean(),
-  isFollowed: z.boolean()
+  isFollowed: z.boolean(),
+  completed: z.array(z.string())
 });
 
 export type AuthState = z.infer<typeof authState>

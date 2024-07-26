@@ -1,1 +1,0 @@
-ALTER TABLE `course` ADD `curator` text NOT NULL;

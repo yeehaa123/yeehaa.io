@@ -17,6 +17,7 @@ export const initialCardState = {
   isBookmarked: false,
   isFollowed: false,
   isCurated: false,
+  completed: [],
   selectedCheckpoint: undefined,
   overlayMode: OverlayModes.NONE,
   affordances: initialAffordances
@@ -35,12 +36,13 @@ export function updateAffordances(auth: AuthState) {
 
 export function updateUserRecord(
   cardState: CardState,
-  { isBookmarked, isFollowed }: UserRecord
+  { isBookmarked, isFollowed, completed }: UserRecord
 ) {
   return {
     ...cardState,
     isBookmarked,
-    isFollowed
+    isFollowed,
+    completed
   }
 }
 

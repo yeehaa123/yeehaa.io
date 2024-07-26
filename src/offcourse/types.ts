@@ -23,6 +23,7 @@ export type CardState = {
   userName: string | undefined,
   isBookmarked: boolean,
   isFollowed: boolean,
+  completed: string[],
   overlayMode: OverlayModes,
   selectedCheckpoint: Checkpoint | undefined,
   affordances: Affordances,

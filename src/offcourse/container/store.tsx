@@ -39,6 +39,25 @@ export function useOffcourse(data: Course | Course[]) {
     }
   }
 
+  const toggleCheckpoint = (payload: CheckpointQuery) => {
+    const card = findCard(state, payload);
+    const checkpointId = payload.checkpointId
+    if (card) {
+      const isCompleted = card.cardState.completed.find(id => id === checkpointId)
+      console.log("IS", isCompleted);
+      isCompleted
+        ? dispatch({ type: ActionType.UNCOMPLETE_CHECKPOINT, payload })
+        : dispatch({
+          type: ActionType.COMPLETE_CHECKPOINT, payload: {
+            ...payload,
+            course: card.course
+          }
+        })
+    }
+
+    console.log(card?.cardState, payload);
+  }
+
   const showCheckpointOverlay = (payload: CheckpointQuery) =>
     dispatch({ type: ActionType.SHOW_CHECKPOINT_OVERLAY, payload })
 
@@ -73,6 +92,7 @@ export function useOffcourse(data: Course | Course[]) {
 
   const actions = {
     toggleBookmark,
+    toggleCheckpoint,
     signIn,
     signOut,
     hideOverlay,

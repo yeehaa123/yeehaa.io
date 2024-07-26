@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface Props extends Checkpoint {
   courseId: string,
-  isCompleted?: boolean | undefined
+  isCompleted: boolean
   canCheckComplete: boolean | undefined
   toggleComplete: () => void
   showCheckpoint: () => void
@@ -30,7 +30,9 @@ export default function Checkpoint({
           disabled={!canCheckComplete}
           id={`${courseId}-${task}`}
           onClick={toggleComplete} />}
-      <Label htmlFor={taskId} className={cn("px-2 py-1", { "px-4": canCheckComplete })}>
+      <Label
+        htmlFor={taskId}
+        className={cn("px-2 py-1", { "px-4": canCheckComplete })}>
         <button onClick={showCheckpoint}>{task}</button>
       </Label>
     </li>
