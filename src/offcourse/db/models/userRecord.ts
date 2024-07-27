@@ -25,17 +25,20 @@ export const getUserRecords = async ({ courseIds }: CoursesQuery) => {
           notes: note ? [note] : []
         })
       } else {
-        const completed = complete ? [...new Set([...userRecord.completed, complete.checkpointId])] : userRecord.completed;
-        const existingNote = userRecord.notes.find(({ annotatedAt }) => {
-          console.log(annotatedAt.getTime(), note?.annotatedAt.getTime())
-          return annotatedAt.getTime() === note?.annotatedAt.getTime()
-        });
-
+        const completed = complete
+          ? [...new Set([...userRecord.completed, complete.checkpointId])]
+          : userRecord.completed;
+        const existingNote = userRecord.notes.find(
+          ({ annotatedAt }) => annotatedAt.getTime() === note?.annotatedAt.getTime()
+        );
+        const notes = (existingNote || !note)
+          ? userRecord.notes
+          : [...userRecord.notes, note];
         acc.set(courseId, {
           ...userRecord,
           isFollowed: userRecord.isFollowed || !!complete,
-          notes: (existingNote || !note) ? userRecord.notes : [...userRecord.notes, note],
-          completed
+          completed,
+          notes
         })
       }
     }
