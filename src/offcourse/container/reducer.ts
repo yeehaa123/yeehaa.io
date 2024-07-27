@@ -1,7 +1,7 @@
 import type { Action } from "./action";
 import type { OffcourseState } from "@/offcourse/container/store";
 import { ActionType } from "./action";
-import { OverlayModes } from "@/offcourse/types";
+import { OverlayModes } from "@/offcourse/components/Overlay";
 import { findCard, getCheckpoint } from "./helpers";
 import { initialCardState, updateAffordances, updateUserRecord } from "./cardState";
 
@@ -53,6 +53,13 @@ export function reducer(state: OffcourseState, action: Action) {
       const card = findCard(state, payload);
       if (card) {
         card.cardState.overlayMode = OverlayModes.INFO;
+      }
+      break;
+    }
+    case ActionType.SHOW_NOTES_OVERLAY: {
+      const card = findCard(state, payload);
+      if (card) {
+        card.cardState.overlayMode = OverlayModes.NOTES;
       }
       break;
     }

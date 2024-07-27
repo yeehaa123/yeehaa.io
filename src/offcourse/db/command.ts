@@ -1,5 +1,6 @@
-import { insertCommand, insertCourse } from "@/offcourse/db/queries"
+import { insertCommand } from "@/offcourse/db/queries"
 import { deleteBookmark, insertBookmark, } from "@/offcourse/db/models/bookmark"
+import { insertCourse } from "@/offcourse/db/models/course"
 import { actionSchema, ActionType } from '@/offcourse/container/action';
 import { deleteCompletion, insertCompletion } from "./models/completion";
 

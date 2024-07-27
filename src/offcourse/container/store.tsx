@@ -70,6 +70,9 @@ export function useOffcourse(data: Course | Course[]) {
   const showInfoOverlay = (payload: CourseQuery) =>
     dispatch({ type: ActionType.SHOW_INFO_OVERLAY, payload })
 
+  const showNotesOverlay = (payload: CourseQuery) =>
+    dispatch({ type: ActionType.SHOW_NOTES_OVERLAY, payload })
+
   const hideCheckpointOverlay = async (payload: CourseQuery) => {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
     dispatch({ type: ActionType.UNSELECT_CHECKPOINT, payload })
@@ -103,6 +106,7 @@ export function useOffcourse(data: Course | Course[]) {
     signOut,
     hideOverlay,
     showInfoOverlay,
+    showNotesOverlay,
     showCheckpointOverlay,
     hideCheckpointOverlay
   }

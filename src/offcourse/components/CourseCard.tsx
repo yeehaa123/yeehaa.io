@@ -2,10 +2,10 @@ import type {
   Course,
   CourseQuery,
   CheckpointQuery,
-  CardState,
   AuthState
 } from "@/offcourse/types";
-import { Overlay } from "./Overlay";
+import type { CardState } from "../container/cardState"
+import { Overlay } from "./Overlay"
 import CardChrome from "./CardChrome";
 
 import {
@@ -31,6 +31,7 @@ export type CardActions = {
   toggleCheckpoint: (query: CheckpointQuery) => void,
   showCheckpointOverlay: (query: CheckpointQuery) => void
   showInfoOverlay: (query: CourseQuery) => void
+  showNotesOverlay: (query: CourseQuery) => void
   hideOverlay: (query: CourseQuery) => void
 }
 
@@ -50,13 +51,11 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
     checkpoints,
     description,
     tags,
-    habitat
   } = course;
 
   const {
     toggleBookmark,
     toggleCheckpoint,
-    showInfoOverlay,
     showCheckpointOverlay
   } = actions
 
@@ -106,7 +105,10 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
           </ul>
         </CardContent>
         <CardFooter className="flex flex-col gap-y-4">
-          <Toolbar showInfoOverlay={() => showInfoOverlay({ courseId })} habitat={habitat} />
+          <Toolbar
+            course={course}
+            affordances={affordances}
+            actions={actions} />
         </CardFooter>
       </CardChrome >
     </div >)

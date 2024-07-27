@@ -1,6 +1,6 @@
 import type { UserRecord, CoursesQuery } from "@/offcourse/schema";
 import { db } from "../";
-import { bookmarkTable, completionTable, courseTable } from "../schema";
+import { bookmarkTable, completionTable, courseTable, noteTable } from "../schema";
 import { eq, inArray } from "drizzle-orm";
 
 export const getUserRecords = async ({ courseIds }: CoursesQuery) => {
@@ -8,28 +8,34 @@ export const getUserRecords = async ({ courseIds }: CoursesQuery) => {
     .select()
     .from(courseTable)
     .where(inArray(courseTable.courseId, courseIds))
-    .leftJoin(bookmarkTable, eq(courseTable.courseId, bookmarkTable.courseId))
-    .leftJoin(completionTable, eq(courseTable.courseId, courseTable.courseId))
+    .leftJoin(bookmarkTable, eq(bookmarkTable.courseId, courseTable.courseId))
+    .leftJoin(completionTable, eq(completionTable.courseId, courseTable.courseId))
+    .leftJoin(noteTable, eq(noteTable.courseId, courseTable.courseId))
 
-  const records = data.reduce((acc, { bookmarked, completed }) => {
-    const courseId = bookmarked?.courseId || completed?.courseId;
+  const records = data.reduce((acc, { course, bookmark, complete, note }) => {
+    const { courseId } = course;
     if (courseId) {
       const userRecord = acc.get(courseId)
-      const completedCheckpoint = completed?.checkpointId;
       if (!userRecord) {
         acc.set(courseId, {
           courseId,
-          isBookmarked: !!bookmarked,
-          isFollowed: !!completed,
-          completed: completedCheckpoint ? [completedCheckpoint] : []
+          isBookmarked: !!bookmark,
+          isFollowed: !!complete,
+          completed: complete ? [complete.checkpointId] : [],
+          notes: note ? [note] : []
         })
       } else {
+        const completed = complete ? [...new Set([...userRecord.completed, complete.checkpointId])] : userRecord.completed;
+        const existingNote = userRecord.notes.find(({ annotatedAt }) => {
+          console.log(annotatedAt.getTime(), note?.annotatedAt.getTime())
+          return annotatedAt.getTime() === note?.annotatedAt.getTime()
+        });
+
         acc.set(courseId, {
           ...userRecord,
-          isFollowed: userRecord.isFollowed || !!completed,
-          completed: completedCheckpoint
-            ? [...userRecord.completed, completedCheckpoint]
-            : userRecord.completed
+          isFollowed: userRecord.isFollowed || !!complete,
+          notes: (existingNote || !note) ? userRecord.notes : [...userRecord.notes, note],
+          completed
         })
       }
     }

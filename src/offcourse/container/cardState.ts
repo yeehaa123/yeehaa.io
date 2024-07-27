@@ -1,16 +1,36 @@
-import { OverlayModes, type Course, type AuthState, type CardState } from "@/offcourse/types";
-import type { UserRecord } from "../schema";
+import type { Course, AuthState, Checkpoint } from "@/offcourse/types";
+import { OverlayModes } from "../components/Overlay"
+import type { UserRecord, CourseNote } from "../schema";
 type OffCourseData = Course | Course[]
 
 function isCourse(data: OffCourseData): data is Course {
   return !!(data as Course).courseId;
 }
 
+export type Affordances = {
+  canBookmark: boolean,
+  canFollow: boolean,
+  canAnnotate: boolean,
+}
+
+export type CardState = {
+  userName: string | undefined,
+  isBookmarked: boolean,
+  isFollowed: boolean,
+  completed: string[],
+  notes: CourseNote[],
+  overlayMode: OverlayModes,
+  selectedCheckpoint: Checkpoint | undefined,
+  affordances: Affordances,
+}
+
 const initialAffordances = {
   canBookmark: false,
   canFollow: false,
-  canEdit: false
+  canEdit: false,
+  canAnnotate: false
 }
+
 
 export const initialCardState = {
   userName: undefined,
@@ -18,6 +38,7 @@ export const initialCardState = {
   isFollowed: false,
   isCurated: false,
   completed: [],
+  notes: [],
   selectedCheckpoint: undefined,
   overlayMode: OverlayModes.NONE,
   affordances: initialAffordances
@@ -29,6 +50,7 @@ export function updateAffordances(auth: AuthState) {
       ...initialAffordances,
       canBookmark: true,
       canFollow: true,
+      canAnnotate: true
     }
   }
   return initialAffordances;
@@ -36,13 +58,14 @@ export function updateAffordances(auth: AuthState) {
 
 export function updateUserRecord(
   cardState: CardState,
-  { isBookmarked, isFollowed, completed }: UserRecord
+  { isBookmarked, isFollowed, completed, notes }: UserRecord
 ) {
   return {
     ...cardState,
     isBookmarked,
     isFollowed,
-    completed
+    completed,
+    notes,
   }
 }
 
