@@ -14,7 +14,6 @@ export function NotesOverlay(
   { courseId, actions, cardState }: OverlayProps) {
   const { overlayMode, notes } = cardState;
   const { hideOverlay, addNote } = actions;
-  notes.map(({ annotatedAt }) => console.log(annotatedAt.getTime()))
   const noteId = `${courseId}-note`;
   return (
     <>
