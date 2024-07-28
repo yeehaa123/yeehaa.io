@@ -25,6 +25,14 @@ export function reducer(state: OffcourseState, action: Action) {
       }
       break;
     }
+    case ActionType.ADD_NOTE: {
+      const card = findCard(state, payload);
+      if (card) {
+        const { notes } = card.cardState;
+        card.cardState.notes = [payload, ...notes]
+      }
+      break;
+    }
     case ActionType.ADD_BOOKMARK: {
       const card = findCard(state, payload);
       if (card) {

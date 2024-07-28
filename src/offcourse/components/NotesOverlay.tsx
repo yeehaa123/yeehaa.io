@@ -7,12 +7,15 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import type { OverlayProps } from "./Overlay";
+import { NoteForm } from "./NoteForm";
+import type { Note } from "../schema";
 
 export function NotesOverlay(
   { courseId, actions, cardState }: OverlayProps) {
   const { overlayMode, notes } = cardState;
-  const { hideOverlay } = actions;
+  const { hideOverlay, addNote } = actions;
   notes.map(({ annotatedAt }) => console.log(annotatedAt.getTime()))
+  const noteId = `${courseId}-note`;
   return (
     <>
       <CardHeader className="flex flex-row gap-x-7 space-y-0 items-top">
@@ -24,8 +27,11 @@ export function NotesOverlay(
             {annotatedAt.getTime()} // {note}
           </CardDescription>)
         }
+        <NoteForm noteId={noteId}
+          onConfirm={(note: Note) => addNote({ ...note, courseId })} />
       </CardContent >
       <CardFooter className="flex w-full justify-between gap-x-2">
+        <Button type="submit" form={noteId} className="w-full">Save Note</Button>
         <Button onClick={() => { hideOverlay({ courseId }) }}
           className="w-full">Close</Button>
       </CardFooter>

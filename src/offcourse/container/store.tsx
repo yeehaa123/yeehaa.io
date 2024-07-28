@@ -10,6 +10,7 @@ import { QueryType } from "../query";
 import { responder } from "./responder";
 import { authenticate, getAuthData, logout } from "./auth";
 import { useEffect } from "react";
+import type { Note } from "../schema";
 
 export type StoreCardState = Omit<CourseCardState, "actions">
 export type OffcourseState = {
@@ -77,8 +78,13 @@ export function useOffcourse(data: Course | Course[]) {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
     dispatch({ type: ActionType.UNSELECT_CHECKPOINT, payload })
   }
+
   const hideOverlay = async (payload: CourseQuery) => {
     dispatch({ type: ActionType.HIDE_OVERLAY, payload })
+  }
+
+  const addNote = (payload: CourseQuery & Note) => {
+    dispatch({ type: ActionType.ADD_NOTE, payload })
   }
 
   const signIn = async () => {
@@ -100,6 +106,7 @@ export function useOffcourse(data: Course | Course[]) {
   }
 
   const actions = {
+    addNote,
     toggleBookmark,
     toggleCheckpoint,
     signIn,

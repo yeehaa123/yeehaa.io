@@ -42,7 +42,7 @@ export const courseSchema = z.object({
   checkpoints: z.array(checkpointSchema)
 })
 
-export const courseNoteSchema = z.object({
+export const noteSchema = z.object({
   note: z.string(),
   annotatedAt: z.coerce.date(),
 })
@@ -70,10 +70,10 @@ export const userRecord = z.object({
   isBookmarked: z.boolean(),
   isFollowed: z.boolean(),
   completed: z.array(z.string()),
-  notes: z.array(courseNoteSchema)
+  notes: z.array(noteSchema)
 });
 
-export type CourseNote = z.infer<typeof courseNoteSchema>
+export type Note = z.infer<typeof noteSchema>
 export type AuthState = z.infer<typeof authState>
 export type Analysis = z.infer<typeof analysisSchema>
 export type Course = z.infer<typeof courseSchema>

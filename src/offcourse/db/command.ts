@@ -3,12 +3,17 @@ import { deleteBookmark, insertBookmark, } from "@/offcourse/db/models/bookmark"
 import { insertCourse } from "@/offcourse/db/models/course"
 import { actionSchema, ActionType } from '@/offcourse/container/action';
 import { deleteCompletion, insertCompletion } from "./models/completion";
+import { insertNote } from "./models/note";
 
 export async function handleCommand(body: string) {
   const action = actionSchema.parse(body)
   const id = await insertCommand(action);
   const { type, payload } = action;
   switch (type) {
+    case ActionType.ADD_NOTE: {
+      insertNote(payload);
+      break;
+    }
     case ActionType.COMPLETE_CHECKPOINT: {
       insertCompletion(payload);
       insertCourse(payload);

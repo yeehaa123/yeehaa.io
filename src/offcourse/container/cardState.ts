@@ -1,6 +1,6 @@
 import type { Course, AuthState, Checkpoint } from "@/offcourse/types";
 import { OverlayModes } from "../components/Overlay"
-import type { UserRecord, CourseNote } from "../schema";
+import type { UserRecord, Note } from "../schema";
 type OffCourseData = Course | Course[]
 
 function isCourse(data: OffCourseData): data is Course {
@@ -18,7 +18,7 @@ export type CardState = {
   isBookmarked: boolean,
   isFollowed: boolean,
   completed: string[],
-  notes: CourseNote[],
+  notes: Note[],
   overlayMode: OverlayModes,
   selectedCheckpoint: Checkpoint | undefined,
   affordances: Affordances,

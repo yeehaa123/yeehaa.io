@@ -23,6 +23,7 @@ import {
   Checkpoint,
   Tags
 } from "./";
+import type { Note } from "../schema";
 
 export type CardActions = {
   signIn: () => void,
@@ -33,6 +34,7 @@ export type CardActions = {
   showInfoOverlay: (query: CourseQuery) => void
   showNotesOverlay: (query: CourseQuery) => void
   hideOverlay: (query: CourseQuery) => void
+  addNote: (payload: Note & CourseQuery) => void;
 }
 
 export type CourseCardState = {
