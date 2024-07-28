@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Base.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
+import  { HeroSection}from "@/components/HeroSection";
 import  {Section }from "@/components/PageSection";
 import  {IconCard }from "@/components/IconCard";
 import { getEntry } from 'astro:content';
@@ -13,8 +14,12 @@ interface Props  {
 const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
 const { data } = entry
-const { sections } = data;
+const { sections, bannerImageURL } = data;
 const { hero, challenges,concepts, approach, about, services, case_study, main_cta } = sections;
+
+import { getImage } from "astro:assets";
+
+const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'});
 
 ---
 <Layout {logoLink}  {...data}>
@@ -25,15 +30,7 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
     {...data}
 
   />
-  <header class="bg-primary text-primary-foreground py-20">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-5xl font-bold mb-4">{hero.title}</h1>
-      <p class="text-2xl mb-8">{hero.subtitle}</p>
-      <Button size="lg" asChild>
-        <a href={hero.cta.action}>{hero.cta.text}</a>
-      </Button>
-    </div>
-  </header>
+  <HeroSection slot="hero" bannerImageURL={optimizedBackground.src} {...hero} />
   <Section title={challenges.title} subtitle={challenges.subtitle}>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {challenges.items.map((item) => (

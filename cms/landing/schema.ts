@@ -23,7 +23,9 @@ export const analysisSchema = z.object({
 const associationsSchema = z.object({
 })
 
-export const augmentationsSchema = z.object({})
+export const augmentationsSchema = z.object({
+  bannerImageURL: z.string(),
+})
 
 export const outputSchema = landingContentSchema
   .merge(analysisSchema)

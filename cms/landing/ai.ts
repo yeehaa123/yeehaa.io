@@ -6,7 +6,6 @@ export async function analyze(entity: BaseLanding) {
   const { meta, page_content } = entity;
   const content = JSON.stringify(page_content);
   const { checksum } = meta;
-  console.log(checksum);
   const id = checksum;
   const summary_length = 600;
   const excerpt_length = 200;
@@ -34,8 +33,14 @@ export async function augment(_entity: AssociatedLanding, id: string) {
 export async function bannerImage({ description, tags }:
   { description: string, tags: string[] }, checksum: string) {
   const id = `${checksum}-banner`
-  const prompt = `generate a banner image for a profile page with the following description: '${description}' and tags: ${tags.join(", ")}.`
-  return await ai.image.generate({ prompt, id });
+  const prompt = `
++ Imagine you are a photographer that needs to take a picture that should serve as the banner image for a website
++ The website has  the following description '${description}' 
++ And the following tags: ${tags.join(", ")}.
++ Keep it illustration only
++ Don't show any written words, characters or text in the image. 
++ Have a bright background in the brand colors`
+  return await ai.image.generate({ prompt, id, shape: "RECT", style: "VIVID" });
 }
 
 export async function profilePicture({ description, tags }:
