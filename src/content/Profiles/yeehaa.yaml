@@ -4,27 +4,27 @@ socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
   github: https://www.github.com/yeehaa123/
   instagram: https://www.instagram.com/yeehaa12345/
-bio: yeehaa is a seasoned professional with robust experience across industries
-  including technology and consulting. With strong backgrounds in software
-  engineering and project management, yeehaa has driven significant upgrades and
-  implementations. An alumnus of top-tier institutions, yeehaa combines academic
-  insights with practical expertise to foster innovation and efficiency.
+bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's passionate
+  about transforming education and knowledge sharing. As an entrepreneur,
+  thinker, and coder, he founded Offcourse and created the Superconnectors event
+  format. With experience in traditional and non-traditional education, he
+  advocates for impactful and inclusive internet. yeehaa has been involved in
+  various tech and education initiatives, including the Dutch Internet Society
+  and Public Spaces Coalition. Currently based in Taipei, he focuses on bringing
+  people together around common values and creating effective ecosystems.
 courses:
   - groom-your-ecosystem
-  - practice-innovation
 articles:
   - across-space-and-time
-  - align-the-misaligned
-  - practice-innovation
 tags:
+  - edu
   - tech
-  - eco
-  - future
-  - innov
-  - design
-  - consult
-  - web
-  - global
+  - phd
+  - ecosys
+  - code
+  - learn
+  - vision
+  - impact
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -49,7 +49,7 @@ profile:
 
     In 2021, I created the Superconnectors event format that enabled startups to
     present their so-called 'critical ask' to the best-connected people of the
-    Dutch tech ecosystem. 
+    global tech ecosystem. 
 
 
     I holds a PhD in Philosophy from the university of Utrecht and worked as a
@@ -61,18 +61,21 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: c85de7478c57ae46faf404719a6d1bf7
-description: Yeehaa is a seasoned tech manager and consultant with a strong
-  background in software engineering and project management. Their expertise
-  spans multiple industries, driving significant upgrades and implementations.
-  An alumnus of top-tier institutions, Yeehaa combines academic insights with
-  practical expertise to foster innovation and efficiency. Their work focuses on
-  ecosystem architecture, innovation practices, and the future of technology.
-  Yeehaa's blog posts explore topics like biological ecosystems, internet
-  fragmentation, and regenerative design. They've curated courses on ecosystem
-  grooming and innovation, emphasizing leadership, adaptability, and creativity.
-  Yeehaa's approach blends technical knowledge with a vision for resilient,
-  interconnected systems across various domains.
-blurb: "Yeehaa: Tech innovator bridging ecosystems and future-focused solutions."
-profileImageURL: ./c85de7478c57ae46faf404719a6d1bf7-profile.png
+checksum: d3081cff18e5946245dba5d3b0a67e4c
+description: yeehaa is an ecosystem architect with a PhD in Philosophy, focusing
+  on transforming education and knowledge sharing. As the founder of Offcourse
+  and creator of Superconnectors, he combines entrepreneurship, thinking, and
+  coding. His work spans traditional and non-traditional education, advocating
+  for an impactful and inclusive internet. yeehaa's involvement in tech and
+  education initiatives includes the Dutch Internet Society and Public Spaces
+  Coalition. Based in Taipei, he brings people together around common values,
+  creating effective ecosystems. His blog post "Across Space And Time" explores
+  the concept of ecosystems in biology and organizations, while his course
+  "Groom Your Ecosystem" offers unique steps for fostering cohesive
+  environments, emphasizing leadership, adaptability, innovation, and
+  aesthetics.
+blurb: Biological ecosystems are specific to space and time, but the term
+  'ecosystem' has been broadened to describe non-natural organizations,
+  underscoring a shift towards organic, decentralized structures.
+profileImageURL: ./d3081cff18e5946245dba5d3b0a67e4c-profile.png
 title: Yeehaa

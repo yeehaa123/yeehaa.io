@@ -5,6 +5,10 @@ export function isProfileFile({ fileName }: File) {
   return fileName === "profile";
 }
 
+export function isLandingFile({ fileName }: File) {
+  return fileName === "landing";
+}
+
 export function isMarkdownFile({ fileType }: File) {
   return fileType === FileType.MARKDOWN;
 }

@@ -35,12 +35,12 @@ export function init({ article, title, author, series }: InitArticle) {
   return baseSchema.parse({ meta, article });
 }
 
-export async function analyze(entry: BaseArticle) {
-  const { article: content, meta } = entry;
+export async function analyze(entity: BaseArticle) {
+  const { article: content, meta } = entity;
   const { checksum, title } = meta;
   const { description, tags, excerpt } = await ai.analyzeArticle({ title, content, checksum });
   const analysis = { description, tags, excerpt };
-  return analyzedSchema.parse({ ...entry, analysis })
+  return analyzedSchema.parse({ ...entity, analysis })
 }
 
 export function associate(entity: AnalyzedArticle, table: AnalyzedTable) {

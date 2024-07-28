@@ -5,6 +5,7 @@ export enum ContentType {
   ARTICLE = "article",
   COURSE = "course",
   PROFILE = "profile",
+  LANDING_PAGE = "landing_page",
   SERIES = "series",
   TAG = "tag"
 }

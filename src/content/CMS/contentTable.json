@@ -18,14 +18,9 @@
     "author": "yeehaa",
     "title": "Align The Misaligned",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "9c2c6dbe14179949330a01f8d039e032",
-    "publicationData": {
-      "createdAt": "2024-07-15T13:36:51.589Z",
-      "updatedAt": "2024-07-15T13:36:51.589Z",
-      "publishedAt": "2024-07-15T13:36:51.589Z"
-    }
+    "checksum": "9c2c6dbe14179949330a01f8d039e032"
   },
   {
     "id": "dab57a97b73c41955321d0f6def877ae",
@@ -92,28 +87,18 @@
     "author": "yeehaa",
     "title": "Practice Innovation",
     "contentType": "article",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "6fdb3d094e1182c2fd737b9655154825",
-    "publicationData": {
-      "createdAt": "2024-07-15T13:30:32.659Z",
-      "updatedAt": "2024-07-15T13:30:32.659Z",
-      "publishedAt": "2024-07-15T13:30:32.659Z"
-    }
+    "checksum": "6fdb3d094e1182c2fd737b9655154825"
   },
   {
     "id": "435d37c4854bef9c03d78f045b9ed31a",
     "author": "yeehaa",
     "title": "Practice Innovation",
     "contentType": "course",
-    "status": "published",
+    "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a",
-    "publicationData": {
-      "createdAt": "2024-07-15T14:07:26.917Z",
-      "updatedAt": "2024-07-15T14:07:26.917Z",
-      "publishedAt": "2024-07-15T14:07:26.917Z"
-    }
+    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a"
   },
   {
     "id": "60b3687a0f78924fb19685ba21650e52",
@@ -131,7 +116,7 @@
     "contentType": "article",
     "status": "draft",
     "series": "Ecosystem Architecture",
-    "checksum": "e4679d7b71c21668461381d4e1fe15f2"
+    "checksum": "97b424310fc789e33b73701dfb935e9f"
   },
   {
     "id": "2464b805ec1f564bcc2ad6c688dfc071",
@@ -171,12 +156,24 @@
     "habitat": "Continental Drift"
   },
   {
+    "id": "b01e1a34626390069d84a828a77133b8",
+    "title": "Yeehaa - Ecosystem Architect",
+    "contentType": "landing_page",
+    "status": "published",
+    "checksum": "563a6c5b44979241d5ca43511a52953e",
+    "publicationData": {
+      "createdAt": "2024-07-28T15:21:58.577Z",
+      "updatedAt": "2024-07-28T15:21:58.577Z",
+      "publishedAt": "2024-07-28T15:21:58.577Z"
+    }
+  },
+  {
     "id": "90145c64e30b6529d28643ee315fd1f4",
     "author": "yeehaa",
     "title": "yeehaa",
     "contentType": "profile",
     "status": "published",
-    "checksum": "e2900780b5f3a258b214302164e0d068",
+    "checksum": "f65a4a50ad6cf1db291ab61694c40c92",
     "publicationData": {
       "createdAt": "2024-07-01T06:34:16.013Z",
       "updatedAt": "2024-07-01T06:34:16.013Z",

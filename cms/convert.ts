@@ -6,6 +6,7 @@ import * as ot from "./outputTable";
 import * as series from "./series";
 import * as article from "./article";
 import * as course from "./course";
+import * as landing from "./landing";
 import * as profile from "./profile";
 import * as tags from "./tag";
 import * as collections from "./collections";
@@ -22,6 +23,7 @@ export const PATH_SUFFIXES = [
   profile.PATH_SUFFIX,
   series.PATH_SUFFIX,
   tags.PATH_SUFFIX,
+  landing.PATH_SUFFIX,
 ];
 
 async function main() {

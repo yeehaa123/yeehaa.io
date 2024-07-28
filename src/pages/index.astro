@@ -1,32 +1,49 @@
 ---
-import { BaseHead, OGType} from "@/components/BaseHead";
-import Layout from "../layouts/Base.astro"
-import { PostListing } from "../components/Postlisting"
+import Layout from "@/layouts/Base.astro"
+import  { BaseHead, OGType  }from "@/components/BaseHead";
+import  {Section }from "@/components/PageSection";
+import  {IconCard }from "@/components/IconCard";
+import { getEntry } from 'astro:content';
+import { Button } from "@/components/ui/button";
 
-const title = "YEEHAA";
-import { getPosts } from "@/helpers/pages";
-import { getEntry } from "astro:content";
-const posts = await getPosts();
-const articles = posts.sort(
-  (a, b) => {
-    if (b.data.publishedAt && a.data.publishedAt) {
-      return b.data.publishedAt > a.data.publishedAt ? 0 : -1
-    } else {
-      return -1
-    }
-  })
-const series = await getEntry("Series", "ecosystem-architecture");
-const description = series.data.summary;
+interface Props  {
+  logoLink: "/"
+}
+
+const { logoLink = "/" } = Astro.props;
+const entry = await getEntry("LandingPage", "index")
+const { data } = entry
+const { sections } = data;
+const { hero, ...rest } = sections;
 
 ---
-<Layout {title}>
+<Layout {logoLink}  {...data}>
   <BaseHead 
     slot="og:data" 
+    url={Astro.url}
     type={OGType.WEBSITE} 
-    {title} 
-    {description} 
-    url={Astro.url} />
-  <div transition:name="content" class="px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { articles.map(({slug, data }) => <PostListing {...data} {slug}/>)}
-  </div>
+    {...data}
+
+  />
+      <header class="bg-primary text-primary-foreground py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-5xl font-bold mb-4">{hero.title}</h1>
+          <p class="text-2xl mb-8">{hero.subtitle}</p>
+          <Button size="lg" asChild>
+            <a href={hero.cta.action}>{hero.cta.text}</a>
+          </Button>
+        </div>
+      </header>
+        <Section title="Breaking Free from Stagnation" subtitle="Critical Challenges to Overcome">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            { title: "Siloed Knowledge", icon: "Boxes", description: "Information trapped in departments, hindering collaboration and innovation in an increasingly connected world." },
+            { title: "Rigid Structures", icon: "GitBranch", description: "Traditional hierarchies slowing down decision-making and adaptability in fast-paced markets." },
+            { title: "Disconnected Learning", icon: "Brain", description: "Training and development not aligned with real organizational needs and emerging market opportunities." },
+          ].map((item, index) => (
+            <IconCard key={index} {...item} />
+          ))}
+        </div>
+      </Section>
+  <pre>{JSON.stringify(rest, null,2)}</pre>
 </Layout>

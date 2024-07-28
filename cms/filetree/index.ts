@@ -9,8 +9,9 @@ import { deslugify, parseMarkdoc, parseProfileFile } from "../helpers";
 import * as yaml from "yaml";
 import type { RawCourse } from "cms/course";
 import { ContentType } from "cms/meta/schema";
-import { isMarkdownFile, isOffcourseFile, isProfileFile } from "./filters";
+import { isMarkdownFile, isOffcourseFile, isProfileFile, isLandingFile } from "./filters";
 import type { Curator } from "@/offcourse/schema";
+import type { LandingContent } from "cms/landing/schema";
 
 
 async function convertFile(fileData: File) {
@@ -18,6 +19,11 @@ async function convertFile(fileData: File) {
   if (isProfileFile(fileData)) {
     const content = parseProfileFile(item) as Curator;
     return { content, contentType: ContentType.PROFILE }
+  }
+
+  if (isLandingFile(fileData)) {
+    const content = yaml.parse(item) as LandingContent;
+    return { content, contentType: ContentType.LANDING_PAGE }
   }
 
   if (isMarkdownFile(fileData)) {

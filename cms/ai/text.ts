@@ -12,14 +12,18 @@ export async function analyze({ prompt, id, schema }: { prompt: string, id: stri
     return schema.parse(cachedItem);
   }
   console.log("NOT FROM CACHE", id);
-  const { object } = await generateObject({
-    // @ts-ignore
-    model: anthropic('claude-3-5-sonnet-20240620'),
-    schema: schema,
-    prompt
-  })
-  const item = schema.parse(object);
-  cache.setItem(id, item);
-  return item;
+  try {
+    const { object } = await generateObject({
+      // @ts-ignore
+      model: anthropic('claude-3-5-sonnet-20240620'),
+      schema: schema,
+      prompt
+    })
+    const item = schema.parse(object);
+    cache.setItem(id, item);
+    return item;
+  } catch (e) {
+    console.log("ERROR:", e);
+  }
 }
 
