@@ -41,13 +41,13 @@ export async function generate({ prompt, id, shape, style }: AIImageProps) {
 
 // just for future need...
 export async function SDGenerate({ prompt, id }: AIImageProps) {
-  try {
-    const payload = {
-      prompt,
-      aspect_ratio: "21:9",
-      output_format: "png",
-    };
+  const payload = {
+    prompt: prompt + styleAddition,
+    aspect_ratio: "21:9",
+    output_format: "png",
+  };
 
+  try {
     const response = await fetch(
       `https://api.stability.ai/v2beta/stable-image/generate/sd3`,
       {

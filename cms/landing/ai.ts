@@ -39,8 +39,9 @@ export async function bannerImage({ description, tags }:
 + And the following tags: ${tags.join(", ")}.
 + Keep it illustration only
 + Don't show any written words, characters or text in the image. 
++ No typography, just visual elements
 + Have a bright background in the brand colors`
-  return await ai.image.generate({ prompt, id, shape: "RECT", style: "VIVID" });
+  return await ai.image.SDGenerate({ prompt, id })
 }
 
 export async function profilePicture({ description, tags }:
