@@ -1,22 +1,23 @@
-import type { CardState } from "../types";
-import { OverlayModes } from "../types";
-import type { Actions } from "./CourseCard"
-
+import type { CourseCardState } from "./CourseCard"
 import { Transition } from "@headlessui/react"
 import { CheckpointOverlay } from "./CheckpointOverlay";
+import { NoneOverlay } from "./NoneOverlay";
+import { NotesOverlay } from "./NotesOverlay";
 import { InfoOverlay } from "./InfoOverlay";
 import CardChrome from "./CardChrome";
 
-type Props = {
-  courseId: string,
-  cardState: CardState,
-  actions: Actions
+export enum OverlayModes {
+  NONE = "NONE",
+  INFO = "INFO",
+  CHECKPOINT = "CHECKPOINT",
+  NOTES = "NOTES"
 }
 
-export function Overlay(props: Props) {
+export function Overlay(props: CourseCardState) {
   const overlayMode = props.cardState.overlayMode;
   const InternalOverlay = {
-    [OverlayModes.NONE]: InfoOverlay,
+    [OverlayModes.NONE]: NoneOverlay,
+    [OverlayModes.NOTES]: NotesOverlay,
     [OverlayModes.INFO]: InfoOverlay,
     [OverlayModes.CHECKPOINT]: CheckpointOverlay,
   }[overlayMode]
@@ -29,7 +30,7 @@ export function Overlay(props: Props) {
       enterFrom="translate-y-full opacity-80"
       enterTo="translate-y-0 z-10 opacity-100"
       leave="ease-out duration-100"
-      leaveFrom="translate-y-0 opacity-60"
+      leaveFrom="translate-y-0 opacity-100"
       leaveTo="translate-y-full opacity-0" >
       <InternalOverlay {...props} />
     </Transition>)

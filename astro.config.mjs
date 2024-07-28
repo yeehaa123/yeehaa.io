@@ -11,7 +11,7 @@ import alpinejs from '@astrojs/alpinejs';
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
   experimental: {},
@@ -25,7 +25,7 @@ export default defineConfig({
   integrations: [tailwind({
     applyBaseStyles: false
   }), mdx(), alpinejs(), react(), sitemap()],
-  output: "static",
+  output: "hybrid",
   adapter: vercel({
     webAnalytics: {
       enabled: true,

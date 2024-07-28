@@ -2,7 +2,6 @@
 import { Offcourse } from "@/offcourse/"
 import { BaseHead, OGType} from "@/components/BaseHead";
 import Layout from "@/layouts/Base.astro"
-
 import { getEntry, getCollection } from "astro:content";
 const courses = await getCollection('Courses');
 const series = await getEntry("Series", "ecosystem-architecture");

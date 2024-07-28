@@ -35,15 +35,24 @@ export const courseSchema = z.object({
   curator: curatorSchema,
   description: z.string(),
   habitat: habitatSchema.optional(),
-  createdAt: z.date(),
-  updatedAt: z.date(),
-  publishedAt: z.date().optional(),
+  createdAt: z.coerce.date(),
+  updatedAt: z.coerce.date(),
+  publishedAt: z.coerce.date().optional(),
   tags: z.array(z.string()),
   checkpoints: z.array(checkpointSchema)
 })
 
+export const noteSchema = z.object({
+  note: z.string(),
+  annotatedAt: z.coerce.date(),
+})
+
 export const courseQuery = courseSchema.pick({
   courseId: true
+})
+
+export const coursesQuery = z.object({
+  courseIds: z.array(z.string())
 })
 
 export const checkpointQuery = courseQuery.merge(checkpointSchema).pick({
@@ -51,12 +60,30 @@ export const checkpointQuery = courseQuery.merge(checkpointSchema).pick({
   checkpointId: true
 })
 
+export const authState = z.object({
+  userName: z.string(),
+  repository: z.string()
+})
+
+export const userRecord = z.object({
+  courseId: z.string(),
+  isBookmarked: z.boolean(),
+  isFollowed: z.boolean(),
+  completed: z.array(z.string()),
+  notes: z.array(noteSchema)
+});
+
+export type Note = z.infer<typeof noteSchema>
+export type AuthState = z.infer<typeof authState>
 export type Analysis = z.infer<typeof analysisSchema>
 export type Course = z.infer<typeof courseSchema>
 export type Checkpoint = z.infer<typeof checkpointSchema>
+export type UserRecord = z.infer<typeof userRecord>
 
 export type Habitat = z.infer<typeof habitatSchema>
 export type Curator = z.infer<typeof curatorSchema>
 
+
 export type CourseQuery = z.infer<typeof courseQuery>
+export type CoursesQuery = z.infer<typeof coursesQuery>
 export type CheckpointQuery = z.infer<typeof checkpointQuery>

@@ -5,7 +5,7 @@ import type { AssociatedTag } from "./schema";
 export async function analyze(entity: AssociatedTag, id: string) {
   const { meta, associations } = entity;
   const { title } = meta;
-  const { articles, courses, profiles } = associations;;
+  const { articles, courses } = associations;;
   const summary_length = 600;
   const excerpt_length = 200;
   const schema = ts.augmentationsSchema.omit({
@@ -19,8 +19,6 @@ Given the following things:
 Articles: ${JSON.stringify(articles, null, 2)}
 
 Courses: ${JSON.stringify(courses, null, 2)}
-
-Profiles: ${JSON.stringify(profiles, null, 2)}
 
 Please describe the tag a maximum of ${summary_length} characters. Dont use quotation marks. Also do not explictly mention the word 'tag'.
 n

@@ -1,27 +1,32 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import path from "path";
 import sharp from "sharp";
+
+import fs from 'fs';
+
+async function base64_encode(imageResult: string) {
+  var bitmap = fs.readFileSync(imageResult);
+  const postCover = await sharp(
+    bitmap
+  ).resize(1200).toBuffer()
+  return postCover;
+}
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('Posts');
   return blogEntries.map(entry => {
+    const imageData = entry.data.bannerImageURL;
+    // @ts-ignore
+    const image = base64_encode(imageData.fsPath);
     return {
-      params: { slug: entry.slug }, props: { entry },
+      params: { slug: entry.slug }, props: { image },
     }
   });
 }
 
 export const GET: APIRoute = async function get({ props }) {
-  const postCover = await sharp(
-    process.env.NODE_ENV === 'development'
-      ? path.resolve(
-        props.entry.data.bannerImageURL.src.replace(/\?.*/, '').replace('/@fs', '/'),
-      )
-      : path.resolve(props.entry.data.bannerImageURL.src.replace('/', '.vercel/output/static/')),
-  ).resize(1200).toBuffer()
-
-  return new Response(postCover, {
+  const image = await props.image;
+  return new Response(image, {
     headers: {
       "Content-Type": "image/png",
     },

@@ -1,9 +1,9 @@
-import type { CourseCardState, Actions } from "./CourseCard"
+import type { CourseCardState, CardActions } from "./CourseCard"
 import { CourseCard } from "."
 
 export type Props = {
-  cards: CourseCardState[],
-  actions: Actions
+  cards: Omit<CourseCardState, "actions">[],
+  actions: CardActions
 }
 
 export default function CourseCollection({ cards, actions }: Props) {
