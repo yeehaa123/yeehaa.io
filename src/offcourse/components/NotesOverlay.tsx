@@ -6,12 +6,12 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card"
-import type { OverlayProps } from "./Overlay";
 import { NoteForm } from "./NoteForm";
 import type { Note } from "../schema";
+import type { CourseCardState } from "./CourseCard";
 
 export function NotesOverlay(
-  { courseId, actions, cardState }: OverlayProps) {
+  { courseId, actions, cardState }: CourseCardState) {
   const { overlayMode, notes } = cardState;
   const { hideOverlay, addNote } = actions;
   const noteId = `${courseId}-note`;

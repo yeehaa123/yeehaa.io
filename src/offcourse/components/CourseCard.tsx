@@ -28,13 +28,13 @@ import type { Note } from "../schema";
 export type CardActions = {
   signIn: () => void,
   signOut: () => void,
-  toggleBookmark: (query: CourseQuery) => void,
-  toggleCheckpoint: (query: CheckpointQuery) => void,
-  showCheckpointOverlay: (query: CheckpointQuery) => void
-  showInfoOverlay: (query: CourseQuery) => void
-  showNotesOverlay: (query: CourseQuery) => void
-  hideOverlay: (query: CourseQuery) => void
-  addNote: (payload: Note & CourseQuery) => void;
+  toggleBookmark: (arg: CourseQuery) => void,
+  toggleCheckpoint: (arg: CheckpointQuery) => void,
+  showCheckpointOverlay: (arg: CheckpointQuery) => void
+  showInfoOverlay: (arg: CourseQuery) => void
+  showNotesOverlay: (arg: CourseQuery) => void
+  hideOverlay: (arg: CourseQuery) => void
+  addNote: (arg: Note & CourseQuery) => void;
 }
 
 export type CourseCardState = {
@@ -45,7 +45,8 @@ export type CourseCardState = {
   actions: CardActions
 }
 
-export default function CourseCard({ course, cardState, actions }: CourseCardState) {
+export default function CourseCard(courseCardState: CourseCardState) {
+  const { course, actions, cardState } = courseCardState;
   const {
     courseId,
     goal,
@@ -75,8 +76,8 @@ export default function CourseCard({ course, cardState, actions }: CourseCardSta
 
   return (
     <div className="grid *:col-start-1 *:row-start-1 overflow-hidden" >
-      <Overlay courseId={courseId} cardState={cardState} actions={actions} />
-      <CardChrome>
+      <Overlay {...courseCardState} />
+      < CardChrome >
         <CardHeader className="space-y-4">
           <CardTitle className="flex w-full justify-between space-x-5 ">
             <span className="max-w-[80%]">{goal}</span>

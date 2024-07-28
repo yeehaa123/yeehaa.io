@@ -8,11 +8,12 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card"
-import type { OverlayProps } from "./Overlay";
+import type { CourseCardState } from "./CourseCard";
 
 export function InfoOverlay(
-  { courseId, actions, cardState }: OverlayProps) {
-  const { userName } = cardState;
+  { courseId, actions, cardState }: CourseCardState) {
+  const { userName, affordances } = cardState;
+  const { canAuthenticate } = affordances;
   const { hideOverlay, signOut, signIn } = actions;
   return (
     <>
@@ -23,13 +24,12 @@ export function InfoOverlay(
         <div className="flex w-full justify-center">
           <Logo className="w-24 h-24 mb-8 dark:fill-offwhite fill-offblack" />
         </div>
-        {userName
-          ? <Button onClick={signOut} variant="outline" className="w-full">
-            Sign Out
-          </Button>
-          : <Button onClick={signIn} variant="outline" className="w-full">
-            <GitHubLogoIcon className="mr-2 h-4 w-4" />
-            Authenticate With Github
+        {canAuthenticate &&
+          <Button onClick={userName ? signOut : signIn} variant="outline" className="w-full">
+            {userName
+              ? "Sign Out"
+              : <><GitHubLogoIcon className="mr-2 h-4 w-4" />
+                Authenticate With Github</>}
           </Button>}
         <CardDescription>
           <a className="text-secondary" target="_blank" href="https://offcourse.io">Offcourse</a> is an open-source platform designed for online learning, leveraging the wealth of information available on the internet,

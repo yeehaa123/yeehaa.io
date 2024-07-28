@@ -8,6 +8,7 @@ function isCourse(data: OffCourseData): data is Course {
 }
 
 export type Affordances = {
+  canAuthenticate: boolean,
   canBookmark: boolean,
   canFollow: boolean,
   canAnnotate: boolean,
@@ -25,6 +26,7 @@ export type CardState = {
 }
 
 const initialAffordances = {
+  canAuthenticate: false,
   canBookmark: false,
   canFollow: false,
   canEdit: false,
