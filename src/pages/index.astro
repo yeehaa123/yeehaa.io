@@ -14,7 +14,7 @@ const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
 const { data } = entry
 const { sections } = data;
-const { hero, ...rest } = sections;
+const { hero, challenges,concepts, approach, about, services, case_study, main_cta } = sections;
 
 ---
 <Layout {logoLink}  {...data}>
@@ -25,25 +25,68 @@ const { hero, ...rest } = sections;
     {...data}
 
   />
-      <header class="bg-primary text-primary-foreground py-20">
-        <div class="container mx-auto px-4 text-center">
-          <h1 class="text-5xl font-bold mb-4">{hero.title}</h1>
-          <p class="text-2xl mb-8">{hero.subtitle}</p>
-          <Button size="lg" asChild>
-            <a href={hero.cta.action}>{hero.cta.text}</a>
-          </Button>
-        </div>
-      </header>
-        <Section title="Breaking Free from Stagnation" subtitle="Critical Challenges to Overcome">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { title: "Siloed Knowledge", icon: "Boxes", description: "Information trapped in departments, hindering collaboration and innovation in an increasingly connected world." },
-            { title: "Rigid Structures", icon: "GitBranch", description: "Traditional hierarchies slowing down decision-making and adaptability in fast-paced markets." },
-            { title: "Disconnected Learning", icon: "Brain", description: "Training and development not aligned with real organizational needs and emerging market opportunities." },
-          ].map((item, index) => (
-            <IconCard key={index} {...item} />
-          ))}
-        </div>
-      </Section>
-  <pre>{JSON.stringify(rest, null,2)}</pre>
+  <header class="bg-primary text-primary-foreground py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-bold mb-4">{hero.title}</h1>
+      <p class="text-2xl mb-8">{hero.subtitle}</p>
+      <Button size="lg" asChild>
+        <a href={hero.cta.action}>{hero.cta.text}</a>
+      </Button>
+    </div>
+  </header>
+  <Section title={challenges.title} subtitle={challenges.subtitle}>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {challenges.items.map((item) => (
+      <IconCard {...item} />
+      ))}
+    </div>
+  </Section>
+  <Section title={concepts.title} className="bg-secondary">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {concepts.items.map((item) => (
+      <IconCard {...item} />
+      ))}
+    </div>
+  </Section>
+  <Section title={approach.title} subtitle={approach.subtitle}>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {approach.items.map((item) => (
+      <IconCard {...item} />
+      ))}
+    </div>
+  </Section>
+  <Section title={about.title} subtitle={about.subtitle} className="bg-muted">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-lg mb-6">yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.</p>
+      <ul class="list-disc list-inside mb-6">
+        {about.key_points.map((point)=> <li>{point}</li>)}
+      </ul>
+    </div>
+  </Section>
+  <Section title={services.title}>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      {services.items.map((item) => (
+      <IconCard {...item} />
+      ))}
+    </div>
+  </Section>
+  <Section title={case_study.title} subtitle={case_study.subtitle} className="bg-accent text-accent-foreground">
+  <div class="max-w-3xl mx-auto">
+    <p class="text-lg mb-6">{case_study.description}</p>
+      <ul class="list-disc list-inside mb-6">
+        {case_study.key_results.map((result)=> <li>{result}</li>)}
+      </ul>
+    <Button variant="secondary" asChild>
+      <a href={case_study.cta.action}>{case_study.cta.text}</a>
+    </Button>
+  </div>
+  </Section>
+  <Section title={main_cta.title} subtitle={main_cta.subtitle}>
+    <div class="text-center">
+      <Button size="lg" asChild>
+        <a href={main_cta.cta.action}>{main_cta.cta.text}</a>
+      </Button>
+    </div>
+  </Section>
 </Layout>

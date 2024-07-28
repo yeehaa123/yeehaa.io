@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 
 type Section = {
   title: string,
-  subtitle: string,
+  subtitle?: string,
   children: ReactElement,
   className?: string
 }
