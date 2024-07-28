@@ -34,14 +34,15 @@ export async function bannerImage({ description, tags }:
   { description: string, tags: string[] }, checksum: string) {
   const id = `${checksum}-banner`
   const prompt = `
-+ Imagine you are a photographer that needs to take a picture that should serve as the banner image for a website
-+ The website has  the following description '${description}' 
++ Create a visually appealing banner image
++ Imagine you are a photographer that is taking a picture
++ The image should display something that matches the following description '${description}' 
 + And the following tags: ${tags.join(", ")}.
-+ Keep it illustration only
 + Don't show any written words, characters or text in the image. 
 + No typography, just visual elements
++ Keep it illustration only
 + Have a bright background in the brand colors`
-  return await ai.image.SDGenerate({ prompt, id })
+  return await ai.image.generate({ prompt, id })
 }
 
 export async function profilePicture({ description, tags }:
