@@ -1,19 +1,17 @@
-checksum: a610fe726f12594e3e0f54c2aed887e9
-summary: Tech encompasses a range of digital and technological topics. It covers
-  internet fragmentation, ecosystem architecture, and the evolution of digital
-  landscapes. The theme explores innovative approaches to web development,
-  open-source principles, and digital fabrication. It also touches on guerrilla
-  filmmaking techniques and the importance of digital ownership. Tech-related
-  content aims to foster creativity, unconventional thinking, and the
-  preservation of the internet's diverse and dynamic nature. It encourages
-  engagement with organizations like ISOC and promotes the idea of keeping the
-  web weird and innovative.
-excerpt: The internet has fragmented like tectonic shifts, mimicking physical
-  space. Ecosystem architecture views digital landscapes as complex systems,
-  embracing fragmentation for innovation. The article explores types of
-  fragmentation, historical context, and perspectives on this phenomenon.
+checksum: 3c14abdba0002f77ab171c3fe1a110ff
+summary: Tech represents a broad domain encompassing innovation, creativity, and
+  strategic thinking. It's associated with various fields including film, music,
+  art, and leadership. This multifaceted concept encourages the use of tools,
+  generation of diverse ideas, and sharing of knowledge. It emphasizes the
+  importance of combining big-picture strategies with practical tactics to drive
+  innovation. Tech is not just about technology, but about fostering a mindset
+  that embraces uniqueness, power of ideas, and collaborative growth in various
+  creative and intellectual pursuits.
+excerpt: To practice innovation, one must think strategically, act tactically,
+  use tools creatively, generate diversity, and share generously. This approach
+  combines big-picture thinking with practical execution, encourages
+  unconventional tool use, embraces diverse ideas, and fosters collaboration.
 title: tech
-articles:
-  - align-the-misaligned
+articles: []
 courses:
-  - keep-the-web-weird
+  - practice-innovation

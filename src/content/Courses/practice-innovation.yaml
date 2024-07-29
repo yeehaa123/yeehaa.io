@@ -36,74 +36,97 @@ curator:
 
 
     I currently work and live in Taipei, Taiwan.
-description: To practice innovation, lead with a clear purpose to inspire
-  creativity and direction. Becoming a polyglot programmer broadens
-  problem-solving skills and adaptability. Embracing a bold, disruptive mindset
-  ('Bring Da Ruckus') fosters innovative thinking. Creating beauty in everyday
-  projects enhances creativity and attention to detail.
+description: To practice innovation, one must think strategically, act
+  tactically, use tools creatively, generate diversity, and share generously.
+  This approach combines big-picture thinking with practical execution,
+  encourages unconventional tool use, embraces diverse ideas, and fosters
+  collaboration through open knowledge sharing. These steps cultivate an
+  innovative mindset and environment.
 habitat: practice-innovation
 createdAt: 2024-07-29T12:45:35.886Z
 updatedAt: 2024-07-29T12:45:35.886Z
 publishedAt: 2024-07-29T12:45:35.886Z
 tags:
-  - purpose
-  - values
-  - goals
-  - inspire
-  - code
-  - learn
-  - diverse
-  - funk
+  - strategy
+  - think
+  - innovate
+  - film
+  - create
+  - tactics
   - music
-  - rebel
-  - gardens
-  - design
+  - invent
+  - art
+  - tech
+  - unique
+  - share
+  - lead
+  - power
+  - ideas
 checkpoints:
-  - task: Open Your Mind
-    href: https://www.indeed.com/career-advice/career-development/how-to-lead-with-purpose
-    checkpointId: d0aca3c3e7ad9bcebd164d9afff89477
-    description: The article explores leading with purpose, which aligns with
-      practicing innovation. It encourages open-mindedness by discussing how to
-      define personal values, set meaningful goals, and inspire others. These
-      concepts foster creative thinking and new approaches, essential for
-      innovation and opening one's mind to fresh possibilities.
+  - task: Think Strategically
+    href: https://hbr.org/2023/11/how-to-become-a-better-strategic-thinker
+    checkpointId: 022b1fcd5002bbb2f5c4b9f7552a342b
+    description: The article offers insights on enhancing strategic thinking skills,
+      crucial for innovation. It covers techniques like zooming out for
+      big-picture views, considering multiple perspectives, questioning
+      assumptions, and balancing analysis with intuition. These approaches
+      foster innovative problem-solving and creative idea generation, aligning
+      with the goal of practicing innovation.
     tags:
-      - purpose
-      - values
-      - goals
-      - inspire
-  - task: Generate Diversity
-    href: https://medium.com/@guestposts_92864/what-is-a-polyglot-programmer-and-why-you-should-become-one-e5629bf720c2
-    checkpointId: 7a5c553327c59fe899ce108fbd26654e
-    description: Polyglot programming encourages learning multiple programming
-      languages, fostering diverse problem-solving approaches. This diversity in
-      thinking and toolsets enhances innovation by enabling programmers to
-      tackle challenges from various angles, leading to creative solutions and
-      improved adaptability in the ever-evolving tech landscape.
+      - strategy
+      - think
+      - innovate
+  - task: Act Tactically
+    href: https://www.amazon.com/Spike-Lees-Gotta-Have-Filmmaking/dp/0671644173
+    checkpointId: 1b80f326d6476f68ccc9295d620bcf71
+    description: Spike Lee's book offers insights into innovative filmmaking
+      techniques and tactical decision-making in the creative process. It
+      provides practical advice on overcoming challenges, thinking outside the
+      box, and executing ideas effectively. The book encourages readers to
+      embrace unconventional approaches and take calculated risks in their
+      artistic endeavors.
     tags:
-      - code
-      - learn
-      - diverse
+      - film
+      - create
+      - tactics
   - task: Use Tools Against the Grain
-    href: https://www.newyorker.com/magazine/2018/07/09/how-george-clinton-made-funk-a-world-view
-    checkpointId: d54d80da40af1e1c08954886df10ff27
-    description: George Clinton's innovative approach to funk music exemplifies
-      using tools against the grain. He combined unconventional instruments,
-      styles, and personas to create a unique sound and worldview. This creative
-      misuse of musical tools and conventions demonstrates how breaking norms
-      can lead to groundbreaking innovations.
+    href: https://www.austinchronicle.com/music/2009-12-04/924587/
+    checkpointId: 10eab09e40c28326c4c4e7513e3ab878
+    description: The article showcases unconventional uses of musical instruments,
+      demonstrating how thinking outside the box can lead to innovative sounds.
+      This approach of using tools against their intended purpose aligns with
+      the goal of practicing innovation, encouraging creative problem-solving
+      and unique artistic expression.
     tags:
-      - funk
       - music
-      - rebel
-  - task: Make Some Beauty
-    href: https://renegadegardener.com/care-2/landscaping-101
-    checkpointId: a2ee8969bf0c4da40e3f96658d8a6ce3
-    description: The guide offers essential principles of landscaping, encouraging
-      creativity and innovative garden designs. It helps transform spaces
-      artistically, cultivating an appreciation for beauty through practical
-      tips and detailed steps.
+      - create
+      - invent
+  - task: Generate Diversity
+    href: https://www.artnome.com/news/2018/8/8/why-love-generative-art
+    checkpointId: 5e7f35ebc3434b0e5f4ece496861af6f
+    description: Generative art showcases innovation through algorithmic creativity,
+      inspiring diverse outputs. It merges technology and art, encouraging
+      unconventional thinking. By exploring generative techniques, individuals
+      can expand their creative boundaries, fostering unique ideas and
+      perspectives essential for innovation and generating diversity in artistic
+      expression.
     tags:
-      - gardens
-      - design
+      - art
+      - tech
+      - create
+      - unique
+  - task: Share Generously
+    href: https://www.fastcompany.com/3003033/dont-be-power-hog-how-sharing-information-time-and-authority-makes-you-better-leader
+    checkpointId: 25d388ea7161d15f5da4a0c345627cbc
+    description: The article explores how sharing information, time, and authority
+      empowers leaders to foster innovation. It emphasizes that by distributing
+      power and knowledge, leaders create an environment where creativity
+      thrives, collaboration increases, and innovative ideas flourish. This
+      approach aligns with practicing innovation through generous sharing of
+      resources and decision-making power.
+    tags:
+      - share
+      - lead
+      - power
+      - ideas
 series: Ecosystem Architecture
