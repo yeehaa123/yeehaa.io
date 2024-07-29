@@ -1,25 +1,26 @@
-checksum: 9becd760f8cf008ad6989232fb270e34
-summary: Ecosystem Architecture explores the evolution of ecosystems from
-  biological to digital realms. It examines how the concept has expanded to
-  describe non-natural organizations, reflecting a shift towards decentralized
-  structures. The series delves into the fragmentation of the internet,
-  comparing it to geological processes and viewing digital landscapes as complex
-  systems. It argues for embracing this fragmentation as an opportunity for
-  innovation and diversity.
-excerpt: Ecosystem Architecture examines the evolution of ecosystems from
-  biological to digital realms, exploring the internet's fragmentation and its
-  parallels with geological processes. It advocates for viewing this
-  fragmentation as an opportunity for innovation rather than a problem.
+checksum: ebf83cebab04e1eed58e0bf34520d629
+summary: The 'Ecosystem Architecture' series explores the evolution of
+  ecosystems from biological to digital realms. It discusses the fragmentation
+  of the internet, the need for decentralized and resilient organizations, and
+  advocates for innovation that rejuvenates the planet and society. The series
+  emphasizes embracing complexity, collaborative practices, and regenerative
+  design to address global challenges and create sustainable, interconnected
+  systems across space and time.
+excerpt: Ecosystem Architecture examines the transition from biological to
+  digital ecosystems, exploring internet fragmentation, decentralized
+  structures, and innovative approaches. It advocates for resilient,
+  interconnected systems to address global challenges.
 tags:
   - eco
   - web
-  - digital
+  - future
+  - design
   - nature
-  - network
+  - tech
   - system
-  - space
-bannerImageURL: ./9becd760f8cf008ad6989232fb270e34-banner.png
+bannerImageURL: ./ebf83cebab04e1eed58e0bf34520d629-banner.png
 articles:
   - across-space-and-time
   - align-the-misaligned
+  - practice-innovation
 title: Ecosystem Architecture

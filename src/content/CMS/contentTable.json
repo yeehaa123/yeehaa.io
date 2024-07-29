@@ -107,18 +107,28 @@
     "author": "yeehaa",
     "title": "Practice Innovation",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "6fdb3d094e1182c2fd737b9655154825"
+    "checksum": "6fdb3d094e1182c2fd737b9655154825",
+    "publicationData": {
+      "createdAt": "2024-07-29T12:45:35.886Z",
+      "updatedAt": "2024-07-29T12:45:35.886Z",
+      "publishedAt": "2024-07-29T12:45:35.886Z"
+    }
   },
   {
     "id": "435d37c4854bef9c03d78f045b9ed31a",
     "author": "yeehaa",
     "title": "Practice Innovation",
     "contentType": "course",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a"
+    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a",
+    "publicationData": {
+      "createdAt": "2024-07-29T12:45:35.886Z",
+      "updatedAt": "2024-07-29T12:45:35.886Z",
+      "publishedAt": "2024-07-29T12:45:35.886Z"
+    }
   },
   {
     "id": "60b3687a0f78924fb19685ba21650e52",
