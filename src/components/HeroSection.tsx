@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+
 type CTA = {
   action: string,
   text: string

@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Base.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import  { HeroSection}from "@/components/HeroSection";
+import  { ApproachPreview}from "@/components/ApproachPreview";
 import  Wave from "@/components/Wave.astro";
 import  {Section }from "@/components/PageSection";
 import  {IconCard }from "@/components/IconCard";
@@ -35,6 +36,12 @@ const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'}
     <HeroSection bannerImageURL={optimizedBackground.src} {...hero} />
     <Wave class="bg-primary"/>
   </Fragment>
+  <section class="py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8">Your Blueprint for Ecosystem Mastery</h2>
+      <ApproachPreview items={approach.items} />
+    </div>
+  </section>
   <Section title={challenges.title} subtitle={challenges.subtitle}>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {challenges.items.map((item) => (
