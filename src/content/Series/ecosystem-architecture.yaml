@@ -1,23 +1,26 @@
-checksum: 28b12228ecff7bca335de53037b24d4f
-summary: The 'Ecosystem Architecture' series explores the evolution of the
-  ecosystem concept from its biological origins to its application in
-  organizational structures. It examines how ecosystems, once confined to
-  specific spaces and times in nature, now describe diverse, decentralized
-  networks across various domains. The series delves into the principles of
-  ecosystem architecture, drawing from multiple disciplines to address the need
-  for resilient, adaptive organizations in our interconnected world.
-excerpt: Biological ecosystems are specific to space and time, but the term
-  'ecosystem' has been broadened to describe non-natural organizations,
-  underscoring a shift towards organic, decentralized structures.
+checksum: ebf83cebab04e1eed58e0bf34520d629
+summary: The 'Ecosystem Architecture' series explores the evolution of
+  ecosystems from biological to digital realms. It discusses the fragmentation
+  of the internet, the need for decentralized and resilient organizations, and
+  advocates for innovation that rejuvenates the planet and society. The series
+  emphasizes embracing complexity, collaborative practices, and regenerative
+  design to address global challenges and create sustainable, interconnected
+  systems across space and time.
+excerpt: Ecosystem Architecture examines the transition from biological to
+  digital ecosystems, exploring internet fragmentation, decentralized
+  structures, and innovative approaches. It advocates for resilient,
+  interconnected systems to address global challenges.
 tags:
   - eco
-  - network
-  - time
-  - space
+  - web
+  - future
+  - design
   - nature
-  - adapt
+  - tech
   - system
-bannerImageURL: ./28b12228ecff7bca335de53037b24d4f-banner.png
+bannerImageURL: ./ebf83cebab04e1eed58e0bf34520d629-banner.png
 articles:
   - across-space-and-time
+  - align-the-misaligned
+  - practice-innovation
 title: Ecosystem Architecture

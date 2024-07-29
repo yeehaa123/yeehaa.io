@@ -18,9 +18,14 @@
     "author": "yeehaa",
     "title": "Align The Misaligned",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "9c2c6dbe14179949330a01f8d039e032"
+    "checksum": "37d9078f25d51a2ad2b1419243b5981a",
+    "publicationData": {
+      "createdAt": "2024-07-15T13:36:51.589Z",
+      "updatedAt": "2024-07-15T13:36:51.589Z",
+      "publishedAt": "2024-07-15T13:36:51.589Z"
+    }
   },
   {
     "id": "dab57a97b73c41955321d0f6def877ae",
@@ -74,6 +79,21 @@
     "habitat": "Across Space And Time"
   },
   {
+    "id": "85cfc070b4ccf5ad41f3de3fda1d6f3b",
+    "author": "yeehaa",
+    "title": "Keep The Web Weird",
+    "contentType": "course",
+    "status": "published",
+    "series": "Ecosystem Architecture",
+    "checksum": "f73a0dad773adccb86ce02345b460404",
+    "publicationData": {
+      "createdAt": "2024-07-29T08:45:42.733Z",
+      "updatedAt": "2024-07-29T08:45:42.733Z",
+      "publishedAt": "2024-07-29T08:45:42.733Z"
+    },
+    "habitat": "Align The Misaligned"
+  },
+  {
     "id": "d63a54cc9f24ebf6c8ce8cf33e860ef4",
     "author": "yeehaa",
     "title": "Learning From Nature",
@@ -87,18 +107,28 @@
     "author": "yeehaa",
     "title": "Practice Innovation",
     "contentType": "article",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "6fdb3d094e1182c2fd737b9655154825"
+    "checksum": "6fdb3d094e1182c2fd737b9655154825",
+    "publicationData": {
+      "createdAt": "2024-07-29T12:45:35.886Z",
+      "updatedAt": "2024-07-29T12:45:35.886Z",
+      "publishedAt": "2024-07-29T12:45:35.886Z"
+    }
   },
   {
     "id": "435d37c4854bef9c03d78f045b9ed31a",
     "author": "yeehaa",
     "title": "Practice Innovation",
     "contentType": "course",
-    "status": "draft",
+    "status": "published",
     "series": "Ecosystem Architecture",
-    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a"
+    "checksum": "f905f9b468d79c7eab7b7dc2dfb65b5a",
+    "publicationData": {
+      "createdAt": "2024-07-29T12:45:35.886Z",
+      "updatedAt": "2024-07-29T12:45:35.886Z",
+      "publishedAt": "2024-07-29T12:45:35.886Z"
+    }
   },
   {
     "id": "60b3687a0f78924fb19685ba21650e52",
@@ -146,25 +176,15 @@
     "checksum": "5d6f6f6ee484eca97181c32719f8eb4f"
   },
   {
-    "id": "d71fe3a19689792e548b07f879e7bf55",
-    "author": "yeehaa",
-    "title": "Engineer Breakthroughs",
-    "contentType": "course",
-    "status": "draft",
-    "series": "Ecosystem Architecture",
-    "checksum": "792b5234292e6773850b4518abdeed0d",
-    "habitat": "Continental Drift"
-  },
-  {
     "id": "b01e1a34626390069d84a828a77133b8",
     "title": "Yeehaa - Ecosystem Architect",
     "contentType": "landing_page",
     "status": "published",
     "checksum": "c05f6bb27a9bf43a10371bf51dd6c838",
     "publicationData": {
-      "createdAt": "2024-07-28T15:21:58.577Z",
-      "updatedAt": "2024-07-28T15:21:58.577Z",
-      "publishedAt": "2024-07-28T15:21:58.577Z"
+      "createdAt": "2024-07-29T13:10:00.519Z",
+      "updatedAt": "2024-07-29T13:10:00.519Z",
+      "publishedAt": "2024-07-29T13:10:00.519Z"
     }
   },
   {

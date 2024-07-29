@@ -1,17 +1,19 @@
-checksum: a0d031c4508c301eb34329df20bbc3f2
-summary: Design encompasses the creative process of conceptualizing and
-  implementing visual and functional elements. It's a versatile discipline that
-  spans various fields, from graphic arts to product development. This
-  collection focuses on design as a tool for ecosystem grooming, emphasizing its
-  role in creating cohesive, adaptable, and innovative environments. The
-  resources highlight how design principles can be applied to leadership, skill
-  development, creativity, and aesthetic enhancement, ultimately contributing to
-  a well-rounded and thriving ecosystem.
-excerpt: Explore the multifaceted approach to ecosystem grooming through design
-  principles. Learn how to lead with purpose, adapt through diverse skills,
-  inject creativity, and enhance aesthetics to create a cohesive and innovative
-  environment.
+checksum: e8dde991d01df441267c46f78fc2c430
+summary: Design is a multifaceted concept that spans innovation, sustainability,
+  and ecosystem development. It encompasses strategic vision, adaptability, and
+  creativity. This approach to design fosters resilient, interconnected systems
+  that can address global challenges. It emphasizes the importance of
+  aesthetics, functionality, and continuous improvement. Design thinking is
+  applied not only to physical spaces but also to processes, fostering
+  innovation and renewal. It encourages a holistic view, combining
+  purpose-driven leadership with diverse skill sets to create beautiful,
+  functional, and impactful solutions.
+excerpt: Innovation should enhance the planet and society. Decentralized,
+  regenerative design can solve global challenges, shifting from harmful
+  practices to resilient, interconnected ecosystems.
 title: design
-articles: []
+articles:
+  - practice-innovation
 courses:
   - groom-your-ecosystem
+  - practice-innovation
