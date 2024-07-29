@@ -1,0 +1,12 @@
+habitat: Align The Misaligned
+checkpoints: 
+  - task: Connect to ISOC
+    href: https://www.internetsociety.org
+  - task: Drink Open Source
+    href: https://github.com/nayafia/lemonade-stand
+  - task: Make it Fab
+    href: https://fablab.waag.org/
+  - task: Embrance Your Inner Guerrilla
+    href: https://www.amazon.com/Spike-Lees-Gotta-Have-Filmmaking/dp/0671644173
+  - task: Read Write Own
+    href: https://readwriteown.com/

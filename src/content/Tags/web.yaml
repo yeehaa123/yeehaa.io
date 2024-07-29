@@ -1,17 +1,19 @@
-checksum: c9222ab1fc59886665cf81431ddeda26
-summary: Web encompasses the vast, interconnected digital landscape that shapes
-  our online experiences. It explores the evolving nature of the internet, from
-  its original unified vision to its current fragmented state. This area delves
-  into the challenges and opportunities presented by internet fragmentation,
-  examining how different regions develop unique solutions. It also considers
-  the future of the web, proposing ecosystem architecture approaches to create a
-  more resilient and inclusive digital environment. Web-related content often
-  intersects with topics like technology, globalization, and future trends.
-excerpt: The internet has fragmented like tectonic shifts, but this isn't
-  necessarily negative. Ecosystem architecture views this as an opportunity for
-  growth and innovation. Different regions have developed unique solutions,
-  making the global internet ecosystem more resilient and diverse.
+checksum: 463d314d429c6b90a86c97831f3d54bc
+summary: Web encompasses a diverse range of topics related to the internet and
+  digital landscapes. It explores the fragmentation of the online world,
+  comparing it to geological processes and viewing it as an opportunity for
+  innovation. The concept extends to keeping the internet weird and
+  unconventional, promoting creativity through various means such as open-source
+  principles, digital fabrication, and guerrilla filmmaking. This theme
+  encourages embracing the dynamic nature of the web, fostering individuality,
+  and nurturing a diverse digital ecosystem that defies conformity and champions
+  digital ownership.
+excerpt: The internet has fragmented like tectonic shifts, mimicking physical
+  space. Ecosystem architecture views digital landscapes as complex systems,
+  embracing fragmentation for innovation. The article explores types of
+  fragmentation, historical context, and perspectives on this phenomenon.
 title: web
 articles:
   - align-the-misaligned
-courses: []
+courses:
+  - keep-the-web-weird

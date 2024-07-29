@@ -11,20 +11,21 @@ bio: yeehaa is a seasoned professional with robust experience across industries
   insights with practical expertise to foster innovation and efficiency.
 courses:
   - groom-your-ecosystem
-  - practice-innovation
+  - keep-the-web-weird
 articles:
   - across-space-and-time
   - align-the-misaligned
-  - practice-innovation
 tags:
   - tech
-  - eco
-  - future
-  - innov
-  - design
+  - manage
   - consult
+  - eco
   - web
-  - global
+  - innovat
+  - digital
+  - learn
+  - vision
+  - adapt
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -61,18 +62,19 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: c85de7478c57ae46faf404719a6d1bf7
-description: Yeehaa is a seasoned tech manager and consultant with a strong
-  background in software engineering and project management. Their expertise
-  spans multiple industries, driving significant upgrades and implementations.
-  An alumnus of top-tier institutions, Yeehaa combines academic insights with
-  practical expertise to foster innovation and efficiency. Their work focuses on
-  ecosystem architecture, innovation practices, and the future of technology.
-  Yeehaa's blog posts explore topics like biological ecosystems, internet
-  fragmentation, and regenerative design. They've curated courses on ecosystem
-  grooming and innovation, emphasizing leadership, adaptability, and creativity.
-  Yeehaa's approach blends technical knowledge with a vision for resilient,
-  interconnected systems across various domains.
-blurb: "Yeehaa: Tech innovator bridging ecosystems and future-focused solutions."
-profileImageURL: ./c85de7478c57ae46faf404719a6d1bf7-profile.png
+checksum: 4099ec75c5ba7478ffd2312f339ff93b
+description: Yeehaa is a tech-savvy manager and consultant with extensive
+  experience in software engineering and project management. Their portfolio
+  includes thought-provoking blog posts on ecosystem architecture and internet
+  fragmentation, as well as curated courses on ecosystem grooming and
+  maintaining web uniqueness. Yeehaa's work reflects a deep understanding of
+  technological trends, organizational structures, and the importance of
+  innovation. With a background from top-tier institutions, they blend academic
+  knowledge with practical expertise to drive efficiency and foster creative
+  solutions in the ever-evolving tech landscape.
+blurb: "Yeehaa: A tech-savvy manager and consultant with expertise in software
+  engineering and project management. Their work spans ecosystem architecture,
+  internet trends, and innovative approaches to digital landscapes and
+  organizational structures."
+profileImageURL: ./4099ec75c5ba7478ffd2312f339ff93b-profile.png
 title: Yeehaa

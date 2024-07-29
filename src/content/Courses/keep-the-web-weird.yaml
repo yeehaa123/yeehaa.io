@@ -1,0 +1,134 @@
+courseId: 85cfc070b4ccf5ad41f3de3fda1d6f3b
+goal: Keep The Web Weird
+curator:
+  name: Jan Hein Hoogstad
+  alias: yeehaa
+  socials:
+    linkedin: https://www.linkedin.com/in/yeehaa/
+    github: https://www.github.com/yeehaa123/
+    instagram: https://www.instagram.com/yeehaa12345/
+  bio: >
+    
+    I am an entrepreneur, thinker, and coder. Nowadays, I like to call myself an
+    ecosystem architect. Concretely, this means that I bring people together
+    around common values, discover a shared vision, and translate this into
+    effective ecosystems.
+
+
+    My greatest passion has always been changing the way people learn, and
+    challenging preconceived and ill-informed notions of educational
+    institutions. With Offcourse, I aim to create an ecosystem of people and
+    tools that focus on open and transparent knowledge sharing instead of
+    credentials, ego, and intellectual property.
+
+
+    In 2021, I created the Superconnectors event format that enabled startups to
+    present their so-called 'critical ask' to the best-connected people of the
+    Dutch tech ecosystem. 
+
+
+    I holds a PhD in Philosophy from the university of Utrecht and worked as a
+    researcher and teacher at several traditional (Utrecht, Berlin, Amsterdam,
+    Minneapolis) and non-traditional (DevBootcamp San Francisco) schools. I also
+    founded the Innovator's Working Group of the Dutch Internet Society, and was
+    actively involved in the Public Spaces Coalition. I strongly advocate for
+    impactful and inclusive internet.
+
+
+    I currently work and live in Taipei, Taiwan.
+description: To keep the web weird, engage with ISOC, embrace open-source
+  principles, explore digital fabrication, channel your inner guerrilla
+  filmmaker, and champion digital ownership. These steps promote innovation,
+  creativity, and unconventional thinking, ensuring the internet remains a
+  diverse, dynamic, and quirky space that defies conformity and nurtures
+  individuality.
+habitat: align-the-misaligned
+createdAt: 2024-07-29T08:45:42.733Z
+updatedAt: 2024-07-29T08:45:42.733Z
+publishedAt: 2024-07-29T08:45:42.733Z
+tags:
+  - web
+  - open
+  - weird
+  - isoc
+  - funding
+  - opensource
+  - fab
+  - maker
+  - tech
+  - indie
+  - film
+  - diy
+  - own
+  - data
+checkpoints:
+  - task: Connect to ISOC
+    href: https://www.internetsociety.org
+    checkpointId: 84538ef2b40067a04e58be74e5ddc650
+    description: The Internet Society (ISOC) promotes an open internet, fostering
+      innovation and diversity. By connecting to ISOC, users support initiatives
+      that keep the web weird, unique, and accessible. ISOC's work in policy
+      advocacy, community building, and technical standards helps maintain a
+      vibrant, creative online ecosystem, aligning with the goal of preserving
+      the web's eccentricity.
+    tags:
+      - web
+      - open
+      - weird
+      - isoc
+  - task: Drink Open Source
+    href: https://github.com/nayafia/lemonade-stand
+    checkpointId: 7f931c6d29f84702bb1ec9dc14530596
+    description: Lemonade Stand is a guide to funding open source projects, helping
+      developers sustain their work. By supporting diverse funding models, it
+      enables creators to keep the web weird through unique,
+      independently-funded projects. This aligns with the goal of maintaining
+      web diversity and encourages "drinking" (supporting) open source
+      initiatives.
+    tags:
+      - funding
+      - opensource
+      - weird
+      - web
+  - task: Make it Fab
+    href: https://fablab.waag.org/
+    checkpointId: 8c919d23d187c53326df65ef33b35815
+    description: Fablab Waag empowers people to create unique, unconventional
+      projects using digital fabrication tools. By providing access to
+      cutting-edge technology and fostering a community of makers, it encourages
+      experimentation and pushes the boundaries of design. This approach keeps
+      the web weird by inspiring diverse, innovative online content and fab
+      creations.
+    tags:
+      - fab
+      - maker
+      - weird
+      - tech
+  - task: Embrance Your Inner Guerrilla
+    href: https://www.amazon.com/Spike-Lees-Gotta-Have-Filmmaking/dp/0671644173
+    checkpointId: 009ec0a0051a459a7256825f87a18266
+    description: Spike Lee's "Gotta Have It" guide to indie filmmaking embodies
+      guerrilla creativity, inspiring readers to embrace unconventional methods
+      and keep the web weird. It encourages DIY spirit, resourcefulness, and
+      pushing boundaries in digital content creation, aligning with the goal of
+      maintaining an eccentric and diverse online landscape.
+    tags:
+      - indie
+      - film
+      - diy
+      - weird
+  - task: Read Write Own
+    href: https://readwriteown.com/
+    checkpointId: f5ef3c0374e675349f3ce727d262322b
+    description: ReadWriteOwn.com promotes digital ownership, empowering users to
+      control their online content and data. It advocates for a decentralized
+      web, encouraging creativity and uniqueness. By supporting this movement,
+      users contribute to keeping the web diverse, unconventional, and free from
+      centralized control, aligning with the goal of maintaining the web's
+      weirdness.
+    tags:
+      - web
+      - own
+      - data
+      - weird
+series: Ecosystem Architecture

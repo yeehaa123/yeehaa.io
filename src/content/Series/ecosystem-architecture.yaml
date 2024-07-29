@@ -1,26 +1,25 @@
-checksum: 069992c709cf32c62fc74c65aa5cab61
-summary: The 'Ecosystem Architecture' series explores the evolution of
-  ecosystems from biological to digital contexts. It discusses the internet's
-  fragmentation as an opportunity for growth, advocates for decentralized and
-  resilient organizational structures, and promotes innovation that rejuvenates
-  both society and the planet. The series emphasizes the need for sustainable,
-  interconnected systems that can address global challenges through
-  collaborative practices and regenerative design principles.
-excerpt: Ecosystem Architecture examines the transformation of ecosystems across
-  various domains. It advocates for embracing fragmentation, decentralized
-  structures, and regenerative innovation to create resilient, inclusive systems
-  that address global challenges.
+checksum: 9becd760f8cf008ad6989232fb270e34
+summary: Ecosystem Architecture explores the evolution of ecosystems from
+  biological to digital realms. It examines how the concept has expanded to
+  describe non-natural organizations, reflecting a shift towards decentralized
+  structures. The series delves into the fragmentation of the internet,
+  comparing it to geological processes and viewing digital landscapes as complex
+  systems. It argues for embracing this fragmentation as an opportunity for
+  innovation and diversity.
+excerpt: Ecosystem Architecture examines the evolution of ecosystems from
+  biological to digital realms, exploring the internet's fragmentation and its
+  parallels with geological processes. It advocates for viewing this
+  fragmentation as an opportunity for innovation rather than a problem.
 tags:
   - eco
   - web
-  - future
-  - design
+  - digital
   - nature
-  - tech
-  - global
-bannerImageURL: ./069992c709cf32c62fc74c65aa5cab61-banner.png
+  - network
+  - system
+  - space
+bannerImageURL: ./9becd760f8cf008ad6989232fb270e34-banner.png
 articles:
   - across-space-and-time
-  - practice-innovation
   - align-the-misaligned
 title: Ecosystem Architecture

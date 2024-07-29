@@ -1,17 +1,19 @@
-checksum: 7084a4daa88fd2f9f207f9c1193f641f
-summary: Tech encompasses a broad spectrum of technological advancements and
-  innovations. It's a dynamic field that influences various aspects of our
-  lives, from the internet's evolution to future developments. This category
-  explores how technology shapes our world, including topics like web
-  fragmentation, ecosystem architecture, and global digital trends. It delves
-  into the challenges and opportunities presented by technological progress,
-  encouraging readers to consider the implications of these changes on society,
-  communication, and innovation.
-excerpt: The internet has fragmented like tectonic shifts, but this isn't
-  necessarily negative. Ecosystem architecture views this as an opportunity for
-  growth and innovation. Different regions have developed unique solutions,
-  making the global internet ecosystem more resilient and diverse.
+checksum: a610fe726f12594e3e0f54c2aed887e9
+summary: Tech encompasses a range of digital and technological topics. It covers
+  internet fragmentation, ecosystem architecture, and the evolution of digital
+  landscapes. The theme explores innovative approaches to web development,
+  open-source principles, and digital fabrication. It also touches on guerrilla
+  filmmaking techniques and the importance of digital ownership. Tech-related
+  content aims to foster creativity, unconventional thinking, and the
+  preservation of the internet's diverse and dynamic nature. It encourages
+  engagement with organizations like ISOC and promotes the idea of keeping the
+  web weird and innovative.
+excerpt: The internet has fragmented like tectonic shifts, mimicking physical
+  space. Ecosystem architecture views digital landscapes as complex systems,
+  embracing fragmentation for innovation. The article explores types of
+  fragmentation, historical context, and perspectives on this phenomenon.
 title: tech
 articles:
   - align-the-misaligned
-courses: []
+courses:
+  - keep-the-web-weird
