@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Base.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import  { HeroSection}from "@/components/HeroSection";
+import  Wave from "@/components/Wave.astro";
 import  {Section }from "@/components/PageSection";
 import  {IconCard }from "@/components/IconCard";
 import { getEntry } from 'astro:content';
@@ -30,7 +31,10 @@ const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'}
     {...data}
 
   />
-  <HeroSection slot="hero" bannerImageURL={optimizedBackground.src} {...hero} />
+  <Fragment slot="hero">
+    <HeroSection bannerImageURL={optimizedBackground.src} {...hero} />
+    <Wave class="bg-primary"/>
+  </Fragment>
   <Section title={challenges.title} subtitle={challenges.subtitle}>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {challenges.items.map((item) => (
