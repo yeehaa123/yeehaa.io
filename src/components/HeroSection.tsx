@@ -20,7 +20,12 @@ export function HeroSection({ title, subtitle, cta, bannerImageURL }: Props) {
       <div className="relative z-10 text-center text-black px-4">
         <h1 className="text-6xl font-extrabold mb-6">{title}</h1>
         <p className="text-2xl mb-10 max-w-2xl mx-auto">{subtitle}</p>
-        <Button size="lg" variant="outline" className="bg-black/0 rounded-none border-white text-white font-bold text-lg hover:bg-white/80 hover:text-black transition-colors" asChild>
+        <Button size="lg" variant="outline"
+          className="bg-black/0 dark:bg-black/0 hover:bg-black/0 border-black 
+          dark:hover:bg-secondary hover:bg-secondary
+          hover:text-white hover:border-none
+          rounded-none font-bold text-lg 
+          transition-colors" asChild>
           <a href={cta.action}>{cta.text}</a>
         </Button>
       </div>
