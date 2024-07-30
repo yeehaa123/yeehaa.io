@@ -23,15 +23,18 @@ const IconMap = {
 };
 
 export const ApproachPreview = ({ items }: Props) => (
-  <section className="w-full pt-24 pb-24 md:pb-36 lg:pb-48">
+  <section className="w-full py-24">
     <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:flex md:justify-center md:gap-12">
+      <div className="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-3 md:flex md:justify-between">
         {items.map((item, index) => {
+          const numbers = ["One", "Two", "Three"];
           // @ts-ignore
           const Icon = IconMap[item.icon] || Boxes;
-          return <div key={index} className="text-center flex flex-row gap-4">
-            <Icon classNam="w-12 h-12 mb-2" />
-            <h3 className="font-serif text-lg"><span className="font-extrabold">Step {index + 1}: </span>{item.title}</h3>
+          return <div key={index} className="flex flex-row items-center gap-6">
+            <Icon className="h-10 w-10" />
+            <h3 className="font-serif xl:text-lg text-left w-full">
+              <p className="font-extrabold">Step {numbers[index]}</p>
+              <p>{item.title}</p></h3>
           </div>
         })}
       </div>

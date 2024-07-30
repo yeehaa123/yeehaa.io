@@ -33,7 +33,7 @@ const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'}
 
   />
   <Fragment slot="hero">
-    <HeroSection bannerImageURL={optimizedBackground.src} {...hero} />
+    <HeroSection bannerImageURL={optimizedBackground.src} {...hero} client:load/>
     <Wave class="bg-primary"/>
   </Fragment>
   <ApproachPreview items={approach.items} />

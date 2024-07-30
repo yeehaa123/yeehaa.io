@@ -8,7 +8,7 @@ const item = z.object({
 
 const cta = z.object({
   text: z.string(),
-  action: z.string()
+  action: z.string().optional()
 })
 
 const baseSection = z.object({

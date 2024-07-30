@@ -5,7 +5,6 @@ sections:
     subtitle: Foster effective ecosystems through collaboration and knowledge sharing
     cta:
       text: Embark on Your Black Ocean Journey
-      action: /book-consultation
   challenges:
     title: Breaking Free from Stagnation
     subtitle: Critical Challenges to Overcome
@@ -101,23 +100,24 @@ sections:
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa
     cta:
       text: Schedule Your Free Consultation
-      action: /book-consultation
-description: Yeehaa, an ecosystem architect, offers innovative strategies for
-  conquering "Black Ocean" markets. The landing page showcases services like
-  Black Ocean Discovery, Ecosystem-Led Growth Strategy, and Adaptive
-  Organization Design. It highlights challenges in traditional business
-  structures and introduces pioneering concepts like Black Ocean Markets and
-  Ecosystem-Led Growth. The page features a case study on the Superconnectors
-  event format and invites visitors to book a consultation for transforming
-  their organizations and exploring untapped market opportunities.
-excerpt: Yeehaa, an ecosystem architect, guides organizations in conquering
-  "Black Ocean" markets through innovative strategies, ecosystem-led growth, and
-  adaptive design. The landing page showcases services, case studies, and
-  invites visitors to explore untapped opportunities.
+description: Yeehaa, an ecosystem architect, introduces the concept of Black
+  Ocean markets - unexplored territories beyond blue and red oceans. The landing
+  page outlines challenges in traditional organizations and presents pioneering
+  concepts like Ecosystem-Led Growth. It showcases Yeehaa's approach to
+  Ecosystem Architecture, including discovering uncharted markets, building
+  ecosystems, and creating shared value. Services offered include Black Ocean
+  Discovery, Ecosystem-Led Growth Strategy, and Adaptive Organization Design. A
+  case study highlights the success of the Superconnectors event format,
+  demonstrating the power of ecosystem-led approaches in connecting startups
+  with industry leaders and facilitating investments.
+excerpt: Yeehaa, an ecosystem architect, introduces Black Ocean markets and
+  Ecosystem-Led Growth. The page outlines challenges, presents solutions, and
+  showcases success through the Superconnectors case study, demonstrating the
+  power of ecosystem-led approaches.
 tags:
   - innovation
   - ecosystem
   - strategy
+  - blackocean
   - growth
-  - transformation
-bannerImageURL: ./959eb32cabc01a350d8c33764a465dc1-banner.png
+bannerImageURL: ./93fd012fcb100f59d11ffbcc735a9002-banner.png
