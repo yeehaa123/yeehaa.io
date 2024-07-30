@@ -8,6 +8,7 @@ import  {Section }from "@/components/PageSection";
 import  {IconCard }from "@/components/IconCard";
 import { getEntry } from 'astro:content';
 import { Button } from "@/components/ui/button";
+import { CallToAction } from "@/components/CTA";
 
 interface Props  {
   logoLink: "/"
@@ -16,13 +17,8 @@ interface Props  {
 const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
 const { data } = entry
-const { sections, bannerImageURL } = data;
+const { sections } = data;
 const { hero, challenges,concepts, approach, about, services, case_study, main_cta } = sections;
-
-import { getImage } from "astro:assets";
-
-const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'});
-
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead 
@@ -33,18 +29,31 @@ const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'}
 
   />
   <Fragment slot="hero">
-    <HeroSection bannerImageURL={optimizedBackground.src} {...hero} client:load/>
+    <HeroSection {...hero} client:load/>
     <Wave class="bg-primary"/>
   </Fragment>
   <ApproachPreview items={approach.items} />
-  <Section title={challenges.title} subtitle={challenges.subtitle}>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {challenges.items.map((item) => (
-      <IconCard {...item} />
-      ))}
+  <section class="w-full py-12 md:py-24 lg:py-32">
+    <div class="container grid items-center justify-center gap-8 px-4 text-center md:px-6 lg:grid-cols-2 lg:text-left">
+      <div class="space-y-4">
+        <div class="space-y-2">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {challenges.title}
+          </h2>
+          <p class="text-muted-foreground 
+            md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            {challenges.description}
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {challenges.items.map((item) => (
+        <IconCard {...item} />
+        ))}
+      </div>
     </div>
-  </Section>
-  <Section title={concepts.title} className="bg-secondary">
+  </section>
+  <Section title={concepts.title}>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {concepts.items.map((item) => (
       <IconCard {...item} />
@@ -87,9 +96,7 @@ const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'}
   </Section>
   <Section title={main_cta.title} subtitle={main_cta.subtitle}>
     <div class="text-center">
-      <Button size="lg" asChild>
-        <a href={main_cta.cta.action}>{main_cta.cta.text}</a>
-      </Button>
+      <CallToAction {...main_cta.cta} client:load/>
     </div>
   </Section>
 </Layout>

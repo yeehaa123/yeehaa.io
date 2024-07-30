@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
 export type CTA = {
-  action?: string,
+  action?: string | undefined,
   text: string
 }
 

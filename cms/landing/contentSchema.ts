@@ -24,6 +24,7 @@ export const landingContentInput = z.object({
     }),
     challenges: baseSection.extend({
       subtitle: z.string(),
+      description: z.string(),
       items: z.array(item)
     }),
     concepts: baseSection.extend({
@@ -63,6 +64,7 @@ export const landingContentSchema = z.object({
       cta: cta
     }),
     challenges: baseSection.extend({
+      description: z.string(),
       subtitle: z.string(),
       items: z.array(item)
     }),

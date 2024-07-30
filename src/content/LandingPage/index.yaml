@@ -6,21 +6,28 @@ sections:
     cta:
       text: Embark on Your Black Ocean Journey
   challenges:
-    title: Breaking Free from Stagnation
-    subtitle: Critical Challenges to Overcome
+    title: Navigating Complex Ecosystems
+    description: In today's interconnected world, organizations face formidable
+      obstacles that hinder their ability to innovate, collaborate, and thrive
+      in emerging markets.
+    subtitle: Critical Challenges in Black Ocean Markets
     items:
-      - title: Siloed Knowledge
-        icon: Boxes
-        description: Information trapped in departments, hindering collaboration and
-          innovation in an increasingly connected world.
-      - title: Rigid Structures
-        icon: GitBranch
-        description: Traditional hierarchies slowing down decision-making and
-          adaptability in fast-paced markets.
-      - title: Disconnected Learning
-        icon: Brain
-        description: Training and development not aligned with real organizational needs
-          and emerging market opportunities.
+      - title: Knowledge Fragmentation
+        icon: PuzzlePiece
+        description: Crucial information scattered across organizations and industries,
+          impeding holistic understanding and innovative problem-solving.
+      - title: Ecosystem Blindness
+        icon: EyeOff
+        description: Failure to recognize potential partnerships and collaborative
+          opportunities beyond traditional industry boundaries.
+      - title: Adaptive Inertia
+        icon: Anchor
+        description: Resistance to change and difficulty in pivoting strategies quickly
+          in response to emerging market opportunities and threats.
+      - title: Value Misalignment
+        icon: Target
+        description: Conflicting goals and incentives within and between organizations,
+          hindering the creation of shared value in new market spaces.
   concepts:
     title: Pioneering Concepts for Future-Ready Organizations
     items:
@@ -100,24 +107,22 @@ sections:
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa
     cta:
       text: Schedule Your Free Consultation
-description: Yeehaa, an ecosystem architect, introduces the concept of Black
-  Ocean markets - unexplored territories beyond blue and red oceans. The landing
-  page outlines challenges in traditional organizations and presents pioneering
-  concepts like Ecosystem-Led Growth. It showcases Yeehaa's approach to
-  Ecosystem Architecture, including discovering uncharted markets, building
-  ecosystems, and creating shared value. Services offered include Black Ocean
-  Discovery, Ecosystem-Led Growth Strategy, and Adaptive Organization Design. A
-  case study highlights the success of the Superconnectors event format,
-  demonstrating the power of ecosystem-led approaches in connecting startups
-  with industry leaders and facilitating investments.
-excerpt: Yeehaa, an ecosystem architect, introduces Black Ocean markets and
-  Ecosystem-Led Growth. The page outlines challenges, presents solutions, and
-  showcases success through the Superconnectors case study, demonstrating the
-  power of ecosystem-led approaches.
+description: Yeehaa, an Ecosystem Architect, introduces the concept of Black
+  Ocean Markets - unexplored spaces beyond blue and red oceans. The landing page
+  outlines challenges in complex ecosystems, presents pioneering concepts like
+  Ecosystem-Led Growth, and offers services including Black Ocean Discovery and
+  Adaptive Organization Design. Yeehaa's approach focuses on discovering
+  uncharted markets, building ecosystems, and creating shared value. The page
+  highlights a case study on the Superconnectors event format and invites
+  visitors to book a discovery session.
+excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
+  Black Ocean Markets. The approach involves discovering uncharted markets,
+  building ecosystems, and creating shared value through innovative strategies
+  and adaptive organizational design.
 tags:
-  - innovation
   - ecosystem
-  - strategy
+  - innovation
   - blackocean
   - growth
-bannerImageURL: ./93fd012fcb100f59d11ffbcc735a9002-banner.png
+  - collaboration
+bannerImageURL: ./5ef5e648d53c164c31ab4507f954c830-banner.png

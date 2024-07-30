@@ -33,7 +33,7 @@ export const ApproachPreview = ({ items }: Props) => (
           return <div key={index} className="flex flex-row items-center gap-6">
             <Icon className="h-10 w-10" />
             <h3 className="font-serif xl:text-lg text-left w-full">
-              <p className="font-extrabold">Step {numbers[index]}</p>
+              <p className="font-bold">Step {numbers[index]}</p>
               <p>{item.title}</p></h3>
           </div>
         })}

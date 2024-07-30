@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 type Section = {
   title: string,
   subtitle?: string,
-  children: ReactElement,
+  children: ReactElement | ReactElement[],
   className?: string
 }
 

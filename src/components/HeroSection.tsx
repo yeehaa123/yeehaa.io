@@ -4,7 +4,6 @@ import { CallToAction } from "./CTA";
 
 type Props = {
   title: string,
-  bannerImageURL: string,
   subtitle: string,
   cta: CTA
 }
