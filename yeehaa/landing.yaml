@@ -25,9 +25,9 @@ sections:
       - title: Ecosystem Blindness
         icon: EyeOff
         description: Failure to recognize potential partnerships and collaborative opportunities beyond traditional industry boundaries.
-      - title: Adaptive Inertia
-        icon: Anchor
-        description: Resistance to change and difficulty in pivoting strategies quickly in response to emerging market opportunities and threats.
+      - title: Agility Deficit
+        icon: Turtle
+        description: Lack of organizational nimbleness in pivoting strategies and operations quickly in response to emerging market opportunities and threats.
       - title: Value Misalignment
         icon: Target
         description: Conflicting goals and incentives within and between organizations, hindering the creation of shared value in new market spaces.
