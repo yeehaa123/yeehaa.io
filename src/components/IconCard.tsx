@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { cx } from "class-variance-authority";
 import {
   Compass,
   Network,
@@ -33,16 +34,17 @@ type Props = {
   title: string,
   description: string,
   icon: string
+  className?: string,
 }
 
 
 
 
-export const IconCard = ({ title, description, icon }: Props) => {
+export const IconCard = ({ title, description, icon, className }: Props) => {
   // @ts-ignore
   const Icon = IconMap[icon] || Boxes;
   return (
-    <Card className="rounded-none h-full">
+    <Card className={cx("rounded-none h-full", className)}>
       <CardHeader>
         <Icon className="w-8 h-8 mb-2" />
         <CardTitle>{title}</CardTitle>

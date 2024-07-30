@@ -26,7 +26,7 @@ sections:
         icon: EyeOff
         description: Failure to recognize potential partnerships and collaborative opportunities beyond traditional industry boundaries.
       - title: Agility Deficit
-        icon: Turtle
+        icon: Turtlen
         description: Lack of organizational nimbleness in pivoting strategies and operations quickly in response to emerging market opportunities and threats.
       - title: Value Misalignment
         icon: Target
@@ -56,7 +56,7 @@ sections:
   about:
     title: About Yeehaa
     subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
-    description: yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.
+    description: Yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.
     key_points:
       - Pioneer in applying black ocean strategies to ecosystem design
       - Creator of the Superconnectors methodology

@@ -9,10 +9,19 @@ import  {IconCard }from "@/components/IconCard";
 import { getEntry } from 'astro:content';
 import { Button } from "@/components/ui/button";
 import { CallToAction } from "@/components/CTA";
+import {
+  Waves,
+  Network
+} from 'lucide-react';
 
 interface Props  {
   logoLink: "/"
 }
+
+const IconMap = {
+  Network: Network,
+  Waves: Waves,
+};
 
 const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
@@ -34,10 +43,10 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
   </Fragment>
   <ApproachPreview items={approach.items} />
   <section class="w-full py-12 md:py-24 lg:py-32">
-    <div class="container grid items-center justify-center gap-8 px-4 text-center md:px-6 lg:grid-cols-2 lg:text-left">
+    <div class="grid items-center justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:text-left">
       <div class="space-y-4">
         <div class="space-y-2">
-          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
             {challenges.title}
           </h2>
           <p class="text-muted-foreground 
@@ -53,13 +62,28 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
       </div>
     </div>
   </section>
-  <Section title={concepts.title}>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {concepts.items.map((item) => (
-      <IconCard {...item} />
-      ))}
-    </div>
-  </Section>
+      <section class="w-full py-12 md:py-24 lg:py-32">
+      <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-16">
+        <div class="space-y-3">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+{concepts.title}
+          </h2>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:gap-24">
+      {concepts.items.map((item) => {
+        // @ts-ignore
+        const Icon = IconMap[item.icon];
+        return (<div class="relative flex flex-col items-start gap-4 p-6 text-center">
+        <div class="w-full flex justify-center items-center animate-pulse text-black aspect-square rounded-full border-none bg-secondary">
+        <Icon className="w-36 h-36"/>
+        </div>
+            <div class="space-y-2 relative">
+              <h3 class="text-2xl font-bold">{item.title}</h3>
+              <p class="text-gray-500 dark:text-gray-400 ">{item.description}</p>
+            </div>
+          </div>)
+      })}
+    </section>
   <Section title={approach.title} subtitle={approach.subtitle}>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {approach.items.map((item) => (
@@ -69,7 +93,7 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
   </Section>
   <Section title={about.title} subtitle={about.subtitle} className="bg-muted">
     <div class="max-w-3xl mx-auto">
-      <p class="text-lg mb-6">yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.</p>
+      <p class="text-lg mb-6">{about.description}</p>
       <ul class="list-disc list-inside mb-6">
         {about.key_points.map((point)=> <li>{point}</li>)}
       </ul>

@@ -21,7 +21,7 @@ sections:
         description: Failure to recognize potential partnerships and collaborative
           opportunities beyond traditional industry boundaries.
       - title: Agility Deficit
-        icon: Turtle
+        icon: Turtlen
         description: Lack of organizational nimbleness in pivoting strategies and
           operations quickly in response to emerging market opportunities and
           threats.
@@ -65,7 +65,7 @@ sections:
   about:
     title: About Yeehaa
     subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
-    description: yeehaa is a visionary ecosystem architect and black ocean
+    description: Yeehaa is a visionary ecosystem architect and black ocean
       navigator, blending expertise in philosophy, technology, and innovative
       market concepts to transform organizations and conquer new frontiers.
     key_points:
@@ -116,14 +116,14 @@ description: Yeehaa, an Ecosystem Architect, offers innovative strategies for
   Discovery, Ecosystem-Led Growth Strategy, and Adaptive Organization Design.
   The page showcases a case study on the Superconnectors event format and
   invites visitors to book a consultation.
-excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
-  Black Ocean markets through innovative strategies. The landing page introduces
-  key concepts, challenges, and services for transforming businesses and
-  leveraging ecosystem potential.
+excerpt: Yeehaa, an Ecosystem Architect, guides organizations in navigating
+  complex ecosystems and conquering "Black Ocean" markets. Through innovative
+  strategies and collaborative approaches, Yeehaa helps transform businesses to
+  thrive in unexplored market spaces.
 tags:
   - ecosystem
   - innovation
   - strategy
   - collaboration
   - growth
-bannerImageURL: ./57f97c8c4db8e0030a6d8ba5846c1993-banner.png
+bannerImageURL: ./fb959eb3e0b70cd8b5b400c855e54f3e-banner.png
