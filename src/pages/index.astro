@@ -36,12 +36,7 @@ const optimizedBackground = await getImage({src: bannerImageURL, format: 'webp'}
     <HeroSection bannerImageURL={optimizedBackground.src} {...hero} />
     <Wave class="bg-primary"/>
   </Fragment>
-  <section class="py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Your Map To Ecosystem Mastery</h2>
-      <ApproachPreview items={approach.items} />
-    </div>
-  </section>
+  <ApproachPreview items={approach.items} />
   <Section title={challenges.title} subtitle={challenges.subtitle}>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {challenges.items.map((item) => (

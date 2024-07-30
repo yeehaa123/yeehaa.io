@@ -6,72 +6,98 @@ sections:
     cta:
       text: Embark on Your Black Ocean Journey
       action: /book-consultation
-
+  approach_preview:
+    title: Your Blueprint for Ecosystem Mastery
+    items:
+      - title: Discover Uncharted Markets
+        icon: Compass
+      - title: Build Your Ecosystem
+        icon: Network
+      - title: Create Shared Value
+        icon: Layers
   challenges:
     title: Breaking Free from Stagnation
     subtitle: Critical Challenges to Overcome
     items:
       - title: Siloed Knowledge
         icon: Boxes
-        description: Information trapped in departments, hindering collaboration and innovation in an increasingly connected world.
+        description: Information trapped in departments, hindering collaboration and
+          innovation in an increasingly connected world.
       - title: Rigid Structures
         icon: GitBranch
-        description: Traditional hierarchies slowing down decision-making and adaptability in fast-paced markets.
+        description: Traditional hierarchies slowing down decision-making and
+          adaptability in fast-paced markets.
       - title: Disconnected Learning
         icon: Brain
-        description: Training and development not aligned with real organizational needs and emerging market opportunities.
-
+        description: Training and development not aligned with real organizational needs
+          and emerging market opportunities.
   concepts:
     title: Pioneering Concepts for Future-Ready Organizations
     items:
       - title: Black Ocean Markets
         icon: Waves
-        description: Explore uncharted territories beyond blue and red oceans. Black ocean markets represent unexplored spaces where innovation and unique value propositions create entirely new market categories.
+        description: Explore uncharted territories beyond blue and red oceans. Black
+          ocean markets represent unexplored spaces where innovation and unique
+          value propositions create entirely new market categories.
       - title: Ecosystem-Led Growth
         icon: Network
-        description: Transform your approach by leveraging the power of your entire ecosystem. Connect with partners, innovators, and customers to create sustainable growth and value for all stakeholders.
-
+        description: Transform your approach by leveraging the power of your entire
+          ecosystem. Connect with partners, innovators, and customers to create
+          sustainable growth and value for all stakeholders.
   approach:
     title: Ecosystem Architecture
-    subtitle: A strategic framework for transforming organizations and conquering black ocean markets
+    subtitle: A strategic framework for transforming organizations and conquering
+      black ocean markets
     items:
-      - title: Black Ocean Discovery
+      - title: Discover Uncharted Markets
         icon: Compass
-        description: Uncover hidden market opportunities beyond traditional landscapes. Identify emerging black ocean markets where your organization can lead and thrive.
-      - title: Ecosystem Mapping
+        description: Uncover hidden market opportunities beyond traditional landscapes.
+          Identify emerging black ocean markets where your organization can lead
+          and thrive.
+      - title: Build Your Ecosystem
         icon: Network
-        description: Visualize and optimize your network of partnerships and resources. Create a 'vessel of transformation' - a shared vision for conquering black ocean markets together.
-      - title: Adaptive Value Architecture
+        description: Visualize and optimize your network of partnerships and resources.
+          Create a 'vessel of transformation' - a shared vision for conquering
+          black ocean markets together.
+      - title: Create Shared Value
         icon: Layers
-        description: Design flexible structures that maximize value creation across your ecosystem. Build a Minimum Viable Ecosystem that rapidly adapts to market shifts and scales with sustained growth.
-
+        description: Design flexible structures that maximize value creation across your
+          ecosystem. Build a Minimum Viable Ecosystem that rapidly adapts to
+          market shifts and scales with sustained growth.
   about:
     title: About Yeehaa
     subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
-    description: yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.
+    description: yeehaa is a visionary ecosystem architect and black ocean
+      navigator, blending expertise in philosophy, technology, and innovative
+      market concepts to transform organizations and conquer new frontiers.
     key_points:
       - Pioneer in applying black ocean strategies to ecosystem design
       - Creator of the Superconnectors methodology
       - Founder of multiple innovative ventures including Offcourse and Snowday
-      - Collaborator with leading institutions like Internet Society and Erasmus Center for Entrepreneurship
-
+      - Collaborator with leading institutions like Internet Society and Erasmus
+        Center for Entrepreneurship
   services:
     title: Services
     items:
       - title: Black Ocean Discovery
         icon: Compass
-        description: Uncover untapped market spaces and create innovative value propositions with ecosystem partners.
+        description: Uncover untapped market spaces and create innovative value
+          propositions with ecosystem partners.
       - title: Ecosystem-Led Growth Strategy
         icon: Network
-        description: Develop a comprehensive approach to leverage your entire ecosystem for sustainable growth and mission alignment.
+        description: Develop a comprehensive approach to leverage your entire ecosystem
+          for sustainable growth and mission alignment.
       - title: Adaptive Organization Design
         icon: Layers
-        description: Restructure your organization to thrive in black ocean markets and maximize ecosystem potential.
-
+        description: Restructure your organization to thrive in black ocean markets and
+          maximize ecosystem potential.
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
-    description: Discover how yeehaa created the Superconnectors event format, a groundbreaking ecosystem-led approach that enables startups to present their critical asks to the most well-connected individuals in the global tech ecosystem.
+    description: Discover how yeehaa created the Superconnectors event format, a
+      groundbreaking ecosystem-led approach that enables startups to present
+      their critical asks to the most well-connected individuals in the global
+      tech ecosystem.
     key_results:
       - Connected over 100 startups with industry leaders
       - Facilitated $50M+ in investments
@@ -79,7 +105,6 @@ sections:
     cta:
       text: Explore the Superconnectors Impact
       action: https://superconnectors.io
-
   main_cta:
     title: Ready to Conquer Your Black Ocean?
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa

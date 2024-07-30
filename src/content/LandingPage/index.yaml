@@ -40,17 +40,17 @@ sections:
     subtitle: A strategic framework for transforming organizations and conquering
       black ocean markets
     items:
-      - title: Black Ocean Discovery
+      - title: Discover Uncharted Markets
         icon: Compass
         description: Uncover hidden market opportunities beyond traditional landscapes.
           Identify emerging black ocean markets where your organization can lead
           and thrive.
-      - title: Ecosystem Mapping
+      - title: Build Your Ecosystem
         icon: Network
         description: Visualize and optimize your network of partnerships and resources.
           Create a 'vessel of transformation' - a shared vision for conquering
           black ocean markets together.
-      - title: Adaptive Value Architecture
+      - title: Create Shared Value
         icon: Layers
         description: Design flexible structures that maximize value creation across your
           ecosystem. Build a Minimum Viable Ecosystem that rapidly adapts to
@@ -103,22 +103,21 @@ sections:
       text: Schedule Your Free Consultation
       action: /book-consultation
 description: Yeehaa, an ecosystem architect, offers innovative strategies for
-  conquering "Black Ocean" markets. The landing page presents challenges in
-  traditional business models and introduces pioneering concepts like
-  Ecosystem-Led Growth. It outlines Yeehaa's approach to Ecosystem Architecture,
-  including Black Ocean Discovery and Adaptive Value Architecture. Services
-  offered include strategy development and organization redesign. The page
-  highlights Yeehaa's expertise, showcases a successful case study, and invites
-  visitors to book a consultation for transforming their organizations and
-  exploring new market frontiers.
+  conquering "Black Ocean" markets. The landing page showcases services like
+  Black Ocean Discovery, Ecosystem-Led Growth Strategy, and Adaptive
+  Organization Design. It highlights challenges in traditional business
+  structures and introduces pioneering concepts like Black Ocean Markets and
+  Ecosystem-Led Growth. The page features a case study on the Superconnectors
+  event format and invites visitors to book a consultation for transforming
+  their organizations and exploring untapped market opportunities.
 excerpt: Yeehaa, an ecosystem architect, guides organizations in conquering
-  "Black Ocean" markets through innovative strategies. The approach includes
-  Black Ocean Discovery, Ecosystem Mapping, and Adaptive Value Architecture,
-  aiming to transform businesses and create new market categories.
+  "Black Ocean" markets through innovative strategies, ecosystem-led growth, and
+  adaptive design. The landing page showcases services, case studies, and
+  invites visitors to explore untapped opportunities.
 tags:
-  - ecosystem
   - innovation
+  - ecosystem
   - strategy
-  - transformation
   - growth
-bannerImageURL: ./c05f6bb27a9bf43a10371bf51dd6c838-banner.png
+  - transformation
+bannerImageURL: ./959eb32cabc01a350d8c33764a465dc1-banner.png
