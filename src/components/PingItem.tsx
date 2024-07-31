@@ -22,7 +22,7 @@ export function PingItem({ title, icon, description, className }: Props) {
   const Icon = IconMap[icon];
   return (
     <div className={cx("relative flex flex-col items-start gap-4 p-6 text-center", className)}>
-      <div className="w-full flex justify-center items-center animate-ping text-black aspect-square rounded-full border-none bg-secondary">
+      <div className="w-full flex justify-center items-center animate-ping text-black aspect-square rounded-full border-none bg-primary">
         <Icon className="w-36 h-36" />
       </div>
       <div className="space-y-2 relative">
