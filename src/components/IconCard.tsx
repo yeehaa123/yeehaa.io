@@ -37,9 +37,6 @@ type Props = {
   className?: string,
 }
 
-
-
-
 export const IconCard = ({ title, description, icon, className }: Props) => {
   // @ts-ignore
   const Icon = IconMap[icon] || Boxes;

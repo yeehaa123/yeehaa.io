@@ -1,15 +1,18 @@
+import { cx } from 'class-variance-authority';
 import {
   Compass, GitBranch, Brain, Waves,
   Network, Layers, Boxes
 } from 'lucide-react';
+import { NarrowSection } from './NarrowSection';
 
 type Item = {
   title: string,
-  icon: string
+  icon: string,
 }
 
 type Props = {
-  items: Item[]
+  items: Item[],
+  className?: string
 }
 
 const IconMap = {
@@ -22,8 +25,8 @@ const IconMap = {
   Boxes: Boxes,
 };
 
-export const ApproachPreview = ({ items }: Props) => (
-  <section className="w-full py-24">
+export const ApproachPreview = ({ items, className }: Props) => (
+  <NarrowSection className={cx("w-full py-24", className)}>
     <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
       <div className="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-3 md:flex md:justify-between">
         {items.map((item, index) => {
@@ -39,6 +42,6 @@ export const ApproachPreview = ({ items }: Props) => (
         })}
       </div>
     </div>
-  </section>
+  </NarrowSection>
 );
 
