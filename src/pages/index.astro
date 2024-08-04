@@ -11,6 +11,7 @@ import { getEntry } from 'astro:content';
 import { Button } from "@/components/ui/button";
 import { CallToAction } from "@/components/CTA";
 import { PingItem } from "@/components/PingItem";
+import { Image } from "astro:assets";
 interface Props  {
   logoLink: "/"
 }
@@ -18,7 +19,7 @@ interface Props  {
 const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
 const { data } = entry
-const { sections } = data;
+const { sections, profileImageURL} = data;
 const { hero, challenges,concepts, approach, about, services, case_study, main_cta } = sections;
 ---
 <Layout {logoLink}  {...data}>
@@ -26,7 +27,7 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
   <HeroSection {...hero} client:load/>
   <Wave class="bg-primary"/>
   <ApproachPreview items={approach.items} />
-  <NarrowSection>
+  <NarrowSection className="py-12 md:py-24 lg:py-32">
     <div class="grid items-center justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:text-left">
       <div class="space-y-4">
         <div class="space-y-2">
@@ -57,30 +58,45 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
         {concepts.items.map((item) => <PingItem {...item} />) }
       </div>
   </section>
-  <Section title={approach.title} subtitle={approach.subtitle}>
+  <Section title={approach.title} subtitle={approach.subtitle} 
+    className="py-12 md:py-24 lg:py-32">
+    <NarrowSection>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {approach.items.map((item) => (
       <IconCard {...item} />
       ))}
     </div>
-  </section>
-  <Section title={about.title} subtitle={about.subtitle} className="bg-muted">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg mb-6">{about.description}</p>
-      <ul class="list-disc list-inside mb-6">
-        {about.key_points.map((point)=> <li>{point}</li>)}
-      </ul>
-    </div>
+    </NarrowSection>
   </Section>
-  <Section title={services.title}>
+  <NarrowSection className="w-full my-16 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center justify-between">
+    <div class="w-full lg:w-1/2">
+      <Image src={profileImageURL} alt={about.title} />
+    </div>
+    <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
+      <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
+        {about.title}
+      </h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="mb-6">{about.description}</p>
+        <ul class="list-disc list-inside mb-6">
+          {about.key_points.map((point)=> <li>{point}</li>)}
+        </ul>
+      </div>
+    </div>
+  </NarrowSection>
+  <NarrowSection className="flex flex-col gap-y-8 py-16">
+      <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
+        {about.title}
+      </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
       {services.items.map((item) => (
       <IconCard {...item} />
       ))}
     </div>
-  </Section>
-  <Section title={case_study.title} subtitle={case_study.subtitle} className="bg-accent text-accent-foreground">
+  </NarrowSection>
+  <Section title={case_study.title} subtitle={case_study.subtitle} 
+    className="text-center bg-primary text-black">
   <div class="max-w-3xl mx-auto">
     <p class="text-lg mb-6">{case_study.description}</p>
       <ul class="list-disc list-inside mb-6">
@@ -91,6 +107,7 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
     </Button>
   </div>
   </Section>
+  <Wave class="bg-primary"/>
   <Section title={main_cta.title} subtitle={main_cta.subtitle}>
     <div class="text-center">
       <CallToAction {...main_cta.cta} client:load/>

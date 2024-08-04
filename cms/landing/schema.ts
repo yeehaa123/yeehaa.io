@@ -25,6 +25,7 @@ const associationsSchema = z.object({
 
 export const augmentationsSchema = z.object({
   bannerImageURL: z.string(),
+  profileImageURL: z.string(),
 })
 
 export const outputSchema = landingContentSchema

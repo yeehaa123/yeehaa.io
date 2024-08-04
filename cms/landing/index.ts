@@ -19,12 +19,13 @@ import * as yaml from "yaml";
 export const PATH_SUFFIX = "LandingPage"
 export const schema = outputSchema
 
-export function init({ page_content }: InitLanding) {
+export function init({ page_content, author }: InitLanding) {
   const { title } = page_content;
   const checksum = generateChecksum(JSON.stringify(page_content));
   const hash = hashify(title);
   const meta = m.init({
     id: hash,
+    author,
     title,
     contentType: ContentType.LANDING_PAGE,
     checksum
@@ -47,16 +48,20 @@ export async function augment(entity: AssociatedLanding) {
   const { meta, analysis } = entity;
   const { checksum } = meta;
   const bannerImageURL = await ai.bannerImage(analysis, checksum);
-  const augmentations = { bannerImageURL };
+  const profileImageURL = await ai.profilePicture(analysis, checksum);
+  const augmentations = { bannerImageURL, profileImageURL };
   return finalSchema.parse({ ...entity, augmentations })
 }
 
 export async function write(basePath: string, entity: FinalLanding) {
   const { augmentations } = entity
-  const { bannerImageURL } = augmentations;
+  const { bannerImageURL, profileImageURL } = augmentations;
   const imgSrc = path.join('./.cache', bannerImageURL);
   const imgDest = path.join(basePath, PATH_SUFFIX, bannerImageURL);
   await copyFile(imgSrc, imgDest);
+  const profileImgSrc = path.join('./.cache', profileImageURL);
+  const profileImgDst = path.join(basePath, PATH_SUFFIX, profileImageURL);
+  await copyFile(profileImgSrc, profileImgDst);
   const dataFilePath = path.join(basePath, PATH_SUFFIX, `index.yaml`);
   const dataFile = render(entity);
   await writeFile(dataFilePath, dataFile, 'utf8');
@@ -64,11 +69,12 @@ export async function write(basePath: string, entity: FinalLanding) {
 
 function render(entity: FinalLanding) {
   const { page_content, analysis, augmentations } = entity;
-  const { bannerImageURL } = augmentations;
+  const { bannerImageURL, profileImageURL } = augmentations;
   const output = outputSchema.parse({
     ...page_content,
     ...augmentations,
     bannerImageURL: `./${bannerImageURL}`,
+    profileImageURL: `./${profileImageURL}`,
     ...analysis,
   });
   return yaml.stringify(output);

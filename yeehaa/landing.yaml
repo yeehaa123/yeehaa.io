@@ -5,15 +5,6 @@ sections:
     subtitle: Foster effective ecosystems through collaboration and knowledge sharing
     cta:
       text: Embark on Your Black Ocean Journey
-  approach_preview:
-    title: Your Blueprint for Ecosystem Mastery
-    items:
-      - title: Discover Uncharted Markets
-        icon: Compass
-      - title: Build Your Ecosystem
-        icon: Network
-      - title: Create Shared Value
-        icon: Layers
   challenges:
     title: Navigating Complex Ecosystems
     subtitle: Critical Challenges in Black Ocean Markets
@@ -42,17 +33,21 @@ sections:
         description: Transform your approach by leveraging the power of your entire ecosystem. Connect with partners, innovators, and customers to create sustainable growth and value for all stakeholders.
   approach:
     title: Ecosystem Architecture
-    subtitle: A strategic framework for transforming organizations and conquering black ocean markets
+    subtitle: A revolutionary framework for transforming organizations and pioneering black ocean markets
+    description: Ecosystem Architecture is our proprietary methodology that goes beyond traditional business strategies. It empowers your organization to identify and dominate unexplored market spaces while building a resilient network of partners and stakeholders. By following this approach, you'll not only identify new market opportunities but also build the collaborative infrastructure necessary to seize them effectively.
     items:
       - title: Discover Uncharted Markets
         icon: Compass
-        description: Uncover hidden market opportunities beyond traditional landscapes. Identify emerging black ocean markets where your organization can lead and thrive.
-      - title: Build Your Ecosystem
+        description: Employ our Black Ocean Market Analysis to uncover hidden opportunities beyond traditional industry boundaries. We use advanced data analytics and trend forecasting to identify emerging markets where your organization can become a pioneer.
+        outcome: A comprehensive map of potential black ocean markets tailored to your organization's strengths and aspirations.
+      - title: Architect Your Ecosystem
         icon: Network
-        description: Visualize and optimize your network of partnerships and resources. Create a 'vessel of transformation' - a shared vision for conquering black ocean markets together.
-      - title: Create Shared Value
+        description: Utilize our Ecosystem Mapping Tool to visualize and optimize your network of partnerships, resources, and stakeholders. We help you design a "Collaborative Growth Engine" - a shared vision and strategy for conquering black ocean markets together.
+        outcome: A dynamic ecosystem model that identifies key partners, resources, and growth opportunities.
+      - title: Create and Distribute Shared Value
         icon: Layers
-        description: Design flexible structures that maximize value creation across your ecosystem. Build a Minimum Viable Ecosystem that rapidly adapts to market shifts and scales with sustained growth.
+        description: Implement our Adaptive Value Creation Framework to design flexible structures that maximize benefits for all ecosystem participants. We guide you in building a Minimum Viable Ecosystem (MVE) that rapidly adapts to market shifts and scales with sustained growth.
+        outcome: A robust strategy for creating and equitably distributing value across your ecosystem, ensuring long-term engagement and growth.
   about:
     title: About Yeehaa
     subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator

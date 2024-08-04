@@ -7,7 +7,7 @@ type Props = {
 }
 
 export function NarrowSection({ children, className }: Props) {
-  return <section className={cx("w-full py-12 md:py-24 lg:py-32 xl:py-48 lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto", className)}>
+  return <section className={cx("w-full lg:w-11/12 xl:w-9/12 2xl:w-8/12 mx-auto", className)}>
     {children}
   </section>
 }

@@ -6,6 +6,7 @@ export async function analyze(entity: BaseLanding) {
   const { meta, page_content } = entity;
   const content = JSON.stringify(page_content);
   const { checksum } = meta;
+  console.log("CS", checksum);
   const id = checksum;
   const summary_length = 600;
   const excerpt_length = 200;

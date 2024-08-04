@@ -18,6 +18,7 @@ const posts = defineCollection({
 const landingPages = defineCollection({
   type: "data",
   schema: ({ image }) => landing.schema.extend({
+    profileImageURL: image(),
     bannerImageURL: image(),
   })
 });

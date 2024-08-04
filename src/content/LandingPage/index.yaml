@@ -44,24 +44,27 @@ sections:
           sustainable growth and value for all stakeholders.
   approach:
     title: Ecosystem Architecture
-    subtitle: A strategic framework for transforming organizations and conquering
-      black ocean markets
+    subtitle: A revolutionary framework for transforming organizations and
+      pioneering black ocean markets
     items:
       - title: Discover Uncharted Markets
         icon: Compass
-        description: Uncover hidden market opportunities beyond traditional landscapes.
-          Identify emerging black ocean markets where your organization can lead
-          and thrive.
-      - title: Build Your Ecosystem
+        description: Employ our Black Ocean Market Analysis to uncover hidden
+          opportunities beyond traditional industry boundaries. We use advanced
+          data analytics and trend forecasting to identify emerging markets
+          where your organization can become a pioneer.
+      - title: Architect Your Ecosystem
         icon: Network
-        description: Visualize and optimize your network of partnerships and resources.
-          Create a 'vessel of transformation' - a shared vision for conquering
-          black ocean markets together.
-      - title: Create Shared Value
+        description: Utilize our Ecosystem Mapping Tool to visualize and optimize your
+          network of partnerships, resources, and stakeholders. We help you
+          design a "Collaborative Growth Engine" - a shared vision and strategy
+          for conquering black ocean markets together.
+      - title: Create and Distribute Shared Value
         icon: Layers
-        description: Design flexible structures that maximize value creation across your
-          ecosystem. Build a Minimum Viable Ecosystem that rapidly adapts to
-          market shifts and scales with sustained growth.
+        description: Implement our Adaptive Value Creation Framework to design flexible
+          structures that maximize benefits for all ecosystem participants. We
+          guide you in building a Minimum Viable Ecosystem (MVE) that rapidly
+          adapts to market shifts and scales with sustained growth.
   about:
     title: About Yeehaa
     subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
@@ -108,22 +111,23 @@ sections:
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa
     cta:
       text: Schedule Your Free Consultation
-description: Yeehaa, an Ecosystem Architect, offers innovative strategies for
-  conquering "Black Ocean" markets. The landing page introduces concepts like
-  Ecosystem-Led Growth and Black Ocean Markets, highlighting challenges in
-  complex ecosystems. Yeehaa's approach involves discovering uncharted markets,
-  building ecosystems, and creating shared value. Services include Black Ocean
-  Discovery, Ecosystem-Led Growth Strategy, and Adaptive Organization Design.
-  The page showcases a case study on the Superconnectors event format and
-  invites visitors to book a consultation.
-excerpt: Yeehaa, an Ecosystem Architect, guides organizations in navigating
-  complex ecosystems and conquering "Black Ocean" markets. Through innovative
-  strategies and collaborative approaches, Yeehaa helps transform businesses to
-  thrive in unexplored market spaces.
+description: Yeehaa, the Ecosystem Architect, offers a revolutionary approach to
+  conquer Black Ocean markets. The landing page introduces concepts like
+  Ecosystem-Led Growth and Black Ocean Markets, addressing challenges such as
+  Knowledge Fragmentation and Ecosystem Blindness. Yeehaa's services include
+  Black Ocean Discovery, Ecosystem-Led Growth Strategy, and Adaptive
+  Organization Design. The page showcases success stories, emphasizes
+  collaborative growth, and invites visitors to book a discovery session for
+  transforming their organizations and pioneering new market spaces.
+excerpt: Yeehaa, an Ecosystem Architect, helps organizations conquer Black Ocean
+  markets through innovative strategies, ecosystem-led growth, and adaptive
+  frameworks. The landing page introduces key concepts, services, and success
+  stories, inviting visitors to transform their approach to emerging markets.
 tags:
   - ecosystem
   - innovation
-  - strategy
+  - blackocean
   - collaboration
   - growth
-bannerImageURL: ./fb959eb3e0b70cd8b5b400c855e54f3e-banner.png
+bannerImageURL: ./b296c8e4b71e858320b6b68c0518565b-banner.png
+profileImageURL: ./b296c8e4b71e858320b6b68c0518565b-profile.png

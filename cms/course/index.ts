@@ -65,7 +65,7 @@ export async function analyze(entity: BaseCourse) {
 
 export function associate(entity: AnalyzedCourse, table: AnalyzedTable) {
   const habitat = ot.findArticleForCourse(table, entity.meta.habitat || entity.meta.title);
-  const profile = ot.findProfileForCourse(table, entity.course.curator);
+  const profile = ot.findProfileForAuthor(table, entity.course.curator);
   const associations = {
     habitat: habitat ? as.init(habitat) : undefined,
     profile: profile ? as.init(profile) : undefined
