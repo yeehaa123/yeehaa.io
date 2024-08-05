@@ -1,18 +1,23 @@
 ---
+
 import Layout from "@/layouts/Landing.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import  { HeroSection}from "@/components/HeroSection";
 import  { ApproachPreview}from "@/components/ApproachPreview";
+import { CardsSection } from "@/components/CardsSection";
+import { ProductCard } from "@/components/ProductCard";
+import { ImageSection } from "@/components/ImageSection";
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
 import  { Section }from "@/components/PageSection";
 import  { NarrowSection }from "@/components/NarrowSection";
 import  { IconCard }from "@/components/IconCard";
+import { Share, Users } from 'lucide-react';
 import { getEntry } from 'astro:content';
 import { Button } from "@/components/ui/button";
 import { CallToAction } from "@/components/CTA";
 import { PingItem } from "@/components/PingItem";
-import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
 interface Props  {
   logoLink: "/"
 }
@@ -21,33 +26,16 @@ const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
 const { data } = entry
 const { sections, profileImageURL} = data;
-const { hero, challenges,concepts, approach, about, services, case_study, main_cta } = sections;
+const { hero, challenges, concepts, approach, about, services, products, case_study, main_cta } = sections;
+const profileImage = await getImage({src: profileImageURL, format: 'webp'});
+
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
   <HeroSection {...hero} client:load/>
   <Wave class="bg-primary"/>
   <ApproachPreview items={approach.items} />
-  <NarrowSection className="py-12 md:py-24 lg:py-32">
-    <div class="grid items-center justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:text-left">
-      <div class="space-y-4">
-        <div class="space-y-2">
-          <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
-            {challenges.title}
-          </h2>
-          <p class="text-muted-foreground 
-            md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            {challenges.description}
-          </p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {challenges.items.map((item) => (
-        <IconCard {...item} />
-        ))}
-      </div>
-    </div>
-  </NarrowSection>
+  <CardsSection {...challenges} />
   <section class="overflow-x-clip py-12 md:py-24 lg:py-32 xl:py-48">
     <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-16">
       <div class="space-y-3">
@@ -59,57 +47,45 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
         {concepts.items.map((item) => <PingItem {...item} />) }
       </div>
   </section>
-  <Section title={approach.title} subtitle={approach.subtitle} 
-    className="py-12 md:py-24 lg:py-32">
-    <NarrowSection>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {approach.items.map((item) => (
-      <IconCard {...item} />
-      ))}
-    </div>
-    </NarrowSection>
-  </Section>
-  <NarrowSection className="w-full my-16 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center justify-between">
-    <div class="w-full lg:w-1/2">
-      <Image src={profileImageURL} alt={about.title} />
-    </div>
-    <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
-      <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
-        {about.title}
-      </h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="mb-6">{about.description}</p>
-        <ul class="list-disc list-inside mb-6">
-          {about.key_points.map((point)=> <li>{point}</li>)}
-        </ul>
+  <CardsSection {...approach} orientation="vertical"/>
+  <ImageSection imageURL={profileImage.src} {...about} />
+  <Bubble anchor="bottom" class="bg-primary"/>
+  <section class="py-16 bg-primary text-black">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-2">{services.title}</h2>
+      <div className={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
+        {services.items.map((item, index) => (
+        <IconCard key={index} {...item} />
+        ))}
       </div>
     </div>
-  </NarrowSection>
-  <NarrowSection className="flex flex-col gap-y-8 py-16">
-      <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
-        {about.title}
-      </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      {services.items.map((item) => (
-      <IconCard {...item} />
-      ))}
+  </section>
+  <section class="py-16 bg-primary text-black">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-2">{products.title}</h2>
+      <p class="text-xl text-center text-gray-600 mb-8">{products.subtitle}</p>
+      <p class="text-center mb-12 max-w-2xl mx-auto">{products.description}</p>
+      <div class="flex flex-col md:flex-row justify-center items-stretch space-y-8 md:space-y-0 md:space-x-8">
+        { products.items.map(product => <ProductCard {...product}/>)}
+      </div>
+      <div class="text-center mt-12">
+        <CallToAction {...products.cta} client:load/>
+      </div>
     </div>
-  </NarrowSection>
-  <Bubble anchor="bottom" class="bg-primary"/>
-  <Section title={case_study.title} subtitle={case_study.subtitle} 
-    className="text-center bg-primary text-black">
-  <div class="max-w-3xl mx-auto">
-    <p class="text-lg mb-6">{case_study.description}</p>
-      <ul class="list-disc list-inside mb-6">
-        {case_study.key_results.map((result)=> <li>{result}</li>)}
-      </ul>
-    <Button variant="secondary" asChild>
-      <a href={case_study.cta.action}>{case_study.cta.text}</a>
-    </Button>
-  </div>
-  </Section>
+  </section>
   <Wave class="bg-primary"/>
+  <Section title={case_study.title} subtitle={case_study.subtitle} 
+    className="text-center">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-lg mb-6">{case_study.description}</p>
+      <ul class="list-disc list-inside mb-6">
+        {case_study.key_points.map((result)=> <li>{result}</li>)}
+      </ul>
+      <Button variant="secondary" asChild>
+        <a href={case_study.cta.action}>{case_study.cta.text}</a>
+      </Button>
+    </div>
+  </Section>
   <Section title={main_cta.title} subtitle={main_cta.subtitle}>
     <div class="text-center">
       <CallToAction {...main_cta.cta} client:load/>

@@ -69,11 +69,35 @@ sections:
       - title: Adaptive Organization Design
         icon: Layers
         description: Restructure your organization to thrive in black ocean markets and maximize ecosystem potential.
+  products:
+    title: Ecosystem Domination Tools
+    subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
+    description: Our cutting-edge products are designed to give you an unparalleled advantage in navigating and conquering Black Ocean markets. By leveraging these tools, you'll unlock the full potential of your ecosystem, driving innovation and growth at unprecedented speeds.
+    items:
+      - title: Offcourse
+        icon: Share
+        description: Transform your organization into a learning powerhouse with Offcourse, our revolutionary knowledge-sharing platform.
+        features:
+          Atomic Learning Elements: Break down complex knowledge into actionable, git-like versioned units.
+          Cross-Pollination of Ideas: Facilitate seamless knowledge transfer across teams and partner organizations.
+          Rapid Iteration: Accelerate your learning cycles and stay ahead of the competition in fast-evolving markets.
+        impact: "Organizations using Offcourse report a 40% increase in innovation speed and a 25% boost in cross-functional collaboration."
+      - title: Hivemind
+        icon: Users
+        description: Unleash the collective genius of your ecosystem with Hivemind, our advanced cognitive assessment and optimization tool.
+        features:
+          Transactive Memory Scoring: Quantify and visualize your ecosystem's collective intelligence.
+          Cognitive Gap Analysis: Identify knowledge blind spots and untapped potential within your network.
+          Synergy Optimization: Receive AI-powered recommendations to maximize cognitive alignment and collaborative output.
+        impact: "Ecosystems optimized with Hivemind experience a 50% improvement in problem-solving efficiency and a 30% increase in successful cross-organization initiatives."
+    cta:
+      text: Revolutionize Your Ecosystem Today
+      action: "#demo-request"
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
     description: Discover how yeehaa created the Superconnectors event format, a groundbreaking ecosystem-led approach that enables startups to present their critical asks to the most well-connected individuals in the global tech ecosystem.
-    key_results:
+    key_points:
       - Connected over 100 startups with industry leaders
       - Facilitated $50M+ in investments
       - Created 500+ high-value partnerships
