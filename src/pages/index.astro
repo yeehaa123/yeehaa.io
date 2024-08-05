@@ -4,6 +4,7 @@ import  { BaseHead, OGType  }from "@/components/BaseHead";
 import  { HeroSection}from "@/components/HeroSection";
 import  { ApproachPreview}from "@/components/ApproachPreview";
 import  Wave from "@/components/Wave.astro";
+import  Bubble from "@/components/Bubble.astro";
 import  { Section }from "@/components/PageSection";
 import  { NarrowSection }from "@/components/NarrowSection";
 import  { IconCard }from "@/components/IconCard";
@@ -95,6 +96,7 @@ const { hero, challenges,concepts, approach, about, services, case_study, main_c
       ))}
     </div>
   </NarrowSection>
+  <Bubble anchor="bottom" class="bg-primary"/>
   <Section title={case_study.title} subtitle={case_study.subtitle} 
     className="text-center bg-primary text-black">
   <div class="max-w-3xl mx-auto">
