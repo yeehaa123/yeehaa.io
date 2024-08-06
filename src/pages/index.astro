@@ -1,16 +1,16 @@
 ---
+import { getEntry } from 'astro:content';
+import { getImage } from "astro:assets";
 import Layout from "@/layouts/Landing.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import { ProductCard } from "@/components/ProductCard";
-import { ImageSection } from "@/components/ImageSection";
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
 import  { IconCard }from "@/components/IconCard";
-import { getEntry } from 'astro:content';
-import { Icon } from "@/components/Icon";
+import  { Step }from "@/components/Step";
 import { CallToAction } from "@/components/CTA";
 import { PingItem } from "@/components/PingItem";
-import { getImage } from "astro:assets";
+
 interface Props  {
   logoLink: "/"
 }
@@ -30,22 +30,14 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
     <div class="relative z-10 text-center text-black px-4">
       <h1 class="text-6xl font-extrabold mb-6">{hero.title}</h1>
       <p class="text-2xl mb-10 max-w-2xl mx-auto">{hero.subtitle}</p>
-      <CallToAction {...hero.cta} />
+      <CallToAction {...hero.cta} client:load />
     </div>
   </header>
   <Wave class="bg-primary"/>
   <section class="py-16">
     <div class="container grid items-center justify-center gap-4 px-8 md:px-16 text-center lg:gap-10">
       <div class="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-3 md:flex md:justify-between">
-        {approach.items.map((item, index) => {
-          const numbers = ["One", "Two", "Three"];
-          return <div class="flex flex-row items-center gap-6">
-            <Icon className="h-10 w-10" name={item.icon} />
-            <h3 class="font-serif xl:text-lg text-left w-full">
-              <p class="font-bold">Step {numbers[index]}</p>
-              <p>{item.title}</p></h3>
-          </div>
-        })}
+        {approach.items.map((item, index) => <Step step={index} {...item} />)}
       </div>
     </div>
   </section>
@@ -62,9 +54,7 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {challenges.items.map((item) => (
-        <IconCard {...item} />
-        ))}
+        {challenges.items.map((item) => <IconCard {...item} />)}
       </div>
     </div>
   </section>
@@ -87,21 +77,34 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {approach.items.map((item) => (
-        <IconCard {...item} />
-        ))}
+        {approach.items.map((item) => <IconCard {...item} />)}
       </div>
     </div>
   </section >
-  <ImageSection imageURL={profileImage.src} {...about} />
+  <section class="py-16">
+    <div class="container mx-auto px-8 md:px-16 flex flex-col lg:flex-row gap-8">
+      <div class="w-full lg:w-1/2">
+        <img src={profileImage.src} alt={about.title}/>
+      </div>
+      <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
+        <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
+          {about.title}
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="mb-6">{about.description}</p>
+          <ul class="list-disc list-inside mb-6">
+            {about.key_points.map((point) => <li>{point}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <Bubble anchor="bottom" class="bg-primary"/>
   <section class="py-16 bg-primary text-black">
     <div class="container mx-auto px-8 md:px-16">
       <h2 class="text-3xl font-bold text-center mb-2">{services.title}</h2>
       <div class={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
-        {services.items.map((item) => (
-        <IconCard {...item} />
-        ))}
+        {services.items.map((item) => <IconCard {...item} />)}
       </div>
     </div>
   </section>
