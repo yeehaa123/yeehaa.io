@@ -1,20 +1,13 @@
 ---
-
 import Layout from "@/layouts/Landing.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
-import  { HeroSection}from "@/components/HeroSection";
-import  { ApproachPreview}from "@/components/ApproachPreview";
-import { CardsSection } from "@/components/CardsSection";
 import { ProductCard } from "@/components/ProductCard";
 import { ImageSection } from "@/components/ImageSection";
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
-import  { Section }from "@/components/PageSection";
-import  { NarrowSection }from "@/components/NarrowSection";
 import  { IconCard }from "@/components/IconCard";
-import { Share, Users } from 'lucide-react';
 import { getEntry } from 'astro:content';
-import { Button } from "@/components/ui/button";
+import { Icon } from "@/components/Icon";
 import { CallToAction } from "@/components/CTA";
 import { PingItem } from "@/components/PingItem";
 import { getImage } from "astro:assets";
@@ -32,11 +25,50 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
-  <HeroSection {...hero} client:load/>
+  <header class="relative h-4/6 pt-36 xl:pt-48 flex items-center justify-center bg-cover bg-center">
+    <div class="absolute inset-0 bg-primary opacity-100"></div>
+    <div class="relative z-10 text-center text-black px-4">
+      <h1 class="text-6xl font-extrabold mb-6">{hero.title}</h1>
+      <p class="text-2xl mb-10 max-w-2xl mx-auto">{hero.subtitle}</p>
+      <CallToAction {...hero.cta} />
+    </div>
+  </header>
   <Wave class="bg-primary"/>
-  <ApproachPreview items={approach.items} />
-  <CardsSection {...challenges} />
-  <section class="overflow-x-clip py-12 md:py-24 lg:py-32 xl:py-48">
+  <section class="py-16">
+    <div class="container grid items-center justify-center gap-4 px-8 md:px-16 text-center lg:gap-10">
+      <div class="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-3 md:flex md:justify-between">
+        {approach.items.map((item, index) => {
+          const numbers = ["One", "Two", "Three"];
+          return <div class="flex flex-row items-center gap-6">
+            <Icon className="h-10 w-10" name={item.icon} />
+            <h3 class="font-serif xl:text-lg text-left w-full">
+              <p class="font-bold">Step {numbers[index]}</p>
+              <p>{item.title}</p></h3>
+          </div>
+        })}
+      </div>
+    </div>
+  </section>
+  <section class="py-16">
+    <div class="container px-8 md:px-16 grid 
+      items-center justify-center gap-8 lg:text-left lg:grid-cols-2">
+      <div class="space-y-4">
+        <h2 class={`text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl`}>
+          {challenges.title}
+        </h2>
+        <p class="text-muted-foreground 
+          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          {challenges.description}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {challenges.items.map((item) => (
+        <IconCard {...item} />
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="overflow-x-clip py-16">
     <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-16">
       <div class="space-y-3">
         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -47,25 +79,38 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
         {concepts.items.map((item) => <PingItem {...item} />) }
       </div>
   </section>
-  <CardsSection {...approach} orientation="vertical"/>
+  <section class="py-16">
+    <div class="container mx-auto px-8 md:px-16">
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
+          {approach.title}
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {approach.items.map((item) => (
+        <IconCard {...item} />
+        ))}
+      </div>
+    </div>
+  </section >
   <ImageSection imageURL={profileImage.src} {...about} />
   <Bubble anchor="bottom" class="bg-primary"/>
   <section class="py-16 bg-primary text-black">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-8 md:px-16">
       <h2 class="text-3xl font-bold text-center mb-2">{services.title}</h2>
-      <div className={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
-        {services.items.map((item, index) => (
-        <IconCard key={index} {...item} />
+      <div class={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
+        {services.items.map((item) => (
+        <IconCard {...item} />
         ))}
       </div>
     </div>
   </section>
   <section class="py-16 bg-primary text-black">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-8 md:px-16">
       <h2 class="text-3xl font-bold text-center mb-2">{products.title}</h2>
       <p class="text-xl text-center text-gray-600 mb-8">{products.subtitle}</p>
       <p class="text-center mb-12 max-w-2xl mx-auto">{products.description}</p>
-      <div class="flex flex-col md:flex-row justify-center items-stretch space-y-8 md:space-y-0 md:space-x-8">
+      <div class="grid grid-col-1 w-full gap-y-8">
         { products.items.map(product => <ProductCard {...product}/>)}
       </div>
       <div class="text-center mt-12">
@@ -73,22 +118,28 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
       </div>
     </div>
   </section>
-  <Wave class="bg-primary"/>
-  <Section title={case_study.title} subtitle={case_study.subtitle} 
-    className="text-center">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg mb-6">{case_study.description}</p>
-      <ul class="list-disc list-inside mb-6">
-        {case_study.key_points.map((result)=> <li>{result}</li>)}
-      </ul>
-      <Button variant="secondary" asChild>
-        <a href={case_study.cta.action}>{case_study.cta.text}</a>
-      </Button>
+  <section class="py-16 bg-primary text-black">
+    <div class="container mx-auto px-8 md:px-16">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-4">{case_study.title}</h2>
+        <p class="text-xl mb-8">{case_study.subtitle}</p>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg mb-6">{case_study.description}</p>
+        <ul class="list-disc list-inside mb-6">
+          {case_study.key_points.map((result)=> <li>{result}</li>)}
+        </ul>
+        <CallToAction {...case_study.cta} client:load/>
+      </div>
+      </div>
     </div>
-  </Section>
-  <Section title={main_cta.title} subtitle={main_cta.subtitle}>
-    <div class="text-center">
+  </section>
+  <Wave class="bg-primary"/>
+  <section class="py-16">
+    <div class="container mx-auto px-8 md:px-16">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-4">{main_cta.title}</h2>
+        <p class="text-xl mb-8">{main_cta.subtitle}</p>
       <CallToAction {...main_cta.cta} client:load/>
     </div>
-  </Section>
+  </section>
 </Layout>

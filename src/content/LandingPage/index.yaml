@@ -94,6 +94,11 @@ sections:
           maximize ecosystem potential.
   products:
     title: Ecosystem Domination Tools
+    subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
+    description: Our cutting-edge products are designed to give you an unparalleled
+      advantage in navigating and conquering Black Ocean markets. By leveraging
+      these tools, you'll unlock the full potential of your ecosystem, driving
+      innovation and growth at unprecedented speeds.
     items:
       - title: Offcourse
         icon: Share
@@ -108,7 +113,7 @@ sections:
             competition in fast-evolving markets.
         impact: Organizations using Offcourse report a 40% increase in innovation speed
           and a 25% boost in cross-functional collaboration.
-      - title: Hivemind
+      - title: Rizom
         icon: Users
         description: Unleash the collective genius of your ecosystem with Hivemind, our
           advanced cognitive assessment and optimization tool.
@@ -144,24 +149,22 @@ sections:
     cta:
       text: Schedule Your Free Consultation
 description: Yeehaa, an Ecosystem Architect, offers innovative solutions for
-  navigating complex ecosystems and conquering "Black Ocean" markets. The
-  landing page presents Yeehaa's approach to ecosystem-led growth, highlighting
-  key challenges in today's interconnected world and introducing pioneering
-  concepts like Black Ocean Markets and Ecosystem Architecture. Services include
-  Black Ocean Discovery, Ecosystem-Led Growth Strategy, and Adaptive
-  Organization Design. The page also showcases Yeehaa's ecosystem domination
-  tools, Offcourse and Hivemind, and presents a case study on the successful
-  Superconnectors event format. The overall message emphasizes collaboration,
-  innovation, and shared value creation in unexplored market spaces.
-excerpt: Yeehaa, an Ecosystem Architect, offers innovative solutions for
-  navigating complex ecosystems and conquering "Black Ocean" markets. The
-  landing page presents Yeehaa's approach to ecosystem-led growth, highlighting
-  key challenges and introducing pioneering concepts.
+  conquering Black Ocean markets. The landing page showcases their approach to
+  ecosystem-led growth, featuring services like Black Ocean Discovery and
+  Adaptive Organization Design. It highlights key concepts such as Black Ocean
+  Markets and Ecosystem Architecture, presenting tools like Offcourse and Rizom
+  for knowledge sharing and collective intelligence optimization. The page also
+  includes a case study on the Superconnectors event format and encourages
+  visitors to book a discovery session.
+excerpt: Yeehaa, an Ecosystem Architect, helps organizations navigate complex
+  ecosystems and conquer Black Ocean markets. Through innovative concepts,
+  tools, and services, they foster collaboration, knowledge sharing, and
+  sustainable growth in unexplored market spaces.
 tags:
   - ecosystem
   - innovation
   - collaboration
   - strategy
   - growth
-bannerImageURL: ./4221a8a3cdc80b6685771834dbbec332-banner.png
-profileImageURL: ./4221a8a3cdc80b6685771834dbbec332-profile.png
+bannerImageURL: ./2336a69b224b28df40f879dbf73cb477-banner.png
+profileImageURL: ./2336a69b224b28df40f879dbf73cb477-profile.png

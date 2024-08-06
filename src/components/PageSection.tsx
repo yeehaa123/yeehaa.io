@@ -1,18 +1,16 @@
 import type { ReactElement } from "react";
 
 type Section = {
-  title: string,
-  subtitle?: string,
-  children: ReactElement,
-  className?: string
+  className?: string,
+  children: ReactElement | ReactElement[]
 }
 
-export const Section = ({ title, subtitle, children, className = '' }: Section) => (
-  <section className={`py-16 ${className}`}>
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold mb-4">{title}</h2>
-      {subtitle && <p className="text-xl mb-8">{subtitle}</p>}
-      {children}
-    </div>
-  </section>
-);
+export function PageSection({ children, className = '' }: Section) {
+  return (
+    <section className={`py-16 ${className}`}>
+      <div className="container mx-auto px-8 md:px-16">
+        {children}
+      </div>
+    </section>
+  )
+}

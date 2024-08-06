@@ -43,6 +43,8 @@ export const landingContentInput = z.object({
       items: z.array(item)
     }),
     products: baseSection.extend({
+      subtitle: z.string(),
+      description: z.string(),
       items: z.array(item.extend({
         features: z.record(z.string(), z.string()),
         impact: z.string()
