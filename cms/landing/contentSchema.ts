@@ -32,6 +32,7 @@ export const landingContentInput = z.object({
     }),
     approach: baseSection.extend({
       subtitle: z.string(),
+      description: z.string(),
       items: z.array(item)
     }),
     about: baseSection.extend({
@@ -40,14 +41,18 @@ export const landingContentInput = z.object({
       key_points: z.array(z.string())
     }),
     services: baseSection.extend({
-      items: z.array(item)
+      subtitle: z.string(),
+      description: z.string(),
+      items: z.array(item.extend({
+        features: z.record(z.string(), z.string()),
+      })),
+      cta
     }),
     products: baseSection.extend({
       subtitle: z.string(),
       description: z.string(),
       items: z.array(item.extend({
         features: z.record(z.string(), z.string()),
-        impact: z.string()
       })),
       cta
     }),

@@ -7,14 +7,13 @@ type Props = {
   icon: string,
   description: string,
   features: Record<string, string>,
-  impact: string
 }
 
 
-export const ProductCard = ({ title, icon, description, features: f, impact }: Props) => {
+export const ProductCard = ({ title, icon, description, features: f }: Props) => {
   const features = Object.entries(f)
   return (
-    <Card className="w-full">
+    <Card className="w-full rounded-none">
       <CardHeader>
         <div className="flex items-center space-x-2">
           <Icon name={icon} className="h-6 w-6" />
@@ -31,10 +30,6 @@ export const ProductCard = ({ title, icon, description, features: f, impact }: P
             </Fragment>
           })}
         </dl>
-        <div className="mt-4">
-          <h4 className="font-semibold mb-2">Impact:</h4>
-          <p className="text-sm">{impact}</p>
-        </div >
       </CardContent>
     </Card>);
 }

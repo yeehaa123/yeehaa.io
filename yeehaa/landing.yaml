@@ -5,6 +5,7 @@ sections:
     subtitle: Foster effective ecosystems through collaboration and knowledge sharing
     cta:
       text: Embark on Your Black Ocean Journey
+
   challenges:
     title: Navigating Complex Ecosystems
     subtitle: Critical Challenges in Black Ocean Markets
@@ -22,6 +23,7 @@ sections:
       - title: Value Misalignment
         icon: Target
         description: Conflicting goals and incentives within and between organizations, hindering the creation of shared value in new market spaces.
+
   concepts:
     title: Pioneering Concepts for Future-Ready Organizations
     items:
@@ -31,6 +33,7 @@ sections:
       - title: Ecosystem-Led Growth
         icon: Network
         description: Transform your approach by leveraging the power of your entire ecosystem. Connect with partners, innovators, and customers to create sustainable growth and value for all stakeholders.
+
   approach:
     title: Ecosystem Architecture
     subtitle: A revolutionary framework for transforming organizations and pioneering black ocean markets
@@ -48,27 +51,39 @@ sections:
         icon: Layers
         description: Implement our Adaptive Value Creation Framework to design flexible structures that maximize benefits for all ecosystem participants. We guide you in building a Minimum Viable Ecosystem (MVE) that rapidly adapts to market shifts and scales with sustained growth.
         outcome: A robust strategy for creating and equitably distributing value across your ecosystem, ensuring long-term engagement and growth.
-  about:
-    title: About Yeehaa
-    subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
-    description: Yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.
-    key_points:
-      - Pioneer in applying black ocean strategies to ecosystem design
-      - Creator of the Superconnectors methodology
-      - Founder of multiple innovative ventures including Offcourse and Snowday
-      - Collaborator with leading institutions like Internet Society and Erasmus Center for Entrepreneurship
+
   services:
-    title: Services
+    title: Transformative Services
+    subtitle: Empowering Your Journey into Black Ocean Markets
+    description: Our suite of services is designed to guide you through the complexities of ecosystem architecture and black ocean market navigation. Each service is tailored to address critical challenges and unlock unprecedented opportunities for growth and innovation.
     items:
-      - title: Black Ocean Discovery
+      - title: Black Ocean Discovery Expeditions
         icon: Compass
-        description: Uncover untapped market spaces and create innovative value propositions with ecosystem partners.
+        description: Embark on a guided exploration of untapped market spaces and revolutionary value propositions. Our expert navigators will help you.
+        features:
+          Trend Identification: Uncover emerging trends and latent market needs that others have overlooked.
+          Cross-Industry Analysis: Explore convergence opportunities across multiple sectors to find unique market positions.
+          Value Proposition Design: Develop groundbreaking value propositions that transcend traditional market boundaries.
+          Market Pioneering Roadmap: Create a strategic plan for establishing and dominating your black ocean market.
       - title: Ecosystem-Led Growth Strategy
         icon: Network
-        description: Develop a comprehensive approach to leverage your entire ecosystem for sustainable growth and mission alignment.
+        description: Harness the collective power of your ecosystem to drive sustainable growth and mission alignment. This service includes
+        features:
+          Ecosystem Mapping: Conduct a comprehensive analysis of your current and potential ecosystem partners.
+          Collaborative Strategy: Develop growth strategies in partnership with key stakeholders to ensure alignment and buy-in.
+          Value-Sharing Models: Design innovative incentive structures that fairly distribute value across the ecosystem.
+          Governance Framework: Implement flexible yet robust governance systems to manage complex ecosystem relationships.
       - title: Adaptive Organization Design
         icon: Layers
-        description: Restructure your organization to thrive in black ocean markets and maximize ecosystem potential.
+        description: Restructure your organization to thrive in black ocean markets and maximize ecosystem potential. Our approach involves
+        features:
+          Capability Assessment: Evaluate your organization's current strengths and identify areas for improvement in the context of black ocean markets.
+          Modular Structure Design: Create flexible organizational structures that can rapidly adapt to changing market conditions.
+          Agile Decision-Making: Implement processes that enable quick, informed decisions in fast-paced ecosystem environments.
+          Ecosystem-Centric Competencies: Develop new roles and skills within your organization to effectively navigate and lead in ecosystem-driven markets.
+    cta:
+      text: Transform Your Organization Today
+
   products:
     title: Ecosystem Domination Tools
     subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
@@ -81,7 +96,6 @@ sections:
           Atomic Learning Elements: Break down complex knowledge into actionable, git-like versioned units.
           Cross-Pollination of Ideas: Facilitate seamless knowledge transfer across teams and partner organizations.
           Rapid Iteration: Accelerate your learning cycles and stay ahead of the competition in fast-evolving markets.
-        impact: "Organizations using Offcourse report a 40% increase in innovation speed and a 25% boost in cross-functional collaboration."
       - title: Rizom
         icon: Users
         description: Unleash the collective genius of your ecosystem with Hivemind, our advanced cognitive assessment and optimization tool.
@@ -89,10 +103,9 @@ sections:
           Transactive Memory Scoring: Quantify and visualize your ecosystem's collective intelligence.
           Cognitive Gap Analysis: Identify knowledge blind spots and untapped potential within your network.
           Synergy Optimization: Receive AI-powered recommendations to maximize cognitive alignment and collaborative output.
-        impact: "Ecosystems optimized with Hivemind experience a 50% improvement in problem-solving efficiency and a 30% increase in successful cross-organization initiatives."
     cta:
       text: Revolutionize Your Ecosystem Today
-      action: "#demo-request"
+
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
@@ -104,6 +117,17 @@ sections:
     cta:
       text: Explore the Superconnectors Impact
       action: https://superconnectors.io
+
+  about:
+    title: About Yeehaa
+    subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
+    description: Yeehaa is a visionary ecosystem architect and black ocean navigator, blending expertise in philosophy, technology, and innovative market concepts to transform organizations and conquer new frontiers.
+    key_points:
+      - Pioneer in applying black ocean strategies to ecosystem design
+      - Creator of the Superconnectors methodology
+      - Founder of multiple innovative ventures including Offcourse and Snowday
+      - Collaborator with leading institutions like Internet Society and Erasmus Center for Entrepreneurship
+
   main_cta:
     title: Ready to Conquer Your Black Ocean?
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa

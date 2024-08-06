@@ -22,6 +22,10 @@ const { sections, profileImageURL} = data;
 const { hero, challenges, concepts, approach, about, services, products, case_study, main_cta } = sections;
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 
+const sectionClasses = "py-16 md:py-24 lg:py-36";
+const containerClasses = "container mx-auto px-8 md:px-16"
+const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl"
+
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
@@ -34,18 +38,23 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
     </div>
   </header>
   <Wave class="bg-primary"/>
-  <section class="py-16">
-    <div class="container grid items-center justify-center gap-4 px-8 md:px-16 text-center lg:gap-10">
+  <section class:list={[sectionClasses, "md:py-16 lg:py-16"]}>
+    <div class:list={[
+      containerClasses, 
+      "grid items-center justify-center gap-md:px-16 text-center lg:gap-10"
+      ]}>
       <div class="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-3 md:flex md:justify-between">
         {approach.items.map((item, index) => <Step step={index} {...item} />)}
       </div>
     </div>
   </section>
-  <section class="py-16">
-    <div class="container px-8 md:px-16 grid 
-      items-center justify-center gap-8 lg:text-left lg:grid-cols-2">
+  <section class:list={[sectionClasses]}>
+    <div class:list={[
+      containerClasses, 
+      "grid items-center justify-center gap-8 lg:text-left lg:grid-cols-2"
+      ]}>
       <div class="space-y-4">
-        <h2 class={`text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl`}>
+        <h2 class:list={[sectionHeaderClasses]}>
           {challenges.title}
         </h2>
         <p class="text-muted-foreground 
@@ -58,10 +67,14 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
       </div>
     </div>
   </section>
-  <section class="overflow-x-clip py-16">
-    <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-16">
+  <section class:list={[sectionClasses, "overflow-x-clip"]}>
+    <div class:list={[
+      containerClasses, 
+      "grid items-center justify-center gap-4 text-center lg:gap-16"
+      ]}>
+    <div class=
       <div class="space-y-3">
-        <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+        <h2 class:list={[sectionHeaderClasses]}>
           {concepts.title}
         </h2>
       </div>
@@ -69,25 +82,33 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
         {concepts.items.map((item) => <PingItem {...item} />) }
       </div>
   </section>
-  <section class="py-16">
-    <div class="container mx-auto px-8 md:px-16">
-      <div class="space-y-4">
-        <h2 class="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
+  <section class:list={[sectionClasses]}>
+    <div class:list={[containerClasses]}>
+      <div class="py-8">
+        <h2 class:list={[sectionHeaderClasses]}>
           {approach.title}
         </h2>
+        <p class="text-xl text-gray-500 mb-8">{approach.subtitle}</p>
+        <p class="text-muted-foreground max-w-5xl
+          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          {approach.description}
+        </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {approach.items.map((item) => <IconCard {...item} />)}
       </div>
     </div>
   </section >
-  <section class="py-16">
-    <div class="container mx-auto px-8 md:px-16 flex flex-col lg:flex-row gap-8 items-center">
+  <section class:list={[sectionClasses]}>
+    <div class:list={[
+      containerClasses, 
+      "flex flex-col lg:flex-row gap-8 items-center"
+      ]}>
       <div class="w-full lg:w-1/2">
         <img src={profileImage.src} alt={about.title}/>
       </div>
       <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
-        <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
+        <h2 class:list={[sectionHeaderClasses]}>
           {about.title}
         </h2>
         <div class="max-w-3xl mx-auto">
@@ -99,21 +120,39 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
       </div>
     </div>
   </section>
-  <Bubble anchor="bottom" class="bg-primary"/>
-  <section class="py-16 bg-primary text-black">
-    <div class="container mx-auto px-8 md:px-16">
-      <h2 class="text-3xl font-bold text-center mb-2">{services.title}</h2>
-      <div class={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
-        {services.items.map((item) => <IconCard {...item} />)}
+  <section class:list={[sectionClasses]}>
+    <div class:list={[containerClasses]}>
+      <div class="py-8">
+        <h2 class:list={[sectionHeaderClasses]}>
+          {services.title}
+        </h2>
+        <p class="text-xl text-gray-500 mb-8">{services.subtitle}</p>
+        <p class="text-muted-foreground max-w-5xl
+          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          {services.description}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        { services.items.map(product => <ProductCard {...product}/>)}
+      </div>
+      <div class="text-center mt-12">
+        <CallToAction {...products.cta} client:load/>
       </div>
     </div>
   </section>
-  <section class="py-16 bg-primary text-black">
-    <div class="container mx-auto px-8 md:px-16">
-      <h2 class="text-3xl font-bold text-center mb-2">{products.title}</h2>
-      <p class="text-xl text-center text-gray-600 mb-8">{products.subtitle}</p>
-      <p class="text-center mb-12 max-w-2xl mx-auto">{products.description}</p>
-      <div class="grid grid-col-1 w-full gap-y-8">
+  <section class:list={[sectionClasses]}>
+    <div class:list={[containerClasses]}>
+      <div class="py-8">
+        <h2 class:list={[sectionHeaderClasses]}>
+          {products.title}
+        </h2>
+        <p class="text-xl text-gray-500 mb-8">{products.subtitle}</p>
+        <p class="text-muted-foreground max-w-5xl
+          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          {products.description}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         { products.items.map(product => <ProductCard {...product}/>)}
       </div>
       <div class="text-center mt-12">
@@ -121,18 +160,21 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
       </div>
     </div>
   </section>
-  <section class="py-16 bg-primary text-black">
-    <div class="container mx-auto px-8 md:px-16">
+  <Bubble anchor="bottom" class="bg-primary"/>
+  <section class:list={[sectionClasses, "bg-primary", "text-black"]}>
+    <div class:list={[containerClasses]}>
       <div class="text-center">
-        <h2 class="text-3xl font-bold mb-4">{case_study.title}</h2>
+      <h2 class:list={[sectionHeaderClasses]}>
+          {case_study.title}
+        </h2>
         <p class="text-xl mb-8">{case_study.subtitle}</p>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-lg mb-6">{case_study.description}</p>
-        <ul class="list-disc list-inside mb-6">
-          {case_study.key_points.map((result)=> <li>{result}</li>)}
-        </ul>
-        <CallToAction {...case_study.cta} client:load/>
-      </div>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg mb-6">{case_study.description}</p>
+          <ul class="list-disc list-inside mb-6">
+            {case_study.key_points.map((result)=> <li>{result}</li>)}
+          </ul>
+          <CallToAction {...case_study.cta} client:load/>
+        </div>
       </div>
     </div>
   </section>
@@ -140,7 +182,8 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
   <section class="py-16">
     <div class="container mx-auto px-8 md:px-16">
       <div class="text-center">
-        <h2 class="text-3xl font-bold mb-4">{main_cta.title}</h2>
+      <h2 class:list={[sectionHeaderClasses]}>
+            {main_cta.title}</h2>
         <p class="text-xl mb-8">{main_cta.subtitle}</p>
       <CallToAction {...main_cta.cta} client:load/>
     </div>

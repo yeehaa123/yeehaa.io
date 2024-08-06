@@ -46,6 +46,12 @@ sections:
     title: Ecosystem Architecture
     subtitle: A revolutionary framework for transforming organizations and
       pioneering black ocean markets
+    description: Ecosystem Architecture is our proprietary methodology that goes
+      beyond traditional business strategies. It empowers your organization to
+      identify and dominate unexplored market spaces while building a resilient
+      network of partners and stakeholders. By following this approach, you'll
+      not only identify new market opportunities but also build the
+      collaborative infrastructure necessary to seize them effectively.
     items:
       - title: Discover Uncharted Markets
         icon: Compass
@@ -78,20 +84,56 @@ sections:
       - Collaborator with leading institutions like Internet Society and Erasmus
         Center for Entrepreneurship
   services:
-    title: Services
+    title: Transformative Services
+    subtitle: Empowering Your Journey into Black Ocean Markets
+    description: Our suite of services is designed to guide you through the
+      complexities of ecosystem architecture and black ocean market navigation.
+      Each service is tailored to address critical challenges and unlock
+      unprecedented opportunities for growth and innovation.
     items:
-      - title: Black Ocean Discovery
+      - title: Black Ocean Discovery Expeditions
         icon: Compass
-        description: Uncover untapped market spaces and create innovative value
-          propositions with ecosystem partners.
+        description: Embark on a guided exploration of untapped market spaces and
+          revolutionary value propositions. Our expert navigators will help you.
+        features:
+          Trend Identification: Uncover emerging trends and latent market needs that
+            others have overlooked.
+          Cross-Industry Analysis: Explore convergence opportunities across multiple
+            sectors to find unique market positions.
+          Value Proposition Design: Develop groundbreaking value propositions that
+            transcend traditional market boundaries.
+          Market Pioneering Roadmap: Create a strategic plan for establishing and
+            dominating your black ocean market.
       - title: Ecosystem-Led Growth Strategy
         icon: Network
-        description: Develop a comprehensive approach to leverage your entire ecosystem
-          for sustainable growth and mission alignment.
+        description: Harness the collective power of your ecosystem to drive sustainable
+          growth and mission alignment. This service includes
+        features:
+          Ecosystem Mapping: Conduct a comprehensive analysis of your current and
+            potential ecosystem partners.
+          Collaborative Strategy: Develop growth strategies in partnership with key
+            stakeholders to ensure alignment and buy-in.
+          Value-Sharing Models: Design innovative incentive structures that fairly
+            distribute value across the ecosystem.
+          Governance Framework: Implement flexible yet robust governance systems to manage
+            complex ecosystem relationships.
       - title: Adaptive Organization Design
         icon: Layers
         description: Restructure your organization to thrive in black ocean markets and
-          maximize ecosystem potential.
+          maximize ecosystem potential. Our approach involves
+        features:
+          Capability Assessment: Evaluate your organization's current strengths and
+            identify areas for improvement in the context of black ocean
+            markets.
+          Modular Structure Design: Create flexible organizational structures that can
+            rapidly adapt to changing market conditions.
+          Agile Decision-Making: Implement processes that enable quick, informed decisions
+            in fast-paced ecosystem environments.
+          Ecosystem-Centric Competencies: Develop new roles and skills within your
+            organization to effectively navigate and lead in ecosystem-driven
+            markets.
+    cta:
+      text: Transform Your Organization Today
   products:
     title: Ecosystem Domination Tools
     subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
@@ -111,8 +153,6 @@ sections:
             and partner organizations.
           Rapid Iteration: Accelerate your learning cycles and stay ahead of the
             competition in fast-evolving markets.
-        impact: Organizations using Offcourse report a 40% increase in innovation speed
-          and a 25% boost in cross-functional collaboration.
       - title: Rizom
         icon: Users
         description: Unleash the collective genius of your ecosystem with Hivemind, our
@@ -123,12 +163,8 @@ sections:
             within your network.
           Synergy Optimization: Receive AI-powered recommendations to maximize cognitive
             alignment and collaborative output.
-        impact: Ecosystems optimized with Hivemind experience a 50% improvement in
-          problem-solving efficiency and a 30% increase in successful
-          cross-organization initiatives.
     cta:
       text: Revolutionize Your Ecosystem Today
-      action: "#demo-request"
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
@@ -149,22 +185,23 @@ sections:
     cta:
       text: Schedule Your Free Consultation
 description: Yeehaa, an Ecosystem Architect, offers innovative solutions for
-  conquering Black Ocean markets. The landing page showcases their approach to
-  ecosystem-led growth, featuring services like Black Ocean Discovery and
-  Adaptive Organization Design. It highlights key concepts such as Black Ocean
-  Markets and Ecosystem Architecture, presenting tools like Offcourse and Rizom
-  for knowledge sharing and collective intelligence optimization. The page also
-  includes a case study on the Superconnectors event format and encourages
-  visitors to book a discovery session.
-excerpt: Yeehaa, an Ecosystem Architect, helps organizations navigate complex
-  ecosystems and conquer Black Ocean markets. Through innovative concepts,
-  tools, and services, they foster collaboration, knowledge sharing, and
-  sustainable growth in unexplored market spaces.
+  conquering Black Ocean markets. The landing page introduces concepts like
+  Ecosystem-Led Growth and Black Ocean Markets, highlighting challenges in
+  complex ecosystems. Yeehaa's approach involves discovering uncharted markets,
+  architecting ecosystems, and creating shared value. Services include Black
+  Ocean Discovery Expeditions, Ecosystem-Led Growth Strategy, and Adaptive
+  Organization Design. Products like Offcourse and Rizom empower organizations
+  to harness collective intelligence. The page showcases a case study on the
+  Superconnectors event format and invites visitors to book a discovery session.
+excerpt: Yeehaa, an Ecosystem Architect, guides organizations in navigating
+  Black Ocean markets through innovative strategies, tools, and methodologies.
+  The landing page presents their unique approach to ecosystem-led growth and
+  conquering unexplored market spaces.
 tags:
   - ecosystem
   - innovation
   - collaboration
   - strategy
   - growth
-bannerImageURL: ./2336a69b224b28df40f879dbf73cb477-banner.png
-profileImageURL: ./2336a69b224b28df40f879dbf73cb477-profile.png
+bannerImageURL: ./5a75668397b40809011edb1b3a47c775-banner.png
+profileImageURL: ./5a75668397b40809011edb1b3a47c775-profile.png
