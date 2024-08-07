@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui/card';
+import { Card, CardHeader, CardDescription, CardTitle, CardContent } from '@/components/ui/card';
 import { Icon } from "@/components/Icon"
 
 type Props = {
@@ -11,17 +11,13 @@ type Props = {
 export function FeatureCard({ title, icon, description, features: f }: Props) {
   const features = Object.entries(f)
   return (
-    <Card className="w-full h-auto max-w-md bg-offwhite dark:bg-offblack border-solid">
-      <div className="p-6 grid gap-6 bg-white dark:bg-black">
-        <div className="flex items-center gap-4">
-          <div className="bg-offwhite dark:bg-offblack rounded-md p-3 flex items-center justify-center">
-            <Icon name={icon} className="w-6 h-6 text-offblack dark:text-offwhite" />
-          </div>
-          <h3 className="text-2xl font-bold">{title}</h3>
-        </div>
+    <Card className="w-full h-auto max-w-md bg-white dark:bg-black border-solid">
+      <CardHeader>
+        <Icon name={icon} className="w-8 h-8 mb-2" />
+        <CardTitle>{title}</CardTitle>
         <p className="text-offblack dark:text-offwhite">{description}</p>
-      </div>
-      <div className="bg-offwhite dark:bg-offblack p-6 grid gap-6">
+      </CardHeader>
+      <CardContent className="p-6 grid gap-6">
         <ul className="grid gap-4">
           {features.map(([key, value]) => (
             <li>
@@ -32,7 +28,7 @@ export function FeatureCard({ title, icon, description, features: f }: Props) {
             </li>
           ))}
         </ul>
-      </div>
+      </CardContent>
     </Card>
   )
 }
