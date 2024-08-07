@@ -26,29 +26,26 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 const sectionClasses = "py-16 md:py-24 lg:py-36";
 const containerClasses = "container mx-auto px-8 md:px-16"
 const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl"
-
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
-  <header class="h-vh">
-    <section class="pt-36 xl:pt-48 flex items-center justify-center bg-primary">
-      <div class="text-center text-black px-4">
-        <h1 class="text-6xl font-extrabold mb-6">{hero.title}</h1>
-        <p class="text-2xl mb-10 max-w-2xl mx-auto">{hero.subtitle}</p>
-        <CallToAction {...hero.cta} client:load />
+  <header class="h-vsh pt-36 xl:pt-48 items-center justify-center bg-primary">
+    <div class="text-center text-black">
+      <h1 class="text-6xl font-extrabold mb-6">{hero.title}</h1>
+      <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">{hero.subtitle}</p>
+      <CallToAction {...hero.cta} client:load />
+    </div>
+  <Wave class="bg-primary"/>
+  <section class:list={["pt-16", "mb-16 bg-black"]}>
+    <div class:list={[
+      containerClasses, 
+      "grid items-center justify-center text-center"
+      ]}>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:flex md:justify-between">
+        {approach.items.map((item, index) => <Step step={index} {...item} />)}
       </div>
-    </section>
-    <Wave class="bg-primary"/>
-    <section class:list={["pt-16", "mb-16"]}>
-      <div class:list={[
-        containerClasses, 
-        "grid items-center justify-center text-center"
-        ]}>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:flex md:justify-between">
-          {approach.items.map((item, index) => <Step step={index} {...item} />)}
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
   </header>
   <section class:list={[sectionClasses]}>
     <div class:list={[
@@ -105,7 +102,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
     </div>
   </section >
   <Bubble anchor="bottom" class="bg-primary"/>
-  <section class:list={[sectionClasses, "bg-primary text-black"]}>
+  <section class:list={[sectionClasses, "bg-primary", "text-black"]}>
     <div class:list={[
       containerClasses, 
       "flex flex-col lg:flex-row gap-8 items-center"
@@ -140,7 +137,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           {services.description}
         </p>
       </div>
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 @container w-full">
         { services.items.map(product => <FeatureCard {...product}/>)}
       </div>
       <div class="text-center mt-12">
@@ -163,7 +160,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           {products.description}
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 @container w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
         { products.items.map(product => <FeatureCard className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product}/>)}
       </div>
     </div>

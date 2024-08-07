@@ -28,7 +28,7 @@ export function CallToAction({ text, action }: CTA) {
   };
   if (!action) {
     return (
-      <Button size="lg" variant="outline"
+      <Button variant="outline"
         className="bg-black/0 dark:bg-black/0 hover:bg-black/0 border-black 
           dark:hover:bg-secondary hover:bg-secondary
           hover:text-white hover:border-none
@@ -39,7 +39,7 @@ export function CallToAction({ text, action }: CTA) {
     )
   }
   return (
-    <Button size="lg" variant="outline"
+    <Button variant="outline"
       className="bg-black/0 dark:bg-black/0 hover:bg-black/0 border-black 
           dark:hover:bg-secondary hover:bg-secondary
           hover:text-white hover:border-none
