@@ -4,6 +4,7 @@ import { getImage } from "astro:assets";
 import Layout from "@/layouts/Landing.astro"
 import  { BaseHead, OGType  }from "@/components/BaseHead";
 import { ProductCard } from "@/components/ProductCard";
+import { FeatureCard } from "@/components/FeatureCard";
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
 import  { IconCard }from "@/components/IconCard";
@@ -100,27 +101,6 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
     </div>
   </section >
   <section class:list={[sectionClasses]}>
-    <div class:list={[
-      containerClasses, 
-      "flex flex-col lg:flex-row gap-8 items-center"
-      ]}>
-      <div class="w-full lg:w-1/2">
-        <img src={profileImage.src} alt={about.title}/>
-      </div>
-      <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {about.title}
-        </h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="mb-6">{about.description}</p>
-          <ul class="list-disc list-inside mb-6">
-            {about.key_points.map((point) => <li>{point}</li>)}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class:list={[sectionClasses]}>
     <div class:list={[containerClasses]}>
       <div class="py-8">
         <h2 class:list={[sectionHeaderClasses]}>
@@ -132,11 +112,11 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           {services.description}
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        { services.items.map(product => <ProductCard {...product}/>)}
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        { services.items.map(product => <FeatureCard {...product}/>)}
       </div>
       <div class="text-center mt-12">
-        <CallToAction {...products.cta} client:load/>
+        <CallToAction {...services.cta} client:load/>
       </div>
     </div>
   </section>
@@ -155,9 +135,6 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         { products.items.map(product => <ProductCard {...product}/>)}
       </div>
-      <div class="text-center mt-12">
-        <CallToAction {...products.cta} client:load/>
-      </div>
     </div>
   </section>
   <Bubble anchor="bottom" class="bg-primary"/>
@@ -174,6 +151,27 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
             {case_study.key_points.map((result)=> <li>{result}</li>)}
           </ul>
           <CallToAction {...case_study.cta} client:load/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class:list={[sectionClasses, "bg-primary", "text-black"]}>
+    <div class:list={[
+      containerClasses, 
+      "flex flex-col lg:flex-row gap-8 items-center"
+      ]}>
+      <div class="w-full lg:w-1/2">
+        <img src={profileImage.src} alt={about.title}/>
+      </div>
+      <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
+        <h2 class:list={[sectionHeaderClasses]}>
+          {about.title}
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="mb-6">{about.description}</p>
+          <ul class="list-disc list-inside mb-6">
+            {about.key_points.map((point) => <li>{point}</li>)}
+          </ul>
         </div>
       </div>
     </div>
