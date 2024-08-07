@@ -90,14 +90,14 @@ sections:
     description: Our cutting-edge products are designed to give you an unparalleled advantage in navigating and conquering Black Ocean markets. By leveraging these tools, you'll unlock the full potential of your ecosystem, driving innovation and growth at unprecedented speeds.
     items:
       - title: Offcourse
-        icon: Share
+        icon: Offcourse
         description: Transform your organization into a learning powerhouse with Offcourse, our revolutionary knowledge-sharing platform.
         features:
           Atomic Learning Elements: Break down complex knowledge into actionable, git-like versioned units.
           Cross-Pollination of Ideas: Facilitate seamless knowledge transfer across teams and partner organizations.
           Rapid Iteration: Accelerate your learning cycles and stay ahead of the competition in fast-evolving markets.
       - title: Rizom
-        icon: Users
+        icon: Rizom
         description: Unleash the collective genius of your ecosystem with Hivemind, our advanced cognitive assessment and optimization tool.
         features:
           Transactive Memory Scoring: Quantify and visualize your ecosystem's collective intelligence.

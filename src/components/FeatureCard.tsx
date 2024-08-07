@@ -1,7 +1,9 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { cx } from "class-variance-authority";
 import { Icon } from "@/components/Icon"
 
 type Props = {
+  className?: string
   title: string,
   icon: string,
   description: string,
@@ -9,18 +11,20 @@ type Props = {
   iconSize: "SMALL" | "LARGE"
 }
 
-export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL" }: Props) {
+export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL", className }: Props) {
   const features = Object.entries(f)
   const iconClass = iconSize === "SMALL" ? "w-8 h-8 mb-2" : "w-full h-full mb-8";
   return (
-    <Card className="w-full h-auto max-w-md bg-white dark:bg-black border-solid">
+    <Card className={cx(
+      "grid @sm:grid-cols-1 rounded-none @md:grid-cols-2 h-auto border-solid text-left",
+      className)}>
       <CardHeader>
         <Icon name={icon} className={iconClass} />
         <CardTitle>{title}</CardTitle>
         <p className="text-offblack dark:text-offwhite">{description}</p>
       </CardHeader>
-      <CardContent className="p-6 grid gap-6">
-        <ul className="grid gap-4">
+      <CardContent className="grid gap-6 ">
+        <ul className="grid gap-4 py-6">
           {features.map(([key, value]) => (
             <li>
               <div>
