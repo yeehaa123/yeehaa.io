@@ -87,7 +87,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
   <section class:list={[sectionClasses]}>
     <div class:list={[
       containerClasses, 
-      "grid items-center justify-center gap-8 lg:text-left lg:grid-cols-2"
+      "grid items-center justify-center gap-16 lg:text-left lg:grid-cols-2"
       ]}>
       <div class="py-8 lg:order-last">
         <h2 class:list={[sectionHeaderClasses]}>
@@ -129,7 +129,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
   </section>
   <Wave class="bg-primary"/>
   <section class:list={[sectionClasses]}>
-    <div class:list={[containerClasses]}>
+    <div class:list={[containerClasses, "flex flex-col justify-center items-center md:text-center"]}>
       <div class="py-8">
         <h2 class:list={[sectionHeaderClasses]}>
           {services.title}
@@ -140,7 +140,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           {services.description}
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
         { services.items.map(product => <FeatureCard {...product}/>)}
       </div>
       <div class="text-center mt-12">
@@ -149,7 +149,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
     </div>
   </section>
   <section class:list={[sectionClasses]}>
-    <div class:list={[containerClasses]}>
+    <div class:list={[containerClasses, "flex flex-col justify-center items-center md:text-center"]}>
       <div class="py-8">
         <h2 class:list={[sectionHeaderClasses]}>
           {products.title}
@@ -160,8 +160,8 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           {products.description}
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        { products.items.map(product => <FeatureCard {...product}/>)}
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        { products.items.map(product => <FeatureCard iconSize="LARGE" {...product}/>)}
       </div>
     </div>
   </section>

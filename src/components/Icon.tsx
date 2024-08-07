@@ -14,6 +14,8 @@ import {
   Boxes,
   Camera
 } from 'lucide-react';
+import { Logo as Offcourse } from "@/offcourse/components/Logo";
+import { Logo as Rizom } from "@/components/RizomLogo";
 
 const IconMap = {
   Compass: Compass,
@@ -28,6 +30,8 @@ const IconMap = {
   Waves: Waves,
   Brain: Brain,
   GitBranch: GitBranch,
+  Rizom: Rizom,
+  Offcourse: Offcourse,
   Boxes: Boxes,
   Camera: Camera
 };

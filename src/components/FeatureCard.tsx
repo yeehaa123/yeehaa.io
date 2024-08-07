@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardDescription, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Icon } from "@/components/Icon"
 
 type Props = {
@@ -6,14 +6,16 @@ type Props = {
   icon: string,
   description: string,
   features: Record<string, string>,
+  iconSize: "SMALL" | "LARGE"
 }
 
-export function FeatureCard({ title, icon, description, features: f }: Props) {
+export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL" }: Props) {
   const features = Object.entries(f)
+  const iconClass = iconSize === "SMALL" ? "w-8 h-8 mb-2" : "w-full h-full mb-8";
   return (
     <Card className="w-full h-auto max-w-md bg-white dark:bg-black border-solid">
       <CardHeader>
-        <Icon name={icon} className="w-8 h-8 mb-2" />
+        <Icon name={icon} className={iconClass} />
         <CardTitle>{title}</CardTitle>
         <p className="text-offblack dark:text-offwhite">{description}</p>
       </CardHeader>

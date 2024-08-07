@@ -143,7 +143,7 @@ sections:
       innovation and growth at unprecedented speeds.
     items:
       - title: Offcourse
-        icon: Share
+        icon: Offcourse
         description: Transform your organization into a learning powerhouse with
           Offcourse, our revolutionary knowledge-sharing platform.
         features:
@@ -154,7 +154,7 @@ sections:
           Rapid Iteration: Accelerate your learning cycles and stay ahead of the
             competition in fast-evolving markets.
       - title: Rizom
-        icon: Users
+        icon: Rizom
         description: Unleash the collective genius of your ecosystem with Hivemind, our
           advanced cognitive assessment and optimization tool.
         features:
