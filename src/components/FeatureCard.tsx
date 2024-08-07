@@ -22,11 +22,9 @@ export function FeatureCard({ title, icon, description, features: f }: Props) {
         <p className="text-offblack dark:text-offwhite">{description}</p>
       </div>
       <div className="bg-offwhite dark:bg-offblack p-6 grid gap-6">
-        <h4 className="text-xl font-bold">Key Features</h4>
         <ul className="grid gap-4">
           {features.map(([key, value]) => (
-            <li className="flex items-center gap-4">
-              <Icon name={icon} className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+            <li>
               <div>
                 <h5 className="font-medium">{key}</h5>
                 <p className="text-gray-500 dark:text-gray-400">{value}</p>

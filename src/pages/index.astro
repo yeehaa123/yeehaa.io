@@ -84,7 +84,13 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       </div>
   </section>
   <section class:list={[sectionClasses]}>
-    <div class:list={[containerClasses]}>
+    <div class:list={[
+      containerClasses, 
+      "grid items-center justify-center gap-8 lg:text-left lg:grid-cols-2"
+      ]}>
+      <div class="grid grid-cols-1 gap-4">
+        {approach.items.map((item) => <IconCard {...item} />)}
+      </div>
       <div class="py-8">
         <h2 class:list={[sectionHeaderClasses]}>
           {approach.title}
@@ -94,9 +100,6 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
           {approach.description}
         </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {approach.items.map((item) => <IconCard {...item} />)}
       </div>
     </div>
   </section >
@@ -163,7 +166,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       <div class="w-full lg:w-1/2">
         <img src={profileImage.src} alt={about.title}/>
       </div>
-      <div class="flex flex-col mx-8 gap-8 text-black dark:text-white">
+      <div class="flex flex-col mx-8 gap-8">
         <h2 class:list={[sectionHeaderClasses]}>
           {about.title}
         </h2>
