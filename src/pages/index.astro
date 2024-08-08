@@ -23,13 +23,13 @@ const { sections, profileImageURL} = data;
 const { hero, challenges, concepts, approach, about, services, products, case_study, main_cta } = sections;
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 
-const sectionClasses = "py-16 md:py-24 lg:py-36";
+const sectionClasses = "py-24 md:py-36 lg:py-48";
 const containerClasses = "container mx-auto px-8 md:px-16"
 const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl"
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
-  <header class="h-vsh pt-36 xl:pt-48 items-center justify-center bg-primary">
+  <header class="h-vsh pt-36 pt-60 items-center justify-center bg-primary">
     <div class="text-center text-black">
       <h1 class="text-6xl font-extrabold mb-6 px-4">{hero.title}</h1>
       <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">{hero.subtitle}</p>

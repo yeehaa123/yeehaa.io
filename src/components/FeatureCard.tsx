@@ -27,11 +27,9 @@ export function FeatureCard({ title, icon, description, features: f, iconSize = 
         <CardContent className="grid gap-6 ">
           <ul className="grid gap-4 py-6">
             {features.map(([key, value]) => (
-              <li>
-                <div>
-                  <h5 className="font-medium">{key}</h5>
-                  <p className="text-gray-500 dark:text-gray-400">{value}</p>
-                </div>
+              <li key={key}>
+                <h5 className="font-medium">{key}</h5>
+                <p className="text-gray-500 dark:text-gray-400">{value}</p>
               </li>
             ))}
           </ul>

@@ -1,9 +1,9 @@
 ---
-import { DarkModeToggle } from "@/components/DarkModeToggle";
+import { NavMenu } from "@/components/NavMenu";
 ---
 <nav class="backdrop-blur-none dark:text-white flex items-center justify-between p-4 md:p-6 transition-all print:hidden">
   <slot name="logo"/>
-  <div class="flex gap-6 font-black text-right text-base md:text-1xl text-secondary select-none print:hidden">
-    <DarkModeToggle client:load/>
+  <div class="flex gap-6 justify-end font-black text-right text-base md:text-1xl text-secondary select-none print:hidden">
+    <NavMenu client:load />
   </div>
 </nav>
