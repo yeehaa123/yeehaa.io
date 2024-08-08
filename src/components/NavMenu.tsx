@@ -4,7 +4,6 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -29,19 +28,12 @@ export function NavMenu() {
         <SheetHeader className="text-left">
           <SheetTitle className="sr-only"></SheetTitle>
           <Logo className="text-1xl md:text-2xl" />
-          <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
-          </SheetDescription>
         </SheetHeader>
         <div className="grid gap-4 py-4 ">
           TBD
         </div>
-        <SheetFooter className="sm:justify-end">
-          <Button className="rounded-full p-2 aspect-square 
-        bg-secondary-dark/90 text-offwhite 
-        dark:bg-secondary/90 hover:bg-secondary/50 hover:dark:bg-secondary/50 dark:text-offwhite">
-            <ThemeToggle />
-          </Button>
+        <SheetFooter className="justify-start items-end">
+          <ThemeToggle />
         </SheetFooter>
       </SheetContent>
     </Sheet>)
