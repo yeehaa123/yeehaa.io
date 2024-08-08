@@ -2,6 +2,8 @@ import {
   Compass,
   Network,
   Layers,
+  Sun,
+  MoonStar,
   PuzzleIcon,
   MenuIcon,
   EyeOff,
@@ -34,6 +36,8 @@ const IconMap = {
   GitBranch: GitBranch,
   Rizom: Rizom,
   Offcourse: Offcourse,
+  Sun: Sun,
+  Moon: MoonStar,
   Boxes: Boxes,
   Camera: Camera
 };

@@ -1,9 +1,12 @@
 ---
 import { NavMenu } from "@/components/NavMenu";
+import ThemeToggle  from "@/components/ThemeToggle.astro";
 ---
 <nav class="backdrop-blur-none dark:text-white flex items-center justify-between p-4 md:p-6 transition-all print:hidden">
   <slot name="logo"/>
   <div class="flex gap-6 justify-end font-black text-right text-base md:text-1xl text-secondary select-none print:hidden">
-    <NavMenu client:load />
+    <NavMenu client:load >
+      <ThemeToggle/>
+    </NavMenu>
   </div>
 </nav>

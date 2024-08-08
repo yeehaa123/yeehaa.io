@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Icon } from "@/components/Icon"
-import { DarkModeToggle } from "@/components/DarkModeToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   Sheet,
   SheetContent,
@@ -10,26 +10,35 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Logo } from "./Logo";
 
 export function NavMenu() {
   const side = "left";
   return (
     <Sheet key={side}>
       <SheetTrigger asChild>
-        <Button className="bg-primary-light text-secondary dark:bg-primary-light hover:bg-white dark:text-secondary"><Icon name="Menu" className="w-full h-full" /></Button>
+        <Button className="rounded-full p-2 aspect-square 
+        bg-secondary-dark/90 text-offwhite 
+        dark:bg-secondary/90 hover:bg-secondary/50 hover:dark:bg-secondary/50 dark:text-offwhite">
+          <Icon name="Menu" className="w-full h-full" />
+        </Button>
       </SheetTrigger>
-      <SheetContent side={side}>
+      <SheetContent className="border-none flex flex-col justify-between" side={side}>
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
+          <SheetTitle><Logo className="text-1xl md:text-2xl" /></SheetTitle>
           <SheetDescription>
             Make changes to your profile here. Click save when you're done.
           </SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4">
+        <div className="grid gap-4 py-4 ">
           TBD
         </div>
-        <SheetFooter>
-          <DarkModeToggle />
+        <SheetFooter className="sm:justify-start">
+          <Button className="rounded-full p-2 aspect-square 
+        bg-secondary-dark/90 text-offwhite 
+        dark:bg-secondary/90 hover:bg-secondary/50 hover:dark:bg-secondary/50 dark:text-offwhite">
+            <ThemeToggle />
+          </Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>)
