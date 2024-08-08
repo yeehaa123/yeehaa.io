@@ -10,7 +10,7 @@ enum SocialProviders {
   GITHUB = "github",
   INSTAGRAM = "instagram"
 }
-export function Socials(socials: Curator['socials']) {
+export function Socials({ socials }: { socials: Curator['socials'] }) {
   const icons = {
     [SocialProviders.LINKEDIN]: LinkedInLogoIcon,
     [SocialProviders.GITHUB]: GitHubLogoIcon,
