@@ -1,11 +1,12 @@
 import {
+  AlignJustify,
   Compass,
   Network,
   Layers,
   Sun,
-  MoonStar,
+  LucideMoon,
+  Star,
   PuzzleIcon,
-  MenuIcon,
   EyeOff,
   Share,
   Users,
@@ -13,6 +14,7 @@ import {
   Target,
   Waves,
   Brain,
+  X,
   GitBranch,
   Boxes,
   Camera
@@ -22,12 +24,13 @@ import { Logo as Rizom } from "@/components/RizomLogo";
 
 const IconMap = {
   Compass: Compass,
+  X,
   Network: Network,
   Layers: Layers,
   PuzzlePiece: PuzzleIcon,
   EyeOff: EyeOff,
   Turtle: Turtle,
-  Menu: MenuIcon,
+  Menu: AlignJustify,
   Target: Target,
   Share: Share,
   Users: Users,
@@ -37,7 +40,8 @@ const IconMap = {
   Rizom: Rizom,
   Offcourse: Offcourse,
   Sun: Sun,
-  Moon: MoonStar,
+  Star: Star,
+  Moon: LucideMoon,
   Boxes: Boxes,
   Camera: Camera
 };
