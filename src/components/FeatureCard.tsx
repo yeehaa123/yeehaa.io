@@ -8,7 +8,7 @@ type Props = {
   icon: string,
   description: string,
   features: Record<string, string>,
-  iconSize: "SMALL" | "LARGE"
+  iconSize?: "SMALL" | "LARGE"
 }
 
 export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL", className }: Props) {

@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Icon } from "@/components/Icon"
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { useState } from "react";
+import { Button, Icon, ThemeToggle, Logo } from "@/components";
 import {
   Sheet,
   SheetContent,
@@ -9,11 +8,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { Logo } from "./Logo";
-import { useState } from "react";
+import { NavItem } from "./NavItem";
 
-export function NavMenu({ initialState }: { initialState: boolean }) {
-  const [isOpen, setOpen] = useState(initialState);
+export function NavMenu({ navItems }: { navItems: { title: string, href: string }[] }) {
+  const [isOpen, setOpen] = useState(false);
   const side = "left";
   const toggleSidebar = () => {
     const newState = !isOpen;
@@ -37,19 +35,7 @@ export function NavMenu({ initialState }: { initialState: boolean }) {
         </SheetHeader>
         <nav className="flex-1 overflow-y-auto py-4">
           <ul className="space-y-1">
-            {[
-              { title: "Home", href: "/" },
-              { title: "Blog", href: "/posts" },
-              { title: "Courses", href: "/offcourse" }
-            ].map(({ title, href }) => (<li>
-              <a
-                key={href}
-                href={href}
-                className="flex items-center gap-3 rounded-md py-2 text-md font-bold transition-colors hover:bg-white hover:text-secondary data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
-              >
-                {title}
-              </a>
-            </li>))}
+            {navItems.map((item, index) => <NavItem key={index} {...item} />)}
           </ul>
         </nav>
         <SheetFooter className="justify-start items-end">

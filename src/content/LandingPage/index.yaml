@@ -175,31 +175,38 @@ sections:
       - Facilitated $50M+ in investments
       - Created 500+ high-value partnerships
     cta:
-      text: Explore Superconnectors 
+      text: Explore the Superconnectors Impact
       action: https://superconnectors.io
   main_cta:
     title: Ready to Conquer Your Black Ocean?
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa
     cta:
       text: Schedule Your Free Consultation
-description: Yeehaa, an Ecosystem Architect, offers a revolutionary approach to
-  conquer Black Ocean markets. The landing page introduces concepts like
-  Ecosystem-Led Growth and Black Ocean Markets, highlighting challenges in
-  complex ecosystems. It showcases Yeehaa's services, including Black Ocean
-  Discovery Expeditions and Adaptive Organization Design, along with products
-  like Offcourse and Rizom. The page emphasizes collaborative strategies,
-  innovative market concepts, and transformative methodologies to help
-  organizations navigate uncharted territories and build resilient ecosystems
-  for sustained growth and innovation.
+courses:
+  - groom-your-ecosystem
+  - keep-the-web-weird
+  - practice-innovation
+articles:
+  - across-space-and-time
+  - align-the-misaligned
+  - practice-innovation
+description: Yeehaa, an Ecosystem Architect, offers innovative solutions for
+  navigating complex business environments. The landing page showcases their
+  approach to conquering "Black Ocean" markets through ecosystem-led growth
+  strategies. Services include Black Ocean Discovery Expeditions, Ecosystem-Led
+  Growth Strategy, and Adaptive Organization Design. Yeehaa's products,
+  Offcourse and Rizom, leverage collective intelligence for market domination.
+  The page highlights success stories, challenges in ecosystem navigation, and
+  invites visitors to book a discovery session.
 excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
   Black Ocean markets through innovative strategies, collaborative ecosystems,
-  and transformative services. The landing page showcases Yeehaa's unique
-  approach to navigating complex market spaces and fostering sustainable growth.
+  and cutting-edge tools. Their approach transforms businesses to thrive in
+  unexplored market spaces.
 tags:
   - ecosystem
   - innovation
-  - collaboration
   - strategy
+  - collaboration
   - growth
-bannerImageURL: ./e01d66316e5ea42c6995905d7f3ec09d-banner.png
-profileImageURL: ./e01d66316e5ea42c6995905d7f3ec09d-profile.png
+bannerImageURL: ./796f9abfb266414cdb127ffedfad67d6-banner.png
+profileImageURL: ./796f9abfb266414cdb127ffedfad67d6-profile.png

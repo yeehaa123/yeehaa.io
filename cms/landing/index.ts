@@ -13,8 +13,10 @@ import * as path from 'path';
 import * as m from "../meta";
 import * as ai from "./ai";
 import { writeFile, copyFile } from 'fs/promises'
-import { generateChecksum, hashify } from "../helpers";
+import { generateChecksum, slugify, hashify } from "../helpers";
 import * as yaml from "yaml";
+import * as as from "../association";
+import * as ot from "../outputTable/filters";
 
 export const PATH_SUFFIX = "LandingPage"
 export const schema = outputSchema
@@ -39,8 +41,10 @@ export async function analyze(entity: BaseLanding) {
   return analyzedSchema.parse({ ...entity, analysis });
 }
 
-export function associate(entity: AnalyzedLanding, _table: AnalyzedTable) {
-  const associations = {};
+export function associate(entity: AnalyzedLanding, table: AnalyzedTable) {
+  const articles = ot.findArticlesForAuthor(table, entity.meta.author!).map(as.init)
+  const courses = ot.findCoursesForAuthor(table, entity.meta.author!).map(as.init)
+  const associations = { articles, courses };
   return associatedSchema.parse({ ...entity, associations })
 }
 
@@ -68,14 +72,18 @@ export async function write(basePath: string, entity: FinalLanding) {
 }
 
 function render(entity: FinalLanding) {
-  const { page_content, analysis, augmentations } = entity;
+  const { page_content, analysis, augmentations, associations } = entity;
   const { bannerImageURL, profileImageURL } = augmentations;
+  const articles = associations.articles.map(({ title }) => slugify(title));
+  const courses = associations.courses.map(({ title }) => slugify(title));
   const output = outputSchema.parse({
     ...page_content,
     ...augmentations,
     bannerImageURL: `./${bannerImageURL}`,
     profileImageURL: `./${profileImageURL}`,
     ...analysis,
+    articles,
+    courses
   });
   return yaml.stringify(output);
 }

@@ -2,14 +2,17 @@
 import { getEntry } from 'astro:content';
 import { getImage } from "astro:assets";
 import Layout from "@/layouts/Landing.astro"
-import  { BaseHead, OGType  }from "@/components/BaseHead";
-import { FeatureCard } from "@/components/FeatureCard";
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
-import  { IconCard }from "@/components/IconCard";
-import  { Step }from "@/components/Step";
-import { CallToAction } from "@/components/CTA";
-import { PingItem } from "@/components/PingItem";
+import  { 
+  BaseHead, 
+  OGType, 
+  FeatureCard, 
+  IconCard, 
+  Step, 
+  CallToAction, 
+  PingItem
+} from "@/components";
 
 interface Props  {
   logoLink: "/"
@@ -18,9 +21,23 @@ interface Props  {
 const { logoLink = "/" } = Astro.props;
 const entry = await getEntry("LandingPage", "index")
 const { data } = entry
-const { sections, profileImageURL} = data;
-const { hero, challenges, concepts, approach, about, services, products, case_study, main_cta } = sections;
+const { 
+  sections, 
+  profileImageURL
+} = data;
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
+
+const { 
+  hero, 
+  challenges, 
+  concepts, 
+  approach, 
+  about, 
+  services, 
+  products, 
+  case_study, 
+  main_cta 
+} = sections;
 
 const sectionClasses = "py-24 md:py-36 lg:py-48";
 const containerClasses = "container mx-auto px-8 md:px-16"
@@ -70,7 +87,6 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       containerClasses, 
       "grid items-center justify-center gap-4 text-center lg:gap-16"
       ]}>
-    <div class=
       <div class="space-y-3">
         <h2 class:list={[sectionHeaderClasses]}>
           {concepts.title}

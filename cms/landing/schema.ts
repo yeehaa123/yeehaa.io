@@ -1,6 +1,7 @@
 import * as m from "../meta/schema"
 import { landingContentInput, landingContentSchema } from "./contentSchema";
 import { z } from 'zod';
+import * as as from "../association"
 
 export type Landing =
   | BaseLanding
@@ -21,6 +22,8 @@ export const analysisSchema = z.object({
 })
 
 const associationsSchema = z.object({
+  courses: z.array(as.schema),
+  articles: z.array(as.schema),
 })
 
 export const augmentationsSchema = z.object({
@@ -30,12 +33,11 @@ export const augmentationsSchema = z.object({
 
 export const outputSchema = landingContentSchema
   .merge(analysisSchema)
-  .merge(associationsSchema)
   .merge(augmentationsSchema)
 
 export const baseSchema = z.object({
   meta: m.schema,
-  page_content: landingContentSchema,
+  page_content: landingContentInput,
 })
 
 export const analyzedSchema = baseSchema.extend({
