@@ -1,9 +1,11 @@
 ---
-import { getEntry } from 'astro:content';
+import { Offcourse } from "@/offcourse/"
+import { getEntry, getEntries } from 'astro:content';
 import { getImage } from "astro:assets";
 import Layout from "@/layouts/Landing.astro"
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
+import { PostListing } from "../components/Postlisting"
 import  { 
   BaseHead, 
   OGType, 
@@ -23,8 +25,13 @@ const entry = await getEntry("LandingPage", "index")
 const { data } = entry
 const { 
   sections, 
-  profileImageURL
+  profileImageURL,
+  articles,
+  courses: c
 } = data;
+
+const courses = await getEntries(c)
+const posts = await getEntries(articles)
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 
 const { 
@@ -200,6 +207,10 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           </ul>
         </div>
       </div>
+    </div>
+    <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+      <Offcourse data={courses.map(({data}) => data)} client:load/>
+      { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
     </div>
   </section>
   <Wave class="bg-primary"/>

@@ -20,6 +20,8 @@ const landingPages = defineCollection({
   schema: ({ image }) => landing.schema.extend({
     profileImageURL: image(),
     bannerImageURL: image(),
+    articles: z.array(reference('Posts')),
+    courses: z.array(reference('Courses')),
   })
 });
 
