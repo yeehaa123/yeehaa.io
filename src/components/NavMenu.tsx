@@ -43,6 +43,7 @@ export function NavMenu({ initialState }: { initialState: boolean }) {
               { title: "Courses", href: "/offcourse" }
             ].map(({ title, href }) => (<li>
               <a
+                key={href}
                 href={href}
                 className="flex items-center gap-3 rounded-md py-2 text-md font-bold transition-colors hover:bg-white hover:text-secondary data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
               >
