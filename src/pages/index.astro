@@ -58,7 +58,9 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">{hero.subtitle}</p>
       <CallToAction {...hero.cta} client:load />
     </div>
-  <Wave class="bg-primary"/>
+    <div class="bg-primary dark:bg-primary">
+      <Wave anchor="bottom" class="fill-white dark:fill-black"/>
+    </div>
   <section class:list={["pt-16 mb-16 bg-white dark:bg-black"]}>
     <div class:list={[
       containerClasses, 
@@ -146,7 +148,7 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       </div>
     </div>
   </section>
-  <Wave class="bg-primary"/>
+  <Wave anchor="top" class="bg-primary"/>
   <section class:list={[sectionClasses]}>
     <div class:list={[containerClasses, "flex flex-col justify-center items-center md:text-center"]}>
       <div class="py-8">
@@ -187,7 +189,9 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       </div>
     </div>
   </section>
-  <Bubble anchor="bottom" class="bg-primary"/>
+  <div class="bg-white dark:bg-black">
+    <Wave anchor="bottom" class="fill-primary dark:fill-primary"/>
+  </div>
   <section class:list={[sectionClasses, "bg-primary", "text-black"]}>
     <div class:list={[
       containerClasses, 
@@ -208,12 +212,20 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
         </div>
       </div>
     </div>
-    <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-      <Offcourse data={courses.map(({data}) => data)} client:load/>
-      { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
-    </div>
   </section>
-  <Wave class="bg-primary"/>
+  <div class="bg-primary">
+    <Wave anchor="bottom" class="-bottom-1 fill-offwhite dark:fill-offblack"/>
+  </div>
+  <section class:list={[sectionClasses, "bg-offwhite dark:bg-offblack"]}>
+  <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+    <h2 class:list={[sectionHeaderClasses]}>Recent Content</h2>
+    { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
+    <Offcourse data={courses.map(({data}) => data)} client:load/>
+  </div>
+  </section>
+  <div class="bg-offwhite dark:bg-offblack">
+    <Wave anchor="bottom" class="fill-white dark:fill-black"/>
+  </div>
   <section class="py-16">
     <div class="container mx-auto px-8 md:px-16">
       <div class="text-center">

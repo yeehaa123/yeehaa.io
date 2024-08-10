@@ -1,8 +1,9 @@
 ---
 const {  anchor = "top", viewBox, class:className} = Astro.props;
+const bottom = anchor === "bottom" ? "-bottom-1" : "bottom-1";
 ---
 
-<svg class:list={["fill-white", "dark:fill-black", "relative flow", anchor, className]} {viewBox}>
+<svg class:list={[bottom, "relative flow", anchor, className]} {viewBox}>
 <slot/>
 <svg>
 
@@ -14,7 +15,7 @@ const {  anchor = "top", viewBox, class:className} = Astro.props;
   transform-origin: top left;
 }
 .bottom {
-  transform-origin: bottom center;
+  transform-origin: bottom left;
 }
 @keyframes flow {
 
