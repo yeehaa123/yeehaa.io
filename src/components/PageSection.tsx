@@ -20,7 +20,7 @@ export function Container({ className, children }: PageSectionProps) {
 
 export function Header({ className, children }: PageSectionProps) {
   return (
-    <h2 className={cx("text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl", className)}>
+    <h2 className={cx("text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-2", className)}>
       {children}
     </h2>
   )
