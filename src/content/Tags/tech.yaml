@@ -1,19 +1,16 @@
-checksum: a610fe726f12594e3e0f54c2aed887e9
-summary: Tech encompasses a range of digital and technological topics. It covers
-  internet fragmentation, ecosystem architecture, and the evolution of digital
-  landscapes. The theme explores innovative approaches to web development,
-  open-source principles, and digital fabrication. It also touches on guerrilla
-  filmmaking techniques and the importance of digital ownership. Tech-related
-  content aims to foster creativity, unconventional thinking, and the
-  preservation of the internet's diverse and dynamic nature. It encourages
-  engagement with organizations like ISOC and promotes the idea of keeping the
-  web weird and innovative.
-excerpt: The internet has fragmented like tectonic shifts, mimicking physical
-  space. Ecosystem architecture views digital landscapes as complex systems,
-  embracing fragmentation for innovation. The article explores types of
-  fragmentation, historical context, and perspectives on this phenomenon.
+checksum: 36d4a4d0d64335f6831572b4ea2737a1
+summary: Tech encompasses the broad realm of technology, innovation, and digital
+  advancements. It covers various fields including software development,
+  hardware engineering, artificial intelligence, cybersecurity, and more. This
+  category serves as a hub for exploring cutting-edge developments, industry
+  trends, and the impact of technology on our daily lives and future. However,
+  currently, there are no specific articles, courses, or profiles associated
+  with this topic. This presents an opportunity for expansion and the addition
+  of relevant content to provide valuable insights and resources for those
+  interested in the ever-evolving world of technology.
+excerpt: Explore the world of technology and innovation. This category covers
+  software, hardware, AI, cybersecurity, and more. Stay updated on cutting-edge
+  developments and industry trends shaping our digital future.
 title: tech
-articles:
-  - align-the-misaligned
-courses:
-  - keep-the-web-weird
+articles: []
+courses: []
