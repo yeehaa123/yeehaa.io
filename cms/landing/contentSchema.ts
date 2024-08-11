@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import * as as from "../association"
 
 const item = z.object({
   title: z.string(),
@@ -61,6 +60,9 @@ export const landingContentInput = z.object({
       description: z.string(),
       key_points: z.array(z.string()),
       cta
+    }),
+    faq: baseSection.extend({
+      items: z.array(z.object({ question: z.string(), answer: z.string() }))
     }),
     main_cta: baseSection.extend({
       subtitle: z.string(),

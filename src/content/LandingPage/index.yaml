@@ -177,6 +177,25 @@ sections:
     cta:
       text: Explore the Superconnectors Impact
       action: https://superconnectors.io
+  faq:
+    title: Frequently Asked Questions
+    items:
+      - question: What exactly is a 'Black Ocean' market?
+        answer: A Black Ocean market is an entirely new market space that doesn't just
+          meet existing demand, but creates new demand. Unlike Blue Ocean
+          markets which are untapped but somewhat defined, Black Ocean markets
+          are so novel that the rules and boundaries are yet to be established.
+      - question: How is Ecosystem Architecture different from traditional business
+          strategy?
+        answer: Ecosystem Architecture goes beyond traditional business strategy by
+          considering not just your organization, but the entire network of
+          partners, customers, and even competitors. It focuses on creating
+          shared value and fostering collaboration to tackle complex challenges
+          and opportunities that no single organization could address alone.
+      - question: Is this approach only for large corporations?
+        answer: Not at all! Ecosystem Architecture can benefit organizations of all
+          sizes. In fact, startups and SMEs often have an advantage in adopting
+          this approach due to their agility and ability to pivot quickly.
   main_cta:
     title: Ready to Conquer Your Black Ocean?
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa
@@ -188,23 +207,25 @@ courses:
 articles:
   - across-space-and-time
   - practice-innovation
-description: Yeehaa, an Ecosystem Architect, offers innovative solutions for
-  navigating complex business environments. The landing page showcases their
-  approach to conquering "Black Ocean" markets through ecosystem-led growth
-  strategies. Services include Black Ocean Discovery Expeditions, Ecosystem-Led
-  Growth Strategy, and Adaptive Organization Design. Yeehaa's products,
-  Offcourse and Rizom, leverage collective intelligence for market domination.
-  The page highlights success stories, challenges in ecosystem navigation, and
-  invites visitors to book a discovery session.
+description: Yeehaa, an Ecosystem Architect, offers innovative strategies for
+  navigating complex business ecosystems and pioneering "Black Ocean" markets.
+  The landing page showcases their unique approach to Ecosystem Architecture,
+  which combines traditional business strategy with collaborative
+  network-building. Yeehaa's services include Black Ocean Discovery Expeditions,
+  Ecosystem-Led Growth Strategy, and Adaptive Organization Design. They also
+  offer tools like Offcourse and Rizom to enhance collective intelligence. The
+  page highlights success stories, explains key concepts, and addresses common
+  questions about their revolutionary approach to market exploration and
+  organizational transformation.
 excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
-  Black Ocean markets through innovative strategies, collaborative ecosystems,
-  and cutting-edge tools. Their approach transforms businesses to thrive in
-  unexplored market spaces.
+  "Black Ocean" markets through innovative collaboration strategies. Their
+  approach combines traditional business methods with ecosystem-building to
+  unlock new opportunities and foster sustainable growth.
 tags:
   - ecosystem
   - innovation
   - strategy
   - collaboration
-  - growth
-bannerImageURL: ./796f9abfb266414cdb127ffedfad67d6-banner.png
-profileImageURL: ./796f9abfb266414cdb127ffedfad67d6-profile.png
+  - markets
+bannerImageURL: ./2c5a42052a8dceccb88e2e57889949bb-banner.png
+profileImageURL: ./2c5a42052a8dceccb88e2e57889949bb-profile.png

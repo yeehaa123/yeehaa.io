@@ -13,11 +13,11 @@ type Props = {
 
 export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL", className }: Props) {
   const features = Object.entries(f)
-  const iconClass = iconSize === "SMALL" ? "w-8 h-8 mb-2 @md:mb-4" : "w-full h-full mb-4";
+  const iconClass = iconSize === "SMALL" ? "w-8 h-8 mb-2 @md:mb-4" : "w-full h-full mb-4 aspect-square";
   return (
     <div className="@container w-full">
       <Card className={cx(
-        "grid @sm:grid-cols-1 rounded-none @lg:grid-cols-2 h-auto border-solid text-left",
+        "grid grid-cols-1 rounded-none @md:grid-cols-2 h-auto border-solid text-left",
         className)}>
         <CardHeader>
           <Icon name={icon} className={iconClass} />

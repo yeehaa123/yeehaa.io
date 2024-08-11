@@ -12,8 +12,8 @@ import  {
   FeatureCard, 
   IconCard, 
   Step, 
+  FAQ,
   CallToAction, 
-  PageSection,
   PingItem,
   PageSection
 } from "@/components";
@@ -45,6 +45,7 @@ const {
   services, 
   products, 
   case_study, 
+  faq,
   main_cta 
 } = sections;
 
@@ -106,7 +107,7 @@ const {
   <PageSection.Root className="bg-primary text-black">
     <PageSection.Container className="flex flex-col lg:flex-row gap-8 items-center">
       <div class="w-full lg:w-1/2">
-        <img src={profileImage.src} alt={about.title}/>
+        <img src={profileImage.src} alt={case_study.title}/>
       </div>
       <div class="flex flex-col mx-8 gap-8">
         <PageSection.Header>{case_study.title}</PageSection.Header>
@@ -120,8 +121,8 @@ const {
       </div>
     </PageSection.Container>
   </PageSection.Root>
-  <div class="bg-primary dark:bg-primary">
-    <Wave anchor="bottom" class="fill-white dark:fill-black"/>
+  <div class="bg-primary">
+    <Wave anchor="bottom" class="-bottom-1 fill-white dark:fill-black"/>
   </div>
   <PageSection.Root>
     <PageSection.Container className="flex flex-col justify-center items-center gap-y-12 md:text-center">
@@ -146,13 +147,23 @@ const {
         <PageSection.SubHeader >{products.subtitle}</PageSection.SubHeader>
         <PageSection.Description >{products.description}</PageSection.Description>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
         { products.items.map(product => <FeatureCard className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product}/>)}
       </div>
     </PageSection.Container>
   </PageSection.Root>
   <div class="bg-white dark:bg-black">
-    <Bubble anchor="bottom" class="bg-primary fill-white dark:fill-black"/>
+    <Wave anchor="bottom" class="fill-offwhite dark:fill-offblack"/>
+  </div>
+  <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
+    <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+      <PageSection.Header>Recent Content</PageSection.Header>
+      { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
+      <Offcourse data={courses.map(({data}) => data)} client:load/>
+    </div>
+  </PageSection.Root>
+  <div class="bg-offwhite dark:bg-offblack">
+    <Bubble anchor="bottom" class="bg-primary fill-offwhite dark:fill-offblack"/>
   </div>
   <PageSection.Root className="bg-primary text-black">
     <PageSection.Container className="flex flex-col lg:flex-row gap-8 items-center">
@@ -170,25 +181,21 @@ const {
       </div>
     </PageSection.Container>
   </PageSection.Root>
-  <div class="bg-primary">
-    <Wave anchor="bottom" class="-bottom-1 fill-offwhite dark:fill-offblack"/>
-  </div>
-  <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
-    <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-      <PageSection.Header>Recent Content</PageSection.Header>
-      { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
-      <Offcourse data={courses.map(({data}) => data)} client:load/>
-    </div>
+  <PageSection.Root className="bg-primary text-black">
+    <PageSection.Container className="flex flex-col gap-8" >
+      <PageSection.Header>{faq.title}</PageSection.Header>
+      <FAQ items={faq.items} />
+    </PageSection.Container>
   </PageSection.Root>
-  <div class="bg-offwhite dark:bg-offblack">
-    <Wave anchor="bottom" class="fill-white dark:fill-black"/>
+  <div class="bg-primary">
+    <Wave anchor="bottom" class="-bottom-1 fill-white dark:fill-black"/>
   </div>
-  <section class="py-16">
-    <div class="container mx-auto px-8 md:px-16">
+  <PageSection.Root>
+    <PageSection.Container>
       <div class="text-center">
         <PageSection.Header>{main_cta.title}</PageSection.Header>
         <PageSection.SubHeader >{main_cta.subtitle}</PageSection.SubHeader>
         <CallToAction {...main_cta.cta} client:load/>
-    </div>
-  </section>
+    </PageSection.Container>
+  </PageSection.Root>
 </Layout>

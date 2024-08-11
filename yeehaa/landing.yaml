@@ -126,6 +126,16 @@ sections:
       - Founder of multiple innovative ventures including Offcourse and Snowday
       - Collaborator with leading institutions like Internet Society and Erasmus Center for Entrepreneurship
 
+  faq:
+    title: Frequently Asked Questions
+    items:
+      - question: What exactly is a 'Black Ocean' market?
+        answer: A Black Ocean market is an entirely new market space that doesn't just meet existing demand, but creates new demand. Unlike Blue Ocean markets which are untapped but somewhat defined, Black Ocean markets are so novel that the rules and boundaries are yet to be established.
+      - question: How is Ecosystem Architecture different from traditional business strategy?
+        answer: Ecosystem Architecture goes beyond traditional business strategy by considering not just your organization, but the entire network of partners, customers, and even competitors. It focuses on creating shared value and fostering collaboration to tackle complex challenges and opportunities that no single organization could address alone.
+      - question: Is this approach only for large corporations?
+        answer: Not at all! Ecosystem Architecture can benefit organizations of all sizes. In fact, startups and SMEs often have an advantage in adopting this approach due to their agility and ability to pivot quickly.
+
   main_cta:
     title: Ready to Conquer Your Black Ocean?
     subtitle: Book a 30-minute Ecosystem Discovery Session with Yeehaa

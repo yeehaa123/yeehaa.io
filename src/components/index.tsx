@@ -8,4 +8,5 @@ export { Logo } from "@/components/Logo";
 export { CallToAction } from "@/components/CTA";
 export { PingItem } from "@/components/PingItem";
 export { ThemeToggle } from "@/components/ThemeToggle";
+export { FAQ } from "@/components/FAQ";
 export * as PageSection from "@/components/PageSection";
