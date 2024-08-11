@@ -13,7 +13,9 @@ import  {
   IconCard, 
   Step, 
   CallToAction, 
-  PingItem
+  PageSection,
+  PingItem,
+  PageSection
 } from "@/components";
 
 interface Props  {
@@ -46,10 +48,8 @@ const {
   main_cta 
 } = sections;
 
-const sectionClasses = "py-24 md:py-36 lg:py-48";
-const containerClasses = "container mx-auto px-8 md:px-16"
-const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl"
 ---
+
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
   <header class="h-vsh pt-36 pt-60 items-center justify-center bg-primary">
@@ -62,82 +62,54 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       <Wave anchor="bottom" class="fill-white dark:fill-black"/>
     </div>
   <section class:list={["pt-16 mb-16 bg-white dark:bg-black"]}>
-    <div class:list={[
-      containerClasses, 
-      "grid items-center justify-center text-center"
-      ]}>
+    <PageSection.Container className="grid items-center justify-center text-center">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:flex md:justify-between">
         {approach.items.map((item, index) => <Step step={index} {...item} />)}
       </div>
-    </div>
+    </PageSection.Container>
   </section>
   </header>
-  <section class:list={[sectionClasses]}>
-    <div class:list={[
-      containerClasses, 
-      "grid items-center justify-center gap-8 lg:text-left lg:grid-cols-2"
-      ]}>
-      <div class="space-y-4">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {challenges.title}
-        </h2>
-        <p class="text-muted-foreground 
-          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          {challenges.description}
-        </p>
+  <PageSection.Root>
+    <PageSection.Container className="grid items-center justify-center gap-8 lg:text-left lg:grid-cols-2">
+      <div>
+        <PageSection.Header>{challenges.title}</PageSection.Header>
+        <PageSection.Description>{challenges.description}</PageSection.Description>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {challenges.items.map((item) => <IconCard className="bg-offwhite dark:bg-offblack border-none" {...item} />)}
       </div>
-    </div>
-  </section>
-  <section class:list={[sectionClasses, "overflow-x-clip"]}>
-    <div class:list={[
-      containerClasses, 
-      "grid items-center justify-center gap-4 text-center lg:gap-16"
-      ]}>
-      <div class="space-y-3">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {concepts.title}
-        </h2>
-      </div>
+    </PageSection.Container>
+  </PageSection.Root>
+  <PageSection.Root className="overflow-x-clip">
+    <PageSection.Container className="grid items-center justify-center gap-4 text-center lg:gap-16">
+      <PageSection.Header>{concepts.title}</PageSection.Header>
       <div class="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:gap-24">
         {concepts.items.map((item) => <PingItem {...item} />) }
       </div>
-  </section>
-  <section class:list={[sectionClasses]}>
-    <div class:list={[
-      containerClasses, 
-      "grid items-center justify-center lg:text-left gap-x-16 lg:grid-cols-2"
-      ]}>
+    </PageSection.Container>
+  </PageSection.Root>
+  <PageSection.Root>
+    <PageSection.Container className="grid items-center justify-center lg:text-left gap-x-16 lg:grid-cols-2">
       <div class="py-8 lg:order-last">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {approach.title}
-        </h2>
-        <p class="text-xl text-gray-500 mb-8">{approach.subtitle}</p>
-        <p class="text-muted-foreground max-w-5xl
-          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          {approach.description}
-        </p>
+        <PageSection.Header>{approach.title}</PageSection.Header>
+        <PageSection.SubHeader >{approach.subtitle}</PageSection.SubHeader>
+        <PageSection.Description>{approach.description}</PageSection.Description>
       </div>
       <div class="grid grid-cols-1 gap-4">
         {approach.items.map((item) => <IconCard  {...item} />)}
       </div>
-    </div>
-  </section >
-  <Bubble anchor="bottom" class="bg-primary"/>
-  <section class:list={[sectionClasses, "bg-primary", "text-black"]}>
-    <div class:list={[
-      containerClasses, 
-      "flex flex-col lg:flex-row gap-8 items-center"
-      ]}>
+    </PageSection.Container>
+  </PageSection.Root>
+  <div class="bg-white dark:bg-black">
+    <Bubble anchor="bottom" class="bg-primary"/>
+  </div>
+  <PageSection.Root className="bg-primary text-black">
+    <PageSection.Container className="flex flex-col lg:flex-row gap-8 items-center">
       <div class="w-full lg:w-1/2">
         <img src={profileImage.src} alt={about.title}/>
       </div>
       <div class="flex flex-col mx-8 gap-8">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {case_study.title}
-        </h2>
+        <PageSection.Header>{case_study.title}</PageSection.Header>
         <div class="max-w-3xl mx-auto">
           <p class="mb-6">{case_study.description}</p>
           <ul class="list-disc list-inside mb-6">
@@ -146,20 +118,17 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           <CallToAction {...case_study.cta} client:load/>
         </div>
       </div>
-    </div>
-  </section>
-  <Wave anchor="top" class="bg-primary"/>
-  <section class:list={[sectionClasses]}>
-    <div class:list={[containerClasses, "flex flex-col justify-center items-center md:text-center"]}>
-      <div class="py-8">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {services.title}
-        </h2>
-        <p class="text-xl text-gray-500 mb-8">{services.subtitle}</p>
-        <p class="text-muted-foreground max-w-5xl
-          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          {services.description}
-        </p>
+    </PageSection.Container>
+  </PageSection.Root>
+  <div class="bg-primary dark:bg-primary">
+    <Wave anchor="bottom" class="fill-white dark:fill-black"/>
+  </div>
+  <PageSection.Root>
+    <PageSection.Container className="flex flex-col justify-center items-center gap-y-12 md:text-center">
+      <div>
+        <PageSection.Header>{services.title}</PageSection.Header>
+        <PageSection.SubHeader >{services.subtitle}</PageSection.SubHeader>
+        <PageSection.Description >{services.description}</PageSection.Description>
       </div>
       <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 @container w-full">
         { services.items.map(product => <FeatureCard {...product}/>)}
@@ -167,43 +136,31 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
       <div class="text-center mt-12">
         <CallToAction {...services.cta} client:load/>
       </div>
-    </div>
-  </section>
-  <section class:list={[sectionClasses]}>
-    <div class:list={[
-      containerClasses, 
-      "flex flex-col justify-center items-center lg:text-center"
-      ]}>
-      <div class="py-8">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {products.title}
-        </h2>
-        <p class="text-xl text-gray-500 mb-8">{products.subtitle}</p>
-        <p class="text-muted-foreground max-w-5xl
-          md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          {products.description}
-        </p>
+    </PageSection.Container>
+  </PageSection.Root>
+  <PageSection.Root>
+    <PageSection.Container 
+      className="flex flex-col justify-center items-center gap-y-12 lg:text-center">
+      <div>
+        <PageSection.Header>{products.title}</PageSection.Header>
+        <PageSection.SubHeader >{products.subtitle}</PageSection.SubHeader>
+        <PageSection.Description >{products.description}</PageSection.Description>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
         { products.items.map(product => <FeatureCard className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product}/>)}
       </div>
-    </div>
-  </section>
+    </PageSection.Container>
+  </PageSection.Root>
   <div class="bg-white dark:bg-black">
-    <Wave anchor="bottom" class="fill-primary dark:fill-primary"/>
+    <Bubble anchor="bottom" class="bg-primary"/>
   </div>
-  <section class:list={[sectionClasses, "bg-primary", "text-black"]}>
-    <div class:list={[
-      containerClasses, 
-      "flex flex-col lg:flex-row gap-8 items-center"
-      ]}>
+  <PageSection.Root className="bg-primary text-black">
+    <PageSection.Container className="flex flex-col lg:flex-row gap-8 items-center">
       <div class="w-full lg:w-1/2">
         <img src={profileImage.src} alt={about.title}/>
       </div>
       <div class="flex flex-col mx-8 gap-8">
-        <h2 class:list={[sectionHeaderClasses]}>
-          {about.title}
-        </h2>
+        <PageSection.Header>{about.title}</PageSection.Header>
         <div class="max-w-3xl mx-auto">
           <p class="mb-6">{about.description}</p>
           <ul class="list-disc list-inside mb-6">
@@ -211,28 +168,27 @@ const sectionHeaderClasses = "text-3xl font-bold tracking-tighter sm:text-3xl md
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </PageSection.Container>
+  </PageSection.Root>
   <div class="bg-primary">
     <Wave anchor="bottom" class="-bottom-1 fill-offwhite dark:fill-offblack"/>
   </div>
-  <section class:list={[sectionClasses, "bg-offwhite dark:bg-offblack"]}>
-  <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-    <h2 class:list={[sectionHeaderClasses]}>Recent Content</h2>
-    { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
-    <Offcourse data={courses.map(({data}) => data)} client:load/>
-  </div>
-  </section>
+  <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
+    <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+      <PageSection.Header>Recent Content</PageSection.Header>
+      { posts.map(({slug, data}) => <PostListing {...data} order={1} {slug}/>)}
+      <Offcourse data={courses.map(({data}) => data)} client:load/>
+    </div>
+  </PageSection.Root>
   <div class="bg-offwhite dark:bg-offblack">
     <Wave anchor="bottom" class="fill-white dark:fill-black"/>
   </div>
   <section class="py-16">
     <div class="container mx-auto px-8 md:px-16">
       <div class="text-center">
-      <h2 class:list={[sectionHeaderClasses]}>
-            {main_cta.title}</h2>
-        <p class="text-xl mb-8">{main_cta.subtitle}</p>
-      <CallToAction {...main_cta.cta} client:load/>
+        <PageSection.Header className="mb-4">{main_cta.title}</PageSection.Header>
+        <PageSection.SubHeader >{main_cta.subtitle}</PageSection.SubHeader>
+        <CallToAction {...main_cta.cta} client:load/>
     </div>
   </section>
 </Layout>
