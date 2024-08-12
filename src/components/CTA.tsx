@@ -32,7 +32,7 @@ export function CallToAction({ text, action }: CTA) {
         className="bg-black/0 dark:bg-black/0 hover:bg-black/0 border-black 
           dark:hover:bg-secondary hover:bg-secondary
           hover:text-white hover:border-none
-          rounded-none font-bold text-lg 
+          rounded-none font-bold md:text-lg 
           transition-colors"
         onClick={openCalendly}>{text}
       </Button >
@@ -43,7 +43,7 @@ export function CallToAction({ text, action }: CTA) {
       className="bg-black/0 dark:bg-black/0 hover:bg-black/0 border-black 
           dark:hover:bg-secondary hover:bg-secondary
           hover:text-white hover:border-none
-          rounded-none font-bold text-lg 
+          rounded-none font-bold md:text-lg 
           transition-colors" asChild>
       <a href={action}>{text}</a>
     </Button >

@@ -1,4 +1,3 @@
-import { deslugify } from "cms/helpers";
 type Props = {
   order: number | undefined,
   series?: {
@@ -16,7 +15,7 @@ export function SeriesHeading({ series, order = 1 }: Props) {
           {formattedOrder}
         </span>
         <span className="text-secondary-light font-normal font-sans">
-          {deslugify(series.id)}
+          {series.id}
         </span>
       </h2>
     </a>

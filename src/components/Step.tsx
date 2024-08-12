@@ -1,8 +1,7 @@
 import { Icon } from "@/components/Icon";
+import type { PageSectionItem } from "./PageSection";
 
-type Props = {
-  title: string,
-  icon: string,
+type Props = PageSectionItem & {
   step: number
 }
 

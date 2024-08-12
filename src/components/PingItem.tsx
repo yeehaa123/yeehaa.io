@@ -4,20 +4,19 @@ import {
   Network
 } from 'lucide-react';
 
-
 const IconMap = {
   Network: Network,
   Waves: Waves,
 };
 
-type Props = {
+export type PingItemProps = {
   title: string,
   description: string,
   icon: string
   className?: string,
 }
 
-export function PingItem({ title, icon, description, className }: Props) {
+export function PingItem({ title, icon, description, className }: PingItemProps) {
   // @ts-ignore
   const Icon = IconMap[icon];
   return (

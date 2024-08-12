@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { cx } from "class-variance-authority";
 import { Icon } from "@/components/Icon"
 
-type Props = {
+export type FeatureCardProps = {
   className?: string
   title: string,
   icon: string,
@@ -11,7 +11,7 @@ type Props = {
   iconSize?: "SMALL" | "LARGE"
 }
 
-export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL", className }: Props) {
+export function FeatureCard({ title, icon, description, features: f, iconSize = "SMALL", className }: FeatureCardProps) {
   const features = Object.entries(f)
   const iconClass = iconSize === "SMALL" ? "w-8 h-8 mb-2 @md:mb-4" : "w-full h-full mb-4 aspect-square";
   return (

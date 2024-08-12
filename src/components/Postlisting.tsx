@@ -5,12 +5,12 @@ import type { ComponentProps } from 'astro/types';
 type TagsProps = ComponentProps<typeof Tags>
 type ArticleHeadingProps = ComponentProps<typeof ArticleHeading>
 
-type Props = {
+export type PostListingProps = {
   description: string,
   slug: string,
 } & TagsProps & ArticleHeadingProps
 
-export function PostListing({ series, order, title, description, tags, slug }: Props) {
+export function PostListing({ series, order, title, description, tags, slug }: PostListingProps) {
   return (
     <div className="flex flex-col mt-14 mb-32">
       <ArticleHeading
