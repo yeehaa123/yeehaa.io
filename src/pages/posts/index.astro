@@ -1,20 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import { BaseHead, OGType} from "@/components/BaseHead";
 import Layout from "@/layouts/Page.astro"
 import { PostListing } from "@/components/Postlisting"
 
 const title = "YEEHAA";
-import { getPosts } from "@/helpers/pages";
 import { getEntry } from "astro:content";
-const posts = await getPosts();
-const articles = posts.sort(
-  (a, b) => {
-    if (b.data.publishedAt && a.data.publishedAt) {
-      return b.data.publishedAt > a.data.publishedAt ? 0 : -1
-    } else {
-      return -1
-    }
-  })
+const articles = await getCollection('Posts')
 const series = await getEntry("Series", "ecosystem-architecture");
 const description = series.data.summary;
 
@@ -27,6 +19,6 @@ const description = series.data.summary;
     {description} 
     url={Astro.url} />
   <div transition:name="content" class="px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { articles.map(({slug, data }) => <PostListing {...data} {slug}/>)}
+    { articles.reverse().map(({slug, data }) => <PostListing {...data} {slug}/>)}
   </div>
 </Layout>

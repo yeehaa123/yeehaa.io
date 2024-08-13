@@ -2,6 +2,7 @@
   {
     "id": "0db33aef6608b5824a9c5d98c9e259e6",
     "author": "yeehaa",
+    "order": 0,
     "title": "Across Space And Time",
     "contentType": "article",
     "status": "published",
@@ -95,6 +96,7 @@
   {
     "id": "9ce5c6ab63030d9255e1d5076a53456e",
     "author": "yeehaa",
+    "order": 1,
     "title": "Practice Innovation",
     "contentType": "article",
     "status": "published",

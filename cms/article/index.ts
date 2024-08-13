@@ -80,6 +80,7 @@ export function render(entity: FinalArticle) {
     ...analysis,
     ...publicationData,
     ...augmentations,
+    order: meta.order ? meta.order : 0,
     series,
     course,
   });

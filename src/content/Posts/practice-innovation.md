@@ -1,6 +1,7 @@
 ---
 title: Practice Innovation
 author: yeehaa
+order: 1
 series: ecosystem-architecture
 createdAt: 2024-07-29T12:45:35.886Z
 updatedAt: 2024-07-29T12:45:35.886Z

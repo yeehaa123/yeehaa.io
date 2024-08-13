@@ -19,6 +19,7 @@ export enum Status {
 export const schema = z.object({
   id: z.string(),
   author: z.string().optional(),
+  order: z.number().optional(),
   title: z.string(),
   contentType: z.nativeEnum(ContentType),
   status: z.nativeEnum(Status),

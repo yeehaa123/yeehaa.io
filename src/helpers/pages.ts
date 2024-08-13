@@ -4,17 +4,12 @@ import { getEntry } from "astro:content";
 export async function getPosts() {
   const articles = (await getCollection('Posts')).reverse();
   const promises = articles.map(async (article) => {
-    const { data, slug } = article;
+    const { data } = article;
     const seriesRef = data.series
     if (!seriesRef) { return { ...article, data: { ...data, order: undefined } } }
-    const series = await getEntry(seriesRef);
-    const order = series.data.articles.findIndex(article => article.slug === slug);
     return {
       ...article,
-      data: {
-        ...data,
-        order
-      }
+      data
     }
   })
   return await Promise.all(promises)
