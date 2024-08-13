@@ -1,5 +1,7 @@
+import type { CTA } from "./CTA";
 import {
   PageSection,
+  CallToAction,
   FeatureCard
 } from "@/components";
 import type { FeatureCardProps } from "./FeatureCard";
@@ -9,10 +11,11 @@ type Props = {
   title: string,
   description: string,
   subtitle: string,
-  items: FeatureCardProps[]
+  items: FeatureCardProps[],
+  cta: CTA,
 }
 
-export function ProductsSection({ title, subtitle, description, items }: Props) {
+export function ProductsSection({ title, subtitle, description, items, cta }: Props) {
   return (
     <PageSection.Root>
       <PageSection.Container
@@ -24,6 +27,9 @@ export function ProductsSection({ title, subtitle, description, items }: Props) 
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
           {items.map((product, index) => <FeatureCard key={index} className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product} />)}
+        </div>
+        <div className="text-center mt-12">
+          <CallToAction {...cta} />
         </div>
       </PageSection.Container>
     </PageSection.Root>

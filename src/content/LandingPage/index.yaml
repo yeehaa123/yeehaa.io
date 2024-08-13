@@ -133,7 +133,7 @@ sections:
             organization to effectively navigate and lead in ecosystem-driven
             markets.
     cta:
-      text: Revolutionize Your Ecosystem Today
+      text: Transform Your Business Today
   products:
     title: Ecosystem Domination Tools
     subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
@@ -163,6 +163,8 @@ sections:
             within your network.
           Synergy Optimization: Receive AI-powered recommendations to maximize cognitive
             alignment and collaborative output.
+    cta:
+      text: Foster An Effective Ecosystem
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
@@ -207,25 +209,23 @@ courses:
 articles:
   - across-space-and-time
   - practice-innovation
-description: Yeehaa, an Ecosystem Architect, offers innovative strategies for
-  navigating complex business ecosystems and pioneering "Black Ocean" markets.
-  The landing page showcases their unique approach to Ecosystem Architecture,
-  which combines traditional business strategy with collaborative
-  network-building. Yeehaa's services include Black Ocean Discovery Expeditions,
-  Ecosystem-Led Growth Strategy, and Adaptive Organization Design. They also
-  offer tools like Offcourse and Rizom to enhance collective intelligence. The
-  page highlights success stories, explains key concepts, and addresses common
-  questions about their revolutionary approach to market exploration and
-  organizational transformation.
+description: Yeehaa - Ecosystem Architect offers innovative solutions for
+  navigating complex ecosystems and conquering Black Ocean markets. The landing
+  page introduces concepts like Ecosystem-Led Growth and Adaptive Organization
+  Design, highlighting services such as Black Ocean Discovery Expeditions and
+  tools like Offcourse for knowledge sharing. Yeehaa's approach empowers
+  organizations to identify untapped opportunities, build resilient networks,
+  and create shared value in emerging markets.
 excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
-  "Black Ocean" markets through innovative collaboration strategies. Their
-  approach combines traditional business methods with ecosystem-building to
-  unlock new opportunities and foster sustainable growth.
+  Black Ocean markets through collaboration and innovation. Offering services
+  like Black Ocean Discovery Expeditions and tools such as Offcourse, Yeehaa
+  empowers businesses to navigate complex ecosystems and pioneer new market
+  spaces.
 tags:
   - ecosystem
   - innovation
   - strategy
   - collaboration
-  - markets
-bannerImageURL: ./2c5a42052a8dceccb88e2e57889949bb-banner.png
-profileImageURL: ./2c5a42052a8dceccb88e2e57889949bb-profile.png
+  - growth
+bannerImageURL: ./0d7453f3b30495793bfd72b118284552-banner.png
+profileImageURL: ./0d7453f3b30495793bfd72b118284552-profile.png
