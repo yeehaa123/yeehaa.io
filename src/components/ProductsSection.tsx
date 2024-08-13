@@ -23,7 +23,7 @@ export function ProductsSection({ title, subtitle, description, items }: Props) 
           <PageSection.Description >{description}</PageSection.Description>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
-          {items.map(product => <FeatureCard className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product} />)}
+          {items.map((product, index) => <FeatureCard key={index} className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product} />)}
         </div>
       </PageSection.Container>
     </PageSection.Root>

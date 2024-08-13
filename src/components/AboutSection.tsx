@@ -22,7 +22,7 @@ export function AboutSection({ title, imageSrc, description, key_points }: Props
           <div className="max-w-3xl mx-auto">
             <p className="mb-6">{description}</p>
             <ul className="list-disc list-inside mb-6">
-              {key_points.map((point) => <li>{point}</li>)}
+              {key_points.map((point, index) => <li key={index}>{point}</li>)}
             </ul>
           </div>
         </div>

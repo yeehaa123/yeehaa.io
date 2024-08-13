@@ -11,7 +11,6 @@ export { ThemeToggle } from "@/components/ThemeToggle";
 export { FAQ } from "@/components/FAQ";
 export * as PageSection from "@/components/PageSection";
 export { PostListing } from "@/components/Postlisting";
-export { PostList } from "@/components/PostList";
 
 export { HeroSection } from "@/components/HeroSection"
 export { ChallengesSection } from "@/components/ChallengesSection"

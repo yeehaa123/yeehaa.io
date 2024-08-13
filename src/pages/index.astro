@@ -4,7 +4,6 @@ import { getEntry, getEntries } from 'astro:content';
 import { getImage } from "astro:assets"; import Layout from "@/layouts/Landing.astro"
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
-import { PostListing } from "../components/Postlisting"
 import  { 
   BaseHead, 
   OGType, 
@@ -19,9 +18,8 @@ import  {
   AboutSection,
   FAQSection,
   CTASection,
-  CallToAction, 
   PageSection,
-  PostList
+  PostListing,
 } from "@/components";
 
 interface Props  {
@@ -41,13 +39,6 @@ const {
 const courses = await getEntries(c)
 const posts = await getEntries(articles)
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
-
-const { 
-  about, 
-  faq,
-  main_cta 
-} = sections;
-
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
@@ -78,7 +69,7 @@ const {
   <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
     <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
       <PageSection.Header>Recent Content</PageSection.Header>
-      <PostList posts={posts} />
+      {posts.map(({ slug, data }) => <PostListing {...data} order={1} slug={slug} />)}
       <Offcourse data={courses.map(({data}) => data)} client:load/>
     </div>
   </PageSection.Root>
@@ -90,5 +81,5 @@ const {
   <div class="bg-primary">
     <Wave anchor="bottom" class="-bottom-1 fill-white dark:fill-black"/>
   </div>
-  <CTASection {...main_cta}/>
+  <CTASection {...sections.main_cta}/>
 </Layout>

@@ -22,7 +22,7 @@ export function ApproachSection({ title, subtitle, description, items }: Props) 
           <PageSection.Description>{description}</PageSection.Description>
         </div>
         <div className="grid grid-cols-1 gap-4">
-          {items.map((item) => <IconCard  {...item} />)}
+          {items.map((item, index) => <IconCard key={index} {...item} />)}
         </div>
       </PageSection.Container>
     </PageSection.Root>

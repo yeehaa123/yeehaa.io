@@ -1,3 +1,4 @@
+import voca from "voca";
 type Props = {
   order: number | undefined,
   series?: {
@@ -5,6 +6,13 @@ type Props = {
   } | undefined
 }
 
+export function deslugify(slug: string) {
+  return voca
+    .chain(slug)
+    .replaceAll("-", " ")
+    .titleCase()
+    .value();
+}
 export function SeriesHeading({ series, order = 1 }: Props) {
   const formattedOrder = ('00' + order).slice(-3);
   if (!series) return;
@@ -15,7 +23,7 @@ export function SeriesHeading({ series, order = 1 }: Props) {
           {formattedOrder}
         </span>
         <span className="text-secondary-light font-normal font-sans">
-          {series.id}
+          {deslugify(series.id)}
         </span>
       </h2>
     </a>
