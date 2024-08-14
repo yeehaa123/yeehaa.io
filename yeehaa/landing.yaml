@@ -55,13 +55,24 @@ sections:
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
-    description: Discover how yeehaa created the Superconnectors event format, a groundbreaking ecosystem-led approach that enables startups to present their critical asks to the most well-connected individuals in the global tech ecosystem.
+    description: >
+      Yeehaa's Superconnectors event format has redefined how startups connect with key players in the global tech ecosystem. This groundbreaking, ecosystem-led approach has created a self-sustaining network of innovation, accelerating value creation and fostering unexpected cross-industry collaborations. By breaking down traditional barriers, Superconnectors has democratized access to high-level networking and resources for startups from diverse backgrounds. The format's success has led to its adoption by several major tech hubs globally, signaling a paradigm shift in startup ecosystem development.
     key_points:
-      - Connected over 100 startups with industry leaders
-      - Facilitated $50M+ in investments
-      - Created 500+ high-value partnerships
+      - title: Ecosystem Catalysis
+        description: Fostered unprecedented collaboration between startups, industry leaders, and investors, creating a self-sustaining network of innovation.
+      - title: Value Creation Acceleration
+        description: Participating startups reported significantly faster product development cycles and market entry times, often cutting months off their timelines.
+      - title: Cross-Industry Pollination
+        description: Facilitated unexpected partnerships across different sectors, leading to innovative solutions for complex, interdisciplinary challenges.
+      - title: Democratized Access
+        description: Broke down traditional barriers, allowing startups from diverse backgrounds to access high-level networking and resources previously out of reach.
+      - title: Paradigm Shift in Startup Support
+        description: The format has been adopted by several major tech hubs globally, signaling a shift in how the industry approaches startup ecosystem development.
+    testimonial:
+      quote: "Networking on steroids! Our promise to founders is ‘Make the network work for you’. And that’s exactly what Superconnectors delivered."
+      author: Lars Crama. Private Lead at Up!Rotterdam
     cta:
-      text: Explore the Superconnectors Impact
+      text: Superconnect Your Network
 
   services:
     title: Transformative Services

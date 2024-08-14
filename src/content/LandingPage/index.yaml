@@ -63,8 +63,8 @@ sections:
         icon: Network
         description: Utilize our Ecosystem Mapping Tool to visualize and optimize your
           network of partnerships, resources, and stakeholders. We help you
-          design a "Collaborative Growth Engine" - a shared vision and strategy
-          for conquering black ocean markets together.
+          design a 'Vision Type', a shared vision and strategy for conquering
+          black ocean markets together.
       - title: Create and Distribute Shared Value
         icon: Layers
         description: Implement our Adaptive Value Creation Framework to design flexible
@@ -80,9 +80,10 @@ sections:
     key_points:
       - Pioneer in applying black ocean strategies to ecosystem design
       - Creator of the Superconnectors methodology
-      - Founder of multiple innovative ventures including Offcourse and Snowday
-      - Collaborator with leading institutions like Internet Society and Erasmus
-        Center for Entrepreneurship
+      - Founder of multiple innovative ventures including Offcourse, Varias, and
+        Snowday
+      - Collaborator with leading institutions and initiatives like Internet
+        Society, Public Spaces, and Waag Society.
   services:
     title: Transformative Services
     subtitle: Empowering Your Journey into Black Ocean Markets
@@ -133,7 +134,7 @@ sections:
             organization to effectively navigate and lead in ecosystem-driven
             markets.
     cta:
-      text: Transform Your Business Today
+      text: Transform Your Organization Today
   products:
     title: Ecosystem Domination Tools
     subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
@@ -168,20 +169,47 @@ sections:
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
-    description: Discover how yeehaa created the Superconnectors event format, a
-      groundbreaking ecosystem-led approach that enables startups to present
-      their critical asks to the most well-connected individuals in the global
-      tech ecosystem.
+    description: >
+      Yeehaa's Superconnectors event format has redefined how startups connect
+      with key players in the global tech ecosystem. This groundbreaking,
+      ecosystem-led approach has created a self-sustaining network of
+      innovation, accelerating value creation and fostering unexpected
+      cross-industry collaborations. By breaking down traditional barriers,
+      Superconnectors has democratized access to high-level networking and
+      resources for startups from diverse backgrounds. The format's success has
+      led to its adoption by several major tech hubs globally, signaling a
+      paradigm shift in startup ecosystem development.
     key_points:
-      - Connected over 100 startups with industry leaders
-      - Facilitated $50M+ in investments
-      - Created 500+ high-value partnerships
+      - title: Ecosystem Catalysis
+        description: Fostered unprecedented collaboration between startups, industry
+          leaders, and investors, creating a self-sustaining network of
+          innovation.
+      - title: Value Creation Acceleration
+        description: Participating startups reported significantly faster product
+          development cycles and market entry times, often cutting months off
+          their timelines.
+      - title: Cross-Industry Pollination
+        description: Facilitated unexpected partnerships across different sectors,
+          leading to innovative solutions for complex, interdisciplinary
+          challenges.
+      - title: Democratized Access
+        description: Broke down traditional barriers, allowing startups from diverse
+          backgrounds to access high-level networking and resources previously
+          out of reach.
+      - title: Paradigm Shift in Startup Support
+        description: The format has been adopted by several major tech hubs globally,
+          signaling a shift in how the industry approaches startup ecosystem
+          development.
+    testimonial:
+      quote: Networking on steroids! Our promise to founders is ‘Make the network work
+        for you’. And that’s exactly what Superconnectors delivered.
+      author: Lars Crama. Private Lead at Up!Rotterdam
     cta:
-      text: Explore the Superconnectors Impact
+      text: Superconnect Your Network
   faq:
     title: Frequently Asked Questions
     items:
-      - question: What exactly is a 'Black Ocean' market?
+      - question: What exactly is a Black Ocean market?
         answer: A Black Ocean market is an entirely new market space that doesn't just
           meet existing demand, but creates new demand. Unlike Blue Ocean
           markets which are untapped but somewhat defined, Black Ocean markets
@@ -208,25 +236,23 @@ courses:
 articles:
   - across-space-and-time
   - practice-innovation
-description: Yeehaa, an Ecosystem Architect, offers innovative solutions for
-  navigating complex business ecosystems and conquering "Black Ocean" markets.
-  The landing page showcases their unique approach, combining Ecosystem
-  Architecture and Black Ocean strategies to help organizations identify
-  unexplored market opportunities, build collaborative networks, and create
-  shared value. Services include Black Ocean Discovery Expeditions,
-  Ecosystem-Led Growth Strategy, and Adaptive Organization Design. Products like
-  Offcourse and Rizom empower businesses to harness collective intelligence. The
-  page highlights case studies, FAQs, and a call-to-action for a free
-  consultation.
-excerpt: Yeehaa, an Ecosystem Architect, guides organizations through complex
-  business ecosystems and "Black Ocean" markets. Their innovative approach
-  combines Ecosystem Architecture and Black Ocean strategies to uncover
-  opportunities, build networks, and create shared value.
+description: Yeehaa, an Ecosystem Architect, offers transformative services for
+  organizations to conquer Black Ocean markets. The landing page showcases their
+  approach to ecosystem-led growth, innovative concepts like Black Ocean
+  Markets, and tools for ecosystem domination. It highlights Yeehaa's expertise
+  in navigating complex ecosystems, designing adaptive organizations, and
+  fostering collaboration. The page also features a case study on the
+  Superconnectors event format, demonstrating successful ecosystem catalysis and
+  value creation acceleration.
+excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
+  Black Ocean markets through innovative strategies, tools, and services. Their
+  approach focuses on ecosystem-led growth, collaborative innovation, and
+  adaptive organization design.
 tags:
   - ecosystem
   - innovation
   - strategy
   - collaboration
   - growth
-bannerImageURL: ./cd4a3a69a0d80f27f1ecc6893ddcc201-banner.png
-profileImageURL: ./cd4a3a69a0d80f27f1ecc6893ddcc201-profile.png
+bannerImageURL: ./dcc0000dffe105a6d07612189a05d4b9-banner.png
+profileImageURL: ./dcc0000dffe105a6d07612189a05d4b9-profile.png

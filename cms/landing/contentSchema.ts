@@ -59,7 +59,8 @@ export const landingContentInput = z.object({
     case_study: baseSection.extend({
       subtitle: z.string(),
       description: z.string(),
-      key_points: z.array(z.string()),
+      key_points: z.array(z.object({ title: z.string(), description: z.string() })),
+      testimonial: z.object({ quote: z.string(), author: z.string() }),
       cta
     }),
     faq: baseSection.extend({

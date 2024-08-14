@@ -27,7 +27,7 @@ export function ServicesSection({ title, subtitle, description, items, cta }: Pr
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 @container w-full">
           {items.map((service, index) => <FeatureCard key={index} {...service} />)}
         </div>
-        <div className="text-center mt-12">
+        <div className="hidden text-center mt-12">
           <CallToAction {...cta} />
         </div>
       </PageSection.Container>
