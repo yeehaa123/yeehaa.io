@@ -22,10 +22,6 @@ export function CaseStudySection({ title, description, testimonial, key_points, 
       <PageSection.Container>
         <div className="flex flex-col justify-center items-center py-8 lg:py-16">
           <h2 className="text-4xl md:text-6xl font-extrabold mb-8">{title}</h2>
-          <div className="flex flex-col max-w-2xl text-left lg:text-center" >
-            <blockquote>"{testimonial.quote}"</blockquote>
-            <p className="mt-2 font-semibold">{testimonial.author}</p>
-          </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:flex-row lg:gap-16">
           <div className="max-w-lg">
