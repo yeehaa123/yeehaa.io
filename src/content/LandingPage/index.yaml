@@ -178,7 +178,6 @@ sections:
       - Created 500+ high-value partnerships
     cta:
       text: Explore the Superconnectors Impact
-      action: https://superconnectors.io
   faq:
     title: Frequently Asked Questions
     items:
@@ -209,23 +208,25 @@ courses:
 articles:
   - across-space-and-time
   - practice-innovation
-description: Yeehaa - Ecosystem Architect offers innovative solutions for
-  navigating complex ecosystems and conquering Black Ocean markets. The landing
-  page introduces concepts like Ecosystem-Led Growth and Adaptive Organization
-  Design, highlighting services such as Black Ocean Discovery Expeditions and
-  tools like Offcourse for knowledge sharing. Yeehaa's approach empowers
-  organizations to identify untapped opportunities, build resilient networks,
-  and create shared value in emerging markets.
-excerpt: Yeehaa, an Ecosystem Architect, guides organizations in conquering
-  Black Ocean markets through collaboration and innovation. Offering services
-  like Black Ocean Discovery Expeditions and tools such as Offcourse, Yeehaa
-  empowers businesses to navigate complex ecosystems and pioneer new market
-  spaces.
+description: Yeehaa, an Ecosystem Architect, offers innovative solutions for
+  navigating complex business ecosystems and conquering "Black Ocean" markets.
+  The landing page showcases their unique approach, combining Ecosystem
+  Architecture and Black Ocean strategies to help organizations identify
+  unexplored market opportunities, build collaborative networks, and create
+  shared value. Services include Black Ocean Discovery Expeditions,
+  Ecosystem-Led Growth Strategy, and Adaptive Organization Design. Products like
+  Offcourse and Rizom empower businesses to harness collective intelligence. The
+  page highlights case studies, FAQs, and a call-to-action for a free
+  consultation.
+excerpt: Yeehaa, an Ecosystem Architect, guides organizations through complex
+  business ecosystems and "Black Ocean" markets. Their innovative approach
+  combines Ecosystem Architecture and Black Ocean strategies to uncover
+  opportunities, build networks, and create shared value.
 tags:
   - ecosystem
   - innovation
   - strategy
   - collaboration
   - growth
-bannerImageURL: ./0d7453f3b30495793bfd72b118284552-banner.png
-profileImageURL: ./0d7453f3b30495793bfd72b118284552-profile.png
+bannerImageURL: ./cd4a3a69a0d80f27f1ecc6893ddcc201-banner.png
+profileImageURL: ./cd4a3a69a0d80f27f1ecc6893ddcc201-profile.png

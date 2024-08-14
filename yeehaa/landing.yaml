@@ -45,7 +45,7 @@ sections:
         outcome: A comprehensive map of potential black ocean markets tailored to your organization's strengths and aspirations.
       - title: Architect Your Ecosystem
         icon: Network
-        description: Utilize our Ecosystem Mapping Tool to visualize and optimize your network of partnerships, resources, and stakeholders. We help you design a "Collaborative Growth Engine" - a shared vision and strategy for conquering black ocean markets together.
+        description: Utilize our Ecosystem Mapping Tool to visualize and optimize your network of partnerships, resources, and stakeholders. We help you design a 'Vision Type', a shared vision and strategy for conquering black ocean markets together.
         outcome: A dynamic ecosystem model that identifies key partners, resources, and growth opportunities.
       - title: Create and Distribute Shared Value
         icon: Layers
@@ -62,7 +62,6 @@ sections:
       - Created 500+ high-value partnerships
     cta:
       text: Explore the Superconnectors Impact
-      action: https://superconnectors.io
 
   services:
     title: Transformative Services
@@ -94,7 +93,7 @@ sections:
           Agile Decision-Making: Implement processes that enable quick, informed decisions in fast-paced ecosystem environments.
           Ecosystem-Centric Competencies: Develop new roles and skills within your organization to effectively navigate and lead in ecosystem-driven markets.
     cta:
-      text: Transform Your Business Today
+      text: Transform Your Organization Today
 
   products:
     title: Ecosystem Domination Tools
@@ -125,13 +124,13 @@ sections:
     key_points:
       - Pioneer in applying black ocean strategies to ecosystem design
       - Creator of the Superconnectors methodology
-      - Founder of multiple innovative ventures including Offcourse and Snowday
-      - Collaborator with leading institutions like Internet Society and Erasmus Center for Entrepreneurship
+      - Founder of multiple innovative ventures including Offcourse, Varias, and Snowday
+      - Collaborator with leading institutions and initiatives like Internet Society, Public Spaces, and Waag Society.
 
   faq:
     title: Frequently Asked Questions
     items:
-      - question: What exactly is a 'Black Ocean' market?
+      - question: What exactly is a Black Ocean market?
         answer: A Black Ocean market is an entirely new market space that doesn't just meet existing demand, but creates new demand. Unlike Blue Ocean markets which are untapped but somewhat defined, Black Ocean markets are so novel that the rules and boundaries are yet to be established.
       - question: How is Ecosystem Architecture different from traditional business strategy?
         answer: Ecosystem Architecture goes beyond traditional business strategy by considering not just your organization, but the entire network of partners, customers, and even competitors. It focuses on creating shared value and fostering collaboration to tackle complex challenges and opportunities that no single organization could address alone.

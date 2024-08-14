@@ -33,10 +33,8 @@ const {
   sections, 
   profileImageURL,
   articles,
-  courses: c
 } = data;
 
-const courses = await getEntries(c)
 const posts = await getEntries(articles)
 const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 ---
@@ -70,7 +68,6 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
     <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
       <PageSection.Header>Recent Content</PageSection.Header>
       {posts.reverse().map(({ slug, data }) => <PostListing {...data}  slug={slug} />)}
-      <Offcourse data={courses.map(({data}) => data)} client:load/>
     </div>
   </PageSection.Root>
   <div class="bg-offwhite dark:bg-offblack">
