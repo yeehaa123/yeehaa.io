@@ -1,7 +1,7 @@
 ---
 import { Offcourse } from "@/offcourse/"
 import { BaseHead, OGType} from "@/components/BaseHead";
-import Layout from "@/layouts/Base.astro"
+import Layout from "@/layouts/Page.astro"
 import { getEntry, getCollection } from "astro:content";
 const courses = await getCollection('Courses');
 const series = await getEntry("Series", "ecosystem-architecture");
@@ -16,7 +16,7 @@ const title = "YEEHAA";
     {title} 
     {description} 
     url={Astro.url} />
-  <div transition:name="content" class="px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
+  <div class="px-5 sm:px-8 gap-8 py-12 py-20 lg:py-20 mx-auto">
     <Offcourse data={courses.map(({data}) => data)} client:load/>
   </div>
 </Layout>

@@ -5,6 +5,7 @@ export enum ContentType {
   ARTICLE = "article",
   COURSE = "course",
   PROFILE = "profile",
+  LANDING_PAGE = "landing_page",
   SERIES = "series",
   TAG = "tag"
 }
@@ -18,6 +19,7 @@ export enum Status {
 export const schema = z.object({
   id: z.string(),
   author: z.string().optional(),
+  order: z.number().optional(),
   title: z.string(),
   contentType: z.nativeEnum(ContentType),
   status: z.nativeEnum(Status),

@@ -29,8 +29,10 @@ export function InfoOverlay(
             {userName
               ? "Sign Out"
               : <><GitHubLogoIcon className="mr-2 h-4 w-4" />
-                Authenticate With Github</>}
-          </Button>}
+                Authenticate With Github</>
+            }
+          </Button>
+        }
         <CardDescription>
           <a className="text-secondary" target="_blank" href="https://offcourse.io">Offcourse</a> is an open-source platform designed for online learning, leveraging the wealth of information available on the internet,
           such as blogs, video tutorials, and podcasts. The platform enables users to organize these resources into structured, shareable courses,

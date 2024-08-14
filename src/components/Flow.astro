@@ -1,0 +1,42 @@
+---
+const {  anchor = "top", viewBox, class:className} = Astro.props;
+const bottom = anchor === "bottom" ? "-bottom-1" : "bottom-1";
+---
+
+<svg class:list={[bottom, "relative flow", anchor, className]} {viewBox}>
+<slot/>
+<svg>
+
+<style>
+.flow {
+  animation: flow 10s linear infinite;
+}
+.top {
+  transform-origin: top left;
+}
+.bottom {
+  transform-origin: bottom left;
+}
+@keyframes flow {
+
+0%{
+  transform: scale(1, 0);
+}
+
+20%{
+  transform: scale(1, 0.7);
+}
+
+40%{
+  transform: scale(1, 0.3);
+}
+
+70%{
+  transform: scale(1, 1);
+}
+
+100% {
+  transform: scale(1, 0);
+}
+}
+</style>

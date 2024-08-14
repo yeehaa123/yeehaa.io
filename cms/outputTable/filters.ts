@@ -40,7 +40,7 @@ export function findProfilesForTag(table: AnalyzedTable, tag: string) {
     .filter(other => other.analysis.tags.find(t => t === tag))
 }
 
-export function findProfileForCourse(table: AnalyzedTable, author: string) {
+export function findProfileForAuthor(table: AnalyzedTable, author: string) {
   return table
     .filter(isProfile)
     .find(other => other.meta.author === author)

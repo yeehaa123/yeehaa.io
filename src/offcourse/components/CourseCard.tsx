@@ -77,7 +77,7 @@ export default function CourseCard(courseCardState: CourseCardState) {
   return (
     <div className="grid *:col-start-1 *:row-start-1 overflow-hidden" >
       <Overlay {...courseCardState} />
-      < CardChrome >
+      < CardChrome>
         <CardHeader className="space-y-4">
           <CardTitle className="flex w-full justify-between space-x-5 ">
             <span className="max-w-[80%]">{goal}</span>

@@ -14,7 +14,7 @@ export default function Curator({ alias, socials }: Curator) {
         </Avatar>
         <CardDescription className="capitalize">{alias}</CardDescription>
       </a>
-      <Socials {...socials} />
+      <Socials socials={socials} />
     </div>
   )
 }

@@ -4,11 +4,13 @@ socials:
   linkedin: https://www.linkedin.com/in/yeehaa/
   github: https://www.github.com/yeehaa123/
   instagram: https://www.instagram.com/yeehaa12345/
-bio: yeehaa is a seasoned professional with robust experience across industries
-  including technology and consulting. With strong backgrounds in software
-  engineering and project management, yeehaa has driven significant upgrades and
-  implementations. An alumnus of top-tier institutions, yeehaa combines academic
-  insights with practical expertise to foster innovation and efficiency.
+bio: yeehaa is an ecosystem architect with a PhD in Philosophy. He's passionate
+  about transforming education and knowledge sharing. As an entrepreneur,
+  thinker, and coder, he founded Offcourse and created the Superconnectors event
+  format. With experience in traditional and non-traditional academia, he
+  advocates for impactful and inclusive internet. Currently based in Taipei, he
+  focuses on bringing people together around common values and translating
+  shared visions into effective ecosystems.
 courses:
   - groom-your-ecosystem
   - practice-innovation
@@ -16,14 +18,14 @@ articles:
   - across-space-and-time
   - practice-innovation
 tags:
+  - edu
   - tech
-  - manage
-  - consult
-  - ecosys
-  - innov
+  - phd
+  - eco
+  - invent
+  - future
   - design
-  - lead
-  - adapt
+  - taiwan
 profile:
   name: Jan Hein Hoogstad
   alias: yeehaa
@@ -48,7 +50,7 @@ profile:
 
     In 2021, I created the Superconnectors event format that enabled startups to
     present their so-called 'critical ask' to the best-connected people of the
-    Dutch tech ecosystem. 
+    global tech ecosystem. 
 
 
     I holds a PhD in Philosophy from the university of Utrecht and worked as a
@@ -60,19 +62,23 @@ profile:
 
 
     I currently work and live in Taipei, Taiwan.
-checksum: 4fa69c9bd2026c086563ffa4aaa3e7b4
-description: Yeehaa is a tech-savvy manager and consultant with extensive
-  experience in software engineering and project management. Their work
-  showcases a passion for innovation, ecosystem architecture, and sustainable
-  design. Yeehaa's blog posts explore concepts like decentralized systems and
-  regenerative design, while their curated courses focus on strategic thinking,
-  creativity, and adaptability. With a strong academic background and practical
-  expertise, Yeehaa drives efficiency and fosters innovation across various
-  industries. Their approach combines big-picture thinking with tactical
-  execution, emphasizing the importance of diverse ideas and collaboration in
-  creating resilient, interconnected ecosystems.
-blurb: "Yeehaa: Tech expert driving innovation through ecosystem architecture
-  and sustainable design. Combines strategic vision with practical skills to
-  foster resilient, interconnected systems across industries."
-profileImageURL: ./4fa69c9bd2026c086563ffa4aaa3e7b4-profile.png
+checksum: 9db57333ee5d16e89fc449752f1e54a9
+description: Yeehaa is an ecosystem architect with a PhD in Philosophy,
+  passionate about transforming education and knowledge sharing. As an
+  entrepreneur, thinker, and coder, he founded Offcourse and created the
+  Superconnectors event format. Based in Taipei, he focuses on bringing people
+  together around common values and translating shared visions into effective
+  ecosystems. His work explores the evolution of 'ecosystem' from biology to
+  metaphor, introducing 'ecosystem architecture' as a new approach to designing
+  modern, decentralized organizations. Yeehaa emphasizes innovation as a
+  practice, fostering creativity and collaboration to address complex challenges
+  and build resilient, harmonious ecosystems. His courses cover topics like
+  strategic thinking, tactical action, and unconventional tool use to cultivate
+  a mindset conducive to breakthrough ideas and creative problem-solving.
+blurb: Yeehaa, an ecosystem architect with a PhD, explores 'ecosystem
+  architecture' as a new approach to designing decentralized organizations. He
+  emphasizes innovation, creativity, and collaboration to build resilient
+  ecosystems, offering courses on strategic thinking and unconventional
+  problem-solving.
+profileImageURL: ./9db57333ee5d16e89fc449752f1e54a9-profile.png
 title: Yeehaa

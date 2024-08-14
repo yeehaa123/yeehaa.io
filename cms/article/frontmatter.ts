@@ -3,7 +3,7 @@ import { z } from 'zod';
 export const schema = z.object({
   title: z.string(),
   author: z.string().optional(),
-  order: z.number().optional(),
+  order: z.number(),
   series: z.string().optional(),
   createdAt: z.date(),
   updatedAt: z.date(),

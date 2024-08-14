@@ -1,32 +1,86 @@
 ---
-import { BaseHead, OGType} from "@/components/BaseHead";
-import Layout from "../layouts/Base.astro"
-import { PostListing } from "../components/Postlisting"
+import { getEntry, getEntries } from 'astro:content';
+import { getImage } from "astro:assets"; import Layout from "@/layouts/Landing.astro"
+import  Wave from "@/components/Wave.astro";
+import  Bubble from "@/components/Bubble.astro";
+import  { 
+  CallToAction,
+  BaseHead, 
+  OGType, 
+  HeroSection,
+  PayOffSection,
+  ChallengesSection,
+  ConceptsSection,
+  ApproachSection,
+  CaseStudySection,
+  ServicesSection,
+  ProductsSection,
+  AboutSection,
+  FAQSection,
+  CTASection,
+  PageSection,
+  PostListing,
+} from "@/components";
 
-const title = "YEEHAA";
-import { getPosts } from "@/helpers/pages";
-import { getEntry } from "astro:content";
-const posts = await getPosts();
-const articles = posts.sort(
-  (a, b) => {
-    if (b.data.publishedAt && a.data.publishedAt) {
-      return b.data.publishedAt > a.data.publishedAt ? 0 : -1
-    } else {
-      return -1
-    }
-  })
-const series = await getEntry("Series", "ecosystem-architecture");
-const description = series.data.summary;
+interface Props  {
+  logoLink: "/"
+}
 
+const { logoLink = "/" } = Astro.props;
+const entry = await getEntry("LandingPage", "index")
+const { data } = entry
+const { 
+  sections, 
+  profileImageURL,
+  articles,
+} = data;
+
+const posts = await getEntries(articles)
+const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 ---
-<Layout {title}>
-  <BaseHead 
-    slot="og:data" 
-    type={OGType.WEBSITE} 
-    {title} 
-    {description} 
-    url={Astro.url} />
-  <div transition:name="content" class="px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
-    { articles.map(({slug, data }) => <PostListing {...data} {slug}/>)}
+<Layout {logoLink}  {...data}>
+  <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
+  <header class="h-vsh pt-48 md:pt-60 bg-primary">
+    <HeroSection {...sections.hero} client:load/>
+    <div class="bg-primary dark:bg-primary">
+      <Wave anchor="bottom" class="fill-white dark:fill-black"/>
+    </div>
+    <div class="bg-white dark:bg-black">
+    <PayOffSection items={sections.approach.items}/>
+    </div>
+  </header>
+  <ChallengesSection {...sections.challenges} />
+  <ConceptsSection {...sections.concepts} />
+  <ApproachSection {...sections.approach} />
+  <div class="bg-white dark:bg-black">
+    <Bubble anchor="bottom" class="bg-primary fill-white dark:fill-black"/>
   </div>
+  <CaseStudySection imageSrc={profileImage.src} {...sections.case_study} client:load/>
+  <div class="bg-primary">
+    <Wave anchor="bottom" class="-bottom-1 fill-white dark:fill-black"/>
+  </div>
+  <ServicesSection {...sections.services} />
+  <ProductsSection {...sections.products} />
+  <div class="bg-white dark:bg-black">
+    <Wave anchor="bottom" class="fill-offwhite dark:fill-offblack"/>
+  </div>
+  <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
+    <div class="container px-8 gap-8 py-12 mx-auto">
+      <PageSection.Header>{sections.recent_content.title}</PageSection.Header>
+      <PageSection.Description className="text-gray-500 dark:text-gray-400">{sections.recent_content.description}</PageSection.Description>
+      {posts.reverse().map(({ slug, data }) => <PostListing {...data}  slug={slug} />)}
+      <div >
+        <CallToAction {...sections.recent_content.cta} />
+      </div>
+    </div>
+  </PageSection.Root>
+  <div class="bg-offwhite dark:bg-offblack">
+    <Bubble anchor="bottom" class="bg-primary fill-offwhite dark:fill-offblack"/>
+  </div>
+  <AboutSection imageSrc={profileImage.src} {...sections.about} />
+  <FAQSection {...sections.faq} />
+  <div class="bg-primary">
+    <Wave anchor="bottom" class="-bottom-1 fill-white dark:fill-black"/>
+  </div>
+  <CTASection {...sections.main_cta}/>
 </Layout>

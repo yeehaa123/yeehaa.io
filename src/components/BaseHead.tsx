@@ -25,6 +25,7 @@ export function BaseHead({
   tags,
 }: Props) {
   const ogImageURL = `${url}og.png`
+  console.log(ogImageURL);
   return (
     <>
       <meta name="description" content={description} />

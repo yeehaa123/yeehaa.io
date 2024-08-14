@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import  { BaseHead, OGType  }from "@/components/BaseHead";
-import Layout from "@/layouts/Base.astro"
+import Layout from "@/layouts/Page.astro"
 import { SeriesHero } from "@/components/SeriesHero"
 import { PostListing } from "@/components/Postlisting"
 import { getCollection, getEntries } from 'astro:content';
@@ -9,18 +9,7 @@ import { getCollection, getEntries } from 'astro:content';
 export async function getStaticPaths() {
   const series = await getCollection('Series');
   const  promises = series.map(async entry => {
-    const raw = await getEntries(entry.data.articles)
-    const articles = raw.map(article => {
-    const { data, slug } = article;
-      const order = entry.data.articles.findIndex(article => article.slug === slug);
-      return {
-        ...article,
-        data: {
-          ...data,
-          order
-        }
-      }
-    })
+    const articles = await getEntries(entry.data.articles)
     return {
       params: { slug: entry.id }, props: { entry, articles },
     }});

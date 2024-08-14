@@ -4,12 +4,6 @@ import { existsSync } from "fs"
 import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path';
 
-type ArticleItem = {
-  summary: string,
-  tags: string[],
-  excerpt: string,
-}
-
 export async function init() {
   const dirExists = existsSync(CACHE_BASE);
   if (!dirExists) {
@@ -22,13 +16,12 @@ export async function getItem(id: string) {
   const fileExists = existsSync(filePath);
   if (fileExists) {
     const file = await readFile(filePath, 'utf8');
-    return JSON.parse(file) as ArticleItem;
+    return JSON.parse(file)
   }
   return false;
 }
 
-export async function setItem(checksum: string, item: ArticleItem) {
-  console.log("setting item: ", checksum);
+export async function setItem(checksum: string, item: any) {
   const filePath = path.join(CACHE_BASE, `${checksum}.json`);
   await writeFile(filePath, JSON.stringify(item, null, 2), 'utf8');
   return item;

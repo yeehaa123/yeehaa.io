@@ -15,10 +15,11 @@ const openai = new OpenAI({
 type AIImageProps = {
   prompt: string,
   id: string
-  shape?: "RECT" | "SQUARE"
+  shape?: "RECT" | "SQUARE",
+  style?: "NATURAL" | "VIVID"
 }
 
-export async function generate({ prompt, id, shape }: AIImageProps) {
+export async function generate({ prompt, id, shape, style }: AIImageProps) {
   const imageURL = await cache.getImage(id);
   if (imageURL) { return imageURL };
   const response = await openai.images.generate({
@@ -26,7 +27,7 @@ export async function generate({ prompt, id, shape }: AIImageProps) {
     prompt: prompt + styleAddition,
     n: 1,
     quality: 'hd',
-    style: 'vivid',
+    style: style === "NATURAL" ? "natural" : "vivid",
     response_format: "b64_json",
     size: shape === "SQUARE" ? "1024x1024" : "1792x1024",
   });
@@ -40,15 +41,16 @@ export async function generate({ prompt, id, shape }: AIImageProps) {
 
 // just for future need...
 export async function SDGenerate({ prompt, id }: AIImageProps) {
-  try {
-    const payload = {
-      prompt,
-      aspect_ratio: "21:9",
-      output_format: "png",
-    };
+  const payload = {
+    prompt: prompt + styleAddition,
+    aspect_ratio: "16:9",
+    style_preset: "pixel-art",
+    output_format: "png",
+  };
 
+  try {
     const response = await fetch(
-      `https://api.stability.ai/v2beta/stable-image/generate/sd3`,
+      `https://api.stability.ai/v2beta/stable-image/generate/core`,
       {
         method: "POST",
         headers: {

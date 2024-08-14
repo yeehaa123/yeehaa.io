@@ -10,7 +10,7 @@ type Props = {
 
 export default forwardRef<HTMLDivElement, Props>(function({ children }, ref) {
   return (
-    <Card ref={ref} className={cn("flex flex-col select-none max-w-[360px]")}>
+    <Card ref={ref} className={cn("flex flex-col select-none max-w-[360px] rounded-none")}>
       {children}
     </Card >)
 })

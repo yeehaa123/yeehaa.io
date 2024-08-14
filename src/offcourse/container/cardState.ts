@@ -26,7 +26,7 @@ export type CardState = {
 }
 
 const initialAffordances = {
-  canAuthenticate: false,
+  canAuthenticate: true,
   canBookmark: false,
   canFollow: false,
   canEdit: false,

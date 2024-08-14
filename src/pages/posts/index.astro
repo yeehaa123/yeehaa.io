@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import { BaseHead, OGType} from "@/components/BaseHead";
+import Layout from "@/layouts/Page.astro"
+import { PostListing } from "@/components/Postlisting"
+
+const title = "YEEHAA";
+import { getEntry } from "astro:content";
+const articles = await getCollection('Posts')
+const series = await getEntry("Series", "ecosystem-architecture");
+const description = series.data.summary;
+
+---
+<Layout {title}>
+  <BaseHead 
+    slot="og:data" 
+    type={OGType.WEBSITE} 
+    {title} 
+    {description} 
+    url={Astro.url} />
+  <div transition:name="content" class="px-5 sm:px-8 gap-8 py-12 lg:py-20 mx-auto">
+    { articles.reverse().map(({slug, data }) => <PostListing {...data} {slug}/>)}
+  </div>
+</Layout>

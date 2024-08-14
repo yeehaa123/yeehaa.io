@@ -1,7 +1,7 @@
 import { existsSync } from "fs"
 import * as path from 'path';
 import { mkdir, readFile, writeFile } from 'fs/promises'
-import type { Meta } from "./meta/schema";
+import { ContentType, type Meta } from "./meta/schema";
 import * as m from "./meta";
 
 export type MetaTable = Meta[];
@@ -27,6 +27,21 @@ export async function read(basePath: string) {
   const tablePath = path.join(basePath, TABLE_FILE_NAME);
   const tableJSON = await readFile(tablePath, 'utf8');
   const raw = JSON.parse(tableJSON) as Meta[];
-  return raw.map((meta) => m.init(meta))
+  const sorted = raw
+    .filter(
+      ({ contentType, publicationData }) => publicationData && contentType === ContentType.ARTICLE)
+    .sort(
+      (a, b) => {
+        if (b.publicationData!.publishedAt && a.publicationData!.publishedAt) {
+          return b.publicationData!.publishedAt > a.publicationData!.publishedAt ? -1 : 0
+        } else {
+          return -1
+        }
+      })
+  const all = raw.map((meta) => {
+    const index = sorted.findIndex(({ id }) => meta.id === id);
+    const order = index >= 0 ? index : undefined
+    return m.init({ ...meta, order })
+  })
+  return all;
 }
-

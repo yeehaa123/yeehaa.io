@@ -24,7 +24,7 @@ curator:
 
     In 2021, I created the Superconnectors event format that enabled startups to
     present their so-called 'critical ask' to the best-connected people of the
-    Dutch tech ecosystem. 
+    global tech ecosystem. 
 
 
     I holds a PhD in Philosophy from the university of Utrecht and worked as a
@@ -36,97 +36,95 @@ curator:
 
 
     I currently work and live in Taipei, Taiwan.
-description: To practice innovation, one must think strategically, act
-  tactically, use tools creatively, generate diversity, and share generously.
-  This approach combines big-picture thinking with practical execution,
-  encourages unconventional tool use, embraces diverse ideas, and fosters
-  collaboration through open knowledge sharing. These steps cultivate an
-  innovative mindset and environment.
+description: The path to practicing innovation involves strategic thinking,
+  tactical action, unconventional tool use, fostering diversity, and generous
+  sharing. By combining big-picture planning with hands-on execution, thinking
+  outside the box, embracing varied perspectives, and collaborating openly,
+  individuals can cultivate a mindset and environment conducive to breakthrough
+  ideas and creative problem-solving.
 habitat: practice-innovation
 createdAt: 2024-07-29T12:45:35.886Z
 updatedAt: 2024-07-29T12:45:35.886Z
 publishedAt: 2024-07-29T12:45:35.886Z
 tags:
-  - strategy
   - think
-  - innovate
+  - future
+  - plan
   - film
   - create
-  - tactics
+  - tactic
   - music
-  - invent
+  - tools
   - art
-  - tech
-  - unique
+  - code
+  - random
   - share
   - lead
+  - trust
   - power
-  - ideas
 checkpoints:
   - task: Think Strategically
     href: https://hbr.org/2023/11/how-to-become-a-better-strategic-thinker
     checkpointId: 022b1fcd5002bbb2f5c4b9f7552a342b
-    description: The article offers insights on enhancing strategic thinking skills,
-      crucial for innovation. It covers techniques like zooming out for
-      big-picture views, considering multiple perspectives, questioning
-      assumptions, and balancing analysis with intuition. These approaches
-      foster innovative problem-solving and creative idea generation, aligning
-      with the goal of practicing innovation.
+    description: The article outlines strategies for enhancing strategic thinking
+      skills, crucial for innovation. It emphasizes understanding the big
+      picture, identifying patterns, anticipating future trends, and making
+      informed decisions. These skills enable individuals to approach challenges
+      creatively and develop innovative solutions, aligning with the goal of
+      practicing innovation.
     tags:
-      - strategy
       - think
-      - innovate
+      - future
+      - plan
   - task: Act Tactically
     href: https://www.amazon.com/Spike-Lees-Gotta-Have-Filmmaking/dp/0671644173
     checkpointId: 1b80f326d6476f68ccc9295d620bcf71
     description: Spike Lee's book offers insights into innovative filmmaking
-      techniques and tactical decision-making in the creative process. It
-      provides practical advice on overcoming challenges, thinking outside the
-      box, and executing ideas effectively. The book encourages readers to
-      embrace unconventional approaches and take calculated risks in their
-      artistic endeavors.
+      techniques, encouraging tactical thinking in the creative process. It
+      showcases Lee's unique approach to storytelling, inspiring readers to
+      think outside the box and apply strategic decision-making to their own
+      creative endeavors, fostering innovation in practice.
     tags:
       - film
       - create
-      - tactics
+      - tactic
   - task: Use Tools Against the Grain
     href: https://www.austinchronicle.com/music/2009-12-04/924587/
     checkpointId: 10eab09e40c28326c4c4e7513e3ab878
-    description: The article showcases unconventional uses of musical instruments,
-      demonstrating how thinking outside the box can lead to innovative sounds.
-      This approach of using tools against their intended purpose aligns with
-      the goal of practicing innovation, encouraging creative problem-solving
-      and unique artistic expression.
+    description: The article discusses a musician repurposing everyday objects as
+      instruments, exemplifying creative tool use. This approach to music-making
+      demonstrates thinking outside the box and using tools in unconventional
+      ways, directly aligning with the task of "Using Tools Against the Grain"
+      and fostering innovation in artistic practice.
     tags:
       - music
+      - tools
       - create
-      - invent
   - task: Generate Diversity
     href: https://www.artnome.com/news/2018/8/8/why-love-generative-art
     checkpointId: 5e7f35ebc3434b0e5f4ece496861af6f
-    description: Generative art showcases innovation through algorithmic creativity,
-      inspiring diverse outputs. It merges technology and art, encouraging
-      unconventional thinking. By exploring generative techniques, individuals
-      can expand their creative boundaries, fostering unique ideas and
-      perspectives essential for innovation and generating diversity in artistic
-      expression.
+    description: Generative art exemplifies innovation by using algorithms to create
+      unique, diverse artworks. It challenges traditional artistic methods,
+      encouraging practitioners to explore new techniques and embrace
+      randomness. This approach fosters creativity, pushes boundaries, and
+      generates a wide variety of visual expressions, aligning with the goal of
+      practicing innovation and generating diversity.
     tags:
       - art
-      - tech
-      - create
-      - unique
+      - code
+      - random
   - task: Share Generously
     href: https://www.fastcompany.com/3003033/dont-be-power-hog-how-sharing-information-time-and-authority-makes-you-better-leader
     checkpointId: 25d388ea7161d15f5da4a0c345627cbc
-    description: The article explores how sharing information, time, and authority
-      empowers leaders to foster innovation. It emphasizes that by distributing
-      power and knowledge, leaders create an environment where creativity
-      thrives, collaboration increases, and innovative ideas flourish. This
-      approach aligns with practicing innovation through generous sharing of
-      resources and decision-making power.
+    description: The article highlights how sharing information, time, and authority
+      fosters innovation and leadership. It emphasizes that by openly sharing
+      knowledge and empowering others, leaders create an environment of trust,
+      collaboration, and creativity. This approach encourages diverse
+      perspectives, problem-solving, and ultimately leads to more innovative
+      practices within organizations.
     tags:
       - share
       - lead
+      - trust
       - power
-      - ideas
 series: Ecosystem Architecture

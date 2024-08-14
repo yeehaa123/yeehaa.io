@@ -1,0 +1,19 @@
+---
+import Layout from "./Base.astro"
+import '@/styles/globals.css'
+
+interface Props  {
+  logoLink?: string;
+  title: string
+}
+
+const { title, logoLink = '/'} = Astro.props;
+---
+
+<Layout {title} {logoLink}>
+  <slot name="og:data" slot="og:data"/>
+  <slot name="hero"/>
+  <main class="bg-white text-black dark:bg-black dark:text-white print:bg-pure-white print:text-pitch-black print:py-24 w-full">
+    <slot/>
+  </main>
+</Layout>
