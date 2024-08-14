@@ -128,6 +128,15 @@ sections:
     cta:
       text: Foster An Effective Ecosystem 
 
+  
+  recent_content:
+    title: Recent Articles
+    introduction: >
+      Stay ahead of the curve with our latest thoughts on ecosystem architecture, black ocean markets, and innovative business strategies. 
+    cta:
+      text: "Explore All Articles"
+      link: "/posts"
+
   about:
     title: About Yeehaa
     subtitle: Ecosystem Architect | Black Ocean Navigator | Innovator
@@ -135,7 +144,7 @@ sections:
     key_points:
       - Pioneer in applying black ocean strategies to ecosystem design
       - Creator of the Superconnectors methodology
-      - Founder of multiple innovative ventures including Offcourse, Varias, and Snowday
+      - Founder of multiple innovative ventures including Offcourse, Rizom, and Snowday
       - Collaborator with leading institutions and initiatives like Internet Society, Public Spaces, and Waag Society.
 
   faq:
