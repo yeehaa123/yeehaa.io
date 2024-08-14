@@ -60,19 +60,17 @@ sections:
     key_points:
       - title: Ecosystem Catalysis
         description: Fostered unprecedented collaboration between startups, industry leaders, and investors, creating a self-sustaining network of innovation.
-      - title: Value Creation Acceleration
-        description: Participating startups reported significantly faster product development cycles and market entry times, often cutting months off their timelines.
       - title: Cross-Industry Pollination
         description: Facilitated unexpected partnerships across different sectors, leading to innovative solutions for complex, interdisciplinary challenges.
       - title: Democratized Access
         description: Broke down traditional barriers, allowing startups from diverse backgrounds to access high-level networking and resources previously out of reach.
       - title: Paradigm Shift in Startup Support
-        description: The format has been adopted by several major tech hubs globally, signaling a shift in how the industry approaches startup ecosystem development.
+        description: The format has been adopted by several major tech events globally, signaling a shift in how the industry approaches startup ecosystem development.
     testimonial:
       quote: "Networking on steroids! Our promise to founders is ‘Make the network work for you’. And that’s exactly what Superconnectors delivered."
       author: Lars Crama. Private Lead at Up!Rotterdam
     cta:
-      text: Superconnect Your Network
+      text: Foster An Effective Ecosystem
 
   services:
     title: Transformative Services
@@ -126,7 +124,7 @@ sections:
           Cognitive Gap Analysis: Identify knowledge blind spots and untapped potential within your network.
           Synergy Optimization: Receive AI-powered recommendations to maximize cognitive alignment and collaborative output.
     cta:
-      text: Foster An Effective Ecosystem 
+      text: Transform Your Organization Today
 
   
   recent_content:
@@ -134,7 +132,7 @@ sections:
     description: Stay ahead of the curve with our latest thoughts on ecosystem architecture, black ocean markets, and innovative business strategies. 
     cta:
       text: "Explore All Articles"
-      link: "/posts"
+      action: "/posts"
 
   about:
     title: About Yeehaa
@@ -145,6 +143,9 @@ sections:
       - Creator of the Superconnectors methodology
       - Founder of multiple innovative ventures including Offcourse, Rizom, and Snowday
       - Collaborator with leading institutions and initiatives like Internet Society, Public Spaces, and Waag Society.
+    cta:
+      text: "Learn More About Yeehaa"
+      action: "/posts"
 
   faq:
     title: Frequently Asked Questions

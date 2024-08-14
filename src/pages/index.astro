@@ -4,6 +4,7 @@ import { getImage } from "astro:assets"; import Layout from "@/layouts/Landing.a
 import  Wave from "@/components/Wave.astro";
 import  Bubble from "@/components/Bubble.astro";
 import  { 
+  CallToAction,
   BaseHead, 
   OGType, 
   HeroSection,
@@ -64,10 +65,13 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
     <Wave anchor="bottom" class="fill-offwhite dark:fill-offblack"/>
   </div>
   <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
-    <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
+    <div class="container px-8 gap-8 py-12 mx-auto">
       <PageSection.Header>{sections.recent_content.title}</PageSection.Header>
       <PageSection.Description className="text-gray-500 dark:text-gray-400">{sections.recent_content.description}</PageSection.Description>
       {posts.reverse().map(({ slug, data }) => <PostListing {...data}  slug={slug} />)}
+      <div >
+        <CallToAction {...sections.recent_content.cta} />
+      </div>
     </div>
   </PageSection.Root>
   <div class="bg-offwhite dark:bg-offblack">

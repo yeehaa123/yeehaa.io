@@ -28,7 +28,7 @@ export function ProductsSection({ title, subtitle, description, items, cta }: Pr
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
           {items.map((product, index) => <FeatureCard key={index} className="border-none bg-offwhite dark:bg-offblack" iconSize="LARGE" {...product} />)}
         </div>
-        <div className="hidden text-center mt-12">
+        <div className="text-center mt-12">
           <CallToAction {...cta} />
         </div>
       </PageSection.Container>

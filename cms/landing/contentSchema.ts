@@ -17,6 +17,7 @@ const baseSection = z.object({
 
 const contentSection = baseSection.extend({
   description: z.string(),
+  cta
 })
 
 export const landingContentInput = z.object({
@@ -39,10 +40,12 @@ export const landingContentInput = z.object({
       description: z.string(),
       items: z.array(item)
     }),
-    about: baseSection.extend({
+    case_study: baseSection.extend({
       subtitle: z.string(),
       description: z.string(),
-      key_points: z.array(z.string())
+      key_points: z.array(z.object({ title: z.string(), description: z.string() })),
+      testimonial: z.object({ quote: z.string(), author: z.string() }),
+      cta
     }),
     services: baseSection.extend({
       subtitle: z.string(),
@@ -60,17 +63,16 @@ export const landingContentInput = z.object({
       })),
       cta
     }),
-    case_study: baseSection.extend({
+    about: baseSection.extend({
       subtitle: z.string(),
       description: z.string(),
-      key_points: z.array(z.object({ title: z.string(), description: z.string() })),
-      testimonial: z.object({ quote: z.string(), author: z.string() }),
+      key_points: z.array(z.string()),
       cta
     }),
+    recent_content: contentSection,
     faq: baseSection.extend({
       items: z.array(z.object({ question: z.string(), answer: z.string() }))
     }),
-    recent_content: contentSection,
     main_cta: baseSection.extend({
       subtitle: z.string(),
       cta

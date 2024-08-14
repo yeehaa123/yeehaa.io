@@ -1,4 +1,6 @@
+import type { CTA } from "./CTA";
 import {
+  CallToAction,
   PageSection,
 } from "@/components";
 
@@ -7,10 +9,11 @@ type Props = {
   title: string,
   description: string,
   imageSrc: string,
-  key_points: string[]
+  key_points: string[],
+  cta: CTA
 }
 
-export function AboutSection({ title, imageSrc, description, key_points }: Props) {
+export function AboutSection({ title, imageSrc, description, key_points, cta }: Props) {
   return (
     <PageSection.Root className="bg-primary text-black">
       <PageSection.Container className="flex flex-col lg:flex-row gap-8 items-center">
@@ -24,6 +27,9 @@ export function AboutSection({ title, imageSrc, description, key_points }: Props
             <ul className="list-disc list-inside mb-6">
               {key_points.map((point, index) => <li key={index}>{point}</li>)}
             </ul>
+          </div>
+          <div>
+            <CallToAction {...cta} />
           </div>
         </div>
       </PageSection.Container>
