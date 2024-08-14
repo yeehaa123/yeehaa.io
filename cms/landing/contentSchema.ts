@@ -15,6 +15,10 @@ const baseSection = z.object({
   title: z.string(),
 })
 
+const contentSection = baseSection.extend({
+  description: z.string(),
+})
+
 export const landingContentInput = z.object({
   title: z.string(),
   sections: z.object({
@@ -66,6 +70,7 @@ export const landingContentInput = z.object({
     faq: baseSection.extend({
       items: z.array(z.object({ question: z.string(), answer: z.string() }))
     }),
+    recent_content: contentSection,
     main_cta: baseSection.extend({
       subtitle: z.string(),
       cta

@@ -65,7 +65,8 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
   </div>
   <PageSection.Root className="bg-offwhite dark:bg-offblack"]}>
     <div class="container px-8 gap-8 py-12 lg:py-20 mx-auto">
-      <PageSection.Header>Recent Content</PageSection.Header>
+      <PageSection.Header>{sections.recent_content.title}</PageSection.Header>
+      <PageSection.Description className="text-gray-500 dark:text-gray-400">{sections.recent_content.description}</PageSection.Description>
       {posts.reverse().map(({ slug, data }) => <PostListing {...data}  slug={slug} />)}
     </div>
   </PageSection.Root>

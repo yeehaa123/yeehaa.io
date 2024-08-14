@@ -131,8 +131,7 @@ sections:
   
   recent_content:
     title: Recent Articles
-    introduction: >
-      Stay ahead of the curve with our latest thoughts on ecosystem architecture, black ocean markets, and innovative business strategies. 
+    description: Stay ahead of the curve with our latest thoughts on ecosystem architecture, black ocean markets, and innovative business strategies. 
     cta:
       text: "Explore All Articles"
       link: "/posts"

@@ -18,7 +18,7 @@ export function AboutSection({ title, imageSrc, description, key_points }: Props
           <img src={imageSrc} alt={title} />
         </div>
         <div className="flex flex-col mx-8 gap-8">
-          <PageSection.Header>{title}</PageSection.Header>
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-8">{title}</h2>
           <div className="max-w-3xl mx-auto">
             <p className="mb-6">{description}</p>
             <ul className="list-disc list-inside mb-6">
