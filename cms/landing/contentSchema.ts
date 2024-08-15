@@ -25,6 +25,7 @@ export const landingContentInput = z.object({
   sections: z.object({
     hero: baseSection.extend({
       subtitle: z.string(),
+      description: z.string(),
       cta: cta
     }),
     challenges: baseSection.extend({

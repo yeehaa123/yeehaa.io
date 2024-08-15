@@ -2,11 +2,14 @@ title: Yeehaa - Ecosystem Architect
 sections:
   hero:
     title: Conquer Black Oceans Together
-    subtitle: Foster effective ecosystems through collaboration and knowledge sharing
+    subtitle: Turn competitors into collaborators, create new markets
+    description: Ecosystem architecture is a transformative practice that fosters
+      strategic collaboration and effective knowledge sharing, empowering
+      organizations to innovate and lead in uncharted market territories.
     cta:
       text: Embark on Your Black Ocean Journey
   challenges:
-    title: Navigating Complex Ecosystems
+    title: Navigating Black Ocean Challenges
     subtitle: Critical Challenges in Black Ocean Markets
     description: In today's interconnected world, organizations face formidable
       obstacles that hinder their ability to innovate, collaborate, and thrive
@@ -46,19 +49,19 @@ sections:
     title: Ecosystem Architecture
     subtitle: A revolutionary framework for transforming organizations and
       pioneering black ocean markets
-    description: Ecosystem Architecture is our proprietary methodology that goes
-      beyond traditional business strategies. It empowers your organization to
-      identify and dominate unexplored market spaces while building a resilient
-      network of partners and stakeholders. By following this approach, you'll
-      not only identify new market opportunities but also build the
-      collaborative infrastructure necessary to seize them effectively.
+    description: Ecosystem Architecture is a practice that goes beyond traditional
+      business strategies. It empowers your organization to identify and
+      dominate unexplored market spaces while building a resilient network of
+      partners and stakeholders. By following this approach, you'll not only
+      identify new market opportunities but also build the collaborative
+      infrastructure necessary to seize them effectively.
     items:
       - title: Discover Uncharted Markets
         icon: Compass
-        description: Employ our Black Ocean Market Analysis to uncover hidden
-          opportunities beyond traditional industry boundaries. We use advanced
-          data analytics and trend forecasting to identify emerging markets
-          where your organization can become a pioneer.
+        description: Employ Black Ocean Market Analysis to uncover hidden opportunities
+          beyond traditional industry boundaries. We use advanced data analytics
+          and trend forecasting to identify emerging markets where your
+          organization can become a pioneer.
       - title: Architect Your Ecosystem
         icon: Network
         description: Utilize our Ecosystem Mapping Tool to visualize and optimize your
@@ -74,15 +77,14 @@ sections:
   case_study:
     title: Success in the Black Ocean
     subtitle: "Case Study: The Superconnectors Revolution"
-    description: >
-      Yeehaa's Superconnectors event format has redefined how startups connect
-      with key players in the global tech ecosystem. This groundbreaking,
-      ecosystem-led approach has created a self-sustaining network of
-      innovation, accelerating value creation and fostering unexpected
-      cross-industry collaborations. By breaking down traditional barriers,
-      Superconnectors has democratized access to high-level networking and
-      resources for startups from diverse backgrounds. The format's success has
-      led to its adoption by several major tech hubs globally, signaling a
+    description: Yeehaa's Superconnectors event format has redefined how startups
+      connect with key players in the global tech ecosystem. This
+      groundbreaking, ecosystem-led approach has created a self-sustaining
+      network of innovation, accelerating value creation and fostering
+      unexpected cross-industry collaborations. By breaking down traditional
+      barriers, Superconnectors has democratized access to high-level networking
+      and resources for startups from diverse backgrounds. The format's success
+      has led to its adoption by several major tech hubs globally, signaling a
       paradigm shift in startup ecosystem development.
     key_points:
       - title: Ecosystem Catalysis
@@ -110,7 +112,7 @@ sections:
   services:
     title: Transformative Services
     subtitle: Empowering Your Journey into Black Ocean Markets
-    description: Our suite of services is designed to guide you through the
+    description: Yeehaa's suite of services is designed to guide you through the
       complexities of ecosystem architecture and black ocean market navigation.
       Each service is tailored to address critical challenges and unlock
       unprecedented opportunities for growth and innovation.
@@ -160,10 +162,10 @@ sections:
   products:
     title: Ecosystem Domination Tools
     subtitle: Harness the Power of Collective Intelligence and Knowledge Synergy
-    description: Our cutting-edge products are designed to give you an unparalleled
-      advantage in navigating and conquering Black Ocean markets. By leveraging
-      these tools, you'll unlock the full potential of your ecosystem, driving
-      innovation and growth at unprecedented speeds.
+    description: Yeehaa's cutting-edge products are designed to give you an
+      unparalleled advantage in navigating and conquering Black Ocean markets.
+      By leveraging these tools, you'll unlock the full potential of your
+      ecosystem, driving innovation and growth at unprecedented speeds.
     items:
       - title: Offcourse
         icon: Offcourse
@@ -178,7 +180,7 @@ sections:
             competition in fast-evolving markets.
       - title: Rizom
         icon: Rizom
-        description: Unleash the collective genius of your ecosystem with Hivemind, our
+        description: Unleash the collective genius of your ecosystem with Rizom, our
           advanced cognitive assessment and optimization tool.
         features:
           Transactive Memory Scoring: Quantify and visualize your ecosystem's collective intelligence.
@@ -206,7 +208,7 @@ sections:
       action: /posts
   recent_content:
     title: Recent Articles
-    description: Stay ahead of the curve with our latest thoughts on ecosystem
+    description: Stay ahead of the curve with Yeehaa's latest thoughts on ecosystem
       architecture, black ocean markets, and innovative business strategies.
     cta:
       text: Explore All Articles
@@ -241,23 +243,22 @@ courses:
 articles:
   - across-space-and-time
   - practice-innovation
-description: Yeehaa offers Ecosystem Architecture, a revolutionary framework for
-  organizations to conquer Black Ocean markets - unexplored spaces beyond blue
-  and red oceans. The approach focuses on navigating complex ecosystems,
-  fostering collaboration, and creating shared value. Services include Black
-  Ocean Discovery Expeditions, Ecosystem-Led Growth Strategy, and Adaptive
-  Organization Design. Products like Offcourse and Rizom empower collective
-  intelligence. Yeehaa, led by a visionary ecosystem architect, transforms
-  organizations through innovative strategies, tools, and methodologies.
-excerpt: Yeehaa introduces Ecosystem Architecture, a groundbreaking framework
-  for conquering Black Ocean markets. This approach helps organizations navigate
-  complex ecosystems, foster collaboration, and create shared value in
-  unexplored market spaces.
+description: Yeehaa's landing page introduces ecosystem architecture for
+  conquering black ocean markets. It highlights challenges in new markets,
+  presents pioneering concepts like ecosystem-led growth, and offers services
+  for black ocean discovery and adaptive organization design. The page showcases
+  tools like Offcourse and Rizom for knowledge sharing and cognitive
+  optimization, emphasizing Yeehaa's role as an innovator in ecosystem
+  architecture.
+excerpt: Yeehaa offers ecosystem architecture services to help organizations
+  conquer black ocean markets. The approach focuses on transforming competitors
+  into collaborators, creating new markets, and leveraging collective
+  intelligence for innovation and growth.
 tags:
   - ecosystem
   - innovation
-  - strategy
   - collaboration
-  - markets
-bannerImageURL: ./c77942818ac719c183532a3cb68c5eda-banner.png
-profileImageURL: ./c77942818ac719c183532a3cb68c5eda-profile.png
+  - strategy
+  - growth
+bannerImageURL: ./ce27ebcaad39e183ca1deec5afe18c94-banner.png
+profileImageURL: ./ce27ebcaad39e183ca1deec5afe18c94-profile.png
