@@ -20,7 +20,7 @@ export function HeroSection({ title, subtitle, cta, description }: Props) {
           <p className="text-xl md:text-2xl font-serif text-offblack">{subtitle}</p>
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold">{title}</h1>
         </div>
-        <p className="hidden max-w-lg lg:max-w-2xl md:text-lg md:text-xl">{description}</p>
+        <p className="max-w-lg lg:max-w-2xl md:text-lg md:text-xl">{description}</p>
         <div className="flex justify-center md:justify-start">
           <CallToAction {...cta} />
         </div>
