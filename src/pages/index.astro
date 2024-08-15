@@ -40,7 +40,7 @@ const profileImage = await getImage({src: profileImageURL, format: 'webp'});
 ---
 <Layout {logoLink}  {...data}>
   <BaseHead slot="og:data" url={Astro.url} type={OGType.WEBSITE} {...data} />
-  <header class="h-vsh pt-36 bg-primary">
+  <header class="h-vsh pt-48 md:pt-60 bg-primary">
     <HeroSection {...sections.hero} client:load/>
     <div class="bg-primary dark:bg-primary">
       <Wave anchor="bottom" class="fill-white dark:fill-black"/>
